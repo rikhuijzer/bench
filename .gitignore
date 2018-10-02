@@ -105,3 +105,6 @@ venv.bak/
 
 # idea
 /idea
+
+# config file
+config.ini

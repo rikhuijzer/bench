@@ -1,5 +1,6 @@
 from systems.dandelion import Dandelion
 from datasets.sts_benchmark import STSBenchmark
+from database import Database
 # TODO: Loop over each sentence and then each system, this way the API calls do not need a sleep statement
 # TODO: Integrate database to help with displaying accuracies in table including test date. Re-test monthly?
 
