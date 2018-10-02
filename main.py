@@ -6,9 +6,9 @@ from system import System
 
 if __name__ == '__main__':
     s: System
-    s = Dandelion
+    s = Dandelion()
 
     text1 = 'Cameron wins the scar'
     text2 = 'All nominees for the Academy Awards'
 
-    s.get_sts('', text1, text2)
+    s.get_sts(text1, text2)

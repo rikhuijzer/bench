@@ -1,8 +1,10 @@
+from abc import ABC, abstractmethod
 
 
-class System:
+class System(ABC):
     def __init__(self):
-        pass
+        super(System, self).__init__()
 
+    @abstractmethod
     def get_sts(self, text1, text2):
         pass
