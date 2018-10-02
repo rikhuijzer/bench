@@ -14,7 +14,12 @@ def test_dandelion():
     s.get_sts(text1, text2)
 
 
-if __name__ == '__main__':
+def test_stsbenchmark():
     b = STSBenchmark()
     lines = b.get_lines()
     print(lines)
+
+
+if __name__ == '__main__':
+    db = Database()
+    db.close()
