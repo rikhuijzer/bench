@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2efefc4-4d91-42e7-a849-2cbe2ca60d6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DeepPavlov.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_analysers/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_analysers/analyser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_analysers/dialogflow_analyser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_analysers/luis_analyser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_analysers/rasa_analyser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_converters/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_converters/annotated_sentence.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_converters/converter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_converters/dialogflow_converter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlu_converters/luis_converter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlu_analysers/luis_analyser.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlu_analysers/luis_analyser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlu_converters/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlu_converters/converter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/bench$main.coverage" NAME="main Coverage Results" MODIFIED="1539009664233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bench$main.coverage" NAME="main Coverage Results" MODIFIED="1539012632519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bench$test.coverage" NAME="test Coverage Results" MODIFIED="1538399620349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -112,39 +101,51 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="18" />
-          <entry key="py" value="389" />
+          <entry key="py" value="1212" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="18" />
-          <entry key="Python" value="389" />
+          <entry key="Python" value="1212" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="4" />
-          <entry key="py" value="15" />
+          <entry key="py" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="4" />
-          <entry key="Python" value="15" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            <state relative-caret-position="666">
+              <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
-                <marker date="1539009923144" expanded="true" signature="806:1430" ph="..." />
+                <marker date="1539010140907" expanded="true" signature="827:1481" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlu_converters/converter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <marker date="1539010203464" expanded="true" signature="1981:1986" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,13 +182,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nlu_analysers/luis_analyser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="118">
+              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlu_analysers/analyser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1539012478558" expanded="true" signature="2477:2482" ph="..." />
               </folding>
             </state>
           </provider>
@@ -230,16 +244,16 @@
         <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/DeepPavlov.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/README.md" />
-        <option value="$PROJECT_DIR$/nlu_converters/converter.py" />
         <option value="$PROJECT_DIR$/nlu_converters/annotated_sentence.py" />
         <option value="$PROJECT_DIR$/nlu_converters/dialogflow_converter.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/dialogflow_analyser.py" />
         <option value="$PROJECT_DIR$/nlu_converters/README.md" />
-        <option value="$PROJECT_DIR$/nlu_analysers/analyser.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/rasa_analyser.py" />
-        <option value="$PROJECT_DIR$/nlu_analysers/luis_analyser.py" />
         <option value="$PROJECT_DIR$/nlu_converters/luis_converter.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/nlu_converters/converter.py" />
+        <option value="$PROJECT_DIR$/nlu_analysers/analyser.py" />
+        <option value="$PROJECT_DIR$/nlu_analysers/luis_analyser.py" />
       </list>
     </option>
   </component>
@@ -443,12 +457,12 @@
     <frame x="51" y="31" width="2509" height="1409" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2723196" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2723196" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298887" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -614,16 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlu_converters/converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <marker date="1539007566234" expanded="true" signature="1976:1981" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlu_converters/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -651,30 +655,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlu_analysers/analyser.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="666">
+          <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1539008001012" expanded="true" signature="2477:2482" ph="..." />
+            <element signature="e#0#47#0" expanded="true" />
+            <marker date="1539010140907" expanded="true" signature="827:1481" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlu_analysers/rasa_analyser.py">
+    <entry file="file://$PROJECT_DIR$/nlu_converters/converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlu_analysers/luis_analyser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="342">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1539010203464" expanded="true" signature="1981:1986" ph="..." />
           </folding>
         </state>
       </provider>
@@ -697,13 +694,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/nlu_analysers/rasa_analyser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlu_analysers/analyser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
-            <marker date="1539009923144" expanded="true" signature="806:1430" ph="..." />
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1539012478558" expanded="true" signature="2477:2482" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlu_analysers/luis_analyser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>

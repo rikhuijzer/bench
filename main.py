@@ -26,16 +26,16 @@ def test_sts_benchmark():
 
 def rasa_evaluation():
     # luis (also works for Rasa)
-    # web_applications_corpus = Path(__file__).parent.
+    corpora = Path(__file__).parent / 'datasets' / 'NLU-Evaluation-Corpora'
     luis_converter = LuisConverter()
-    luis_converter.import_corpus("WebApplicationsCorpus.json")
+    luis_converter.import_corpus(corpora / "WebApplicationsCorpus.json")
     luis_converter.export("WebApplicationsTraining_Luis.json")
 
     # Rasa
     # Running via Docker possible via (sudo) docker run -p 5000:5000 rasa/rasa_nlu:latest-full
     rasa_analyser = RasaAnalyser("http://localhost:5000/parse")
-    rasa_analyser.get_annotations("WebApplicationsCorpus.json", "WebApplicationsAnnotations_Rasa.json")
-    rasa_analyser.analyse_annotations("WebApplicationsAnnotations_Rasa.json", "WebApplicationsCorpus.json",
+    rasa_analyser.get_annotations(corpora / "WebApplicationsCorpus.json", "WebApplicationsAnnotations_Rasa.json")
+    rasa_analyser.analyse_annotations("WebApplicationsAnnotations_Rasa.json", corpora / "WebApplicationsCorpus.json",
                                       "WebApplicationsAnalysis_Rasa.json")
 
 

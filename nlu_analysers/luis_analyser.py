@@ -1,6 +1,6 @@
 from nlu_analysers.analyser import *
 import requests
-import urllib
+import urllib.parse
 
 
 class LuisAnalyser(Analyser):
@@ -23,10 +23,10 @@ class LuisAnalyser(Analyser):
 
         for s in data["sentences"]:
             if not s["training"]:  # only use test data
-                encoded_text = urllib.quote(s['text'])
+                encoded_text = urllib.parse.quote(s['text'])
                 annotations['results'].append(requests.get(self.url % encoded_text, data={}, headers={}).json())
 
-        file = open(output, "w")
+        file = open(output, "wb")
         file.write(
             json.dumps(annotations, sort_keys=False, indent=4, separators=(',', ': '), ensure_ascii=False).encode(
                 'utf-8'))
@@ -45,16 +45,14 @@ class LuisAnalyser(Analyser):
 
         i = 0
         for a in annotations["results"]:
-            if not a["query"] == gold_standard[i]["text"]:
-                print
-                a["query"]
-                print
-                gold_standard[i]["text"]
-                print
-                "WARNING! Texts not equal"
+            if not a["text"] == gold_standard[i]["text"]:  # first 'text' used to be 'query'
+                print(a["query"])
+                print(gold_standard[i]["text"])
+                print("WARNING! Texts not equal")
 
             # intent
-            aIntent = a["topScoringIntent"]["intent"]
+            print('CHECK NEXT LINE')
+            aIntent = a['intent']['name']  # a["topScoringIntent"]["intent"]
             oIntent = gold_standard[i]["intent"]
 
             Analyser.check_key(analysis["intents"], aIntent)

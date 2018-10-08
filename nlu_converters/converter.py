@@ -17,7 +17,7 @@ class Converter(object):
     @staticmethod
     def write_json(file, content):
         f = open(file, "w")
-        f.write(content)
+        f.write(str(content))
         f.close()
 
     @staticmethod
