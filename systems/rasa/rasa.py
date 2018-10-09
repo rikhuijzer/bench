@@ -6,20 +6,19 @@ from rasa_nlu.model import Trainer
 import rasa_nlu.training_data
 from rasa_nlu import utils
 import json
+import nlu_converters.converter
 
 
 class Rasa:
-    def train(self, training_data):
+    interpreter: rasa_nlu.model.Interpreter
+
+    def train(self, corpus):
+        training_data = nlu_converters.converter.Converter().get_file(corpus, 'rasa.md')
         training_data = rasa_nlu.training_data.loading._load(training_data)
 
-        for examples in training_data.training_examples:
-            print(examples)
-
         trainer = Trainer(config.load(Path(__file__).parent / 'config.yml'))
-        trainer.train(training_data)
-        model_directory = trainer.persist('./projects/default/')  # Returns the directory the model is stored in
-        print('model directory: ' + model_directory)
+        # self.model_directory = trainer.persist('./projects/default/')  # Returns the directory the model is stored in
+        self.interpreter = trainer.train(training_data)
 
-        # where model_directory points to the model folder
-        interpreter = Interpreter.load(model_directory)
-        interpreter.parse(u"The text I want to understand")
+    def evaluate(self):
+        self.interpreter.parse(u"The text I want to understand")

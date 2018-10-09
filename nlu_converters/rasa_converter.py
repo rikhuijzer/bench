@@ -42,19 +42,14 @@ class RasaConverter(Converter):
                 # utterances
                 self.__add_utterance(AnnotatedSentence(s["text"], s["intent"], s["entities"]))
 
-    def export(self, dataset_name):
-        file = Converter.get_file(dataset_name, 'rasa.md')
+    def export(self, corpus):
+        file = Converter.get_file(corpus, 'rasa.md')
         with open(file, 'w') as f:
             for intent in self.intents:
                 snake_case = stringcase.snakecase(intent)
                 snake_case = snake_case.replace('__', '_')
                 f.write('## intent:' + snake_case + '\n')
                 for utterance in self.utterances:
-
-                    if utterance['intent'] == 'Change Password':
-                        # print(2)
-                        print(utterance)
-
                     if utterance['intent'] == intent:
                         f.write('- ' + utterance['text'] + '\n')
                 f.write('\n')

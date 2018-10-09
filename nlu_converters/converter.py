@@ -43,8 +43,8 @@ class Converter(object):
         self.lang = ""
 
     @staticmethod
-    def get_file(dataset_name, system_suffix):
-        return Path(__file__).parent / 'training' / str(dataset_name + '_' + system_suffix)
+    def get_file(corpus, system_suffix):
+        return Path(__file__).parent / 'training' / str(corpus + '_' + system_suffix)
 
     def __add_intent(self, intent):
         raise NotImplementedError("Please implement this method")
