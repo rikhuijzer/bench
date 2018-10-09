@@ -13,7 +13,7 @@ class LuisAnalyser(Analyser):
             " & ", "&").replace(" : ", ":").replace(" - ", "-").replace(" / ", "/").replace(" ( ", "(").replace(" ) ",
                                                                                                                 ")")
 
-    def __init__(self, application_id, subscription_key):
+    def __init__(self, application_id='', subscription_key=''):
         super(LuisAnalyser, self).__init__()
         self.subscription_key = subscription_key
         self.application_id = application_id
@@ -48,7 +48,7 @@ class LuisAnalyser(Analyser):
 
         i = 0
         for a in annotations["results"]:
-            if not a["text"] == gold_standard[i]["text"]:  # first 'text' used to be 'query'
+            if not a["text"] == gold_standard[i]["text"]:  # 'text' used to be 'query'
                 print(a["query"])
                 print(gold_standard[i]["text"])
                 print("WARNING! Texts not equal")

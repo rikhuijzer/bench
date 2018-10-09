@@ -30,17 +30,12 @@ def rasa_evaluation():
     converter.export(corpus)
     rasa = Rasa()
     rasa.train(corpus)
-    rasa.evaluate()
 
-    # Rasa
-    # Running via Docker possible via (sudo) docker run -p 5000:5000 rasa/rasa_nlu:latest-full
-    # run python -m rasa_nlu.train -c sample_configs/config_spacy.json
-
-    # and to activate venv use: . venv/bin/activate
-    # rasa_analyser = RasaAnalyser("http://localhost:5000/parse")
-    # rasa_analyser.get_annotations(corpora / "WebApplicationsCorpus.json", "WebApplicationsAnnotations_Rasa.json")
-    # rasa_analyser.analyse_annotations("WebApplicationsAnnotations_Rasa.json", corpora / "WebApplicationsCorpus.json",
-    #                                  "WebApplicationsAnalysis_Rasa.json")
+    rasa_analyser = RasaAnalyser()
+    annotations_file = 'WebApplicationsAnnotations_Rasa.json'
+    rasa_analyser.get_annotations(corpus=corpora / "WebApplicationsCorpus.json", output=annotations_file, rasa=rasa)
+    rasa_analyser.analyse_annotations(annotations_file, corpora / "WebApplicationsCorpus.json",
+                                      "WebApplicationsAnalysis_Rasa.json")
 
 
 if __name__ == '__main__':
