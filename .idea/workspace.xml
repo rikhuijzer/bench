@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2efefc4-4d91-42e7-a849-2cbe2ca60d6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/systems/rasa/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/systems/rasa/rasa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nlu_converters/rasa_converter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeepPavlov.py" beforeDir="false" afterPath="$PROJECT_DIR$/systems/DeepPavlov.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplicationsTraining_Luis.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplicationsTraining_Luis.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nlu_converters/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlu_converters/converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlu_converters/dialogflow_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlu_converters/dialogflow_converter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nlu_converters/luis_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlu_converters/luis_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systems/rasa/rasa.py" beforeDir="false" afterPath="$PROJECT_DIR$/systems/rasa/rasa.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/bench$main.coverage" NAME="main Coverage Results" MODIFIED="1539084103705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bench$main.coverage" NAME="main Coverage Results" MODIFIED="1539090782482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bench$test.coverage" NAME="test Coverage Results" MODIFIED="1538399620349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -108,30 +108,30 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="18" />
-          <entry key="py" value="2467" />
+          <entry key="py" value="4708" />
           <entry key="yml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="18" />
-          <entry key="Python" value="2467" />
+          <entry key="Python" value="4708" />
           <entry key="YAML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="json" value="8" />
-          <entry key="md" value="4" />
-          <entry key="py" value="42" />
+          <entry key="json" value="12" />
+          <entry key="md" value="8" />
+          <entry key="py" value="50" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="8" />
-          <entry key="Markdown" value="4" />
-          <entry key="Python" value="42" />
+          <entry key="JSON" value="12" />
+          <entry key="Markdown" value="8" />
+          <entry key="Python" value="50" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -142,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="336">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -154,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/rasa/rasa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="216">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -164,15 +164,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApplicationsTraining_Luis.json">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/nlu_converters/converter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="46" column="91" lean-forward="true" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1539090672396" expanded="true" signature="2279:2284" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nlu_converters/rasa_converter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="678">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlu_converters/training/WebApplicationsCorpus_rasa.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="162">
+                <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rasa_nlu/training_data/loading.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="123" column="4" lean-forward="true" selection-start-line="123" selection-start-column="4" selection-end-line="125" selection-end-column="32" />
+            <state relative-caret-position="444">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -183,22 +215,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlu_converters/luis_converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+            <state relative-caret-position="660">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nlu_converters/converter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-              <folding>
-                <marker date="1539079839383" expanded="true" signature="1974:1979" ph="..." />
               </folding>
             </state>
           </provider>
@@ -214,6 +234,9 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>delete my My</find>
+    </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/venv/venv</dir>
     </dirStrings>
@@ -247,18 +270,19 @@
         <option value="$PROJECT_DIR$/DeepPavlov.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/README.md" />
         <option value="$PROJECT_DIR$/nlu_converters/annotated_sentence.py" />
-        <option value="$PROJECT_DIR$/nlu_converters/dialogflow_converter.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/dialogflow_analyser.py" />
         <option value="$PROJECT_DIR$/nlu_converters/README.md" />
         <option value="$PROJECT_DIR$/nlu_analysers/rasa_analyser.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/analyser.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/luis_analyser.py" />
-        <option value="$PROJECT_DIR$/nlu_converters/luis_converter.py" />
         <option value="$PROJECT_DIR$/systems/rasa.py" />
         <option value="$PROJECT_DIR$/systems/rasa/config.yml" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/systems/rasa/rasa.py" />
+        <option value="$PROJECT_DIR$/nlu_converters/dialogflow_converter.py" />
+        <option value="$PROJECT_DIR$/nlu_converters/luis_converter.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/nlu_converters/converter.py" />
+        <option value="$PROJECT_DIR$/nlu_converters/rasa_converter.py" />
       </list>
     </option>
   </component>
@@ -312,12 +336,29 @@
             <path>
               <item name="bench" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="datasets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bench" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="datasets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="NLU-Evaluation-Corpora" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bench" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="nlu_analysers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="bench" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="nlu_converters" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bench" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="nlu_converters" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="training" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="bench" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -329,11 +370,6 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="systems" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="rasa" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="bench" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="venv" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -580,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlu_converters/dialogflow_converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlu_analysers/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -716,40 +745,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rasa_nlu/utils/__init__.py">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rasa_nlu/training_data/formats/luis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="274">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file:///usr/lib/python3.6/json/encoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="271">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rasa_nlu/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="205" column="23" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlu_converters/dialogflow_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="103" column="20" lean-forward="true" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/encodings/utf_8_sig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rasa_nlu/training_data/loading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="123" column="4" lean-forward="true" selection-start-line="123" selection-start-column="4" selection-end-line="125" selection-end-column="32" />
+        <state relative-caret-position="444">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/systems/rasa/rasa.py">
+    <entry file="file://$PROJECT_DIR$/datasets/NLU-Evaluation-Corpora/WebApplicationsCorpus.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2424">
+          <caret line="1699" column="55" selection-start-line="1699" selection-start-column="43" selection-end-line="1699" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -758,20 +805,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nlu_converters/luis_converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+        <state relative-caret-position="660">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/systems/rasa/rasa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nlu_converters/converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="390">
+          <caret line="46" column="91" lean-forward="true" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
           <folding>
-            <marker date="1539079839383" expanded="true" signature="1974:1979" ph="..." />
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1539090672396" expanded="true" signature="2279:2284" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlu_converters/training/rasa.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret lean-forward="true" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlu_converters/training/WebApplicationsCorpus_rasa.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="162">
+            <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlu_converters/rasa_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,5 +1,6 @@
 from datasets.sts_benchmark import STSBenchmark
 from nlu_analysers.rasa_analyser import RasaAnalyser
+from nlu_converters.rasa_converter import RasaConverter
 from nlu_converters.luis_converter import LuisConverter
 from systems.dandelion import Dandelion
 from pathlib import Path
@@ -22,24 +23,22 @@ def test_sts_benchmark():
 
 
 def rasa_evaluation():
-    # luis (also works for Rasa)
-    training_file = 'WebApplicationsTraining_Luis.json'
     corpora = Path(__file__).parent / 'datasets' / 'NLU-Evaluation-Corpora'
-    luis_converter = LuisConverter()
-    luis_converter.import_corpus(corpora / "WebApplicationsCorpus.json")
-    luis_converter.export(training_file)
-    rasa = Rasa()
-    rasa.train(Path(__file__).parent / 'WebApplicationsTraining_Luis.json')
+    converter = RasaConverter()
+    converter.import_corpus(corpora / "WebApplicationsCorpus.json")
+    converter.export('WebApplicationsCorpus')
+    # rasa = Rasa()
+    # rasa.train(Path(__file__).parent / 'WebApplicationsTraining_Luis.json')
 
     # Rasa
     # Running via Docker possible via (sudo) docker run -p 5000:5000 rasa/rasa_nlu:latest-full
     # run python -m rasa_nlu.train -c sample_configs/config_spacy.json
 
     # and to activate venv use: . venv/bin/activate
-    rasa_analyser = RasaAnalyser("http://localhost:5000/parse")
-    rasa_analyser.get_annotations(corpora / "WebApplicationsCorpus.json", "WebApplicationsAnnotations_Rasa.json")
-    rasa_analyser.analyse_annotations("WebApplicationsAnnotations_Rasa.json", corpora / "WebApplicationsCorpus.json",
-                                      "WebApplicationsAnalysis_Rasa.json")
+    # rasa_analyser = RasaAnalyser("http://localhost:5000/parse")
+    # rasa_analyser.get_annotations(corpora / "WebApplicationsCorpus.json", "WebApplicationsAnnotations_Rasa.json")
+    # rasa_analyser.analyse_annotations("WebApplicationsAnnotations_Rasa.json", corpora / "WebApplicationsCorpus.json",
+    #                                  "WebApplicationsAnalysis_Rasa.json")
 
 
 if __name__ == '__main__':

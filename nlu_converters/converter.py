@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 
 class Converter(object):
@@ -19,6 +20,9 @@ class Converter(object):
 
     @staticmethod
     def write_json(file, content):
+        print(content)
+        if isinstance(content, bytes):
+            content = content.decode('utf-8')
         with open(file, 'w') as f:
             json.dump(content, f)
 
@@ -37,6 +41,10 @@ class Converter(object):
         self.name = ""
         self.desc = ""
         self.lang = ""
+
+    @staticmethod
+    def get_file(dataset_name, system_suffix):
+        return Path(__file__).parent / 'training' / str(dataset_name + '_' + system_suffix)
 
     def __add_intent(self, intent):
         raise NotImplementedError("Please implement this method")

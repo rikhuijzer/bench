@@ -1,13 +1,15 @@
-from nlu_converters.converter import *
+from pathlib import Path
+
 from nlu_converters.annotated_sentence import AnnotatedSentence
-import json
+from nlu_converters.converter import *
+import stringcase
+import nlu_converters.converter
 
-
-class LuisConverter(Converter):
+class RasaConverter(Converter):
     LUIS_SCHEMA_VERSION = "1.3.0"
 
     def __init__(self):
-        super(LuisConverter, self).__init__()
+        super(RasaConverter, self).__init__()
         self.bing_entities = set()
 
     def __add_intent(self, intent):
@@ -28,15 +30,6 @@ class LuisConverter(Converter):
     def import_corpus(self, file):
         data = json.load(open(file))
 
-        # meta data
-        self.name = data["name"]
-        self.desc = data["desc"]
-        # dirty quickfix
-        if (data["lang"] == "en"):
-            self.lang = "en-us"
-        else:
-            self.lang = data["lang"] + "-" + data["lang"]
-
         # training data
         for s in data["sentences"]:
             if s["training"]:  # only import training data
@@ -49,18 +42,14 @@ class LuisConverter(Converter):
                 self.__add_utterance(AnnotatedSentence(s["text"], s["intent"], s["entities"]))
 
     def export(self, dataset_name):
-        file = Path(__file__).parent / 'training'
-        luis_json = {}
-        luis_json["luis_schema_version"] = self.LUIS_SCHEMA_VERSION
-        luis_json["name"] = self.name
-        luis_json["desc"] = self.desc
-        luis_json["culture"] = self.lang
-        luis_json["intents"] = self.array_to_json(self.intents)
-        luis_json["entities"] = self.array_to_json(self.entities)
-        luis_json["bing_entities"] = self.array_to_json(self.bing_entities)
-        luis_json["actions"] = []
-        luis_json["model_features"] = []
-        luis_json["regex_features"] = []
-        luis_json["utterances"] = self.utterances
-
-        self.write_json(file, luis_json)
+        file = Converter.get_file(dataset_name, 'rasa.md')
+        with open(file, 'w') as f:
+            for intent in self.intents:
+                snake_case = stringcase.snakecase(intent)
+                snake_case = snake_case.replace('__', '_')
+                f.write('## intent:' + snake_case + '\n')
+                for utterance in self.utterances:
+                    print(utterance)
+                    if utterance['intent'] == intent:
+                        f.write('- ' + utterance['text'] + '\n')
+                f.write('\n')

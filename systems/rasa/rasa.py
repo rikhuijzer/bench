@@ -10,11 +10,6 @@ import json
 
 class Rasa:
     def train(self, training_data):
-        # if not hasattr(training_data, 'training_examples'):
-            # utils.list_files(training_data)
-            # if not isinstance(training_data, str):
-            #    training_data = str(training_data)
-        
         training_data = rasa_nlu.training_data.loading._load(training_data)
 
         for examples in training_data.training_examples:

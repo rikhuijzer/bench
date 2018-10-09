@@ -2,9 +2,9 @@ import hashlib
 import os
 import shutil
 import zipfile
-import json
-from nlu_converters.converter import *
+
 from nlu_converters.annotated_sentence import AnnotatedSentence
+from nlu_converters.converter import *
 
 
 class DialogflowConverter(Converter):
@@ -60,7 +60,7 @@ class DialogflowConverter(Converter):
 
         try:
             self.intents[u["intent"]]
-        except e:
+        except Exception as e:
             self.intents[u["intent"]] = []
 
         self.intents[u["intent"]].append(u)
@@ -96,7 +96,7 @@ class DialogflowConverter(Converter):
     def __agent_to_json(self):
         my_json = {}
         my_json["language"] = self.lang
-        my_json["enabledDomainFeatures"] = ['smalltalk-domain-on', 'smalltalk-fulfillment-on'];
+        my_json["enabledDomainFeatures"] = ['smalltalk-domain-on', 'smalltalk-fulfillment-on']
         my_json["defaultTimezone"] = ""
         my_json["customClassifierMode"] = "use.after"
         my_json["mlMinConfidence"] = 0.2
@@ -115,7 +115,7 @@ class DialogflowConverter(Converter):
         my_json["webhookUsed"] = False
         my_json["events"] = []
 
-        response = {};
+        response = {}
         response["affectedContexts"] = []
         response["resetContexts"] = False
         response["dataType"] = "@" + name
@@ -165,7 +165,7 @@ class DialogflowConverter(Converter):
             j["data"] = words
             j["isTemplate"] = False
             j["count"] = 0
-            j["id"] = hashlib.md5(str(counter)).hexdigest()
+            j["id"] = hashlib.md5(str(counter).encode('utf-8')).hexdigest()
             user_says.append(j)
 
         my_json["userSays"] = user_says
@@ -183,7 +183,7 @@ class DialogflowConverter(Converter):
 
         entries = []
         for value in entity["values"]:
-            e = {};
+            e = {}
             e["value"] = Converter.detokenizer(value)
             e["synonyms"] = []
             entries.append(e)
