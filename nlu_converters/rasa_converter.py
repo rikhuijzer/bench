@@ -5,6 +5,7 @@ from nlu_converters.converter import *
 import stringcase
 import nlu_converters.converter
 
+
 class RasaConverter(Converter):
     LUIS_SCHEMA_VERSION = "1.3.0"
 
@@ -49,7 +50,11 @@ class RasaConverter(Converter):
                 snake_case = snake_case.replace('__', '_')
                 f.write('## intent:' + snake_case + '\n')
                 for utterance in self.utterances:
-                    print(utterance)
+
+                    if utterance['intent'] == 'Change Password':
+                        # print(2)
+                        print(utterance)
+
                     if utterance['intent'] == intent:
                         f.write('- ' + utterance['text'] + '\n')
                 f.write('\n')
