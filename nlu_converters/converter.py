@@ -1,3 +1,6 @@
+import json
+
+
 class Converter(object):
     @staticmethod
     def tokenizer(s):
@@ -16,9 +19,8 @@ class Converter(object):
 
     @staticmethod
     def write_json(file, content):
-        f = open(file, "w")
-        f.write(str(content))
-        f.close()
+        with open(file, 'w') as f:
+            json.dump(content, f)
 
     @staticmethod
     def array_to_json(array):
