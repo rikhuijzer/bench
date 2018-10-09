@@ -1,6 +1,8 @@
-from nlu_analysers.analyser import *
-import requests
 import urllib.parse
+
+import requests
+
+from nlu_analysers.analyser import *
 
 
 class LuisAnalyser(Analyser):
@@ -15,7 +17,8 @@ class LuisAnalyser(Analyser):
         super(LuisAnalyser, self).__init__()
         self.subscription_key = subscription_key
         self.application_id = application_id
-        self.url = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/" + self.application_id + "?subscription-key=" + self.subscription_key + "&verbose=true&timezoneOffset=0.0&q=%s"
+        self.url = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/" + self.application_id \
+                   + "?subscription-key=" + self.subscription_key + "&verbose=true&timezoneOffset=0.0&q=%s"
 
     def get_annotations(self, corpus, output):
         data = json.load(open(corpus))
@@ -51,8 +54,7 @@ class LuisAnalyser(Analyser):
                 print("WARNING! Texts not equal")
 
             # intent
-            print('CHECK NEXT LINE')
-            aIntent = a['intent']['name']  # a["topScoringIntent"]["intent"]
+            aIntent = a['intent']['name']
             oIntent = gold_standard[i]["intent"]
 
             Analyser.check_key(analysis["intents"], aIntent)

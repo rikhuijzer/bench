@@ -28,7 +28,7 @@ class Analyser(object):
         my_sort = list(sort_order2)
         my_sort.extend(sort_order)
 
-        return [OrderedDict(sorted(my_dict.iteritems(), key=lambda k_v: my_sort.index(k_v[0])))]
+        return [OrderedDict(sorted(iter(my_dict.items()), key=lambda k_v: my_sort.index(k_v[0])))]
 
     @staticmethod
     def calc_pres_rec_f1(dict, tp, fn, fp):
@@ -74,7 +74,7 @@ class Analyser(object):
         # sort keys
         content = Analyser.sort_dict(content)
 
-        f = open(file, "w")
+        f = open(file, "wb")
         f.write(
             json.dumps(content, sort_keys=False, indent=4, separators=(',', ': '), ensure_ascii=False).encode('utf-8'))
         f.close()
