@@ -2,10 +2,30 @@
     {
         "intents": [
             {
-                "Find Alternative": [
+                "find_alternative": [
                     {
                         "truePos": 0,
-                        "falseNeg": 16,
+                        "falseNeg": 0,
+                        "falsePos": 47,
+                        "precision": 0.0,
+                        "recall": "n.a.",
+                        "f1": "n.a."
+                    }
+                ],
+                "export_data": [
+                    {
+                        "truePos": 0,
+                        "falseNeg": 0,
+                        "falsePos": 1,
+                        "precision": 0.0,
+                        "recall": "n.a.",
+                        "f1": "n.a."
+                    }
+                ],
+                "None": [
+                    {
+                        "truePos": 0,
+                        "falseNeg": 4,
                         "falsePos": 0,
                         "precision": "n.a.",
                         "recall": 0.0,
@@ -22,26 +42,6 @@
                         "f1": "n.a."
                     }
                 ],
-                "Export Data": [
-                    {
-                        "truePos": 0,
-                        "falseNeg": 3,
-                        "falsePos": 0,
-                        "precision": "n.a.",
-                        "recall": 0.0,
-                        "f1": "n.a."
-                    }
-                ],
-                "Filter Spam": [
-                    {
-                        "truePos": 0,
-                        "falseNeg": 14,
-                        "falsePos": 0,
-                        "precision": "n.a.",
-                        "recall": 0.0,
-                        "f1": "n.a."
-                    }
-                ],
                 "Delete Account": [
                     {
                         "truePos": 0,
@@ -52,10 +52,40 @@
                         "f1": "n.a."
                     }
                 ],
-                "None": [
+                "Find Alternative": [
                     {
                         "truePos": 0,
-                        "falseNeg": 4,
+                        "falseNeg": 16,
+                        "falsePos": 0,
+                        "precision": "n.a.",
+                        "recall": 0.0,
+                        "f1": "n.a."
+                    }
+                ],
+                "filter_spam": [
+                    {
+                        "truePos": 0,
+                        "falseNeg": 0,
+                        "falsePos": 2,
+                        "precision": 0.0,
+                        "recall": "n.a.",
+                        "f1": "n.a."
+                    }
+                ],
+                "Export Data": [
+                    {
+                        "truePos": 0,
+                        "falseNeg": 3,
+                        "falsePos": 0,
+                        "precision": "n.a.",
+                        "recall": 0.0,
+                        "f1": "n.a."
+                    }
+                ],
+                "Sync Accounts": [
+                    {
+                        "truePos": 0,
+                        "falseNeg": 6,
                         "falsePos": 0,
                         "precision": "n.a.",
                         "recall": 0.0,
@@ -72,31 +102,21 @@
                         "f1": "n.a."
                     }
                 ],
-                "find_alternative": [
+                "Filter Spam": [
                     {
                         "truePos": 0,
-                        "falseNeg": 0,
-                        "falsePos": 45,
-                        "precision": 0.0,
-                        "recall": "n.a.",
-                        "f1": "n.a."
-                    }
-                ],
-                "Sync Accounts": [
-                    {
-                        "truePos": 0,
-                        "falseNeg": 6,
+                        "falseNeg": 14,
                         "falsePos": 0,
                         "precision": "n.a.",
                         "recall": 0.0,
                         "f1": "n.a."
                     }
                 ],
-                "filter_spam": [
+                "sync_accounts": [
                     {
                         "truePos": 0,
                         "falseNeg": 0,
-                        "falsePos": 6,
+                        "falsePos": 1,
                         "precision": 0.0,
                         "recall": "n.a.",
                         "f1": "n.a."

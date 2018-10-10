@@ -5,6 +5,7 @@ import requests
 from nlu_analysers.analyser import *
 from systems.rasa.rasa import Rasa
 
+
 class LuisAnalyser(Analyser):
     @staticmethod
     def detokenizer(s):

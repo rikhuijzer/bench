@@ -1,11 +1,11 @@
-from datasets.sts_benchmark import STSBenchmark
-from nlu_analysers.rasa_analyser import RasaAnalyser
-from nlu_converters.rasa_converter import RasaConverter
-from nlu_converters.luis_converter import LuisConverter
-from systems.dandelion import Dandelion
 from pathlib import Path
-from systems.rasa.rasa import Rasa
 
+from datasets.sts_benchmark import STSBenchmark
+from nlu_analysers.analyser import analyse
+from nlu_converters.rasa_converter import RasaConverter
+from systems.dandelion import Dandelion
+from systems.rasa.rasa import Rasa
+from nlu_analysers import rasa_analyser
 
 def test_dandelion():
     s = Dandelion()
@@ -31,11 +31,8 @@ def rasa_evaluation():
     rasa = Rasa()
     rasa.train(corpus)
 
-    rasa_analyser = RasaAnalyser()
-    annotations_file = 'WebApplicationsAnnotations_Rasa.json'
-    rasa_analyser.get_annotations(corpus=corpora / "WebApplicationsCorpus.json", output=annotations_file, rasa=rasa)
-    rasa_analyser.analyse_annotations(annotations_file, corpora / "WebApplicationsCorpus.json",
-                                      "WebApplicationsAnalysis_Rasa.json")
+    analyser = rasa_analyser
+    analyse(analyser, corpora, 'WebApplicationsAnnotations_Rasa.json', rasa)
 
 
 if __name__ == '__main__':
