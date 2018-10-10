@@ -1,9 +1,10 @@
 from nlu_analysers import analyser
 from systems.rasa.rasa import Rasa
 import json
+from pathlib import Path
 
 
-def get_annotations(corpus, output, rasa: Rasa()):
+def get_annotations(corpus, rasa: Rasa):
     data = json.load(open(corpus))
     annotations = {'results': []}
 
@@ -11,23 +12,23 @@ def get_annotations(corpus, output, rasa: Rasa()):
         if not s["training"]:
             annotations['results'].append(rasa.evaluate(s['text']))
 
-    file = open(output, "wb")
-    file.write(
-        json.dumps(annotations, sort_keys=False, indent=4, separators=(',', ': '), ensure_ascii=False).encode(
+    file = Path(__file__).parent / 'generated' / 'rasa' / str(str(corpus) + '.txt')
+    with open(file, "wb") as f:
+        f.write(json.dumps(annotations, sort_keys=False, indent=4, separators=(',', ': '), ensure_ascii=False).encode(
             'utf-8'))
-    file.close()
 
 
-def analyse_annotations(annotations_file, corpus_file, output_file):
+def analyse_annotations(corpus, output_file):
     analysis = {"intents": {}, "entities": {}}
 
-    corpus = json.load(open(corpus_file))
+    corpus = json.load(open(corpus))
     gold_standard = []
     for s in corpus["sentences"]:
         if not s["training"]:  # only use test data
             gold_standard.append(s)
 
-    annotations = json.load(open(annotations_file))
+    annotations_file = Path(__file__).parent.parent / 'generated' / 'rasa' / 'test'
+    annotations = json.load(annotations_file)
 
     i = 0
     for a in annotations["results"]:
@@ -64,7 +65,8 @@ def analyse_annotations(annotations_file, corpus_file, output_file):
                 true_pos = False
 
                 for y in o_entities:
-                    if Luisanalyser.detokenizer(x["entity"]) == y["text"].lower():
+                    # if Luisanalyser.detokenizer(x["entity"]) == y["text"].lower():
+                    if x['entitiy'] == y['text'].lower():
                         if x["type"] == y["entity"]:  # truePos
                             true_pos = True
                             o_entities.remove(y)

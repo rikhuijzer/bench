@@ -42,10 +42,6 @@ class Converter(object):
         self.desc = ""
         self.lang = ""
 
-    @staticmethod
-    def get_file(corpus, system_suffix):
-        return Path(__file__).parent / 'training' / str(corpus + '_' + system_suffix)
-
     def __add_intent(self, intent):
         raise NotImplementedError("Please implement this method")
 
@@ -58,5 +54,5 @@ class Converter(object):
     def import_corpus(self, file):
         raise NotImplementedError("Please implement this method")
 
-    def export(self, file):
+    def export(self):
         raise NotImplementedError("Please implement this method")

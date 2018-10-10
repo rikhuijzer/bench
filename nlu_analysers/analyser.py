@@ -2,10 +2,9 @@ import json
 from collections import OrderedDict
 
 
-def analyse(analyser, corpora, annotations_filename, rasa=None):
-    analyser.get_annotations(corpus=corpora / "WebApplicationsCorpus.json", output=annotations_filename, rasa=rasa)
-    analyser.analyse_annotations(annotations_filename, corpora / "WebApplicationsCorpus.json",
-                                 "WebApplicationsAnalysis_Rasa.json")
+def analyse(analyser, corpus, rasa=None):
+    analyser.get_annotations(corpus=corpus, rasa=rasa)
+    analyser.analyse_annotations(corpus, "WebApplicationsAnalysis_Rasa.json")
 
 
 def check_key(my_dict, my_key):
