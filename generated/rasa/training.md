@@ -1,15 +1,3 @@
-## intent:filter_spam
-- Does using Gmail's "Never send it to Spam" filter mean I can't train their spam filter?
-- Correctly Identifying Spam Messages
-- Twitter and Echofon spam
-- Totally Blocking Spam To Gmail Account
-- Discarding spam mail faster in Gmail
-- Stopping spam emails in Gmail by pattern
-
-## intent:export_data
-- How can I export track.scrobble data from last.fm?
-- How can I backup my wordpress.com hosted blog?
-
 ## intent:download_video
 - How do I download a YouTube video?
 
@@ -27,14 +15,6 @@
 - Google Bookmarks and Chrome Bookmark Sync -- Different?
 - How do I sync my RunKeeper workout schedule with Google Calender?
 
-## intent:change_password
-- How do I change my password on TV Tropes?
-- Why can't I change my password and login with Skype?
-
-## intent:none
-- Change subject line in new Gmail compose window
-- Email Google Form daily?
-
 ## intent:delete_account
 - How can I delete my Twitter account?
 - How do I delete my LinkedIn account?
@@ -43,4 +23,24 @@
 - How do I delete my Ohloh profile?
 - How can I permanently delete my MySpace account?
 - How to disable/delete a Harvest account?
+
+## intent:none
+- Change subject line in new Gmail compose window
+- Email Google Form daily?
+
+## intent:change_password
+- How do I change my password on TV Tropes?
+- Why can't I change my password and login with Skype?
+
+## intent:export_data
+- How can I export track.scrobble data from last.fm?
+- How can I backup my wordpress.com hosted blog?
+
+## intent:filter_spam
+- Does using Gmail's "Never send it to Spam" filter mean I can't train their spam filter?
+- Correctly Identifying Spam Messages
+- Twitter and Echofon spam
+- Totally Blocking Spam To Gmail Account
+- Discarding spam mail faster in Gmail
+- Stopping spam emails in Gmail by pattern
 

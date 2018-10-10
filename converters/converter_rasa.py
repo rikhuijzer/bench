@@ -1,16 +1,14 @@
 import stringcase
 
-from nlu_converters.annotated_sentence import AnnotatedSentence
-from nlu_converters.converter import *
+from converters.annotated_sentence import AnnotatedSentence
+from converters.converter import *
 
 
-class RasaConverter(Converter):
-    LUIS_SCHEMA_VERSION = "1.3.0"
-
-    def __init__(self):
-        super(RasaConverter, self).__init__()
-        self.bing_entities = set()
-        self.training_file = Path(__file__).parent.parent / 'generated' / 'rasa' / 'training.md'
+class ConverterRasa(Converter):
+    def __init__(self, paths):
+        super(ConverterRasa, self).__init__()
+        self.paths = paths
+        self.training_file = paths.folder_generated() / 'training.md'
 
     def __add_intent(self, intent):
         self.intents.add(intent)
@@ -18,27 +16,20 @@ class RasaConverter(Converter):
     def __add_entity(self, entity):
         self.entities.add(entity)
 
-    def __add_bing_entity(self, entity):
-        self.bing_entities.add(entity)
-
     def __add_utterance(self, sentence):
         entities = []
         for e in sentence.entities:
             entities.append({"entity": e["entity"], "startPos": e["start"], "endPos": e["stop"]})
         self.utterances.append({"text": sentence.text, "intent": sentence.intent, "entities": entities})
 
-    def import_corpus(self, corpus):
-        data = json.load(open(corpus))
+    def import_corpus(self):
+        data = json.load(open(self.paths.file_corpus()))
 
-        # training data
         for s in data["sentences"]:
-            if s["training"]:  # only import training data
-                # intents
+            if s["training"]:
                 self.__add_intent(s["intent"])
-                # entities
                 for e in s["entities"]:
                     self.__add_entity(e["entity"])
-                # utterances
                 self.__add_utterance(AnnotatedSentence(s["text"], s["intent"], s["entities"]))
 
     def export(self):

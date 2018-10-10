@@ -7,15 +7,13 @@ from rasa_nlu import config
 from rasa_nlu.model import Interpreter
 from rasa_nlu.model import Trainer
 
-import nlu_converters.converter
-
 
 class Rasa:
     interpreter: rasa_nlu.model.Interpreter
-    
+
     def __init__(self, converter):
         self.converter = converter
-        
+
     def train(self):
         # For any intent having only one utterance it is common that sklearn gives the following warning:
         # UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
