@@ -15,4 +15,4 @@ class Paths:
         return self.root / 'datasets' / 'NLU-Evaluation-Corpora'
 
     def file_corpus(self):
-        return self.corpora() / str(self.corpus + '.json')
+        return self.folder_corpora() / str(self.corpus + '.json')

@@ -1,11 +1,8 @@
-from pathlib import Path
-
-from datasets.sts_benchmark import STSBenchmark
-from nlu_analysers import rasa_analyser
-from nlu_analysers.analyser import analyse
 from converters.converter_rasa import ConverterRasa
-from systems.rasa.rasa import Rasa
+from datasets.sts_benchmark import STSBenchmark
 from paths import Paths
+from systems.rasa.rasa import Rasa
+from corpus import Corpus
 
 
 def test_sts_benchmark():
@@ -14,16 +11,21 @@ def test_sts_benchmark():
     print(lines)
 
 
-def rasa_evaluation():
+def convert_rasa():
     paths = Paths('WebApplicationsCorpus', 'rasa')
     converter = ConverterRasa(paths)
     converter.import_corpus()
     converter.export()
-    rasa = Rasa(converter)
-    rasa.train()
+    return converter.training_file
 
-    analyse(rasa_analyser, paths, rasa)
+    # analyse(analyser_rasa, paths, rasa)
+
+
+def analyse_rasa():
+    paths = Paths('WebApplicationsCorpus', 'rasa')
+    corpus = Corpus(paths.file_corpus())
+    df = corpus.get_train()
 
 
 if __name__ == '__main__':
-    rasa_evaluation()
+    analyse_rasa()

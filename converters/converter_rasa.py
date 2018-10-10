@@ -42,4 +42,3 @@ class ConverterRasa(Converter):
                     if utterance['intent'] == intent:
                         f.write('- ' + utterance['text'] + '\n')
                 f.write('\n')
-                print(self.training_file)
