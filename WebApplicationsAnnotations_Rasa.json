@@ -1,63 +1,2482 @@
 {
     "results": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.28081164344141046
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.28081164344141046
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.26689757383057927
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.13205124124324732
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11139382316761756
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06450161430817057
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.06338266743230948
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04057447750763875
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.04038695906902665
+                }
+            ],
+            "text": "Alternative to Facebook"
+        },
+        {
+            "intent": {
+                "name": "delete_account",
+                "confidence": 0.5775963221081546
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "delete_account",
+                    "confidence": 0.5775963221081546
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.09889826410484054
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08040166187854893
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.06950102370501357
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.06270655015260103
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.04256988928544437
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.034186488140473446
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.034139800624923826
+                }
+            ],
+            "text": "How do I delete my Facebook account?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3095777937969308
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3095777937969308
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.20367552896191876
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.0976478597847103
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.09614840576189553
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08786489078254135
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.08351687804771459
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.07116436486835342
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.05040427799593567
+                }
+            ],
+            "text": "Are there any good Pandora alternatives with general availability outside the US?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.28405917988263546
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.28405917988263546
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.19596788990070846
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.1677942500950892
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.12503526328636266
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.07125249376426643
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.06133757785239692
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.05557145573068506
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.038981889487856115
+                }
+            ],
+            "text": "Is it possible to export my data from Trello to back it up?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.30908030476772097
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.30908030476772097
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2595635983948832
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.10587605775372841
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.10176998796200386
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.07049759688659014
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.06700578625414612
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.04467446078589722
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.04153220719503002
+                }
+            ],
+            "text": "Is there an online alternative to iGoogle"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.2560872335243596
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2560872335243596
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.1909989599054534
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.16461829105078174
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.12313885545906524
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.0947005477484235
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.07614679131978623
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.06844433360364406
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.02586498738848604
+                }
+            ],
+            "text": "How can I remove myself from a Trello organization?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.32882783333481863
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.32882783333481863
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.14408984849626028
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.13273105964477094
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.12048576265744795
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.10515848890058217
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.0743553858785698
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.06026739122749587
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03408422986005436
+                }
+            ],
+            "text": "How do I transfer my photos from Flickr to Picasa?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.274034392243324
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.274034392243324
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.22644115392832284
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.14630235012879603
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.10129351638152859
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.08706863129033099
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08365244504983581
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04767319986052302
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.033534311117338615
+                }
+            ],
+            "text": "How do I sync Google Calendar with my Outlook Calendar?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.28067356966301005
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.28067356966301005
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2425825609190352
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.12931141459330475
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11584987070584128
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.0738929848525634
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.06565653010508188
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04848577426941179
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.043547294891751506
+                }
+            ],
+            "text": "Archive/export all the blog entries from a RSS feed in Google Reader"
+        },
+        {
+            "intent": {
+                "name": "delete_account",
+                "confidence": 0.3415296480860748
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "delete_account",
+                    "confidence": 0.3415296480860748
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.18824858795835603
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.11549322720639324
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.11066614554451601
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.07691412452755897
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.07348916329198141
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.049955217378538884
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.0437038860065811
+                }
+            ],
+            "text": "How can I delete my 160by2 account?"
+        },
+        {
+            "intent": {
+                "name": "delete_account",
+                "confidence": 0.38133296565867847
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "delete_account",
+                    "confidence": 0.38133296565867847
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.18549656618202306
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.11313952962556888
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.0945126678871898
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.07493189523154634
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.06331057135388933
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.05590065977362393
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03137514428748062
+                }
+            ],
+            "text": "How can I permanently delete my Yahoo mail account?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.38966582508806963
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.38966582508806963
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.19469459911952497
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.11651494196132393
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08819533892719117
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.08299798535172846
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.056883938162668464
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03825599523500038
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.032791376154492964
+                }
+            ],
+            "text": "Deleting an account(website) from Google Analytics?"
+        },
+        {
+            "intent": {
+                "name": "delete_account",
+                "confidence": 0.39373644506633365
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "delete_account",
+                    "confidence": 0.39373644506633365
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.16462589187981294
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.11622358303418306
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.10669092883446372
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.07156621363394351
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.05647089434585094
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.046604733467282035
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.04408130973813029
+                }
+            ],
+            "text": "How to delete my imgur account?"
+        },
+        {
+            "intent": {
+                "name": "delete_account",
+                "confidence": 0.3231342150347458
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "delete_account",
+                    "confidence": 0.3231342150347458
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.19438768208159013
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.1766028717122619
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.10789650759525912
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.07120695516970707
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.052103653552736405
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.039471878412512006
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.035196236441187585
+                }
+            ],
+            "text": "How to change my Uber password or delete the account?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.2412461101618155
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2412461101618155
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2078194364280177
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.15809315489433926
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.1124906908684825
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.09866112007656558
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.08663500575421237
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06376179776835499
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03129268404821206
+                }
+            ],
+            "text": "How to delete a Sify Mail account"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3440148610647081
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3440148610647081
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.20560313019849366
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.14305424399755703
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.08210496470363897
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.07624808904495882
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.061844538599847176
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.05086381538783223
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03626635700296436
+                }
+            ],
+            "text": "How to permanently delete a 37signals ID"
+        },
+        {
+            "intent": {
+                "name": "delete_account",
+                "confidence": 0.4821627021700401
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "delete_account",
+                    "confidence": 0.4821627021700401
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.1246507017631602
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.1044144944998811
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.08633647200658554
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06476766802730745
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.05525712795059687
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.043265842026140415
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.039144991556288665
+                }
+            ],
+            "text": "How can I delete my Hunch account?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.34430145611180246
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.34430145611180246
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.16264821222950807
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.14232358897693478
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.1024729215073526
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.09303650622063754
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.05691938816601637
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05025358476914583
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.0480443420186025
+                }
+            ],
+            "text": "Any alternatives to Google Apps for your domain?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.2822202858398493
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2822202858398493
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.15159320903688353
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.14994751541112308
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.12592507240277612
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.08520764328546111
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.07919717222667146
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.06947232432338196
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.056436777473853145
+                }
+            ],
+            "text": "Evernote alternative"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3753074729933732
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3753074729933732
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.220215661868227
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.0951151450432691
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.08242935748378981
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.07169986196711145
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.06979602296477719
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.05506619211112143
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.030370285568331244
+                }
+            ],
+            "text": "Alternatives to LibraryThing"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3082630336439651
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3082630336439651
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.23105308470137292
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.1448870330297691
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.09486418247380075
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.0938313073806337
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.0513582801637025
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.042552847209065714
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03319023139769009
+                }
+            ],
+            "text": "What are the alternatives to Facebook/Meetup for Event Planning"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3140405094779265
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3140405094779265
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.21219299213377338
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.09157210869990667
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.09018137702452793
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.08715966767157074
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.08519532819394703
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.06921379529039168
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.05044422150795604
+                }
+            ],
+            "text": "Is there a free and privacy-aware alternative to Google?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3283591913917741
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3283591913917741
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.1993482749733734
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.16028867905583452
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.12026290880323277
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06021380846939875
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.05211569591353728
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.04057360820914761
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.03883783318370201
+                }
+            ],
+            "text": "What alternatives to Google Product Search exist?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3180461326152632
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3180461326152632
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.24691232193695412
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11793702133366603
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.1050300784887007
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.07444500934253868
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.051242220487317726
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.047073612643361094
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.03931360315219775
+                }
+            ],
+            "text": "Photo Sharing Site (alternative to flickr) supporting OpenID sign in?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3222219234836753
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3222219234836753
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.19936704454119125
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.12998711366573706
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11406336736789349
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08367289642659594
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.05285721754139523
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05257992624851525
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.0452505107249962
+                }
+            ],
+            "text": "Any good alternative to Google Alerts?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.31576916680490386
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.31576916680490386
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.14651305519558097
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.14060844059296718
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.12066045774053472
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08314323002117777
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.08065022278485397
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.0696176026029705
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.04303782425701112
+                }
+            ],
+            "text": "Good wireframing apps?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.31359895891693146
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.31359895891693146
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2238225232979159
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.1299950539271615
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08874153653318809
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.07477315923956711
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.07305223468593744
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.052773735644659814
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.04324279775463913
+                }
+            ],
+            "text": "Is there a HTML alternative to Prezi?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.36548118522770506
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.36548118522770506
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.15837148898487352
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.1443811457488591
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11222161940558241
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08609432963253695
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04606904060436479
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.04523459660796035
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.04214659378811737
+                }
+            ],
+            "text": "Any alternatives to Google Streetview?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.4056515745908278
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.4056515745908278
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.15575782101867017
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11709667793485005
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.09010542968562896
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.0823299684619379
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05881488803810039
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.05426453982032817
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.035979100449656444
+                }
+            ],
+            "text": "Zencoder alternatives?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3829036061260892
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3829036061260892
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.16271012570120164
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.13520542000081914
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11863162059561635
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06448374289017995
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.05883777915641356
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04722513160233945
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.03000257392734076
+                }
+            ],
+            "text": "Alternatives to discontinued Google Calendar Appointment Slots"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.27955727948543435
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.27955727948543435
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.23840904470936922
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.13084767065581865
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.1124610968232948
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.09456950112840248
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05474799131923376
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.05195842839984288
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03744898747860355
+                }
+            ],
+            "text": "Q&A Platform similar to Stack Exchange model?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.2643983151578115
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2643983151578115
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.17593785187621733
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.16092256892963272
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.1400272614248003
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08868771498625896
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.08113628825685497
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.050217784942132984
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03867221442629099
+                }
+            ],
+            "text": "Can I Share/Sync My Picasa Web Albums Automatically to My Facebook Account?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3006967920381843
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3006967920381843
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2257686450773211
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.14776738761108513
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.12014688446646649
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.06795443930981492
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06447059403394786
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04956433015228001
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.023630927310899982
+                }
+            ],
+            "text": "Sync not export Facebook events with Google Apps calendar"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.24834958137532773
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.24834958137532773
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.16443191462907558
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.16280774289530525
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.12295773200308498
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.11849831620759045
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.08781788202982746
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.06445792741926451
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.030678903440524184
+                }
+            ],
+            "text": "How do I sync Facebook Twitter & Foursquare?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.33546914090824864
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.33546914090824864
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.23474546805141505
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.1059635640192849
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.09222970362698997
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08135589091406155
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.06257735996376101
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.044868000440468035
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.04279087207577115
+                }
+            ],
+            "text": "Google Calendar not syncing calendars that have been added by URL with Windows 10 Calendar"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.31781189814456684
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.31781189814456684
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.22395474409463356
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.16352521509311999
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11872966627697946
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.07141576489247978
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.037896605202199354
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.03629894498132782
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.030367161314693334
+                }
+            ],
+            "text": "Google Contact Synchronization on the iPhone 3G"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.25216192522433295
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.25216192522433295
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.22775900095286045
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.13945033363715803
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.10999468690001542
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.10491969910881757
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.07078026270094125
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04779704542630777
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.0471370460495663
+                }
+            ],
+            "text": "Gmail user set up through Google Apps can't change their password"
+        },
+        {
+            "intent": {
+                "name": "delete_account",
+                "confidence": 0.26318427945952616
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "delete_account",
+                    "confidence": 0.26318427945952616
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.1867080607637404
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.16044468579707027
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.12786645938490301
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.10968116478297338
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.06752189036037036
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04502458858344201
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03956887086797446
+                }
+            ],
+            "text": "How do I change my password on ebay?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.27699902104580254
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.27699902104580254
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.24591662812841086
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.1457232288587121
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.12330598736253041
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06102448387727042
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.05668558585918593
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.053007140981263495
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.03733792388682406
+                }
+            ],
+            "text": "Gmail recover password while logged in Iphone"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.2341827457272898
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2341827457272898
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.22945787801719209
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.14295458575329759
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11719877034180619
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.11641335404809448
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06355196906927565
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05673464301698033
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03950605402606448
+                }
+            ],
+            "text": "How to retrieve forgotten Wordpress Admin password"
+        },
+        {
+            "intent": {
+                "name": "delete_account",
+                "confidence": 0.3525433990336821
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "delete_account",
+                    "confidence": 0.3525433990336821
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.18866039442903598
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.16566202701899085
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.07926610671453764
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.06951868492818764
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.0622340993006991
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.054995631929804056
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.027119656645062693
+                }
+            ],
+            "text": "How to retrieve a stolen Yahoo account's password?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.33649852524764506
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.33649852524764506
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.20798035989805264
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.10761773209587491
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.09229050822317406
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.07072857635712392
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.06489164412165571
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.062252424792851944
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.05774022926362123
+                }
+            ],
+            "text": "Users can't reset their passwords anymore on Google Apps?"
+        },
+        {
+            "intent": {
+                "name": "filter_spam",
+                "confidence": 0.3230997081415275
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.3230997081415275
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2805582577478176
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11124815765617248
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.10058999979103497
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.058590643729449214
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.05084292297263802
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03796378628921336
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.037106523672146806
+                }
+            ],
+            "text": "Does moving a mail to the IMAP spam folder trains Gmail's spam filter?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.286435471254039
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.286435471254039
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.19447400035890977
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.11733828131853528
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.11704452638232916
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.09195430814128484
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.09024908444839358
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.06566528672452329
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.036839041371985314
+                }
+            ],
+            "text": "How can I auto-delete some spam from Gmail?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.26538550710671566
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.26538550710671566
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.22021622516430453
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.1927104541156631
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08940250526156952
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.08141393312158372
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.07178272837276069
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05245513307968624
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.02663351377771646
+                }
+            ],
+            "text": "When I move spam to my inbox it goes back into the spam again"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3003797931670093
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3003797931670093
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.29082907587410173
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.09406631848504272
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.0842253774222093
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.07852803519100056
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05994055806373314
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.05426901146149631
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03776183033540702
+                }
+            ],
+            "text": "How to send messages to spam in Gmail filter?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.2415881590010919
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2415881590010919
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2062518388682283
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.1509497603121787
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.13790634327736861
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.10163844782509575
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08605524549713234
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05310183967502103
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.02250836554388326
+                }
+            ],
+            "text": "How do I disable the spam filter in Gmail?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.2535242255307506
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2535242255307506
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.248986150878594
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.12550779324681538
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.10568353584041966
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.0942608693118003
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06692586554591604
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.05428551097474103
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05082604867096276
+                }
+            ],
+            "text": "How to check your Gmail spam label for good emails"
+        },
+        {
+            "intent": {
+                "name": "filter_spam",
+                "confidence": 0.3118788623260278
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.3118788623260278
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.29209670706193425
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.07921718246908249
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.07678502272698813
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.06980557347340142
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.06461148507912624
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.0628486588803222
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.04275650798311764
+                }
+            ],
+            "text": "Mark large numbers of messages as \"not spam\""
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.328428145896976
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.328428145896976
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2255700998968131
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.12678147606767368
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08866187341633
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.08445182967834663
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.0582177534400788
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05376132530458541
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03412749629919673
+                }
+            ],
+            "text": "What are alternatives to Postini for spam filtering?"
+        },
+        {
+            "intent": {
+                "name": "filter_spam",
+                "confidence": 0.2839972100965891
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2839972100965891
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.28030700518792134
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.12912139206992224
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11105505986073792
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.07115692250666662
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.050848185620547756
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.03934602687225498
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03416819778536035
+                }
+            ],
+            "text": "How to remove spam filter for Google Apps email"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.30307620855511
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.30307620855511
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2812232859484651
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.10943432039261143
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.1077114078463501
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.0891594609854509
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04683808908637663
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.031295884643396915
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.031261342542239084
+                }
+            ],
+            "text": "Does marking an email as spam in Gmail affect the filter for everyone?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.2954100746299863
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2954100746299863
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2006129604844732
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.15535474706302257
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.10673021559334211
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.0875460125561104
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.061050195039498184
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05690743567621583
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.0363883589573518
+                }
+            ],
+            "text": "How can I prevent/lessen event spam on Facebook?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.3068478382485741
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.3068478382485741
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2624820828131236
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.10998231462053247
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.10373462853812387
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.07823931854853398
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.052501298914812436
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.045392866148016964
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.04081965216828275
+                }
+            ],
+            "text": "Do emails auto-forwarded from one Gmail account to another stop if marked as spam?"
+        },
+        {
+            "intent": {
+                "name": "filter_spam",
+                "confidence": 0.309502152837423
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.309502152837423
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.26166805468873383
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11686807237523703
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.11061357559329334
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.06771096931762297
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06767099539239847
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.03962023500025572
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.026345944795036106
+                }
+            ],
+            "text": "Gmail's filter for SPAM folder and/or keywords in multiple fields"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.24939590185256122
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.24939590185256122
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.17303361309461424
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.14550807695742446
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.1183155731701867
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11288707478231734
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.08570381322680615
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.0615391586577098
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.05361678825837997
+                }
+            ],
+            "text": "Get rid of Russian junk from my Gmail"
+        },
+        {
+            "intent": {
+                "name": "filter_spam",
+                "confidence": 0.3493192395149891
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.3493192395149891
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.2619746110220111
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.13005388726578418
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.11655670595456204
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.04924101847423398
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.03561345706588941
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.032919573294705615
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.024321507407824895
+                }
+            ],
+            "text": "Embedding stop time in a YouTube video link"
+        },
+        {
+            "intent": {
+                "name": "filter_spam",
+                "confidence": 0.2763101676707185
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.2763101676707185
+                },
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.272074871838031
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.10184452124407987
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.10123357502391994
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.0934300352717567
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.06809655127532588
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.04833143479545679
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.03867884288071174
+                }
+            ],
+            "text": "Is there a catch to PayPal's Premier account type?"
+        },
+        {
+            "intent": {
+                "name": "find_alternative",
+                "confidence": 0.29440030850882176
+            },
+            "entities": [],
+            "intent_ranking": [
+                {
+                    "name": "find_alternative",
+                    "confidence": 0.29440030850882176
+                },
+                {
+                    "name": "filter_spam",
+                    "confidence": 0.19780384818643268
+                },
+                {
+                    "name": "delete_account",
+                    "confidence": 0.14765190522556657
+                },
+                {
+                    "name": "export_data",
+                    "confidence": 0.10091023565615512
+                },
+                {
+                    "name": "sync_accounts",
+                    "confidence": 0.0802393597487631
+                },
+                {
+                    "name": "change_password",
+                    "confidence": 0.07956325456713713
+                },
+                {
+                    "name": "none",
+                    "confidence": 0.0629833926478011
+                },
+                {
+                    "name": "download_video",
+                    "confidence": 0.036447695459323165
+                }
+            ],
+            "text": "How can I get OkCupid search to show only matches within 5 miles of me?"
+        }
     ]
 }

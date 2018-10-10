@@ -3,7 +3,7 @@ import urllib.parse
 import requests
 
 from nlu_analysers.analyser import *
-
+from systems.rasa.rasa import Rasa
 
 class LuisAnalyser(Analyser):
     @staticmethod
@@ -20,14 +20,18 @@ class LuisAnalyser(Analyser):
         self.url = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/" + self.application_id \
                    + "?subscription-key=" + self.subscription_key + "&verbose=true&timezoneOffset=0.0&q=%s"
 
-    def get_annotations(self, corpus, output):
+    def get_annotations(self, corpus, output, method='requests'):
         data = json.load(open(corpus))
         annotations = {'results': []}
 
         for s in data["sentences"]:
             if not s["training"]:  # only use test data
-                encoded_text = urllib.parse.quote(s['text'])
-                annotations['results'].append(requests.get(self.url % encoded_text, data={}, headers={}).json())
+                if method == 'requests':
+                    encoded_text = urllib.parse.quote(s['text'])
+                    append = requests.get(self.url % encoded_text, data={}, headers={}).json()
+                elif isinstance(method, Rasa):
+                    append = method.evaluate(s['text'])
+                annotations['results'].append(append)
 
         file = open(output, "wb")
         file.write(
