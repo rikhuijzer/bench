@@ -3,6 +3,7 @@ from datasets.sts_benchmark import STSBenchmark
 from paths import Paths
 from systems.rasa.rasa import Rasa
 from corpus import Corpus
+from analysers import analyser_rasa
 
 
 def test_sts_benchmark():
@@ -16,15 +17,16 @@ def convert_rasa():
     converter = ConverterRasa(paths)
     converter.import_corpus()
     converter.export()
-    return converter.training_file
+    return converter
 
     # analyse(analyser_rasa, paths, rasa)
 
 
 def analyse_rasa():
+    rasa = Rasa(convert_rasa())
     paths = Paths('WebApplicationsCorpus', 'rasa')
     corpus = Corpus(paths.file_corpus())
-    df = corpus.get_train()
+    analyser_rasa.test(corpus, rasa)
 
 
 if __name__ == '__main__':

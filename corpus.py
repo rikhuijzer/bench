@@ -9,6 +9,8 @@ class Corpus:
         with open(file, 'r') as f:
             self.js = json.load(f)
 
+        pd.set_option('max_colwidth', 140)
+
     def _get_train_test(self, training):
         train = {'sentence': [], 'intent': []}
 

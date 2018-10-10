@@ -14,7 +14,6 @@ class Rasa:
     def __init__(self, converter):
         self.converter = converter
 
-    def train(self):
         # For any intent having only one utterance it is common that sklearn gives the following warning:
         # UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
         # this is no big issue according to Tom Bocklisch: https://github.com/RasaHQ/rasa_nlu/issues/288
@@ -27,3 +26,6 @@ class Rasa:
 
     def evaluate(self, sentence):
         return self.interpreter.parse(sentence)
+
+    def get_intent(self, sentence):
+        return self.evaluate(sentence)['intent']

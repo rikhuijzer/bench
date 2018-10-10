@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2efefc4-4d91-42e7-a849-2cbe2ca60d6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/analysers/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/converters/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corpus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analysers/analyser_rasa.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysers/analyser_rasa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converters/converter_rasa.py" beforeDir="false" afterPath="$PROJECT_DIR$/converters/converter_rasa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus.py" beforeDir="false" afterPath="$PROJECT_DIR$/corpus.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated/rasa/training.md" beforeDir="false" afterPath="$PROJECT_DIR$/generated/rasa/training.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/paths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systems/rasa/rasa.py" beforeDir="false" afterPath="$PROJECT_DIR$/systems/rasa/rasa.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/bench$main.coverage" NAME="main Coverage Results" MODIFIED="1539184799498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bench$main.coverage" NAME="main Coverage Results" MODIFIED="1539186995284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bench$test.coverage" NAME="test Coverage Results" MODIFIED="1538399620349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -99,7 +95,7 @@
     <session id="-726969301">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.7" value="1" />
@@ -111,7 +107,7 @@
         <counts>
           <entry key="dummy" value="45" />
           <entry key="md" value="251" />
-          <entry key="py" value="10269" />
+          <entry key="py" value="10971" />
           <entry key="yml" value="9" />
         </counts>
       </usages-collector>
@@ -119,7 +115,7 @@
         <counts>
           <entry key="Markdown" value="251" />
           <entry key="PLAIN_TEXT" value="45" />
-          <entry key="Python" value="10269" />
+          <entry key="Python" value="10971" />
           <entry key="YAML" value="9" />
         </counts>
       </usages-collector>
@@ -143,14 +139,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
-                <marker date="1539184843915" expanded="true" signature="541:664" ph="..." />
+                <marker date="1539186803651" expanded="true" signature="596:727" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,11 +155,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/rasa/rasa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="270">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1539179371179" expanded="true" signature="318:323" ph="..." />
               </folding>
             </state>
           </provider>
@@ -172,8 +167,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analysers/analyser_rasa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="144">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding>
+                <element signature="e#109#134#0" expanded="true" />
+                <marker date="1539186973754" expanded="true" signature="171:172" ph="..." />
+                <marker date="1539186973754" expanded="true" signature="209:214" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,15 +187,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/corpus.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+            <state relative-caret-position="198">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1539184755197" expanded="true" signature="47:52" ph="..." />
-                <marker date="1539184755197" expanded="true" signature="208:511" ph="..." />
+                <marker date="1539186995266" expanded="true" signature="47:52" ph="..." />
+                <marker date="1539186995266" expanded="true" signature="252:555" ph="..." />
               </folding>
             </state>
           </provider>
@@ -281,18 +281,18 @@
         <option value="$PROJECT_DIR$/nlu_analysers/luis_analyser.py" />
         <option value="$PROJECT_DIR$/nlu_converters/converter.py" />
         <option value="$PROJECT_DIR$/nlu_converters/rasa_converter.py" />
-        <option value="$PROJECT_DIR$/systems/rasa/rasa.py" />
         <option value="$PROJECT_DIR$/converters/converter.py" />
         <option value="$PROJECT_DIR$/files.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/analyser.py" />
         <option value="$PROJECT_DIR$/nlu_analysers/rasa_analyser.py" />
         <option value="$PROJECT_DIR$/paths.py" />
         <option value="$PROJECT_DIR$/converters/converter_rasa.py" />
-        <option value="$PROJECT_DIR$/analysers/analyser_rasa.py" />
         <option value="$PROJECT_DIR$/converters/README.md" />
         <option value="$PROJECT_DIR$/analysers/README.md" />
-        <option value="$PROJECT_DIR$/corpus.py" />
+        <option value="$PROJECT_DIR$/systems/rasa/rasa.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/analysers/analyser_rasa.py" />
+        <option value="$PROJECT_DIR$/corpus.py" />
       </list>
     </option>
   </component>
@@ -525,7 +525,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298887" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399841" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -660,6 +660,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -784,21 +787,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/systems/rasa/rasa.py">
+    <entry file="file://$PROJECT_DIR$/datasets/NLU-Evaluation-Corpora/WebApplicationsCorpus.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1539179371179" expanded="true" signature="318:323" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analysers/analyser_rasa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="397">
+          <caret line="1158" column="28" selection-start-line="1158" selection-start-column="12" selection-end-line="1158" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -812,32 +804,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corpus.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        <state relative-caret-position="468">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1539184755197" expanded="true" signature="47:52" ph="..." />
-            <marker date="1539184755197" expanded="true" signature="208:511" ph="..." />
+            <element signature="e#0#51#0" expanded="true" />
+            <marker date="1539186803651" expanded="true" signature="596:727" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/NLU-Evaluation-Corpora/WebApplicationsCorpus.json">
+    <entry file="file://$PROJECT_DIR$/systems/rasa/rasa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="1158" column="28" selection-start-line="1158" selection-start-column="12" selection-end-line="1158" selection-end-column="28" />
+        <state relative-caret-position="270">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/analysers/analyser_rasa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="144">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
-            <marker date="1539184843915" expanded="true" signature="541:664" ph="..." />
+            <element signature="e#109#134#0" expanded="true" />
+            <marker date="1539186973754" expanded="true" signature="171:172" ph="..." />
+            <marker date="1539186973754" expanded="true" signature="209:214" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1539186995266" expanded="true" signature="47:52" ph="..." />
+            <marker date="1539186995266" expanded="true" signature="252:555" ph="..." />
           </folding>
         </state>
       </provider>
