@@ -1,28 +1,26 @@
 import json
-import pandas as pd
+import pandas
 
 
 class Corpus:
     js: json.load
+    df: pandas.DataFrame
 
     def __init__(self, file):
         with open(file, 'r') as f:
             self.js = json.load(f)
 
-        pd.set_option('max_colwidth', 140)
+        pandas.set_option('max_colwidth', 140)
 
-    def _get_train_test(self, training):
-        train = {'sentence': [], 'intent': []}
-
+        data = {'sentence': [], 'intent': [], 'training': []}
         for sentence in self.js['sentences']:
-            if sentence['training'] == training:
-                train['sentence'].append(sentence['text'])
-                train['intent'].append(sentence['intent'])
-
-        return pd.DataFrame(train)
+            data['sentence'].append(sentence['text'])
+            data['intent'].append(sentence['intent'])
+            data['training'].append(sentence['training'])
+        self.df = pandas.DataFrame(data)
 
     def get_train(self):
-        return self._get_train_test(True)
+        return self.df.loc[self.df['training']].drop(['training'], axis=1)
 
     def get_test(self):
-        return self._get_train_test(False)
+        return self.df.loc[self.df['training'] != True].drop(['training'], axis=1)

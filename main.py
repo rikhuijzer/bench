@@ -5,6 +5,7 @@ from systems.rasa.rasa import Rasa
 from corpus import Corpus
 from evaluate import analyser_rasa
 from evaluate import evaluate
+from systems.deep_pavlov import DeepPavlov
 
 
 def test_sts_benchmark():
@@ -31,6 +32,11 @@ def analyse_rasa():
     df = evaluate.annotate(df)
     print(df)
     print(evaluate.f1_score(df))
+
+
+def analyse_pavlov():
+    system = DeepPavlov()
+    print(system.get_intent('test'))
 
 
 if __name__ == '__main__':
