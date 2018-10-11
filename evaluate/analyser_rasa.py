@@ -13,5 +13,5 @@ def test(corpus: Corpus, rasa: Rasa):
         intent = rasa.get_intent(row['sentence'])['name']
         output.append(intent)
 
-    df['guess'] = output
-    print(df)
+    df['classification'] = output
+    return df
