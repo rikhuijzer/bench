@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2efefc4-4d91-42e7-a849-2cbe2ca60d6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/systems/systems.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converters/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/converters/annotated_sentence.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/converters/converter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/converters/converter_rasa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/sts_benchmark.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/sts_benchmark_files/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/sts_benchmark_files/correlation.pl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/sts_benchmark_files/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/sts_benchmark_files/sts-dev.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/sts_benchmark_files/sts-test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/sts_benchmark_files/sts-train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluate/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluate/analyser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluate/analyser_rasa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluate/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paths.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/dandelion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/deep_pavlov.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/rasa/rasa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systems/systems.py" beforeDir="false" afterPath="$PROJECT_DIR$/systems/systems.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/bench$main.coverage" NAME="main Coverage Results" MODIFIED="1539333251896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bench$main.coverage" NAME="main Coverage Results" MODIFIED="1539333906456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bench$test.coverage" NAME="test Coverage Results" MODIFIED="1538399620349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -115,18 +93,18 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="10" />
-          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="71" />
           <entry key="md" value="251" />
-          <entry key="py" value="17205" />
+          <entry key="py" value="17417" />
           <entry key="yml" value="9" />
         </counts>
       </usages-collector>
@@ -134,23 +112,23 @@
         <counts>
           <entry key="Markdown" value="251" />
           <entry key="PLAIN_TEXT" value="71" />
-          <entry key="Python" value="17205" />
+          <entry key="Python" value="17417" />
           <entry key="YAML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="json" value="29" />
+          <entry key="json" value="30" />
           <entry key="md" value="21" />
-          <entry key="py" value="114" />
+          <entry key="py" value="115" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="29" />
+          <entry key="JSON" value="30" />
           <entry key="Markdown" value="21" />
-          <entry key="Python" value="114" />
+          <entry key="Python" value="115" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -161,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="288">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -173,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/evaluate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
+            <state relative-caret-position="807">
               <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -183,28 +161,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/systems/systems.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+            <state relative-caret-position="666">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1539330318232" expanded="true" signature="499:504" ph="..." />
+                <marker date="1539333740947" expanded="true" signature="568:587" ph="..." />
+                <marker date="1539333740947" expanded="true" signature="582:587" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="483">
+              <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1539332839668" expanded="true" signature="491:496" ph="..." />
-                <marker date="1539332839668" expanded="true" signature="1169:1175" ph="..." />
+                <marker date="1539333121785" expanded="true" signature="491:496" ph="..." />
+                <marker date="1539333121785" expanded="true" signature="1059:1065" ph="..." />
               </folding>
             </state>
           </provider>
@@ -294,12 +273,12 @@
         <option value="$PROJECT_DIR$/systems/deep_pavlov.py" />
         <option value="$PROJECT_DIR$/systems/system.py" />
         <option value="$PROJECT_DIR$/systems/dandelion.py" />
-        <option value="$PROJECT_DIR$/systems/systems.py" />
         <option value="$PROJECT_DIR$/evaluate/evaluate.py" />
         <option value="$PROJECT_DIR$/corpus.py" />
         <option value="$PROJECT_DIR$/paths.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/systems/systems.py" />
       </list>
     </option>
   </component>
@@ -518,12 +497,12 @@
     <frame x="51" y="31" width="2509" height="1409" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19690175" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19894007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298887" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2837838" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2837838" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399841" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -686,13 +665,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/evaluate/test_score.py" />
     <entry file="file://$PROJECT_DIR$/converters/corpus_dataframe.py" />
-    <entry file="file://$PROJECT_DIR$/datasets/NLU-Evaluation-Corpora/WebApplicationsCorpus.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="1604" column="57" selection-start-line="1604" selection-start-column="21" selection-end-line="1604" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/evaluate/analyser.py" />
     <entry file="file://$PROJECT_DIR$/systems/deep_pavlov.py" />
     <entry file="file://$PROJECT_DIR$/systems/rasa/rasa.py" />
@@ -718,24 +690,7 @@
     <entry file="file://$PROJECT_DIR$/converters/converter_rasa.py" />
     <entry file="file://$PROJECT_DIR$/evaluate/analyser_rasa.py" />
     <entry file="file://$PROJECT_DIR$/evaluate/README.md" />
-    <entry file="file://$PROJECT_DIR$/systems/systems.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1539330318232" expanded="true" signature="499:504" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/paths.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/paths.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -744,12 +699,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/data.py" />
+    <entry file="file://$PROJECT_DIR$/datasets/NLU-Evaluation-Corpora/WebApplicationsCorpus.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="733">
+          <caret line="1604" column="57" selection-start-line="1604" selection-start-column="21" selection-end-line="1604" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1539333121785" expanded="true" signature="491:496" ph="..." />
+            <marker date="1539333121785" expanded="true" signature="1059:1065" ph="..." />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/evaluate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
+        <state relative-caret-position="807">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -760,22 +732,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="288">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/systems/systems.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state relative-caret-position="666">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1539332839668" expanded="true" signature="491:496" ph="..." />
-            <marker date="1539332839668" expanded="true" signature="1169:1175" ph="..." />
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1539333740947" expanded="true" signature="568:587" ph="..." />
+            <marker date="1539333740947" expanded="true" signature="582:587" ph="..." />
           </folding>
         </state>
       </provider>

@@ -15,6 +15,10 @@ from rasa_nlu.model import Trainer
 
 class System(ABC):
     @abstractmethod
+    def __init__(self, train: pandas.DataFrame):
+        pass
+
+    @abstractmethod
     def get_intent(self, sentence: str) -> str:
         pass
 
@@ -22,8 +26,10 @@ class System(ABC):
 class Rasa(System):
     interpreter: rasa_nlu.model.Interpreter
 
-    def __init__(self, converter):
-        self.converter = converter
+    def __init__(self, train: pandas.DataFrame):
+        super().__init__(train)
+
+        self.converter = train  # converter
 
         # For any intent having only one utterance it is common that sklearn gives the following warning:
         # UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
@@ -46,6 +52,8 @@ class DeepPavlov(System):
     bot: DefaultAgent
 
     def __init__(self, train: pandas.DataFrame):
+        super().__init__(train)
+
         # some_skill = PatternMatchingSkill(responses=['intent'], patterns=['utterance 1', 'utterance 2'])
         # self.bot = DefaultAgent([skill 1, skill 2], skills_selector=HighestConfidenceSelector())
         intents = train['intent'].unique()

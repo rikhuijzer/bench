@@ -1,5 +1,6 @@
 from utils import Corpus
 from systems.systems import *
+from typing import Type
 
 '''
 def analyse_():
@@ -12,12 +13,10 @@ def analyse_():
 '''
 
 
-def analyse_system(corpus: Corpus, system):
-    print(type(system))
+def analyse_system(corpus: Corpus, system: Type[System]):
     system = system(corpus.get_train())
     print(system.get_intent('How can I delete my Twitter account?'))
 
 
 if __name__ == '__main__':
-    corpus = Corpus('WebApplicationsCorpus')
-    analyse_system(corpus, DeepPavlov)
+    analyse_system(Corpus('WebApplicationsCorpus'), DeepPavlov)
