@@ -1,1 +1,0 @@
-Analyse some corpus using some system and validate results  

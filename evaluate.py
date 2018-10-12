@@ -1,5 +1,6 @@
-import pandas as pd
+import pandas
 import stringcase
+from systems.systems import System
 
 
 def canonical_string(intent):
@@ -21,7 +22,7 @@ def _annotate_row(row):
     return row
 
 
-def annotate(df: pd.DataFrame):
+def annotate(df: pandas.DataFrame):
     df['true_positive'] = len(df) * [False]
     df['false_positive'] = len(df) * [False]
     df['false_negative'] = len(df) * [False]
@@ -47,3 +48,13 @@ def f1_score(df):
     precision = float(true_positive) / float(true_positive + false_positive)
     recall = float(true_positive) / float(true_positive + false_negative)
     return round(2 * ((precision * recall) / (precision + recall)), 2)
+
+
+def classify(test: pandas.DataFrame, system: System) -> pandas.DataFrame:
+    classifications = []
+    for _, row in test.iterrows():
+        intent = system.get_intent(row['sentence'])
+        classifications.append(intent)
+
+    test['classification'] = classifications
+    return test
