@@ -21,4 +21,4 @@ def analyse_system(corpus: Corpus, system: Type[System]):
 
 
 if __name__ == '__main__':
-    analyse_system(Corpus('WebApplicationsCorpus'), DeepPavlov)
+    analyse_system(Corpus('WebApplicationsCorpus'), Rasa)

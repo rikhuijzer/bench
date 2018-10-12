@@ -28,7 +28,7 @@ class Corpus:
         with open(str(file), 'rb') as f:  # changed to rb
             self.js = json.load(f)
 
-        pandas.set_option('max_colwidth', 140)
+        pandas.set_option('max_colwidth', 180)
 
         data = {'sentence': [], 'intent': [], 'training': []}
         for sentence in self.js['sentences']:
