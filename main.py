@@ -16,7 +16,7 @@ def analyse_():
 
 def analyse_system(corpus: Corpus, system: Type[System]):
     system = system(corpus.get_train())
-    print(system.get_intent('delete'))
+    system.train_default()
     print(evaluate.classify(corpus, system))
 
 

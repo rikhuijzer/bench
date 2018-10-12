@@ -1,38 +1,39 @@
-import warnings
+# import warnings
 from abc import ABC, abstractmethod
-from pathlib import Path
+# from pathlib import Path
 
 import pandas
-import rasa_nlu.training_data
-import sklearn
+# import rasa_nlu.training_data
+# import sklearn
 from deeppavlov.agents.default_agent.default_agent import DefaultAgent
 from deeppavlov.agents.processors.highest_confidence_selector import HighestConfidenceSelector
 from deeppavlov.skills.pattern_matching_skill import PatternMatchingSkill
-from rasa_nlu import config
-from rasa_nlu.model import Interpreter
-from rasa_nlu.model import Trainer
+# from rasa_nlu import config
+# from rasa_nlu.model import Interpreter
+# from rasa_nlu.model import Trainer
 
 
 class System(ABC):
 
-    @abstractmethod
     def __init__(self, train: pandas.DataFrame):
+        self.train = train
 
     @abstractmethod
+    def train_default(self):
+        pass
+
     def get_intent(self, sentence: str) -> str:
         pass
 
-    # def set_method(self, method: str):
-    #    self.method = method
-
-
+'''
 class Rasa(System):
     interpreter: rasa_nlu.model.Interpreter
 
     def __init__(self, train: pandas.DataFrame):
         super().__init__(train)
 
-        self.converter = train  # THIS CODE REQUIRES UPDATE
+    def train_default(self):  # TODO: Update this
+        self.converter = self.train  # THIS CODE REQUIRES UPDATE
 
         # For any intent having only one utterance it is common that sklearn gives the following warning:
         # UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
@@ -49,21 +50,28 @@ class Rasa(System):
 
     def get_intent(self, sentence):
         return self._get_classification(sentence)['intent']
+'''
 
 
 class DeepPavlov(System):
     bot: DefaultAgent
+    tmp = 'test variable'
 
     def __init__(self, train: pandas.DataFrame):
         super().__init__(train)
 
+    def train_default(self):
+        # TODO: Get non deterministic method
+        self.train_deterministic()
+
+    def train_deterministic(self):
         # some_skill = PatternMatchingSkill(responses=['intent'], patterns=['utterance 1', 'utterance 2'])
         # self.bot = DefaultAgent([skill 1, skill 2], skills_selector=HighestConfidenceSelector())
-        intents = train['intent'].unique()
+        intents = self.train['intent'].unique()
         intents_utterances = {}
         for intent in intents:
             intents_utterances[intent] = []
-            for _, row in train.iterrows():
+            for _, row in self.train.iterrows():
                 if row['intent'] == intent:
                     intents_utterances[intent].append(row['sentence'])
 
@@ -74,7 +82,11 @@ class DeepPavlov(System):
         self.bot = DefaultAgent(skills, skills_selector=HighestConfidenceSelector())
 
     def get_intent(self, sentence) -> str:
+        if 'bot' not in vars(self).keys():
+            raise AssertionError('train system before using get_intent()')
+
         result = self.bot([sentence])
         if len(result) > 1:
-            raise AssertionError('Expected one intent result')
+            raise AssertionError('expected one intent result, probably not using skills_'
+                                 'selector=HighestConfidenceSelector for DefaultAgent')
         return result[0]

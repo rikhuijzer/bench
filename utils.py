@@ -25,7 +25,7 @@ class Corpus:
 
     def __init__(self, corpus_name: str):
         file = Paths(corpus_name).file_corpus()
-        with open(str(file), 'r') as f:
+        with open(str(file), 'rb') as f:  # changed to rb
             self.js = json.load(f)
 
         pandas.set_option('max_colwidth', 140)
