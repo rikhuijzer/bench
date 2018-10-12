@@ -1,6 +1,7 @@
 import pandas
 import stringcase
 from systems.systems import System
+from utils import Corpus
 
 
 def canonical_string(intent):
@@ -22,7 +23,7 @@ def _annotate_row(row):
     return row
 
 
-def annotate(df: pandas.DataFrame):
+def _annotate(df: pandas.DataFrame):
     df['true_positive'] = len(df) * [False]
     df['false_positive'] = len(df) * [False]
     df['false_negative'] = len(df) * [False]
@@ -34,11 +35,13 @@ def annotate(df: pandas.DataFrame):
 
 
 def _count_true(df, column):
+    '''
     count = 0
     for i, row in df.iterrows():
         if row[column]:
             count += 1
-    return count
+    '''
+    return df.groupby(column).count()[True]  # not validated
 
 
 def f1_score(df):
@@ -50,7 +53,8 @@ def f1_score(df):
     return round(2 * ((precision * recall) / (precision + recall)), 2)
 
 
-def classify(test: pandas.DataFrame, system: System) -> pandas.DataFrame:
+def classify(corpus: Corpus, system: System) -> pandas.DataFrame:
+    test = corpus.get_test()
     classifications = []
     for _, row in test.iterrows():
         intent = system.get_intent(row['sentence'])

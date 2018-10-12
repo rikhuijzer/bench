@@ -1,6 +1,7 @@
 from utils import Corpus
 from systems.systems import *
 from typing import Type
+import evaluate
 
 '''
 def analyse_():
@@ -15,7 +16,8 @@ def analyse_():
 
 def analyse_system(corpus: Corpus, system: Type[System]):
     system = system(corpus.get_train())
-    print(system.get_intent('How can I delete my Twitter account?'))
+    print(system.get_intent('delete'))
+    print(evaluate.classify(corpus, system))
 
 
 if __name__ == '__main__':
