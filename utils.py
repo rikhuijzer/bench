@@ -9,9 +9,6 @@ class Paths:
     def __init__(self, corpus: str):
         self.corpus = corpus
 
-    def folder_generated(self, system: str) -> Path:
-        return self.root / 'generated' / system
-
     def _folder_corpora(self) -> Path:
         return self.root / 'datasets' / 'NLU-Evaluation-Corpora'
 

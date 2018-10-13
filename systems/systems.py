@@ -102,3 +102,13 @@ class DeepPavlov(System):
             raise AssertionError('expected one intent result, probably not using skills_'
                                  'selector=HighestConfidenceSelector for DefaultAgent')
         return result[0]
+
+
+class Watson(System):
+    # possibly interesting: https://github.com/joe4k/wdcutils/
+
+    def __init__(self, train: pandas.DataFrame):
+        super().__init__(train)
+
+    def train_default(self):
+        print('unimplemented')
