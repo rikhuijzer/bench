@@ -2,15 +2,14 @@ import pandas
 import stringcase
 from systems.systems import System
 from utils import Corpus
+from sklearn.metrics import f1_score
 
 
 def canonical_string(intent):
-    intent = stringcase.snakecase(intent)
-    intent = intent.replace('__', '_')
-    return intent
+    return stringcase.snakecase(intent).replace('__', '_')
 
 
-def _annotate_row(row):
+def annotate_row(row):
     intent = canonical_string(row['intent'])
     classification = canonical_string(row['classification'])
 
@@ -23,31 +22,25 @@ def _annotate_row(row):
     return row
 
 
-def _annotate(df: pandas.DataFrame):
-    df['true_positive'] = len(df) * [False]
-    df['false_positive'] = len(df) * [False]
-    df['false_negative'] = len(df) * [False]
+def annotate(classified_test: pandas.DataFrame) -> pandas.DataFrame:
+    classified_test['true_positive'] = len(classified_test) * [False]
+    classified_test['false_positive'] = len(classified_test) * [False]
+    classified_test['false_negative'] = len(classified_test) * [False]
 
-    for i, row in df.iterrows():
-        df.loc[i] = _annotate_row(row)
+    for i, row in classified_test.iterrows():
+        classified_test.loc[i] = annotate_row(row)
 
-    return df
-
-
-def _count_true(df, column):
-    '''
-    count = 0
-    for i, row in df.iterrows():
-        if row[column]:
-            count += 1
-    '''
-    return df.groupby(column).count()[True]  # not validated
+    return classified_test
 
 
-def f1_score(df):
-    true_positive = _count_true(df, 'true_positive')
-    false_positive = _count_true(df, 'false_positive')
-    false_negative = _count_true(df, 'false_negative')
+def count_true(df, column):
+    return len(df[df[column]].index)
+
+
+def calculate_f1_score(annotated_test: pandas.DataFrame) -> float:
+    true_positive = count_true(annotated_test, 'true_positive')
+    false_positive = count_true(annotated_test, 'false_positive')
+    false_negative = count_true(annotated_test, 'false_negative')
     precision = float(true_positive) / float(true_positive + false_positive)
     recall = float(true_positive) / float(true_positive + false_negative)
     return round(2 * ((precision * recall) / (precision + recall)), 2)
@@ -62,3 +55,10 @@ def classify(corpus: Corpus, system: System) -> pandas.DataFrame:
 
     test['classification'] = classifications
     return test
+
+
+def get_f1_score(corpus: Corpus, system: System, average='micro') -> float:
+    classifications = classify(corpus, system)
+    y_true = classifications['intent']
+    y_pred = classifications['classification']
+    return f1_score(y_true, y_pred, average=average)

@@ -17,7 +17,7 @@ def analyse_():
 def analyse_system(corpus: Corpus, system: Type[System]):
     system = system(corpus.get_train())
     system.train_default()
-    print(evaluate.classify(corpus, system))
+    print(evaluate.get_f1_score(corpus, system))
 
 
 if __name__ == '__main__':
