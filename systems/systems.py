@@ -2,20 +2,19 @@ import warnings
 from abc import ABC, abstractmethod
 
 import pandas
+import pkg_resources
 import rasa_nlu.training_data
 import sklearn
 from deeppavlov.agents.default_agent.default_agent import DefaultAgent
 from deeppavlov.agents.processors.highest_confidence_selector import HighestConfidenceSelector
+from deeppavlov.core.common.chainer import Chainer
 from deeppavlov.skills.pattern_matching_skill import PatternMatchingSkill
 from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Interpreter
 from rasa_nlu.model import Trainer
 from rasa_nlu.training_data import Message
 from rasa_nlu.training_data import TrainingData
-from deeppavlov.deep import find_config
-from deeppavlov.core.commands.train import train_evaluate_model_from_config
-import pkg_resources
-import json
+from utils.server_utils.server import init_model
 
 
 class System(ABC):
@@ -82,11 +81,43 @@ class DeepPavlov(System):
         # type(train_evaluate_model_from_config(config))
 
         config = pkg_resources.resource_filename('deeppavlov', 'configs/classifiers/intents_snips.json')
-        with open(config, 'rb') as f:
-            config = json.load(f)
-        config['dataset_reader']['url'] = 'http://files.deeppavlov.ai/datasets/snips_intents/train.csv'
+        # with open(config, 'rb') as f:
+        #     config = json.load(f)
 
-        train_evaluate_model_from_config(config)
+        # this next part should not be needed, since it is also listed in the bottom of the config file
+        # config['dataset_reader']['url'] = 'http://files.deeppavlov.ai/datasets/snips_intents/train.csv'
+
+        # TODO: Deep download has no downloaded_before check unlike code I came across earlier
+        # deep_download(config)
+        # TODO: We need to obtain model and not throw it away
+        # TODO: Finally got it. Use deep.py with the quick start provided at main page
+
+        # TODO: Do not use subprocess. It is crap.
+
+        model: Chainer = init_model(config)
+        prediction = model('test')
+        print(prediction)
+        print(model('Add the name kids in the street to the plylist New Indie Mix'))
+        print(model._predict('test'))
+
+        # return interact_alice(model, model_args_names) if alice else interact(model, model_args_names)
+
+        '''
+        service = subprocess.Popen(['python', '-m', 'deeppavlov', 'riseapi', str(config)])  # '-d'
+
+        intent_request = {'context': ['I would like to go to a restaurant with Asian cuisine this evening']}
+        headers = {'Content-type': 'application/json'}
+        url = 'http://0.0.0.0:5000/post'
+
+        while True:
+            time.sleep(1)
+
+        response = requests.post(url, json=intent_request, headers=headers)
+        print(response)
+
+        # service.terminate()
+        '''
+        # train_evaluate_model_from_config(config)
         print(2)
 
     def train_deterministic(self):

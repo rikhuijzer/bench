@@ -3,7 +3,6 @@ from typing import Type
 from core import evaluate
 from core.bench_utils import *
 from systems.systems import *
-import utils
 
 
 '''
@@ -26,4 +25,3 @@ def analyse_system(corpus: Corpus, system: Type[System]):
 if __name__ == '__main__':
     # TODO: Allow for easier testing of multiple benchmarks
     analyse_system(Corpora.WebApplicationsCorpus, DeepPavlov)
-    utils.telegram_utils.telegram_ui
