@@ -1,7 +1,11 @@
-from utils import *
-from systems.systems import *
+# from utils.telegram_utils.telegram_ui import interact_model_by_telegram
+from utils.telegram_utils.telegram_ui import interact_model_by_telegram
 from typing import Type
-import evaluate
+
+from core import evaluate
+from core.utils import *
+from systems.systems import *
+
 
 '''
 def analyse_():

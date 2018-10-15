@@ -1,6 +1,5 @@
 import warnings
 from abc import ABC, abstractmethod
-from pathlib import Path
 
 import pandas
 import rasa_nlu.training_data
@@ -78,6 +77,7 @@ class DeepPavlov(System):
     def train_default(self):
         # TODO: Implement non deterministic method
         config = find_config('configs/classifiers/intents_snips.json')
+        interact_model_by_telegram('test')
         train_evaluate_model_from_config(config)
 
         print(2)

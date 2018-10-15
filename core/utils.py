@@ -1,6 +1,7 @@
 import json
 import pandas
 from pathlib import Path
+# strange name to avoid overriding of similar libraries
 
 
 class Corpus:
@@ -8,7 +9,7 @@ class Corpus:
     df: pandas.DataFrame
 
     def __init__(self, corpus: str):
-        file = Path(__file__).parent / 'datasets' / corpus
+        file = Path(__file__).parent.parent / 'datasets' / corpus
         with open(str(file), 'rb') as f:  # changed to rb
             self.js = json.load(f)
 

@@ -1,6 +1,6 @@
 import pandas
 from systems.systems import System
-from utils import Corpus
+from core.utils import Corpus
 from sklearn.metrics import f1_score
 
 
