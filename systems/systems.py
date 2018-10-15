@@ -1,17 +1,20 @@
+import warnings
 from abc import ABC, abstractmethod
+from pathlib import Path
 
 import pandas
 import rasa_nlu.training_data
+import sklearn
 from deeppavlov.agents.default_agent.default_agent import DefaultAgent
 from deeppavlov.agents.processors.highest_confidence_selector import HighestConfidenceSelector
 from deeppavlov.skills.pattern_matching_skill import PatternMatchingSkill
+from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Interpreter
 from rasa_nlu.model import Trainer
-from rasa_nlu.training_data import TrainingData
 from rasa_nlu.training_data import Message
-from rasa_nlu.config import RasaNLUModelConfig
-import sklearn
-import warnings
+from rasa_nlu.training_data import TrainingData
+from deeppavlov.deep import find_config
+from deeppavlov.core.commands.train import train_evaluate_model_from_config
 
 
 class System(ABC):
@@ -74,11 +77,12 @@ class DeepPavlov(System):
 
     def train_default(self):
         # TODO: Implement non deterministic method
-        self.train_deterministic()
+        config = find_config('configs/classifiers/intents_snips.json')
+        train_evaluate_model_from_config(config)
+
+        print(2)
 
     def train_deterministic(self):
-        # some_skill = PatternMatchingSkill(responses=['intent'], patterns=['utterance 1', 'utterance 2'])
-        # self.bot = DefaultAgent([skill 1, skill 2], skills_selector=HighestConfidenceSelector())
         intents = self.train['intent'].unique()
         intents_utterances = {}
         for intent in intents:

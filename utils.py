@@ -3,25 +3,12 @@ import pandas
 from pathlib import Path
 
 
-class Paths:
-    root = Path(__file__).parent
-
-    def __init__(self, corpus: str):
-        self.corpus = corpus
-
-    def _folder_corpora(self) -> Path:
-        return self.root / 'datasets' / 'NLU-Evaluation-Corpora'
-
-    def file_corpus(self) -> Path:
-        return self._folder_corpora() / str(self.corpus + '.json')
-
-
 class Corpus:
     js: dict
     df: pandas.DataFrame
 
-    def __init__(self, corpus_name: str):
-        file = Paths(corpus_name).file_corpus()
+    def __init__(self, corpus: str):
+        file = Path(__file__).parent / 'datasets' / corpus
         with open(str(file), 'rb') as f:  # changed to rb
             self.js = json.load(f)
 
@@ -39,3 +26,9 @@ class Corpus:
 
     def get_test(self) -> pandas.DataFrame:
         return self.df.loc[self.df['training'] == False].drop(['training'], axis=1)
+
+
+class Corpora(Corpus):
+    AskUbuntuCorpus = Corpus(Path('NLU-Evaluation-Corpora') / 'AskUbuntuCorpus.json')
+    ChatbotCorpus = Corpus(Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json')
+    WebApplicationsCorpus = Corpus(Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json')

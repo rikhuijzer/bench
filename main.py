@@ -1,4 +1,4 @@
-from utils import Corpus
+from utils import *
 from systems.systems import *
 from typing import Type
 import evaluate
@@ -21,4 +21,5 @@ def analyse_system(corpus: Corpus, system: Type[System]):
 
 
 if __name__ == '__main__':
-    analyse_system(Corpus('WebApplicationsCorpus'), Rasa)
+    # TODO: Allow for easier testing of multiple benchmarks
+    analyse_system(Corpora.WebApplicationsCorpus, DeepPavlov)
