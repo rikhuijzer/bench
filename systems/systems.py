@@ -14,6 +14,8 @@ from rasa_nlu.training_data import Message
 from rasa_nlu.training_data import TrainingData
 from deeppavlov.deep import find_config
 from deeppavlov.core.commands.train import train_evaluate_model_from_config
+import pkg_resources
+import json
 
 
 class System(ABC):
@@ -76,10 +78,15 @@ class DeepPavlov(System):
 
     def train_default(self):
         # TODO: Implement non deterministic method
-        config = find_config('configs/classifiers/intents_snips.json')
-        interact_model_by_telegram('test')
-        train_evaluate_model_from_config(config)
+        # config = find_config('configs/classifiers/intents_snips.json')
+        # type(train_evaluate_model_from_config(config))
 
+        config = pkg_resources.resource_filename('deeppavlov', 'configs/classifiers/intents_snips.json')
+        with open(config, 'rb') as f:
+            config = json.load(f)
+        config['dataset_reader']['url'] = 'http://files.deeppavlov.ai/datasets/snips_intents/train.csv'
+
+        train_evaluate_model_from_config(config)
         print(2)
 
     def train_deterministic(self):
