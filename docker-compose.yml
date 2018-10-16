@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   rasa:
@@ -7,6 +7,13 @@ services:
       - 5000:5000
 
   deeppavlov:
-    build: git://github.com/deepmipt/DeepPavlov.git
+    build: "./deeppavlov"
+
+  deeppavlov-intents-snips:
+    extends: "deeppavlov"
+    command: "python -m deeppavlov install ./intents_snips.json"
+      #&& \
+      #        python -m deeppavlov download ./intents_snips.json && \
+      #        python -m deeppavlov riseapi"
     ports:
       - 5001:5000
