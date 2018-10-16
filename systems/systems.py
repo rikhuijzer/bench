@@ -76,6 +76,9 @@ class DeepPavlov(System):
         super().__init__(train)
 
     def train_default(self):
+        # TODO: Use API's. It allows for less modifications, but less susceptible to changes in code (more modular)
+        # on the other hand, for changing pipelines calling functions directly makes more sense
+
         # TODO: Implement non deterministic method
         # config = find_config('configs/classifiers/intents_snips.json')
         # type(train_evaluate_model_from_config(config))
@@ -96,13 +99,15 @@ class DeepPavlov(System):
 
         model: Chainer = init_model(config)
         prediction = model('test')
-        print(prediction)
-        print(model('Add the name kids in the street to the plylist New Indie Mix'))
-        print(model._predict('test'))
+        print('test: ' + str(prediction))
+        print('plylist: ' + str(model('Add the name kids in the street to the plylist New Indie Mix')))
+        # this returns the same output as the API, but
+        print('_predict(test): ' + str(model._predict('test')))
 
         # return interact_alice(model, model_args_names) if alice else interact(model, model_args_names)
 
-        '''
+        import subprocess
+        import time
         service = subprocess.Popen(['python', '-m', 'deeppavlov', 'riseapi', str(config)])  # '-d'
 
         intent_request = {'context': ['I would like to go to a restaurant with Asian cuisine this evening']}
@@ -116,7 +121,7 @@ class DeepPavlov(System):
         print(response)
 
         # service.terminate()
-        '''
+
         # train_evaluate_model_from_config(config)
         print(2)
 
