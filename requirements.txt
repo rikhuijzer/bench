@@ -1,17 +1,7 @@
 # keeping versions strict since it
 rasa_nlu==0.13.7
-deeppavlov==0.0.8
 pandas==0.23.0
-sklearn
 requests==2.19.1
-
-# deeppavlov
-tensorflow==1.11.0
-
-# deeppavlov fastText
-# if it stopped working check deeppavlov requirements.txt to see whether they have updated their requirements again
-pybind11==2.2.3
-git+https://github.com/deepmipt/fastText.git#egg=fastText==0.8.22
 
 # rasa_nlu spacy english model
 sklearn-crfsuite==0.3.6
