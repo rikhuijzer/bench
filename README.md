@@ -1,12 +1,15 @@
 # bench
 
-when terminal is inside same folder as Dockerfile the docker image deeppavlov-jessie can be build via 
+When terminal is inside same folder as `docker-compose.yml` the docker image can be build via 
 ```
-docker build -t deeppavlov0.0.8-jessie . 
-docker run -it deeppavlov0.0.8-jessie
+docker build -t deeppavlov0.0.8-buster deeppavlov 
 ```
+To test the docker file use `docker run -it deeppavlov0.0.8-buster`.
 
-To run Rasa and DeepPavlov run `docker-compose up` in the folder where `docker-compose.yml` is located. 
+To run Rasa and DeepPavlov at the same time use
+```
+docker-compose up
+``` 
 
 Packages used in the benchmarks are listed in `requirements.txt` and can be installed by using `pip install -r requirements.txt`.
 
