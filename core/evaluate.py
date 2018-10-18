@@ -1,6 +1,6 @@
 import pandas
 from systems.systems import System
-from core.bench_utils import Corpus
+from core.utils import Corpus
 from sklearn.metrics import f1_score
 
 
@@ -12,6 +12,7 @@ def classify(corpus: Corpus, system: System) -> pandas.DataFrame:
         classifications.append(classification)
 
     test['classification'] = classifications
+    print(test)
     return test
 
 

@@ -21,11 +21,8 @@ class DeepPavlov(System):
     def get_intent(self, sentence: str):
         data = {'context': [sentence]}
         headers = {'content-type': 'application/json'}
-        response = requests.post(self.url, data=json.dumps(data), headers=headers)
-        print(response)
-        r = requests.get(self.url)
-        print(r.json())
-        return 2
+        r = requests.post(self.url, data=json.dumps(data), headers=headers)
+        return r.json()[0][0][0]
 
 
 class Watson(System):

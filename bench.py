@@ -1,19 +1,18 @@
 from typing import Type
 
-from core import evaluate
-from core.bench_utils import *
+import core.utils as ut
 from systems.systems import *
-from pathlib import Path
-
-ROOT = Path(__file__).parent
+import core.evaluate
 
 
-def analyse_system(corpus: Corpus, system: Type[System]):
-    system = system('http://0.0.0.0:5001/post')
-    system.get_intent('test sentence')
-    # print(evaluate.get_f1_score(corpus, system))
+def analyse_system(corpus: ut.Corpus, system: Type[System]):
+    system = system('http://0.0.0.0:5001/intents')
+    corpus = ut.Corpus.Snips
+    print(ut._get_corpus(corpus))
+    # f1_score = core.evaluate.get_f1_score(corpus, system)
+    # print(f1_score)
 
 
 if __name__ == '__main__':
     # TODO: Allow for easier testing of multiple benchmarks
-    analyse_system(Corpora.WebApplicationsCorpus, DeepPavlov)
+    analyse_system(ut.Corpus.Snips, DeepPavlov)
