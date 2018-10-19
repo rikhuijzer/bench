@@ -2,10 +2,8 @@ import json
 import pandas as pd
 from pathlib import Path
 from enum import Enum
+from typing import List
 
-# note to self: fuck classes, it all looked nice until it requires extension, you get completely tangled up into the
-# mess which is called classes
-# so from now on: if in doubt: stick to functions
 
 pd.set_option('max_colwidth', 180)
 
@@ -15,6 +13,42 @@ class Corpus(Enum):
     Chatbot = Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json'
     WebApplications = Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json'
     Snips = Path('snips') / 'benchmark_data.json'
+
+
+class Entity:
+    def __init__(self, entity: str, start: int, stop: int):
+        self.entity = entity
+        self.start = start
+        self.stop = stop
+
+
+class Sentence:
+    def __init__(self, text: str, intent: str, entities: List[Entity]):
+        self.text = text
+        self.intent = intent
+        self.entities = entities
+
+    @staticmethod
+    def find_nth(text: str, substring: str, n: int) -> int:
+        index = 0
+        for _ in range(0, n):
+            index += text.find(substring, index)
+        return index
+
+    @staticmethod
+    def _annotate(text: str, entity: Entity) -> str:
+        words = text.split(' ')
+
+        return text
+
+    def __str__(self):
+        out = self.text
+        for entity in self.entities:
+            out = self._annotate(out, entity)
+        return '{' + self.intent + '} ' + self.text
+
+
+
 
 
 def _read_nlu_evaluation_corpora(js: dict) -> pd.DataFrame:

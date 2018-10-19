@@ -13,9 +13,9 @@ class TestImportDataset(unittest.TestCase):
 
     def _validate_import(self, df: pd.DataFrame, expected_length: int, first_row: dict, last_row: dict):
         df_length = df.shape[0]
-        self.assertEqual(df_length, expected_length)
-        self.assertEqual(df.loc[0].to_dict(), first_row)
-        self.assertEqual(df.loc[df_length - 1].to_dict(), last_row)
+        self.assertEqual(expected_length, df_length)
+        self.assertEqual(first_row, df.loc[0].to_dict())
+        self.assertEqual(last_row, df.loc[df_length - 1].to_dict())
 
     # NLU-Evaluation-Corpora details provided at https://github.com/sebischair/NLU-Evaluation-Corpora
     def test__get_corpus_ask_ubuntu(self):
@@ -79,6 +79,11 @@ class TestImportDataset(unittest.TestCase):
         first_row = {'sentence': 'ipsum', 'intent': 'bar'}
         last_row = {'sentence': 'dolor', 'intent': 'baz'}
         self._validate_import(test, 2, first_row, last_row)
+
+    def test_find_nth(self):
+        sentence = 'lorem ipsum dolor sit amet'
+        self.assertEqual(5, import_dataset.Sentence.find_nth(sentence, ' ', 1))
+        self.assertEqual(17, import_dataset.Sentence.find_nth(sentence, ' ', 3))
 
 
 if __name__ == '__main__':
