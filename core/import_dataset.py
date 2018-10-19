@@ -58,14 +58,20 @@ def _get_corpus(corpus: Corpus) -> pd.DataFrame:
     return _read_file(Path(__file__).parent.parent / 'datasets' / corpus.value)
 
 
+def _get_train(df: pd.DataFrame) -> pd.DataFrame:
+    return df.loc[df['training']].drop(['training'], axis=1).reset_index(drop=True)
+
+
+def _get_test(df: pd.DataFrame) -> pd.DataFrame:
+    return df.loc[df['training'] == False].drop(['training'], axis=1).reset_index(drop=True)
+
+
 def get_train(corpus: Corpus) -> pd.DataFrame:
-    df = _get_corpus(corpus)
-    return df.loc[df['training']].drop(['training'], axis=1)
+    return _get_train(_get_corpus(corpus))
 
 
 def get_test(corpus: Corpus) -> pd.DataFrame:
-    df = _get_corpus(corpus)
-    return df.loc[df['training'] == False].drop(['training'], axis=1)
+    return _get_test(_get_corpus(corpus))
 
 
 
