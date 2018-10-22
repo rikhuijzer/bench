@@ -87,6 +87,7 @@ class TestImportDataset(unittest.TestCase):
         self.assertEqual(11, import_dataset.Sentence.find_nth(sentence, ' ', 2))
         self.assertEqual(17, import_dataset.Sentence.find_nth(sentence, ' ', 3))
 
+    '''
     def test__increase_index_annotated_sentence(self):
         text = 'I have 50 [yen](currency lorem ipsum) in my pocket'
         index = 6  # index of the word pocket
@@ -99,6 +100,19 @@ class TestImportDataset(unittest.TestCase):
         sentence = Sentence('Could I pay in yen?', 'foo', [entity])
 
         print(Sentence._annotate(sentence.text, entity))
+    '''
+
+    def test__str__(self):
+        text = 'Could I pay you 50 yen tomorrow or tomorrow?'
+        expected = 'Could I pay you 50 [yen](currency lorem ipsum) [tomorrow](date) or [tomorrow](date)?'
+        entities = [
+            Entity('currency lorem ipsum', 19, 22),
+            Entity('date', 23, 31),
+            Entity('date', 35, 43)
+        ]
+        sentence = Sentence(text, 'foo', entities)
+        self.assertEqual(expected, str(sentence))
+        #self.assertTrue(expected == str(sentence))
 
 
 if __name__ == '__main__':
