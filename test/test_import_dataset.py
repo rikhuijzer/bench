@@ -1,5 +1,6 @@
 import unittest
 from core import import_dataset
+from core.import_dataset import *
 from core.import_dataset import Corpus
 import pandas as pd
 
@@ -83,7 +84,21 @@ class TestImportDataset(unittest.TestCase):
     def test_find_nth(self):
         sentence = 'lorem ipsum dolor sit amet'
         self.assertEqual(5, import_dataset.Sentence.find_nth(sentence, ' ', 1))
+        self.assertEqual(11, import_dataset.Sentence.find_nth(sentence, ' ', 2))
         self.assertEqual(17, import_dataset.Sentence.find_nth(sentence, ' ', 3))
+
+    def test__increase_index_annotated_sentence(self):
+        text = 'I have 50 [yen](currency lorem ipsum) in my pocket'
+        index = 6  # index of the word pocket
+        fixed_index = 9  # index of the word pocket after adding 'currency'
+        self.assertEqual(fixed_index, Sentence._increase_index_annotated_sentence(text, index))
+
+    def test__annotate(self):
+        # Could I pay in [yen](currency)
+        entity = Entity('currency', 4, 4)
+        sentence = Sentence('Could I pay in yen?', 'foo', [entity])
+
+        print(Sentence._annotate(sentence.text, entity))
 
 
 if __name__ == '__main__':

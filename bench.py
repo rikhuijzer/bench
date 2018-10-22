@@ -1,6 +1,6 @@
 from typing import Type
 
-import core.utils
+from core import import_dataset
 from systems.systems import *
 import core.evaluate
 
@@ -10,9 +10,9 @@ import core.evaluate
 
 # TODO: Consider also testing entities as done in evaluating paper
 
-def analyse_system(corpus: core.utils.Corpus, system: Type[System]):
+def analyse_system(corpus: import_dataset.Corpus, system: Type[System]):
     system = system('http://0.0.0.0:5001/intents')
-    corpus = core.utils.Corpus.Snips
+    corpus = import_dataset.Corpus.Snips
     print(core.evaluate.classify(corpus, system))
     # print(ut._get_corpus(corpus))
     # f1_score = core.evaluate.get_f1_score(corpus, system)
@@ -21,4 +21,4 @@ def analyse_system(corpus: core.utils.Corpus, system: Type[System]):
 
 if __name__ == '__main__':
     # TODO: Allow for easier testing of multiple benchmarks
-    analyse_system(core.utils.Corpus.Snips, DeepPavlov)
+    analyse_system(import_dataset.Corpus.Snips, DeepPavlov)

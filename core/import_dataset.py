@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 from enum import Enum
 from typing import List
-
+import re
 
 pd.set_option('max_colwidth', 180)
 
@@ -16,7 +16,24 @@ class Corpus(Enum):
 
 
 class Entity:
+    """ Holds information about some entity in a sentence.
+
+    For example consider the sentence: Could I pay in [yen](currency)?
+    In this sentence the entity 'currency' has the value 'yen'.
+
+    To avoid duplication the entity value is not stored in this class. Hence it can only be extracted when the sentence
+    is known.
+
+    Args:
+        entity: Entity name.
+        start: Which word in the sentence is the start of the entity. Count starts at zero.
+        stop: Which word in the sentence is the end of the entity. Count starts at zero.
+    """
+
     def __init__(self, entity: str, start: int, stop: int):
+        if '(' in entity or ')' in entity:
+            raise ValueError('Entity contains parenthesis: ' + entity + '.')
+
         self.entity = entity
         self.start = start
         self.stop = stop
@@ -29,16 +46,33 @@ class Sentence:
         self.entities = entities
 
     @staticmethod
+    def _increase_index_annotated_sentence(text: str, n: int) -> int:
+        """ Fix the index as specified by Entity class when annotations have been added. """
+        # I have 50 [yen](currency lorem ipsum) in my pocket
+        tokens = text.split(' ')
+        for i, token in enumerate(tokens):
+            if '](' in token:
+                for j in range(i, len(tokens)):
+                    if ')' in tokens[j]:
+                        n += j - i + 1
+                        break
+        return n
+
+    @staticmethod
     def find_nth(text: str, substring: str, n: int) -> int:
-        index = 0
-        for _ in range(0, n):
-            index += text.find(substring, index)
-        return index
+        if n == 1:
+            return text.find(substring)
+        else:
+            return text.find(substring, Sentence.find_nth(text, substring, n - 1) + 1)
 
     @staticmethod
     def _annotate(text: str, entity: Entity) -> str:
-        words = text.split(' ')
-
+        left_bracket = Sentence.find_nth(text, ' ', entity.start) + 1  # TODO: Use increase_index
+        text = text[:left_bracket] + '(' + text[left_bracket:]
+        # [(m.start(0), m.end(0)) for m in re.finditer(r'', text)]
+        # right_bracket = text.find(re.findall(r'', ))
+        right_bracket = 3
+        # TODO: Find all entity values in sentence. Create replacer and replace entity value with annotated version.
         return text
 
     def __str__(self):
@@ -46,9 +80,6 @@ class Sentence:
         for entity in self.entities:
             out = self._annotate(out, entity)
         return '{' + self.intent + '} ' + self.text
-
-
-
 
 
 def _read_nlu_evaluation_corpora(js: dict) -> pd.DataFrame:
