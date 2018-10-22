@@ -1,8 +1,8 @@
 import unittest
+
 from core import import_dataset
 from core.import_dataset import *
 from core.import_dataset import Corpus
-import pandas as pd
 
 
 class TestImportDataset(unittest.TestCase):
@@ -81,26 +81,12 @@ class TestImportDataset(unittest.TestCase):
         last_row = {'sentence': 'dolor', 'intent': 'baz'}
         self._validate_import(test, 2, first_row, last_row)
 
-    def test_find_nth(self):
+    def test_find_nth_end_of_word(self):
         sentence = 'lorem ipsum dolor sit amet'
-        self.assertEqual(5, import_dataset.Sentence.find_nth(sentence, ' ', 1))
-        self.assertEqual(11, import_dataset.Sentence.find_nth(sentence, ' ', 2))
-        self.assertEqual(17, import_dataset.Sentence.find_nth(sentence, ' ', 3))
-
-    '''
-    def test__increase_index_annotated_sentence(self):
-        text = 'I have 50 [yen](currency lorem ipsum) in my pocket'
-        index = 6  # index of the word pocket
-        fixed_index = 9  # index of the word pocket after adding 'currency'
-        self.assertEqual(fixed_index, Sentence._increase_index_annotated_sentence(text, index))
-
-    def test__annotate(self):
-        # Could I pay in [yen](currency)
-        entity = Entity('currency', 4, 4)
-        sentence = Sentence('Could I pay in yen?', 'foo', [entity])
-
-        print(Sentence._annotate(sentence.text, entity))
-    '''
+        print(type(r'\ '))
+        self.assertEqual(5, import_dataset.find_nth_end_of_word(sentence, r' ', 1))
+        self.assertEqual(11, import_dataset.find_nth_end_of_word(sentence, r' ', 2))
+        self.assertEqual(17, import_dataset.find_nth_end_of_word(sentence, r' ', 3))
 
     def test__str__(self):
         text = 'Could I pay you 50 yen tomorrow or tomorrow?'
@@ -112,7 +98,18 @@ class TestImportDataset(unittest.TestCase):
         ]
         sentence = Sentence(text, 'foo', entities)
         self.assertEqual(expected, str(sentence))
-        #self.assertTrue(expected == str(sentence))
+
+    def test_nlu_evaluation_entity_converter(self):
+        text = 'when is the next train in muncher freiheit?'
+        entity = {'entity': 'Vehicle', 'start': 4, 'stop': 4, 'text': 'train'}
+        expected = Entity('Vehicle', 16, 22)
+        result = import_dataset._nlu_evaluation_entity_converter(text, entity)
+        self.assertEqual(str(expected), str(result))
+
+        entity = {'entity': 'Foo', 'start': 6, 'stop': 7, 'text': 'muncher feiheit'}
+        expected = Entity('Foo', 25, 41)
+        result = import_dataset._nlu_evaluation_entity_converter(text, entity)
+        self.assertEqual(str(expected), str(result))
 
 
 if __name__ == '__main__':

@@ -21,4 +21,4 @@ def analyse_system(corpus: import_dataset.Corpus, system: Type[System]):
 
 if __name__ == '__main__':
     # TODO: Allow for easier testing of multiple benchmarks
-    analyse_system(import_dataset.Corpus.Snips, DeepPavlov)
+    analyse_system(import_dataset.Corpus.Chatbot, DeepPavlov)

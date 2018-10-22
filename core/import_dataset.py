@@ -22,7 +22,7 @@ class Corpus(Enum):
 class Entity:
     """ Holds information about some entity in a sentence.
 
-    For example consider the sentence: Could I pay in [yen](currency)?
+    For example consider the annotated sentence: Could I pay in [yen](currency)?
     In this sentence the entity 'currency' has the value 'yen'.
 
     To avoid duplication the entity value is not stored in this class. Hence it can only be extracted when the sentence
@@ -46,19 +46,25 @@ class Entity:
         """ Returns dict which matches Rasa NLU entity: dict. """
         return {'start': self.start, 'end': self.stop, 'entity': self.entity, 'value': self.entity}
 
+    def __str__(self):
+        """ Returns the class as a string. Useful for debugging. """
+        return 'entity: {}, start: {}, stop: {}'.format(self.entity, self.start, self.stop)
+
 
 class Sentence:
-    def __init__(self, text: str, intent: str, entities: List[Entity]):
+    """ Holds information about sentence including intent, entities and whether train or test sentence.
+
+    Args:
+        text: Sentence text.
+        intent: Intent of the sentence.
+        entities: Entities occurring in sentence including their entity name
+        train: Whether the sentence should be used when training
+    """
+    def __init__(self, text: str, intent: str, entities: List[Entity], train=True):
         self.text = text
         self.intent = intent
         self.entities = entities
-
-    @staticmethod
-    def find_nth(text: str, substring: str, n: int) -> int:
-        if n == 1:
-            return text.find(substring)
-        else:
-            return text.find(substring, Sentence.find_nth(text, substring, n - 1) + 1)
+        self.train = train
 
     def __str__(self):
         entities: List[dict] = []
@@ -75,26 +81,58 @@ class Sentence:
         return generated
 
 
+def find_nth_end_of_word(text: str, n: int):
+    m = re.match(r"(?:.*?(\W|\Z)+){7}.*?(\W+|\Z)", text)
+    print(m)
+    for k in m:
+        print(k)
+    return 0
+
 '''
-text = self.text
-splitted_sentence = []
-for entity in self.entities:
-    start = Sentence.find_nth(text, ' ', entity.start)
-    words_in_entity = entity.stop - entity.start + 1
+def find_nth(text: str, substring: str, n: int) -> int:
+    if n == 1:
+        return text.find(substring)
+    else:
+        return text.find(substring, find_nth(text, substring, n - 1) + 1)
+'''
 
-    stop = start
-    if words_in_entity > 0:
-        stop += Sentence.find_nth(text[start:], ' ', words_in_entity)
+def _nlu_evaluation_entity_converter(text: str, entity: dict) -> Entity:
+    """ Convert a NLU Evaluation Corpora sentence to Entity """
+    start_word_index = entity['start']
+    start = find_nth(text, ' ', start_word_index)
+    m = re.search(r'\W|\Z', text[start + 1:])
+    end = m.start() + start + 1
+    end_word_index = entity['stop']
+    return Entity(entity['entity'], start, end)
+
+'''
+text = 'when is the next train in muncher freiheit?'
+
+entity = {'entity': 'Foo', 'start': 6, 'stop': 7, 'text': 'muncher feiheit'}
+expected = Entity('Foo', 25, 41)
+result = import_dataset._nlu_evaluation_entity_converter(text, entity)
+self.assertEqual(str(expected), str(result))
 '''
 
 
-def _read_nlu_evaluation_corpora(js: dict) -> pd.DataFrame:
+def _sentences_converter(sentences: List[Sentence]) -> pd.DataFrame:
     data = {'sentence': [], 'intent': [], 'training': []}
-    for sentence in js['sentences']:
-        data['sentence'].append(sentence['text'])
-        data['intent'].append(sentence['intent'])
-        data['training'].append(sentence['training'])
+    for sentence in sentences:
+        data['sentence'].append(sentence.text)
+        data['intent'].append(sentence.intent)
+        data['training'].append(sentence.train)
     return pd.DataFrame(data)
+
+
+def _read_nlu_evaluation_corpora(js: dict) -> List[Sentence]:
+    out = []
+    for sentence in js['sentences']:
+        entities = []
+        for entity in sentence['entities']:
+            start = entity['start']
+        out.append(Sentence(sentence['text'], sentence['intent'], entities, sentence['training']))
+
+    return out
 
 
 def _read_snips(js: dict) -> pd.DataFrame:
@@ -108,7 +146,7 @@ def _read_snips(js: dict) -> pd.DataFrame:
                 queries_count += 1
                 data['sentence'].append(query['text'])
                 data['intent'].append(query['results_per_service']['Snips']['classified_intent'])
-                data['training'].append(False)  # TODO: Improve this
+                data['training'].append(False)  # TODO: Fix this
 
     return pd.DataFrame(data)
 
@@ -120,7 +158,7 @@ def _read_file(file: Path) -> pd.DataFrame:
     parent_folder: Path = file.parent
 
     if parent_folder.name == 'NLU-Evaluation-Corpora':
-        return _read_nlu_evaluation_corpora(js)
+        return _sentences_converter(_read_nlu_evaluation_corpora(js))
     elif parent_folder.name == 'snips':
         return _read_snips(js)
 
