@@ -82,20 +82,33 @@ class TestImportDataset(unittest.TestCase):
         self._validate_import(test, 2, first_row, last_row)
 
     def test_find_nth(self):
+        def helper(text: str, regex: re, n: int, char_index: int, char: str = None):
+            result = import_dataset.find_nth(text, regex, n)
+            self.assertEqual(char_index, result)
+            if char:
+                self.assertEqual(char, text[result])
+            else:  # text[result] is expected to throw string index ouf of range when char == None
+                self.assertEqual(char_index, len(text))
+
         sentence = 'lorem ipsum dolor sit amet'
-        self.assertEqual(5, import_dataset.find_nth(sentence, r' ', 0))
-        self.assertEqual(11, import_dataset.find_nth(sentence, r' ', 1))
-        self.assertEqual(17, import_dataset.find_nth(sentence, r' ', 2))
+        helper(sentence, r'\W', 0, 5, ' ')
+        helper(sentence, r'\W', 1, 11, ' ')
+        helper(sentence, r'\W', 2, 17, ' ')
 
         sentence = 'Weather tomorrow?'
-        self.assertEqual(7, import_dataset.find_nth(sentence, r'\Z|\W', 0))
-        self.assertEqual(16, import_dataset.find_nth(sentence, r'\Z|\W', 1))
+        helper(sentence, r'\Z|\W', 1, 16, '?')
 
         sentence = 'Weather tomorrow'
-        self.assertEqual(16, import_dataset.find_nth(sentence, r'\Z|\W', 1))
+        helper(sentence, r'\Z|\W', 1, 16, None)
 
         sentence = 'Weather tomorrow morning?'
-        self.assertEqual(16, import_dataset.find_nth(sentence, r'\Z|\W', 1))
+        helper(sentence, r'\Z|\W', 1, 16, ' ')
+
+    def test_luis_tokenizer(self):
+        sentence = 'How to partially upgrade Ubuntu 11.10 from Ubuntu 11.04?'
+        expected = 'How to partially upgrade Ubuntu 11 . 10 from Ubuntu 11 . 04 ? '
+        self.assertEqual(expected, luis_tokenizer(sentence))
+
 
     def test__str__(self):
         text = 'Could I pay you 50 yen tomorrow or tomorrow?'
@@ -110,15 +123,15 @@ class TestImportDataset(unittest.TestCase):
 
     def test_nlu_evaluation_entity_converter(self):
         text = 'when is the next train in muncher freiheit?'
+        # note that entity start and stop look at word, not character
         entity = {'entity': 'Vehicle', 'start': 4, 'stop': 4, 'text': 'train'}
-        expected = Entity('Vehicle', 16, 22)
+        entity_vehicle = Entity('Vehicle', 17, 22)
         result = import_dataset._nlu_evaluation_entity_converter(text, entity)
-        # self.assertEqual(str(expected), str(result))
+        self.assertEqual(str(entity_vehicle), str(result))
 
-        entity = {'entity': 'Foo', 'start': 6, 'stop': 7, 'text': 'muncher feiheit'}
-        expected = Entity('Foo', 25, 41)
-        result = import_dataset._nlu_evaluation_entity_converter(text, entity)
-        # self.assertEqual(str(expected), str(result))
+        result = Sentence(text, 'intent', [entity_vehicle])
+        expected = 'when is the next [train](Vehicle) in muncher freiheit?'
+        self.assertEqual(expected, str(result))
 
 
 if __name__ == '__main__':

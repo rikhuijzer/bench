@@ -61,7 +61,6 @@ class Sentence:
         entities: Entities occurring in sentence including their entity name
         train: Whether the sentence should be used when training
     """
-
     def __init__(self, text: str, intent: str, entities: List[Entity], train=True):
         self.text = text
         self.intent = intent
@@ -69,6 +68,9 @@ class Sentence:
         self.train = train
 
     def __str__(self):
+        """
+        :return: Sentence with annotated entities. This does not return self.intent or self.train information.
+        """
         entities: List[dict] = []
         for entity in self.entities:
             entities.append(entity.as_rasa_dict())
@@ -83,37 +85,41 @@ class Sentence:
         return generated
 
 
-def find_nth(text: str, pattern: re, n: int):
+def find_nth(text: str, pattern: re, n: int) -> int:
+    """ Returns n-th location of some regular expression in a string. See test for examples. """
     text = text.rstrip(string.punctuation)
     regex = r'(?:.*?(' + pattern + r')+){' + re.escape(str(n)) + r'}.*?((' + pattern + ')+)'
     m = re.match(regex, text)
-    loc = m.span()[1] - 1
-    if text[loc] != ' ':
-        loc += 1
+    # print('text: {}, pattern: {}, m: {}'.format(text, pattern, m))
+    if m:
+        loc = m.span()[1] - 1  # the span returns len(match: str) not the last index of match: str
+        if text[loc] != ' ':  # regex usually matches on string plus some space, we add one to the index if
+            loc += 1
+    else:  # hacking around the inconsistently formatted data
+        loc = -1
     return loc
 
 
+def luis_tokenizer(text: str, detokenize=False) -> str:
+    """ Returns (de)tokenized sentence in Microsoft LUIS method. Used for working with NLU Evaluation Corpora. """
+    symbols = ['.', ',', '\'', '?', '!', '&', ':', '-', '/', '(', ')']
+    for symbol in symbols:
+        text = text.replace(' ' + symbol + ' ', symbol) if detokenize else text.replace(symbol, ' ' + symbol + ' ')
+    return text
+
+
 def _nlu_evaluation_entity_converter(text: str, entity: dict) -> Entity:
-    """ Convert a NLU Evaluation Corpora sentence to Entity """
+    """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
     start_word_index = entity['start']
-    start = find_nth(text, ' ', start_word_index)
-    m = re.search(r'\W|\Z', text[start + 1:])
-    end = m.start() + start + 1
-    end_word_index = entity['stop']
+    start = find_nth(text, r'\W', start_word_index - 1) + 1
+    if start == -1:  # hacking around the inconsistently formatted data
+        start = text.find(entity['text'])
+    end = start + len(entity['text'])
     return Entity(entity['entity'], start, end)
 
 
-'''
-text = 'when is the next train in muncher freiheit?'
-
-entity = {'entity': 'Foo', 'start': 6, 'stop': 7, 'text': 'muncher feiheit'}
-expected = Entity('Foo', 25, 41)
-result = import_dataset._nlu_evaluation_entity_converter(text, entity)
-self.assertEqual(str(expected), str(result))
-'''
-
-
 def _sentences_converter(sentences: List[Sentence]) -> pd.DataFrame:
+    """ Convert a list of Sentence objects into a pd.DataFrame which can be used for visualisation. """
     data = {'sentence': [], 'intent': [], 'training': []}
     for sentence in sentences:
         data['sentence'].append(sentence.text)
@@ -123,11 +129,12 @@ def _sentences_converter(sentences: List[Sentence]) -> pd.DataFrame:
 
 
 def _read_nlu_evaluation_corpora(js: dict) -> List[Sentence]:
+    """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
     out = []
     for sentence in js['sentences']:
         entities = []
         for entity in sentence['entities']:
-            start = entity['start']
+            entities.append(_nlu_evaluation_entity_converter(sentence['text'], entity))
         out.append(Sentence(sentence['text'], sentence['intent'], entities, sentence['training']))
 
     return out
