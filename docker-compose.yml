@@ -3,20 +3,25 @@ version: '3.2'
 
 services:
   rasa:
-    image: rasa/rasa_nlu:latest-full
+    image: rasa/rasa_nlu:latest-full  # TODO: Get a fixed version
     ports:
       - 5000:5000
+
+  rasa-mitie:
+    image: mitie-rasa
+    ports:
+      - 5001:5000
 
   deeppavlov-snips:
     image: deeppavlov0.0.8-buster
     command: python3 -m deeppavlov riseapi ./intents_snips.json
     ports:
-    - 5001:5000
+    - 5002:5000
 
   deeppavlov-dcts2_webapplications:
     image: deeppavlov0.0.8-buster
     volumes:
-    - ./deeppavlov/configs:/var
+    - ./systems/deeppavlov/configs:/var
     command: python3 -m deeppavlov riseapi /var/intents_dcts2_webapplications.json
     ports:
-    - 5002:5000
+    - 5003:5000

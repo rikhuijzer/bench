@@ -112,17 +112,22 @@ def _nlu_evaluation_entity_converter(text: str, entity: dict) -> Entity:
     """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
     start_word_index = entity['start']
     start = find_nth(text, r'\W', start_word_index - 1) + 1
-    if start == -1:  # hacking around the inconsistently formatted data
+    if start == -1:  # hacking around the inconsistently formatted data TODO: fix this using tokenizer
         start = text.find(entity['text'])
     end = start + len(entity['text'])
     return Entity(entity['entity'], start, end)
 
 
-def sentences_converter(sentences: List[Sentence]) -> pd.DataFrame:
-    """ Convert a list of Sentence objects into a pd.DataFrame which can be used for visualisation. """
+def sentences_converter(sentences: List[Sentence], focus='all') -> pd.DataFrame:
+    """ Returns a DataFrame (table) from a list of Sentence objects to be used for visualisation.
+
+    Args:
+        sentences: Sentences including metadata.
+        focus: Focus of the DataFrame.  For intent classification visualisation choose 'intent'
+    """
     data = {'sentence': [], 'intent': [], 'training': []}
     for sentence in sentences:
-        data['sentence'].append(str(sentence))
+        data['sentence'].append(sentence.text if focus == 'intent' else str(sentence))
         data['intent'].append(sentence.intent)
         data['training'].append(sentence.train)
     return pd.DataFrame(data)
@@ -168,7 +173,7 @@ def _read_file(file: Path) -> List[Sentence]:
         return _read_snips(js)
 
 
-def _get_corpus(corpus: Corpus) -> List[Sentence]:
+def get_corpus(corpus: Corpus) -> List[Sentence]:
     return _read_file(Path(__file__).parent.parent / 'datasets' / corpus.value)
 
 

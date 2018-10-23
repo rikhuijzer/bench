@@ -2,10 +2,11 @@ import pandas
 from systems.systems import System
 from core import import_dataset
 from sklearn.metrics import f1_score
+from core.import_dataset import *
 
 
-def classify(corpus: import_dataset.Corpus, system: System) -> pandas.DataFrame:
-    test = import_dataset.get_test(corpus)
+def classify_intent(corpus: Corpus, system: System) -> pandas.DataFrame:
+    test = sentences_converter(get_test(get_corpus(corpus)), 'intent')
     classifications = []
     for _, row in test.iterrows():
         classification = system.get_intent(row['sentence'])
