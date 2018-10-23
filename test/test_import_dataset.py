@@ -87,6 +87,16 @@ class TestImportDataset(unittest.TestCase):
         self.assertEqual(11, import_dataset.find_nth(sentence, r' ', 1))
         self.assertEqual(17, import_dataset.find_nth(sentence, r' ', 2))
 
+        sentence = 'Weather tomorrow?'
+        self.assertEqual(7, import_dataset.find_nth(sentence, r'\Z|\W', 0))
+        self.assertEqual(16, import_dataset.find_nth(sentence, r'\Z|\W', 1))
+
+        sentence = 'Weather tomorrow'
+        self.assertEqual(16, import_dataset.find_nth(sentence, r'\Z|\W', 1))
+
+        sentence = 'Weather tomorrow morning?'
+        self.assertEqual(16, import_dataset.find_nth(sentence, r'\Z|\W', 1))
+
     def test__str__(self):
         text = 'Could I pay you 50 yen tomorrow or tomorrow?'
         expected = 'Could I pay you 50 [yen](currency lorem ipsum) [tomorrow](date) or [tomorrow](date)?'

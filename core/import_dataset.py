@@ -1,5 +1,6 @@
 import json
 import re
+import string
 from enum import Enum
 from pathlib import Path
 from typing import List
@@ -60,6 +61,7 @@ class Sentence:
         entities: Entities occurring in sentence including their entity name
         train: Whether the sentence should be used when training
     """
+
     def __init__(self, text: str, intent: str, entities: List[Entity], train=True):
         self.text = text
         self.intent = intent
@@ -81,11 +83,14 @@ class Sentence:
         return generated
 
 
-def find_nth(text: str, pattern: str, n: int):
-    pattern = re.escape(pattern)
+def find_nth(text: str, pattern: re, n: int):
+    text = text.rstrip(string.punctuation)
     regex = r'(?:.*?(' + pattern + r')+){' + re.escape(str(n)) + r'}.*?((' + pattern + ')+)'
     m = re.match(regex, text)
-    return m.span()[1] - 1
+    loc = m.span()[1] - 1
+    if text[loc] != ' ':
+        loc += 1
+    return loc
 
 
 def _nlu_evaluation_entity_converter(text: str, entity: dict) -> Entity:
@@ -96,6 +101,7 @@ def _nlu_evaluation_entity_converter(text: str, entity: dict) -> Entity:
     end = m.start() + start + 1
     end_word_index = entity['stop']
     return Entity(entity['entity'], start, end)
+
 
 '''
 text = 'when is the next train in muncher freiheit?'
