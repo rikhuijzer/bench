@@ -81,20 +81,12 @@ class Sentence:
         return generated
 
 
-def find_nth_end_of_word(text: str, n: int):
-    m = re.match(r"(?:.*?(\W|\Z)+){7}.*?(\W+|\Z)", text)
-    print(m)
-    for k in m:
-        print(k)
-    return 0
+def find_nth(text: str, pattern: str, n: int):
+    pattern = re.escape(pattern)
+    regex = r'(?:.*?(' + pattern + r')+){' + re.escape(str(n)) + r'}.*?((' + pattern + ')+)'
+    m = re.match(regex, text)
+    return m.span()[1] - 1
 
-'''
-def find_nth(text: str, substring: str, n: int) -> int:
-    if n == 1:
-        return text.find(substring)
-    else:
-        return text.find(substring, find_nth(text, substring, n - 1) + 1)
-'''
 
 def _nlu_evaluation_entity_converter(text: str, entity: dict) -> Entity:
     """ Convert a NLU Evaluation Corpora sentence to Entity """
