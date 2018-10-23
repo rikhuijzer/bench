@@ -100,8 +100,8 @@ def find_nth(text: str, pattern: re, n: int) -> int:
     return loc
 
 
-def luis_tokenizer(text: str, detokenize=False) -> str:
-    """ Returns (de)tokenized sentence in Microsoft LUIS method. Used for working with NLU Evaluation Corpora. """
+def tokenizer(text: str, detokenize=False) -> str:
+    """ Returns (de)tokenized sentence according to Microsoft LUIS. Used for working with NLU Evaluation Corpora. """
     symbols = ['.', ',', '\'', '?', '!', '&', ':', '-', '/', '(', ')']
     for symbol in symbols:
         text = text.replace(' ' + symbol + ' ', symbol) if detokenize else text.replace(symbol, ' ' + symbol + ' ')
@@ -118,11 +118,11 @@ def _nlu_evaluation_entity_converter(text: str, entity: dict) -> Entity:
     return Entity(entity['entity'], start, end)
 
 
-def _sentences_converter(sentences: List[Sentence]) -> pd.DataFrame:
+def sentences_converter(sentences: List[Sentence]) -> pd.DataFrame:
     """ Convert a list of Sentence objects into a pd.DataFrame which can be used for visualisation. """
     data = {'sentence': [], 'intent': [], 'training': []}
     for sentence in sentences:
-        data['sentence'].append(sentence.text)
+        data['sentence'].append(str(sentence))
         data['intent'].append(sentence.intent)
         data['training'].append(sentence.train)
     return pd.DataFrame(data)
@@ -156,33 +156,25 @@ def _read_snips(js: dict) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
-def _read_file(file: Path) -> pd.DataFrame:
+def _read_file(file: Path) -> List[Sentence]:
     with open(str(file), 'rb') as f:
         js = json.load(f)
 
     parent_folder: Path = file.parent
 
     if parent_folder.name == 'NLU-Evaluation-Corpora':
-        return _sentences_converter(_read_nlu_evaluation_corpora(js))
+        return _read_nlu_evaluation_corpora(js)
     elif parent_folder.name == 'snips':
         return _read_snips(js)
 
 
-def _get_corpus(corpus: Corpus) -> pd.DataFrame:
+def _get_corpus(corpus: Corpus) -> List[Sentence]:
     return _read_file(Path(__file__).parent.parent / 'datasets' / corpus.value)
 
 
-def _get_train(df: pd.DataFrame) -> pd.DataFrame:
-    return df.loc[df['training']].drop(['training'], axis=1).reset_index(drop=True)
+def get_train(sentences: List[Sentence]) -> List[Sentence]:
+    return [sentence for sentence in sentences if sentence.train]
 
 
-def _get_test(df: pd.DataFrame) -> pd.DataFrame:
-    return df.loc[df['training'] == False].drop(['training'], axis=1).reset_index(drop=True)
-
-
-def get_train(corpus: Corpus) -> pd.DataFrame:
-    return _get_train(_get_corpus(corpus))
-
-
-def get_test(corpus: Corpus) -> pd.DataFrame:
-    return _get_test(_get_corpus(corpus))
+def get_test(sentences: List[Sentence]) -> List[Sentence]:
+    return [sentence for sentence in sentences if not sentence.train]

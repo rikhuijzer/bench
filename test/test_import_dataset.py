@@ -6,13 +6,14 @@ from core.import_dataset import Corpus
 
 
 class TestImportDataset(unittest.TestCase):
-    dummy_corpus = pd.DataFrame({
-        'sentence': ['lorem', 'ipsum', 'dolor'],
-        'intent': ['foo', 'bar', 'baz'],
-        'training': [True, False, False]
-    })
+    dummy_corpus = [
+        Sentence('lorem', 'foo', [], True),
+        Sentence('ipsum', 'bar', [], False),
+        Sentence('dolor', 'baz', [], False)
+    ]
 
-    def _validate_import(self, df: pd.DataFrame, expected_length: int, first_row: dict, last_row: dict):
+    def _validate_import(self, sentences: List[Sentence], expected_length: int, first_row: dict, last_row: dict):
+        df = sentences_converter(sentences)
         df_length = df.shape[0]
         self.assertEqual(expected_length, df_length)
         self.assertEqual(first_row, df.loc[0].to_dict())
@@ -20,7 +21,7 @@ class TestImportDataset(unittest.TestCase):
 
     # NLU-Evaluation-Corpora details provided at https://github.com/sebischair/NLU-Evaluation-Corpora
     def test__get_corpus_ask_ubuntu(self):
-        df = import_dataset._get_corpus(Corpus.AskUbuntu)
+        sentences = import_dataset._get_corpus(Corpus.AskUbuntu)
 
         first_row = {
             'sentence': 'What software can I use to view epub documents?',
@@ -34,51 +35,51 @@ class TestImportDataset(unittest.TestCase):
             'training': True
         }
 
-        self._validate_import(df, 162, first_row, last_row)
+        self._validate_import(sentences, 162, first_row, last_row)
 
     def test__get_corpus_chatbot(self):
-        df = import_dataset._get_corpus(Corpus.Chatbot)
+        sentences = import_dataset._get_corpus(Corpus.Chatbot)
 
         first_row = {
-            'sentence': 'i want to go marienplatz',
+            'sentence': 'i want to go [marienplatz](StationDest)',
             'intent': 'FindConnection',
             'training': False
         }
 
         last_row = {
-            'sentence': 'from garching to studentenstadt',
+            'sentence': 'from [garching](StationStart) to [studentenstadt](StationDest)',
             'intent': 'FindConnection',
             'training': True
         }
 
-        self._validate_import(df, 206, first_row, last_row)
+        self._validate_import(sentences, 206, first_row, last_row)
 
     def test__get_corpus_webapplications(self):
-        df = import_dataset._get_corpus(Corpus.WebApplications)
+        sentences = import_dataset._get_corpus(Corpus.WebApplications)
 
         first_row = {
-            'sentence': 'Alternative to Facebook',
+            'sentence': 'Alternative to [Facebook](WebService)',
             'intent': 'Find Alternative',
             'training': False
         }
 
         last_row = {
-            'sentence': 'How to disable/delete a Harvest account?',
+            'sentence': 'How to disable/delete a Harvest [account](WebService)?',
             'intent': 'Delete Account',
             'training': True
         }
 
-        self._validate_import(df, 89, first_row, last_row)
+        self._validate_import(sentences, 89, first_row, last_row)
 
     def test__get_train(self):
-        train = import_dataset._get_train(pd.DataFrame(self.dummy_corpus))
-        row = {'sentence': 'lorem', 'intent': 'foo'}
+        train = import_dataset.get_train(self.dummy_corpus)
+        row = {'sentence': 'lorem', 'intent': 'foo', 'training': True}
         self._validate_import(train, 1, row, row)
 
     def test__get_test(self):
-        test = import_dataset._get_test(self.dummy_corpus)
-        first_row = {'sentence': 'ipsum', 'intent': 'bar'}
-        last_row = {'sentence': 'dolor', 'intent': 'baz'}
+        test = import_dataset.get_test(self.dummy_corpus)
+        first_row = {'sentence': 'ipsum', 'intent': 'bar', 'training': False}
+        last_row = {'sentence': 'dolor', 'intent': 'baz', 'training': False}
         self._validate_import(test, 2, first_row, last_row)
 
     def test_find_nth(self):
@@ -107,8 +108,7 @@ class TestImportDataset(unittest.TestCase):
     def test_luis_tokenizer(self):
         sentence = 'How to partially upgrade Ubuntu 11.10 from Ubuntu 11.04?'
         expected = 'How to partially upgrade Ubuntu 11 . 10 from Ubuntu 11 . 04 ? '
-        self.assertEqual(expected, luis_tokenizer(sentence))
-
+        self.assertEqual(expected, tokenizer(sentence))
 
     def test__str__(self):
         text = 'Could I pay you 50 yen tomorrow or tomorrow?'
