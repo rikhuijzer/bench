@@ -13,10 +13,11 @@ import sklearn
 
 
 class System(ABC):
-    url: str
+    HEADER_JSON = {'content-type': 'application/json'}
+    port: int
 
-    def __init__(self, url):
-        self.url = url
+    def __init__(self, port: int):
+        self.port = port
 
     @abstractmethod
     def get_intent(self, sentence: str) -> str:
@@ -64,14 +65,23 @@ class Rasa(System):
 '''
 
 
+class Rasa(System):
+    def __init__(self, port: int):
+        super().__init__(port)
+
+    def get_intent(self, sentence: str):
+        data = {'q': sentence}
+        r = requests.post('localhost:{}/parse'.format(self.port), data=json.dumps(data), headers=self.HEADER_JSON)
+        return r.json()[0][0][0]
+
+
 class DeepPavlov(System):
-    def __init__(self, url):
-        super().__init__(url)
+    def __init__(self, port: int):
+        super().__init__(port)
 
     def get_intent(self, sentence: str):
         data = {'context': [sentence]}
-        headers = {'content-type': 'application/json'}
-        r = requests.post(self.url, data=json.dumps(data), headers=headers)
+        r = requests.post('localhost:{}/intent'.format(self.port), data=json.dumps(data), headers=self.HEADER_JSON)
         return r.json()[0][0][0]
 
 

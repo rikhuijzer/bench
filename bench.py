@@ -9,7 +9,7 @@ from core.import_dataset import *
 
 
 def analyse_system(corpus: Corpus, system: Type[System]):
-    system = system('http://0.0.0.0:5001/intents')
+    system = system(5000)
     print(classify_intent(corpus, system))
     # print(ut._get_corpus(corpus))
     # f1_score = core.evaluate.get_f1_score(corpus, system)
