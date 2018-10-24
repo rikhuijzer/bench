@@ -18,4 +18,4 @@ def analyse_system(corpus: Corpus, system: Type[System]):
 
 if __name__ == '__main__':
     # TODO: Allow for easier testing of multiple benchmarks
-    analyse_system(import_dataset.Corpus.Chatbot, DeepPavlov)
+    analyse_system(import_dataset.Corpus.WebApplications, Rasa)

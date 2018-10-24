@@ -2,13 +2,13 @@ version: '3.2'
 
 
 services:
-  rasa:
-    image: rasa-spacy-sklearn:1  # not using 
+  rasa-spacy:
+    image: rasa/rasa_nlu:0.13.7-spacy
     ports:
       - 5000:5000
 
   rasa-mitie:
-    image: rasa-mitie:1
+    image: rasa/rasa_nlu:0.13.7-mitie
     ports:
       - 5001:5000
 

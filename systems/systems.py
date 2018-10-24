@@ -1,19 +1,13 @@
-import warnings
 import json
 from abc import ABC, abstractmethod
 
 import requests
-from rasa_nlu.config import RasaNLUModelConfig
-from rasa_nlu.model import Trainer
-from rasa_nlu.training_data import Message
-from rasa_nlu.training_data import TrainingData
-import pandas as pd
-import rasa_nlu
-import sklearn
 
 
 class System(ABC):
     HEADER_JSON = {'content-type': 'application/json'}
+    HEADER_YML = {'content-type': 'application/x-yml'}
+
     port: int
 
     def __init__(self, port: int):
@@ -26,6 +20,15 @@ class System(ABC):
 
 '''
 class Rasa(System):
+    import warnings
+    from rasa_nlu.config import RasaNLUModelConfig
+    from rasa_nlu.model import Trainer
+    from rasa_nlu.training_data import Message
+    from rasa_nlu.training_data import TrainingData
+    import pandas as pd
+    import rasa_nlu
+    import sklearn
+
     # For any intent having only one utterance it is common that sklearn gives the following warning:
     # UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
     # this is no big issue according to Tom Bocklisch: https://github.com/RasaHQ/rasa_nlu/issues/288
@@ -66,13 +69,29 @@ class Rasa(System):
 
 
 class Rasa(System):
+    trained = False
+
     def __init__(self, port: int):
         super().__init__(port)
 
+    def train(self):
+        print('Training Rasa...')
+        data = {'q': 'b'}
+        url = 'http://localhost:{}/train?project=my_project'
+        r = requests.post(url.format(self.port), data=json.dumps(data), headers=self.HEADER_JSON).json()
+        print('Response: ' + str(r))
+        if 'error' in r:
+            raise RuntimeError('Training failed.')
+        self.trained = True
+
     def get_intent(self, sentence: str):
+        if not self.trained:
+            self.train()
+
         data = {'q': sentence}
-        r = requests.post('localhost:{}/parse'.format(self.port), data=json.dumps(data), headers=self.HEADER_JSON)
-        return r.json()[0][0][0]
+        url = 'http://localhost:{}/parse'
+        r = requests.post(url.format(self.port), data=json.dumps(data), headers=self.HEADER_JSON)
+        return r.json()['intent']['name']
 
 
 class DeepPavlov(System):
@@ -81,7 +100,8 @@ class DeepPavlov(System):
 
     def get_intent(self, sentence: str):
         data = {'context': [sentence]}
-        r = requests.post('localhost:{}/intent'.format(self.port), data=json.dumps(data), headers=self.HEADER_JSON)
+        r = requests.post('http://localhost:{}/intent'.format(self.port), data=json.dumps(data),
+                          headers=self.HEADER_JSON)
         return r.json()[0][0][0]
 
 
