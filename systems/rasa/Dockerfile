@@ -1,8 +1,8 @@
-FROM python:2.7-slim
+FROM python:3.6-slim
 
 ENV RASA_NLU_DOCKER="YES" \
     RASA_NLU_HOME=/app \
-    RASA_NLU_PYTHON_PACKAGES=/usr/local/lib/python2.7/dist-packages
+    RASA_NLU_PYTHON_PACKAGES=/usr/local/lib/python3.6/dist-packages
 
 # Run updates, install basics and cleanup
 # - build-essential: Compile specific dependencies
@@ -12,6 +12,7 @@ RUN apt-get update -qq \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+WORKDIR ${RASA_NLU_HOME}
 
 # use bash always
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -50,23 +51,19 @@ ENV JAVA_DEBIAN_VERSION 8u141-b15-1~deb9u1
 # and https://github.com/docker-library/java/issues/19#issuecomment-70546872
 ENV CA_CERTIFICATES_JAVA_VERSION 20170531+nmu1
 
+# added openjdk-8-jre-headless (source: https://lists.debian.org/debian-user/2017/09/msg00629.html)
 RUN set -ex; \
-	\
 # deal with slim variants not having man page directories (which causes "update-alternatives" to fail)
 	if [ ! -d /usr/share/man/man1 ]; then \
 		mkdir -p /usr/share/man/man1; \
 	fi; \
-	\
 	apt-get update; \
-	apt-get install -y -t jessie-backports\
-		openjdk-8-jdk \
+	apt-get install -y openjdk-8-jdk \
 		ca-certificates-java \
 	; \
 	rm -rf /var/lib/apt/lists/*; \
-	\
 # verify that "docker-java-home" returns what we expect
 	[ "$(readlink -f "$JAVA_HOME")" = "$(docker-java-home)" ]; \
-	\
 # update-alternatives so that future installs of other OpenJDK versions don't change /usr/bin/java
 	update-alternatives --get-selections | awk -v home="$(readlink -f "$JAVA_HOME")" 'index($3, home) == 1 { $2 = "manual"; print | "update-alternatives --set-selections" }'; \
 # ... and verify that it actually worked for one of the alternatives we care about
@@ -77,14 +74,14 @@ RUN /var/lib/dpkg/info/ca-certificates-java.postinst configure
 
 ## done java
 
+# this is taken from much earlier, but can be done later to avoid rebuilding all Docker layers constantly
+# COPY . ${RASA_NLU_HOME}
 
-WORKDIR ${RASA_NLU_HOME}
+RUN git clone --branch 0.13.7 --depth 1 https://github.com/RasaHQ/rasa_nlu ${RASA_NLU_HOME}/rasa_nlu
 
-COPY . ${RASA_NLU_HOME}
+RUN pip install -r ${RASA_NLU_HOME}/rasa_nlu/alt_requirements/requirements_full.txt
 
-RUN pip install -r alt_requirements/requirements_mitie.txt
-
-RUN pip install -e .
+RUN pip install -e ${RASA_NLU_HOME}/rasa_nlu
 
 RUN apt-get update -qq \
     && apt-get install -y --no-install-recommends wget \
@@ -92,11 +89,20 @@ RUN apt-get update -qq \
     && apt-get remove -y wget \
     && apt-get autoremove -y
 
-COPY sample_configs/config_mitie.json ${RASA_NLU_HOME}/config.json
+RUN pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_md-2.0.0/en_core_web_md-2.0.0.tar.gz --no-cache-dir > /dev/null \
+    && python -m spacy link en_core_web_md en \
+    && pip install https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-2.0.0/de_core_news_sm-2.0.0.tar.gz --no-cache-dir > /dev/null \
+    && python -m spacy link de_core_news_sm de
 
-VOLUME ["/app/projects", "/app/logs", "/app/data"]
+# COPY ${RASA_NLU_HOME}/rasa_nlu/sample_configs/config_spacy_duckling.yml ${RASA_NLU_HOME}/config.yml
+RUN ln -s ${RASA_NLU_HOME}/rasa_nlu/sample_configs/config_spacy_duckling.yml ${RASA_NLU_HOME}/config.yml
+#VOLUME ["/app/projects", "/app/logs", "/app/data"]
 
+# RUN wget https://github.com/RasaHQ/rasa_nlu/blob/0.13.7/sample_configs/config_spacy_duckling.yml
+# COPY config_spacy_duckling.yml ${RASA_NLU_HOME}/config.yml
+
+# remove copy from top to avoid rebuild
 EXPOSE 5000
 
 ENTRYPOINT ["./entrypoint.sh"]
-CMD ["start", "-c", "config.json"]
+CMD ["start", "-c", "config.yml", "--path", "/app/projects"]
