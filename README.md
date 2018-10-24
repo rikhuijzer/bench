@@ -15,6 +15,5 @@ docker-compose up
 Packages used in the benchmarks are listed in `requirements.txt` and can be installed 
 by using `pip install -r requirements.txt`.
 
-Docker-compose is used to avoid starting Docker containers from Python. One big issue 
-of starting Docker containers  from Python is that Docker requires root privileges for 
-that.
+Docker-compose is used to avoid starting various Docker containers from Python. Multiple containers are needed to benchmark systems with different configurations (for example, Rasa MITIE and Rasa spaCy + sklearn). One big issue 
+of starting Docker containers from Python is that Docker requires root privileges.
