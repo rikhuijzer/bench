@@ -40,21 +40,26 @@ def message_to_annotated_str(message: Message) -> str:
 
 # TODO: fix this using tokenizer and stick to the docstring
 def find_nth(text: str, pattern: re, n: int) -> int:
-    """ Returns n-th location of some regular expression in a string. See test for examples. """
+    """ Returns n-th location of some regular expression in a string. """
+    if n == 0:  # this enables the regex to also find locations at start of string
+        return 0
     text = text.rstrip(string.punctuation)
-    regex = r'(?:.*?(' + pattern + r')+){' + re.escape(str(n)) + r'}.*?((' + pattern + ')+)'
+    regex = r'(?:.*?(' + pattern + r')+){' + str(n - 1) + r'}.*?((' + pattern + r')+)'
     m = re.match(regex, text)
-    # print('text: {}, pattern: {}, m: {}'.format(text, pattern, m))
-    if m:
-        loc = m.span()[1] - 1  # the span returns len(match: str) not the last index of match: str
-        if text[loc] != ' ':  # regex usually matches on string plus some space, we add one to the index if
-            loc += 1
-    else:  # hacking around the inconsistently formatted data
-        loc = -1
+    if not m:
+        raise ValueError('Could not find regex with \n text: {} \n pattern: {} \n n: {}'.format(text, pattern, n))
+    return m.span()[1] - 1  # minus one to convert from length to last index
+
+
+def find_space(text: str, n: int) -> int:
+    """ Returns character location of n-th space (or end of line) in a string. """
+    loc = find_nth(text, r'\W|\Z', n)
+    if text[loc] != ' ':  # the regex matched on \Z (end of line)
+        loc += 1
     return loc
 
 
-def tokenizer(text: str, detokenize=False) -> str:
+def tokenize(text: str, detokenize=False) -> str:
     """ Returns (de)tokenized sentence according to Microsoft LUIS. Used for working with NLU Evaluation Corpora. """
     symbols = ['.', ',', '\'', '?', '!', '&', ':', '-', '/', '(', ')']
     for symbol in symbols:
@@ -65,11 +70,16 @@ def tokenizer(text: str, detokenize=False) -> str:
 # TODO: fix this using tokenizer
 def _nlu_evaluation_entity_converter(text: str, entity: dict) -> dict:
     """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
-    start_word_index = entity['start']
-    start = find_nth(text, r'\W', start_word_index - 1) + 1
-    if start == -1:  # hacking around the inconsistently formatted data
-        start = text.find(entity['text'])
-    end = start + len(entity['text'])
+    def fix_tokenisation_index(tokenized: str, index: int) -> int:
+        substring = tokenized[index]
+        detokenized = tokenize(substring, detokenize=True)
+        return len(detokenized)
+
+    tokenized = tokenize(text)
+    start_tokenized = find_space(tokenized, entity['start']) + 1
+    end_tokenized = find_space(tokenized, entity['stop'] + 1)
+    start = fix_tokenisation_index(tokenized, start_tokenized)
+    end = fix_tokenisation_index(tokenized, end_tokenized)
     return create_entity(start, end, entity['entity'], entity['text'])
 
 
