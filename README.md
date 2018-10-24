@@ -1,5 +1,7 @@
 # bench
+Benchmarking tool for various intent and entity classification systems.
 
+## installation
 Set terminal current directory to the project root (where `bench.py` is). The docker images can then be build for each `Dockerfile` having location `systems/<system>/Dockerfile` where `<system>` is the folder name of some system using:
 ```
 docker build -t <system_tag> systems/<system> 
