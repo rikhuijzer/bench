@@ -12,6 +12,11 @@ from nltk.tokenize import WordPunctTokenizer
 pd.set_option('max_colwidth', 180)
 
 
+class Subset(Enum):
+    train = 'train'
+    test = 'test'
+
+
 class Corpus(Enum):
     AskUbuntu = Path('NLU-Evaluation-Corpora') / 'AskUbuntuCorpus.json'
     Chatbot = Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json'
@@ -30,7 +35,6 @@ def message_to_annotated_str(message: Message) -> str:
     training_data: TrainingData = TrainingData(training_examples=training_examples)
     generated = MarkdownWriter()._generate_training_examples_md(training_data)
     generated = generated[generated.find('\n') + 3:-1]  # remove header
-    print("generated: " + generated)
     # generated = re.sub(r'\]\((\w|\s)*:', '](', generated)  # fix double entity name, like train(Vehicle:Vehicle)
     return generated
 
@@ -109,9 +113,6 @@ def get_corpus(corpus: Corpus) -> List[Message]:
     return _read_file(Path(__file__).parent.parent / 'datasets' / corpus.value)
 
 
-def get_train(sentences: List[Message]) -> List[Message]:
-    return [sentence for sentence in sentences if sentence.data['training']]
-
-
-def get_test(sentences: List[Message]) -> List[Message]:
-    return [sentence for sentence in sentences if not sentence.data['training']]
+def get_train_test(sentences: List[Message], subset: Subset) -> List[Message]:
+    train = True if subset == Subset.train else False
+    return [sentence for sentence in sentences if sentence.data['training'] == train]
