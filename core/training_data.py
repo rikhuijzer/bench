@@ -1,6 +1,4 @@
 import json
-import re
-import string
 from enum import Enum
 from pathlib import Path
 from typing import List
@@ -27,9 +25,6 @@ def create_message(text: str, intent: str, entities: [], training: bool) -> Mess
     return message
 
 
-# utils.build_entity(start, end, text, entity_type)
-
-
 def message_to_annotated_str(message: Message) -> str:
     training_examples: List[Message] = [message]
     training_data: TrainingData = TrainingData(training_examples=training_examples)
@@ -40,44 +35,10 @@ def message_to_annotated_str(message: Message) -> str:
     return generated
 
 
-def find_nth(text: str, pattern: re, n: int) -> int:
-    """ Returns n-th location of some regular expression in a string. """
-    if n == 0:  # this enables the regex to also find locations at start of string
-        return 0
-    text = text.rstrip(string.punctuation)
-    regex = r'(?:.*?(' + pattern + r')+){' + str(n - 1) + r'}.*?((' + pattern + r')+)'
-    m = re.match(regex, text)
-    return m.span()[1] - 1  # minus one to convert from length to last index
-
-
-def find_space(text: str, n: int) -> int:
-    """ Returns character location of n-th space (or end of line) in a string. """
-    loc = find_nth(text, r'\W|\Z', n)
-    if text[loc] != ' ':  # the regex matched on \Z (end of line)
-        loc += 1
-    return loc
-
-
-def tokenize(text: str, detokenize=False) -> str:
-    """ Returns (de)tokenized sentence according to Microsoft LUIS. Used for working with NLU Evaluation Corpora. """
-    symbols = ['.', ',', '\'', '?', '!', '&', ':', '-', '/', '(', ')']
-    for symbol in symbols:
-        text = text.replace(' ' + symbol + ' ', symbol) if detokenize else text.replace(symbol, ' ' + symbol + ' ')
-    return text
-
-
-def fix_tokenisation_index(tokenized: str, index: int) -> int:
-    substring = tokenized[:index]
-    detokenized = tokenize(substring, detokenize=True)
-    return len(detokenized)
-
-
 def nlu_evaluation_entity_converter(text: str, entity: dict) -> dict:
     """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
-    tokenized = tokenize(text)
-    start_tokenized = find_space(tokenized, entity['start']) + 1
-    start = fix_tokenisation_index(tokenized, start_tokenized)
-    end = start + len(entity['text'])
+    start = convert_index(text, entity['start'], begin=True)
+    end = convert_index(text, entity['stop'], begin=False)
     return build_entity(start, end, value=entity['text'], entity_type=entity['entity'])
 
 
@@ -96,19 +57,11 @@ def sentences_to_dataframe(messages: List[Message], focus='all') -> pd.DataFrame
     return pd.DataFrame(data)
 
 
-def _convert_index(text: str, token_index: int, begin: bool):
+def convert_index(text: str, token_index: int, begin: bool) -> int:
     span_generator = WordPunctTokenizer().span_tokenize(text)
     spans = [span for span in span_generator]
     location = 0 if begin else 1
     return spans[token_index][location]
-
-
-def convert_index_begin(text: str, token_index: int) -> int:
-    return _convert_index(text, token_index, True)
-
-
-def convert_index_end(text: str, token_index: int) -> int:
-    return _convert_index(text, token_index, False)
 
 
 def read_nlu_evaluation_corpora(js: dict) -> List[Message]:

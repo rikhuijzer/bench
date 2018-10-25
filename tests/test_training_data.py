@@ -1,57 +1,14 @@
 from core.training_data import *
 
 
-def test_tokenizer():
-    tokenized = 'How to partially upgrade Ubuntu 11 . 10 from Ubuntu 11 . 04 ? '
-    detokenized = 'How to partially upgrade Ubuntu 11.10 from Ubuntu 11.04?'
-    assert tokenized == tokenize(detokenized)
-    assert detokenized == tokenize(tokenized, detokenize=True)
-
-
 def test_convert_index():
     def helper(text: str, token_index: int, expected: int, begin: bool):
-        if begin:
-            index = convert_index_begin(text, token_index)
-        else:
-            index = convert_index_end(text, token_index)
+        index = convert_index(text, token_index, begin)
         assert expected == index
 
     text = 'Upgrading from 11.10 to 12.04'
     helper(text, 6, 24, begin=True)
     helper(text, 8, 29, begin=False)
-
-
-def test_find_space():
-    def helper(text: str, n: int, char_index: int, char: str):
-        result = find_space(text, n)
-        assert char_index == result
-        if char == '':  # end of line, so text[result] would raise index out of bounds error
-            assert char_index == len(text)
-        else:
-            assert char == text[result]
-
-    sentence = 'lorem ipsum dolor sit amet'
-    helper(sentence, 1, 5, ' ')
-    helper(sentence, 2, 11, ' ')
-    helper(sentence, 3, 17, ' ')
-    helper(sentence, 5, len(sentence), '')
-
-    sentence = 'Weather tomorrow?'
-    helper(sentence, 2, 16, '?')
-
-    sentence = 'Weather tomorrow'
-    helper(sentence, 2, 16, '')
-
-    sentence = 'Weather tomorrow morning?'
-    helper(sentence, 2, 16, ' ')
-
-
-def test_fix_tokenisation_index():
-    text = 'Upgrading from 11.10 to 12.04'
-    tokenized = 'Upgrading from 11 . 10 to 12 . 04'
-    start_tokenized = 26
-    start_expected = 24
-    assert start_expected == fix_tokenisation_index(tokenized, start_tokenized)
 
 
 def test_message_to_annotated_str():
