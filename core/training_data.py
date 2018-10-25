@@ -9,6 +9,8 @@ import pandas as pd
 from rasa_nlu.training_data import Message
 from rasa_nlu.training_data import TrainingData
 from rasa_nlu.training_data.formats.markdown import MarkdownWriter
+from rasa_nlu.utils import build_entity
+from nltk.tokenize import WordPunctTokenizer
 pd.set_option('max_colwidth', 180)
 
 
@@ -25,8 +27,7 @@ def create_message(text: str, intent: str, entities: [], training: bool) -> Mess
     return message
 
 
-def create_entity(start: int, end: int, entity: str, value: str) -> dict:
-    return {'start': start, 'end': end, 'entity': entity, 'value': value}
+# utils.build_entity(start, end, text, entity_type)
 
 
 def message_to_annotated_str(message: Message) -> str:
@@ -34,7 +35,8 @@ def message_to_annotated_str(message: Message) -> str:
     training_data: TrainingData = TrainingData(training_examples=training_examples)
     generated = MarkdownWriter()._generate_training_examples_md(training_data)
     generated = generated[generated.find('\n') + 3:-1]  # remove header
-    generated = re.sub(r'\]\((\w|\s)*:', '](', generated)  # fix double entity name, like train(Vehicle:Vehicle)
+    print("generated: " + generated)
+    # generated = re.sub(r'\]\((\w|\s)*:', '](', generated)  # fix double entity name, like train(Vehicle:Vehicle)
     return generated
 
 
@@ -45,8 +47,6 @@ def find_nth(text: str, pattern: re, n: int) -> int:
     text = text.rstrip(string.punctuation)
     regex = r'(?:.*?(' + pattern + r')+){' + str(n - 1) + r'}.*?((' + pattern + r')+)'
     m = re.match(regex, text)
-    if not m:
-        raise ValueError('Could not find regex with \n text: {} \n pattern: {} \n n: {}'.format(text, pattern, n))
     return m.span()[1] - 1  # minus one to convert from length to last index
 
 
@@ -66,19 +66,19 @@ def tokenize(text: str, detokenize=False) -> str:
     return text
 
 
-def _nlu_evaluation_entity_converter(text: str, entity: dict) -> dict:
-    """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
-    def fix_tokenisation_index(tokenized: str, index: int) -> int:
-        substring = tokenized[index]
-        detokenized = tokenize(substring, detokenize=True)
-        return len(detokenized)
+def fix_tokenisation_index(tokenized: str, index: int) -> int:
+    substring = tokenized[:index]
+    detokenized = tokenize(substring, detokenize=True)
+    return len(detokenized)
 
+
+def nlu_evaluation_entity_converter(text: str, entity: dict) -> dict:
+    """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
     tokenized = tokenize(text)
     start_tokenized = find_space(tokenized, entity['start']) + 1
-    end_tokenized = find_space(tokenized, entity['stop'] + 1)
     start = fix_tokenisation_index(tokenized, start_tokenized)
-    end = fix_tokenisation_index(tokenized, end_tokenized)
-    return create_entity(start, end, entity['entity'], entity['text'])
+    end = start + len(entity['text'])
+    return build_entity(start, end, value=entity['text'], entity_type=entity['entity'])
 
 
 def sentences_to_dataframe(messages: List[Message], focus='all') -> pd.DataFrame:
@@ -96,20 +96,35 @@ def sentences_to_dataframe(messages: List[Message], focus='all') -> pd.DataFrame
     return pd.DataFrame(data)
 
 
-def _read_nlu_evaluation_corpora(js: dict) -> List[Message]:
+def _convert_index(text: str, token_index: int, begin: bool):
+    span_generator = WordPunctTokenizer().span_tokenize(text)
+    spans = [span for span in span_generator]
+    location = 0 if begin else 1
+    return spans[token_index][location]
+
+
+def convert_index_begin(text: str, token_index: int) -> int:
+    return _convert_index(text, token_index, True)
+
+
+def convert_index_end(text: str, token_index: int) -> int:
+    return _convert_index(text, token_index, False)
+
+
+def read_nlu_evaluation_corpora(js: dict) -> List[Message]:
     """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
     out = []
     for sentence in js['sentences']:
         entities = []
         for entity in sentence['entities']:
-            entities.append(_nlu_evaluation_entity_converter(sentence['text'], entity))
+            entities.append(nlu_evaluation_entity_converter(sentence['text'], entity))
         message = Message.build(sentence['text'], sentence['intent'], entities)
         message.data['training'] = sentence['training']
         out.append(message)
     return out
 
 
-def _read_snips(js: dict) -> pd.DataFrame:
+def read_snips(js: dict) -> pd.DataFrame:
     data = {'sentence': [], 'intent': [], 'training': []}
 
     queries_count = 0
@@ -132,9 +147,9 @@ def _read_file(file: Path) -> List[Message]:
     parent_folder: Path = file.parent
 
     if parent_folder.name == 'NLU-Evaluation-Corpora':
-        return _read_nlu_evaluation_corpora(js)
+        return read_nlu_evaluation_corpora(js)
     elif parent_folder.name == 'snips':
-        return _read_snips(js)
+        return read_snips(js)
 
 
 def get_corpus(corpus: Corpus) -> List[Message]:

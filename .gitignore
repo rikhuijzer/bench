@@ -109,5 +109,5 @@ venv.bak/
 # config file
 config.ini
 
-# download folder used by deeppavlov
-download/
+# pytest
+.pytest_cache
