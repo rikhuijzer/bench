@@ -33,12 +33,11 @@ def message_to_annotated_str(message: Message) -> str:
     training_examples: List[Message] = [message]
     training_data: TrainingData = TrainingData(training_examples=training_examples)
     generated = MarkdownWriter()._generate_training_examples_md(training_data)
-    generated = generated[generated.find('\n') + 3:-1]
-    generated = re.sub(r'\]\((\w|\s)*:', '](', generated)
+    generated = generated[generated.find('\n') + 3:-1]  # remove header
+    generated = re.sub(r'\]\((\w|\s)*:', '](', generated)  # fix double entity name, like train(Vehicle:Vehicle)
     return generated
 
 
-# TODO: fix this using tokenizer and stick to the docstring
 def find_nth(text: str, pattern: re, n: int) -> int:
     """ Returns n-th location of some regular expression in a string. """
     if n == 0:  # this enables the regex to also find locations at start of string
@@ -67,7 +66,6 @@ def tokenize(text: str, detokenize=False) -> str:
     return text
 
 
-# TODO: fix this using tokenizer
 def _nlu_evaluation_entity_converter(text: str, entity: dict) -> dict:
     """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
     def fix_tokenisation_index(tokenized: str, index: int) -> int:
