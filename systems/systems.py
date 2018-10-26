@@ -27,10 +27,10 @@ def get_port(system: str) -> int:
 @lru_cache(maxsize=square_ceil(get_n_systems()))
 def train(system: str, corpus: Corpus) -> bool:
     if system == 'rasa-spacy':
-        training_data = TrainingData(training_examples=list(get_train_test(get_messages(corpus), TrainTest.train)))
+        training_examples: List[Message] = list(get_train_test(get_messages(corpus), TrainTest.train))
+        training_data = TrainingData(training_examples=training_examples).as_json()
         url = 'http://localhost:{}/train?project=my_project'
-        r = requests.post(url.format(get_port(system)), data=training_data, headers=Header.json).json()
-        print('Response: ' + str(r))
+        r = requests.post(url.format(get_port(system)), data=training_data, headers=Header.json.value).json()
         if 'error' in r:
             raise RuntimeError('Training of system: {} failed. Corpus: {}, Response: \n {}.'.format(system, corpus, r))
         return True
@@ -40,7 +40,14 @@ def train(system: str, corpus: Corpus) -> bool:
 def get_intent(system: str, corpus: Corpus, text: str) -> str:
     train(system, corpus)
 
-    return 'not implemented'
+    if system == 'rasa-spacy':
+        data = {'q': text, 'project': 'my_project'}
+        url = 'http://localhost:{}/parse'
+        r = requests.post(url.format(get_port(system)), data=json.dumps(data), headers=Header.json.value)
+
+        if r.status_code != 200:
+            raise RuntimeError('Could not get intent for text: {}'.format(text))
+        return r.json()['intent']['name']
 
 
 '''

@@ -13,7 +13,11 @@ def test_port():
     services = get_docker_compose_configuration()['services']
     for system in services:
         assert 5000 <= get_port(system) < 6000
-        
+
 
 def test_train():
     assert train('rasa-spacy', Corpus.WebApplications)
+
+
+def test_get_intent():
+    assert 'Find Alternative' == get_intent('rasa-spacy', Corpus.WebApplications, 'Alternatives to Twitter')
