@@ -20,4 +20,5 @@ def test_train():
 
 
 def test_get_intent():
-    assert 'Find Alternative' == get_intent('rasa-spacy', Corpus.WebApplications, 'Alternatives to Twitter')
+    assert 'Find Alternative' == get_intent('rasa-spacy', 'Alternatives to Twitter', Corpus.WebApplications)
+    assert 'PlayMusic' == get_intent('deeppavlov-snips', '')

@@ -1,12 +1,7 @@
-# keeping versions strict since it
 rasa_nlu==0.13.7
 pandas==0.23.0
 requests==2.19.1
 sklearn
-pytest==3.9.2
 nltk==3.3
-
-# rasa_nlu spacy english model
-sklearn-crfsuite==0.3.6
-spacy>=2.0.0,<3.0.0
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz#egg=en_core_web_sm
+pytest==3.9.2
+pytest-sugar==0.9.1
