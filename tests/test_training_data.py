@@ -2,13 +2,13 @@ from core.training_data import *
 
 
 def test_convert_index():
-    def helper(text: str, token_index: int, expected: int, begin: bool):
-        index = convert_index(text, token_index, begin)
+    def helper(text: str, token_index: int, expected: int, start_end: StartEnd):
+        index = convert_index(text, token_index, start_end)
         assert expected == index
 
     text = 'Upgrading from 11.10 to 12.04'
-    helper(text, 6, 24, begin=True)
-    helper(text, 8, 29, begin=False)
+    helper(text, 6, 24, StartEnd.start)
+    helper(text, 8, 29, StartEnd.end)
 
 
 def test_message_to_annotated_str():
@@ -48,13 +48,13 @@ def test_get_corpus():
     """ Test whether all corpora get imported correctly.
             All crammed in one function, to avoid having many errors when one of the sub-functions fails.
     """
-    def helper(messages: List[Message], expected_length: int, first_row: dict, last_row: dict):
+    def helper(messages: Tuple, expected_length: int, first_row: dict, last_row: dict):
         assert expected_length == len(messages)
         assert first_row == messages[0].as_dict()
 
         assert last_row == messages[-1].as_dict()
 
-    sentences = get_corpus(Corpus.AskUbuntu)
+    sentences = get_messages(Corpus.AskUbuntu)
     first_row = {
         'text': 'What software can I use to view epub documents?',
         'intent': 'Software Recommendation',
@@ -68,7 +68,7 @@ def test_get_corpus():
 
     helper(sentences, 162, first_row, last_row)
 
-    sentences = get_corpus(Corpus.Chatbot)
+    sentences = get_messages(Corpus.Chatbot)
     first_row = {
         'entities': [{'end': 24,
                       'entity': 'StationDest',
@@ -93,7 +93,7 @@ def test_get_corpus():
     }
     helper(sentences, 206, first_row, last_row)
 
-    sentences = get_corpus(Corpus.WebApplications)
+    sentences = get_messages(Corpus.WebApplications)
     first_row = {
         'entities': [{'end': 23,
                       'entity': 'WebService',
@@ -117,16 +117,17 @@ def test_get_corpus():
 
 
 def test_get_train_test():
-    dummy_corpus = [
+    dummy_corpus = (
         create_message('lorem', 'foo', [], training=True),
         create_message('ipsum', 'bar', [], training=True),
         create_message('dolor', 'baz', [], training=False)
-    ]
+    )
 
-    train = get_train_test(dummy_corpus, Subset.train)
+    train = get_train_test(dummy_corpus, TrainTest.train)
     assert 2 == len(train)
     assert dummy_corpus[0].as_dict() == train[0].as_dict()
     assert dummy_corpus[1].as_dict() == train[1].as_dict()
 
-    assert 1 == len(get_train_test(dummy_corpus, Subset.test))
-    assert dummy_corpus[0].as_dict() == train[0].as_dict()
+    test = get_train_test(dummy_corpus, TrainTest.test)
+    assert 1 == len(test)
+    assert dummy_corpus[2].as_dict() == test[0].as_dict()

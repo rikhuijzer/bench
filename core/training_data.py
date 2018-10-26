@@ -1,20 +1,33 @@
 import json
 from enum import Enum
+from functools import lru_cache
 from pathlib import Path
-from typing import List
+from typing import List, Tuple
 
 import pandas as pd
+from nltk.tokenize import WordPunctTokenizer
 from rasa_nlu.training_data import Message
 from rasa_nlu.training_data import TrainingData
 from rasa_nlu.training_data.formats.markdown import MarkdownWriter
 from rasa_nlu.utils import build_entity
-from nltk.tokenize import WordPunctTokenizer
+from core.utils import *
+
 pd.set_option('max_colwidth', 180)
 
 
-class Subset(Enum):
-    train = 'train'
-    test = 'test'
+class StartEnd(Enum):
+    start = 0
+    end = 1
+
+
+class Focus(Enum):
+    all = 'all'
+    intent = 'intent'
+
+
+class TrainTest(Enum):
+    train = True
+    test = False
 
 
 class Corpus(Enum):
@@ -35,18 +48,17 @@ def message_to_annotated_str(message: Message) -> str:
     training_data: TrainingData = TrainingData(training_examples=training_examples)
     generated = MarkdownWriter()._generate_training_examples_md(training_data)
     generated = generated[generated.find('\n') + 3:-1]  # remove header
-    # generated = re.sub(r'\]\((\w|\s)*:', '](', generated)  # fix double entity name, like train(Vehicle:Vehicle)
     return generated
 
 
 def nlu_evaluation_entity_converter(text: str, entity: dict) -> dict:
     """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
-    start = convert_index(text, entity['start'], begin=True)
-    end = convert_index(text, entity['stop'], begin=False)
+    start = convert_index(text, entity['start'], StartEnd.start)
+    end = convert_index(text, entity['stop'], StartEnd.end)
     return build_entity(start, end, value=entity['text'], entity_type=entity['entity'])
 
 
-def sentences_to_dataframe(messages: List[Message], focus='all') -> pd.DataFrame:
+def sentences_to_dataframe(messages: Tuple, focus=Focus.all) -> pd.DataFrame:
     """ Returns a DataFrame (table) from a list of Message objects which can be used for visualisation.
 
     Args:
@@ -55,20 +67,19 @@ def sentences_to_dataframe(messages: List[Message], focus='all') -> pd.DataFrame
     """
     data = {'message': [], 'intent': [], 'training': []}
     for message in messages:
-        data['sentence'].append(message.text if focus == 'intent' else message_to_annotated_str(message))
+        data['message'].append(message.text if focus.value == 'intent' else message_to_annotated_str(message))
         data['intent'].append(message.data['intent'])
         data['training'].append(message.data['training'])
     return pd.DataFrame(data)
 
 
-def convert_index(text: str, token_index: int, begin: bool) -> int:
+def convert_index(text: str, token_index: int, start_end: StartEnd) -> int:
     span_generator = WordPunctTokenizer().span_tokenize(text)
     spans = [span for span in span_generator]
-    location = 0 if begin else 1
-    return spans[token_index][location]
+    return spans[token_index][start_end.value]
 
 
-def read_nlu_evaluation_corpora(js: dict) -> List[Message]:
+def read_nlu_evaluation_corpora(js: dict) -> Tuple:
     """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
     out = []
     for sentence in js['sentences']:
@@ -78,7 +89,7 @@ def read_nlu_evaluation_corpora(js: dict) -> List[Message]:
         message = Message.build(sentence['text'], sentence['intent'], entities)
         message.data['training'] = sentence['training']
         out.append(message)
-    return out
+    return tuple(out)
 
 
 def read_snips(js: dict) -> pd.DataFrame:
@@ -97,7 +108,7 @@ def read_snips(js: dict) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
-def _read_file(file: Path) -> List[Message]:
+def _read_file(file: Path) -> Tuple:
     with open(str(file), 'rb') as f:
         js = json.load(f)
 
@@ -109,10 +120,10 @@ def _read_file(file: Path) -> List[Message]:
         return read_snips(js)
 
 
-def get_corpus(corpus: Corpus) -> List[Message]:
+@lru_cache(maxsize=square_ceil(len(Corpus)))
+def get_messages(corpus: Corpus) -> Tuple:
     return _read_file(Path(__file__).parent.parent / 'datasets' / corpus.value)
 
 
-def get_train_test(sentences: List[Message], subset: Subset) -> List[Message]:
-    train = True if subset == Subset.train else False
-    return [sentence for sentence in sentences if sentence.data['training'] == train]
+def get_train_test(messages: Tuple, train_test: TrainTest) -> Tuple:
+    return tuple([message for message in messages if message.data['training'] == train_test.value])
