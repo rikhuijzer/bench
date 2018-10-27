@@ -11,6 +11,7 @@ from rasa_nlu.training_data import TrainingData
 from rasa_nlu.training_data.formats.markdown import MarkdownWriter
 from rasa_nlu.utils import build_entity
 from core.utils import *
+from typing import NamedTuple
 
 pd.set_option('max_colwidth', 180)
 
@@ -35,6 +36,9 @@ class Corpus(Enum):
     Chatbot = Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json'
     WebApplications = Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json'
     Snips = Path('snips') / 'benchmark_data.json'
+
+
+TestSentence = NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])
 
 
 def create_message(text: str, intent: str, entities: [], training: bool) -> Message:
@@ -68,7 +72,7 @@ def sentences_to_dataframe(messages: Tuple, focus=Focus.all) -> pd.DataFrame:
         focus: Focus of the DataFrame.  For intent classification visualisation choose 'intent'
     """
     data = {'message': [], 'intent': [], 'training': []}
-    for message in messages:
+    for message in messages:  # TODO: Apply map, filter, reduce?
         data['message'].append(message.text if focus.value == 'intent' else convert_message_to_annotated_str(message))
         data['intent'].append(message.data['intent'])
         data['training'].append(message.data['training'])
@@ -86,6 +90,7 @@ def read_nlu_evaluation_corpora(js: dict) -> Tuple:
     """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
     out = []
     for sentence in js['sentences']:
+        # TODO: Do this using map, filter, reduce?
         entities = []
         for entity in sentence['entities']:
             entities.append(convert_nlu_evaluation_entity(sentence['text'], entity))
