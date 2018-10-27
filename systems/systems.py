@@ -2,7 +2,6 @@ import requests
 import yaml
 
 from core.training_data import *
-from core.utils import *
 
 
 class Header(Enum):
@@ -24,7 +23,6 @@ def get_port(system: str) -> int:
     return int(get_docker_compose_configuration()['services'][system]['ports'][0][0:4])
 
 
-@lru_cache(maxsize=square_ceil(get_n_systems()))
 def train(system: str, corpus: Corpus) -> bool:
     if 'rasa' in system:
         training_examples: List[Message] = list(get_train_test(get_messages(corpus), TrainTest.train))
@@ -35,14 +33,12 @@ def train(system: str, corpus: Corpus) -> bool:
             raise RuntimeError('Training of system: {} failed. Corpus: {}, Response: \n {}.'.format(system, corpus, r))
         return True
 
-    elif 'deeppavlov' in system:
-        return True
-
-    raise ValueError('Unknown system: {}.'.format(system))
+    raise ValueError('Unknown system for training: {}.'.format(system))
 
 
-def get_intent(system: str, text: str, corpus: Corpus = None) -> str:
-    train(system, corpus)
+def get_intent(system: str, text: str, corpus: Corpus, system_knowledge: Corpus) -> str:
+    if corpus != system_knowledge:
+        train(system, corpus)
 
     if 'rasa' in system:
         data = {'q': text, 'project': 'my_project'}

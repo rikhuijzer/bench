@@ -21,14 +21,14 @@ def test_message_to_annotated_str():
     ]
     message = create_message(text, 'foo', entities, False)
 
-    assert expected, message_to_annotated_str(message)
+    assert expected, convert_message_to_annotated_str(message)
 
 
 def test_nlu_evaluation_entity_converter():
     def helper(text: str, entity: dict, expected: str):
-        result = nlu_evaluation_entity_converter(text, entity)
+        result = convert_nlu_evaluation_entity(text, entity)
         message = create_message(text, 'some intent', [result], False)
-        assert expected == message_to_annotated_str(message)
+        assert expected == convert_message_to_annotated_str(message)
 
     helper(text='when is the next train in muncher freiheit?',
            entity={'entity': 'Vehicle', 'start': 4, 'stop': 4, 'text': 'train'},

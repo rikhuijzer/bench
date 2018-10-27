@@ -5,4 +5,7 @@ from core.training_data import *
 # This allows for reproducing the statistics presented in blog which is somewhat interesting
 
 if __name__ == '__main__':
+    corpus = Corpus.WebApplications
+    system = 'rasa-spacy'
+    train(system, corpus)
     print(get_f1_score_runs(Corpus.WebApplications, 'rasa-spacy', n_runs=10))

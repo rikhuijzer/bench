@@ -38,12 +38,14 @@ class Corpus(Enum):
 
 
 def create_message(text: str, intent: str, entities: [], training: bool) -> Message:
+    """ Helper function to create a message: Message used by Rasa including whether train or test sentence. """
     message = Message.build(text, intent, entities)
     message.data['training'] = training
     return message
 
 
-def message_to_annotated_str(message: Message) -> str:
+def convert_message_to_annotated_str(message: Message) -> str:
+    """ Convert Message object to string having annotated entities. """
     training_examples: List[Message] = [message]
     training_data: TrainingData = TrainingData(training_examples=training_examples)
     generated = MarkdownWriter()._generate_training_examples_md(training_data)
@@ -51,7 +53,7 @@ def message_to_annotated_str(message: Message) -> str:
     return generated
 
 
-def nlu_evaluation_entity_converter(text: str, entity: dict) -> dict:
+def convert_nlu_evaluation_entity(text: str, entity: dict) -> dict:
     """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
     start = convert_index(text, entity['start'], StartEnd.start)
     end = convert_index(text, entity['stop'], StartEnd.end)
@@ -67,13 +69,14 @@ def sentences_to_dataframe(messages: Tuple, focus=Focus.all) -> pd.DataFrame:
     """
     data = {'message': [], 'intent': [], 'training': []}
     for message in messages:
-        data['message'].append(message.text if focus.value == 'intent' else message_to_annotated_str(message))
+        data['message'].append(message.text if focus.value == 'intent' else convert_message_to_annotated_str(message))
         data['intent'].append(message.data['intent'])
         data['training'].append(message.data['training'])
     return pd.DataFrame(data)
 
 
 def convert_index(text: str, token_index: int, start_end: StartEnd) -> int:
+    """ Convert token_index as used by NLU-Evaluation Corpora to character index. """
     span_generator = WordPunctTokenizer().span_tokenize(text)
     spans = [span for span in span_generator]
     return spans[token_index][start_end.value]
@@ -85,7 +88,7 @@ def read_nlu_evaluation_corpora(js: dict) -> Tuple:
     for sentence in js['sentences']:
         entities = []
         for entity in sentence['entities']:
-            entities.append(nlu_evaluation_entity_converter(sentence['text'], entity))
+            entities.append(convert_nlu_evaluation_entity(sentence['text'], entity))
         message = Message.build(sentence['text'], sentence['intent'], entities)
         message.data['training'] = sentence['training']
         out.append(message)
@@ -93,6 +96,7 @@ def read_nlu_evaluation_corpora(js: dict) -> Tuple:
 
 
 def read_snips(js: dict) -> pd.DataFrame:
+    """ Process some json file containing Snips corpus. """
     data = {'sentence': [], 'intent': [], 'training': []}
 
     queries_count = 0
@@ -109,6 +113,7 @@ def read_snips(js: dict) -> pd.DataFrame:
 
 
 def _read_file(file: Path) -> Tuple:
+    """ Read corpus file to json, process the json and return messages. """
     with open(str(file), 'rb') as f:
         js = json.load(f)
 
@@ -122,8 +127,10 @@ def _read_file(file: Path) -> Tuple:
 
 @lru_cache(maxsize=square_ceil(len(Corpus)))
 def get_messages(corpus: Corpus) -> Tuple:
+    """ Get all messages: Message from some file containing corpus and cache the messages. """
     return _read_file(Path(__file__).parent.parent / 'datasets' / corpus.value)
 
 
 def get_train_test(messages: Tuple, train_test: TrainTest) -> Tuple:
+    """ Get train or test split for some corpus. """
     return tuple([message for message in messages if message.data['training'] == train_test.value])
