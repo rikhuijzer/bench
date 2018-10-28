@@ -1,4 +1,5 @@
 from systems.systems import *
+# Only testing logic and not specific system logic to have speedy tests and avoiding many API calls.
 
 
 def test_get_docker_compose_configuration():
