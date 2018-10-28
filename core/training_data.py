@@ -36,6 +36,8 @@ class Corpus(Enum):
     Chatbot = Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json'
     WebApplications = Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json'
     Snips = Path('snips') / 'benchmark_data.json'
+    Mock = range(0, 20)
+    Empty = ''
 
 
 TestSentence = NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])
@@ -117,23 +119,21 @@ def read_snips(js: dict) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
-def _read_file(file: Path) -> Tuple:
-    """ Read corpus file to json, process the json and return messages. """
+@lru_cache(maxsize=square_ceil(len(Corpus)))
+def get_messages(corpus: Corpus) -> Tuple:
+    """ Get all messages: Message from some file containing corpus and cache the messages. """
+    if corpus == corpus.Mock:
+        return tuple(map(lambda x: create_message(str(x), 'A' if 0 <= x < 10 else 'B', [], False), Corpus.Mock.value))
+
+    file = Path(__file__).parent.parent / 'datasets' / corpus.value
     with open(str(file), 'rb') as f:
         js = json.load(f)
 
     parent_folder: Path = file.parent
-
     if parent_folder.name == 'NLU-Evaluation-Corpora':
         return read_nlu_evaluation_corpora(js)
     elif parent_folder.name == 'snips':
         return read_snips(js)
-
-
-@lru_cache(maxsize=square_ceil(len(Corpus)))
-def get_messages(corpus: Corpus) -> Tuple:
-    """ Get all messages: Message from some file containing corpus and cache the messages. """
-    return _read_file(Path(__file__).parent.parent / 'datasets' / corpus.value)
 
 
 def get_train_test(messages: Tuple, train_test: TrainTest) -> Tuple:

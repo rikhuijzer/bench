@@ -15,6 +15,13 @@ def test_get_port():
         assert 5000 <= get_port(system) < 6000
 
 
+def test_train():
+    assert System('mock', Corpus.WebApplications) == train('mock', Corpus.WebApplications)
+
+
 def test_get_intent():
-    assert 'Find Alternative' == get_intent('rasa-spacy', 'Alternatives to Twitter', Corpus.WebApplications, None)
-    assert 'PlayMusic' == get_intent('deeppavlov-snips', '', None, None)
+    system = System('mock', Corpus.Empty)
+    assert IntentClassification(system, 'A') == get_intent(system, TestSentence('2', Corpus.Empty))
+
+    trained_system = System('mock', Corpus.Chatbot)
+    assert IntentClassification(trained_system, 'A') == get_intent(system, TestSentence('2', Corpus.Chatbot))
