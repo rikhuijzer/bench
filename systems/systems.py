@@ -28,9 +28,10 @@ def get_port(system: str) -> int:
     return int(get_docker_compose_configuration()['services'][system]['ports'][0][0:4])
 
 
-@lru_cache(maxsize=1)
 def train(system: System, corpus: Corpus) -> System:
-    """ Train system on corpus. Using cache to avoid re-training. Not using bigger cache to avoid complexity. """
+    """ Train system on corpus. """
+    print('Training {} on {}...'.format(system, corpus))
+
     if 'mock' == system.name:
         data = list(system.data)
         data[0] += 1
@@ -42,13 +43,13 @@ def train(system: System, corpus: Corpus) -> System:
         url = 'http://localhost:{}/train?project=my_project'
         r = requests.post(url.format(get_port(system.name)), data=training_data, headers=Header.json.value).json()
         if 'error' in r:
-            raise RuntimeError('Training {} failed. Corpus: {}, Response: \n {}.'.format(system.name, corpus, r))
+            raise RuntimeError('Training {} failed on {}, Response: \n {}.'.format(system.name, corpus, r))
         return System(system.name, corpus, ())
 
     if 'deeppavlov' in system.name:
-        raise AssertionError('Training requested for system {} which should not be trained.'.format(system.name))
+        raise AssertionError('Training requested for {} which should not be trained.'.format(system.name))
 
-    raise ValueError('Unknown system for training: {}.'.format(system))
+    raise ValueError('Unknown system for training: {}.'.format(system.name))
 
 
 def get_intent(system: System, test_sentence: TestSentence) -> IntentClassification:

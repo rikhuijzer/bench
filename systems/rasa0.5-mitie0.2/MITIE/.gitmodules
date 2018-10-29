@@ -1,0 +1,3 @@
+[submodule "dlib"]
+	path = dlib
+	url = ../dlib

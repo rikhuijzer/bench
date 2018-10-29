@@ -26,11 +26,9 @@ def get_f1_score(system: System, corpus: Corpus, average='micro') -> F1Scores:
 
 def get_f1_score_runs(system: System, corpus: Corpus, n_runs: int, average='micro') -> Tuple[float, ...]:
     """ Get f1 score multiple times and re-train system each time. """
-    system = System(system.name, system.knowledge, system.data + ('retrain', ))
-
     out = []
     for _ in range(0, n_runs):
-        system, scores = get_f1_score(System(system.name, system.knowledge, system.data + ('retrain', )), corpus, average)
+        system, scores = get_f1_score(
+            System(system.name, system.knowledge, system.data + ('retrain', )), corpus, average)
         out.append(scores)
-
     return tuple(out)

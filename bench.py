@@ -6,6 +6,5 @@ from core.training_data import *
 
 if __name__ == '__main__':
     corpus = Corpus.WebApplications
-    system = 'rasa-spacy'
-    train(system, corpus)
-    print(get_f1_score_runs(Corpus.WebApplications, 'rasa-spacy', n_runs=10))
+    system_name = 'rasa-mitie'
+    print(get_f1_score_runs(System(system_name, corpus.Empty, ()), corpus, n_runs=10))

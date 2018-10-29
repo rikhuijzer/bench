@@ -3,6 +3,7 @@ from enum import Enum
 from functools import lru_cache
 from pathlib import Path
 from typing import List, Tuple
+from typing import NamedTuple
 
 import pandas as pd
 from nltk.tokenize import WordPunctTokenizer
@@ -10,8 +11,8 @@ from rasa_nlu.training_data import Message
 from rasa_nlu.training_data import TrainingData
 from rasa_nlu.training_data.formats.markdown import MarkdownWriter
 from rasa_nlu.utils import build_entity
+
 from core.utils import *
-from typing import NamedTuple
 
 pd.set_option('max_colwidth', 180)
 
