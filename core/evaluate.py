@@ -32,3 +32,11 @@ def get_f1_score_runs(system: System, corpus: Corpus, n_runs: int, average='micr
             System(system.name, system.knowledge, system.data + ('retrain', )), corpus, average)
         out.append(scores)
     return tuple(out)
+
+# s1, 0 = fn(s0)
+# s2, 1 = fn(s1)
+# s3, 2 = fn(s2)
+# the problem can be solved by having a function which generates states and a function which gives an output for
+# a state. Currently the function does two things, causing it not to be modular
+# if function is split into two, the states can be generated (accumulate probably) and then using map.
+# however, it is not useful here since system state and output is coupled by stateful servers :\
