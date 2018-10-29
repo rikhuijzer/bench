@@ -17,12 +17,15 @@ def test_get_port():
 
 
 def test_train():
-    assert System('mock', Corpus.WebApplications) == train('mock', Corpus.WebApplications)
+    assert System('mock', Corpus.WebApplications, (3, )) == train(System('mock', Corpus.Empty, (2, )),
+                                                                  Corpus.WebApplications)
 
 
 def test_get_intent():
-    system = System('mock', Corpus.Empty)
+    """ In the tuple we define the modulus to be used. """
+    system = System('mock', Corpus.Empty, (3, ))
     assert IntentClassification(system, 'A') == get_intent(system, TestSentence('2', Corpus.Empty))
 
-    trained_system = System('mock', Corpus.Chatbot)
+    """ During training the modulus is increased by one to model the changing behaviour of a probabilistic system. """
+    trained_system = System('mock', Corpus.Chatbot, (4, ))
     assert IntentClassification(trained_system, 'A') == get_intent(system, TestSentence('2', Corpus.Chatbot))

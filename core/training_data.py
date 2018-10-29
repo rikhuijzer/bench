@@ -36,7 +36,7 @@ class Corpus(Enum):
     Chatbot = Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json'
     WebApplications = Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json'
     Snips = Path('snips') / 'benchmark_data.json'
-    Mock = range(0, 20)
+    Mock = ''
     Empty = ''
 
 
@@ -123,7 +123,7 @@ def read_snips(js: dict) -> pd.DataFrame:
 def get_messages(corpus: Corpus) -> Tuple:
     """ Get all messages: Message from some file containing corpus and cache the messages. """
     if corpus == corpus.Mock:
-        return tuple(map(lambda x: create_message(str(x), 'A' if 0 <= x < 10 else 'B', [], False), Corpus.Mock.value))
+        return tuple(map(lambda x: create_message(str(x), 'A' if 0 <= x < 10 else 'B', [], False), range(0, 20)))
 
     file = Path(__file__).parent.parent / 'datasets' / corpus.value
     with open(str(file), 'rb') as f:

@@ -30,8 +30,11 @@ def get_port(system: str) -> int:
 
 @lru_cache(maxsize=1)
 def train(system: System, corpus: Corpus) -> System:
+    """ Train system on corpus. Using cache to avoid re-training. Not using bigger cache to avoid complexity. """
     if 'mock' == system.name:
-        return System(system.name, corpus, (system.data[0] + 1))
+        data = list(system.data)
+        data[0] += 1
+        return System(system.name, corpus, tuple(data))
 
     if 'rasa' in system.name:
         training_examples: List[Message] = list(get_train_test(get_messages(corpus), TrainTest.train))
@@ -43,13 +46,15 @@ def train(system: System, corpus: Corpus) -> System:
         return System(system.name, corpus, ())
 
     if 'deeppavlov' in system.name:
-        raise AssertionError('System cannot be trained. Make sure to ')
+        raise AssertionError('Training requested for system {} which should not be trained.'.format(system.name))
 
     raise ValueError('Unknown system for training: {}.'.format(system))
 
 
 def get_intent(system: System, test_sentence: TestSentence) -> IntentClassification:
+    """ Get intent for some system and some sentence. Function will train system if that is necessary. """
     if test_sentence.corpus != system.knowledge or 'retrain' in system.data:
+        system = System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
         system = train(system, test_sentence.corpus)
 
     if 'mock' == system.name:

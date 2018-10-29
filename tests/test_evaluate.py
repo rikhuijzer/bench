@@ -9,9 +9,10 @@ def test_classify_intents():
 
 
 def test_get_f1_score():
-    assert 3 == get_f1_score(System('mock', Corpus.Empty, ()), Corpus.Empty)
+    assert 0.5 == get_f1_score(System('mock', Corpus.Empty, (2, )), Corpus.Mock).scores
+    assert 0.6 == get_f1_score(System('mock', Corpus.Mock, (3, )), Corpus.Mock).scores
 
 
 def test_get_f1_score_runs():
-    result = get_f1_score_runs('mock', Corpus.Empty, n_runs=2)
+    result = get_f1_score_runs(System('mock', Corpus.Mock, (3, )), Corpus.Mock, n_runs=2)
     assert result[0] != result[1]
