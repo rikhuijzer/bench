@@ -82,6 +82,11 @@ def sentences_to_dataframe(messages: Tuple, focus=Focus.all) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
+def generate_watson_intents(corpus: Corpus, path: Path):
+    df = sentences_to_dataframe(get_messages(corpus), Focus.intent)
+    df.drop('training', axis=1).to_csv(path, header=False, index=False)
+
+
 def convert_index(text: str, token_index: int, start_end: StartEnd) -> int:
     """ Convert token_index as used by NLU-Evaluation Corpora to character index. """
     span_generator = WordPunctTokenizer().span_tokenize(text)
