@@ -21,15 +21,17 @@ def classify_intents(system: System, corpus: Corpus) -> IntentClassifications:
 def get_f1_score(system: System, corpus: Corpus, average='micro') -> F1Scores:
     """ Get f1 score for some system and corpus. Based on scikit-learn f1 score calculation. """
     system, df = classify_intents(system, corpus)
-    return F1Scores(system, (f1_score(df['intent'], df['classification'], average=average)),)
+    score = round(f1_score(df['intent'], df['classification'], average=average), 3)
+    return F1Scores(system, (score, ))
 
 
 def get_f1_score_runs(system: System, corpus: Corpus, n_runs: int, average='micro') -> Tuple[float, ...]:
     """ Get f1 score multiple times and re-train system each time. """
     out = []
-    for _ in range(0, n_runs):
+    for i in range(0, n_runs):
         system, scores = get_f1_score(
-            System(system.name, system.knowledge, system.data + ('retrain', )), corpus, average)
+            System(system.name, system.knowledge,
+                   system.data + ('retrain', ) if i > 0 else system.data), corpus, average)
         out.append(scores)
     return tuple(out)
 

@@ -75,7 +75,7 @@ def sentences_to_dataframe(messages: Tuple, focus=Focus.all) -> pd.DataFrame:
         focus: Focus of the DataFrame.  For intent classification visualisation choose 'intent'
     """
     data = {'message': [], 'intent': [], 'training': []}
-    for message in messages:  # TODO: Apply map, filter, reduce?
+    for message in messages:
         data['message'].append(message.text if focus.value == 'intent' else convert_message_to_annotated_str(message))
         data['intent'].append(message.data['intent'])
         data['training'].append(message.data['training'])
@@ -83,7 +83,8 @@ def sentences_to_dataframe(messages: Tuple, focus=Focus.all) -> pd.DataFrame:
 
 
 def generate_watson_intents(corpus: Corpus, path: Path):
-    df = sentences_to_dataframe(get_messages(corpus), Focus.intent)
+    df = sentences_to_dataframe(get_train_test(get_messages(corpus), TrainTest.train), Focus.intent)
+    df['intent'] = [s.replace(' ', '_') for s in df['intent']]
     df.drop('training', axis=1).to_csv(path, header=False, index=False)
 
 
