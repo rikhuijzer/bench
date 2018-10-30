@@ -17,12 +17,10 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN git clone --branch 0.5 --depth 1 https://github.com/RasaHQ/rasa_nlu ${RASA_NLU_HOME}/rasa_nlu
-
 # and fixing problems occuring due to package being not backwards compatible
-RUN pip install spacy==1.2.0 \
-    scikit-learn \
-    pathlib \
+RUN pip install spacy==1.2.0
+RUN pip install scikit-learn
+RUN pip install pathlib \
     cloudpickle \
     boto3 \
     pytest-pep8 \
@@ -34,15 +32,17 @@ RUN pip install spacy==1.2.0 \
 COPY ./MITIE ${RASA_NLU_HOME}/MITIE
 RUN pip install -e ${RASA_NLU_HOME}/MITIE
 
-RUN ln -s ${RASA_NLU_HOME}/rasa_nlu/setup.py setup.py
+# RUN ln -s ${RASA_NLU_HOME}/rasa_nlu/setup.py setup.py
 # RUN python setup.py install
-RUN pip install -e ${RASA_NLU_HOME}/rasa_nlu
-
-RUN ls /app
+# RUN pip install -e ${RASA_NLU_HOME}/rasa_nlu
+RUN pip install rasa_nlu==0.5
 
 EXPOSE 5000
 
+RUN git clone --branch 0.5 --depth 1 https://github.com/RasaHQ/rasa_nlu ${RASA_NLU_HOME}/rasa_nlu
 RUN ln -s ${RASA_NLU_HOME}/rasa_nlu/entrypoint.sh ./entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
-CMD ["help"]
+# ENTRYPOINT ["./entrypoint.sh"]
+# CMD ["help"]
+
+# To browse Docker run -i -t --entrypoint /bin/bash <image ID>
