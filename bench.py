@@ -26,6 +26,10 @@ def watson():
     generate_watson_intents(Corpus.AskUbuntu, path)
 
 
+def lex():
+    train(System('amazon-lex', Corpus.Empty, ()), Corpus.WebApplications)
+
+
 if __name__ == '__main__':
     logging.basicConfig(level=logging.WARNING)
-    get_f1()
+    lex()

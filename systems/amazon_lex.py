@@ -1,5 +1,9 @@
-from core.training_data import *
+import json
 from typing import Iterable
+from typing import NamedTuple, Tuple
+
+from systems.systems import System, Corpus, IntentClassification
+from core.training_data import get_train_test, TrainTest, get_intents, get_messages
 
 
 def get_lex_template() -> str:
@@ -36,11 +40,26 @@ def fill_lex_json(intent: str, utterances: Tuple[str, ...]) -> dict:
     return js
 
 
-def get_intents_lex_json(corpus: Corpus) -> Iterable[dict]:
+IntentJSON = NamedTuple('IntentJSON', [('intent', str), ('json', dict)])
+
+
+def get_intents_lex_json(corpus: Corpus) -> Iterable[IntentJSON]:
     """ Generator for Amazon Lex templates each filled for some intent with its utterances. """
     messages = get_train_test(get_messages(corpus), TrainTest.train)
     intents = get_intents(messages)
 
     for intent in intents:
         utterances = tuple([message.text for message in messages if message.data['intent'] == intent])
-        yield fill_lex_json(intent, utterances)
+        yield IntentJSON(intent, fill_lex_json(intent, utterances))
+
+
+def train_lex(system: System, corpus: Corpus) -> System:
+    return System()
+
+
+def store_lex_training_data(corpus: Corpus):
+    intents = get_intents(get_train_test(get_messages(corpus), TrainTest.train))
+
+
+def get_intent_lex() -> IntentClassification:
+    return IntentClassification()

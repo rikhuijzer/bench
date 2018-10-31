@@ -1,9 +1,16 @@
+import json
+import os
+from enum import Enum
+from functools import lru_cache
+from pathlib import Path
+from typing import NamedTuple
+
 import requests
 import yaml
-import os
 
-from core.training_data import *
-from typing import NamedTuple
+from core.training_data import Corpus, TestSentence
+from systems.amazon_lex import get_intent_lex
+import systems.rasa
 
 
 class Header(Enum):
@@ -39,14 +46,10 @@ def train(system: System, corpus: Corpus) -> System:
         return System(system.name, corpus, tuple(data))
 
     if 'rasa' in system.name:
-        training_examples: List[Message] = list(get_train_test(get_messages(corpus), TrainTest.train))
-        training_data = TrainingData(training_examples=training_examples).as_json()
-        url = 'http://localhost:{}/train?project=my_project'
-        r = requests.post(url.format(get_port(system.name)), data=training_data, headers=Header.json.value).json()
-        if 'error' in r:
-            # print(str(training_data)[344:380].encode("utf-8"))
-            raise RuntimeError('Training {} failed on {}, Response: \n {}.'.format(system.name, corpus, r))
-        return System(system.name, corpus, ())
+        return systems.rasa.train(system, corpus)
+
+    # if 'lex' in system.name:
+    #    return train_lex(system, corpus)
 
     if 'deeppavlov' in system.name:
         raise AssertionError('Training requested for {} which should not be trained.'.format(system.name))
@@ -99,5 +102,8 @@ def get_intent(system: System, test_sentence: TestSentence) -> IntentClassificat
 
     if 'watson' in system:
         raise AssertionError('Not implemented. Possibly interesting: https://github.com/joe4k/wdcutils/')
+
+    if 'amazon' in system:
+        return get_intent_lex()
 
     raise AssertionError('Unknown system.name for {}'.format(system))
