@@ -2,7 +2,7 @@ import json
 from enum import Enum
 from functools import lru_cache
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Tuple, Set
 from typing import NamedTuple
 
 import pandas as pd
@@ -67,7 +67,7 @@ def convert_nlu_evaluation_entity(text: str, entity: dict) -> dict:
     return build_entity(start, end, value=entity['text'], entity_type=entity['entity'])
 
 
-def sentences_to_dataframe(messages: Tuple, focus=Focus.all) -> pd.DataFrame:
+def messages_to_dataframe(messages: Tuple[Message, ...], focus=Focus.all) -> pd.DataFrame:
     """ Returns a DataFrame (table) from a list of Message objects which can be used for visualisation.
 
     Args:
@@ -83,7 +83,7 @@ def sentences_to_dataframe(messages: Tuple, focus=Focus.all) -> pd.DataFrame:
 
 
 def generate_watson_intents(corpus: Corpus, path: Path):
-    df = sentences_to_dataframe(get_train_test(get_messages(corpus), TrainTest.train), Focus.intent)
+    df = messages_to_dataframe(get_train_test(get_messages(corpus), TrainTest.train), Focus.intent)
     df['intent'] = [s.replace(' ', '_') for s in df['intent']]
     df.drop('training', axis=1).to_csv(path, header=False, index=False)
 
@@ -95,7 +95,7 @@ def convert_index(text: str, token_index: int, start_end: StartEnd) -> int:
     return spans[token_index][start_end.value]
 
 
-def read_nlu_evaluation_corpora(js: dict) -> Tuple:
+def read_nlu_evaluation_corpora(js: dict) -> Tuple[Message, ...]:
     """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
     out = []
     for sentence in js['sentences']:
@@ -141,6 +141,10 @@ def get_messages(corpus: Corpus) -> Tuple:
         return read_nlu_evaluation_corpora(js)
     elif parent_folder.name == 'snips':
         return read_snips(js)
+
+
+def get_intents(messages: Tuple[Message, ...]) -> Set[str]:
+    return set([message.data['intent'] for message in messages])
 
 
 def get_train_test(messages: Tuple, train_test: TrainTest) -> Tuple:

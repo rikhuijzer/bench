@@ -9,8 +9,8 @@ def test_classify_intents():
 
 
 def test_get_f1_score():
-    assert 0.5 == get_f1_score(System('mock', Corpus.Empty, (2, )), Corpus.Mock).scores
-    assert 0.6 == get_f1_score(System('mock', Corpus.Mock, (3, )), Corpus.Mock).scores
+    assert 0.5 == get_f1_score(System('mock', Corpus.Empty, (2, )), Corpus.Mock).scores[0]
+    assert 0.6 == get_f1_score(System('mock', Corpus.Mock, (3, )), Corpus.Mock).scores[0]
 
 
 def test_get_f1_score_runs():

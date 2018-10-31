@@ -116,6 +116,12 @@ def test_get_corpus():
     helper(sentences, 89, first_row, last_row)
 
 
+def test_get_intents():
+    expected = {'Delete Account', 'Find Alternative', 'Download Video',
+                'Filter Spam', 'Change Password', 'Sync Accounts', 'None', 'Export Data'}
+    assert expected == get_intents(get_messages(Corpus.WebApplications))
+
+
 def test_get_train_test():
     dummy_corpus = (
         create_message('lorem', 'foo', [], training=True),

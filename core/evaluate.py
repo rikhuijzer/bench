@@ -8,7 +8,7 @@ F1Scores = NamedTuple('F1Scores', [('system', System), ('scores', Tuple[float, .
 
 def classify_intents(system: System, corpus: Corpus) -> IntentClassifications:
     """ Run all test sentences from some corpus through system and return results. """
-    df = sentences_to_dataframe(get_train_test(get_messages(corpus), TrainTest.test), Focus.intent)
+    df = messages_to_dataframe(get_train_test(get_messages(corpus), TrainTest.test), Focus.intent)
     classifications = []
     for _, row in df.iterrows():
         system, classification = get_intent(system, TestSentence(row['message'], corpus))
