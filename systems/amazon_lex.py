@@ -53,7 +53,7 @@ def get_intents_lex_json(corpus: Corpus) -> Iterable[IntentJSON]:
         yield IntentJSON(intent, fill_lex_json(intent, utterances))
 
 
-def train_lex(system: System, corpus: Corpus) -> System:
+def train(system: System, corpus: Corpus) -> System:
     return System()
 
 

@@ -7,7 +7,7 @@ from core.training_data import get_train_test, get_messages, TrainTest
 from systems.systems import System, Corpus, Header, get_port
 
 
-def train(system: System, corpus: Corpus):
+def train(system: System, corpus: Corpus) -> System:
     training_examples: List[Message] = list(get_train_test(get_messages(corpus), TrainTest.train))
     training_data = TrainingData(training_examples=training_examples).as_json()
     url = 'http://localhost:{}/train?project=my_project'

@@ -10,7 +10,9 @@ import yaml
 
 from core.training_data import Corpus, TestSentence
 from systems.amazon_lex import get_intent_lex
+import systems.mock
 import systems.rasa
+import systems.deeppavlov
 
 
 class Header(Enum):
@@ -40,21 +42,21 @@ def train(system: System, corpus: Corpus) -> System:
     """ Train system on corpus. """
     print('Training {} on {}...'.format(system, corpus))
 
-    if 'mock' == system.name:
-        data = list(system.data)
-        data[0] += 1
-        return System(system.name, corpus, tuple(data))
+    train_systems = {
+        'mock': systems.mock.train,
+        'rasa': systems.rasa.train,
+        'deeppavlov': systems.deeppavlov.train,
+        'lex': systems.amazon_lex.train
+    }
 
-    if 'rasa' in system.name:
-        return systems.rasa.train(system, corpus)
+    match = tuple(filter(lambda key: system.name in key, train_systems))
+    if len(match) == 0:
+        raise ValueError('Unknown system for training: {}.'.format(system.name))
+    if len(match) > 1:
+        AssertionError('Unable to train {} since multiple systems contain {}.'.format(system, system.name))
 
-    # if 'lex' in system.name:
-    #    return train_lex(system, corpus)
-
-    if 'deeppavlov' in system.name:
-        raise AssertionError('Training requested for {} which should not be trained.'.format(system.name))
-
-    raise ValueError('Unknown system for training: {}.'.format(system.name))
+    func_train = train_systems[match[0]]
+    return func_train(system, corpus)
 
 
 def get_intent(system: System, test_sentence: TestSentence) -> IntentClassification:
