@@ -1,73 +1,46 @@
 import json
-from enum import Enum
-from functools import lru_cache
-from pathlib import Path
-from typing import List, Tuple, Set
-from typing import NamedTuple
-
+import functools
+import typing
 import pandas as pd
-from nltk.tokenize import WordPunctTokenizer
-from rasa_nlu.training_data import Message
-from rasa_nlu.training_data import TrainingData
-from rasa_nlu.training_data.formats.markdown import MarkdownWriter
-from rasa_nlu.utils import build_entity
-
-from core.utils import *
+import nltk.tokenize
+import rasa_nlu.training_data
+import rasa_nlu.training_data.formats.markdown
+import rasa_nlu.utils
+import core.typ
+import core.utils
+import pathlib
 
 pd.set_option('max_colwidth', 180)
 
 
-class StartEnd(Enum):
-    start = 0
-    end = 1
+def create_entity(start: int, end: int, entity: str, value: str) -> dict:
+    return {'start': start, 'end': end, 'entity': entity, 'value': value}
 
 
-class Focus(Enum):
-    all = 'all'
-    intent = 'intent'
-
-
-class TrainTest(Enum):
-    train = True
-    test = False
-
-
-class Corpus(Enum):
-    AskUbuntu = Path('NLU-Evaluation-Corpora') / 'AskUbuntuCorpus.json'
-    Chatbot = Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json'
-    WebApplications = Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json'
-    Snips = Path('snips') / 'benchmark_data.json'
-    Mock = ''
-    Empty = ''
-
-
-TestSentence = NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])
-
-
-def create_message(text: str, intent: str, entities: [], training: bool) -> Message:
+def create_message(text: str, intent: str, entities: [], training: bool) -> rasa_nlu.training_data.Message:
     """ Helper function to create a message: Message used by Rasa including whether train or test sentence. """
-    message = Message.build(text, intent, entities)
+    message = rasa_nlu.training_data.Message.build(text, intent, entities)
     message.data['training'] = training
     return message
 
 
-def convert_message_to_annotated_str(message: Message) -> str:
+def convert_message_to_annotated_str(message: rasa_nlu.training_data.Message) -> str:
     """ Convert Message object to string having annotated entities. """
-    training_examples: List[Message] = [message]
-    training_data: TrainingData = TrainingData(training_examples=training_examples)
-    generated = MarkdownWriter()._generate_training_examples_md(training_data)
-    generated = generated[generated.find('\n') + 3:-1]  # remove header
+    training_examples: typing.List[rasa_nlu.training_data.Message] = [message]
+    training_data = rasa_nlu.training_data.TrainingData(training_examples=training_examples)
+    generated = rasa_nlu.training_data.formats.markdown.MarkdownWriter()._generate_training_examples_md(training_data)
+    generated = generated[generated.find('\n') + 3:-1]  # removes header
     return generated
 
 
 def convert_nlu_evaluation_entity(text: str, entity: dict) -> dict:
     """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
-    start = convert_index(text, entity['start'], StartEnd.start)
-    end = convert_index(text, entity['stop'], StartEnd.end)
-    return build_entity(start, end, value=entity['text'], entity_type=entity['entity'])
+    start = convert_index(text, entity['start'], core.typ.StartEnd.start)
+    end = convert_index(text, entity['stop'], core.typ.StartEnd.end)
+    return create_entity(start, end, entity=entity['entity'], value=entity['text'])
 
 
-def messages_to_dataframe(messages: Tuple[Message, ...], focus=Focus.all) -> pd.DataFrame:
+def messages_to_dataframe(messages: typing.Tuple[rasa_nlu.training_data.Message, ...], focus=core.typ.Focus.all) -> pd.DataFrame:
     """ Returns a DataFrame (table) from a list of Message objects which can be used for visualisation.
 
     Args:
@@ -82,20 +55,20 @@ def messages_to_dataframe(messages: Tuple[Message, ...], focus=Focus.all) -> pd.
     return pd.DataFrame(data)
 
 
-def generate_watson_intents(corpus: Corpus, path: Path):
-    df = messages_to_dataframe(get_train_test(get_messages(corpus), TrainTest.train), Focus.intent)
+def generate_watson_intents(corpus: core.typ.Corpus, path: pathlib.Path):
+    df = messages_to_dataframe(get_filtered_messages(corpus, core.typ.TrainTest.train), core.typ.Focus.intent)
     df['intent'] = [s.replace(' ', '_') for s in df['intent']]
     df.drop('training', axis=1).to_csv(path, header=False, index=False)
 
 
-def convert_index(text: str, token_index: int, start_end: StartEnd) -> int:
+def convert_index(text: str, token_index: int, start_end: core.typ.StartEnd) -> int:
     """ Convert token_index as used by NLU-Evaluation Corpora to character index. """
-    span_generator = WordPunctTokenizer().span_tokenize(text)
+    span_generator = nltk.tokenize.WordPunctTokenizer().span_tokenize(text)
     spans = [span for span in span_generator]
     return spans[token_index][start_end.value]
 
 
-def read_nlu_evaluation_corpora(js: dict) -> Tuple[Message, ...]:
+def read_nlu_evaluation_corpora(js: dict) -> core.typ.Messages:
     """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
     out = []
     for sentence in js['sentences']:
@@ -103,7 +76,7 @@ def read_nlu_evaluation_corpora(js: dict) -> Tuple[Message, ...]:
         entities = []
         for entity in sentence['entities']:
             entities.append(convert_nlu_evaluation_entity(sentence['text'], entity))
-        message = Message.build(sentence['text'], sentence['intent'], entities)
+        message = rasa_nlu.training_data.Message.build(sentence['text'], sentence['intent'], entities)
         message.data['training'] = sentence['training']
         out.append(message)
     return tuple(out)
@@ -126,27 +99,31 @@ def read_snips(js: dict) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
-@lru_cache(maxsize=square_ceil(len(Corpus)))
-def get_messages(corpus: Corpus) -> Tuple:
+def filter_train_test(messages: typing.Tuple, train_test: core.typ.TrainTest) -> typing.Tuple:
+    """ Get train or test split for some corpus. """
+    return tuple([message for message in messages if message.data['training'] == train_test.value])
+
+
+@functools.lru_cache(maxsize=core.utils.square_ceil(len(core.typ.Corpus)))
+def get_messages(corpus: core.typ.Corpus) -> typing.Tuple:
     """ Get all messages: Message from some file containing corpus and cache the messages. """
     if corpus == corpus.Mock:
         return tuple(map(lambda x: create_message(str(x), 'A' if 0 <= x < 10 else 'B', [], False), range(0, 20)))
 
-    file = Path(__file__).parent.parent / 'datasets' / corpus.value
+    file = pathlib.Path(__file__).parent.parent / 'datasets' / corpus.value
     with open(str(file), 'rb') as f:
         js = json.load(f)
 
-    parent_folder: Path = file.parent
+    parent_folder: pathlib.Path = file.parent
     if parent_folder.name == 'NLU-Evaluation-Corpora':
         return read_nlu_evaluation_corpora(js)
     elif parent_folder.name == 'snips':
         return read_snips(js)
 
 
-def get_intents(messages: Tuple[Message, ...]) -> Set[str]:
-    return set([message.data['intent'] for message in messages])
+def get_filtered_messages(corpus: core.typ.Corpus, train_test: core.typ.TrainTest) -> core.typ.Messages:
+    return filter_train_test(get_messages(corpus), train_test)
 
 
-def get_train_test(messages: Tuple, train_test: TrainTest) -> Tuple:
-    """ Get train or test split for some corpus. """
-    return tuple([message for message in messages if message.data['training'] == train_test.value])
+def get_intents(corpus: core.typ.Corpus, train_test: core.typ.TrainTest) -> typing.Set[str]:
+    return set(map(lambda m: m.data['intent'], get_filtered_messages(corpus, train_test)))

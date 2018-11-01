@@ -1,34 +1,36 @@
-from core.training_data import *
+import core.training_data
+import core.typ
+import typing
 
 
 def test_convert_index():
-    def helper(text: str, token_index: int, expected: int, start_end: StartEnd):
-        index = convert_index(text, token_index, start_end)
+    def helper(text: str, token_index: int, expected: int, start_end: core.typ.StartEnd):
+        index = core.training_data.convert_index(text, token_index, start_end)
         assert expected == index
 
     text = 'Upgrading from 11.10 to 12.04'
-    helper(text, 6, 24, StartEnd.start)
-    helper(text, 8, 29, StartEnd.end)
+    helper(text, 6, 24, core.typ.StartEnd.start)
+    helper(text, 8, 29, core.typ.StartEnd.end)
 
 
 def test_message_to_annotated_str():
     text = 'Could I pay you 50 yen tomorrow or tomorrow?'
     expected = 'Could I pay you 50 [yen](currency lorem ipsum) [tomorrow](date) or [tomorrow](date)?'
     entities = [
-        build_entity(19, 22, 'currency lorem ipsum', 'yen'),
-        build_entity(23, 31, 'date', 'tomorrow'),
-        build_entity(35, 43, 'date', 'tomorrow')
+        core.training_data.create_entity(19, 22, 'currency lorem ipsum', 'yen'),
+        core.training_data.create_entity(23, 31, 'date', 'tomorrow'),
+        core.training_data.create_entity(35, 43, 'date', 'tomorrow')
     ]
-    message = create_message(text, 'foo', entities, False)
+    message = core.training_data.create_message(text, 'foo', entities, False)
 
-    assert expected, convert_message_to_annotated_str(message)
+    assert expected, core.training_data.convert_message_to_annotated_str(message)
 
 
 def test_nlu_evaluation_entity_converter():
     def helper(text: str, entity: dict, expected: str):
-        result = convert_nlu_evaluation_entity(text, entity)
-        message = create_message(text, 'some intent', [result], False)
-        assert expected == convert_message_to_annotated_str(message)
+        result = core.training_data.convert_nlu_evaluation_entity(text, entity)
+        message = core.training_data.create_message(text, 'some intent', [result], False)
+        assert expected == core.training_data.convert_message_to_annotated_str(message)
 
     helper(text='when is the next train in muncher freiheit?',
            entity={'entity': 'Vehicle', 'start': 4, 'stop': 4, 'text': 'train'},
@@ -48,13 +50,13 @@ def test_get_corpus():
     """ Test whether all corpora get imported correctly.
             All crammed in one function, to avoid having many errors when one of the sub-functions fails.
     """
-    def helper(messages: Tuple, expected_length: int, first_row: dict, last_row: dict):
+    def helper(messages: typing.Tuple, expected_length: int, first_row: dict, last_row: dict):
         assert expected_length == len(messages)
         assert first_row == messages[0].as_dict()
 
         assert last_row == messages[-1].as_dict()
 
-    sentences = get_messages(Corpus.AskUbuntu)
+    sentences = core.training_data.get_messages(core.typ.Corpus.AskUbuntu)
     first_row = {
         'text': 'What software can I use to view epub documents?',
         'intent': 'Software Recommendation',
@@ -68,7 +70,7 @@ def test_get_corpus():
 
     helper(sentences, 162, first_row, last_row)
 
-    sentences = get_messages(Corpus.Chatbot)
+    sentences = core.training_data.get_messages(core.typ.Corpus.Chatbot)
     first_row = {
         'entities': [{'end': 24,
                       'entity': 'StationDest',
@@ -93,7 +95,7 @@ def test_get_corpus():
     }
     helper(sentences, 206, first_row, last_row)
 
-    sentences = get_messages(Corpus.WebApplications)
+    sentences = core.training_data.get_messages(core.typ.Corpus.WebApplications)
     first_row = {
         'entities': [{'end': 23,
                       'entity': 'WebService',
@@ -119,21 +121,21 @@ def test_get_corpus():
 def test_get_intents():
     expected = {'Delete Account', 'Find Alternative', 'Download Video',
                 'Filter Spam', 'Change Password', 'Sync Accounts', 'None', 'Export Data'}
-    assert expected == get_intents(get_messages(Corpus.WebApplications))
+    assert expected == core.training_data.get_intents(core.typ.Corpus.WebApplications, core.typ.TrainTest.train)
 
 
 def test_get_train_test():
     dummy_corpus = (
-        create_message('lorem', 'foo', [], training=True),
-        create_message('ipsum', 'bar', [], training=True),
-        create_message('dolor', 'baz', [], training=False)
+        core.training_data.create_message('lorem', 'foo', [], training=True),
+        core.training_data.create_message('ipsum', 'bar', [], training=True),
+        core.training_data.create_message('dolor', 'baz', [], training=False)
     )
 
-    train = get_train_test(dummy_corpus, TrainTest.train)
+    train = core.training_data.filter_train_test(dummy_corpus, core.typ.TrainTest.train)
     assert 2 == len(train)
     assert dummy_corpus[0].as_dict() == train[0].as_dict()
     assert dummy_corpus[1].as_dict() == train[1].as_dict()
 
-    test = get_train_test(dummy_corpus, TrainTest.test)
+    test = core.training_data.filter_train_test(dummy_corpus, core.typ.TrainTest.test)
     assert 1 == len(test)
     assert dummy_corpus[2].as_dict() == test[0].as_dict()

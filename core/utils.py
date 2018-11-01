@@ -1,12 +1,12 @@
 import collections
 import math
-from time import time
-from pathlib import Path
+import time
+import pathlib
 
 
-def get_root() -> Path:
+def get_root() -> pathlib.Path:
     """ All path references should refer to this function to decouple from caller source file location. """
-    return Path(__file__).parent.parent
+    return pathlib.Path(__file__).parent.parent
 
 
 def is_hashable(obj) -> bool:

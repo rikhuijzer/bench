@@ -1,15 +1,20 @@
-from systems.amazon_lex import *
+import systems.amazon_lex
+import json
+import core.typ
+import core.training_data
 
 
 def test_get_lex_template():
-    assert json.loads(get_lex_template())  # json validity test
+    assert json.loads(systems.amazon_lex.get_lex_template())  # json validity test
 
 
 def test_fill_lex_json():
-    assert json.dumps(fill_lex_json(intent='test', utterances=('foo', 'bar')))  # json validity test
+    assert json.dumps(systems.amazon_lex.fill_lex_json(intent='test', utterances=('foo', 'bar')))  # json validity test
 
 
 def test_get_intents_lex_json():
-    corpus = Corpus.WebApplications
-    intents = set(map(lambda js: js['resource']['name'], get_intents_lex_json(corpus).json))
-    assert get_intents(get_messages(corpus)) == intents
+    corpus = core.typ.Corpus.WebApplications
+    # changed .json from end of line to inside lambda function
+    intents = set(map(lambda d: d.json['resource']['name'], systems.amazon_lex.get_intents_lex_json(corpus)))
+    assert len(intents) > 0
+    assert core.training_data.get_intents(corpus, core.typ.TrainTest.train) == intents

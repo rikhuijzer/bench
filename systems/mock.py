@@ -1,7 +1,7 @@
-from systems.systems import System, Corpus
+import core.typ
 
 
-def train(system: System, corpus: Corpus) -> System:
+def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
     data = list(system.data)
     data[0] += 1
-    return System(system.name, corpus, tuple(data))
+    return core.typ.System(system.name, corpus, tuple(data))

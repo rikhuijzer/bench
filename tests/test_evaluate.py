@@ -1,18 +1,21 @@
-from core.evaluate import *
+import core.evaluate
+import core.typ
 
 
 def test_classify_intents():
-    df = classify_intents(System('mock', Corpus.Mock, (14, )), Corpus.Mock).df
+    df = core.evaluate.classify_intents(core.typ.System('mock', core.typ.Corpus.Mock, (14,)), core.typ.Corpus.Mock).df
     assert 20 == df.shape[0]
     assert 'A' == df.classification[1]
     assert 'C' == df.classification[14]
 
 
 def test_get_f1_score():
-    assert 0.5 == get_f1_score(System('mock', Corpus.Empty, (2, )), Corpus.Mock).scores[0]
-    assert 0.6 == get_f1_score(System('mock', Corpus.Mock, (3, )), Corpus.Mock).scores[0]
+    mock = core.typ.Corpus.Mock
+    assert 0.5 == core.evaluate.get_f1_score(core.typ.System('mock', core.typ.Corpus.Empty, (2,)), mock).scores[0]
+    assert 0.6 == core.evaluate.get_f1_score(core.typ.System('mock', mock, (3,)), mock).scores[0]
 
 
 def test_get_f1_score_runs():
-    result = get_f1_score_runs(System('mock', Corpus.Mock, (3, )), Corpus.Mock, n_runs=2)
+    mock = core.typ.Corpus.Mock
+    result = core.evaluate.get_f1_score_runs(core.typ.System('mock', mock, (3,)), mock, n_runs=2)
     assert result[0] != result[1]

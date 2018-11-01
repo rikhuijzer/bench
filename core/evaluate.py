@@ -1,36 +1,38 @@
 from systems.systems import *
-from core.training_data import *
-from sklearn.metrics import f1_score
+import core.typ
+import sklearn.metrics
+import core.training_data
+import typing
 
-IntentClassifications = NamedTuple('IntentClassifications', [('system', System), ('df', pd.DataFrame)])
-F1Scores = NamedTuple('F1Scores', [('system', System), ('scores', Tuple[float, ...])])
 
-
-def classify_intents(system: System, corpus: Corpus) -> IntentClassifications:
+def classify_intents(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.IntentClassifications:
     """ Run all test sentences from some corpus through system and return results. """
-    df = messages_to_dataframe(get_train_test(get_messages(corpus), TrainTest.test), Focus.intent)
+    messages = core.training_data.get_filtered_messages(corpus, core.typ.TrainTest.test)
+    df = core.training_data.messages_to_dataframe(messages)
+
     classifications = []
     for _, row in df.iterrows():
-        system, classification = get_intent(system, TestSentence(row['message'], corpus))
+        system, classification = get_intent(system, core.typ.TestSentence(row['message'], corpus))
         classifications.append(classification)
 
     df['classification'] = classifications
-    return IntentClassifications(system, df)
+    return core.typ.IntentClassifications(system, df)
 
 
-def get_f1_score(system: System, corpus: Corpus, average='micro') -> F1Scores:
+def get_f1_score(system: core.typ.System, corpus: core.typ.Corpus, average='micro') -> core.typ.F1Scores:
     """ Get f1 score for some system and corpus. Based on scikit-learn f1 score calculation. """
     system, df = classify_intents(system, corpus)
-    score = round(f1_score(df['intent'], df['classification'], average=average), 3)
-    return F1Scores(system, (score, ))
+    score = round(sklearn.metrics.f1_score(df['intent'], df['classification'], average=average), 3)
+    return core.typ.F1Scores(system, (score,))
 
 
-def get_f1_score_runs(system: System, corpus: Corpus, n_runs: int, average='micro') -> Tuple[float, ...]:
+def get_f1_score_runs(system: core.typ.System, corpus: core.typ.Corpus,
+                      n_runs: int, average='micro') -> typing.Tuple[float, ...]:
     """ Get f1 score multiple times and re-train system each time. """
     out = []
     for i in range(0, n_runs):
         system, scores = get_f1_score(
-            System(system.name, system.knowledge,
+            core.typ.System(system.name, system.knowledge,
                    system.data + ('retrain', ) if i > 0 else system.data), corpus, average)
         out.append(scores)
     return tuple(out)

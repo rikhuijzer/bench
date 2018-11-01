@@ -1,32 +1,20 @@
 import json
 import os
-from enum import Enum
-from functools import lru_cache
-from pathlib import Path
-from typing import NamedTuple
+import functools
 
 import requests
 import yaml
-
-from core.training_data import Corpus, TestSentence
-from systems.amazon_lex import get_intent_lex
+import core.typ
+import systems.deeppavlov
+import systems.amazon_lex
 import systems.mock
 import systems.rasa
-import systems.deeppavlov
+import core.utils
 
 
-class Header(Enum):
-    json = {'content-type': 'application/json'}
-    yml = {'content-type': 'application/x-yml'}
-
-
-System = NamedTuple('System', [('name', str), ('knowledge', Corpus), ('data', Tuple)])
-IntentClassification = NamedTuple('IntentClassification', [('system', System), ('classification', str)])
-
-
-@lru_cache(maxsize=1)
+@functools.lru_cache(maxsize=1)
 def get_docker_compose_configuration() -> dict:
-    with open(Path(__file__).parent.parent / 'docker-compose.yml', 'rb') as f:
+    with open(str(core.utils.get_root() / 'docker-compose.yml'), 'rb') as f:
         return yaml.load(f)
 
 
@@ -38,7 +26,7 @@ def get_port(system: str) -> int:
     return int(get_docker_compose_configuration()['services'][system]['ports'][0][0:4])
 
 
-def train(system: System, corpus: Corpus) -> System:
+def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
     """ Train system on corpus. """
     print('Training {} on {}...'.format(system, corpus))
 
@@ -59,16 +47,16 @@ def train(system: System, corpus: Corpus) -> System:
     return func_train(system, corpus)
 
 
-def get_intent(system: System, test_sentence: TestSentence) -> IntentClassification:
+def get_intent(system: core.typ.System, test_sentence: core.typ.TestSentence) -> core.typ.IntentClassification:
     """ Get intent for some system and some sentence. Function will train system if that is necessary. """
     if test_sentence.corpus != system.knowledge or 'retrain' in system.data:
-        system = System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
+        system = core.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
         system = train(system, test_sentence.corpus)
 
     if 'mock' == system.name:
         value = int(test_sentence.text)
         classifications = 'A' if (0 < value <= 10) else 'B'
-        return IntentClassification(system, 'C' if (value % system.data[0] == 0) else classifications)
+        return core.typ.IntentClassification(system, 'C' if (value % system.data[0] == 0) else classifications)
 
     if 'rasa' in system.name:
         data = {'q': test_sentence.text, 'project': 'my_project'}
@@ -77,7 +65,7 @@ def get_intent(system: System, test_sentence: TestSentence) -> IntentClassificat
 
         if r.status_code != 200:
             raise RuntimeError('Could not get intent for text: {}'.format(test_sentence.text))
-        return IntentClassification(system, r.json()['intent']['name'])
+        return core.typ.IntentClassification(system, r.json()['intent']['name'])
 
     if 'watson' in system.name:
         from watson_developer_cloud import AssistantV1
@@ -94,18 +82,18 @@ def get_intent(system: System, test_sentence: TestSentence) -> IntentClassificat
             classification = response['intents'][0]['intent'].replace('_', ' ')
         else:
             classification = ''
-        return IntentClassification(system, classification)
+        return core.typ.IntentClassification(system, classification)
 
     if 'deeppavlov' in system.name:
         data = {'context': [test_sentence.text]}
         r = requests.post('http://localhost:{}/intents'.format(get_port(system.name)), data=json.dumps(data),
-                          headers=Header.json.value)
-        return IntentClassification(system, r.json()[0][0][0])
+                          headers=core.typ.Header.json.value)
+        return core.typ.IntentClassification(system, r.json()[0][0][0])
 
     if 'watson' in system:
         raise AssertionError('Not implemented. Possibly interesting: https://github.com/joe4k/wdcutils/')
 
     if 'amazon' in system:
-        return get_intent_lex()
+        return systems.amazon_lex.get_intent_lex()
 
     raise AssertionError('Unknown system.name for {}'.format(system))
