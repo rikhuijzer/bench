@@ -70,16 +70,13 @@ def convert_index(text: str, token_index: int, start_end: core.typ.StartEnd) -> 
 
 def read_nlu_evaluation_corpora(js: dict) -> core.typ.Messages:
     """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
-    out = []
-    for sentence in js['sentences']:
-        # TODO: Do this using map, filter, reduce?
-        entities = []
-        for entity in sentence['entities']:
-            entities.append(convert_nlu_evaluation_entity(sentence['text'], entity))
-        message = rasa_nlu.training_data.Message.build(sentence['text'], sentence['intent'], entities)
-        message.data['training'] = sentence['training']
-        out.append(message)
-    return tuple(out)
+    def convert_entities(sentence: dict) -> typing.List[dict]:
+        return list(map(lambda e: convert_nlu_evaluation_entity(sentence['text'], e), sentence['entities']))
+
+    def convert_sentence(sentence: dict) -> rasa_nlu.training_data.Message:
+        return create_message(sentence['text'], sentence['intent'], convert_entities(sentence), sentence['training'])
+
+    return tuple(map(convert_sentence, js['sentences']))
 
 
 def read_snips(js: dict) -> pd.DataFrame:
@@ -99,7 +96,7 @@ def read_snips(js: dict) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
-def filter_train_test(messages: typing.Tuple, train_test: core.typ.TrainTest) -> typing.Tuple:
+def filter_train_test(messages: typing.Tuple, train_test: core.typ.TrainTest) -> core.typ.Messages:
     """ Get train or test split for some corpus. """
     return tuple([message for message in messages if message.data['training'] == train_test.value])
 

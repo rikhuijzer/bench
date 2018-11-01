@@ -28,7 +28,8 @@ def get_port(system: str) -> int:
 
 def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
     """ Train system on corpus. """
-    print('Training {} on {}...'.format(system, corpus))
+    if system.knowledge != core.typ.Corpus.Mock:
+        print('Training {} on {}...'.format(system, corpus))
 
     train_systems = {
         'mock': systems.mock.train,
@@ -37,7 +38,7 @@ def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
         'lex': systems.amazon_lex.train
     }
 
-    match = tuple(filter(lambda key: system.name in key, train_systems))
+    match = tuple(filter(lambda key: key in system.name, train_systems))
     if len(match) == 0:
         raise ValueError('Unknown system for training: {}.'.format(system.name))
     if len(match) > 1:
@@ -61,7 +62,7 @@ def get_intent(system: core.typ.System, test_sentence: core.typ.TestSentence) ->
     if 'rasa' in system.name:
         data = {'q': test_sentence.text, 'project': 'my_project'}
         url = 'http://localhost:{}/parse'
-        r = requests.post(url.format(get_port(system.name)), data=json.dumps(data), headers=Header.json.value)
+        r = requests.post(url.format(get_port(system.name)), data=json.dumps(data), headers=core.typ.Header.json.value)
 
         if r.status_code != 200:
             raise RuntimeError('Could not get intent for text: {}'.format(test_sentence.text))

@@ -1,5 +1,8 @@
 from core.evaluate import *
 from core.training_data import *
+import core.evaluate
+import core.training_data
+import core.typ
 import numpy as np
 import logging
 
@@ -12,9 +15,9 @@ import logging
 def get_f1():
     logging.info('test1')
     logging.error('test2')
-    corpus = Corpus.WebApplications
+    corpus = core.typ.Corpus.Chatbot
     system_name = 'rasa-spacy'
-    scores = get_f1_score_runs(System(system_name, Corpus.Empty, ()), corpus, n_runs=10)
+    scores = get_f1_score_runs(core.typ.System(system_name, core.typ.Corpus.Empty, ()), corpus, n_runs=1)
     print(scores)
     print('average: {}'.format(np.mean(scores)))
     print('std: {}'.format(np.std(scores)))
@@ -22,14 +25,14 @@ def get_f1():
 
 
 def watson():
-    path = Path(__file__).parent / 'generated' / 'watson' / 'ask_ubuntu.csv'
-    generate_watson_intents(Corpus.AskUbuntu, path)
+    path = core.utils.get_root() / 'generated' / 'watson' / 'ask_ubuntu.csv'
+    generate_watson_intents(core.typ.Corpus.AskUbuntu, path)
 
 
 def lex():
-    train(System('amazon-lex', Corpus.Empty, ()), Corpus.WebApplications)
+    train(core.typ.System('amazon-lex', core.typ.Corpus.Empty, ()), core.typ.Corpus.WebApplications)
 
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.WARNING)
-    lex()
+    get_f1()
