@@ -1,5 +1,9 @@
 # Results 
 
+TODO: Check what data formats others have used for this problem. 
+
+TODO: Consider storing it all in one JSON to improve post-processing ease.
+
 Results are stored here. The goal of these files is to be easy to process for a computer and human. 
 Therefore the results are in YAML and CSV files. For each system and corpus the following files are created.
 
@@ -8,37 +12,34 @@ This files can be used by the system to report system performance. Performance s
 - Average response time
 - Training time
 
-## General
+## `general.yml`
 For the general information YAML is used. 
 ```yaml
 system name: mock-server
 
 corpus: Mock
 
-training time [seconds]: 10
+training time [seconds]: float
 
 f1 scores:
-  micro: 0.99
-  macro: 0.99
+  micro: float
+  macro: float
 
 response_time [ms]:
-  average: 15
-  standard deviation: 2
+  average: int
+  standard deviation: int
 ```
 
-## Intents
-Below is an example of a system which classified two sentences. 
+## `intents.csv`
+Below is an example from a system which classified two sentences. 
 
-The first sentence incorrectly classified in half a second. The system was not so confident 
-in the classification.
-
-| id | sentence | intent | classification | confidence [%] | time |
+| id | sentence | intent | classification | confidence [%] | time [ms] |
 | --- | --- | --- | --- | --- | --- | 
-| 0 | When is tomorrows first flight to London? | departure time | greet | 20.3 | 0.5 |
-| 1 | Will it rain on monday? | get weather | get weather | 99.1 | 0.4
+| 0 | When is tomorrows first flight to London? | departure time | greet | 20.3 | 50 |
+| 1 | Will it rain on monday? | get weather | get weather | 99.1 | 40
 
-## Entities
-The system also classified entities. For convenience the correct entities have been added as well.
+## `entities.csv`
+The system also classified entities. For reader convenience the correct entities have been added as well.
 
 | id | sentence id | source | entity | value | start | stop | confidence [%]
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -49,3 +50,12 @@ The system also classified entities. For convenience the correct entities have b
 | 4 | 1 | gold standard | date | monday | 18 | 25 |
 | 5 | 1 | classification | weather | rain on | 8 | 16 | 62.8
 | 6 | 1 | classification | date | monday | 18 | 25 |
+
+## `summary.csv`
+The micro F1 score calculation is omitted since it provides little interesting information and since
+it could be confusing in combination with the macro F1 score.
+
+entity type / intent | type | true + | false - | false + | precision | recall
+| --- | --- | --- | --- | --- | --- | --- |
+| departure time | intent | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 0 
+| weather | entity | 1 | 1 | 2 | 0 | 0
