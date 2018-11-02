@@ -4,6 +4,7 @@ import requests
 import core.training_data
 import systems.systems
 import core.typ
+import json
 
 
 def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
@@ -16,3 +17,13 @@ def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
         # print(str(training_data)[344:380].encode("utf-8"))
         raise RuntimeError('Training {} failed on {}, Response: \n {}.'.format(system.name, corpus, r))
     return core.typ.System(system.name, corpus, ())
+
+
+def get_intent(system: core.typ.System, test_sentence: core.typ.TestSentence) -> core.typ.IntentClassification:
+    data = {'q': test_sentence.text, 'project': 'my_project'}
+    url = 'http://localhost:{}/parse'
+    r = requests.post(url.format(systems.systems.get_port(system.name)),
+                      data=json.dumps(data), headers=core.typ.Header.json.value)
+    if r.status_code != 200:
+        raise RuntimeError('Could not get intent for text: {}'.format(test_sentence.text))
+    return core.typ.IntentClassification(system, r.json()['intent']['name'])
