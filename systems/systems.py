@@ -63,7 +63,7 @@ def get_intent(system: core.typ.System, test_sentence: core.typ.TestSentence) ->
         data = {'q': test_sentence.text, 'project': 'my_project'}
         url = 'http://localhost:{}/parse'
         r = requests.post(url.format(get_port(system.name)), data=json.dumps(data), headers=core.typ.Header.json.value)
-
+        print(r.json())
         if r.status_code != 200:
             raise RuntimeError('Could not get intent for text: {}'.format(test_sentence.text))
         return core.typ.IntentClassification(system, r.json()['intent']['name'])

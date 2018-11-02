@@ -15,9 +15,9 @@ import logging
 def get_f1():
     logging.info('test1')
     logging.error('test2')
-    corpus = core.typ.Corpus.Chatbot
+    corpus = core.typ.Corpus.WebApplications
     system_name = 'rasa-spacy'
-    scores = get_f1_score_runs(core.typ.System(system_name, core.typ.Corpus.Empty, ()), corpus, n_runs=1)
+    scores = get_f1_score_runs(core.typ.System(system_name, core.typ.Corpus.WebApplications, ()), corpus, n_runs=1)
     print(scores)
     print('average: {}'.format(np.mean(scores)))
     print('std: {}'.format(np.std(scores)))
