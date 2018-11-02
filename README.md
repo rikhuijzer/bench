@@ -25,3 +25,82 @@ of starting Docker containers from Python is that Docker requires root privilege
 Specify Watson API key via environment variable `WATSON_USERNAME` and `WATSON_PASSWORD`. For Ubuntu this can 
 be done via changing `nano /etc/environment`. Validation via `printenv 
 <var name (optional)>`
+
+### Code remarks
+The code is written in Python, since it is the default choice for machine learning. Both open-
+source systems (Rasa and DeepPavlov) are built using Python. This is especially useful in the 
+case of Rasa. The code uses some methods and data representations defined by the Rasa team. 
+
+Python is mainly object oriented. Over time it has included more and more functional programming
+ideas. The code in this project will aim to be adhering to functional programming. 
+Reasons are pedagogic value, improved modularity, expressiveness, ease of testing, and brevity. 
+
+The functional programming (FP) constraints for the project is that we do not defining any new 
+classes. Specifically, not using the class keyword. Only enums are allowed. This result in some
+changes to the code which are explained next.
+
+#### NamedTuple
+Pure functions by definition cannot rely on information stored somewhere in the system. We 
+provide one example from the code where this created a problem and how this can be solved using
+NamedTuples. 
+
+The benchmarking tools communicates with a system called Rasa. Rasa starts in 
+a default, untrained, state. To measure its performance we train Rasa and then send many 
+sentences to the system. Since you want your functions to be as generic as possible
+it makes sense to have one function which takes some sentence, sends it to Rasa to be 
+classified and returns all information from the response we want. To avoid re-training Rasa
+for each system we have to remember whether Rasa is already trained. Passing just a flag
+'retrain' to the system is insufficient, since the function does not know where Rasa should 
+train on. To make it all work we need the following parameters:
+- `sentence`. The sentence text.
+- `sentence_corpus`. The corpus the sentence is taken from.
+- `system_name`. Used to call the function which can train the specific system we are interested in.
+- `system_knowledge`. Used in combination with sentence_corpus to determine whether we need to re-train.
+- `system_data`. Sometimes we need even more information. For example, when we want to enforce 
+re-training the system to check whether its outputs differ.
+
+When this function has decided to train the system the system_knowledge changes. So as output
+we need to return ``
+
+Since Python 3.5 a NamedTuple with type hints is available. 
+
+To allow for better type checking and reduce the number of function parameters 
+use is made of `typing.NamedTuples`. 
+
+One particular case where the NamedTuples 
+
+The factory design pattern has been applied using 
+
+#### Function caching
+
+#### Map, filter and reduce
+short explanation of these and how they compare to lists
+
+#### Iterators
+By default Python is not interested in performance and advises to use a list for every 
+collection. However, lists are mutable and therefore not suitable for hashing. Since hashing 
+is not possible any function taking lists as input is not suitable for function caching. 
+
+Also, in many cases the list might not be the final structure we need. Consider the following
+use cases where the output of type list is used:
+- Only unique values are required, so the list is casted to a set.
+- The x first elements are required. 
+- Only the values satisfying x are required.
+- Only an output which is transformed is required.
+
+Considering all these use cases it makes more sense to return an iterator by default instead 
+of a collection. One practical example for the bench project which supports this notion is
+using an iterator on classification requests. 
+
+Suppose we want to measure the performance of some cloud service. Suppose we wrote some code 
+which takes a sentence from some corpus and performs the following operations on this 
+sentence:
+1. Send the sentence to some cloud service.
+2. Transforms the response to the pieces of information we need.
+3. Store this information.
+Suppose one of the last two operations contains a mistake causing the program to crash. 
+When not using an iterator all sentences will have been sent to the cloud service after 
+the first operation. Since the post-processing did not succeed we did not obtain results and
+need to redo this operation. In effect the programming error caused us to waste about as
+many API calls as there are sentences in the corpus we are testing. This is a problem since
+the API calls cost money and take time to execute.

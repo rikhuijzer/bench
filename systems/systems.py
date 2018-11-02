@@ -1,15 +1,13 @@
-import json
-import os
 import functools
 
-import requests
 import yaml
+
 import core.typ
-import systems.deeppavlov
+import core.utils
 import systems.amazon_lex
+import systems.deeppavlov
 import systems.mock
 import systems.rasa
-import core.utils
 import systems.watson
 
 
@@ -50,11 +48,11 @@ def get_intent(system: core.typ.System, test_sentence: core.typ.TestSentence) ->
         system = train(system, test_sentence.corpus)
 
     get_intent_systems = {
-        'mock': systems.mock.get_intent,
-        'rasa': systems.rasa.get_intent,
-        'watson': systems.watson.get_intent,
-        'amazon': systems.amazon_lex.get_intent,
+        'mock': systems.mock.get_response,
+        'rasa': systems.rasa.get_response,
+        'watson': systems.watson.get_response,
+        'amazon': systems.amazon_lex.get_response,
     }
-    
+
     fn = core.utils.get_substring_match(get_intent_systems, system.name)
     return fn(system, test_sentence)

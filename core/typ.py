@@ -35,13 +35,20 @@ class Corpus(enum.Enum):
     Empty = ''
 
 
+# Using a bit more NamedTuples than one might expect to need. This is due to the fact that type checking fails for
+# the 'functional factory pattern'. To solve this we define a type for each function which would usually be in the
+# factory.
 TestSentence = typing.NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])
 
 
 System = typing.NamedTuple('System', [('name', str), ('knowledge', Corpus), ('data', typing.Tuple)])
 
 
-IntentClassification = typing.NamedTuple('IntentClassification', [('system', System), ('classification', str)])
+Classification = typing.NamedTuple('Response', [('intent', str), ('confidence', float),
+                                                ('entities', typing.List[dict])])
+
+
+IntentClassification = typing.NamedTuple('IntentClassification', [('system', System), ('response', Classification)])
 
 
 IntentClassifications = typing.NamedTuple('IntentClassifications', [('system', System), ('df', pd.DataFrame)])

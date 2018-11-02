@@ -60,5 +60,5 @@ def store_lex_training_data(corpus: core.typ.Corpus):
         core.training_data.get_train_test(core.training_data.get_messages(corpus), core.typ.TrainTest.train))
 
 
-def get_intent() -> core.typ.IntentClassification:
-    return core.typ.IntentClassification()
+def get_classification(test_sentence: str) -> core.typ.Classification:
+    return core.typ.Classification()
