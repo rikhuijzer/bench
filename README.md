@@ -67,9 +67,7 @@ Since Python 3.5 a NamedTuple with type hints is available.
 To allow for better type checking and reduce the number of function parameters 
 use is made of `typing.NamedTuples`. 
 
-One particular case where the NamedTuples 
-
-The factory design pattern has been applied using 
+TODO: Explain how NamedTuples help type checking on Factory Design pattern replacement.
 
 #### Function caching
 

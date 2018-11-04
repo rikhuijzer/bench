@@ -19,11 +19,11 @@ def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
     return core.typ.System(system.name, corpus, ())
 
 
-def get_classification(test_sentence: str) -> core.typ.Classification:
-    data = {'q': test_sentence.text, 'project': 'my_project'}
+def get_response(query: core.typ.Query) -> core.typ.Response:
+    data = {'q': query.text, 'project': 'my_project'}
     url = 'http://localhost:{}/parse'
-    r = requests.post(url.format(systems.systems.get_port(system.name)),
+    r = requests.post(url.format(systems.systems.get_port(query.system.name)),
                       data=json.dumps(data), headers=core.typ.Header.json.value)
     if r.status_code != 200:
-        raise RuntimeError('Could not get intent for text: {}'.format(test_sentence))
-    return core.typ.IntentClassification(system, r.json()['intent']['name'])
+        raise RuntimeError('Could not get intent for text: {}'.format(query.text))
+    return core.typ.Response(r.json()['intent']['name'], '-1.0', [])

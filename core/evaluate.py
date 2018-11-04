@@ -5,18 +5,20 @@ import core.training_data
 import typing
 
 
-def classify_intents(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.IntentClassifications:
+def classify_intents(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.Classifications:
     """ Run all test sentences from some corpus through system and return results. """
     messages = core.training_data.get_filtered_messages(corpus, core.typ.TrainTest.test)
     df = core.training_data.messages_to_dataframe(messages)
 
     classifications = []
+    confidences = []
     for _, row in df.iterrows():
-        system, classification = get_intent(system, core.typ.TestSentence(row['message'], corpus))
-        classifications.append(classification)
+        system, response = get_intent(system, core.typ.TestSentence(row['message'], corpus))
+        classifications.append(response.intent)
+        confidences.append(response.confidence)  # TODO: Add this information to DataFrame?
 
     df['classification'] = classifications
-    return core.typ.IntentClassifications(system, df)
+    return core.typ.Classifications(system, df)
 
 
 def get_f1_score(system: core.typ.System, corpus: core.typ.Corpus, average='micro') -> core.typ.F1Scores:

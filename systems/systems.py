@@ -9,6 +9,7 @@ import systems.deeppavlov
 import systems.mock
 import systems.rasa
 import systems.watson
+import typing
 
 
 @functools.lru_cache(maxsize=1)
@@ -30,29 +31,31 @@ def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
     if system.knowledge != core.typ.Corpus.Mock:
         print('Training {} on {}...'.format(system, corpus))
 
-    train_systems = {
+    train_systems = {  # core.typ.System, core.typ.Corpus -> core.typ.System
         'mock': systems.mock.train,
         'rasa': systems.rasa.train,
         'deeppavlov': systems.deeppavlov.train,
         'lex': systems.amazon_lex.train
     }
 
-    fn = core.utils.get_substring_match(train_systems, system.name)
-    return fn(system, corpus)
+    func = core.utils.get_substring_match(train_systems, system.name)
+    return func(system, corpus)
 
 
-def get_intent(system: core.typ.System, test_sentence: core.typ.TestSentence) -> core.typ.IntentClassification:
+def get_intent(system: core.typ.System, test_sentence: core.typ.TestSentence) -> core.typ.Classification:
     """ Get intent for some system and some sentence. Function will train system if that is necessary. """
     if test_sentence.corpus != system.knowledge or 'retrain' in system.data:
         system = core.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
         system = train(system, test_sentence.corpus)
 
-    get_intent_systems = {
+    get_intent_systems = {  # core.typ.Query -> core.typ.Response
         'mock': systems.mock.get_response,
         'rasa': systems.rasa.get_response,
         'watson': systems.watson.get_response,
         'amazon': systems.amazon_lex.get_response,
     }
 
-    fn = core.utils.get_substring_match(get_intent_systems, system.name)
-    return fn(system, test_sentence)
+    func = core.utils.get_substring_match(get_intent_systems, system.name)
+    query = core.typ.Query(system, test_sentence.text)
+    response = func(query)
+    return core.typ.Classification(system, response)

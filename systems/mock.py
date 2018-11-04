@@ -7,7 +7,7 @@ def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
     return core.typ.System(system.name, corpus, tuple(data))
 
 
-def get_response(system: core.typ.System, test_sentence: core.typ.TestSentence) -> core.typ.Classification:
-    value = int(test_sentence.text)
-    classification = 'C' if (value % system.data[0] == 0) else ('A' if (0 < value <= 10) else 'B')
-    return core.typ.Classification(classification, '1.0', [])
+def get_response(query: core.typ.Query) -> core.typ.Response:
+    value = int(query.text)
+    classification = 'C' if (value % query.system.data[0] == 0) else ('A' if (0 < value <= 10) else 'B')
+    return core.typ.Response(classification, 1.0, [])

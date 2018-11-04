@@ -44,14 +44,16 @@ TestSentence = typing.NamedTuple('Sentence', [('text', str), ('corpus', Corpus)]
 System = typing.NamedTuple('System', [('name', str), ('knowledge', Corpus), ('data', typing.Tuple)])
 
 
-Classification = typing.NamedTuple('Response', [('intent', str), ('confidence', float),
-                                                ('entities', typing.List[dict])])
+Query = typing.NamedTuple('Query', [('system', System), ('text', str)])
 
 
-IntentClassification = typing.NamedTuple('IntentClassification', [('system', System), ('response', Classification)])
+Response = typing.NamedTuple('Response', [('intent', str), ('confidence', float), ('entities', typing.List[dict])])
 
 
-IntentClassifications = typing.NamedTuple('IntentClassifications', [('system', System), ('df', pd.DataFrame)])
+Classification = typing.NamedTuple('IntentClassification', [('system', System), ('response', Response)])
+
+
+Classifications = typing.NamedTuple('IntentClassifications', [('system', System), ('df', pd.DataFrame)])
 
 
 F1Scores = typing.NamedTuple('F1Scores', [('system', System), ('scores', typing.Tuple[float, ...])])

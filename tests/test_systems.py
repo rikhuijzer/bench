@@ -26,10 +26,10 @@ def test_train():
 def test_get_intent():
     """ In the tuple we define the modulus to be used. """
     system = core.typ.System('mock', core.typ.Corpus.Empty, (3, ))
-    intent = systems.systems.get_intent(system, core.typ.TestSentence('2', core.typ.Corpus.Empty))
-    assert core.typ.IntentClassification(system, 'A') == intent
+    classification = systems.systems.get_intent(system, core.typ.TestSentence('2', core.typ.Corpus.Empty))
+    assert core.typ.Classification(system, core.typ.Response('A', 1.0, [])) == classification
 
     """ During training the modulus is increased by one to model the changing behaviour of a probabilistic system. """
     trained_system = core.typ.System('mock', core.typ.Corpus.Chatbot, (4, ))
-    intent = systems.systems.get_intent(system, core.typ.TestSentence('2', core.typ.Corpus.Chatbot))
-    assert core.typ.IntentClassification(trained_system, 'A') == intent
+    classification = systems.systems.get_intent(system, core.typ.TestSentence('2', core.typ.Corpus.Chatbot))
+    assert core.typ.Classification(trained_system, core.typ.Response('A', 1.0, [])) == classification

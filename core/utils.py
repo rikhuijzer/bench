@@ -31,7 +31,10 @@ def timer(fn: types.FunctionType) -> types.FunctionType:
     return inner
 
 
-def get_substring_match(dictionary: dict, string: str) -> typing.Any:
+T = typing.TypeVar('T')
+
+
+def get_substring_match(dictionary: dict, string: str) -> T:
     """ Returns dictionary value for first key which is a substring of string.  """
     matches = list(filter(lambda key: key in string, dictionary))
     n = len(matches)
