@@ -42,7 +42,7 @@ def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
     return func(system, corpus)
 
 
-def get_intent(system: core.typ.System, test_sentence: core.typ.TestSentence) -> core.typ.Classification:
+def get_classification(system: core.typ.System, test_sentence: core.typ.Sentence) -> core.typ.Classification:
     """ Get intent for some system and some sentence. Function will train system if that is necessary. """
     if test_sentence.corpus != system.knowledge or 'retrain' in system.data:
         system = core.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))

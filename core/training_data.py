@@ -9,6 +9,7 @@ import rasa_nlu.utils
 import core.typ
 import core.utils
 import pathlib
+import systems.mock
 
 pd.set_option('max_colwidth', 180)
 
@@ -96,16 +97,11 @@ def read_snips(js: dict) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
-def filter_train_test(messages: typing.Tuple, train_test: core.typ.TrainTest) -> core.typ.Messages:
-    """ Get train or test split for some corpus. """
-    return tuple([message for message in messages if message.data['training'] == train_test.value])
-
-
-@functools.lru_cache(maxsize=core.utils.square_ceil(len(core.typ.Corpus)))
-def get_messages(corpus: core.typ.Corpus) -> typing.Tuple:
+@functools.lru_cache()
+def get_messages(corpus: core.typ.Corpus) -> core.typ.Messages:
     """ Get all messages: Message from some file containing corpus and cache the messages. """
     if corpus == corpus.Mock:
-        return tuple(map(lambda x: create_message(str(x), 'A' if 0 <= x < 10 else 'B', [], False), range(0, 20)))
+        return tuple(systems.mock.get_mock_messages())
 
     file = pathlib.Path(__file__).parent.parent / 'datasets' / corpus.value
     with open(str(file), 'rb') as f:
@@ -118,9 +114,10 @@ def get_messages(corpus: core.typ.Corpus) -> typing.Tuple:
         return read_snips(js)
 
 
-def get_filtered_messages(corpus: core.typ.Corpus, train_test: core.typ.TrainTest) -> core.typ.Messages:
-    return filter_train_test(get_messages(corpus), train_test)
+def get_filtered_messages(corpus: core.typ.Corpus, train: bool) -> typing.Iterable[core.typ.Messages]:
+    return filter(lambda m: train == m.data['training'], get_messages(corpus))
 
 
-def get_intents(corpus: core.typ.Corpus, train_test: core.typ.TrainTest) -> typing.Set[str]:
-    return set(map(lambda m: m.data['intent'], get_filtered_messages(corpus, train_test)))
+def get_intents(corpus: core.typ.Corpus) -> typing.Iterable[str]:
+    """ Returns intent for each message in some corpus. To get unique intents one can simply cast it to a set. """
+    return map(lambda m: m.data['intent'], get_messages(corpus))

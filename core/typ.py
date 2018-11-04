@@ -15,12 +15,6 @@ class Focus(enum.Enum):
     intent = 'intent'
 
 
-class TrainTest(enum.Enum):
-    train = True
-    test = False
-    all = ''
-
-
 class Header(enum.Enum):
     json = {'content-type': 'application/json'}
     yml = {'content-type': 'application/x-yml'}
@@ -35,10 +29,7 @@ class Corpus(enum.Enum):
     Empty = ''
 
 
-# Using a bit more NamedTuples than one might expect to need. This is due to the fact that type checking fails for
-# the 'functional factory pattern'. To solve this we define a type for each function which would usually be in the
-# factory.
-TestSentence = typing.NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])
+Sentence = typing.NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])
 
 
 System = typing.NamedTuple('System', [('name', str), ('knowledge', Corpus), ('data', typing.Tuple)])

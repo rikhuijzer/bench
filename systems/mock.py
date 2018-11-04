@@ -1,4 +1,14 @@
 import core.typ
+import rasa_nlu.training_data
+import typing
+import core.training_data
+
+
+def get_mock_messages() -> typing.Iterable[rasa_nlu.training_data.Message]:
+    def create_mock_message(x: int) -> rasa_nlu.training_data.Message:
+        return core.training_data.create_message(str(x), 'A' if 0 <= x < 10 else 'B', [], True if x < 15 else False)
+
+    return map(create_mock_message, range(0, 20))
 
 
 def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:

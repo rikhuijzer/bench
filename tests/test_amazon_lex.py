@@ -17,4 +17,4 @@ def test_get_intents_lex_json():
     # changed .json from end of line to inside lambda function
     intents = set(map(lambda d: d.json['resource']['name'], systems.amazon_lex.get_intents_lex_json(corpus)))
     assert len(intents) > 0
-    assert core.training_data.get_intents(corpus, core.typ.TrainTest.train) == intents
+    assert set(core.training_data.get_intents(corpus)) == intents

@@ -1,6 +1,7 @@
 import core.training_data
 import core.typ
 import typing
+import functools
 
 
 def test_convert_index():
@@ -46,7 +47,7 @@ def test_nlu_evaluation_entity_converter():
 
 
 # NLU-Evaluation-Corpora expected_length provided at https://github.com/sebischair/NLU-Evaluation-Corpora
-def test_get_corpus():
+def test_get_messages():
     """ Test whether all corpora get imported correctly.
             All crammed in one function, to avoid having many errors when one of the sub-functions fails.
     """
@@ -121,21 +122,10 @@ def test_get_corpus():
 def test_get_intents():
     expected = {'Delete Account', 'Find Alternative', 'Download Video',
                 'Filter Spam', 'Change Password', 'Sync Accounts', 'None', 'Export Data'}
-    assert expected == core.training_data.get_intents(core.typ.Corpus.WebApplications, core.typ.TrainTest.train)
+    assert expected == set(core.training_data.get_intents(core.typ.Corpus.WebApplications))
 
 
-def test_get_train_test():
-    dummy_corpus = (
-        core.training_data.create_message('lorem', 'foo', [], training=True),
-        core.training_data.create_message('ipsum', 'bar', [], training=True),
-        core.training_data.create_message('dolor', 'baz', [], training=False)
-    )
-
-    train = core.training_data.filter_train_test(dummy_corpus, core.typ.TrainTest.train)
-    assert 2 == len(train)
-    assert dummy_corpus[0].as_dict() == train[0].as_dict()
-    assert dummy_corpus[1].as_dict() == train[1].as_dict()
-
-    test = core.training_data.filter_train_test(dummy_corpus, core.typ.TrainTest.test)
-    assert 1 == len(test)
-    assert dummy_corpus[2].as_dict() == test[0].as_dict()
+def test_get_filtered_messages():
+    func = functools.partial(core.training_data.get_filtered_messages, corpus=core.typ.Corpus.Mock)
+    assert 15 == len(tuple(func(train=True)))
+    assert 5 == len(tuple(func(train=False)))

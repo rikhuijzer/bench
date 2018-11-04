@@ -43,8 +43,8 @@ IntentJSON = typing.NamedTuple('IntentJSON', [('intent', str), ('json', dict)])
 
 def get_intents_lex_json(corpus: core.typ.Corpus) -> typing.Iterable[IntentJSON]:
     """ Generator for Amazon Lex templates each filled for some intent with its utterances. """
-    messages = core.training_data.get_filtered_messages(corpus, core.typ.TrainTest.train)
-    intents = core.training_data.get_intents(corpus, core.typ.TrainTest.train)
+    messages = core.training_data.get_filtered_messages(corpus, train=True)
+    intents = core.training_data.get_intents(corpus)
 
     for intent in intents:
         utterances = tuple([message.text for message in messages if message.data['intent'] == intent])
