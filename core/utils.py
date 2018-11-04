@@ -36,7 +36,7 @@ T = typing.TypeVar('T')
 
 def get_substring_match(dictionary: dict, string: str) -> T:
     """ Returns dictionary value for first key which is a substring of string.  """
-    matches = list(filter(lambda key: key in string, dictionary))
+    matches = list(filter(lambda key: key in string.lower(), dictionary))
     n = len(matches)
 
     if n == 0:
