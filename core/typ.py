@@ -29,7 +29,7 @@ class Corpus(enum.Enum):
     Empty = ''
 
 
-class Result(enum.Enum):
+class CSVs(enum.Enum):
     General = 'general.yml'
     Intents = 'intents.csv'
     Entities = 'entities.csv'
@@ -39,6 +39,9 @@ Sentence = typing.NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])
 
 
 System = typing.NamedTuple('System', [('name', str), ('knowledge', Corpus), ('data', typing.Tuple)])
+
+
+SystemCorpus = typing.NamedTuple('SystemCorpus', [('system', System), ('corpus', Corpus)])
 
 
 Query = typing.NamedTuple('Query', [('system', System), ('text', str)])
@@ -59,5 +62,5 @@ F1Scores = typing.NamedTuple('F1Scores', [('system', System), ('scores', typing.
 Messages = typing.Tuple[rasa_nlu.training_data.Message, ...]
 
 
-CSVIntent = typing.NamedTuple('CSVIntent', [('id', str), ('run', int), ('sentence', str), ('intent', str),
+CSVIntent = typing.NamedTuple('CSVIntent', [('id', int), ('run', int), ('sentence', str), ('intent', str),
                                             ('classification', str), ('confidence', float), ('time', int)])
