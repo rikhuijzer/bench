@@ -25,13 +25,22 @@ def test_train():
     assert expected == systems.systems.train(core.typ.SystemCorpus(system, corpus))
 
 
-def test_get_intent():
+def test_get_classification():
     """ In the tuple we define the modulus to be used. """
-    system = core.typ.System('mock', core.typ.Corpus.Empty, (3, ))
-    classification = systems.systems.get_classification(system, core.typ.Sentence('2', core.typ.Corpus.Empty))
-    assert core.typ.Classification(system, core.typ.Response('A', 1.0, [])) == classification
+    untrained_system = core.typ.System('mock', core.typ.Corpus.Empty, (3, ))
+    print('foo: ', untrained_system)
+
+
+
+    corpus = core.typ.Corpus.Mock
+    untrained_sc = core.typ.SystemCorpus(untrained_system, corpus)
+    print('bar: ', untrained_system)
+    classification = systems.systems.get_classification(untrained_system, core.typ.Sentence('2', corpus))
+    assert core.typ.Classification(untrained_sc, core.typ.Response('A', 1.0, [])) == classification
 
     """ During training the modulus is increased by one to model the changing behaviour of a probabilistic system. """
-    trained_system = core.typ.System('mock', core.typ.Corpus.Chatbot, (4, ))
-    classification = systems.systems.get_classification(system, core.typ.Sentence('2', core.typ.Corpus.Chatbot))
-    assert core.typ.Classification(trained_system, core.typ.Response('A', 1.0, [])) == classification
+    system = classification.system_corpus.system
+    classification = systems.systems.get_classification(system, core.typ.Sentence('2', corpus))
+    trained_system = core.typ.System('mock', corpus, (4, ))
+    assert trained_system == classification.system_corpus.system
+    assert core.typ.Response('A', 1.0, []) == classification.response

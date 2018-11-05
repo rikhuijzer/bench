@@ -43,6 +43,9 @@ def train(sc: core.typ.SystemCorpus) -> core.typ.System:
 
 
 def get_classification(system: core.typ.System, test_sentence: core.typ.Sentence) -> core.typ.Classification:
+
+    print(system, test_sentence)
+
     """ Get intent for some system and some sentence. Function will train system if that is necessary. """
     if test_sentence.corpus != system.knowledge or 'retrain' in system.data:
         system = core.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
@@ -58,4 +61,4 @@ def get_classification(system: core.typ.System, test_sentence: core.typ.Sentence
     func = core.utils.get_substring_match(get_intent_systems, system.name)
     query = core.typ.Query(system, test_sentence.text)
     response = func(query)
-    return core.typ.Classification(system, response)
+    return core.typ.Classification(core.typ.SystemCorpus(system, test_sentence.corpus), response)

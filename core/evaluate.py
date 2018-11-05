@@ -4,18 +4,30 @@ import core.training_data
 import typing
 import rasa_nlu.training_data
 import systems.systems
+import core.results
 
 
-def get_classifications(system: core.typ.System, corpus: core.typ.Corpus) -> typing.Iterable[core.typ.Classification]:
-    """ Run all test sentences from some corpus through system and return results. """
-    messages = core.training_data.get_filtered_messages(corpus, train=False)
+def classify(sc: core.typ.SystemCorpus, m: rasa_nlu.training_data.Message) -> core.typ.Classification:
+    """ Transform a Rasa Message to a Classification. """
+    return systems.systems.get_classification(sc.system, core.typ.Sentence(m.text, sc.corpus))
 
-    def classify(s: core.typ.System, m: rasa_nlu.training_data.Message) -> core.typ.Classification:
-        """ Transform a Rasa Message to a Classification. Note that corpus is defined in outer function. """
-        return systems.systems.get_classification(s, core.typ.Sentence(m.text, corpus))
+
+def get_classifications(sc: core.typ.SystemCorpus) -> typing.Iterable[core.typ.Classification]:
+    if not isinstance(sc, core.typ.SystemCorpus):
+        raise AssertionError('incorrect parameter type')
+
+    """ Run all test sentences from some corpus through system and return classifications. """
+    messages = core.training_data.get_filtered_messages(sc.corpus, train=False)
 
     for message in messages:
-        # It is difficult to replace this by map, filter, reduce since the system state can change.
-        classification = classify(system, message)
-        system = classification.system
+        # It seems difficult to do this by map, filter, reduce since the system state changes.
+        classification = classify(sc, message)
+        sc = classification.system_corpus
         yield classification
+
+
+def run_bench(sc: core.typ.SystemCorpus):
+    classifications = get_classifications(sc)
+
+    for classification in classifications:
+        core.results.write_classification(classification)
