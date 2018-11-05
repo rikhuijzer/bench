@@ -70,6 +70,25 @@ use is made of `typing.NamedTuples`.
 TODO: Explain how NamedTuples help type checking on Factory Design pattern replacement.
 
 #### Function caching
+Functions can be cached using `functools.lru_cache`. This is mainly used for reducing 
+the number of filesystem operations. A typical example is as follows. Suppose we write some
+text to a file iteratively by calling `write()` multiple times. Since we try to avoid 
+storing a state `write()` does not know whether the file already exists. To solve we can do
+two things. The first option is passing parameters telling the function whether the file 
+already exists. This is cumbersome, since this state needs to be passed through all the 
+functions to the function which is calling the loop over `write()` (directly by calling 
+`write()` or indirectly by calling some other function). The second option is defining
+a function to create a file if it does not yet exists `create_file()`. We call this function
+every time `write()` is called. This does mean that the filesystem is accessed to check the
+folder each time `write()` is called. To avoid all those filesystem operations `create_file()`
+can be decorated using `functools.lru_cache`. Now on all but the first calls to `create_file()`
+just query memory.
+
+##### Caveats
+Make sure when using `functools.lru_cache` to not try to mimic state. In other words the
+program should not change behaviour if the cache is removed. Reason for this is that any 
+state introduced via the cache is similar to doing object oriented programming but without
+all the constructs from OOP.
 
 #### Map, filter and reduce
 short explanation of these and how they compare to lists

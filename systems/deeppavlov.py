@@ -4,8 +4,8 @@ import systems.systems
 import json
 
 
-def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
-    raise AssertionError('Trying to train {} which should be trained via Docker build'.format(system))
+def train(sc: core.typ.SystemCorpus) -> core.typ.System:
+    raise AssertionError('Trying to train {} which should be trained via Docker build'.format(sc.system))
 
 
 def get_response(query: core.typ.Query) -> core.typ.Response:

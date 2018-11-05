@@ -11,10 +11,10 @@ def get_mock_messages() -> typing.Iterable[rasa_nlu.training_data.Message]:
     return map(create_mock_message, range(0, 20))
 
 
-def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
-    data = list(system.data)
+def train(sc: core.typ.SystemCorpus) -> core.typ.System:
+    data = list(sc.system.data)
     data[0] += 1
-    return core.typ.System(system.name, corpus, tuple(data))
+    return core.typ.System(sc.system.name, sc.corpus, tuple(data))
 
 
 def get_response(query: core.typ.Query) -> core.typ.Response:

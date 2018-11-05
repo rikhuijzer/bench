@@ -1,4 +1,5 @@
 import functools
+import os
 import pathlib
 import typing
 
@@ -31,8 +32,10 @@ def create_folder(path: pathlib) -> bool:
 
 @functools.lru_cache()
 def create_file(path: pathlib, header: str) -> bool:
-    with open(str(path), 'a+') as f:
-        f.write(header + '\n')
+    """ Creates file and adds header if file does not already exists. """
+    if not os.path.isfile(path):
+        with open(str(path), 'a+') as f:
+            f.write(header + '\n')
     return True
 
 
@@ -43,7 +46,6 @@ def create_header(t: typing.NamedTuple) -> str:
 def write_tuple(sc: core.typ.SystemCorpus, t: typing.NamedTuple):
     create_folder(get_folder(sc))
 
-    # check file exists
     if isinstance(t, core.typ.CSVIntent):
         filename = get_filename(sc, core.typ.CSVs.Intents)
         create_file(filename, create_header(t))

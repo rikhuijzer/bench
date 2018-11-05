@@ -19,8 +19,10 @@ def test_get_port():
 
 
 def test_train():
-    assert core.typ.System('mock', core.typ.Corpus.WebApplications, (3, )) == \
-           systems.systems.train(core.typ.System('mock', core.typ.Corpus.Empty, (2, )), core.typ.Corpus.WebApplications)
+    expected = core.typ.System('mock', core.typ.Corpus.WebApplications, (3, ))
+    system = core.typ.System('mock', core.typ.Corpus.Empty, (2, ))
+    corpus = core.typ.Corpus.WebApplications
+    assert expected == systems.systems.train(core.typ.SystemCorpus(system, corpus))
 
 
 def test_get_intent():

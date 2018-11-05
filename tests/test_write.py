@@ -16,9 +16,14 @@ def test_get_filename():
 
 
 def test_write_tuple():
+    def clear_cache():
+        core.write.create_folder.cache_clear()
+        core.write.create_file.cache_clear()
+
     csv_intent = core.typ.CSVIntent(-1, -1, 'sentence', 'intent', 'classification', -1.0, -1)
 
     for _ in range(0, 3):
+        clear_cache()  # to avoid complexity the cache should not alter output, so we test without the cache
         core.write.write_tuple(sc, csv_intent)
 
     with open(str(core.write.get_filename(sc, core.typ.CSVs.Intents)), 'r') as f:

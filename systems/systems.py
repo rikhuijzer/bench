@@ -26,27 +26,27 @@ def get_port(system: str) -> int:
     return int(get_docker_compose_configuration()['services'][system]['ports'][0][0:4])
 
 
-def train(system: core.typ.System, corpus: core.typ.Corpus) -> core.typ.System:
+def train(sc: core.typ.SystemCorpus) -> core.typ.System:
     """ Train system on corpus. """
-    if system.knowledge != core.typ.Corpus.Mock:
-        print('Training {} on {}...'.format(system, corpus))
+    if sc.system.knowledge != core.typ.Corpus.Mock:
+        print('Training {} on {}...'.format(sc.system, sc.corpus))
 
-    train_systems = {  # core.typ.System, core.typ.Corpus -> core.typ.System
+    train_systems = {  # core.typ.SystemCorpus -> core.typ.System
         'mock': systems.mock.train,
         'rasa': systems.rasa.train,
         'deeppavlov': systems.deeppavlov.train,
         'lex': systems.amazon_lex.train
     }
 
-    func = core.utils.get_substring_match(train_systems, system.name)
-    return func(system, corpus)
+    func = core.utils.get_substring_match(train_systems, sc.system.name)
+    return func(sc)
 
 
 def get_classification(system: core.typ.System, test_sentence: core.typ.Sentence) -> core.typ.Classification:
     """ Get intent for some system and some sentence. Function will train system if that is necessary. """
     if test_sentence.corpus != system.knowledge or 'retrain' in system.data:
         system = core.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
-        system = train(system, test_sentence.corpus)
+        system = train(core.typ.SystemCorpus(system, test_sentence.corpus))
 
     get_intent_systems = {  # core.typ.Query -> core.typ.Response
         'mock': systems.mock.get_response,
