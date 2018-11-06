@@ -5,13 +5,13 @@ import functools
 
 
 def test_convert_index():
-    def helper(text: str, token_index: int, expected: int, start_end: core.typ.StartEnd):
-        index = core.training_data.convert_index(text, token_index, start_end)
+    def helper(text: str, token_index: int, expected: int, start: bool):
+        index = core.training_data.convert_index(text, token_index, start)
         assert expected == index
 
     text = 'Upgrading from 11.10 to 12.04'
-    helper(text, 6, 24, core.typ.StartEnd.start)
-    helper(text, 8, 29, core.typ.StartEnd.end)
+    helper(text, 6, 24, start=True)
+    helper(text, 8, 29, start=False)
 
 
 def test_message_to_annotated_str():
@@ -57,7 +57,7 @@ def test_get_messages():
 
         assert last_row == messages[-1].as_dict()
 
-    sentences = core.training_data.get_messages(core.typ.Corpus.AskUbuntu)
+    sentences = core.training_data.get_messages(core.typ.Corpus.ASKUBUNTU)
     first_row = {
         'text': 'What software can I use to view epub documents?',
         'intent': 'Software Recommendation',
@@ -71,7 +71,7 @@ def test_get_messages():
 
     helper(sentences, 162, first_row, last_row)
 
-    sentences = core.training_data.get_messages(core.typ.Corpus.Chatbot)
+    sentences = core.training_data.get_messages(core.typ.Corpus.CHATBOT)
     first_row = {
         'entities': [{'end': 24,
                       'entity': 'StationDest',
@@ -96,7 +96,7 @@ def test_get_messages():
     }
     helper(sentences, 206, first_row, last_row)
 
-    sentences = core.training_data.get_messages(core.typ.Corpus.WebApplications)
+    sentences = core.training_data.get_messages(core.typ.Corpus.WEBAPPLICATIONS)
     first_row = {
         'entities': [{'end': 23,
                       'entity': 'WebService',
@@ -122,10 +122,10 @@ def test_get_messages():
 def test_get_intents():
     expected = {'Delete Account', 'Find Alternative', 'Download Video',
                 'Filter Spam', 'Change Password', 'Sync Accounts', 'None', 'Export Data'}
-    assert expected == set(core.training_data.get_intents(core.typ.Corpus.WebApplications))
+    assert expected == set(core.training_data.get_intents(core.typ.Corpus.WEBAPPLICATIONS))
 
 
 def test_get_filtered_messages():
-    func = functools.partial(core.training_data.get_filtered_messages, corpus=core.typ.Corpus.Mock)
+    func = functools.partial(core.training_data.get_filtered_messages, corpus=core.typ.Corpus.MOCK)
     assert 15 == len(tuple(func(train=True)))
     assert 5 == len(tuple(func(train=False)))

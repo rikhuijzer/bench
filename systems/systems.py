@@ -9,7 +9,6 @@ import systems.deeppavlov
 import systems.mock
 import systems.rasa
 import systems.watson
-import typing
 
 
 @functools.lru_cache(maxsize=1)
@@ -26,9 +25,16 @@ def get_port(system: str) -> int:
     return int(get_docker_compose_configuration()['services'][system]['ports'][0][0:4])
 
 
+def get_header(header: core.typ.Header) -> dict:
+    if header == core.typ.Header.JSON:
+        return {'content-type': 'application/json'}
+    if header == core.typ.Header.YML:
+        return {'content-type': 'application/x-yml'}
+
+
 def train(sc: core.typ.SystemCorpus) -> core.typ.System:
     """ Train system on corpus. """
-    if sc.system.knowledge != core.typ.Corpus.Mock:
+    if sc.system.knowledge != core.typ.Corpus.MOCK:
         print('Training {} on {}...'.format(sc.system, sc.corpus))
 
     train_systems = {  # core.typ.SystemCorpus -> core.typ.System
@@ -43,9 +49,6 @@ def train(sc: core.typ.SystemCorpus) -> core.typ.System:
 
 
 def get_classification(system: core.typ.System, test_sentence: core.typ.Sentence) -> core.typ.Classification:
-
-    print(system, test_sentence)
-
     """ Get intent for some system and some sentence. Function will train system if that is necessary. """
     if test_sentence.corpus != system.knowledge or 'retrain' in system.data:
         system = core.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))

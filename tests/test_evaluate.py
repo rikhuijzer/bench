@@ -3,8 +3,8 @@ import core.typ
 
 
 def test_classify_intents():
-    system = core.typ.System('mock', core.typ.Corpus.Mock, (16,))
-    corpus = core.typ.Corpus.Mock
+    system = core.typ.System('mock', core.typ.Corpus.MOCK, (16,))
+    corpus = core.typ.Corpus.MOCK
     classifications = tuple(core.evaluate.get_classifications(core.typ.SystemCorpus(system, corpus)))
     # classifications are for messages 15, 16, 17, 18, 19
     assert 5 == len(classifications)

@@ -56,8 +56,8 @@ def train(sc: core.typ.SystemCorpus) -> core.typ.System:
 
 
 def store_lex_training_data(corpus: core.typ.Corpus):
-    intents = core.training_data.get_intents(
-        core.training_data.get_train_test(core.training_data.get_messages(corpus), core.typ.TrainTest.train))
+    intents = set(core.training_data.get_intents(
+        core.training_data.get_filtered_messages(core.training_data.get_messages(corpus), train=True)))
 
 
 def get_response(query: core.typ.Query) -> core.typ.Response:

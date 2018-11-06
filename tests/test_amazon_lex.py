@@ -13,8 +13,7 @@ def test_fill_lex_json():
 
 
 def test_get_intents_lex_json():
-    corpus = core.typ.Corpus.WebApplications
-    # changed .json from end of line to inside lambda function
-    intents = set(map(lambda d: d.json['resource']['name'], systems.amazon_lex.get_intents_lex_json(corpus)))
+    corpus = core.typ.Corpus.WEBAPPLICATIONS
+    intents = set(map(lambda int_js: int_js.json['resource']['name'], systems.amazon_lex.get_intents_lex_json(corpus)))
     assert len(intents) > 0
     assert set(core.training_data.get_intents(corpus)) == intents

@@ -19,24 +19,18 @@ def test_get_port():
 
 
 def test_train():
-    expected = core.typ.System('mock', core.typ.Corpus.WebApplications, (3, ))
-    system = core.typ.System('mock', core.typ.Corpus.Empty, (2, ))
-    corpus = core.typ.Corpus.WebApplications
+    expected = core.typ.System('mock', core.typ.Corpus.WEBAPPLICATIONS, (3, ))
+    system = core.typ.System('mock', core.typ.Corpus.EMPTY, (2, ))
+    corpus = core.typ.Corpus.WEBAPPLICATIONS
     assert expected == systems.systems.train(core.typ.SystemCorpus(system, corpus))
 
 
 def test_get_classification():
     """ In the tuple we define the modulus to be used. """
-    untrained_system = core.typ.System('mock', core.typ.Corpus.Empty, (3, ))
-    print('foo: ', untrained_system)
-
-
-
-    corpus = core.typ.Corpus.Mock
-    untrained_sc = core.typ.SystemCorpus(untrained_system, corpus)
-    print('bar: ', untrained_system)
+    untrained_system = core.typ.System('mock', core.typ.Corpus.EMPTY, (3, ))
+    corpus = core.typ.Corpus.MOCK
     classification = systems.systems.get_classification(untrained_system, core.typ.Sentence('2', corpus))
-    assert core.typ.Classification(untrained_sc, core.typ.Response('A', 1.0, [])) == classification
+    assert core.typ.Response('A', 1.0, []) == classification.response
 
     """ During training the modulus is increased by one to model the changing behaviour of a probabilistic system. """
     system = classification.system_corpus.system

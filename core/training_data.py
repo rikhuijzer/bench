@@ -14,6 +14,18 @@ import systems.mock
 pd.set_option('max_colwidth', 180)
 
 
+def get_path(corpus: core.typ.Corpus) -> pathlib.Path:
+    if corpus == core.typ.Corpus.MOCK or corpus == core.typ.Corpus.EMPTY:
+        raise AssertionError('This function should not be called on {}.'.format(corpus))
+    mapping = {
+        core.typ.Corpus.ASKUBUNTU: pathlib.Path('NLU-Evaluation-Corpora') / 'AskUbuntuCorpus.json',
+        core.typ.Corpus.CHATBOT: pathlib.Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json',
+        core.typ.Corpus.WEBAPPLICATIONS: pathlib.Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json',
+        core.typ.Corpus.SNIPS: pathlib.Path('snips') / 'benchmark_data.json'
+    }
+    return mapping[corpus]
+
+
 def create_entity(start: int, end: int, entity: str, value: str) -> dict:
     return {'start': start, 'end': end, 'entity': entity, 'value': value}
 
@@ -36,12 +48,12 @@ def convert_message_to_annotated_str(message: rasa_nlu.training_data.Message) ->
 
 def convert_nlu_evaluation_entity(text: str, entity: dict) -> dict:
     """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
-    start = convert_index(text, entity['start'], core.typ.StartEnd.start)
-    end = convert_index(text, entity['stop'], core.typ.StartEnd.end)
+    start = convert_index(text, entity['start'], start=True)
+    end = convert_index(text, entity['stop'], start=False)
     return create_entity(start, end, entity=entity['entity'], value=entity['text'])
 
 
-def messages_to_dataframe(messages: typing.Tuple[rasa_nlu.training_data.Message, ...], focus=core.typ.Focus.all) -> pd.DataFrame:
+def messages_to_dataframe(messages: core.typ.Messages, focus=core.typ.Focus.ALL) -> pd.DataFrame:
     """ Returns a DataFrame (table) from a list of Message objects which can be used for visualisation.
 
     Args:
@@ -50,23 +62,24 @@ def messages_to_dataframe(messages: typing.Tuple[rasa_nlu.training_data.Message,
     """
     data = {'message': [], 'intent': [], 'training': []}
     for message in messages:
-        data['message'].append(message.text if focus.value == 'intent' else convert_message_to_annotated_str(message))
+        intent_focus = focus == core.typ.Focus.INTENT
+        data['message'].append(message.text if intent_focus else convert_message_to_annotated_str(message))
         data['intent'].append(message.data['intent'])
         data['training'].append(message.data['training'])
     return pd.DataFrame(data)
 
 
 def generate_watson_intents(corpus: core.typ.Corpus, path: pathlib.Path):
-    df = messages_to_dataframe(get_filtered_messages(corpus, core.typ.TrainTest.train), core.typ.Focus.intent)
+    df = messages_to_dataframe(get_filtered_messages(corpus, train=True), core.typ.Focus.intent)
     df['intent'] = [s.replace(' ', '_') for s in df['intent']]
     df.drop('training', axis=1).to_csv(path, header=False, index=False)
 
 
-def convert_index(text: str, token_index: int, start_end: core.typ.StartEnd) -> int:
+def convert_index(text: str, token_index: int, start: bool) -> int:
     """ Convert token_index as used by NLU-Evaluation Corpora to character index. """
     span_generator = nltk.tokenize.WordPunctTokenizer().span_tokenize(text)
     spans = [span for span in span_generator]
-    return spans[token_index][start_end.value]
+    return spans[token_index][0 if start else 1]
 
 
 def read_nlu_evaluation_corpora(js: dict) -> core.typ.Messages:
@@ -100,10 +113,10 @@ def read_snips(js: dict) -> pd.DataFrame:
 @functools.lru_cache()
 def get_messages(corpus: core.typ.Corpus) -> core.typ.Messages:
     """ Get all messages: Message from some file containing corpus and cache the messages. """
-    if corpus == corpus.Mock:
+    if corpus == corpus.MOCK:
         return tuple(systems.mock.get_mock_messages())
 
-    file = pathlib.Path(__file__).parent.parent / 'datasets' / corpus.value
+    file = core.utils.get_root() / 'datasets' / get_path(corpus)
     with open(str(file), 'rb') as f:
         js = json.load(f)
 
@@ -114,7 +127,7 @@ def get_messages(corpus: core.typ.Corpus) -> core.typ.Messages:
         return read_snips(js)
 
 
-def get_filtered_messages(corpus: core.typ.Corpus, train: bool) -> typing.Iterable[core.typ.Messages]:
+def get_filtered_messages(corpus: core.typ.Corpus, train: bool) -> typing.Iterable[rasa_nlu.training_data.Message]:
     return filter(lambda m: train == m.data['training'], get_messages(corpus))
 
 

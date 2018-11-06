@@ -7,12 +7,26 @@ import core.typ
 import core.utils
 
 
+def get_csv_type(csv: core.typ.CSVs) -> type:
+    mapping = {
+        core.typ.CSVs.GENERAL: float,  # not implemented yet
+        core.typ.CSVs.INTENTS: core.typ.CSVIntent,
+        core.typ.CSVs.ENTITIES: float
+    }
+    return mapping[csv]
+
+
 def get_folder(sc: core.typ.SystemCorpus) -> pathlib.Path:
     return core.utils.get_root() / 'results' / '{}-{}'.format(sc.system.name, sc.corpus.name)
 
 
 def get_filename(sc: core.typ.SystemCorpus, csv: core.typ.CSVs) -> pathlib.Path:
-    return get_folder(sc) / csv.value.filename
+    mapping = {
+        core.typ.CSVs.GENERAL: 'general.yml',
+        core.typ.CSVs.INTENTS: 'intents.csv',
+        core.typ.CSVs.ENTITIES: 'entities.csv'
+    }
+    return get_folder(sc) / mapping[csv]
 
 
 def append_text(text: str, filename: pathlib.Path):
@@ -28,10 +42,29 @@ def get_names(nt: typing.NamedTuple) -> dict:
     return nt.__annotations__
 
 
-def convert_str_tuple(s: str, csv: core.typ.CSVs) -> typing.NamedTuple:
-    print(type(csv))
-    if type(csv) == core.typ.CSVs.Intents.value.named_tuple:
-        return core.typ.CSVIntent(-1, -1, 'sentence', 'intent', 'classification', -1.0, -1)
+def get_tuple_types(t: type) -> typing.Iterable[type]:
+    return map(lambda x: x[1], t._field_types.items())
+
+
+T = typing.TypeVar('T')
+
+
+def convert_item(s: str, t: T) -> T:
+    return typing.cast(t, s)
+
+
+def convert_str_tuple(text: str, csv: core.typ.CSVs) -> typing.NamedTuple:
+    tuple_types = get_tuple_types(get_csv_type(csv))  # might need cast to list
+    mapped = map(lambda t: typing.cast(t[0], t[1]), zip(tuple_types, text.split(',')))
+
+    example = list(tuple_types)[0]
+    print(example)
+
+    if csv == core.typ.CSVs.INTENTS:
+        # return core.typ.CSVIntent(-1, -1, 'sentence', 'intent', 'classification', -1.0, -1)
+        return core.typ.CSVIntent(*mapped)
+    else:
+        raise AssertionError('not implemented')
 
 
 @functools.lru_cache()
@@ -57,7 +90,7 @@ def write_tuple(sc: core.typ.SystemCorpus, t: typing.NamedTuple):
     create_folder(get_folder(sc))
 
     if isinstance(t, core.typ.CSVIntent):
-        filename = get_filename(sc, core.typ.CSVs.Intents)
+        filename = get_filename(sc, core.typ.CSVs.INTENTS)
         create_file(filename, create_header(t))
     else:
         # TODO: Accept other NamedTuples
