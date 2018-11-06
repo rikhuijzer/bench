@@ -46,23 +46,12 @@ def get_tuple_types(t: type) -> typing.Iterable[type]:
     return map(lambda x: x[1], t._field_types.items())
 
 
-T = typing.TypeVar('T')
-
-
-def convert_item(s: str, t: T) -> T:
-    return typing.cast(t, s)
-
-
 def convert_str_tuple(text: str, csv: core.typ.CSVs) -> typing.NamedTuple:
-    tuple_types = get_tuple_types(get_csv_type(csv))  # might need cast to list
-    mapped = map(lambda t: typing.cast(t[0], t[1]), zip(tuple_types, text.split(',')))
-
-    example = list(tuple_types)[0]
-    print(example)
+    tuple_types = get_tuple_types(get_csv_type(csv))
+    converted = map(lambda t: t[0](t[1]), zip(tuple_types, text.split(',')))
 
     if csv == core.typ.CSVs.INTENTS:
-        # return core.typ.CSVIntent(-1, -1, 'sentence', 'intent', 'classification', -1.0, -1)
-        return core.typ.CSVIntent(*mapped)
+        return core.typ.CSVIntent(*converted)
     else:
         raise AssertionError('not implemented')
 

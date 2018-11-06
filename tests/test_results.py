@@ -41,6 +41,4 @@ def test_get_tuple_types():
 def test_convert_str_tuple():
     expected = core.typ.CSVIntent(-1, -1, 'sentence', 'intent', 'classification', -1.0, -1)
     t = core.results.convert_str_tuple('-1,-1,sentence,intent,classification,-1.0,-1', core.typ.CSVs.INTENTS)
-    print(expected)
-    print(t)
     assert expected == t
