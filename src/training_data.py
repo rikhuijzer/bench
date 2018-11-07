@@ -4,6 +4,7 @@ import typing
 import pandas as pd
 import nltk.tokenize
 import rasa_nlu.training_data
+from rasa_nlu.training_data import Message
 import rasa_nlu.training_data.formats.markdown
 import rasa_nlu.utils
 import src.typ
@@ -30,16 +31,17 @@ def create_entity(start: int, end: int, entity: str, value: str) -> dict:
     return {'start': start, 'end': end, 'entity': entity, 'value': value}
 
 
-def create_message(text: str, intent: str, entities: [], training: bool) -> rasa_nlu.training_data.Message:
+def create_message(text: str, intent: str, entities: [], training: bool, corpus: src.typ.Corpus) -> Message:
     """ Helper function to create a message: Message used by Rasa including whether train or test sentence. """
-    message = rasa_nlu.training_data.Message.build(text, intent, entities)
+    message = Message.build(text, intent, entities)
     message.data['training'] = training
+    message.data['corpus'] = corpus
     return message
 
 
-def convert_message_to_annotated_str(message: rasa_nlu.training_data.Message) -> str:
+def convert_message_to_annotated_str(message: Message) -> str:
     """ Convert Message object to string having annotated entities. """
-    training_examples: typing.List[rasa_nlu.training_data.Message] = [message]
+    training_examples: typing.List[Message] = [message]
     training_data = rasa_nlu.training_data.TrainingData(training_examples=training_examples)
     generated = rasa_nlu.training_data.formats.markdown.MarkdownWriter()._generate_training_examples_md(training_data)
     generated = generated[generated.find('\n') + 3:-1]  # removes header
@@ -53,7 +55,7 @@ def convert_nlu_evaluation_entity(text: str, entity: dict) -> dict:
     return create_entity(start, end, entity=entity['entity'], value=entity['text'])
 
 
-def messages_to_dataframe(messages: src.typ.Messages, focus=src.typ.Focus.ALL) -> pd.DataFrame:
+def messages_to_dataframe(messages: typing.Tuple[Message, ...], focus=src.typ.Focus.ALL) -> pd.DataFrame:
     """ Returns a DataFrame (table) from a list of Message objects which can be used for visualisation.
 
     Args:
@@ -82,13 +84,14 @@ def convert_index(text: str, token_index: int, start: bool) -> int:
     return spans[token_index][0 if start else 1]
 
 
-def read_nlu_evaluation_corpora(js: dict) -> src.typ.Messages:
+def read_nlu_evaluation_corpora(js: dict, corpus: src.typ.Corpus) -> typing.Tuple[Message, ...]:
     """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
     def convert_entities(sentence: dict) -> typing.List[dict]:
         return list(map(lambda e: convert_nlu_evaluation_entity(sentence['text'], e), sentence['entities']))
 
-    def convert_sentence(sentence: dict) -> rasa_nlu.training_data.Message:
-        return create_message(sentence['text'], sentence['intent'], convert_entities(sentence), sentence['training'])
+    def convert_sentence(sentence: dict) -> Message:
+        return create_message(sentence['text'], sentence['intent'], convert_entities(sentence),
+                              sentence['training'], corpus)
 
     return tuple(map(convert_sentence, js['sentences']))
 
@@ -111,7 +114,7 @@ def read_snips(js: dict) -> pd.DataFrame:
 
 
 @functools.lru_cache()
-def get_messages(corpus: src.typ.Corpus) -> src.typ.Messages:
+def get_messages(corpus: src.typ.Corpus) -> typing.Tuple[Message, ...]:
     """ Get all messages: Message from some file containing corpus and cache the messages. """
     if corpus == corpus.MOCK:
         return tuple(src.mock.get_mock_messages())
@@ -122,12 +125,12 @@ def get_messages(corpus: src.typ.Corpus) -> src.typ.Messages:
 
     parent_folder: pathlib.Path = file.parent
     if parent_folder.name == 'NLU-Evaluation-Corpora':
-        return read_nlu_evaluation_corpora(js)
+        return read_nlu_evaluation_corpora(js, corpus)
     elif parent_folder.name == 'snips':
         return read_snips(js)
 
 
-def get_filtered_messages(corpus: src.typ.Corpus, train: bool) -> typing.Iterable[rasa_nlu.training_data.Message]:
+def get_filtered_messages(corpus: src.typ.Corpus, train: bool) -> typing.Iterable[Message]:
     return filter(lambda m: train == m.data['training'], get_messages(corpus))
 
 

@@ -10,6 +10,8 @@ import src.mock
 import src.systems.rasa
 import src.systems.watson
 
+import logging
+
 
 @functools.lru_cache(maxsize=1)
 def get_docker_compose_configuration() -> dict:
@@ -34,8 +36,7 @@ def get_header(header: src.typ.Header) -> dict:
 
 def train(sc: src.typ.SystemCorpus) -> src.typ.System:
     """ Train system on corpus. """
-    if sc.system.knowledge != src.typ.Corpus.MOCK:
-        print('Training {} on {}...'.format(sc.system, sc.corpus))
+    logging.info('Training {} on {}...'.format(sc.system, sc.corpus))
 
     train_systems = {  # src.typ.SystemCorpus -> src.typ.System
         'mock': src.mock.train,
@@ -48,11 +49,11 @@ def train(sc: src.typ.SystemCorpus) -> src.typ.System:
     return func(sc)
 
 
-def get_classification(system: src.typ.System, test_sentence: src.typ.Sentence) -> src.typ.Classification:
+def get_classification(system: src.typ.System, message: src.typ.Message) -> src.typ.Classification:
     """ Get intent for some system and some sentence. Function will train system if that is necessary. """
-    if test_sentence.corpus != system.knowledge or 'retrain' in system.data:
+    if message.data['corpus'] != system.knowledge or 'retrain' in system.data:
         system = src.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
-        system = train(src.typ.SystemCorpus(system, test_sentence.corpus))
+        system = train(src.typ.SystemCorpus(system, message.data['corpus']))
 
     get_intent_systems = {  # src.typ.Query -> src.typ.Response
         'mock': src.mock.get_response,
@@ -62,6 +63,6 @@ def get_classification(system: src.typ.System, test_sentence: src.typ.Sentence) 
     }
 
     func = src.utils.get_substring_match(get_intent_systems, system.name)
-    query = src.typ.Query(system, test_sentence.text)
+    query = src.typ.Query(system, message.text)
     response = func(query)
-    return src.typ.Classification(src.typ.SystemCorpus(system, test_sentence.corpus), response)
+    return src.typ.Classification(system, message, response)

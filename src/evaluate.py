@@ -3,11 +3,12 @@ import src.training_data
 import typing
 import rasa_nlu.training_data
 import src.results
+import src.system
 
 
-def classify(sc: src.typ.SystemCorpus, m: rasa_nlu.training_data.Message) -> src.typ.Classification:
+def classify(system: src.typ.System, message: rasa_nlu.training_data.Message) -> src.typ.Classification:
     """ Transform a Rasa Message to a Classification. """
-    return src.system.get_classification(sc.system, src.typ.Sentence(m.text, sc.corpus))
+    return src.system.get_classification(system, message)
 
 
 def get_classifications(sc: src.typ.SystemCorpus) -> typing.Iterable[src.typ.Classification]:
@@ -17,10 +18,11 @@ def get_classifications(sc: src.typ.SystemCorpus) -> typing.Iterable[src.typ.Cla
     """ Run all test sentences from some corpus through system and return classifications. """
     messages = src.training_data.get_filtered_messages(sc.corpus, train=False)
 
+    system = sc.system
     for message in messages:
         # It seems difficult to do this by map, filter, reduce since the system state changes.
-        classification = classify(sc, message)
-        sc = classification.system_corpus
+        classification = classify(system, message)
+        system = classification.system
         yield classification
 
 

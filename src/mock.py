@@ -1,12 +1,15 @@
-import src.typ
-import rasa_nlu.training_data
 import typing
+
+from rasa_nlu.training_data.message import Message
+
 import src.training_data
+import src.typ
 
 
-def get_mock_messages() -> typing.Iterable[rasa_nlu.training_data.Message]:
-    def create_mock_message(x: int) -> rasa_nlu.training_data.Message:
-        return src.training_data.create_message(str(x), 'A' if 0 <= x < 10 else 'B', [], True if x < 15 else False)
+def get_mock_messages() -> typing.Iterable[Message]:
+    def create_mock_message(x: int) -> Message:
+        return src.training_data.create_message(text=str(x), intent='A' if 0 <= x < 10 else 'B', entities=[],
+                                                training=True if x < 15 else False, corpus=src.typ.Corpus.MOCK)
 
     return map(create_mock_message, range(0, 20))
 

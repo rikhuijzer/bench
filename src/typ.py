@@ -1,7 +1,8 @@
 import enum
 import typing
+from typing import Tuple, NamedTuple
 
-import rasa_nlu.training_data
+from rasa_nlu.training_data.message import Message
 
 Focus = enum.Enum('Focus', 'ALL INTENT')
 
@@ -11,25 +12,29 @@ Corpus = enum.Enum('Corpus', 'ASKUBUNTU CHATBOT WEBAPPLICATIONS SNIPS MOCK EMPTY
 
 CSVs = enum.Enum('CSVs', 'GENERAL INTENTS ENTITIES')
 
-Sentence = typing.NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])
+# Messages = Tuple[Message, ...]
 
-System = typing.NamedTuple('System', [('name', str), ('knowledge', Corpus), ('data', typing.Tuple)])
+# Sentence = NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])  # this one is replaced by field in message
 
-SystemCorpus = typing.NamedTuple('SystemCorpus', [('system', System), ('corpus', Corpus)])
+System = NamedTuple('System', [('name', str), ('knowledge', Corpus), ('data', Tuple)])
 
-Query = typing.NamedTuple('Query', [('system', System), ('text', str)])
+SystemCorpus = NamedTuple('SystemCorpus', [('system', System), ('corpus', Corpus)])
 
-Response = typing.NamedTuple('Response', [('intent', str), ('confidence', float), ('entities', typing.List[dict])])
+Query = NamedTuple('Query', [('system', System), ('text', str)])
 
-Classification = typing.NamedTuple('IntentClassification', [('system_corpus', SystemCorpus), ('response', Response)])
+Response = NamedTuple('Response', [('intent', str), ('confidence', float), ('entities', typing.List[dict])])
 
-# Classifications = typing.NamedTuple('IntentClassifications', [('system', System), ('df', pd.DataFrame)])
+Classification = NamedTuple('IntentClassification', [('system', System), ('message', Message), ('response', Response)])
 
-F1Score = typing.NamedTuple('F1Score', [('system', System), ('score', typing.Tuple[float, ...])])
+F1Score = NamedTuple('F1Score', [('system', System), ('score', Tuple[float, ...])])
 
-Messages = typing.Tuple[rasa_nlu.training_data.Message, ...]
+CSVGeneral = NamedTuple('CSVGeneral', [])
 
-CSVIntent = typing.NamedTuple('CSVIntent', [('id', int), ('run', int), ('sentence', str), ('intent', str),
-                                            ('classification', str), ('confidence', float), ('time', int)])
+CSVIntent = NamedTuple('CSVIntent', [('id', int), ('run', int), ('sentence', str), ('intent', str),
+                                     ('classification', str), ('confidence', float), ('time', int)])
 
-CSV = typing.NamedTuple('CSV', [('filename', str), ('named_tuple', type)])
+CSVEntity = NamedTuple('CSVEntity', [])
+
+CSV_types = typing.Union[CSVGeneral, CSVIntent, CSVEntity]
+
+CSV = NamedTuple('CSV', [('filename', str), ('named_tuple', type)])

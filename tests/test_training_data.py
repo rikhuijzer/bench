@@ -22,7 +22,7 @@ def test_message_to_annotated_str():
         src.training_data.create_entity(23, 31, 'date', 'tomorrow'),
         src.training_data.create_entity(35, 43, 'date', 'tomorrow')
     ]
-    message = src.training_data.create_message(text, 'foo', entities, False)
+    message = src.training_data.create_message(text, 'foo', entities, False, src.typ.Corpus.MOCK)
 
     assert expected, src.training_data.convert_message_to_annotated_str(message)
 
@@ -30,7 +30,7 @@ def test_message_to_annotated_str():
 def test_nlu_evaluation_entity_converter():
     def helper(text: str, entity: dict, expected: str):
         result = src.training_data.convert_nlu_evaluation_entity(text, entity)
-        message = src.training_data.create_message(text, 'some intent', [result], False)
+        message = src.training_data.create_message(text, 'some intent', [result], False, src.typ.Corpus.MOCK)
         assert expected == src.training_data.convert_message_to_annotated_str(message)
 
     helper(text='when is the next train in muncher freiheit?',
@@ -54,19 +54,20 @@ def test_get_messages():
     def helper(messages: typing.Tuple, expected_length: int, first_row: dict, last_row: dict):
         assert expected_length == len(messages)
         assert first_row == messages[0].as_dict()
-
         assert last_row == messages[-1].as_dict()
 
     sentences = src.training_data.get_messages(src.typ.Corpus.ASKUBUNTU)
     first_row = {
         'text': 'What software can I use to view epub documents?',
         'intent': 'Software Recommendation',
-        'training': False
+        'training': False,
+        'corpus': src.typ.Corpus.ASKUBUNTU
     }
     last_row = {
         'text': 'What graphical utility can I use for Ubuntu auto shutdown?',
         'intent': 'Shutdown Computer',
-        'training': True
+        'training': True,
+        'corpus': src.typ.Corpus.ASKUBUNTU
     }
 
     helper(sentences, 162, first_row, last_row)
@@ -79,7 +80,8 @@ def test_get_messages():
                       'value': 'marienplatz'}],
         'intent': 'FindConnection',
         'text': 'i want to go marienplatz',
-        'training': False
+        'training': False,
+        'corpus': src.typ.Corpus.CHATBOT
     }
     last_row = {
         'entities': [{'end': 13,
@@ -92,7 +94,8 @@ def test_get_messages():
                       'value': 'studentenstadt'}],
         'intent': 'FindConnection',
         'text': 'from garching to studentenstadt',
-        'training': True
+        'training': True,
+        'corpus': src.typ.Corpus.CHATBOT
     }
     helper(sentences, 206, first_row, last_row)
 
@@ -104,7 +107,8 @@ def test_get_messages():
                       'value': 'Facebook'}],
         'intent': 'Find Alternative',
         'text': 'Alternative to Facebook',
-        'training': False
+        'training': False,
+        'corpus': src.typ.Corpus.WEBAPPLICATIONS
     }
     last_row = {
         'entities': [{'end': 31,
@@ -113,7 +117,8 @@ def test_get_messages():
                       'value': 'Harvest'}],
         'intent': 'Delete Account',
         'text': 'How to disable/delete a Harvest account?',
-        'training': True
+        'training': True,
+        'corpus': src.typ.Corpus.WEBAPPLICATIONS
     }
 
     helper(sentences, 89, first_row, last_row)

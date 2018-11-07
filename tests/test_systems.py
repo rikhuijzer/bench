@@ -1,6 +1,6 @@
 import src.typ
 import src.system
-
+import src.training_data
 
 # Only testing logic and not specific system logic to have speedy tests and avoiding many API calls.
 
@@ -30,12 +30,13 @@ def test_get_classification():
     """ In the tuple we define the modulus to be used. """
     untrained_system = src.typ.System('mock', src.typ.Corpus.EMPTY, (3, ))
     corpus = src.typ.Corpus.MOCK
-    classification = src.system.get_classification(untrained_system, src.typ.Sentence('2', corpus))
+    message = src.training_data.create_message('2', '', [], False, corpus)
+    classification = src.system.get_classification(untrained_system, message)
     assert src.typ.Response('A', 1.0, []) == classification.response
 
     """ During training the modulus is increased by one to model the changing behaviour of a probabilistic system. """
-    system = classification.system_corpus.system
-    classification = src.system.get_classification(system, src.typ.Sentence('2', corpus))
+    system = classification.system
+    classification = src.system.get_classification(system, message)
     trained_system = src.typ.System('mock', corpus, (4, ))
-    assert trained_system == classification.system_corpus.system
+    assert trained_system == classification.system
     assert src.typ.Response('A', 1.0, []) == classification.response

@@ -39,14 +39,14 @@ def get_tuple_types(t: type) -> typing.Iterable[type]:
 def get_csv_type(csv: src.typ.CSVs) -> type:
     """ Get the corresponding type of NamedTuple for some CSV type. """
     mapping = {
-        src.typ.CSVs.GENERAL: float,  # not implemented yet
+        src.typ.CSVs.GENERAL: src.typ.CSVGeneral,
         src.typ.CSVs.INTENTS: src.typ.CSVIntent,
-        src.typ.CSVs.ENTITIES: float
+        src.typ.CSVs.ENTITIES: src.typ.CSVEntity
     }
     return mapping[csv]
 
 
-def convert_str_tuple(text: str, csv: src.typ.CSVs) -> typing.Any:
+def convert_str_tuple(text: str, csv: src.typ.CSVs) -> src.typ.CSV_types:
     """ Convert a string from csv back to NamedTuple. """
     tuple_types = get_tuple_types(get_csv_type(csv))
     converted = map(lambda t: t[0](t[1]), zip(tuple_types, text.split(',')))
@@ -92,7 +92,7 @@ def write_tuple(sc: src.typ.SystemCorpus, t: typing.NamedTuple):
     append_text(convert_tuple_str(t), filename)
 
 
-def get_newest_tuple(sc: src.typ.SystemCorpus, csv: src.typ.CSVs) -> typing.Any:
+def get_newest_tuple(sc: src.typ.SystemCorpus, csv: src.typ.CSVs) -> src.typ.CSV_types:
     """ Get the id for the newest tuple (last line) in the csv. """
     with open(str(get_filename(sc, csv)), 'r') as f:
         content = f.read().strip()
