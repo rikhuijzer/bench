@@ -6,22 +6,22 @@ import nltk.tokenize
 import rasa_nlu.training_data
 import rasa_nlu.training_data.formats.markdown
 import rasa_nlu.utils
-import core.typ
-import core.utils
+import src.typ
+import src.utils
 import pathlib
-import systems.mock
+import src.mock
 
 pd.set_option('max_colwidth', 180)
 
 
-def get_path(corpus: core.typ.Corpus) -> pathlib.Path:
-    if corpus == core.typ.Corpus.MOCK or corpus == core.typ.Corpus.EMPTY:
+def get_path(corpus: src.typ.Corpus) -> pathlib.Path:
+    if corpus == src.typ.Corpus.MOCK or corpus == src.typ.Corpus.EMPTY:
         raise AssertionError('This function should not be called on {}.'.format(corpus))
     mapping = {
-        core.typ.Corpus.ASKUBUNTU: pathlib.Path('NLU-Evaluation-Corpora') / 'AskUbuntuCorpus.json',
-        core.typ.Corpus.CHATBOT: pathlib.Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json',
-        core.typ.Corpus.WEBAPPLICATIONS: pathlib.Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json',
-        core.typ.Corpus.SNIPS: pathlib.Path('snips') / 'benchmark_data.json'
+        src.typ.Corpus.ASKUBUNTU: pathlib.Path('NLU-Evaluation-Corpora') / 'AskUbuntuCorpus.json',
+        src.typ.Corpus.CHATBOT: pathlib.Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json',
+        src.typ.Corpus.WEBAPPLICATIONS: pathlib.Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json',
+        src.typ.Corpus.SNIPS: pathlib.Path('snips') / 'benchmark_data.json'
     }
     return mapping[corpus]
 
@@ -53,7 +53,7 @@ def convert_nlu_evaluation_entity(text: str, entity: dict) -> dict:
     return create_entity(start, end, entity=entity['entity'], value=entity['text'])
 
 
-def messages_to_dataframe(messages: core.typ.Messages, focus=core.typ.Focus.ALL) -> pd.DataFrame:
+def messages_to_dataframe(messages: src.typ.Messages, focus=src.typ.Focus.ALL) -> pd.DataFrame:
     """ Returns a DataFrame (table) from a list of Message objects which can be used for visualisation.
 
     Args:
@@ -62,15 +62,15 @@ def messages_to_dataframe(messages: core.typ.Messages, focus=core.typ.Focus.ALL)
     """
     data = {'message': [], 'intent': [], 'training': []}
     for message in messages:
-        intent_focus = focus == core.typ.Focus.INTENT
+        intent_focus = focus == src.typ.Focus.INTENT
         data['message'].append(message.text if intent_focus else convert_message_to_annotated_str(message))
         data['intent'].append(message.data['intent'])
         data['training'].append(message.data['training'])
     return pd.DataFrame(data)
 
 
-def generate_watson_intents(corpus: core.typ.Corpus, path: pathlib.Path):
-    df = messages_to_dataframe(get_filtered_messages(corpus, train=True), core.typ.Focus.intent)
+def generate_watson_intents(corpus: src.typ.Corpus, path: pathlib.Path):
+    df = messages_to_dataframe(get_filtered_messages(corpus, train=True), src.typ.Focus.intent)
     df['intent'] = [s.replace(' ', '_') for s in df['intent']]
     df.drop('training', axis=1).to_csv(path, header=False, index=False)
 
@@ -82,7 +82,7 @@ def convert_index(text: str, token_index: int, start: bool) -> int:
     return spans[token_index][0 if start else 1]
 
 
-def read_nlu_evaluation_corpora(js: dict) -> core.typ.Messages:
+def read_nlu_evaluation_corpora(js: dict) -> src.typ.Messages:
     """ Convert NLU Evaluation Corpora dictionary to the internal representation. """
     def convert_entities(sentence: dict) -> typing.List[dict]:
         return list(map(lambda e: convert_nlu_evaluation_entity(sentence['text'], e), sentence['entities']))
@@ -111,12 +111,12 @@ def read_snips(js: dict) -> pd.DataFrame:
 
 
 @functools.lru_cache()
-def get_messages(corpus: core.typ.Corpus) -> core.typ.Messages:
+def get_messages(corpus: src.typ.Corpus) -> src.typ.Messages:
     """ Get all messages: Message from some file containing corpus and cache the messages. """
     if corpus == corpus.MOCK:
-        return tuple(systems.mock.get_mock_messages())
+        return tuple(src.mock.get_mock_messages())
 
-    file = core.utils.get_root() / 'datasets' / get_path(corpus)
+    file = src.utils.get_root() / 'datasets' / get_path(corpus)
     with open(str(file), 'rb') as f:
         js = json.load(f)
 
@@ -127,10 +127,10 @@ def get_messages(corpus: core.typ.Corpus) -> core.typ.Messages:
         return read_snips(js)
 
 
-def get_filtered_messages(corpus: core.typ.Corpus, train: bool) -> typing.Iterable[rasa_nlu.training_data.Message]:
+def get_filtered_messages(corpus: src.typ.Corpus, train: bool) -> typing.Iterable[rasa_nlu.training_data.Message]:
     return filter(lambda m: train == m.data['training'], get_messages(corpus))
 
 
-def get_intents(corpus: core.typ.Corpus) -> typing.Iterable[str]:
+def get_intents(corpus: src.typ.Corpus) -> typing.Iterable[str]:
     """ Returns intent for each message in some corpus. To get unique intents one can simply cast it to a set. """
     return map(lambda m: m.data['intent'], get_messages(corpus))

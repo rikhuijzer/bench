@@ -1,7 +1,7 @@
 import json
 import typing
-import core.typ
-import core.training_data
+import src.typ
+import src.training_data
 
 
 def get_lex_template() -> str:
@@ -41,24 +41,24 @@ def fill_lex_json(intent: str, utterances: typing.Tuple[str, ...]) -> dict:
 IntentJSON = typing.NamedTuple('IntentJSON', [('intent', str), ('json', dict)])
 
 
-def get_intents_lex_json(corpus: core.typ.Corpus) -> typing.Iterable[IntentJSON]:
+def get_intents_lex_json(corpus: src.typ.Corpus) -> typing.Iterable[IntentJSON]:
     """ Generator for Amazon Lex templates each filled for some intent with its utterances. """
-    messages = core.training_data.get_filtered_messages(corpus, train=True)
-    intents = core.training_data.get_intents(corpus)
+    messages = src.training_data.get_filtered_messages(corpus, train=True)
+    intents = src.training_data.get_intents(corpus)
 
     for intent in intents:
         utterances = tuple([message.text for message in messages if message.data['intent'] == intent])
         yield IntentJSON(intent, fill_lex_json(intent, utterances))
 
 
-def train(sc: core.typ.SystemCorpus) -> core.typ.System:
-    return core.typ.System()
+def train(sc: src.typ.SystemCorpus) -> src.typ.System:
+    return src.typ.System()
 
 
-def store_lex_training_data(corpus: core.typ.Corpus):
-    intents = set(core.training_data.get_intents(
-        core.training_data.get_filtered_messages(core.training_data.get_messages(corpus), train=True)))
+def store_lex_training_data(corpus: src.typ.Corpus):
+    intents = set(src.training_data.get_intents(
+        src.training_data.get_filtered_messages(src.training_data.get_messages(corpus), train=True)))
 
 
-def get_response(query: core.typ.Query) -> core.typ.Response:
-    return core.typ.Response()
+def get_response(query: src.typ.Query) -> src.typ.Response:
+    return src.typ.Response()

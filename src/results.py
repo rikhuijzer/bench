@@ -3,20 +3,20 @@ import os
 import pathlib
 import typing
 
-import core.typ
-import core.utils
+import src.typ
+import src.utils
 
 
-def get_folder(sc: core.typ.SystemCorpus) -> pathlib.Path:
-    return core.utils.get_root() / 'results' / '{}-{}'.format(sc.system.name, sc.corpus.name)
+def get_folder(sc: src.typ.SystemCorpus) -> pathlib.Path:
+    return src.utils.get_root() / 'results' / '{}-{}'.format(sc.system.name, sc.corpus.name)
 
 
-def get_filename(sc: core.typ.SystemCorpus, csv: core.typ.CSVs) -> pathlib.Path:
+def get_filename(sc: src.typ.SystemCorpus, csv: src.typ.CSVs) -> pathlib.Path:
     """ Returns the filename for some system and corpus and CSV type. """
     mapping = {
-        core.typ.CSVs.GENERAL: 'general.yml',
-        core.typ.CSVs.INTENTS: 'intents.csv',
-        core.typ.CSVs.ENTITIES: 'entities.csv'
+        src.typ.CSVs.GENERAL: 'general.yml',
+        src.typ.CSVs.INTENTS: 'intents.csv',
+        src.typ.CSVs.ENTITIES: 'entities.csv'
     }
     return get_folder(sc) / mapping[csv]
 
@@ -36,23 +36,23 @@ def get_tuple_types(t: type) -> typing.Iterable[type]:
     return map(lambda x: x[1], t._field_types.items())
 
 
-def get_csv_type(csv: core.typ.CSVs) -> type:
+def get_csv_type(csv: src.typ.CSVs) -> type:
     """ Get the corresponding type of NamedTuple for some CSV type. """
     mapping = {
-        core.typ.CSVs.GENERAL: float,  # not implemented yet
-        core.typ.CSVs.INTENTS: core.typ.CSVIntent,
-        core.typ.CSVs.ENTITIES: float
+        src.typ.CSVs.GENERAL: float,  # not implemented yet
+        src.typ.CSVs.INTENTS: src.typ.CSVIntent,
+        src.typ.CSVs.ENTITIES: float
     }
     return mapping[csv]
 
 
-def convert_str_tuple(text: str, csv: core.typ.CSVs) -> typing.Any:
+def convert_str_tuple(text: str, csv: src.typ.CSVs) -> typing.Any:
     """ Convert a string from csv back to NamedTuple. """
     tuple_types = get_tuple_types(get_csv_type(csv))
     converted = map(lambda t: t[0](t[1]), zip(tuple_types, text.split(',')))
 
-    if csv == core.typ.CSVs.INTENTS:
-        return core.typ.CSVIntent(*converted)
+    if csv == src.typ.CSVs.INTENTS:
+        return src.typ.CSVIntent(*converted)
     else:
         raise AssertionError('not implemented')
 
@@ -78,21 +78,21 @@ def create_header(t: typing.NamedTuple) -> str:
     return ','.join([name for name in t.__annotations__])
 
 
-def write_tuple(sc: core.typ.SystemCorpus, t: typing.NamedTuple):
+def write_tuple(sc: src.typ.SystemCorpus, t: typing.NamedTuple):
     """ Write some tuple to CSV. Also creates folder and file if file does not yet exist. """
     create_folder(get_folder(sc))
 
-    if isinstance(t, core.typ.CSVIntent):
-        filename = get_filename(sc, core.typ.CSVs.INTENTS)
+    if isinstance(t, src.typ.CSVIntent):
+        filename = get_filename(sc, src.typ.CSVs.INTENTS)
         create_file(filename, create_header(t))
     else:
         # TODO: Accept other NamedTuples
-        raise AssertionError('core.write.write_tuple got invalid input t: {}'.format(t))
+        raise AssertionError('src.write.write_tuple got invalid input t: {}'.format(t))
 
     append_text(convert_tuple_str(t), filename)
 
 
-def get_newest_tuple(sc: core.typ.SystemCorpus, csv: core.typ.CSVs) -> typing.Any:
+def get_newest_tuple(sc: src.typ.SystemCorpus, csv: src.typ.CSVs) -> typing.Any:
     """ Get the id for the newest tuple (last line) in the csv. """
     with open(str(get_filename(sc, csv)), 'r') as f:
         content = f.read().strip()
@@ -100,14 +100,23 @@ def get_newest_tuple(sc: core.typ.SystemCorpus, csv: core.typ.CSVs) -> typing.An
     return convert_str_tuple(last_line, csv)
 
 
-def get_csv_intent(c: core.typ.Classification) -> core.typ.CSVIntent:
+def get_csv_intent(c: src.typ.Classification) -> src.typ.CSVIntent:
     """ Convert classification to intent tuple which can be sent to CSV. """
     system, corpus = c.system_corpus
     response = c.response
     # id | run | sentence | intent | classification | confidence [%] | time [ms] |
+    newest_tuple = get_newest_tuple(c.system_corpus, src.typ.CSVs.INTENTS)
+    # id = newest_tuple.id + 1,
+    # run = TODO: Add timestamp to run
+    # sentence = TODO: Classification does not reply with sentence information
+    # intent = TODO: see above
+    # classification = response.intent
+    # confidence = response.confidence
+    # time [ms] = TODO: implement timing
+    return src.typ.CSVIntent()
 
 
-def write_classification(c: core.typ.Classification):
+def write_classification(c: src.typ.Classification):
     system, corpus = c.system_corpus
     response = c.response
 

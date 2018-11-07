@@ -1,11 +1,11 @@
-import core.typ
+import src.typ
 import os
 
 
 # Possibly interesting: https://github.com/joe4k/wdcutils/
 
 
-def get_response(query: core.typ.Query) -> core.typ.Response:
+def get_response(query: src.typ.Query) -> src.typ.Response:
     from watson_developer_cloud import AssistantV1
     import time
     time.sleep(1)
@@ -20,4 +20,4 @@ def get_response(query: core.typ.Query) -> core.typ.Response:
         classification = response['intents'][0]['intent'].replace('_', ' ')
     else:
         classification = ''
-    return core.typ.Classification(classification, '-1.0', [])
+    return src.typ.Classification(classification, '-1.0', [])

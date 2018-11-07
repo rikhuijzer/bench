@@ -1,12 +1,12 @@
-import core.training_data
-import core.typ
+import src.training_data
+import src.typ
 import typing
 import functools
 
 
 def test_convert_index():
     def helper(text: str, token_index: int, expected: int, start: bool):
-        index = core.training_data.convert_index(text, token_index, start)
+        index = src.training_data.convert_index(text, token_index, start)
         assert expected == index
 
     text = 'Upgrading from 11.10 to 12.04'
@@ -18,20 +18,20 @@ def test_message_to_annotated_str():
     text = 'Could I pay you 50 yen tomorrow or tomorrow?'
     expected = 'Could I pay you 50 [yen](currency lorem ipsum) [tomorrow](date) or [tomorrow](date)?'
     entities = [
-        core.training_data.create_entity(19, 22, 'currency lorem ipsum', 'yen'),
-        core.training_data.create_entity(23, 31, 'date', 'tomorrow'),
-        core.training_data.create_entity(35, 43, 'date', 'tomorrow')
+        src.training_data.create_entity(19, 22, 'currency lorem ipsum', 'yen'),
+        src.training_data.create_entity(23, 31, 'date', 'tomorrow'),
+        src.training_data.create_entity(35, 43, 'date', 'tomorrow')
     ]
-    message = core.training_data.create_message(text, 'foo', entities, False)
+    message = src.training_data.create_message(text, 'foo', entities, False)
 
-    assert expected, core.training_data.convert_message_to_annotated_str(message)
+    assert expected, src.training_data.convert_message_to_annotated_str(message)
 
 
 def test_nlu_evaluation_entity_converter():
     def helper(text: str, entity: dict, expected: str):
-        result = core.training_data.convert_nlu_evaluation_entity(text, entity)
-        message = core.training_data.create_message(text, 'some intent', [result], False)
-        assert expected == core.training_data.convert_message_to_annotated_str(message)
+        result = src.training_data.convert_nlu_evaluation_entity(text, entity)
+        message = src.training_data.create_message(text, 'some intent', [result], False)
+        assert expected == src.training_data.convert_message_to_annotated_str(message)
 
     helper(text='when is the next train in muncher freiheit?',
            entity={'entity': 'Vehicle', 'start': 4, 'stop': 4, 'text': 'train'},
@@ -57,7 +57,7 @@ def test_get_messages():
 
         assert last_row == messages[-1].as_dict()
 
-    sentences = core.training_data.get_messages(core.typ.Corpus.ASKUBUNTU)
+    sentences = src.training_data.get_messages(src.typ.Corpus.ASKUBUNTU)
     first_row = {
         'text': 'What software can I use to view epub documents?',
         'intent': 'Software Recommendation',
@@ -71,7 +71,7 @@ def test_get_messages():
 
     helper(sentences, 162, first_row, last_row)
 
-    sentences = core.training_data.get_messages(core.typ.Corpus.CHATBOT)
+    sentences = src.training_data.get_messages(src.typ.Corpus.CHATBOT)
     first_row = {
         'entities': [{'end': 24,
                       'entity': 'StationDest',
@@ -96,7 +96,7 @@ def test_get_messages():
     }
     helper(sentences, 206, first_row, last_row)
 
-    sentences = core.training_data.get_messages(core.typ.Corpus.WEBAPPLICATIONS)
+    sentences = src.training_data.get_messages(src.typ.Corpus.WEBAPPLICATIONS)
     first_row = {
         'entities': [{'end': 23,
                       'entity': 'WebService',
@@ -122,10 +122,10 @@ def test_get_messages():
 def test_get_intents():
     expected = {'Delete Account', 'Find Alternative', 'Download Video',
                 'Filter Spam', 'Change Password', 'Sync Accounts', 'None', 'Export Data'}
-    assert expected == set(core.training_data.get_intents(core.typ.Corpus.WEBAPPLICATIONS))
+    assert expected == set(src.training_data.get_intents(src.typ.Corpus.WEBAPPLICATIONS))
 
 
 def test_get_filtered_messages():
-    func = functools.partial(core.training_data.get_filtered_messages, corpus=core.typ.Corpus.MOCK)
+    func = functools.partial(src.training_data.get_filtered_messages, corpus=src.typ.Corpus.MOCK)
     assert 15 == len(tuple(func(train=True)))
     assert 5 == len(tuple(func(train=False)))

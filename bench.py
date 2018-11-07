@@ -1,5 +1,3 @@
-from core.evaluate import *
-from core.training_data import *
 import core.evaluate
 import core.training_data
 import core.typ

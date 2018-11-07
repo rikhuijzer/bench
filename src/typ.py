@@ -25,7 +25,7 @@ Classification = typing.NamedTuple('IntentClassification', [('system_corpus', Sy
 
 # Classifications = typing.NamedTuple('IntentClassifications', [('system', System), ('df', pd.DataFrame)])
 
-F1Scores = typing.NamedTuple('F1Scores', [('system', System), ('scores', typing.Tuple[float, ...])])
+F1Score = typing.NamedTuple('F1Score', [('system', System), ('score', typing.Tuple[float, ...])])
 
 Messages = typing.Tuple[rasa_nlu.training_data.Message, ...]
 
