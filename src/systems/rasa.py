@@ -4,13 +4,20 @@ import requests
 import src.training_data
 import src.typ
 import json
+from rasa_nlu.training_data import Message
 
 
 # example output: https://rasa.com/docs/nlu/0.13.7/choosing_pipeline/#choosing-pipeline
 
+def clear_data_field(message: Message) -> Message:
+    """Clear my added corpus data field since it is not used and will cause problems for as_json()."""
+    message.data['corpus'] = ''
+    return message
+
 
 def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
-    training_examples = list(src.training_data.get_filtered_messages(system_corpus.corpus, train=True))
+    training_examples = src.training_data.get_filtered_messages(system_corpus.corpus, train=True)
+    training_examples = list(map(lambda message: clear_data_field(message), training_examples))
     training_data = rasa_nlu.training_data.TrainingData(training_examples=training_examples).as_json()
     url = 'http://localhost:{}/train?project=my_project'
     r = requests.post(url.format(src.system.get_port(system_corpus.system.name)),
