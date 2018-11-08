@@ -4,6 +4,7 @@ from rasa_nlu.training_data.message import Message
 
 import src.training_data
 import src.typ
+import src.utils
 
 
 def get_mock_messages() -> typing.Iterable[Message]:
@@ -14,10 +15,11 @@ def get_mock_messages() -> typing.Iterable[Message]:
     return map(create_mock_message, range(0, 20))
 
 
-def train(sc: src.typ.SystemCorpus) -> src.typ.System:
-    data = list(sc.system.data)
+def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
+    data = list(system_corpus.system.data)
     data[0] += 1
-    return src.typ.System(sc.system.name, sc.corpus, tuple(data))
+    timestamp = src.utils.convert_str_timestamp('2018-11-03 16:43:08')
+    return src.typ.System(system_corpus.system.name, system_corpus.corpus, timestamp, tuple(data))
 
 
 def get_response(query: src.typ.Query) -> src.typ.Response:

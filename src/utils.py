@@ -5,6 +5,7 @@ import pathlib
 import time
 import types
 import typing
+import datetime
 
 
 def get_root() -> pathlib.Path:
@@ -46,3 +47,14 @@ def get_substring_match(dictionary: dict, string: str) -> T:
                         .format(string, n, matches))
 
     return dictionary[matches[0]]
+
+
+timestamp_format = '%Y-%m-%d %H:%M:%S'
+
+
+def get_timestamp() -> datetime.datetime:
+    return datetime.datetime.now()
+
+
+def convert_str_timestamp(timestamp: str) -> datetime.datetime:
+    return datetime.datetime.strptime(timestamp, timestamp_format)

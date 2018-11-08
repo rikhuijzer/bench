@@ -51,7 +51,7 @@ def get_intents_lex_json(corpus: src.typ.Corpus) -> typing.Iterable[IntentJSON]:
         yield IntentJSON(intent, fill_lex_json(intent, utterances))
 
 
-def train(sc: src.typ.SystemCorpus) -> src.typ.System:
+def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
     return src.typ.System()
 
 

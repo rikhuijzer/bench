@@ -1,16 +1,16 @@
+import shutil
+
 import src.results
 import src.typ
-import shutil
-import functools
 
-system = src.typ.System('mock', src.typ.Corpus.MOCK, ())
+system = src.typ.System('mock', src.typ.Corpus.MOCK, '', ())
 corpus = src.typ.Corpus.MOCK
-sc = src.typ.SystemCorpus(system, corpus)
+system_corpus = src.typ.SystemCorpus(system, corpus)
 result = src.typ.CSVs.GENERAL
 
 
 def test_get_filename():
-    fn = src.results.get_filename(sc, result)
+    fn = src.results.get_filename(system_corpus, result)
     assert 'results' == fn.parents[1].name
     assert 'mock-MOCK' == fn.parents[0].name
     assert 'general.yml' == fn.name
@@ -30,19 +30,19 @@ def test_write_tuple():
     for i in range(0, 3):
         if i < 2:
             clear_cache()  # to avoid complexity the cache should not change behaviour, so we test without the cache
-        src.results.write_tuple(sc, create_csv_intent(i))
+        src.results.write_tuple(system_corpus, create_csv_intent(i))
 
     # check whether the three lines are added
-    with open(str(src.results.get_filename(sc, csv)), 'r') as f:
+    with open(str(src.results.get_filename(system_corpus, csv)), 'r') as f:
         assert src.results.create_header(create_csv_intent(0)) == f.readline().strip()
         for i in range(0, 3):
             assert src.results.convert_tuple_str(create_csv_intent(i)) == f.readline().strip()
 
     # since we now have a file with some data we can test functions on this
-    assert create_csv_intent(2) == src.results.get_newest_tuple(sc, csv)
+    assert create_csv_intent(2) == src.results.get_newest_tuple(system_corpus, csv)
 
     # remove mock-MOCK folder
-    shutil.rmtree(str(src.results.get_folder(sc)))
+    shutil.rmtree(str(src.results.get_folder(system_corpus)))
 
 
 def test_get_tuple_types():

@@ -34,9 +34,23 @@ def get_header(header: src.typ.Header) -> dict:
         return {'content-type': 'application/x-yml'}
 
 
-def train(sc: src.typ.SystemCorpus) -> src.typ.System:
+def update_timestamp(system: src.typ.System) -> src.typ.System:
+    # return src.typ.System(system.name, system.knowledge, src.utils.get_timestamp(), system.data)
+    return system._replace(timestamp=src.utils.get_timestamp())
+
+
+def remove_retrain(system: src.typ.System) -> src.typ.System:
+    """Remove retrain flag."""
+    # return src.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
+    return system._replace(data=tuple(filter(lambda x: x != 'retrain', system.data)))
+
+
+def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
     """ Train system on corpus. """
-    logging.info('Training {} on {}...'.format(sc.system, sc.corpus))
+    logging.info('Training {} on {}...'.format(system_corpus.system, system_corpus.corpus))
+
+    system = remove_retrain(system_corpus.system)
+    system = update_timestamp(system)
 
     train_systems = {  # src.typ.SystemCorpus -> src.typ.System
         'mock': src.mock.train,
@@ -45,15 +59,16 @@ def train(sc: src.typ.SystemCorpus) -> src.typ.System:
         'lex': src.systems.amazon_lex.train
     }
 
-    func = src.utils.get_substring_match(train_systems, sc.system.name)
-    return func(sc)
+    func = src.utils.get_substring_match(train_systems, system.name)
+    return func(system_corpus._replace(system=system))
 
 
 def get_classification(system: src.typ.System, message: src.typ.Message) -> src.typ.Classification:
     """ Get intent for some system and some sentence. Function will train system if that is necessary. """
     if message.data['corpus'] != system.knowledge or 'retrain' in system.data:
-        system = src.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))
         system = train(src.typ.SystemCorpus(system, message.data['corpus']))
+    elif not system.timestamp:
+        system = update_timestamp(system)
 
     get_intent_systems = {  # src.typ.Query -> src.typ.Response
         'mock': src.mock.get_response,
