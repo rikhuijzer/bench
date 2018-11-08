@@ -25,13 +25,13 @@ Query = NamedTuple('Query', [('system', System), ('text', str)])
 
 Response = NamedTuple('Response', [('intent', str), ('confidence', float), ('entities', typing.List[dict])])
 
-Classification = NamedTuple('IntentClassification', [('system', System), ('message', Message), ('response', Response)])
+Classification = NamedTuple('Classification', [('system', System), ('message', Message), ('response', Response)])
 
 F1Score = NamedTuple('F1Score', [('system', System), ('score', Tuple[float, ...])])
 
 CSVGeneral = NamedTuple('CSVGeneral', [])
 
-CSVIntent = NamedTuple('CSVIntent', [('id', int), ('run', int), ('sentence', str), ('intent', str),
+CSVIntent = NamedTuple('CSVIntent', [('id', int), ('run', str), ('sentence', str), ('intent', str),
                                      ('classification', str), ('confidence', float), ('time', int)])
 
 CSVEntity = NamedTuple('CSVEntity', [])

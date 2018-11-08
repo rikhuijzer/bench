@@ -1,6 +1,7 @@
-import src.utils
 import pytest
-import datetime
+
+import src.utils
+from src.systems.mock import timestamp_text
 
 
 def test_get_substring_match():
@@ -15,7 +16,7 @@ def test_get_substring_match():
 
 
 def test_timestamp():
-    text = '2018-11-03 16:43:08'
+    text = timestamp_text
     timestamp = src.utils.convert_str_timestamp(text)
     result_text = str(timestamp)
     assert text == result_text

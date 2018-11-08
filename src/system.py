@@ -6,7 +6,7 @@ import src.typ
 import src.utils
 import src.systems.amazon_lex
 import src.systems.deeppavlov
-import src.mock
+import src.systems.mock
 import src.systems.rasa
 import src.systems.watson
 
@@ -53,7 +53,7 @@ def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
     system = update_timestamp(system)
 
     train_systems = {  # src.typ.SystemCorpus -> src.typ.System
-        'mock': src.mock.train,
+        'mock': src.systems.mock.train,
         'rasa': src.systems.rasa.train,
         'deeppavlov': src.systems.deeppavlov.train,
         'lex': src.systems.amazon_lex.train
@@ -71,7 +71,7 @@ def get_classification(system: src.typ.System, message: src.typ.Message) -> src.
         system = update_timestamp(system)
 
     get_intent_systems = {  # src.typ.Query -> src.typ.Response
-        'mock': src.mock.get_response,
+        'mock': src.systems.mock.get_response,
         'rasa': src.systems.rasa.get_response,
         'watson': src.systems.watson.get_response,
         'amazon': src.systems.amazon_lex.get_response,

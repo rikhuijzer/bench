@@ -10,7 +10,7 @@ import rasa_nlu.utils
 import src.typ
 import src.utils
 import pathlib
-import src.mock
+import src.systems.mock
 
 pd.set_option('max_colwidth', 180)
 
@@ -117,7 +117,7 @@ def read_snips(js: dict) -> pd.DataFrame:
 def get_messages(corpus: src.typ.Corpus) -> typing.Tuple[Message, ...]:
     """ Get all messages: Message from some file containing corpus and cache the messages. """
     if corpus == corpus.MOCK:
-        return tuple(src.mock.get_mock_messages())
+        return tuple(src.systems.mock.get_mock_messages())
 
     file = src.utils.get_root() / 'datasets' / get_path(corpus)
     with open(str(file), 'rb') as f:

@@ -5,6 +5,7 @@ import typing
 
 import src.typ
 import src.utils
+import src.evaluate
 
 
 def get_folder(sc: src.typ.SystemCorpus) -> pathlib.Path:
@@ -78,48 +79,48 @@ def create_header(t: typing.NamedTuple) -> str:
     return ','.join([name for name in t.__annotations__])
 
 
-def write_tuple(sc: src.typ.SystemCorpus, t: typing.NamedTuple):
+def write_tuple(sc: src.typ.SystemCorpus, namedtuple: typing.NamedTuple):
     """ Write some tuple to CSV. Also creates folder and file if file does not yet exist. """
     create_folder(get_folder(sc))
 
-    if isinstance(t, src.typ.CSVIntent):
+    if isinstance(namedtuple, src.typ.CSVIntent):
         filename = get_filename(sc, src.typ.CSVs.INTENTS)
-        create_file(filename, create_header(t))
+        create_file(filename, create_header(namedtuple))
     else:
         # TODO: Accept other NamedTuples
-        raise AssertionError('src.write.write_tuple got invalid input t: {}'.format(t))
+        raise AssertionError('src.write.write_tuple got invalid input t: {}'.format(namedtuple))
 
-    append_text(convert_tuple_str(t), filename)
+    append_text(convert_tuple_str(namedtuple), filename)
 
 
-def get_newest_tuple(sc: src.typ.SystemCorpus, csv: src.typ.CSVs) -> src.typ.CSV_types:
+def get_newest_tuple(sc: src.typ.SystemCorpus, csv: src.typ.CSVs) -> typing.Optional[src.typ.CSV_types]:
     """ Get the id for the newest tuple (last line) in the csv. """
-    with open(str(get_filename(sc, csv)), 'r') as f:
+    filename = get_filename(sc, csv)
+
+    if not os.path.isfile(filename):
+        return None
+
+    with open(str(filename), 'r') as f:
         content = f.read().strip()
     last_line = content[content.rfind('\n'):]
     return convert_str_tuple(last_line, csv)
 
 
-def get_csv_intent(c: src.typ.Classification) -> src.typ.CSVIntent:
+def get_csv_intent(classification: src.typ.Classification) -> src.typ.CSVIntent:
     """ Convert classification to intent tuple which can be sent to CSV. """
-    system, corpus = c.system_corpus
-    response = c.response
-    # id | run | sentence | intent | classification | confidence [%] | time [ms] |
-    newest_tuple = get_newest_tuple(c.system_corpus, src.typ.CSVs.INTENTS)
-    # id = newest_tuple.id + 1,
-    # run = TODO: Add timestamp to run
-    # sentence = TODO: Classification does not reply with sentence information
-    # intent = TODO: see above
-    # classification = response.intent
-    # confidence = response.confidence
-    # time [ms] = TODO: implement timing
-    return src.typ.CSVIntent()
+    system_corpus = src.typ.SystemCorpus(classification.system, classification.message.data['corpus'])
+    newest_tuple = get_newest_tuple(system_corpus, src.typ.CSVs.INTENTS)
+    return src.typ.CSVIntent(id=newest_tuple.id + 1 if newest_tuple else 0,
+                             run=classification.system.timestamp,
+                             sentence=classification.message.text,
+                             intent=classification.message.data['intent'],
+                             classification=classification.response.intent,
+                             confidence=classification.response.confidence,
+                             time=0)
 
 
-def write_classification(c: src.typ.Classification):
-    system, corpus = c.system_corpus
-    response = c.response
-
-    print(2)
-
-    #
+def write_classification(classification: src.typ.Classification):
+    """Unpack and write a classification to various files."""
+    csv_intent = get_csv_intent(classification)
+    system_corpus = src.typ.SystemCorpus(classification.system, classification.message.data['corpus'])
+    write_tuple(system_corpus, csv_intent)

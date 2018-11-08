@@ -2,6 +2,9 @@ import shutil
 
 import src.results
 import src.typ
+import src.training_data
+from src.systems.mock import timestamp_text
+from tests.utils import clear_cache, cleanup
 
 system = src.typ.System('mock', src.typ.Corpus.MOCK, '', ())
 corpus = src.typ.Corpus.MOCK
@@ -17,39 +20,47 @@ def test_get_filename():
 
 
 def test_write_tuple():
-    def clear_cache():
-        src.results.create_folder.cache_clear()
-        src.results.create_file.cache_clear()
-
     def create_csv_intent(x: int) -> src.typ.CSVIntent:
-        return src.typ.CSVIntent(x, -1, 'sentence', 'intent', 'classification', -1.0, -1)
+        return src.typ.CSVIntent(x, timestamp_text, 'sentence', 'intent', 'classification', -1.0, -1)
 
     csv = src.typ.CSVs.INTENTS
 
-    # write three lines to csv
-    for i in range(0, 3):
-        if i < 2:
-            clear_cache()  # to avoid complexity the cache should not change behaviour, so we test without the cache
-        src.results.write_tuple(system_corpus, create_csv_intent(i))
-
-    # check whether the three lines are added
-    with open(str(src.results.get_filename(system_corpus, csv)), 'r') as f:
-        assert src.results.create_header(create_csv_intent(0)) == f.readline().strip()
+    def write():
         for i in range(0, 3):
-            assert src.results.convert_tuple_str(create_csv_intent(i)) == f.readline().strip()
+            if i < 2:
+                clear_cache()  # to avoid complexity the cache should not change behaviour, so we test without the cache
+            src.results.write_tuple(system_corpus, create_csv_intent(i))
 
-    # since we now have a file with some data we can test functions on this
-    assert create_csv_intent(2) == src.results.get_newest_tuple(system_corpus, csv)
+    def validate_write():
+        with open(str(src.results.get_filename(system_corpus, csv)), 'r') as f:
+            assert src.results.create_header(create_csv_intent(0)) == f.readline().strip()
+            for i in range(0, 3):
+                assert src.results.convert_tuple_str(create_csv_intent(i)) == f.readline().strip()
 
-    # remove mock-MOCK folder
-    shutil.rmtree(str(src.results.get_folder(system_corpus)))
+    def test_get_newest_tuple():
+        assert create_csv_intent(2) == src.results.get_newest_tuple(system_corpus, csv)
+
+    def test_get_csv_intent():
+        message = src.training_data.create_message('foo', 'bar', [], False, corpus)
+        response = src.typ.Response('bar', -1.0, [])
+        classification = src.typ.Classification(system_corpus.system, message, response)
+        csv_intent = src.results.get_csv_intent(classification)
+        expected = src.typ.CSVIntent(id=3, run='', sentence='foo', intent='bar',
+                                     classification='bar', confidence=-1.0, time=0)
+        assert expected == csv_intent
+
+    write()
+    validate_write()
+    test_get_newest_tuple()
+    test_get_csv_intent()
+    cleanup()
 
 
 def test_get_tuple_types():
-    assert [int, int, str, str, str, float, int] == list(src.results.get_tuple_types(src.typ.CSVIntent))
+    assert [int, str, str, str, str, float, int] == list(src.results.get_tuple_types(src.typ.CSVIntent))
 
 
 def test_convert_str_tuple():
-    expected = src.typ.CSVIntent(-1, -1, 'sentence', 'intent', 'classification', -1.0, -1)
-    t = src.results.convert_str_tuple('-1,-1,sentence,intent,classification,-1.0,-1', src.typ.CSVs.INTENTS)
+    expected = src.typ.CSVIntent(-1, 'run', 'sentence', 'intent', 'classification', -1.0, -1)
+    t = src.results.convert_str_tuple('-1,run,sentence,intent,classification,-1.0,-1', src.typ.CSVs.INTENTS)
     assert expected == t
