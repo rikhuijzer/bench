@@ -10,7 +10,7 @@ import src.typ as tp
 def run_rasa():
     system = tp.System('rasa-spacy', tp.Corpus.EMPTY, timestamp='', data=())
     corpus = tp.Corpus.WEBAPPLICATIONS
-    run_bench(tp.SystemCorpus(system, corpus))  # TODO: Add number of runs
+    run_bench(tp.SystemCorpus(system, corpus), n_runs=8)
 
 
 if __name__ == '__main__':

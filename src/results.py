@@ -82,7 +82,7 @@ def create_header(t: typing.NamedTuple) -> str:
 
 def write_tuple(sc: src.typ.SystemCorpus, namedtuple: typing.NamedTuple):
     """ Write some tuple to CSV. Also creates folder and file if file does not yet exist. """
-    logging.info('Writing: {}'.format(namedtuple))
+    logging.info('Writing {}'.format(namedtuple))
 
     create_folder(get_folder(sc))
 
@@ -94,7 +94,6 @@ def write_tuple(sc: src.typ.SystemCorpus, namedtuple: typing.NamedTuple):
         raise AssertionError('src.write.write_tuple got invalid input t: {}'.format(namedtuple))
 
     append_text(convert_tuple_str(namedtuple), filename)
-
 
 
 def get_newest_tuple(sc: src.typ.SystemCorpus, csv: src.typ.CSVs) -> typing.Optional[src.typ.CSV_types]:

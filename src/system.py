@@ -39,6 +39,11 @@ def update_timestamp(system: src.typ.System) -> src.typ.System:
     return system._replace(timestamp=src.utils.get_timestamp())
 
 
+def add_retrain(system: src.typ.System) -> src.typ.System:
+    """Add retrain flag."""
+    return system._replace(data=system.data + ('retrain', ))
+
+
 def remove_retrain(system: src.typ.System) -> src.typ.System:
     """Remove retrain flag."""
     # return src.typ.System(system.name, system.knowledge, tuple(filter(lambda x: x != 'retrain', system.data)))

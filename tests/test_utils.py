@@ -1,7 +1,7 @@
 import pytest
 
-import src.utils
 from src.systems.mock import timestamp_text
+from src.utils import get_timestamp, convert_str_timestamp, get_substring_match
 
 
 def test_get_substring_match():
@@ -9,14 +9,18 @@ def test_get_substring_match():
         'one': 'foo',
         'two': 'bar'
     }
-    assert 'foo' == src.utils.get_substring_match(pairs, 'one-lorem')
-    assert 'foo' == src.utils.get_substring_match(pairs, 'one-two')
+    assert 'foo' == get_substring_match(pairs, 'one-lorem')
+    assert 'foo' == get_substring_match(pairs, 'one-two')
     with pytest.raises(ValueError):
-        src.utils.get_substring_match(pairs, 'three')
+        get_substring_match(pairs, 'three')
+
+
+def test_get_timestamp():
+    convert_str_timestamp(get_timestamp())
 
 
 def test_timestamp():
     text = timestamp_text
-    timestamp = src.utils.convert_str_timestamp(text)
+    timestamp = convert_str_timestamp(text)
     result_text = str(timestamp)
     assert text == result_text

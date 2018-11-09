@@ -1,6 +1,5 @@
 import enum
 import typing
-from datetime import datetime
 from typing import Tuple, NamedTuple
 
 from rasa_nlu.training_data.message import Message
@@ -17,7 +16,7 @@ CSVs = enum.Enum('CSVs', 'GENERAL INTENTS ENTITIES')
 
 # Sentence = NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])  # this one is replaced by field in message
 
-System = NamedTuple('System', [('name', str), ('knowledge', Corpus), ('timestamp', datetime), ('data', Tuple)])
+System = NamedTuple('System', [('name', str), ('knowledge', Corpus), ('timestamp', str), ('data', Tuple)])
 
 SystemCorpus = NamedTuple('SystemCorpus', [('system', System), ('corpus', Corpus)])
 

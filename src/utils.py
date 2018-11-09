@@ -53,8 +53,9 @@ def get_substring_match(dictionary: dict, string: str) -> T:
 timestamp_format = '%Y-%m-%d %H:%M:%S'
 
 
-def get_timestamp() -> datetime.datetime:
-    return datetime.datetime.now()
+def get_timestamp() -> str:
+    """Returns timestamp as string. Miliseconds are removed by ignoring last few characters of string."""
+    return str(datetime.datetime.now())[:-7]
 
 
 def convert_str_timestamp(timestamp: str) -> datetime.datetime:

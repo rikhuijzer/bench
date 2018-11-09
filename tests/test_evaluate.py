@@ -5,7 +5,7 @@ from tests.utils import system, corpus, system_corpus
 
 
 def test_classify_intents():
-    classifications = tuple(src.evaluate.get_classifications(src.typ.SystemCorpus(system, corpus)))
+    classifications = tuple(src.evaluate.get_classifications(src.typ.SystemCorpus(system, corpus), retrain=False))
     # classifications are for messages 15, 16, 17, 18, 19
     assert 5 == len(classifications)
     assert 'B' == classifications[0].response.intent
