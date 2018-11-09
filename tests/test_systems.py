@@ -1,6 +1,6 @@
 import src.typ
 import src.system
-import src.training_data
+import src.datasets
 import src.utils
 # Only testing logic for Mock system to have speedy tests and avoiding many API calls.
 
@@ -31,7 +31,7 @@ def test_get_classification():
     """ In the tuple we define the modulus to be used. """
     untrained_system = src.typ.System('mock', src.typ.Corpus.EMPTY, '', (3, ))
     corpus = src.typ.Corpus.MOCK
-    message = src.training_data.create_message('2', '', [], False, corpus)
+    message = src.datasets.create_message('2', '', [], False, corpus)
     classification = src.system.get_classification(untrained_system, message)
     assert src.typ.Response('A', 1.0, []) == classification.response
     assert str(classification.system.timestamp) == '2018-11-03 16:43:08'

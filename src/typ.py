@@ -8,7 +8,7 @@ Focus = enum.Enum('Focus', 'ALL INTENT')
 
 Header = enum.Enum('Header', 'JSON YML')
 
-Corpus = enum.Enum('Corpus', 'ASKUBUNTU CHATBOT WEBAPPLICATIONS SNIPS MOCK EMPTY')
+Corpus = enum.Enum('Corpus', 'ASKUBUNTU CHATBOT WEBAPPLICATIONS SNIPS2017 MOCK EMPTY')
 
 CSVs = enum.Enum('CSVs', 'GENERAL INTENTS ENTITIES')
 

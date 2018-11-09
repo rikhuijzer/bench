@@ -2,7 +2,7 @@ import shutil
 
 import src.results
 import src.typ
-import src.training_data
+import src.datasets
 from src.systems.mock import timestamp_text
 from tests.utils import clear_cache, cleanup
 
@@ -41,7 +41,7 @@ def test_write_tuple():
         assert create_csv_intent(2) == src.results.get_newest_tuple(system_corpus, csv)
 
     def test_get_csv_intent():
-        message = src.training_data.create_message('foo', 'bar', [], False, corpus)
+        message = src.datasets.create_message('foo', 'bar', [], False, corpus)
         response = src.typ.Response('bar', -1.0, [])
         classification = src.typ.Classification(system_corpus.system, message, response)
         csv_intent = src.results.get_csv_intent(classification)

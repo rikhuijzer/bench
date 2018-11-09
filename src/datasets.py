@@ -18,13 +18,13 @@ pd.set_option('max_colwidth', 180)
 def get_path(corpus: src.typ.Corpus) -> pathlib.Path:
     if corpus == src.typ.Corpus.MOCK or corpus == src.typ.Corpus.EMPTY:
         raise AssertionError('This function should not be called on {}.'.format(corpus))
-    mapping = {
+    paths = {
         src.typ.Corpus.ASKUBUNTU: pathlib.Path('NLU-Evaluation-Corpora') / 'AskUbuntuCorpus.json',
         src.typ.Corpus.CHATBOT: pathlib.Path('NLU-Evaluation-Corpora') / 'ChatbotCorpus.json',
         src.typ.Corpus.WEBAPPLICATIONS: pathlib.Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json',
-        src.typ.Corpus.SNIPS: pathlib.Path('snips') / 'benchmark_data.json'
+        src.typ.Corpus.SNIPS2017: pathlib.Path('2017-06-custom-intent-engines')
     }
-    return mapping[corpus]
+    return paths[corpus]
 
 
 def create_entity(start: int, end: int, entity: str, value: str) -> dict:
@@ -55,7 +55,7 @@ def convert_nlu_evaluation_entity(text: str, entity: dict) -> dict:
     return create_entity(start, end, entity=entity['entity'], value=entity['text'])
 
 
-def messages_to_dataframe(messages: typing.Tuple[Message, ...], focus=src.typ.Focus.ALL) -> pd.DataFrame:
+def messages_to_dataframe(messages: typing.Iterable[Message], focus=src.typ.Focus.ALL) -> pd.DataFrame:
     """ Returns a DataFrame (table) from a list of Message objects which can be used for visualisation.
 
     Args:
@@ -69,12 +69,6 @@ def messages_to_dataframe(messages: typing.Tuple[Message, ...], focus=src.typ.Fo
         data['intent'].append(message.data['intent'])
         data['training'].append(message.data['training'])
     return pd.DataFrame(data)
-
-
-def generate_watson_intents(corpus: src.typ.Corpus, path: pathlib.Path):
-    df = messages_to_dataframe(get_filtered_messages(corpus, train=True), src.typ.Focus.intent)
-    df['intent'] = [s.replace(' ', '_') for s in df['intent']]
-    df.drop('training', axis=1).to_csv(path, header=False, index=False)
 
 
 def convert_index(text: str, token_index: int, start: bool) -> int:

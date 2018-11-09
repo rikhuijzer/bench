@@ -1,7 +1,7 @@
 import src.systems.amazon_lex
 import json
 import src.typ
-import src.training_data
+import src.datasets
 
 
 def test_get_lex_template():
@@ -16,4 +16,4 @@ def test_get_intents_lex_json():
     corpus = src.typ.Corpus.WEBAPPLICATIONS
     intents = set(map(lambda int_js: int_js.json['resource']['name'], src.systems.amazon_lex.get_intents_lex_json(corpus)))
     assert len(intents) > 0
-    assert set(src.training_data.get_intents(corpus)) == intents
+    assert set(src.datasets.get_intents(corpus)) == intents

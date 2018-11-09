@@ -1,7 +1,7 @@
 import rasa_nlu.training_data
 import requests
 
-import src.training_data
+import src.datasets
 import src.typ
 import json
 from rasa_nlu.training_data import Message
@@ -16,7 +16,7 @@ def clear_data_field(message: Message) -> Message:
 
 
 def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
-    training_examples = src.training_data.get_filtered_messages(system_corpus.corpus, train=True)
+    training_examples = src.datasets.get_filtered_messages(system_corpus.corpus, train=True)
     training_examples = list(map(lambda message: clear_data_field(message), training_examples))
     training_data = rasa_nlu.training_data.TrainingData(training_examples=training_examples).as_json()
     url = 'http://localhost:{}/train?project=my_project'

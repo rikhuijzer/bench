@@ -1,8 +1,15 @@
 import src.typ
 import os
-
+from src.datasets import messages_to_dataframe, get_filtered_messages
+import pathlib
 
 # Possibly interesting: https://github.com/joe4k/wdcutils/
+
+
+def generate_watson_intents(corpus: src.typ.Corpus, path: pathlib.Path):
+    df = messages_to_dataframe(get_filtered_messages(corpus, train=True), src.typ.Focus.intent)
+    df['intent'] = [s.replace(' ', '_') for s in df['intent']]
+    df.drop('training', axis=1).to_csv(path, header=False, index=False)
 
 
 def get_response(query: src.typ.Query) -> src.typ.Response:

@@ -1,4 +1,7 @@
-import src.training_data
+from src.datasets import (
+    create_entity, create_message, convert_message_to_annotated_str, convert_nlu_evaluation_entity,
+    get_messages, get_filtered_messages, get_intents, convert_index
+)
 import src.typ
 import typing
 import functools
@@ -6,7 +9,7 @@ import functools
 
 def test_convert_index():
     def helper(text: str, token_index: int, expected: int, start: bool):
-        index = src.training_data.convert_index(text, token_index, start)
+        index = convert_index(text, token_index, start)
         assert expected == index
 
     text = 'Upgrading from 11.10 to 12.04'
@@ -18,20 +21,20 @@ def test_message_to_annotated_str():
     text = 'Could I pay you 50 yen tomorrow or tomorrow?'
     expected = 'Could I pay you 50 [yen](currency lorem ipsum) [tomorrow](date) or [tomorrow](date)?'
     entities = [
-        src.training_data.create_entity(19, 22, 'currency lorem ipsum', 'yen'),
-        src.training_data.create_entity(23, 31, 'date', 'tomorrow'),
-        src.training_data.create_entity(35, 43, 'date', 'tomorrow')
+        create_entity(19, 22, 'currency lorem ipsum', 'yen'),
+        create_entity(23, 31, 'date', 'tomorrow'),
+        create_entity(35, 43, 'date', 'tomorrow')
     ]
-    message = src.training_data.create_message(text, 'foo', entities, False, src.typ.Corpus.MOCK)
+    message = create_message(text, 'foo', entities, False, src.typ.Corpus.MOCK)
 
-    assert expected, src.training_data.convert_message_to_annotated_str(message)
+    assert expected, convert_message_to_annotated_str(message)
 
 
 def test_nlu_evaluation_entity_converter():
     def helper(text: str, entity: dict, expected: str):
-        result = src.training_data.convert_nlu_evaluation_entity(text, entity)
-        message = src.training_data.create_message(text, 'some intent', [result], False, src.typ.Corpus.MOCK)
-        assert expected == src.training_data.convert_message_to_annotated_str(message)
+        result = convert_nlu_evaluation_entity(text, entity)
+        message = create_message(text, 'some intent', [result], False, src.typ.Corpus.MOCK)
+        assert expected == convert_message_to_annotated_str(message)
 
     helper(text='when is the next train in muncher freiheit?',
            entity={'entity': 'Vehicle', 'start': 4, 'stop': 4, 'text': 'train'},
@@ -56,7 +59,7 @@ def test_get_messages():
         assert first_row == messages[0].as_dict()
         assert last_row == messages[-1].as_dict()
 
-    sentences = src.training_data.get_messages(src.typ.Corpus.ASKUBUNTU)
+    sentences = get_messages(src.typ.Corpus.ASKUBUNTU)
     first_row = {
         'text': 'What software can I use to view epub documents?',
         'intent': 'Software Recommendation',
@@ -72,7 +75,7 @@ def test_get_messages():
 
     helper(sentences, 162, first_row, last_row)
 
-    sentences = src.training_data.get_messages(src.typ.Corpus.CHATBOT)
+    sentences = get_messages(src.typ.Corpus.CHATBOT)
     first_row = {
         'entities': [{'end': 24,
                       'entity': 'StationDest',
@@ -99,7 +102,7 @@ def test_get_messages():
     }
     helper(sentences, 206, first_row, last_row)
 
-    sentences = src.training_data.get_messages(src.typ.Corpus.WEBAPPLICATIONS)
+    sentences = get_messages(src.typ.Corpus.WEBAPPLICATIONS)
     first_row = {
         'entities': [{'end': 23,
                       'entity': 'WebService',
@@ -127,10 +130,10 @@ def test_get_messages():
 def test_get_intents():
     expected = {'Delete Account', 'Find Alternative', 'Download Video',
                 'Filter Spam', 'Change Password', 'Sync Accounts', 'None', 'Export Data'}
-    assert expected == set(src.training_data.get_intents(src.typ.Corpus.WEBAPPLICATIONS))
+    assert expected == set(get_intents(src.typ.Corpus.WEBAPPLICATIONS))
 
 
 def test_get_filtered_messages():
-    func = functools.partial(src.training_data.get_filtered_messages, corpus=src.typ.Corpus.MOCK)
+    func = functools.partial(get_filtered_messages, corpus=src.typ.Corpus.MOCK)
     assert 15 == len(tuple(func(train=True)))
     assert 5 == len(tuple(func(train=False)))
