@@ -1,4 +1,4 @@
-from src.datasets import (
+from src.dataset import (
     create_entity, create_message, convert_message_to_annotated_str, convert_nlu_evaluation_entity,
     get_messages, get_filtered_messages, get_intents, convert_index
 )

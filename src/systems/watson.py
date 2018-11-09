@@ -1,6 +1,6 @@
 import src.typ
 import os
-from src.datasets import messages_to_dataframe, get_filtered_messages
+from src.dataset import messages_to_dataframe, get_filtered_messages
 import pathlib
 
 # Possibly interesting: https://github.com/joe4k/wdcutils/

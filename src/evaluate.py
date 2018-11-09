@@ -1,5 +1,5 @@
 import src.typ
-import src.datasets
+import src.dataset
 import typing
 import rasa_nlu.training_data
 import src.results
@@ -17,7 +17,7 @@ def get_classifications(sc: src.typ.SystemCorpus, retrain: bool) -> typing.Itera
         raise AssertionError('incorrect parameter type')
 
     """ Run all test sentences from some corpus through system and return classifications. """
-    messages = src.datasets.get_filtered_messages(sc.corpus, train=False)
+    messages = src.dataset.get_filtered_messages(sc.corpus, train=False)
 
     system = add_retrain(sc.system) if retrain else sc.system
     for message in messages:
