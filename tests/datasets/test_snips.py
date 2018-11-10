@@ -30,14 +30,14 @@ def test_convert_data_spans():
 
 
 def test_convert_data_message():
-    message = convert_data_message(corpus, intent, data, training=True)
+    message = convert_data_message(corpus, intent, data, train=True)
     expected = 'add [Foo](entity_name) songs in [my](playlist_owner) playlist [música libre](playlist)'
     assert expected == convert_message_to_annotated_str(message)
 
 
 def test_convert_file_messages():
     file = get_path(corpus) / intent / 'train_AddToPlaylist.json'
-    messages = tuple(convert_file_messages(corpus, file, intent, training=True))
+    messages = tuple(convert_file_messages(corpus, file, intent, train=True))
     expected = 'Add [BSlade](artist) to [women of k-pop](playlist) playlist'
     assert expected == convert_message_to_annotated_str(messages[4])
     assert 300 == len(messages)
@@ -45,4 +45,4 @@ def test_convert_file_messages():
 
 def test_read_snips2017():
     messages = read_snips2017(corpus)
-    assert 2100 == len(tuple(messages))
+    assert 2100 + 700 == len(tuple(messages))

@@ -15,7 +15,7 @@ import src.systems.mock
 import src.typ as tp
 import src.utils
 import src.utils
-from src.datasets.nlu_evaluation_corpora import read_nlu_evaluation_corpora
+from src.datasets.corpora import read_nlu_evaluation_corpora
 from src.datasets.snips import read_snips2017
 import pandas as pd
 import json

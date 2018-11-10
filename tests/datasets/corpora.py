@@ -1,5 +1,5 @@
 from src.dataset import ( create_message, convert_message_to_annotated_str, get_messages )
-from src.datasets.nlu_evaluation_corpora import convert_index, convert_nlu_evaluation_entity
+from src.datasets.corpora import convert_index, convert_nlu_evaluation_entity
 import typing
 import src.typ as tp
 

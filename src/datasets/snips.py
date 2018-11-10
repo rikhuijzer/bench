@@ -6,7 +6,7 @@ import pathlib
 from typing import List, Iterable
 from itertools import accumulate, chain
 import operator
-from functools import reduce
+from functools import reduce, partial
 
 
 def get_folders(corpus: tp.Corpus) -> Iterable[pathlib.Path]:
@@ -34,24 +34,28 @@ def convert_data_entities(data: List[dict]) -> Iterable[dict]:
             yield dataset.create_entity(start=span[0], end=span[1], entity=item['entity'], value=item['text'])
 
 
-def convert_data_message(corpus: tp.Corpus, intent: str, data: List[dict], training: bool) -> Message:
+def convert_data_message(corpus: tp.Corpus, intent: str, data: List[dict], train: bool) -> Message:
     """Returns message in Rasa representation for some SNIPS data element."""
     text = convert_data_text(data)
     entities = list(convert_data_entities(data))
-    return dataset.create_message(text, intent, entities, training, corpus)
+    return dataset.create_message(text, intent, entities, train, corpus)
 
 
-def convert_file_messages(corpus: tp.Corpus, file: pathlib.Path, intent: str, training: bool) -> Iterable[Message]:
+def convert_file_messages(corpus: tp.Corpus, file: pathlib.Path, intent: str, train: bool) -> Iterable[Message]:
     """Returns messages in Rasa representation for some SNIPS .json file."""
     js = dataset.convert_json_dict(file)
-    return map(lambda item: convert_data_message(corpus, intent, item['data'], training), js[intent])
+    return map(lambda item: convert_data_message(corpus, intent, item['data'], train), js[intent])
 
 
 def read_snips2017(corpus: tp.Corpus) -> Iterable[Message]:
-    def get_messages(folder: pathlib.Path) -> Iterable[Message]:
+    def get_train_test_messages(folder: pathlib.Path, train: bool) -> Iterable[Message]:
         intent = folder.name
-        filename = folder / 'train_{}.json'.format(intent)
-        return convert_file_messages(corpus, filename, intent, training=True)
+        filename = 'train_{}.json' if train else 'validate_{}.json'
+        path = folder / filename.format(intent)
+        return convert_file_messages(corpus, path, intent, train=train)
+
+    def get_messages(folder: pathlib.Path) -> Iterable[Message]:
+        return chain(get_train_test_messages(folder, train=True), get_train_test_messages(folder, train=False))
 
     folders = get_folders(corpus)
     nested_messages = map(lambda folder: get_messages(folder), folders)

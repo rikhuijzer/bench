@@ -16,6 +16,4 @@ def clear_cache():
 def cleanup():  # remove mock-MOCK folder
     """That we need this function in multiple tests only shows how annoying it is to have state in your program."""
     shutil.rmtree(str(src.results.get_folder(system_corpus)))
-    import os
-    print('succesful removal: ', os.path.isfile(src.results.get_filename(system_corpus, src.typ.CSVs.INTENTS)))
     clear_cache()
