@@ -2,9 +2,6 @@ import functools
 import pathlib
 import typing
 
-import nltk.tokenize
-import nltk.tokenize
-import nltk.tokenize
 import rasa_nlu.training_data
 import rasa_nlu.training_data
 import rasa_nlu.training_data.formats.markdown
@@ -20,6 +17,13 @@ import src.utils
 import src.utils
 from src.datasets.nlu_evaluation_corpora import read_nlu_evaluation_corpora
 from src.datasets.snips import read_snips2017
+import pandas as pd
+import json
+
+
+def convert_json_dict(file: pathlib.Path) -> dict:
+    with open(str(file), 'rb') as f:
+        return json.load(f)
 
 
 def get_path(corpus: tp.Corpus) -> pathlib.Path:
@@ -31,7 +35,7 @@ def get_path(corpus: tp.Corpus) -> pathlib.Path:
         tp.Corpus.WEBAPPLICATIONS: pathlib.Path('NLU-Evaluation-Corpora') / 'WebApplicationsCorpus.json',
         tp.Corpus.SNIPS2017: pathlib.Path('2017-06-custom-intent-engines')
     }
-    return paths[corpus]
+    return src.utils.get_root() / 'datasets' / paths[corpus]
 
 
 def create_entity(start: int, end: int, entity: str, value: str) -> dict:
@@ -55,13 +59,6 @@ def convert_message_to_annotated_str(message: Message) -> str:
     return generated
 
 
-def convert_nlu_evaluation_entity(text: str, entity: dict) -> dict:
-    """ Convert a NLU Evaluation Corpora sentence to Entity object. See test for examples. """
-    start = convert_index(text, entity['start'], start=True)
-    end = convert_index(text, entity['stop'], start=False)
-    return create_entity(start, end, entity=entity['entity'], value=entity['text'])
-
-
 def messages_to_dataframe(messages: typing.Iterable[Message], focus=tp.Focus.ALL) -> pd.DataFrame:
     """ Returns a DataFrame (table) from a list of Message objects which can be used for visualisation.
 
@@ -69,7 +66,6 @@ def messages_to_dataframe(messages: typing.Iterable[Message], focus=tp.Focus.ALL
         messages: Sentences. Sentence is annotated if (focus != 'intent')
         focus: Focus of the DataFrame.  For intent classification visualisation choose 'intent'
     """
-    import pandas as pd
     pd.set_option('max_colwidth', 180)
 
     data = {'message': [], 'intent': [], 'training': []}
@@ -79,13 +75,6 @@ def messages_to_dataframe(messages: typing.Iterable[Message], focus=tp.Focus.ALL
         data['intent'].append(message.data['intent'])
         data['training'].append(message.data['training'])
     return pd.DataFrame(data)
-
-
-def convert_index(text: str, token_index: int, start: bool) -> int:
-    """ Convert token_index as used by NLU-Evaluation Corpora to character index. """
-    span_generator = nltk.tokenize.WordPunctTokenizer().span_tokenize(text)
-    spans = [span for span in span_generator]
-    return spans[token_index][0 if start else 1]
 
 
 @functools.lru_cache()

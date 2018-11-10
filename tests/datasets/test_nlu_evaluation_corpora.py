@@ -1,10 +1,7 @@
-from src.dataset import (
-    create_entity, create_message, convert_message_to_annotated_str, convert_nlu_evaluation_entity,
-    get_messages, get_filtered_messages, get_intents, convert_index
-)
-import src.typ
+from src.dataset import ( create_message, convert_message_to_annotated_str, get_messages )
+from src.datasets.nlu_evaluation_corpora import convert_index, convert_nlu_evaluation_entity
 import typing
-import functools
+import src.typ as tp
 
 
 def test_convert_index():
@@ -12,28 +9,15 @@ def test_convert_index():
         index = convert_index(text, token_index, start)
         assert expected == index
 
-    text = 'Upgrading from 11.10 to 12.04'
-    helper(text, 6, 24, start=True)
-    helper(text, 8, 29, start=False)
-
-
-def test_message_to_annotated_str():
-    text = 'Could I pay you 50 yen tomorrow or tomorrow?'
-    expected = 'Could I pay you 50 [yen](currency lorem ipsum) [tomorrow](date) or [tomorrow](date)?'
-    entities = [
-        create_entity(19, 22, 'currency lorem ipsum', 'yen'),
-        create_entity(23, 31, 'date', 'tomorrow'),
-        create_entity(35, 43, 'date', 'tomorrow')
-    ]
-    message = create_message(text, 'foo', entities, False, src.typ.Corpus.MOCK)
-
-    assert expected, convert_message_to_annotated_str(message)
+    sentence = 'Upgrading from 11.10 to 12.04'
+    helper(sentence, 6, 24, start=True)
+    helper(sentence, 8, 29, start=False)
 
 
 def test_nlu_evaluation_entity_converter():
     def helper(text: str, entity: dict, expected: str):
         result = convert_nlu_evaluation_entity(text, entity)
-        message = create_message(text, 'some intent', [result], False, src.typ.Corpus.MOCK)
+        message = create_message(text, 'some intent', [result], False, tp.Corpus.MOCK)
         assert expected == convert_message_to_annotated_str(message)
 
     helper(text='when is the next train in muncher freiheit?',
@@ -59,23 +43,23 @@ def test_get_messages():
         assert first_row == messages[0].as_dict()
         assert last_row == messages[-1].as_dict()
 
-    sentences = get_messages(src.typ.Corpus.ASKUBUNTU)
+    sentences = get_messages(tp.Corpus.ASKUBUNTU)
     first_row = {
         'text': 'What software can I use to view epub documents?',
         'intent': 'Software Recommendation',
         'training': False,
-        'corpus': src.typ.Corpus.ASKUBUNTU
+        'corpus': tp.Corpus.ASKUBUNTU
     }
     last_row = {
         'text': 'What graphical utility can I use for Ubuntu auto shutdown?',
         'intent': 'Shutdown Computer',
         'training': True,
-        'corpus': src.typ.Corpus.ASKUBUNTU
+        'corpus': tp.Corpus.ASKUBUNTU
     }
 
     helper(sentences, 162, first_row, last_row)
 
-    sentences = get_messages(src.typ.Corpus.CHATBOT)
+    sentences = get_messages(tp.Corpus.CHATBOT)
     first_row = {
         'entities': [{'end': 24,
                       'entity': 'StationDest',
@@ -84,7 +68,7 @@ def test_get_messages():
         'intent': 'FindConnection',
         'text': 'i want to go marienplatz',
         'training': False,
-        'corpus': src.typ.Corpus.CHATBOT
+        'corpus': tp.Corpus.CHATBOT
     }
     last_row = {
         'entities': [{'end': 13,
@@ -98,11 +82,11 @@ def test_get_messages():
         'intent': 'FindConnection',
         'text': 'from garching to studentenstadt',
         'training': True,
-        'corpus': src.typ.Corpus.CHATBOT
+        'corpus': tp.Corpus.CHATBOT
     }
     helper(sentences, 206, first_row, last_row)
 
-    sentences = get_messages(src.typ.Corpus.WEBAPPLICATIONS)
+    sentences = get_messages(tp.Corpus.WEBAPPLICATIONS)
     first_row = {
         'entities': [{'end': 23,
                       'entity': 'WebService',
@@ -111,7 +95,7 @@ def test_get_messages():
         'intent': 'Find Alternative',
         'text': 'Alternative to Facebook',
         'training': False,
-        'corpus': src.typ.Corpus.WEBAPPLICATIONS
+        'corpus': tp.Corpus.WEBAPPLICATIONS
     }
     last_row = {
         'entities': [{'end': 31,
@@ -121,19 +105,7 @@ def test_get_messages():
         'intent': 'Delete Account',
         'text': 'How to disable/delete a Harvest account?',
         'training': True,
-        'corpus': src.typ.Corpus.WEBAPPLICATIONS
+        'corpus': tp.Corpus.WEBAPPLICATIONS
     }
 
     helper(sentences, 89, first_row, last_row)
-
-
-def test_get_intents():
-    expected = {'Delete Account', 'Find Alternative', 'Download Video',
-                'Filter Spam', 'Change Password', 'Sync Accounts', 'None', 'Export Data'}
-    assert expected == set(get_intents(src.typ.Corpus.WEBAPPLICATIONS))
-
-
-def test_get_filtered_messages():
-    func = functools.partial(get_filtered_messages, corpus=src.typ.Corpus.MOCK)
-    assert 15 == len(tuple(func(train=True)))
-    assert 5 == len(tuple(func(train=False)))
