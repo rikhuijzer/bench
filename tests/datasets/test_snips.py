@@ -1,11 +1,14 @@
-from src.datasets.snips import get_folders, convert_data_spans, convert_data_text, convert_data_message
-from src.dataset import convert_message_to_annotated_str
+from src.datasets.snips import (
+    get_folders, convert_data_spans, convert_data_message, convert_file_messages, read_snips2017
+)
+from src.dataset import convert_message_to_annotated_str, get_path
 import src.typ as tp
 import typing
 
 
-def get_test_data() -> typing.List[typing.Dict[str, str]]:
-    return [
+corpus = tp.Corpus.SNIPS2017
+intent = 'AddToPlaylist'
+data = [
         {"text": "add "},
         {"text": "Foo", "entity": "entity_name"},
         {"text": " songs in "},
@@ -22,14 +25,24 @@ def test_get_folders():
 
 
 def test_convert_data_spans():
-    spans = convert_data_spans(get_test_data())
-    print()
-    tmp = convert_data_text(get_test_data())
-    for span in spans:
-        print(span, tmp[span[0]:span[1]])
+    spans = tuple(convert_data_spans(data))
+    assert (29, 41) == spans[5]
 
 
 def test_convert_data_message():
-    message = convert_data_message(tp.Corpus.SNIPS2017, 'AddToPlaylist', get_test_data(), training=True)
+    message = convert_data_message(corpus, intent, data, training=True)
     expected = 'add [Foo](entity_name) songs in [my](playlist_owner) playlist [música libre](playlist)'
     assert expected == convert_message_to_annotated_str(message)
+
+
+def test_convert_file_messages():
+    file = get_path(corpus) / intent / 'train_AddToPlaylist.json'
+    messages = tuple(convert_file_messages(corpus, file, intent, training=True))
+    expected = 'Add [BSlade](artist) to [women of k-pop](playlist) playlist'
+    assert expected == convert_message_to_annotated_str(messages[4])
+    assert 300 == len(messages)
+
+
+def test_read_snips2017():
+    messages = read_snips2017(corpus)
+    assert 2100 == len(tuple(messages))
