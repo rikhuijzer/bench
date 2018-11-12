@@ -9,9 +9,11 @@ import src.systems.deeppavlov
 import src.systems.mock
 import src.systems.rasa
 import src.systems.watson
+import src.systems.dialogflow
 
 import logging
 from typing import Callable
+
 
 @functools.lru_cache(maxsize=1)
 def get_docker_compose_configuration() -> dict:
@@ -61,7 +63,8 @@ def train(system_corpus: tp.SystemCorpus) -> tp.System:
         'mock': src.systems.mock.train,
         'rasa': src.systems.rasa.train,
         'deeppavlov': src.systems.deeppavlov.train,
-        'lex': src.systems.amazon_lex.train
+        'lex': src.systems.amazon_lex.train,
+        'dialogflow': src.systems.dialogflow.train,
     }
     func: Callable[[tp.SystemCorpus], tp.System] = src.utils.get_substring_match(train_systems, system.name)
     return func(system_corpus._replace(system=system))

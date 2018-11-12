@@ -47,7 +47,11 @@ def get_previous_run(system_corpus: tp.SystemCorpus, csv: tp.CSVs) -> Iterable[t
 
 
 def get_f1_intent(system_corpus: tp.SystemCorpus, run: tp.Run, average='micro') -> float:
-    """Returns f1 score for some system and corpus. Does this for a new run or one or more old runs."""
+    """Returns f1 score for some system and corpus. Does this for ONE new run or one or more old runs.
+
+    It would be more neat to remove Run.NEW, but that would mean that we would first write messages and then read them
+    again. I'm currently unable to life with that idea, although it is nitpicking.
+    """
     def get_new_intents(sc: tp.SystemCorpus) -> Iterable[tp.CSVIntent]:
         return map(lambda x: src.results.get_csv_intent(x), run_bench(sc))
 
@@ -61,4 +65,4 @@ def get_f1_intent(system_corpus: tp.SystemCorpus, run: tp.Run, average='micro') 
 
     y_true = tuple(map(lambda e: e.intent, elements))
     y_pred = tuple(map(lambda e: e.classification, elements))
-    return f1_score(y_true, y_pred, average=average)
+    return round(f1_score(y_true, y_pred, average=average), 3)

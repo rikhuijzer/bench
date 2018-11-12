@@ -6,3 +6,4 @@ nltk==3.3
 pytest==3.9.2
 pytest-sugar==0.9.1
 watson-developer-cloud==2.3.0
+dialogflow==0.5.1

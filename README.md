@@ -21,7 +21,11 @@ Packages used in the benchmarks are listed in `requirements.txt` and can be inst
 Docker-compose is used to avoid starting various Docker containers from Python. Multiple containers are needed to benchmark systems with different configurations (for example, Rasa MITIE and Rasa spaCy + sklearn). One big issue 
 of starting Docker containers from Python is that Docker requires root privileges.
 
-### Cloud services (Watson)
+### Cloud services 
+#### Watson
 Specify Watson API key via environment variable `WATSON_USERNAME` and `WATSON_PASSWORD`. For Ubuntu this can 
 be done via changing `nano /etc/environment`. Validation via `printenv 
 <var name (optional)>`
+
+#### DialogFlow
+`DIALOGFLOW_DEV_TOKEN`
