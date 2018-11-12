@@ -1,6 +1,6 @@
 import pytest
 
-from src.systems.mock import timestamp_text
+from src.systems.mock import get_timestamp
 from src.utils import get_timestamp, convert_str_timestamp, get_substring_match
 
 
@@ -20,7 +20,7 @@ def test_get_timestamp():
 
 
 def test_timestamp():
-    text = timestamp_text
+    text = get_timestamp()
     timestamp = convert_str_timestamp(text)
     result_text = str(timestamp)
     assert text == result_text

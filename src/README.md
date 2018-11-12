@@ -9,8 +9,49 @@ ideas. The code in this project will aim to be adhering to functional programmin
 Reasons are pedagogic value, improved modularity, expressiveness, ease of testing, and brevity. 
 
 The functional programming constraints for the project are that we do not defining any new 
-classes. Specifically, not using the class keyword. Only enums are allowed. This result in some
-changes to the code which are explained next.
+classes. Specifically, not using the class keyword. Notable code design considerations 
+are explained next.
+
+#### Imports
+When importing an attempt is made to explicitly import using `from <module> import <class>`. 
+When more implicit imports are used `import <module>` this is either caused by the appearance
+of circular imports, by the fact that some names are too common or to avoid reader confusion.
+An example for the latter are the types defined in `src.typ`. The names are quite generic
+and could cause name clashing or confusion when imported explicitly.
+
+#### Mapping to functions
+In code we often have a function which calls other functions depending on some conditionals.
+For example in `system.py` the factory design pattern is replaced by a more functional design.
+In this design `system.py` behaves like a super and delegates the work based on what system
+we currently interested in. We give an example for two systems. The delegation 
+could be done via conditional statements.
+```
+if 'mock' in system.name:
+    response = src.systems.mock.get_response(tp.Query(system, message.text))
+elif 'rasa' in system.name:
+    response = src.systems.rasa.get_response(tp.Query(system, message.text))
+elif ...
+```
+This introduces a lot of code duplication. Therefore a dict is created. 
+```
+get_intent_systems = {
+    'mock': src.systems.mock.get_response,
+    'rasa': src.systems.rasa.get_response,
+    ...
+}
+```
+Now we can just get the correct function from the dict and call it.
+```
+func: Callable[[tp.Query], tp.Response] = get_substring_match(get_intent_systems, system.name)
+query = tp.Query(system, message.text)
+response = func(query)
+```
+Note that `get_substring_match()` implements the substring matching used in the conditional
+code (`if 'mock' in system.name:`). Since the code can return any of the functions contained
+in the mapping they should all have the same signature and output. The currently used IDE
+(PyCharm 2018.2.4)is not able to check this. Therefore, functions from the mapping 
+`func` get a type hint. This allows the IDE to check types again and it allows developers 
+to see what signature should be used for all the functions in the mapping. 
 
 #### NamedTuple
 Pure functions by definition cannot rely on information stored somewhere in the system. We 

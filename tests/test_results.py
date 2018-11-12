@@ -3,7 +3,7 @@ import shutil
 import src.results
 import src.typ
 import src.dataset
-from src.systems.mock import timestamp_text
+from src.systems.mock import get_timestamp
 from tests.utils import clear_cache, cleanup
 
 system = src.typ.System('mock', src.typ.Corpus.MOCK, '', ())
@@ -21,7 +21,7 @@ def test_get_filename():
 
 def test_write_tuple():
     def create_csv_intent(x: int) -> src.typ.CSVIntent:
-        return src.typ.CSVIntent(x, timestamp_text, 'sentence', 'intent', 'classification', -1.0, -1)
+        return src.typ.CSVIntent(x, get_timestamp(), 'sentence', 'intent', 'classification', -1.0, -1)
 
     csv = src.typ.CSVs.INTENTS
 
@@ -45,7 +45,7 @@ def test_write_tuple():
         response = src.typ.Response('bar', -1.0, [])
         classification = src.typ.Classification(system_corpus.system, message, response)
         csv_intent = src.results.get_csv_intent(classification)
-        expected = src.typ.CSVIntent(id=3, run='', sentence='foo', intent='bar',
+        expected = src.typ.CSVIntent(id=3, timestamp='', sentence='foo', intent='bar',
                                      classification='bar', confidence=-1.0, time=0)
         assert expected == csv_intent
 

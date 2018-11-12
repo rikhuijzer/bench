@@ -2,6 +2,7 @@ import src.typ
 import src.system
 import src.dataset
 import src.utils
+from src.systems.mock import get_timestamp
 # Only testing logic for Mock system to have speedy tests and avoiding many API calls.
 
 
@@ -20,8 +21,7 @@ def test_get_port():
 
 
 def test_train():
-    timestamp = src.utils.convert_str_timestamp('2018-11-03 16:43:08')
-    expected = src.typ.System('mock', src.typ.Corpus.WEBAPPLICATIONS, timestamp, (3, ))
+    expected = src.typ.System('mock', src.typ.Corpus.WEBAPPLICATIONS, get_timestamp(), (3, ))
     system = src.typ.System('mock', src.typ.Corpus.EMPTY, '', (2, ))
     corpus = src.typ.Corpus.WEBAPPLICATIONS
     assert expected == src.system.train(src.typ.SystemCorpus(system, corpus))

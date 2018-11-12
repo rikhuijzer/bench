@@ -1,11 +1,20 @@
 from src.typ import System, Corpus, SystemCorpus
-from src.systems.mock import timestamp_text
+from src.systems.mock import get_timestamp
 import shutil
 import src.results
 
-system = System('mock', Corpus.MOCK, timestamp_text, (16, ))
-corpus = Corpus.MOCK
-system_corpus = SystemCorpus(system, corpus)
+
+def get_system(name='mock') -> System:
+    """We use different system name for each test to avoid different tests running on the same file."""
+    return System(name, Corpus.MOCK, get_timestamp(), (16,))
+
+
+def get_corpus() -> Corpus:
+    return Corpus.MOCK
+
+
+def get_system_corpus(name='mock') -> SystemCorpus:
+    return SystemCorpus(get_system(name), get_corpus())
 
 
 def clear_cache():
@@ -13,7 +22,7 @@ def clear_cache():
     src.results.create_file.cache_clear()
 
 
-def cleanup():  # remove mock-MOCK folder
+def cleanup(name='mock'):  # remove mock-MOCK folder
     """That we need this function in multiple tests only shows how annoying it is to have state in your program."""
-    shutil.rmtree(str(src.results.get_folder(system_corpus)))
+    shutil.rmtree(str(src.results.get_folder(get_system_corpus(name))))
     clear_cache()

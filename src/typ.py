@@ -12,6 +12,8 @@ Corpus = enum.Enum('Corpus', 'ASKUBUNTU CHATBOT WEBAPPLICATIONS SNIPS2017 MOCK E
 
 CSVs = enum.Enum('CSVs', 'GENERAL INTENTS ENTITIES')
 
+Run = enum.Enum('Run', 'PREVIOUS ALL NEW')
+
 # Messages = Tuple[Message, ...]
 
 # Sentence = NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])  # this one is replaced by field in message
@@ -30,7 +32,7 @@ F1Score = NamedTuple('F1Score', [('system', System), ('score', Tuple[float, ...]
 
 CSVGeneral = NamedTuple('CSVGeneral', [])
 
-CSVIntent = NamedTuple('CSVIntent', [('id', int), ('run', str), ('sentence', str), ('intent', str),
+CSVIntent = NamedTuple('CSVIntent', [('id', int), ('timestamp', str), ('sentence', str), ('intent', str),
                                      ('classification', str), ('confidence', float), ('time', int)])
 
 CSVEntity = NamedTuple('CSVEntity', [])
