@@ -36,7 +36,7 @@ response_time [ms]:
 ## `intents.csv`
 Below is an example from a system which classified two sentences. 
 
-| id | run (UTC) | sentence | intent | classification | confidence [%] | time [ms] |
+| id | timestamp | sentence | intent | classification | confidence [%] | time [ms] |
 | --- | --- | --- | --- | --- | --- | --- |
 | 0 | 2018-01-01 00:00:00 | When is tomorrows first flight to London? | departure time | greet | 20.3 | 50 | 0 |
 | 1 | 2018-01-01 00:00:00 | Will it rain on monday? | get weather | get weather | 99.1 | 40 | 0 |
@@ -44,7 +44,7 @@ Below is an example from a system which classified two sentences.
 ## `entities.csv`
 The system also classified entities. For reader convenience the correct entities have been added as well.
 
-| id | sentence id | run (UTC) | source | entity | value | start | stop | confidence [%]
+| id | sentence id | timestamp | source | entity | value | start | end | confidence [%]
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0 | 0 | 2018-01-01 00:00:00 | gold standard | date | tomorrows | 8 | 17 | 
 | 1 | 0 | 2018-01-01 00:00:00 | gold standard | location | London | 36 | 43 | 

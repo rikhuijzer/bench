@@ -35,7 +35,9 @@ CSVGeneral = NamedTuple('CSVGeneral', [])
 CSVIntent = NamedTuple('CSVIntent', [('id', int), ('timestamp', str), ('sentence', str), ('intent', str),
                                      ('classification', str), ('confidence', float), ('time', int)])
 
-CSVEntity = NamedTuple('CSVEntity', [])
+CSVEntity = NamedTuple('CSVEntity', [('id', int), ('sentence_id', str), ('timestamp', str), ('source', str),
+                                     ('entity', str), ('value', str), ('start', int), ('end', int),
+                                     ('confidence', float)])
 
 CSV_types = typing.Union[CSVGeneral, CSVIntent, CSVEntity]
 

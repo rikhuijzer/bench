@@ -40,4 +40,8 @@ def get_response(query: src.typ.Query) -> src.typ.Response:
                       data=json.dumps(data), headers=src.system.get_header(src.typ.Header.JSON))
     if r.status_code != 200:
         raise RuntimeError('Could not get intent for text: {}'.format(query.text))
-    return src.typ.Response(r.json()['intent']['name'], '-1.0', [])
+
+    js = r.json()
+    confidence = round(float(js['intent']['confidence']), 3)
+    entities = js['entities'] if 'entities' in js else []
+    return src.typ.Response(js['intent']['name'], confidence, entities)

@@ -2,9 +2,6 @@ import logging
 
 import src.typ as tp
 from src.evaluate import get_f1_intent
-import src.system
-from src.systems.dialogflow import create_intent
-
 # This allows for reproducing the statistics presented in blog which is somewhat interesting
 
 

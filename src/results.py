@@ -51,11 +51,6 @@ def get_csv_type(csv: tp.CSVs) -> type:
     return mapping[csv]
 
 
-def split_on_comma(text: str) -> Iterable[str]:
-    out = []
-    import csv
-    return out
-
 def convert_str_tuple(text: str, csv: tp.CSVs) -> tp.CSV_types:
     """ Convert a string from csv back to NamedTuple. """
     tuple_types = get_tuple_types(get_csv_type(csv))
@@ -63,6 +58,8 @@ def convert_str_tuple(text: str, csv: tp.CSVs) -> tp.CSV_types:
 
     if csv == tp.CSVs.INTENTS:
         return tp.CSVIntent(*converted)
+    elif csv == tp.CSVs.ENTITIES:
+        return tp.CSVEntity(*converted)
     else:
         raise AssertionError('not implemented')
 
@@ -95,9 +92,12 @@ def initialize_file(sc: tp.SystemCorpus, csv: tp.CSVs) -> pathlib.Path:
     if csv == tp.CSVIntent:
         filename = get_filename(sc, tp.CSVs.INTENTS)
         create_file(filename, create_header(csv))
+    elif csv == tp.CSVEntity:
+        filename = get_filename(sc, tp.CSVs.ENTITIES)
+        create_file(filename, create_header(csv))
     else:
         # TODO: Accept other NamedTuples
-        raise AssertionError('src.write.write_tuple got invalid input t: {}'.format(namedtuple))
+        raise AssertionError('src.write.write_tuple got invalid input t: {}'.format(csv))
     return filename
 
 
@@ -143,11 +143,50 @@ def get_csv_intent(classification: tp.Classification) -> tp.CSVIntent:
                         time=0)
 
 
+def get_csv_entity_gold_standard(classification: tp.Classification, entity: dict, sentence_id: int) -> tp.CSVEntity:
+    system_corpus = tp.SystemCorpus(classification.system, classification.message.data['corpus'])
+    newest_tuple = get_newest_tuple(system_corpus, tp.CSVs.ENTITIES)
+    return tp.CSVEntity(id=newest_tuple.id + 1 if newest_tuple else 0,
+                        sentence_id=sentence_id,
+                        timestamp=classification.system.timestamp,
+                        source='gold standard',
+                        entity=entity['entity'],
+                        value=entity['value'],  # TODO: Might need cast to float
+                        start=entity['start'],
+                        end=entity['end'],
+                        confidence=entity['confidence'] if 'confidence' in entity else -1.0)
+
+
+def get_csv_entity_classification(classification: tp.Classification, entity: dict, sentence_id: int) -> tp.CSVEntity:
+    system_corpus = tp.SystemCorpus(classification.system, classification.message.data['corpus'])
+    newest_tuple = get_newest_tuple(system_corpus, tp.CSVs.ENTITIES)
+    return tp.CSVEntity(id=newest_tuple.id + 1 if newest_tuple else 0,
+                        sentence_id=sentence_id,
+                        timestamp=classification.system.timestamp,
+                        source='classification',
+                        entity=entity['entity'],
+                        value=entity['value'],  # TODO: Might need cast to float
+                        start=entity['start'],
+                        end=entity['end'],
+                        confidence=entity['confidence'] if 'confidence' in entity else -1.0)
+
+
 def write_classification(classification: tp.Classification):
     """Unpack and write a classification to various files."""
-    csv_intent = get_csv_intent(classification)
     system_corpus = tp.SystemCorpus(classification.system, classification.message.data['corpus'])
+
+    csv_intent = get_csv_intent(classification)
     write_tuple(system_corpus, csv_intent)
+
+    data = classification.message.data
+    if 'entities' in data:
+        for entity in data['entities']:
+            csv_entity = get_csv_entity_gold_standard(classification, entity, csv_intent.id)
+            write_tuple(system_corpus, csv_entity)
+
+        for entity in classification.response.entities:
+            csv_entity = get_csv_entity_classification(classification, entity, csv_intent.id)
+            write_tuple(system_corpus, csv_entity)
 
 
 def get_elements(sc: tp.SystemCorpus, csv: tp.CSVs) -> Iterable[tp.CSV_types]:
