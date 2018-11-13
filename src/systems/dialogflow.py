@@ -13,6 +13,7 @@ import src.system
 import src.typ as tp
 from src.dataset import get_intents, get_filtered_messages
 from google.api_core import exceptions
+from time import sleep
 
 
 # see https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/dialogflow/cloud-client
@@ -55,6 +56,7 @@ def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
     intents = set(get_intents(system_corpus.corpus))
 
     for intent in intents:
+        sleep(0.4)
         filtered_messages = filter(lambda m: m.data['intent'] == intent, messages)
         texts = tuple(map(lambda m: m.text, filtered_messages))
 
@@ -62,36 +64,9 @@ def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
             create_intent(project_id, intent, texts, [intent])
         except exceptions.FailedPrecondition:
             print('Failed to create intent {}. Skipping'.format(intent))
+
+    sleep(10)  # giving DialogFlow time to train
     return src.typ.System(system_corpus.system.name, system_corpus.corpus, system_corpus.system.timestamp, ())
-
-
-def detect_intent_texts(project_id, session_id, texts, language_code):
-    """Returns the result of detect intent with texts as inputs.
-    Using the same `session_id` between requests allows continuation
-    of the conversaion."""
-    import dialogflow_v2 as dialogflow
-    session_client = dialogflow.SessionsClient()
-
-    session = session_client.session_path(project_id, session_id)
-    print('Session path: {}\n'.format(session))
-
-    for text in texts:
-        text_input = dialogflow.types.TextInput(
-            text=text, language_code=language_code)
-
-        query_input = dialogflow.types.QueryInput(text=text_input)
-
-        response = session_client.detect_intent(
-            session=session, query_input=query_input)
-
-        print('=' * 20)
-        print('Query text: {}'.format(response.query_result.query_text))
-        print('Detected intent: {} (confidence: {})\n'.format(
-            response.query_result.intent.display_name,
-            response.query_result.intent_detection_confidence))
-        print('Fulfillment text: {}\n'.format(
-            response.query_result.fulfillment_text))
-        return response.query_result.intent.display_name
 
 
 def get_response(query: src.typ.Query) -> src.typ.Response:
@@ -109,5 +84,8 @@ def get_response(query: src.typ.Query) -> src.typ.Response:
     response = session_client.detect_intent(session=session, query_input=query_input)
 
     intent = response.query_result.intent.display_name
-    confidence = response.query_result.intent_detection_confidence
+    confidence = round(response.query_result.intent_detection_confidence, 2)
+    sleep(0.9)
+    if intent == '':
+        intent = 'None'
     return src.typ.Response(intent, confidence, [])

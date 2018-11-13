@@ -14,24 +14,11 @@ def get_system_corpus(name: str, corpus=tp.Corpus.EMPTY) -> tp.SystemCorpus:
 
 
 def run():
-    system_corpus = get_system_corpus('dialogflow', tp.Corpus.WEBAPPLICATIONS)
+    system_corpus = get_system_corpus('rasa-spacy', tp.Corpus.CHATBOT)
     score = get_f1_intent(system_corpus, tp.Run.NEW)
     print(score)
 
 
-def dialogflow():
-    system_corpus = get_system_corpus('dialogflow', tp.Corpus.WEBAPPLICATIONS)
-    src.system.get_classification(system_corpus)
-    # project_id = 'bench-9bcea'
-    # display_name = 'other_intent'
-    # training_phrases_parts = ''
-    # message_texts = ['utt1', 'utt2']
-    # create_intent(project_id, display_name, training_phrases_parts, message_texts)
-
-
 if __name__ == '__main__':
-    import os
-    # print(os.path.exists('Documents/bench.json'))
-    print(os.path.exists('/bench.json'))
     logging.basicConfig(level=logging.INFO)
     run()

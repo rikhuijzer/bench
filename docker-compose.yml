@@ -16,17 +16,3 @@ services:
     image: rasa/rasa_nlu:0.13.7-mitie
     ports:
       - 5002:5000
-
-  deeppavlov-snips:
-    image: deeppavlov0.0.8-buster
-    command: python3 -m deeppavlov riseapi ./intents_snips.json
-    ports:
-      - 5003:5000
-
-  deeppavlov-dcts2_webapplications:
-    image: deeppavlov0.0.8-buster
-    volumes:
-      - ./systems/deeppavlov/configs:/var
-    command: python3 -m deeppavlov riseapi /var/intents_dcts2_webapplications.json
-    ports:
-      - 5004:5000

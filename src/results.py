@@ -32,7 +32,8 @@ def append_text(text: str, filename: pathlib.Path):
 
 
 def convert_tuple_str(t: Tuple) -> str:
-    return ','.join([str(value) for value in t])
+    """Converting tuple to string. Removing comma's to avoid problems when reading. Good enough solution for now."""
+    return ','.join([str(value).replace(',', '') for value in t])
 
 
 def get_tuple_types(t: type) -> Iterable[type]:
@@ -49,6 +50,11 @@ def get_csv_type(csv: tp.CSVs) -> type:
     }
     return mapping[csv]
 
+
+def split_on_comma(text: str) -> Iterable[str]:
+    out = []
+    import csv
+    return out
 
 def convert_str_tuple(text: str, csv: tp.CSVs) -> tp.CSV_types:
     """ Convert a string from csv back to NamedTuple. """

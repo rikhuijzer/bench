@@ -7,7 +7,6 @@ import src.system
 from src.system import add_retrain
 from sklearn.metrics import f1_score
 from typing import Iterable, Callable
-from src.results import get_newest_tuple
 from functools import partial
 
 
@@ -42,7 +41,7 @@ def run_bench(system_corpus: tp.SystemCorpus, n_runs=1) -> Iterable[tp.Classific
 
 def get_previous_run(system_corpus: tp.SystemCorpus, csv: tp.CSVs) -> Iterable[tp.CSV_types]:
     """Get all classifications for runs with most recent timestamp. Will crash if there is no previous run."""
-    timestamp = get_newest_tuple(system_corpus, csv).timestamp
+    timestamp = src.results.get_newest_tuple(system_corpus, csv).timestamp
     return filter(lambda x: x.timestamp == timestamp, src.results.get_elements(system_corpus, csv))
 
 
