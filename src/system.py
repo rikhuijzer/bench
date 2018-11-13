@@ -82,6 +82,7 @@ def get_classification(system: tp.System, message: tp.Message) -> tp.Classificat
         'rasa': src.systems.rasa.get_response,
         'watson': src.systems.watson.get_response,
         'amazon': src.systems.amazon_lex.get_response,
+        'dialogflow': src.systems.dialogflow.get_response
     }
 
     func: Callable[[tp.Query], tp.Response] = src.utils.get_substring_match(get_intent_systems, system.name)
