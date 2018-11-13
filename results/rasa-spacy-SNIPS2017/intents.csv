@@ -1,0 +1,9 @@
+id,timestamp,sentence,intent,classification,confidence,time
+0,2018-11-12 17:59:39,Book a reservation for my babies and I,BookRestaurant,BookRestaurant,-1.0,0
+1,2018-11-12 17:59:39,Book a reservation for a restaurant not far from MA,BookRestaurant,BookRestaurant,-1.0,0
+2,2018-11-12 17:59:39,I would like to book a restaurant in Tanzania that is within walking distance for my mom and I,BookRestaurant,BookRestaurant,-1.0,0
+3,2018-11-12 17:59:39,Book a reservation for an oyster bar,BookRestaurant,BookRestaurant,-1.0,0
+4,2018-11-12 17:59:39,Book a reservation for 6 people for a creole tavern in Montenegro,BookRestaurant,BookRestaurant,-1.0,0
+5,2018-11-12 17:59:39,I need a table in Sacaton at a gluten free restaurant,BookRestaurant,BookRestaurant,-1.0,0
+6,2018-11-12 17:59:39,book sot for me and my grandfather nearby West Reading,BookRestaurant,BookRestaurant,-1.0,0
+7,2018-11-12 17:59:39,Book me and my nieces a reservation for a seafood restaurant in Cle Elum, NE on ascension day,BookRestaurant,BookRestaurant,-1.0,0

@@ -28,4 +28,6 @@ be done via changing `nano /etc/environment`. Validation via `printenv
 <var name (optional)>`
 
 #### DialogFlow
-`DIALOGFLOW_DEV_TOKEN`
+See the DialogFlow v2 API documentation.
+
+TODO: Set `project id` via environment variable.

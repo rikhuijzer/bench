@@ -5,103 +5,51 @@ import src.dataset
 import src.typ as tp
 import json
 from rasa_nlu.training_data import Message
-import dialogflow
 import os
 from typing import Tuple
+from src.dataset import get_intents, get_filtered_messages
+
+# see https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/dialogflow/cloud-client
+# since documentation seems missing for V2
 
 
-url = 'https://api.dialogflow.com/'
+def create_intent(project_id, display_name, training_phrases_parts,
+                  message_texts):
+    """Create an intent of the given intent type."""
 
+    import dialogflow_v2 as dialogflow
+    intents_client = dialogflow.IntentsClient()
 
-def get_template() -> str:
-    """Returns a default template."""
-    return '''
-    {
-      "contexts": [],
-      "events": [],
-      "fallbackIntent": false,
-      "name": "<intent_name>",
-      "priority": 500000,
-      "responses": [
-        {
-          "resetContexts": false,
-          "affectedContexts": [],
-          "parameters": [],
-          "messages": [
-            {
-              "type": 0,
-              "lang": "en",
-              "speech": []
-            }
-          ],
-          "defaultResponsePlatforms": {},
-          "speech": []
-        }
-      ],
-      "userSays": [
-          {
-            "id": "8f7e3a72-f0bc-4e95-b737-c1c4434de601",
-            "data": [
-              {
-                "text": "intent1_utterance2",
-                "userDefined": false
-              }
-            ],
-            "isTemplate": false,
-            "count": 0,
-            "updated": 1542036539
-          },
-          {
-            "id": "97681070-3320-4190-a52e-771d97657ba9",
-            "data": [
-              {
-                "text": "intent1_utterance1",
-                "userDefined": false
-              }
-            ],
-            "isTemplate": false,
-            "count": 0,
-            "updated": 1542036539
-          }
-        ],
-      "webhookForSlotFilling": false,
-      "webhookUsed": false
-    }
-    '''
+    parent = intents_client.project_agent_path(project_id)
+    training_phrases = []
+    for training_phrases_part in training_phrases_parts:
+        part = dialogflow.types.Intent.TrainingPhrase.Part(
+            text=training_phrases_part)
+        # Here we create a new training phrase for each provided part.
+        training_phrase = dialogflow.types.Intent.TrainingPhrase(parts=[part])
+        training_phrases.append(training_phrase)
 
+    text = dialogflow.types.Intent.Message.Text(text=message_texts)
+    message = dialogflow.types.Intent.Message(text=text)
 
-def get_user_say(utterance: str) -> dict:
-    return {
-        'data': [{'text': utterance, 'userDefined': False}],
-        'isTemplate': False,
-        'count': 0,
-    }
+    intent = dialogflow.types.Intent(
+        display_name=display_name,
+        training_phrases=training_phrases,
+        messages=[message])
 
+    response = intents_client.create_intent(parent, intent)
 
-def fill_json(intent: str, utterances: Tuple[str, ...]) -> dict:
-    js = json.loads(get_template())
-    js['name'] = intent
-    js['userSays'] = []
-    for utterance in utterances:
-        js['userSays'].append(get_user_say(utterance))
-    return js
-
-
-def get_token() -> str:
-    return os.environ['DIALOGFLOW_DEV_TOKEN']
-
-
-def get_header() -> dict:
-    return {
-        'Authorization': 'Bearer {}'.format(get_token()),
-        'Content-Type': 'application_json'
-    }
+    print('Intent created: {}'.format(response))
 
 
 def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
-    intent_url = url + 'v1/intents?v=20150910'  # this is the version used in the api docs
-    r = requests.post(intent_url, data=json.dumps(fill_json('intent1', ('utter1', 'utter2'))), headers=get_header())
-    print(r)
+    messages = get_filtered_messages(system_corpus.corpus, train=True)
+    intents = set(get_intents(system_corpus.corpus))
+
+    for intent in intents:
+        filtered_messages = filter(lambda m: m.data['intent'] == intent, messages)
+        texts = tuple(map(lambda m: m.text, filtered_messages))
+        create_intent('bench-9bcea', intent, texts, [intent])
     return src.typ.System(system_corpus.system.name, system_corpus.corpus, system_corpus.system.timestamp, ())
 
 

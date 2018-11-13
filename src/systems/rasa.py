@@ -20,6 +20,10 @@ def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
     training_examples = list(map(lambda message: clear_data_field(message), training_examples))
     training_data = rasa_nlu.training_data.TrainingData(training_examples=training_examples).as_json()
     url = 'http://localhost:{}/train?project=my_project'
+
+    # https://github.com/requests/requests/issues/1822
+    training_data = training_data.encode('utf-8')
+
     r = requests.post(url.format(src.system.get_port(system_corpus.system.name)),
                       data=training_data, headers=src.system.get_header(src.typ.Header.JSON)).json()
     if 'error' in r:
