@@ -2,7 +2,7 @@ import functools
 import logging
 import os
 import pathlib
-from typing import Iterable, Tuple, NamedTuple
+from typing import Iterable, Tuple, NamedTuple, Any
 from rasa_nlu.training_data.message import Message
 
 import src.evaluate
@@ -25,10 +25,11 @@ def get_filename(sc: tp.SystemCorpus, csv: tp.CSVs) -> pathlib.Path:
     return get_folder(sc) / mapping[csv]
 
 
-def append_text(text: str, filename: pathlib.Path):
+def append_text(text: str, filename: pathlib.Path) -> bool:
     """ Append text to a file, this function assumes the file exists. """
     with open(str(filename), 'a') as f:
         f.write(text + '\n')
+    return True
 
 
 def convert_tuple_str(t: Tuple) -> str:
@@ -101,12 +102,12 @@ def initialize_file(sc: tp.SystemCorpus, csv: tp.CSVs) -> pathlib.Path:
     return filename
 
 
-def write_tuple(sc: tp.SystemCorpus, namedtuple: NamedTuple):
+def write_tuple(sc: tp.SystemCorpus, namedtuple: NamedTuple) -> bool:
     """ Write some tuple to CSV. Also creates folder and file if file does not yet exist. """
     logging.info('Writing {}'.format(namedtuple))
 
     filename = initialize_file(sc, type(namedtuple))
-    append_text(convert_tuple_str(namedtuple), filename)
+    return append_text(convert_tuple_str(namedtuple), filename)
 
 
 def read_file(sc: tp.SystemCorpus, csv: tp.CSVs) -> str:
@@ -143,29 +144,15 @@ def get_csv_intent(classification: tp.Classification) -> tp.CSVIntent:
                         time=0)
 
 
-def get_csv_entity_gold_standard(classification: tp.Classification, entity: dict, sentence_id: int) -> tp.CSVEntity:
+def get_csv_entity(classification: tp.Classification, source: str, entity: dict, sentence_id: int) -> tp.CSVEntity:
     system_corpus = tp.SystemCorpus(classification.system, classification.message.data['corpus'])
     newest_tuple = get_newest_tuple(system_corpus, tp.CSVs.ENTITIES)
     return tp.CSVEntity(id=newest_tuple.id + 1 if newest_tuple else 0,
                         sentence_id=sentence_id,
                         timestamp=classification.system.timestamp,
-                        source='gold standard',
+                        source=source,
                         entity=entity['entity'],
-                        value=entity['value'],  # TODO: Might need cast to float
-                        start=entity['start'],
-                        end=entity['end'],
-                        confidence=entity['confidence'] if 'confidence' in entity else -1.0)
-
-
-def get_csv_entity_classification(classification: tp.Classification, entity: dict, sentence_id: int) -> tp.CSVEntity:
-    system_corpus = tp.SystemCorpus(classification.system, classification.message.data['corpus'])
-    newest_tuple = get_newest_tuple(system_corpus, tp.CSVs.ENTITIES)
-    return tp.CSVEntity(id=newest_tuple.id + 1 if newest_tuple else 0,
-                        sentence_id=sentence_id,
-                        timestamp=classification.system.timestamp,
-                        source='classification',
-                        entity=entity['entity'],
-                        value=entity['value'],  # TODO: Might need cast to float
+                        value=entity['value'],
                         start=entity['start'],
                         end=entity['end'],
                         confidence=entity['confidence'] if 'confidence' in entity else -1.0)
@@ -180,13 +167,15 @@ def write_classification(classification: tp.Classification):
 
     data = classification.message.data
     if 'entities' in data:
-        for entity in data['entities']:
-            csv_entity = get_csv_entity_gold_standard(classification, entity, csv_intent.id)
-            write_tuple(system_corpus, csv_entity)
+        def write_entity(entity: dict, source: str) -> bool:
+            csv_entity = get_csv_entity(classification, source, entity, csv_intent.id)
+            return write_tuple(system_corpus, csv_entity)
 
-        for entity in classification.response.entities:
-            csv_entity = get_csv_entity_classification(classification, entity, csv_intent.id)
-            write_tuple(system_corpus, csv_entity)
+        def write_entities(source: str, entities: Iterable[dict]) -> Iterable[bool]:
+            return tuple(map(lambda entity: write_entity(entity, source), entities))
+
+        write_entities('gold standard', data['entities'])
+        write_entities('classification', classification.response.entities)
 
 
 def get_elements(sc: tp.SystemCorpus, csv: tp.CSVs) -> Iterable[tp.CSV_types]:

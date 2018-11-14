@@ -1,22 +1,17 @@
-import enum
+from enum import Enum
 import typing
 from typing import Tuple, NamedTuple
-
 from rasa_nlu.training_data.message import Message
 
-Focus = enum.Enum('Focus', 'ALL INTENT')
+Focus = Enum('Focus', 'ALL INTENT')
 
-Header = enum.Enum('Header', 'JSON YML')
+Header = Enum('Header', 'JSON YML')
 
-Corpus = enum.Enum('Corpus', 'ASKUBUNTU CHATBOT WEBAPPLICATIONS SNIPS2017 MOCK EMPTY')
+Corpus = Enum('Corpus', 'ASKUBUNTU CHATBOT WEBAPPLICATIONS SNIPS2017 MOCK EMPTY')
 
-CSVs = enum.Enum('CSVs', 'GENERAL INTENTS ENTITIES')
+CSVs = Enum('CSVs', 'GENERAL INTENTS ENTITIES')
 
-Run = enum.Enum('Run', 'PREVIOUS ALL NEW')
-
-# Messages = Tuple[Message, ...]
-
-# Sentence = NamedTuple('Sentence', [('text', str), ('corpus', Corpus)])  # this one is replaced by field in message
+Run = Enum('Run', 'PREV ALL NEW')
 
 System = NamedTuple('System', [('name', str), ('knowledge', Corpus), ('timestamp', str), ('data', Tuple)])
 

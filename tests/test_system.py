@@ -11,7 +11,7 @@ def test_get_docker_compose_configuration():
 
 
 def test_get_n_systems():
-    assert 3 < src.system.get_n_systems()
+    assert 2 < src.system.get_n_systems()
 
 
 def test_get_port():

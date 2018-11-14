@@ -2,7 +2,6 @@ import logging
 
 import src.typ as tp
 from src.evaluate import get_f1_intent
-# This allows for reproducing the statistics presented in blog which is somewhat interesting
 
 
 def get_system_corpus(name: str, corpus=tp.Corpus.EMPTY) -> tp.SystemCorpus:
@@ -11,7 +10,7 @@ def get_system_corpus(name: str, corpus=tp.Corpus.EMPTY) -> tp.SystemCorpus:
 
 
 def run():
-    system_corpus = get_system_corpus('rasa-spacy', tp.Corpus.CHATBOT)
+    system_corpus = get_system_corpus('rasa-spacy', tp.Corpus.WEBAPPLICATIONS)
     score = get_f1_intent(system_corpus, tp.Run.NEW)
     print(score)
 

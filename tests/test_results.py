@@ -1,13 +1,9 @@
-import shutil
-
+import src.dataset
 import src.results
 import src.typ
-import src.dataset
 from src.systems.mock import get_timestamp
 from tests.utils import clear_cache, cleanup
-import src.typ as tp
-from src.results import convert_tuple_str, convert_str_tuple
-
+from src.results import get_csv_entity
 system = src.typ.System('mock', src.typ.Corpus.MOCK, '', ())
 corpus = src.typ.Corpus.MOCK
 system_corpus = src.typ.SystemCorpus(system, corpus)

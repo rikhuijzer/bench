@@ -2,6 +2,7 @@ from src.typ import System, Corpus, SystemCorpus
 from src.systems.mock import get_timestamp
 import shutil
 import src.results
+from typing import Callable, Iterable
 
 
 def get_system(name='mock') -> System:
