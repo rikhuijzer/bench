@@ -37,7 +37,7 @@ The system also classified entities. For reader convenience the correct entities
 For the general statistics YAML is used. These statistics are calculated for the most
 recent run in `intents.csv` and `entities.csv`.
 
-TODO: Consider just reporting all sklearn.metrics. Nah seems bit chaotic and useless.
+TODO: Consider reporting memory usage.
 
 ```yaml
 system name: str

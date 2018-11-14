@@ -9,6 +9,7 @@ from sklearn.metrics import f1_score
 from typing import Iterable, Callable
 from functools import partial
 import logging
+import yaml
 
 
 def classify(system: tp.System, message: rasa_nlu.training_data.Message) -> tp.Classification:
@@ -31,7 +32,7 @@ def get_classifications(system_corpus: tp.SystemCorpus, retrain: bool) -> typing
         yield classification
 
 
-def run_bench(system_corpus: tp.SystemCorpus, n_runs=1) -> Iterable[tp.Classification]:
+def get_classifications_runs(system_corpus: tp.SystemCorpus, n_runs=1) -> Iterable[tp.Classification]:
     for _ in range(0, n_runs):
         classifications = get_classifications(system_corpus, retrain=True)
 
@@ -60,18 +61,12 @@ def get_f1_intent(system_corpus: tp.SystemCorpus, average='micro') -> float:
 
 def get_statistics(system_corpus: tp.SystemCorpus) -> dict:
     """Returns dict which can be converted to yml to be put into statistics.yml."""
-    f1_intent = partial(get_f1_intent, system_corpus=system_corpus)
     averages = ['micro', 'macro', 'weighted']
-
-    f1_scores = {
-        'micro': f1_intent('micro'),
-        'macro': f1_intent('macro'),
-        'weighted': f1_intent('weighted')
-    }
+    f1_scores = map(lambda average: get_f1_intent(system_corpus, average), averages)
     return {
         'system name': system_corpus.system.name,
         'corpus': system_corpus.corpus,
-        'f1 scores': f1_scores
+        'f1 scores': dict(zip(averages, f1_scores))
     }
 
 
@@ -80,5 +75,7 @@ def write_statistics(system_corpus: tp.SystemCorpus) -> bool:
     stats = get_statistics(system_corpus)
     logging.info('Writing the following statistics to file:\n {}'.format(stats))
 
-
+    filename = src.results.get_filename(system_corpus, tp.CSVs.STATS)
+    with open(str(filename), 'w') as outfile:
+        yaml.dump(stats, outfile, default_flow_style=False)
     return True

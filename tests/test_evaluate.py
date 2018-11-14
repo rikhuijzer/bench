@@ -1,7 +1,6 @@
-from src.evaluate import get_classifications, get_f1_intent, run_bench
 import src.typ as tp
-from tests.test_results import cleanup
-from tests.utils import get_corpus, get_system, get_system_corpus
+from src.evaluate import get_classifications, get_f1_intent, get_statistics
+from tests.utils import get_corpus, get_system, run_with_file_operations
 
 
 def test_classify_intents():
@@ -12,16 +11,15 @@ def test_classify_intents():
     assert 'C' == classifications[1].response.intent
 
 
-def test_run_bench():
-    """The run bench calls quite a lot of functions. It will crash if there is a bug."""
-    name = 'mock_' + test_run_bench.__name__
-    tuple(run_bench(get_system_corpus(name)))
-    cleanup(name)
-
-
 def test_get_f1_intent():
-    name = 'mock_' + test_get_f1_intent.__name__
-    system_corpus = get_system_corpus(name)
-    tuple(run_bench(system_corpus))
-    assert 0.8 == get_f1_intent(system_corpus)
-    cleanup(name)
+    result = run_with_file_operations(test_get_f1_intent.__name__, get_f1_intent)
+    assert 0.8 == round(result, 1)
+
+
+def test_get_statistics():
+    result = run_with_file_operations(test_get_statistics.__name__, get_statistics)
+    assert 'f1 scores' in result
+
+
+def test_write_statistics():
+    assert run_with_file_operations(test_write_statistics.__name__, get_statistics)

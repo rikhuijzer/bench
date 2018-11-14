@@ -17,7 +17,7 @@ def get_folder(sc: tp.SystemCorpus) -> pathlib.Path:
 def get_filename(sc: tp.SystemCorpus, csv: tp.CSVs) -> pathlib.Path:
     """ Returns the filename for some system and corpus and CSV type. """
     mapping = {
-        tp.CSVs.GENERAL: 'general.yml',
+        tp.CSVs.STATS: 'general.yml',
         tp.CSVs.INTENTS: 'intents.csv',
         tp.CSVs.ENTITIES: 'entities.csv'
     }
@@ -44,7 +44,7 @@ def get_tuple_types(t: type) -> Iterable[type]:
 def get_csv_type(csv: tp.CSVs) -> type:
     """ Get the corresponding type of NamedTuple for some CSV type. """
     mapping = {
-        tp.CSVs.GENERAL: tp.CSVGeneral,
+        tp.CSVs.STATS: tp.CSVStats,
         tp.CSVs.INTENTS: tp.CSVIntent,
         tp.CSVs.ENTITIES: tp.CSVEntity
     }

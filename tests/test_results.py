@@ -3,15 +3,14 @@ import src.results
 import src.typ
 from src.systems.mock import get_timestamp
 from tests.utils import clear_cache, cleanup
-from src.results import get_csv_entity
+
 system = src.typ.System('mock', src.typ.Corpus.MOCK, '', ())
 corpus = src.typ.Corpus.MOCK
 system_corpus = src.typ.SystemCorpus(system, corpus)
-result = src.typ.CSVs.GENERAL
 
 
 def test_get_filename():
-    fn = src.results.get_filename(system_corpus, result)
+    fn = src.results.get_filename(system_corpus, src.typ.CSVs.STATS)
     assert 'results' == fn.parents[1].name
     assert 'mock-MOCK' == fn.parents[0].name
     assert 'general.yml' == fn.name
