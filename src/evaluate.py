@@ -1,15 +1,19 @@
-import src.typ as tp
-import src.dataset
+import logging
+import os
 import typing
+from pathlib import Path
+from typing import Iterable, Optional
+
+import oyaml as yaml
 import rasa_nlu.training_data
+from sklearn.metrics import f1_score
+
+import src.dataset
 import src.results
 import src.system
+import src.typ as tp
 from src.system import add_retrain
-from sklearn.metrics import f1_score
-from typing import Iterable, Callable
-from functools import partial
-import logging
-import yaml
+from src.utils import get_root
 
 
 def classify(system: tp.System, message: rasa_nlu.training_data.Message) -> tp.Classification:
@@ -62,20 +66,80 @@ def get_f1_intent(system_corpus: tp.SystemCorpus, average='micro') -> float:
 def get_statistics(system_corpus: tp.SystemCorpus) -> dict:
     """Returns dict which can be converted to yml to be put into statistics.yml."""
     averages = ['micro', 'macro', 'weighted']
-    f1_scores = map(lambda average: get_f1_intent(system_corpus, average), averages)
+    f1_scores = tuple(map(lambda average: str(get_f1_intent(system_corpus, average)), averages))
     return {
         'system name': system_corpus.system.name,
-        'corpus': system_corpus.corpus,
-        'f1 scores': dict(zip(averages, f1_scores))
+        'corpus': str(system_corpus.corpus),
+        'f1 intent scores': dict(zip(averages, f1_scores))
     }
 
 
 def write_statistics(system_corpus: tp.SystemCorpus) -> bool:
     """Write statistics for last run to statistics.yml."""
     stats = get_statistics(system_corpus)
-    logging.info('Writing the following statistics to file:\n {}'.format(stats))
+    logging.info('Writing the following statistics:\n {}'.format(stats))
 
     filename = src.results.get_filename(system_corpus, tp.CSVs.STATS)
-    with open(str(filename), 'w') as outfile:
-        yaml.dump(stats, outfile, default_flow_style=False)
+    with open(str(filename), 'w') as f:
+        yaml.dump(stats, f, default_flow_style=False)
     return True
+
+
+def evaluate(system_corpus: tp.SystemCorpus):
+    write_statistics(system_corpus)
+
+
+def get_summary_filename() -> Path:
+    return get_root() / 'results' / 'summary.yml'
+
+
+def read_yaml(filename: Path) -> Optional[dict]:
+    """Returns yaml file content as dict if file exists."""
+    if not os.path.isfile(filename):
+        return None
+    else:
+        with open(str(filename), 'r') as f:
+            return yaml.load(f)
+
+
+def read_summary() -> dict:
+    """Returns summary as specified in file or empty dict if file does not exists."""
+    filename = get_summary_filename()
+    content = read_yaml(filename)
+    return content if content else {}
+
+
+def write_summary(summary: dict):
+    """Dump summary to summary.yml."""
+    with open(str(get_summary_filename()), 'w') as f:
+        return yaml.dump(summary, f, default_flow_style=False)
+
+
+def add_statistic(filename: Path, summary: dict) -> dict:
+    """Returns updated summary using statistic information from some file."""
+    content = read_yaml(filename)
+    corpus = content['corpus']
+    system_name = content['system name']
+
+    averages = ['micro', 'macro', 'weighted']
+    scores = map(lambda average: content['f1 intent scores'][average], averages)
+    for average, score in zip(averages, scores):
+        src.utils.add_nested_value(summary, score, corpus, 'f1 intent scores', average, system_name)
+    return summary
+
+
+def add_statistics(summary: dict) -> dict:
+    results_folder = get_root() / 'results'
+    folders = filter(lambda f: f.is_dir(), results_folder.glob('./*'))
+    for folder in folders:
+        filename = results_folder / folder / 'statistics.yml'
+        if os.path.isfile(filename):
+            summary = add_statistic(filename, summary)
+    return summary
+
+
+def update_summary():
+    """Reads statistics from all sub-folders of 'results' and summarizes them."""
+    summary = read_summary()
+    summary = add_statistics(summary)
+    write_summary(summary)

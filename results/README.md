@@ -1,12 +1,20 @@
 # Results 
 
 Results are stored here. The goal of these files is to be easy to process for a computer 
-and human. 
-
-
-Therefore the results are in YAML and CSV files. For each system and corpus a folder
+and human. Therefore the results are in YAML and CSV files. For each system and corpus a folder
 is created containing the files listed below.
 
+## `summary.yml`
+The benchmark results are summarised in `summary.yml`. For example the file could contain:
+```yaml
+Corpus.CHATBOT:
+  f1_intent_scores:
+    macro:
+      rasa-spacy: '0.939'
+      other_system: '0.843'
+```
+
+##  Subfolders
 This files can be used by the system to report system performance. Performance statistics include:
 - F1 score (micro, macro scores for intent and entity)
 - Average response time
@@ -40,20 +48,17 @@ recent run in `intents.csv` and `entities.csv`.
 TODO: Consider reporting memory usage.
 
 ```yaml
-system name: str
-
-corpus: str
-
-training time [seconds]: float
-
+system name: mock
+corpus: Corpus.MOCK
+run: '2018-01-01 00:00:00'
+training time [seconds]: '0.2'
 f1 scores:
-  micro: float
-  macro: float
-  weighted: float
-
+  micro: '0.823'
+  macro: '0.930'
+  weighted: '0.670'
 response_time [ms]:
-  average: int
-  standard deviation: int
+  average: '20'
+  standard deviation: '4'
 ```
 
 ## `classification report`

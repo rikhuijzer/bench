@@ -4,7 +4,7 @@ import math
 import pathlib
 import time
 import types
-import typing
+from typing import Any, TypeVar, Dict
 import datetime
 import src.typ
 
@@ -33,10 +33,10 @@ def timer(fn: types.FunctionType) -> types.FunctionType:
     return inner
 
 
-T = typing.TypeVar('T')
+T = TypeVar('T')
 
 
-def get_substring_match(dictionary: dict, string: str) -> T:
+def get_substring_match(dictionary: Dict[str, T], string: str) -> T:
     """ Returns dictionary value for first key which is a substring of string.  """
     matches = list(filter(lambda key: key in string.lower(), dictionary))
     n = len(matches)
@@ -60,3 +60,15 @@ def get_timestamp() -> str:
 
 def convert_str_timestamp(timestamp: str) -> datetime.datetime:
     return datetime.datetime.strptime(timestamp, timestamp_format)
+
+
+def add_nested_value(data: dict, value: Any, *keys) -> dict:
+    """Returns dict where nested value has been added."""
+    nested_data = data
+    for i, key in enumerate(keys):
+        if i == len(keys) - 1:
+            nested_data[key] = value
+        elif key not in nested_data:
+            nested_data[key] = {}
+        nested_data = nested_data[key]
+    return data

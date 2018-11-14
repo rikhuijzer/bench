@@ -1,12 +1,13 @@
+import operator
+import pathlib
 import typing
+from itertools import accumulate, chain
+from typing import List, Iterable
+
 from rasa_nlu.training_data.message import Message
+
 import src.typ as tp
 from src import dataset
-import pathlib
-from typing import List, Iterable
-from itertools import accumulate, chain
-import operator
-from functools import reduce, partial
 
 
 def get_folders(corpus: tp.Corpus) -> Iterable[pathlib.Path]:

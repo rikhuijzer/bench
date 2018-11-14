@@ -13,7 +13,7 @@ def test_get_filename():
     fn = src.results.get_filename(system_corpus, src.typ.CSVs.STATS)
     assert 'results' == fn.parents[1].name
     assert 'mock-MOCK' == fn.parents[0].name
-    assert 'general.yml' == fn.name
+    assert 'statistics.yml' == fn.name
 
 
 def test_write_tuple():

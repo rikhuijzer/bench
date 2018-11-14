@@ -1,5 +1,5 @@
 import src.typ as tp
-from src.evaluate import get_classifications, get_f1_intent, get_statistics
+from src.evaluate import get_classifications, get_f1_intent, get_statistics, write_statistics
 from tests.utils import get_corpus, get_system, run_with_file_operations
 
 
@@ -18,8 +18,8 @@ def test_get_f1_intent():
 
 def test_get_statistics():
     result = run_with_file_operations(test_get_statistics.__name__, get_statistics)
-    assert 'f1 scores' in result
+    assert 'f1 intent scores' in result
 
 
 def test_write_statistics():
-    assert run_with_file_operations(test_write_statistics.__name__, get_statistics)
+    assert run_with_file_operations(test_write_statistics.__name__, write_statistics)
