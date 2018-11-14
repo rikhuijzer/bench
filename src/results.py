@@ -2,13 +2,12 @@ import functools
 import logging
 import os
 import pathlib
-from typing import Iterable, Tuple, NamedTuple, Any
-from rasa_nlu.training_data.message import Message
+from typing import Iterable, Tuple, NamedTuple
+from typing import Optional
 
 import src.evaluate
 import src.typ as tp
 import src.utils
-from typing import Optional
 
 
 def get_folder(sc: tp.SystemCorpus) -> pathlib.Path:
@@ -138,17 +137,17 @@ def get_csv_intent(classification: tp.Classification) -> tp.CSVIntent:
     return tp.CSVIntent(id=newest_tuple.id + 1 if newest_tuple else 0,
                         timestamp=classification.system.timestamp,
                         sentence=classification.message.text,
-                        intent=classification.message.data['intent'],
+                        gold_standard=classification.message.data['intent'],
                         classification=classification.response.intent,
                         confidence=classification.response.confidence,
                         time=0)
 
 
-def get_csv_entity(classification: tp.Classification, source: str, entity: dict, sentence_id: int) -> tp.CSVEntity:
+def get_csv_entity(classification: tp.Classification, source: str, entity: dict, intent_id: int) -> tp.CSVEntity:
     system_corpus = tp.SystemCorpus(classification.system, classification.message.data['corpus'])
     newest_tuple = get_newest_tuple(system_corpus, tp.CSVs.ENTITIES)
     return tp.CSVEntity(id=newest_tuple.id + 1 if newest_tuple else 0,
-                        sentence_id=sentence_id,
+                        intent_id=intent_id,
                         timestamp=classification.system.timestamp,
                         source=source,
                         entity=entity['entity'],

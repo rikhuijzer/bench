@@ -43,7 +43,7 @@ def test_write_tuple():
         response = src.typ.Response('bar', -1.0, [])
         classification = src.typ.Classification(system_corpus.system, message, response)
         csv_intent = src.results.get_csv_intent(classification)
-        expected = src.typ.CSVIntent(id=3, timestamp='', sentence='foo', intent='bar',
+        expected = src.typ.CSVIntent(id=3, timestamp='', sentence='foo', gold_standard='bar',
                                      classification='bar', confidence=-1.0, time=0)
         assert expected == csv_intent
 

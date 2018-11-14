@@ -22,6 +22,6 @@ def test_run_bench():
 def test_get_f1_intent():
     name = 'mock_' + test_get_f1_intent.__name__
     system_corpus = get_system_corpus(name)
-    assert 0.8 == get_f1_intent(system_corpus, tp.Run.NEW)
-    assert 0.8 == get_f1_intent(system_corpus, tp.Run.PREVIOUS)
+    tuple(run_bench(system_corpus))
+    assert 0.8 == get_f1_intent(system_corpus)
     cleanup(name)

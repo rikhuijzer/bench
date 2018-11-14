@@ -11,8 +11,6 @@ Corpus = Enum('Corpus', 'ASKUBUNTU CHATBOT WEBAPPLICATIONS SNIPS2017 MOCK EMPTY'
 
 CSVs = Enum('CSVs', 'GENERAL INTENTS ENTITIES')
 
-Run = Enum('Run', 'PREV ALL NEW')
-
 System = NamedTuple('System', [('name', str), ('knowledge', Corpus), ('timestamp', str), ('data', Tuple)])
 
 SystemCorpus = NamedTuple('SystemCorpus', [('system', System), ('corpus', Corpus)])
@@ -27,10 +25,10 @@ F1Score = NamedTuple('F1Score', [('system', System), ('score', Tuple[float, ...]
 
 CSVGeneral = NamedTuple('CSVGeneral', [])
 
-CSVIntent = NamedTuple('CSVIntent', [('id', int), ('timestamp', str), ('sentence', str), ('intent', str),
+CSVIntent = NamedTuple('CSVIntent', [('id', int), ('timestamp', str), ('sentence', str), ('gold_standard', str),
                                      ('classification', str), ('confidence', float), ('time', int)])
 
-CSVEntity = NamedTuple('CSVEntity', [('id', int), ('sentence_id', str), ('timestamp', str), ('source', str),
+CSVEntity = NamedTuple('CSVEntity', [('id', int), ('intent_id', str), ('timestamp', str), ('source', str),
                                      ('entity', str), ('value', str), ('start', int), ('end', int),
                                      ('confidence', float)])
 

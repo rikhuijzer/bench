@@ -8,6 +8,7 @@ from src.system import add_retrain
 from sklearn.metrics import f1_score
 from typing import Iterable, Callable
 from functools import partial
+import logging
 
 
 def classify(system: tp.System, message: rasa_nlu.training_data.Message) -> tp.Classification:
@@ -41,23 +42,43 @@ def run_bench(system_corpus: tp.SystemCorpus, n_runs=1) -> Iterable[tp.Classific
 
 def get_previous_run(system_corpus: tp.SystemCorpus, csv: tp.CSVs) -> Iterable[tp.CSV_types]:
     """Get all classifications for runs with most recent timestamp. Will crash if there is no previous run."""
-    timestamp = src.results.get_newest_tuple(system_corpus, csv).timestamp
-    return filter(lambda x: x.timestamp == timestamp, src.results.get_elements(system_corpus, csv))
+    newest_tuple = src.results.get_newest_tuple(system_corpus, csv)
+    if not newest_tuple:
+        raise AssertionError('No newest tuple exists. Trying to evaluate without running benchmark first? Occured on:\n'
+                             '{} and {}'.format(system_corpus, csv))
+    return filter(lambda x: x.timestamp == newest_tuple.timestamp, src.results.get_elements(system_corpus, csv))
 
 
-def get_f1_intent(system_corpus: tp.SystemCorpus, run: tp.Run, average='micro') -> float:
-    """Returns f1 score for some system and corpus. Does this for ONE new run or one or more old runs."""
-    def get_new_intents(sc: tp.SystemCorpus) -> Iterable[tp.CSVIntent]:
-        return map(lambda x: src.results.get_csv_intent(x), run_bench(sc))
+def get_f1_intent(system_corpus: tp.SystemCorpus, average='micro') -> float:
+    """Returns f1 score for last run of some system and corpus."""
+    csv_intents = tuple(get_previous_run(system_corpus, csv=tp.CSVs.INTENTS))
 
-    functions = {
-        tp.Run.PREV: partial(get_previous_run, csv=tp.CSVs.INTENTS),
-        tp.Run.ALL: partial(src.results.get_elements, csv=tp.CSVs.INTENTS),
-        tp.Run.NEW: get_new_intents
-    }
-    func: Callable[[tp.SystemCorpus], Iterable[tp.CSVIntent]] = functions[run]
-    elements = tuple(func(system_corpus))
-
-    y_true = tuple(map(lambda e: e.intent, elements))
-    y_pred = tuple(map(lambda e: e.classification, elements))
+    y_true = tuple(map(lambda e: e.gold_standard, csv_intents))
+    y_pred = tuple(map(lambda e: e.classification, csv_intents))
     return round(f1_score(y_true, y_pred, average=average), 3)
+
+
+def get_statistics(system_corpus: tp.SystemCorpus) -> dict:
+    """Returns dict which can be converted to yml to be put into statistics.yml."""
+    f1_intent = partial(get_f1_intent, system_corpus=system_corpus)
+    averages = ['micro', 'macro', 'weighted']
+
+    f1_scores = {
+        'micro': f1_intent('micro'),
+        'macro': f1_intent('macro'),
+        'weighted': f1_intent('weighted')
+    }
+    return {
+        'system name': system_corpus.system.name,
+        'corpus': system_corpus.corpus,
+        'f1 scores': f1_scores
+    }
+
+
+def write_statistics(system_corpus: tp.SystemCorpus) -> bool:
+    """Write statistics for last run to statistics.yml."""
+    stats = get_statistics(system_corpus)
+    logging.info('Writing the following statistics to file:\n {}'.format(stats))
+
+
+    return True
