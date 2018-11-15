@@ -3,7 +3,7 @@ from src.systems.mock import get_timestamp
 import shutil
 import src.results
 from typing import Callable, Iterable, Any, TypeVar
-from src.evaluate import get_classifications_runs
+from src.evaluate import write_classifications
 
 
 def get_system(name='mock') -> tp.System:
@@ -22,9 +22,12 @@ def get_system_corpus(name='mock') -> tp.SystemCorpus:
 def run_with_file_operations(name_suffix: str, func: Callable[[tp.SystemCorpus], tp.T]) -> tp.T:
     """Creates new results subfolder, runs func and cleans results subfolder.
     This complexity is brought to you by functions with side-effects (specifically, filesystem operations)."""
+    import warnings
+    warnings.filterwarnings('ignore')
+
     name = 'mock_' + name_suffix
     system_corpus = get_system_corpus(name)
-    tuple(get_classifications_runs(system_corpus))
+    tuple(write_classifications(system_corpus))
     result = func(system_corpus)
     cleanup(name)
     return result

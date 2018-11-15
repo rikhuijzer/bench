@@ -4,7 +4,7 @@ import math
 import pathlib
 import time
 import types
-from typing import Any, TypeVar, Dict
+from typing import Any, TypeVar, Dict, Iterable
 import datetime
 import src.typ
 
@@ -72,3 +72,14 @@ def add_nested_value(data: dict, value: Any, *keys) -> dict:
             nested_data[key] = {}
         nested_data = nested_data[key]
     return data
+
+
+def iterate(iterable: Iterable) -> bool:
+    """Run over iterable to execute all elements. Useful for iterables with side-effects."""
+    iterator = iter(iterable)
+    while True:
+        try:
+            next(iterator)
+        except StopIteration:
+            break
+    return True

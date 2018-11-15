@@ -1,5 +1,5 @@
 import src.typ as tp
-from src.evaluate import get_classifications, get_f1_intent, get_statistics, write_statistics
+from src.evaluate import get_classifications, get_f1_intent, get_statistics, write_statistics, evaluate
 from tests.utils import get_corpus, get_system, run_with_file_operations
 
 
@@ -23,3 +23,7 @@ def test_get_statistics():
 
 def test_write_statistics():
     assert run_with_file_operations(test_write_statistics.__name__, write_statistics)
+
+
+def test_evaluate():
+    assert run_with_file_operations(test_evaluate.__name__, evaluate)

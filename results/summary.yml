@@ -1,0 +1,16 @@
+Corpus.WEBAPPLICATIONS:
+  f1 intent scores:
+    micro:
+      rasa-spacy: '0.746'
+    macro:
+      rasa-spacy: '0.561'
+    weighted:
+      rasa-spacy: '0.703'
+Corpus.CHATBOT:
+  f1 intent scores:
+    micro:
+      rasa-spacy: '0.981'
+    macro:
+      rasa-spacy: '0.978'
+    weighted:
+      rasa-spacy: '0.981'

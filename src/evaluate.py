@@ -13,7 +13,7 @@ import src.results
 import src.system
 import src.typ as tp
 from src.system import add_retrain
-from src.utils import get_root
+from src.utils import get_root, iterate
 
 
 def classify(system: tp.System, message: rasa_nlu.training_data.Message) -> tp.Classification:
@@ -36,7 +36,7 @@ def get_classifications(system_corpus: tp.SystemCorpus, retrain: bool) -> typing
         yield classification
 
 
-def get_classifications_runs(system_corpus: tp.SystemCorpus, n_runs=1) -> Iterable[tp.Classification]:
+def write_classifications(system_corpus: tp.SystemCorpus, n_runs=1) -> Iterable[tp.Classification]:
     for _ in range(0, n_runs):
         classifications = get_classifications(system_corpus, retrain=True)
 
@@ -46,11 +46,10 @@ def get_classifications_runs(system_corpus: tp.SystemCorpus, n_runs=1) -> Iterab
 
 
 def get_previous_run(system_corpus: tp.SystemCorpus, csv: tp.CSVs) -> Iterable[tp.CSV_types]:
-    """Get all classifications for runs with most recent timestamp. Will crash if there is no previous run."""
+    """Get all classifications for runs with most recent timestamp."""
     newest_tuple = src.results.get_newest_tuple(system_corpus, csv)
     if not newest_tuple:
-        raise AssertionError('No newest tuple exists. Trying to evaluate without running benchmark first? Occured on:\n'
-                             '{} and {}'.format(system_corpus, csv))
+        raise AssertionError('No newest tuple exists. Occured on:\n {} and {}'.format(system_corpus, csv))
     return filter(lambda x: x.timestamp == newest_tuple.timestamp, src.results.get_elements(system_corpus, csv))
 
 
@@ -85,10 +84,6 @@ def write_statistics(system_corpus: tp.SystemCorpus) -> bool:
     return True
 
 
-def evaluate(system_corpus: tp.SystemCorpus):
-    write_statistics(system_corpus)
-
-
 def get_summary_filename() -> Path:
     return get_root() / 'results' / 'summary.yml'
 
@@ -119,12 +114,13 @@ def add_statistic(filename: Path, summary: dict) -> dict:
     """Returns updated summary using statistic information from some file."""
     content = read_yaml(filename)
     corpus = content['corpus']
-    system_name = content['system name']
+    if corpus != 'Corpus.MOCK':
+        system_name = content['system name']
 
-    averages = ['micro', 'macro', 'weighted']
-    scores = map(lambda average: content['f1 intent scores'][average], averages)
-    for average, score in zip(averages, scores):
-        src.utils.add_nested_value(summary, score, corpus, 'f1 intent scores', average, system_name)
+        averages = ['micro', 'macro', 'weighted']
+        scores = map(lambda average: content['f1 intent scores'][average], averages)
+        for average, score in zip(averages, scores):
+            src.utils.add_nested_value(summary, score, corpus, 'f1 intent scores', average, system_name)
     return summary
 
 
@@ -143,3 +139,10 @@ def update_summary():
     summary = read_summary()
     summary = add_statistics(summary)
     write_summary(summary)
+
+
+def evaluate(system_corpus: tp.SystemCorpus) -> bool:
+    iterate(write_classifications(system_corpus))
+    write_statistics(system_corpus)
+    update_summary()
+    return True

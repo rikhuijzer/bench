@@ -1,7 +1,7 @@
 import pytest
 
 from src.systems.mock import get_timestamp
-from src.utils import get_timestamp, convert_str_timestamp, get_substring_match, add_nested_value
+from src.utils import get_timestamp, convert_str_timestamp, get_substring_match, add_nested_value, iterate
 
 
 def test_get_substring_match():
@@ -28,3 +28,10 @@ def test_timestamp():
 
 def test_add_nested_value():
     assert {'a': {'b': {'c': 3}}} == add_nested_value({}, 3, 'a', 'b', 'c')
+
+
+def test_iterate():
+    """Only testing whether iteration is implemented correctly, not whether side-effect has occurred."""
+    numbers = range(3)
+    iterable = map(lambda number: number + 1, numbers)
+    assert iterate(iterable)

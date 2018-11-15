@@ -1,0 +1,6 @@
+system name: rasa-spacy
+corpus: Corpus.CHATBOT
+f1 intent scores:
+  micro: '0.981'
+  macro: '0.978'
+  weighted: '0.981'

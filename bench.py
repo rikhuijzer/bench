@@ -1,7 +1,7 @@
 import logging
 
 import src.typ as tp
-from src.evaluate import evaluate, update_summary
+from src.evaluate import evaluate
 
 
 def get_system_corpus(name: str, corpus=tp.Corpus.EMPTY) -> tp.SystemCorpus:
@@ -10,11 +10,10 @@ def get_system_corpus(name: str, corpus=tp.Corpus.EMPTY) -> tp.SystemCorpus:
 
 
 def run():
-    system_corpus = get_system_corpus('rasa-spacy', tp.Corpus.WEBAPPLICATIONS)
+    system_corpus = get_system_corpus('rasa-mitie', tp.Corpus.WEBAPPLICATIONS)
     evaluate(system_corpus)
-    update_summary()
 
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
-    update_summary()
+    run()
