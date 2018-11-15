@@ -1,63 +1,76 @@
 import src.dataset
 import src.results
-import src.typ
-from src.systems.mock import get_timestamp
-from tests.utils import clear_cache, cleanup
+import src.typ as tp
+from tests.utils import clear_cache, cleanup, run_with_file_operations, get_timestamp, get_system_corpus
+from typing import Iterable
 
-system = src.typ.System('mock', src.typ.Corpus.MOCK, '', ())
-corpus = src.typ.Corpus.MOCK
-system_corpus = src.typ.SystemCorpus(system, corpus)
+
+def create_csv_intent(x: int) -> src.typ.CSVIntent:
+    return src.typ.CSVIntent(x, get_timestamp(), 'sentence', 'intent', 'classification', -1.0, -1)
+
+
+def write_three_distinct_intents(system_corpus: tp.SystemCorpus):
+    for i in range(3):
+        if i == 2:
+            clear_cache()  # to avoid complexity the cache should not change behaviour, so we also test without cache
+        src.results.write_tuple(system_corpus, create_csv_intent(i))
 
 
 def test_get_filename():
-    fn = src.results.get_filename(system_corpus, src.typ.CSVs.STATS)
+    fn = src.results.get_filename(get_system_corpus('mock'), tp.CSVs.STATS)
     assert 'results' == fn.parents[1].name
     assert 'mock-MOCK' == fn.parents[0].name
     assert 'statistics.yml' == fn.name
 
 
 def test_write_tuple():
-    def create_csv_intent(x: int) -> src.typ.CSVIntent:
-        return src.typ.CSVIntent(x, get_timestamp(), 'sentence', 'intent', 'classification', -1.0, -1)
+    """This is a a monolithic test. Caused by the fact that we are testing various low-level functions with
+    side effects. The test is quite thorough so """
+    csv = tp.CSVs.INTENTS
 
-    csv = src.typ.CSVs.INTENTS
+    def helper(sc: tp.SystemCorpus) -> Iterable[str]:
+        """Creates file, adds three tuples and returns lines of file as string."""
+        write_three_distinct_intents(sc)
 
-    def write():
-        for i in range(0, 3):
-            if i < 2:
-                clear_cache()  # to avoid complexity the cache should not change behaviour, so we test without the cache
-            src.results.write_tuple(system_corpus, create_csv_intent(i))
+        with open(str(src.results.get_filename(sc, csv)), 'r') as f:
+            yield f.readline().strip()
 
-    def validate_write():
-        with open(str(src.results.get_filename(system_corpus, csv)), 'r') as f:
-            assert src.results.create_header(create_csv_intent(0)) == f.readline().strip()
-            for i in range(0, 3):
-                assert src.results.convert_tuple_str(create_csv_intent(i)) == f.readline().strip()
+    result = run_with_file_operations(test_write_tuple.__name__, helper)
+    header, *lines = result
+    assert src.results.create_header(create_csv_intent(0)) == header
+    for i, line in enumerate(lines):
+        assert src.results.convert_tuple_str(create_csv_intent(i)) == line
 
-    def test_get_newest_tuple():
-        assert create_csv_intent(2) == src.results.get_newest_tuple(system_corpus, csv)
 
-    def test_get_csv_intent():
-        message = src.dataset.create_message('foo', 'bar', [], False, corpus)
-        response = src.typ.Response('bar', -1.0, [])
-        classification = src.typ.Classification(system_corpus.system, message, response)
-        csv_intent = src.results.get_csv_intent(classification)
-        expected = src.typ.CSVIntent(id=3, timestamp='', sentence='foo', gold_standard='bar',
-                                     classification='bar', confidence=-1.0, time=0)
-        assert expected == csv_intent
+def test_get_newest_tuple():
+    def helper(sc: tp.SystemCorpus) -> str:
+        """Returns newest tuple from file after adding some data to file."""
+        write_three_distinct_intents(sc)
+        return src.results.get_newest_tuple(sc, tp.CSVs.INTENTS)
 
-    write()
-    validate_write()
-    test_get_newest_tuple()
-    test_get_csv_intent()
-    cleanup()
+    assert create_csv_intent(2) == run_with_file_operations(test_get_newest_tuple.__name__, helper)
+
+
+def test_get_csv_intent():
+    """In get_csv_intent() the newest tuple is obtained from file."""
+    def helper(sc: tp.SystemCorpus) -> tp.CSVIntent:
+        write_three_distinct_intents(sc)
+        message = src.dataset.create_message('foo', 'bar', [], False, sc.corpus)
+        response = tp.Response('bar', -1.0, [])
+        classification = tp.Classification(sc.system, message, response)
+        return src.results.get_csv_intent(classification)
+
+    expected = tp.CSVIntent(id=3, timestamp=get_timestamp(), sentence='foo', gold_standard='bar',
+                            classification='bar', confidence=-1.0, time=0)
+    result = run_with_file_operations(test_get_csv_intent.__name__, helper)
+    assert expected == result
 
 
 def test_get_tuple_types():
-    assert [int, str, str, str, str, float, int] == list(src.results.get_tuple_types(src.typ.CSVIntent))
+    assert [int, str, str, str, str, float, int] == list(src.results.get_tuple_types(tp.CSVIntent))
 
 
 def test_convert_str_tuple():
-    expected = src.typ.CSVIntent(-1, 'run', 'sentence', 'intent', 'classification', -1.0, -1)
-    t = src.results.convert_str_tuple('-1,run,sentence,intent,classification,-1.0,-1', src.typ.CSVs.INTENTS)
+    expected = tp.CSVIntent(-1, 'run', 'sentence', 'intent', 'classification', -1.0, -1)
+    t = src.results.convert_str_tuple('-1,run,sentence,intent,classification,-1.0,-1', tp.CSVs.INTENTS)
     assert expected == t

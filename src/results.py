@@ -124,8 +124,7 @@ def get_newest_tuple(sc: tp.SystemCorpus, csv: tp.CSVs) -> Optional[tp.CSV_types
     if not os.path.isfile(get_filename(sc, csv)):
         return None
 
-    file_content = read_file(sc, csv)
-    file_content = file_content.strip()
+    file_content = read_file(sc, csv).strip()
     last_line = file_content[file_content.rfind('\n'):]
     return convert_str_tuple(last_line, csv)
 
@@ -170,8 +169,8 @@ def write_classification(classification: tp.Classification):
             csv_entity = get_csv_entity(classification, source, entity, csv_intent.id)
             return write_tuple(system_corpus, csv_entity)
 
-        def write_entities(source: str, entities: Iterable[dict]) -> Iterable[bool]:
-            return tuple(map(lambda entity: write_entity(entity, source), entities))
+        def write_entities(source: str, entities: Iterable[dict]):
+            src.utils.iterate(map(lambda entity: write_entity(entity, source), entities))
 
         write_entities('gold standard', data['entities'])
         write_entities('classification', classification.response.entities)

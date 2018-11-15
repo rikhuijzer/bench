@@ -10,7 +10,7 @@ def get_system_corpus(name: str, corpus=tp.Corpus.EMPTY) -> tp.SystemCorpus:
 
 
 def run():
-    system_corpus = get_system_corpus('rasa-mitie', tp.Corpus.WEBAPPLICATIONS)
+    system_corpus = get_system_corpus('rasa-mitie', tp.Corpus.ASKUBUNTU)
     evaluate(system_corpus)
 
 

@@ -858,3 +858,62 @@ id,run,sentence,intent,classification,confidence,time
 856,2018-11-14 10:48:08,Embedding stop time in a YouTube video link,None,None,0.194,0
 857,2018-11-14 10:48:08,Is there a catch to PayPal's Premier account type?,None,Filter Spam,0.231,0
 858,2018-11-14 10:48:08,How can I get OkCupid search to show only matches within 5 miles of me?,None,Filter Spam,0.184,0
+859,2018-11-15 11:44:49,Alternative to Facebook,Find Alternative,Find Alternative,0.56,0
+860,2018-11-15 11:44:49,How do I delete my Facebook account?,Delete Account,Delete Account,0.718,0
+861,2018-11-15 11:44:49,Are there any good Pandora alternatives with general availability outside the US?,Find Alternative,Find Alternative,0.508,0
+862,2018-11-15 11:44:49,Is it possible to export my data from Trello to back it up?,Export Data,Filter Spam,0.213,0
+863,2018-11-15 11:44:49,Is there an online alternative to iGoogle,Find Alternative,Find Alternative,0.536,0
+864,2018-11-15 11:44:49,How can I remove myself from a Trello organization?,Delete Account,Filter Spam,0.174,0
+865,2018-11-15 11:44:49,How do I transfer my photos from Flickr to Picasa?,Export Data,Change Password,0.214,0
+866,2018-11-15 11:44:49,How do I sync Google Calendar with my Outlook Calendar?,Sync Accounts,Sync Accounts,0.34,0
+867,2018-11-15 11:44:49,Archive/export all the blog entries from a RSS feed in Google Reader,Export Data,Filter Spam,0.19,0
+868,2018-11-15 11:44:49,How can I delete my 160by2 account?,Delete Account,Delete Account,0.605,0
+869,2018-11-15 11:44:49,How can I permanently delete my Yahoo mail account?,Delete Account,Delete Account,0.484,0
+870,2018-11-15 11:44:49,Deleting an account(website) from Google Analytics?,Delete Account,Find Alternative,0.35,0
+871,2018-11-15 11:44:49,How to delete my imgur account?,Delete Account,Delete Account,0.578,0
+872,2018-11-15 11:44:49,How to change my Uber password or delete the account?,Delete Account,Delete Account,0.328,0
+873,2018-11-15 11:44:49,How to delete a Sify Mail account,Delete Account,Delete Account,0.353,0
+874,2018-11-15 11:44:49,How to permanently delete a 37signals ID,Delete Account,Delete Account,0.366,0
+875,2018-11-15 11:44:49,How can I delete my Hunch account?,Delete Account,Delete Account,0.67,0
+876,2018-11-15 11:44:49,Any alternatives to Google Apps for your domain?,Find Alternative,Find Alternative,0.472,0
+877,2018-11-15 11:44:49,Evernote alternative,Find Alternative,Find Alternative,0.664,0
+878,2018-11-15 11:44:49,Alternatives to LibraryThing,Find Alternative,Find Alternative,0.604,0
+879,2018-11-15 11:44:49,What are the alternatives to Facebook/Meetup for Event Planning,Find Alternative,Find Alternative,0.435,0
+880,2018-11-15 11:44:49,Is there a free and privacy-aware alternative to Google?,Find Alternative,Find Alternative,0.46,0
+881,2018-11-15 11:44:49,What alternatives to Google Product Search exist?,Find Alternative,Find Alternative,0.513,0
+882,2018-11-15 11:44:49,Photo Sharing Site (alternative to flickr) supporting OpenID sign in?,Find Alternative,Find Alternative,0.52,0
+883,2018-11-15 11:44:49,Any good alternative to Google Alerts?,Find Alternative,Find Alternative,0.465,0
+884,2018-11-15 11:44:49,Good wireframing apps?,None,Find Alternative,0.442,0
+885,2018-11-15 11:44:49,Is there a HTML alternative to Prezi?,Find Alternative,Find Alternative,0.508,0
+886,2018-11-15 11:44:49,Any alternatives to Google Streetview?,Find Alternative,Find Alternative,0.533,0
+887,2018-11-15 11:44:49,Zencoder alternatives?,Find Alternative,Find Alternative,0.667,0
+888,2018-11-15 11:44:49,Alternatives to discontinued Google Calendar Appointment Slots,Find Alternative,Find Alternative,0.393,0
+889,2018-11-15 11:44:49,Q&A Platform similar to Stack Exchange model?,Find Alternative,Find Alternative,0.324,0
+890,2018-11-15 11:44:49,Can I Share/Sync My Picasa Web Albums Automatically to My Facebook Account?,Sync Accounts,Sync Accounts,0.186,0
+891,2018-11-15 11:44:49,Sync not export Facebook events with Google Apps calendar,Sync Accounts,Sync Accounts,0.241,0
+892,2018-11-15 11:44:49,How do I sync Facebook Twitter & Foursquare?,Sync Accounts,Change Password,0.248,0
+893,2018-11-15 11:44:49,Google Calendar not syncing calendars that have been added by URL with Windows 10 Calendar,Sync Accounts,Sync Accounts,0.3,0
+894,2018-11-15 11:44:49,Google Contact Synchronization on the iPhone 3G,Sync Accounts,Sync Accounts,0.39,0
+895,2018-11-15 11:44:49,Gmail user set up through Google Apps can't change their password,Change Password,Filter Spam,0.199,0
+896,2018-11-15 11:44:49,How do I change my password on ebay?,Change Password,Delete Account,0.22,0
+897,2018-11-15 11:44:49,Gmail recover password while logged in Iphone,Change Password,Change Password,0.166,0
+898,2018-11-15 11:44:49,How to retrieve forgotten Wordpress Admin password,Change Password,Change Password,0.224,0
+899,2018-11-15 11:44:49,How to retrieve a stolen Yahoo account's password?,Change Password,Delete Account,0.225,0
+900,2018-11-15 11:44:49,Users can't reset their passwords anymore on Google Apps?,Change Password,Filter Spam,0.171,0
+901,2018-11-15 11:44:49,Does moving a mail to the IMAP spam folder trains Gmail's spam filter?,Filter Spam,Filter Spam,0.51,0
+902,2018-11-15 11:44:49,How can I auto-delete some spam from Gmail?,Filter Spam,Filter Spam,0.257,0
+903,2018-11-15 11:44:49,When I move spam to my inbox it goes back into the spam again,Filter Spam,Filter Spam,0.404,0
+904,2018-11-15 11:44:49,How to send messages to spam in Gmail filter?,Filter Spam,Filter Spam,0.497,0
+905,2018-11-15 11:44:49,How do I disable the spam filter in Gmail?,Filter Spam,Filter Spam,0.352,0
+906,2018-11-15 11:44:49,How to check your Gmail spam label for good emails,Filter Spam,Filter Spam,0.387,0
+907,2018-11-15 11:44:49,Mark large numbers of messages as "not spam",Filter Spam,Filter Spam,0.466,0
+908,2018-11-15 11:44:49,What are alternatives to Postini for spam filtering?,Filter Spam,Filter Spam,0.33,0
+909,2018-11-15 11:44:49,How to remove spam filter for Google Apps email,Filter Spam,Filter Spam,0.44,0
+910,2018-11-15 11:44:49,Does marking an email as spam in Gmail affect the filter for everyone?,Filter Spam,Filter Spam,0.399,0
+911,2018-11-15 11:44:49,How can I prevent/lessen event spam on Facebook?,Filter Spam,Filter Spam,0.244,0
+912,2018-11-15 11:44:49,Do emails auto-forwarded from one Gmail account to another stop if marked as spam?,Filter Spam,Filter Spam,0.34,0
+913,2018-11-15 11:44:49,Gmail's filter for SPAM folder and/or keywords in multiple fields,Filter Spam,Filter Spam,0.417,0
+914,2018-11-15 11:44:49,Get rid of Russian junk from my Gmail,Filter Spam,Filter Spam,0.277,0
+915,2018-11-15 11:44:49,Embedding stop time in a YouTube video link,None,Find Alternative,0.211,0
+916,2018-11-15 11:44:49,Is there a catch to PayPal's Premier account type?,None,Find Alternative,0.23,0
+917,2018-11-15 11:44:49,How can I get OkCupid search to show only matches within 5 miles of me?,None,Filter Spam,0.18,0

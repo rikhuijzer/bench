@@ -1,0 +1,7 @@
+id,intent_id,timestamp,source,entity,value,start,end,confidence
+0,130,2018-11-15 14:17:18,gold standard,SoftwareName,Word,34,38,-1.0
+1,133,2018-11-15 14:17:18,gold standard,SoftwareName,iTunes,24,30,-1.0
+2,137,2018-11-15 14:17:18,gold standard,SoftwareName,Project,65,72,-1.0
+3,159,2018-11-15 14:17:18,gold standard,UbuntuVersion,11.10,15,20,-1.0
+4,159,2018-11-15 14:17:18,gold standard,UbuntuVersion,12.04,24,29,-1.0
+5,159,2018-11-15 14:17:18,classification,UbuntuVersion,11.10,15,20,None

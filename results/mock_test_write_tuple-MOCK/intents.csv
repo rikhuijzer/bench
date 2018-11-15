@@ -1,0 +1,4 @@
+id,timestamp,sentence,gold_standard,classification,confidence,time
+0,2018-11-03 16:43:08,sentence,intent,classification,-1.0,-1
+1,2018-11-03 16:43:08,sentence,intent,classification,-1.0,-1
+2,2018-11-03 16:43:08,sentence,intent,classification,-1.0,-1
