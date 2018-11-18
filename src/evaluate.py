@@ -125,6 +125,7 @@ def add_statistic(filename: Path, summary: dict) -> dict:
 
 
 def add_statistics(summary: dict) -> dict:
+    """Returns updated summary using statistic information from multiple files."""
     results_folder = get_root() / 'results'
     folders = filter(lambda f: f.is_dir(), results_folder.glob('./*'))
     for folder in folders:
@@ -141,8 +142,8 @@ def update_summary():
     write_summary(summary)
 
 
-def evaluate(system_corpus: tp.SystemCorpus) -> bool:
+def evaluate(system_corpus: tp.SystemCorpus):
+    """The main function of this module. This does a new run and updates the corresponding files."""
     iterate(write_classifications(system_corpus))
     write_statistics(system_corpus)
     update_summary()
-    return True

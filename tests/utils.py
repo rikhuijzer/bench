@@ -33,7 +33,7 @@ def run_with_file_operations(name_suffix: str, func: Callable[[tp.SystemCorpus],
     return result
 
 
-def clear_cache():
+def clear_caches():
     src.results.create_folder.cache_clear()
     src.results.create_file.cache_clear()
 
@@ -41,4 +41,4 @@ def clear_cache():
 def cleanup(name='mock'):
     """That we need this function in multiple tests only shows how annoying it is to have state in your program."""
     shutil.rmtree(str(src.results.get_folder(get_system_corpus(name))))
-    clear_cache()
+    clear_caches()

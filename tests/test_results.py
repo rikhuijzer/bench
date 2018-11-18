@@ -1,7 +1,7 @@
 import src.dataset
 import src.results
 import src.typ as tp
-from tests.utils import clear_cache, cleanup, run_with_file_operations, get_timestamp, get_system_corpus
+from tests.utils import clear_caches, run_with_file_operations, get_timestamp, get_system_corpus
 from typing import Iterable
 
 
@@ -12,7 +12,7 @@ def create_csv_intent(x: int) -> src.typ.CSVIntent:
 def write_three_distinct_intents(system_corpus: tp.SystemCorpus):
     for i in range(3):
         if i == 2:
-            clear_cache()  # to avoid complexity the cache should not change behaviour, so we also test without cache
+            clear_caches()  # to avoid complexity the cache should not change behaviour, so we also clear the cache
         src.results.write_tuple(system_corpus, create_csv_intent(i))
 
 
@@ -24,15 +24,11 @@ def test_get_filename():
 
 
 def test_write_tuple():
-    """This is a a monolithic test. Caused by the fact that we are testing various low-level functions with
-    side effects. The test is quite thorough so """
-    csv = tp.CSVs.INTENTS
-
     def helper(sc: tp.SystemCorpus) -> Iterable[str]:
         """Creates file, adds three tuples and returns lines of file as string."""
         write_three_distinct_intents(sc)
 
-        with open(str(src.results.get_filename(sc, csv)), 'r') as f:
+        with open(str(src.results.get_filename(sc, tp.CSVs.INTENTS)), 'r') as f:
             yield f.readline().strip()
 
     result = run_with_file_operations(test_write_tuple.__name__, helper)
@@ -52,8 +48,8 @@ def test_get_newest_tuple():
 
 
 def test_get_csv_intent():
-    """In get_csv_intent() the newest tuple is obtained from file."""
     def helper(sc: tp.SystemCorpus) -> tp.CSVIntent:
+        """In get_csv_intent() the newest tuple is obtained from file."""
         write_three_distinct_intents(sc)
         message = src.dataset.create_message('foo', 'bar', [], False, sc.corpus)
         response = tp.Response('bar', -1.0, [])
