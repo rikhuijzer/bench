@@ -1,6 +1,6 @@
 import csv
 from pathlib import Path
-from typing import Tuple, Optional, List
+from typing import Tuple, Optional, List, Iterable
 
 from rasa_nlu.training_data.message import Message
 from sklearn.model_selection import train_test_split
@@ -15,30 +15,27 @@ def convert_message_line(message: tp.Message, train) -> Optional[Tuple]:
         return message.text, message.data['intent']
 
 
-def write_tsv(messages: Tuple[Message, ...], filename: Path, train: bool):
+def write_tsv(Xys: List[tp.Xy], filename: Path):
     with open(str(filename), 'w', encoding='utf8', newline='') as tsv_file:
         tsv_writer = csv.writer(tsv_file, delimiter='\t', lineterminator='\n')
-
-        for message in messages:
-            line = convert_message_line(message, train)
-            if line:
-                tsv_writer.writerow(line)
+        for X, y in zip(Xys.X, Xys.y):
+            tsv_writer.writerow([X, y])
 
 
-def get_X_y(messages: Tuple[Message, ...]) -> Tuple[Tuple, Tuple]:
-    X = tuple(map(lambda message: message.text, messages))
-    y = tuple(map(lambda message: message.data['intent'], messages))
+def get_X_y(messages: Tuple[Message, ...]) -> Tuple[List, List]:
+    X = list(map(lambda message: message.text, messages))
+    y = list(map(lambda message: message.data['intent'], messages))
     return X, y
 
 
 def get_split(X: List, y: List) -> tp.Split:
-    """Return train / dev / test split."""
+    """Return stratified train / dev / test split."""
 
-    def my_train_test_split(my_X, my_y):
-        return train_test_split(my_X, my_y, test_size=0.2, random_state=0, stratify=my_y)
+    def my_train_test_split(my_X, my_y, split_size: float):
+        return train_test_split(my_X, my_y, test_size=split_size, random_state=0, stratify=my_y)
 
-    X_train, X_dev, y_train, y_dev = my_train_test_split(X, y)
-    X_train, X_test, y_train, y_test = my_train_test_split(X_train, y_train)
+    X_train, X_dev, y_train, y_dev = my_train_test_split(X, y, split_size=0.20)
+    X_train, X_test, y_train, y_test = my_train_test_split(X_train, y_train, split_size=0.25)
 
     train = tp.Xy(X_train, y_train)
     dev = tp.Xy(X_dev, y_dev)
@@ -48,8 +45,10 @@ def get_split(X: List, y: List) -> tp.Split:
 
 def to_tsv(corpus: tp.Corpus, folder: Path):
     messages = get_messages(corpus)
-    write_tsv(messages, folder / 'train.tsv', train=True)
-    write_tsv(messages, folder / 'test.tsv', train=False)
+    split = get_split(*get_X_y(messages))
+    write_tsv(split.train, folder / 'train.tsv')
+    write_tsv(split.dev, folder / 'dev.tsv')
+    write_tsv(split.test, folder / 'test.tsv')
 
 
 if __name__ == '__main__':
