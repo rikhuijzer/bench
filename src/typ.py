@@ -36,3 +36,7 @@ CSVEntity = NamedTuple('CSVEntity', [('id', int), ('intent_id', str), ('timestam
 CSV_types = Union[CSVStats, CSVIntent, CSVEntity]
 
 CSV = NamedTuple('CSV', [('filename', str), ('named_tuple', type)])
+
+Xy = NamedTuple('Xy', [('X', Tuple), ('y', Tuple)])
+
+Split = NamedTuple('Split', [('train', Xy), ('dev', Xy), ('test', Xy)])
