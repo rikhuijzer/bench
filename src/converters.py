@@ -52,4 +52,4 @@ def to_tsv(corpus: tp.Corpus, folder: Path):
 
 
 if __name__ == '__main__':
-    to_tsv(tp.Corpus.ASKUBUNTU, get_root() / 'generated' / 'askubuntu')
+    to_tsv(tp.Corpus.CHATBOT, get_root() / 'generated' / 'chatbot')
