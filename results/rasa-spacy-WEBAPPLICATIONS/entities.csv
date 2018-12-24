@@ -300,3 +300,103 @@ id,sentence_id,timestamp,source,entity,value,start,end,confidence
 298,915,2018-11-15 11:44:49,classification,WebService,youtube,25,32,0.8693362313508072
 299,916,2018-11-15 11:44:49,gold standard,WebService,PayPal,20,26,-1.0
 300,917,2018-11-15 11:44:49,gold standard,WebService,OkCupid,14,21,-1.0
+301,918,2018-12-21 14:18:14,gold standard,WebService,Facebook,15,23,-1.0
+302,919,2018-12-21 14:18:14,gold standard,WebService,Facebook,19,27,-1.0
+303,919,2018-12-21 14:18:14,classification,WebService,facebook,19,27,0.8139574251259918
+304,920,2018-12-21 14:18:14,gold standard,WebService,Pandora,19,26,-1.0
+305,921,2018-12-21 14:18:14,gold standard,WebService,Trello,38,44,-1.0
+306,922,2018-12-21 14:18:14,gold standard,WebService,iGoogle,34,41,-1.0
+307,923,2018-12-21 14:18:14,gold standard,WebService,Trello,31,37,-1.0
+308,924,2018-12-21 14:18:14,gold standard,WebService,Flickr,33,39,-1.0
+309,924,2018-12-21 14:18:14,gold standard,WebService,Picasa,43,49,-1.0
+310,925,2018-12-21 14:18:14,gold standard,WebService,Google Calendar,14,29,-1.0
+311,925,2018-12-21 14:18:14,gold standard,WebService,Outlook Calendar,38,54,-1.0
+312,925,2018-12-21 14:18:14,classification,WebService,google calendar,14,29,0.953487667352869
+313,925,2018-12-21 14:18:14,classification,WebService,outlook calendar,38,54,0.6729672934397174
+314,926,2018-12-21 14:18:14,gold standard,WebService,Google Reader,55,68,-1.0
+315,926,2018-12-21 14:18:14,classification,WebService,google reader,55,68,0.8165515311443325
+316,927,2018-12-21 14:18:14,gold standard,WebService,160by2,20,26,-1.0
+317,927,2018-12-21 14:18:14,classification,WebService,160by2,20,26,0.8139574253052407
+318,928,2018-12-21 14:18:14,gold standard,WebService,Yahoo mail,32,42,-1.0
+319,928,2018-12-21 14:18:14,classification,WebService,yahoo,32,37,0.4703056881074658
+320,929,2018-12-21 14:18:14,gold standard,WebService,Google Analytics,34,50,-1.0
+321,929,2018-12-21 14:18:14,classification,WebService,google,34,40,0.8480536479154648
+322,930,2018-12-21 14:18:14,gold standard,WebService,imgur,17,22,-1.0
+323,930,2018-12-21 14:18:14,classification,WebService,imgur,17,22,0.8139568571114062
+324,931,2018-12-21 14:18:14,gold standard,WebService,Uber,17,21,-1.0
+325,931,2018-12-21 14:18:14,classification,WebService,uber,17,21,0.6966805826890673
+326,932,2018-12-21 14:18:14,gold standard,WebService,Sify Mail,16,25,-1.0
+327,933,2018-12-21 14:18:14,gold standard,WebService,37signals,28,37,-1.0
+328,934,2018-12-21 14:18:14,gold standard,WebService,Hunch,20,25,-1.0
+329,934,2018-12-21 14:18:14,classification,WebService,hunch,20,25,0.8139574253052407
+330,935,2018-12-21 14:18:14,gold standard,WebService,Google Apps,20,31,-1.0
+331,935,2018-12-21 14:18:14,classification,WebService,google,20,26,0.8227512033310591
+332,936,2018-12-21 14:18:14,gold standard,WebService,Evernote,0,8,-1.0
+333,937,2018-12-21 14:18:14,gold standard,WebService,LibraryThing,16,28,-1.0
+334,938,2018-12-21 14:18:14,gold standard,WebService,Facebook,29,37,-1.0
+335,939,2018-12-21 14:18:14,gold standard,WebService,Google,49,55,-1.0
+336,939,2018-12-21 14:18:14,classification,WebService,google,49,55,0.8455047264294491
+337,940,2018-12-21 14:18:14,gold standard,WebService,Google,21,27,-1.0
+338,940,2018-12-21 14:18:14,classification,WebService,google,21,27,0.8092887225537093
+339,941,2018-12-21 14:18:14,gold standard,WebService,flickr,35,41,-1.0
+340,941,2018-12-21 14:18:14,gold standard,WebService,OpenID,54,60,-1.0
+341,942,2018-12-21 14:18:14,gold standard,WebService,Google Alerts,24,37,-1.0
+342,942,2018-12-21 14:18:14,classification,WebService,google,24,30,0.830685839821693
+343,944,2018-12-21 14:18:14,gold standard,WebService,Prezi,31,36,-1.0
+344,945,2018-12-21 14:18:14,gold standard,WebService,Google Streetview,20,37,-1.0
+345,945,2018-12-21 14:18:14,classification,WebService,google,20,26,0.8435082043661429
+346,946,2018-12-21 14:18:14,gold standard,WebService,Zencoder,0,8,-1.0
+347,947,2018-12-21 14:18:14,gold standard,WebService,Google Calendar,29,44,-1.0
+348,947,2018-12-21 14:18:14,classification,WebService,google calendar,29,44,0.8954971954446792
+349,948,2018-12-21 14:18:14,gold standard,WebService,Stack Exchange,24,38,-1.0
+350,949,2018-12-21 14:18:14,gold standard,WebService,Picasa,20,26,-1.0
+351,949,2018-12-21 14:18:14,gold standard,WebService,Facebook,58,66,-1.0
+352,949,2018-12-21 14:18:14,classification,WebService,facebook,58,66,0.8140684789522639
+353,950,2018-12-21 14:18:14,gold standard,WebService,Facebook,16,24,-1.0
+354,950,2018-12-21 14:18:14,gold standard,WebService,Google Apps,37,48,-1.0
+355,950,2018-12-21 14:18:14,classification,WebService,google,37,43,0.9268891557412816
+356,951,2018-12-21 14:18:14,gold standard,WebService,Facebook,14,22,-1.0
+357,951,2018-12-21 14:18:14,gold standard,WebService,Twitter,23,30,-1.0
+358,951,2018-12-21 14:18:14,gold standard,WebService,Foursquare,33,43,-1.0
+359,951,2018-12-21 14:18:14,classification,WebService,twitter,23,30,0.7909010647430625
+360,952,2018-12-21 14:18:14,gold standard,WebService,Google Calendar,0,15,-1.0
+361,952,2018-12-21 14:18:14,classification,WebService,google calendar,0,15,0.7911393827575145
+362,953,2018-12-21 14:18:14,gold standard,WebService,Google,0,6,-1.0
+363,953,2018-12-21 14:18:14,classification,WebService,google,0,6,0.8699190419232127
+364,954,2018-12-21 14:18:14,gold standard,WebService,Gmail,0,5,-1.0
+365,954,2018-12-21 14:18:14,gold standard,WebService,Google,26,32,-1.0
+366,954,2018-12-21 14:18:14,classification,WebService,gmail,0,5,0.9682767987423028
+367,954,2018-12-21 14:18:14,classification,WebService,google,26,32,0.766160129942467
+368,955,2018-12-21 14:18:14,gold standard,WebService,ebay,31,35,-1.0
+369,956,2018-12-21 14:18:14,gold standard,WebService,Gmail,0,5,-1.0
+370,956,2018-12-21 14:18:14,classification,WebService,gmail,0,5,0.9683520780103179
+371,957,2018-12-21 14:18:14,gold standard,WebService,Wordpress,26,35,-1.0
+372,958,2018-12-21 14:18:14,gold standard,WebService,Yahoo,25,30,-1.0
+373,959,2018-12-21 14:18:14,gold standard,WebService,Google,45,51,-1.0
+374,959,2018-12-21 14:18:14,classification,WebService,google,45,51,0.4929382614424645
+375,960,2018-12-21 14:18:14,gold standard,WebService,Gmail,50,55,-1.0
+376,960,2018-12-21 14:18:14,classification,WebService,gmail,50,55,0.9169436283022299
+377,961,2018-12-21 14:18:14,gold standard,WebService,Gmail,37,42,-1.0
+378,961,2018-12-21 14:18:14,classification,WebService,gmail,37,42,0.9721417134263501
+379,963,2018-12-21 14:18:14,gold standard,WebService,Gmail,32,37,-1.0
+380,963,2018-12-21 14:18:14,classification,WebService,gmail,32,37,0.9317377749825669
+381,964,2018-12-21 14:18:14,gold standard,WebService,Gmail,36,41,-1.0
+382,964,2018-12-21 14:18:14,classification,WebService,gmail,36,41,0.9593843418663989
+383,965,2018-12-21 14:18:14,gold standard,WebService,Gmail,18,23,-1.0
+384,965,2018-12-21 14:18:14,classification,WebService,gmail,18,23,0.9171833961495376
+385,967,2018-12-21 14:18:14,gold standard,WebService,Postini,25,32,-1.0
+386,968,2018-12-21 14:18:14,gold standard,WebService,Google,30,36,-1.0
+387,968,2018-12-21 14:18:14,classification,WebService,google,30,36,0.777173778162963
+388,969,2018-12-21 14:18:14,gold standard,WebService,Gmail,33,38,-1.0
+389,969,2018-12-21 14:18:14,classification,WebService,gmail,33,38,0.9342598885223949
+390,970,2018-12-21 14:18:14,gold standard,WebService,Facebook,39,47,-1.0
+391,971,2018-12-21 14:18:14,gold standard,WebService,Gmail,34,39,-1.0
+392,971,2018-12-21 14:18:14,classification,WebService,gmail,34,39,0.9820590802096842
+393,972,2018-12-21 14:18:14,gold standard,WebService,Gmail,0,5,-1.0
+394,972,2018-12-21 14:18:14,classification,WebService,gmail,0,5,0.9690536102831014
+395,973,2018-12-21 14:18:14,gold standard,WebService,Gmail,32,37,-1.0
+396,973,2018-12-21 14:18:14,classification,WebService,gmail,32,37,0.9967382225514057
+397,974,2018-12-21 14:18:14,gold standard,WebService,YouTube,25,32,-1.0
+398,974,2018-12-21 14:18:14,classification,WebService,youtube,25,32,0.8693362313508072
+399,975,2018-12-21 14:18:14,gold standard,WebService,PayPal,20,26,-1.0
+400,976,2018-12-21 14:18:14,gold standard,WebService,OkCupid,14,21,-1.0

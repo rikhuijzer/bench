@@ -54,6 +54,9 @@ def get_csv_type(csv: tp.CSVs) -> type:
 def convert_str_tuple(text: str, csv: tp.CSVs) -> tp.CSV_types:
     """ Convert a string from csv back to NamedTuple. """
     tuple_types = get_tuple_types(get_csv_type(csv))
+
+    # snips error: could not convert string to float: 'BookRestaurant'
+    # problem caused by , in text
     converted = map(lambda t: t[0](t[1]), zip(tuple_types, text.split(',')))
 
     if csv == tp.CSVs.INTENTS:

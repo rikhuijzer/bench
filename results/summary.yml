@@ -1,11 +1,11 @@
 Corpus.WEBAPPLICATIONS:
   f1 intent scores:
     micro:
-      rasa-spacy: '0.763'
+      rasa-spacy: '0.627'
     macro:
-      rasa-spacy: '0.546'
+      rasa-spacy: '0.359'
     weighted:
-      rasa-spacy: '0.705'
+      rasa-spacy: '0.541'
 Corpus.CHATBOT:
   f1 intent scores:
     micro:
@@ -14,3 +14,19 @@ Corpus.CHATBOT:
       rasa-spacy: '0.978'
     weighted:
       rasa-spacy: '0.981'
+Corpus.ASKUBUNTU:
+  f1 intent scores:
+    micro:
+      rasa-spacy: '0.853'
+    macro:
+      rasa-spacy: '0.715'
+    weighted:
+      rasa-spacy: '0.834'
+Corpus.SNIPS2017:
+  f1 intent scores:
+    micro:
+      rasa-spacy: '0.991'
+    macro:
+      rasa-spacy: '0.991'
+    weighted:
+      rasa-spacy: '0.991'

@@ -53,7 +53,7 @@ def get_previous_run(system_corpus: tp.SystemCorpus, csv: tp.CSVs) -> Iterable[t
     return filter(lambda x: x.timestamp == newest_tuple.timestamp, src.results.get_elements(system_corpus, csv))
 
 
-def get_f1_intent(system_corpus: tp.SystemCorpus, average='micro') -> float:
+def get_f1_intent(system_corpus: tp.SystemCorpus, average='weighted') -> float:
     """Returns f1 score for last run of some system and corpus."""
     csv_intents = tuple(get_previous_run(system_corpus, csv=tp.CSVs.INTENTS))
 

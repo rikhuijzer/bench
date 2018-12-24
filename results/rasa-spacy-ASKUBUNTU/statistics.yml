@@ -1,0 +1,6 @@
+system name: rasa-spacy
+corpus: Corpus.ASKUBUNTU
+f1 intent scores:
+  micro: '0.853'
+  macro: '0.715'
+  weighted: '0.834'

@@ -1,0 +1,6 @@
+system name: rasa-spacy
+corpus: Corpus.SNIPS2017
+f1 intent scores:
+  micro: '0.991'
+  macro: '0.991'
+  weighted: '0.991'

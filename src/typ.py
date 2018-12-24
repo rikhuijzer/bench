@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, auto
 from typing import Tuple, NamedTuple, TypeVar, Union, List
 from rasa_nlu.training_data.message import Message
 
@@ -6,7 +6,15 @@ Focus = Enum('Focus', 'ALL INTENT')
 
 Header = Enum('Header', 'JSON YML')
 
-Corpus = Enum('Corpus', 'ASKUBUNTU CHATBOT WEBAPPLICATIONS SNIPS2017 MOCK EMPTY')
+
+class Corpus(Enum):
+    ASKUBUNTU = auto()
+    CHATBOT = auto()
+    WEBAPPLICATIONS = auto()
+    SNIPS2017 = auto()
+    MOCK = auto()
+    EMPTY = auto()
+
 
 CSVs = Enum('CSVs', 'STATS INTENTS ENTITIES')
 

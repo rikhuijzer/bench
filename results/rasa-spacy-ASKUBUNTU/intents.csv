@@ -217,3 +217,221 @@ id,timestamp,sentence,intent,classification,confidence,time
 215,2018-11-12 17:45:22,How Do I Install Canon MF8000C Printer in Ubuntu 15.10?,Setup Printer,Setup Printer,-1.0,0
 216,2018-11-12 17:45:22,How to install Canon LBP330 in Lts 16.04,Setup Printer,Setup Printer,-1.0,0
 217,2018-11-12 17:45:22,Install printer Lexmark X4690 (ubuntu 12.04),Setup Printer,Setup Printer,-1.0,0
+218,2018-12-21 13:41:47,What software can I use to view epub documents?,Software Recommendation,Software Recommendation,0.792,0
+219,2018-12-21 13:41:47,Which PDF Viewer would you recommend?,Software Recommendation,Software Recommendation,0.783,0
+220,2018-12-21 13:41:47,What IDEs are available for Ubuntu?,Software Recommendation,Software Recommendation,0.612,0
+221,2018-12-21 13:41:47,What's the best Mind Mapping Software?,Software Recommendation,Software Recommendation,0.767,0
+222,2018-12-21 13:41:47,Software to read a QR code?,Software Recommendation,Software Recommendation,0.736,0
+223,2018-12-21 13:41:47,PDF to word conversion software?,Software Recommendation,Software Recommendation,0.809,0
+224,2018-12-21 13:41:47,Is there software that can view .dwg files?,Software Recommendation,Software Recommendation,0.766,0
+225,2018-12-21 13:41:47,What are some good PHP editors?,Software Recommendation,Software Recommendation,0.789,0
+226,2018-12-21 13:41:47,Is there a software utility to adjust screen gamma/brightness/contrast?,Software Recommendation,Software Recommendation,0.632,0
+227,2018-12-21 13:41:47,Please recommend a hex editor for shell,Software Recommendation,Software Recommendation,0.743,0
+228,2018-12-21 13:41:47,Is there LAN topology mapping software available in Ubuntu?,Software Recommendation,Software Recommendation,0.643,0
+229,2018-12-21 13:41:47,Is there a tool like wifi analyzer for ubuntu?,Software Recommendation,Software Recommendation,0.519,0
+230,2018-12-21 13:41:47,Tool for recovering deleted data from a flash drive,Software Recommendation,Software Recommendation,0.474,0
+231,2018-12-21 13:41:47,What's a simple "colour picker" app for GNOME?,Software Recommendation,Software Recommendation,0.718,0
+232,2018-12-21 13:41:47,Any app that tells me to take regular breaks from working?,Software Recommendation,Software Recommendation,0.594,0
+233,2018-12-21 13:41:47,What are some good ASCII art generators?,Software Recommendation,Software Recommendation,0.724,0
+234,2018-12-21 13:41:47,What are some good GUI binary viewers/editors?,Software Recommendation,Software Recommendation,0.766,0
+235,2018-12-21 13:41:47,Which is the best PDF metadata viewer for Ubuntu?,Software Recommendation,Software Recommendation,0.777,0
+236,2018-12-21 13:41:47,Is there a Linux file manager with a proper drop-down tree view? (like finder in OS X),Software Recommendation,Software Recommendation,0.74,0
+237,2018-12-21 13:41:47,Which application do you recommend for watching TV (DVB)?,Software Recommendation,Software Recommendation,0.719,0
+238,2018-12-21 13:41:47,What Is The Best HDR Software?,Software Recommendation,Software Recommendation,0.692,0
+239,2018-12-21 13:41:47,What do you use to edit Microsoft Word documents (docx)?,Software Recommendation,Software Recommendation,0.802,0
+240,2018-12-21 13:41:47,What's the best Wireframing tool?,Software Recommendation,Software Recommendation,0.811,0
+241,2018-12-21 13:41:47,Is there any software that will do face recognition in photos?,Software Recommendation,Software Recommendation,0.75,0
+242,2018-12-21 13:41:47,Applications to replace iTunes for iPod synchronization?,Software Recommendation,Software Recommendation,0.558,0
+243,2018-12-21 13:41:47,Is there an SSH connection manager?,Software Recommendation,Shutdown Computer,0.417,0
+244,2018-12-21 13:41:47,A light alternative to gnome-system-monitor?,Software Recommendation,Software Recommendation,0.537,0
+245,2018-12-21 13:41:47,Software to create a video slideshow?,Software Recommendation,Software Recommendation,0.79,0
+246,2018-12-21 13:41:47,Is there a project management software for Ubuntu like Microsoft Project?,Software Recommendation,Software Recommendation,0.655,0
+247,2018-12-21 13:41:47,Is there any recovery software available for ext4?,Software Recommendation,Software Recommendation,0.698,0
+248,2018-12-21 13:41:47,What blog editor software are available?,Software Recommendation,Software Recommendation,0.781,0
+249,2018-12-21 13:41:47,Can you recommend a good modern GUI download manager (wget wrapper?),Software Recommendation,Software Recommendation,0.725,0
+250,2018-12-21 13:41:47,Is there any program for fuzzy string matching which provides a match score?,Software Recommendation,Software Recommendation,0.802,0
+251,2018-12-21 13:41:47,Are there any hardware diagnostic tools?,Software Recommendation,Software Recommendation,0.73,0
+252,2018-12-21 13:41:47,Recommendation for Regex editor?,Software Recommendation,Software Recommendation,0.818,0
+253,2018-12-21 13:41:47,Is there a Document scanning and archiving software?,None,Software Recommendation,0.755,0
+254,2018-12-21 13:41:47,Keyboard shortcut to shutdown?,Shutdown Computer,Shutdown Computer,0.988,0
+255,2018-12-21 13:41:47,My system doesn't go shutdown,Shutdown Computer,Shutdown Computer,0.905,0
+256,2018-12-21 13:41:47,How to troubleshoot slow shutdown?,Shutdown Computer,Shutdown Computer,0.921,0
+257,2018-12-21 13:41:47,How can I shutdown the computer when a certain process ends?,Shutdown Computer,Shutdown Computer,0.849,0
+258,2018-12-21 13:41:47,Ubuntu Shut down app,Shutdown Computer,Shutdown Computer,0.622,0
+259,2018-12-21 13:41:47,What does my computer do when I click 'Shut Down'?,Shutdown Computer,Shutdown Computer,0.397,0
+260,2018-12-21 13:41:47,How do I shut down without the confirmation prompt?,Shutdown Computer,Shutdown Computer,0.647,0
+261,2018-12-21 13:41:47,No action when shutdown pressed,Shutdown Computer,Shutdown Computer,0.995,0
+262,2018-12-21 13:41:47,what is the right way to shutdown ubuntu using the command line?,Shutdown Computer,Shutdown Computer,0.573,0
+263,2018-12-21 13:41:47,How can I make shutdown not require admin password?,Shutdown Computer,Shutdown Computer,0.566,0
+264,2018-12-21 13:41:47,shutdown in specific way if no-one uses computer,Shutdown Computer,Shutdown Computer,0.739,0
+265,2018-12-21 13:41:47,What is the command to open the shutdown dialog?,Shutdown Computer,Shutdown Computer,0.735,0
+266,2018-12-21 13:41:47,How to Shut down Ubuntu by using keyboard?,Shutdown Computer,Shutdown Computer,0.53,0
+267,2018-12-21 13:41:47,shutdown 5:30pm every day,Shutdown Computer,Shutdown Computer,0.971,0
+268,2018-12-21 13:41:47,Upgrading from 11.10 to 12.04,Make Update,Make Update,0.98,0
+269,2018-12-21 13:41:47,How do I upgrade to the release version of 16.04 if I am running Beta?,Make Update,Software Recommendation,0.324,0
+270,2018-12-21 13:41:47,Doubts regarding the 15.04 upgrade (is it inevitable and unavoidable?),Make Update,Software Recommendation,0.502,0
+271,2018-12-21 13:41:47,Is any offline upgrade from 13.10 to 14.04 possible?,Make Update,Software Recommendation,0.565,0
+272,2018-12-21 13:41:47,Upgrading from ubuntu 12.04 to 13.10,Make Update,Make Update,0.953,0
+273,2018-12-21 13:41:47,Ubuntu upgrade failed,Make Update,Make Update,0.94,0
+274,2018-12-21 13:41:47,Upgrading from 12.04 to 13.10 ( Unanswered questions ),Make Update,Make Update,0.45,0
+275,2018-12-21 13:41:47,upgrading to Ubuntu 13.10 from Ubuntu 13.04,Make Update,Make Update,0.97,0
+276,2018-12-21 13:41:47,Is it recommended to upgrade to Lubuntu 15.04?,Software Recommendation,Make Update,0.471,0
+277,2018-12-21 13:41:47,Force upgrade 12.10 to 13.04,Make Update,Make Update,0.961,0
+278,2018-12-21 13:41:47,How to partially upgrade Ubuntu 11.10 from Ubuntu 11.04?,Make Update,Make Update,0.925,0
+279,2018-12-21 13:41:47,Problem upgrading Ubuntu 9.10,Make Update,Make Update,0.969,0
+280,2018-12-21 13:41:47,Is it necessary to upgrade to 15.10 from 14.04?,Make Update,Software Recommendation,0.428,0
+281,2018-12-21 13:41:47,How do I update Xubuntu 11.10 to Xubuntu 12.04 LTS?,Make Update,Make Update,0.914,0
+282,2018-12-21 13:41:47,Why did the upgrade from 11.10 to 12.04 ruin my system?,Make Update,Make Update,0.517,0
+283,2018-12-21 13:41:47,Problems upgrading from 12.04 to 14.04,Make Update,Make Update,0.825,0
+284,2018-12-21 13:41:47,Problems upgrading Ubuntu 12.10 to 13.04,Make Update,Make Update,0.978,0
+285,2018-12-21 13:41:47,Upgrade from 12.04 to 12.10 without losing files?,Make Update,Make Update,0.64,0
+286,2018-12-21 13:41:47,On really old Ubuntu 6.06 - How to upgrade,Software Recommendation,Make Update,0.529,0
+287,2018-12-21 13:41:47,Do I need to uninstall 10.04 to upgrade to 12.04?,Make Update,Make Update,0.778,0
+288,2018-12-21 13:41:47,Do I need to reinstall everything to upgrade from 13.10 to 14.10?,Make Update,Make Update,0.444,0
+289,2018-12-21 13:41:47,update-manager: upgrade to 15.04 rather than 16.04,Make Update,Software Recommendation,0.482,0
+290,2018-12-21 13:41:47,Upgrading 16.04 to 16.04.1,Make Update,Make Update,0.539,0
+291,2018-12-21 13:41:47,Upgrading Ubuntu Server 9.10 to 10.04,Make Update,Make Update,0.973,0
+292,2018-12-21 13:41:47,Ho do I update to 13.04 from the beta?,Make Update,Make Update,0.345,0
+293,2018-12-21 13:41:47,How to upgrade from 12.10 to 14.04,Make Update,Make Update,0.799,0
+294,2018-12-21 13:41:47,Upgrading from 10.10 to 11.04 how much space is needed?,Make Update,Make Update,0.541,0
+295,2018-12-21 13:41:47,Do I need to backup my 12.04 system to upgrade to 12.04.1?,Make Update,Make Update,0.393,0
+296,2018-12-21 13:41:47,Cannot upgrade from 12.04LTS to 14.04,Make Update,Software Recommendation,0.345,0
+297,2018-12-21 13:41:47,Upgrade 10.10 to 11.04,Make Update,Make Update,0.993,0
+298,2018-12-21 13:41:47,How to upgrade from 14.04 LTS or 15.10 to 16.04 from terminal,Make Update,Make Update,0.464,0
+299,2018-12-21 13:41:47,How to upgrade from 16.04 LTS to 16.04.1 LTS,Make Update,Make Update,0.838,0
+300,2018-12-21 13:41:47,Upgrading from 10.04 to 11.10,Make Update,Make Update,0.98,0
+301,2018-12-21 13:41:47,How can i upgrade to Ubuntu 14.04 final from 14.04 Beta correctly?,Make Update,Make Update,0.372,0
+302,2018-12-21 13:41:47,Is there an upgrade procedure from 12.04 LTS to 14.04 LTS,Make Update,Make Update,0.658,0
+303,2018-12-21 13:41:47,Upgrade from 9.10 to 11.04,Make Update,Make Update,0.983,0
+304,2018-12-21 13:41:47,How to upgrade Ubuntu 12.04 to 14.04 if I have dual boot with windows 7?,Make Update,Make Update,0.45,0
+305,2018-12-21 13:41:47,Wubi Device /dev/loop0 full. How to get more space?,Software Recommendation,Software Recommendation,0.588,0
+306,2018-12-21 13:41:47,Using 12.04 can I compile packages with gcc for 10.04?,Make Update,Software Recommendation,0.368,0
+307,2018-12-21 13:41:47,Removing Recently used items in 12.04,Software Recommendation,Software Recommendation,0.341,0
+308,2018-12-21 13:41:47,Upgrading From 11.04 (32bit) to 12.04 (64bit),Make Update,Make Update,0.565,0
+309,2018-12-21 13:41:47,How is rm command different from the delete button?,None,Software Recommendation,0.56,0
+310,2018-12-21 13:41:47,In Unity how do I see the details of a given launcher?,Software Recommendation,Software Recommendation,0.58,0
+311,2018-12-21 13:41:47,How to provide user permission to read and write on /dev/sdax? What is the syntax?,None,Software Recommendation,0.762,0
+312,2018-12-21 13:41:47,Security enhancements prevent mounting /dev/sdb1,None,Shutdown Computer,0.435,0
+313,2018-12-21 13:41:47,How do I show grub when resuming from suspend?,None,Shutdown Computer,0.57,0
+314,2018-12-21 13:41:47,How to install a Lexmark z600 series printer?,Setup Printer,Setup Printer,0.9,0
+315,2018-12-21 13:41:47,Cannot setup HP All in one DJ3630,Setup Printer,Software Recommendation,0.362,0
+316,2018-12-21 13:41:47,How to add a network printer on Ubuntu 15.10?,Setup Printer,Setup Printer,0.505,0
+317,2018-12-21 13:41:47,Cannot install printer driver epson l210,Setup Printer,Setup Printer,0.985,0
+318,2018-12-21 13:41:47,How do I install Dell 2150cdn printer,Setup Printer,Setup Printer,0.959,0
+319,2018-12-21 13:41:47,Installing Epson XP-424 wireless printer,Setup Printer,Setup Printer,1.0,0
+320,2018-12-21 13:41:47,Installing EPSON L355 on Ubuntu 14.04,Setup Printer,Setup Printer,0.955,0
+321,2018-12-21 13:41:47,How do I install the HP F4280 printer?,Setup Printer,Setup Printer,0.878,0
+322,2018-12-21 13:41:47,How to Install Brother DCP-8110DN Laser Printer on Ubuntu?,Setup Printer,Setup Printer,0.868,0
+323,2018-12-21 13:41:47,How to Install a Canon MF8040Cn Printer on Ubuntu 12.04,Setup Printer,Setup Printer,0.888,0
+324,2018-12-21 13:41:47,How Do I Install Canon MF8000C Printer in Ubuntu 15.10?,Setup Printer,Setup Printer,0.923,0
+325,2018-12-21 13:41:47,How to install Canon LBP330 in Lts 16.04,Setup Printer,Setup Printer,0.731,0
+326,2018-12-21 13:41:47,Install printer Lexmark X4690 (ubuntu 12.04),Setup Printer,Setup Printer,0.981,0
+327,2018-12-24 14:38:33,What software can I use to view epub documents?,Software Recommendation,Software Recommendation,0.76,0
+328,2018-12-24 14:38:33,Which PDF Viewer would you recommend?,Software Recommendation,Software Recommendation,0.758,0
+329,2018-12-24 14:38:33,What IDEs are available for Ubuntu?,Software Recommendation,Software Recommendation,0.632,0
+330,2018-12-24 14:38:33,What's the best Mind Mapping Software?,Software Recommendation,Software Recommendation,0.709,0
+331,2018-12-24 14:38:33,Software to read a QR code?,Software Recommendation,Software Recommendation,0.722,0
+332,2018-12-24 14:38:33,PDF to word conversion software?,Software Recommendation,Software Recommendation,0.804,0
+333,2018-12-24 14:38:33,Is there software that can view .dwg files?,Software Recommendation,Software Recommendation,0.756,0
+334,2018-12-24 14:38:33,What are some good PHP editors?,Software Recommendation,Software Recommendation,0.777,0
+335,2018-12-24 14:38:33,Is there a software utility to adjust screen gamma/brightness/contrast?,Software Recommendation,Software Recommendation,0.598,0
+336,2018-12-24 14:38:33,Please recommend a hex editor for shell,Software Recommendation,Software Recommendation,0.754,0
+337,2018-12-24 14:38:33,Is there LAN topology mapping software available in Ubuntu?,Software Recommendation,Software Recommendation,0.656,0
+338,2018-12-24 14:38:33,Is there a tool like wifi analyzer for ubuntu?,Software Recommendation,Software Recommendation,0.513,0
+339,2018-12-24 14:38:33,Tool for recovering deleted data from a flash drive,Software Recommendation,Software Recommendation,0.44,0
+340,2018-12-24 14:38:33,What's a simple "colour picker" app for GNOME?,Software Recommendation,Software Recommendation,0.684,0
+341,2018-12-24 14:38:33,Any app that tells me to take regular breaks from working?,Software Recommendation,Software Recommendation,0.555,0
+342,2018-12-24 14:38:33,What are some good ASCII art generators?,Software Recommendation,Software Recommendation,0.707,0
+343,2018-12-24 14:38:33,What are some good GUI binary viewers/editors?,Software Recommendation,Software Recommendation,0.751,0
+344,2018-12-24 14:38:33,Which is the best PDF metadata viewer for Ubuntu?,Software Recommendation,Software Recommendation,0.764,0
+345,2018-12-24 14:38:33,Is there a Linux file manager with a proper drop-down tree view? (like finder in OS X),Software Recommendation,Software Recommendation,0.702,0
+346,2018-12-24 14:38:33,Which application do you recommend for watching TV (DVB)?,Software Recommendation,Software Recommendation,0.702,0
+347,2018-12-24 14:38:33,What Is The Best HDR Software?,Software Recommendation,Software Recommendation,0.679,0
+348,2018-12-24 14:38:33,What do you use to edit Microsoft Word documents (docx)?,Software Recommendation,Software Recommendation,0.763,0
+349,2018-12-24 14:38:33,What's the best Wireframing tool?,Software Recommendation,Software Recommendation,0.774,0
+350,2018-12-24 14:38:33,Is there any software that will do face recognition in photos?,Software Recommendation,Software Recommendation,0.706,0
+351,2018-12-24 14:38:33,Applications to replace iTunes for iPod synchronization?,Software Recommendation,Software Recommendation,0.557,0
+352,2018-12-24 14:38:33,Is there an SSH connection manager?,Software Recommendation,Shutdown Computer,0.421,0
+353,2018-12-24 14:38:33,A light alternative to gnome-system-monitor?,Software Recommendation,Software Recommendation,0.504,0
+354,2018-12-24 14:38:33,Software to create a video slideshow?,Software Recommendation,Software Recommendation,0.803,0
+355,2018-12-24 14:38:33,Is there a project management software for Ubuntu like Microsoft Project?,Software Recommendation,Software Recommendation,0.669,0
+356,2018-12-24 14:38:33,Is there any recovery software available for ext4?,Software Recommendation,Software Recommendation,0.705,0
+357,2018-12-24 14:38:33,What blog editor software are available?,Software Recommendation,Software Recommendation,0.812,0
+358,2018-12-24 14:38:33,Can you recommend a good modern GUI download manager (wget wrapper?),Software Recommendation,Software Recommendation,0.73,0
+359,2018-12-24 14:38:33,Is there any program for fuzzy string matching which provides a match score?,Software Recommendation,Software Recommendation,0.771,0
+360,2018-12-24 14:38:33,Are there any hardware diagnostic tools?,Software Recommendation,Software Recommendation,0.737,0
+361,2018-12-24 14:38:33,Recommendation for Regex editor?,Software Recommendation,Software Recommendation,0.804,0
+362,2018-12-24 14:38:33,Is there a Document scanning and archiving software?,None,Software Recommendation,0.763,0
+363,2018-12-24 14:38:33,Keyboard shortcut to shutdown?,Shutdown Computer,Shutdown Computer,0.971,0
+364,2018-12-24 14:38:33,My system doesn't go shutdown,Shutdown Computer,Shutdown Computer,0.858,0
+365,2018-12-24 14:38:33,How to troubleshoot slow shutdown?,Shutdown Computer,Shutdown Computer,0.866,0
+366,2018-12-24 14:38:33,How can I shutdown the computer when a certain process ends?,Shutdown Computer,Shutdown Computer,0.781,0
+367,2018-12-24 14:38:33,Ubuntu Shut down app,Shutdown Computer,Shutdown Computer,0.585,0
+368,2018-12-24 14:38:33,What does my computer do when I click 'Shut Down'?,Shutdown Computer,Shutdown Computer,0.397,0
+369,2018-12-24 14:38:33,How do I shut down without the confirmation prompt?,Shutdown Computer,Shutdown Computer,0.582,0
+370,2018-12-24 14:38:33,No action when shutdown pressed,Shutdown Computer,Shutdown Computer,0.983,0
+371,2018-12-24 14:38:33,what is the right way to shutdown ubuntu using the command line?,Shutdown Computer,Shutdown Computer,0.543,0
+372,2018-12-24 14:38:33,How can I make shutdown not require admin password?,Shutdown Computer,Shutdown Computer,0.548,0
+373,2018-12-24 14:38:33,shutdown in specific way if no-one uses computer,Shutdown Computer,Shutdown Computer,0.706,0
+374,2018-12-24 14:38:33,What is the command to open the shutdown dialog?,Shutdown Computer,Shutdown Computer,0.675,0
+375,2018-12-24 14:38:33,How to Shut down Ubuntu by using keyboard?,Shutdown Computer,Shutdown Computer,0.487,0
+376,2018-12-24 14:38:33,shutdown 5:30pm every day,Shutdown Computer,Shutdown Computer,0.948,0
+377,2018-12-24 14:38:33,Upgrading from 11.10 to 12.04,Make Update,Make Update,0.959,0
+378,2018-12-24 14:38:33,How do I upgrade to the release version of 16.04 if I am running Beta?,Make Update,Software Recommendation,0.312,0
+379,2018-12-24 14:38:33,Doubts regarding the 15.04 upgrade (is it inevitable and unavoidable?),Make Update,Software Recommendation,0.455,0
+380,2018-12-24 14:38:33,Is any offline upgrade from 13.10 to 14.04 possible?,Make Update,Software Recommendation,0.571,0
+381,2018-12-24 14:38:33,Upgrading from ubuntu 12.04 to 13.10,Make Update,Make Update,0.919,0
+382,2018-12-24 14:38:33,Ubuntu upgrade failed,Make Update,Make Update,0.901,0
+383,2018-12-24 14:38:33,Upgrading from 12.04 to 13.10 ( Unanswered questions ),Make Update,Make Update,0.438,0
+384,2018-12-24 14:38:33,upgrading to Ubuntu 13.10 from Ubuntu 13.04,Make Update,Make Update,0.939,0
+385,2018-12-24 14:38:33,Is it recommended to upgrade to Lubuntu 15.04?,Software Recommendation,Make Update,0.45,0
+386,2018-12-24 14:38:33,Force upgrade 12.10 to 13.04,Make Update,Make Update,0.931,0
+387,2018-12-24 14:38:33,How to partially upgrade Ubuntu 11.10 from Ubuntu 11.04?,Make Update,Make Update,0.882,0
+388,2018-12-24 14:38:33,Problem upgrading Ubuntu 9.10,Make Update,Make Update,0.938,0
+389,2018-12-24 14:38:33,Is it necessary to upgrade to 15.10 from 14.04?,Make Update,Software Recommendation,0.43,0
+390,2018-12-24 14:38:33,How do I update Xubuntu 11.10 to Xubuntu 12.04 LTS?,Make Update,Make Update,0.865,0
+391,2018-12-24 14:38:33,Why did the upgrade from 11.10 to 12.04 ruin my system?,Make Update,Make Update,0.488,0
+392,2018-12-24 14:38:33,Problems upgrading from 12.04 to 14.04,Make Update,Make Update,0.78,0
+393,2018-12-24 14:38:33,Problems upgrading Ubuntu 12.10 to 13.04,Make Update,Make Update,0.956,0
+394,2018-12-24 14:38:33,Upgrade from 12.04 to 12.10 without losing files?,Make Update,Make Update,0.622,0
+395,2018-12-24 14:38:33,On really old Ubuntu 6.06 - How to upgrade,Software Recommendation,Make Update,0.505,0
+396,2018-12-24 14:38:33,Do I need to uninstall 10.04 to upgrade to 12.04?,Make Update,Make Update,0.741,0
+397,2018-12-24 14:38:33,Do I need to reinstall everything to upgrade from 13.10 to 14.10?,Make Update,Make Update,0.432,0
+398,2018-12-24 14:38:33,update-manager: upgrade to 15.04 rather than 16.04,Make Update,Software Recommendation,0.473,0
+399,2018-12-24 14:38:33,Upgrading 16.04 to 16.04.1,Make Update,Make Update,0.504,0
+400,2018-12-24 14:38:33,Upgrading Ubuntu Server 9.10 to 10.04,Make Update,Make Update,0.941,0
+401,2018-12-24 14:38:33,Ho do I update to 13.04 from the beta?,Make Update,Make Update,0.337,0
+402,2018-12-24 14:38:33,How to upgrade from 12.10 to 14.04,Make Update,Make Update,0.781,0
+403,2018-12-24 14:38:33,Upgrading from 10.10 to 11.04 how much space is needed?,Make Update,Make Update,0.517,0
+404,2018-12-24 14:38:33,Do I need to backup my 12.04 system to upgrade to 12.04.1?,Make Update,Make Update,0.385,0
+405,2018-12-24 14:38:33,Cannot upgrade from 12.04LTS to 14.04,Make Update,Software Recommendation,0.345,0
+406,2018-12-24 14:38:33,Upgrade 10.10 to 11.04,Make Update,Make Update,0.982,0
+407,2018-12-24 14:38:33,How to upgrade from 14.04 LTS or 15.10 to 16.04 from terminal,Make Update,Make Update,0.444,0
+408,2018-12-24 14:38:33,How to upgrade from 16.04 LTS to 16.04.1 LTS,Make Update,Make Update,0.796,0
+409,2018-12-24 14:38:33,Upgrading from 10.04 to 11.10,Make Update,Make Update,0.959,0
+410,2018-12-24 14:38:33,How can i upgrade to Ubuntu 14.04 final from 14.04 Beta correctly?,Make Update,Make Update,0.362,0
+411,2018-12-24 14:38:33,Is there an upgrade procedure from 12.04 LTS to 14.04 LTS,Make Update,Make Update,0.605,0
+412,2018-12-24 14:38:33,Upgrade from 9.10 to 11.04,Make Update,Make Update,0.964,0
+413,2018-12-24 14:38:33,How to upgrade Ubuntu 12.04 to 14.04 if I have dual boot with windows 7?,Make Update,Make Update,0.427,0
+414,2018-12-24 14:38:33,Wubi Device /dev/loop0 full. How to get more space?,Software Recommendation,Software Recommendation,0.571,0
+415,2018-12-24 14:38:33,Using 12.04 can I compile packages with gcc for 10.04?,Make Update,Software Recommendation,0.389,0
+416,2018-12-24 14:38:33,Removing Recently used items in 12.04,Software Recommendation,Software Recommendation,0.344,0
+417,2018-12-24 14:38:33,Upgrading From 11.04 (32bit) to 12.04 (64bit),Make Update,Make Update,0.525,0
+418,2018-12-24 14:38:33,How is rm command different from the delete button?,None,Software Recommendation,0.49,0
+419,2018-12-24 14:38:33,In Unity how do I see the details of a given launcher?,Software Recommendation,Software Recommendation,0.516,0
+420,2018-12-24 14:38:33,How to provide user permission to read and write on /dev/sdax? What is the syntax?,None,Software Recommendation,0.709,0
+421,2018-12-24 14:38:33,Security enhancements prevent mounting /dev/sdb1,None,Shutdown Computer,0.437,0
+422,2018-12-24 14:38:33,How do I show grub when resuming from suspend?,None,Shutdown Computer,0.508,0
+423,2018-12-24 14:38:33,How to install a Lexmark z600 series printer?,Setup Printer,Setup Printer,0.878,0
+424,2018-12-24 14:38:33,Cannot setup HP All in one DJ3630,Setup Printer,Software Recommendation,0.35,0
+425,2018-12-24 14:38:33,How to add a network printer on Ubuntu 15.10?,Setup Printer,Setup Printer,0.469,0
+426,2018-12-24 14:38:33,Cannot install printer driver epson l210,Setup Printer,Setup Printer,0.981,0
+427,2018-12-24 14:38:33,How do I install Dell 2150cdn printer,Setup Printer,Setup Printer,0.945,0
+428,2018-12-24 14:38:33,Installing Epson XP-424 wireless printer,Setup Printer,Setup Printer,1.0,0
+429,2018-12-24 14:38:33,Installing EPSON L355 on Ubuntu 14.04,Setup Printer,Setup Printer,0.924,0
+430,2018-12-24 14:38:33,How do I install the HP F4280 printer?,Setup Printer,Setup Printer,0.847,0
+431,2018-12-24 14:38:33,How to Install Brother DCP-8110DN Laser Printer on Ubuntu?,Setup Printer,Setup Printer,0.825,0
+432,2018-12-24 14:38:33,How to Install a Canon MF8040Cn Printer on Ubuntu 12.04,Setup Printer,Setup Printer,0.846,0
+433,2018-12-24 14:38:33,How Do I Install Canon MF8000C Printer in Ubuntu 15.10?,Setup Printer,Setup Printer,0.891,0
+434,2018-12-24 14:38:33,How to install Canon LBP330 in Lts 16.04,Setup Printer,Setup Printer,0.691,0
+435,2018-12-24 14:38:33,Install printer Lexmark X4690 (ubuntu 12.04),Setup Printer,Setup Printer,0.964,0

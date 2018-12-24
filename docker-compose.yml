@@ -3,16 +3,16 @@ version: '3.2'
 
 services:
   rasa-tensorflow:
-    image: rasa/rasa_nlu:latest-tensorflow  # TODO: Give fixed version if possible
+    image: rasa/rasa_nlu:0.13.8-tensorflow
     ports:
     - 5000:5000
 
   rasa-spacy:
-    image: rasa/rasa_nlu:0.13.7-spacy
+    image: rasa/rasa_nlu:0.13.8-spacy
     ports:
       - 5001:5000
 
   rasa-mitie:
-    image: rasa/rasa_nlu:0.13.7-mitie
+    image: rasa/rasa_nlu:0.13.8-mitie
     ports:
       - 5002:5000

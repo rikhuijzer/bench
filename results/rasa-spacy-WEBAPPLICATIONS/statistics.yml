@@ -1,6 +1,6 @@
 system name: rasa-spacy
 corpus: Corpus.WEBAPPLICATIONS
 f1 intent scores:
-  micro: '0.763'
-  macro: '0.546'
-  weighted: '0.705'
+  micro: '0.627'
+  macro: '0.359'
+  weighted: '0.541'

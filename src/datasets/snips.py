@@ -20,7 +20,7 @@ def convert_data_text(data: List[dict]) -> str:
 
 
 def convert_data_spans(data: List[dict]) -> Iterable[typing.Tuple[int, int]]:
-    """Get start and end index for part of a sentence, see SNIPS 2017 .json files for examples."""
+    """Get start and end index for part of a sentence, see SNIPS 2017 json files for examples."""
     lengths = list(map(lambda item: len(item['text']), data))
     start_indexes = [0] + list(accumulate(lengths, operator.add))[:-1]
     end_indexes = map(lambda x: x[0] + x[1], zip(start_indexes, lengths))
@@ -38,6 +38,8 @@ def convert_data_entities(data: List[dict]) -> Iterable[dict]:
 def convert_data_message(corpus: tp.Corpus, intent: str, data: List[dict], train: bool) -> Message:
     """Returns message in Rasa representation for some SNIPS data element."""
     text = convert_data_text(data)
+    text = text.replace(',', '')  # these will cause problems when unpacking data
+    text = text.replace('\n', '')
     entities = list(convert_data_entities(data))
     return dataset.create_message(text, intent, entities, train, corpus)
 
