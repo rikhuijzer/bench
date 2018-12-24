@@ -10,7 +10,9 @@ def get_system_corpus(name: str, corpus=tp.Corpus.EMPTY) -> tp.SystemCorpus:
 
 
 def run():
-    system_corpus = get_system_corpus('rasa-spacy', tp.Corpus.SNIPS2017)
+    # dialogflow run is incorrect, fix it
+
+    system_corpus = get_system_corpus('dialogflow', tp.Corpus.SNIPS2017)
     evaluate(system_corpus)
 
 

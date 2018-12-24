@@ -26,7 +26,10 @@ Corpus.SNIPS2017:
   f1 intent scores:
     micro:
       rasa-spacy: '0.991'
+      dialogflow: '0.286'
     macro:
       rasa-spacy: '0.991'
+      dialogflow: '0.222'
     weighted:
       rasa-spacy: '0.991'
+      dialogflow: '0.444'
