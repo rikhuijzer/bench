@@ -10,6 +10,11 @@ def get_system_corpus(name: str, corpus=tp.Corpus.EMPTY) -> tp.SystemCorpus:
 
 
 def run():
+    # the first parameter of get_system_corpus specifies the system to be benchmarked.
+    # this string should match a name in the Docker compose file or a name listed in get_system_corpus
+    #
+    # the second parameter specifies the corpus to be used for the benchmark
+    # see tp.Corpus for the possible options
     system_corpus = get_system_corpus('dialogflow', tp.Corpus.SNIPS2017)
     evaluate(system_corpus)
 
