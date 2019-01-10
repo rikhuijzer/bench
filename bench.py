@@ -15,7 +15,7 @@ def run():
     #
     # the second parameter specifies the corpus to be used for the benchmark
     # see tp.Corpus for the possible options
-    system_corpus = get_system_corpus('dialogflow', tp.Corpus.SNIPS2017)
+    system_corpus = get_system_corpus('rasa-mitie', tp.Corpus.WEBAPPLICATIONS)
     evaluate(system_corpus)
 
 

@@ -1,0 +1,3 @@
+id,intent_id,timestamp,source,entity,value,start,end,confidence
+0,0,2019-01-10 11:02:09,gold standard,WebService,Facebook,15,23,-1.0
+1,0,2019-01-10 11:02:09,classification,WebService,Facebook,15,23,None

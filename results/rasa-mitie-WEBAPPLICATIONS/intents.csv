@@ -1,0 +1,4 @@
+id,timestamp,sentence,gold_standard,classification,confidence,time
+0,2019-01-10 11:02:09,Alternative to Facebook,Find Alternative,Find Alternative,0.452,0
+1,2019-01-10 11:02:09,How do I delete my Facebook account?,Delete Account,Delete Account,0.902,0
+2,2019-01-10 11:17:48,Alternative to Facebook,Find Alternative,Find Alternative,0.452,0
