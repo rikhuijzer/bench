@@ -1433,3 +1433,959 @@ id,sentence_id,timestamp,source,entity,value,start,end,confidence
 1431,317,2018-12-21 14:19:05,gold standard,StationDest,odeonsplatz,29,40,-1.0
 1432,317,2018-12-21 14:19:05,classification,StationStart,hauptbahnhof,13,25,0.9758732588580352
 1433,317,2018-12-21 14:19:05,classification,StationDest,odeonsplatz,29,40,0.9935893976947033
+1434,318,2019-01-24 15:43:30,gold standard,StationDest,marienplatz,13,24,-1.0
+1435,318,2019-01-24 15:43:30,classification,StationDest,go marienplatz,10,24,0.5210575469665233
+1436,319,2019-01-24 15:43:30,gold standard,Vehicle,train,17,22,-1.0
+1437,319,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1438,319,2019-01-24 15:43:30,gold standard,StationStart,muncher freiheit,26,42,-1.0
+1439,319,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.959720094721714
+1440,319,2019-01-24 15:43:30,classification,Vehicle,train,17,22,0.9875305609047647
+1441,319,2019-01-24 15:43:30,classification,StationStart,muncher freiheit,26,42,0.6547871470367175
+1442,320,2019-01-24 15:43:30,gold standard,Vehicle,u-bahn,19,25,-1.0
+1443,320,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1444,320,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,38,64,-1.0
+1445,320,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9605458006834856
+1446,320,2019-01-24 15:43:30,classification,Vehicle,u - bahn,19,25,0.8567268763546099
+1447,320,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,38,64,0.9539902708601662
+1448,321,2019-01-24 15:43:30,gold standard,StationStart,olympia einkaufszentrum,5,28,-1.0
+1449,321,2019-01-24 15:43:30,gold standard,StationDest,hauptbahnhof,32,44,-1.0
+1450,321,2019-01-24 15:43:30,classification,StationStart,olympia einkaufszentrum,5,28,0.946951280079937
+1451,321,2019-01-24 15:43:30,classification,StationDest,hauptbahnhof,32,44,0.9926103702253104
+1452,322,2019-01-24 15:43:30,gold standard,Vehicle,train,17,22,-1.0
+1453,322,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1454,322,2019-01-24 15:43:30,gold standard,StationStart,winterstraße 12,28,43,-1.0
+1455,322,2019-01-24 15:43:30,gold standard,StationDest,kieferngarten,47,60,-1.0
+1456,322,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9579956147685452
+1457,322,2019-01-24 15:43:30,classification,Vehicle,train,17,22,0.9792544068371737
+1458,322,2019-01-24 15:43:30,classification,StationStart,winterstraße 12,28,43,0.6357189412643514
+1459,322,2019-01-24 15:43:30,classification,StationDest,kieferngarten,47,60,0.9789127192976171
+1460,323,2019-01-24 15:43:30,gold standard,Vehicle,rocket,17,23,-1.0
+1461,323,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1462,323,2019-01-24 15:43:30,gold standard,StationStart,winterstraße 12,29,44,-1.0
+1463,323,2019-01-24 15:43:30,gold standard,StationDest,kieferngarte,48,60,-1.0
+1464,323,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9474876447970579
+1465,323,2019-01-24 15:43:30,classification,Vehicle,rocket,17,23,0.7263654494601883
+1466,323,2019-01-24 15:43:30,classification,StationStart,winterstraße 12,29,44,0.6357903126301927
+1467,323,2019-01-24 15:43:30,classification,StationDest,kieferngarte,48,60,0.9325871695924847
+1468,324,2019-01-24 15:43:30,gold standard,StationStart,garching,31,39,-1.0
+1469,324,2019-01-24 15:43:30,gold standard,StationDest,hauptbahnhof,43,55,-1.0
+1470,324,2019-01-24 15:43:30,classification,StationStart,garching,31,39,0.9938725319897453
+1471,324,2019-01-24 15:43:30,classification,StationDest,hauptbahnhof,43,55,0.9878921329816701
+1472,325,2019-01-24 15:43:30,gold standard,StationStart,untere strassäcker 21,16,37,-1.0
+1473,325,2019-01-24 15:43:30,gold standard,StationDest,fröttmaning,41,52,-1.0
+1474,325,2019-01-24 15:43:30,classification,StationStart,untere strassäcker 21,16,37,0.9615283770780976
+1475,325,2019-01-24 15:43:30,classification,StationDest,fröttmaning,41,52,0.9781298638782969
+1476,326,2019-01-24 15:43:30,gold standard,StationStart,marienplatz,19,30,-1.0
+1477,326,2019-01-24 15:43:30,gold standard,StationDest,garching,34,42,-1.0
+1478,326,2019-01-24 15:43:30,classification,StationStart,marienplatz,19,30,0.990897819957451
+1479,326,2019-01-24 15:43:30,classification,StationDest,garching,34,42,0.976678736400685
+1480,327,2019-01-24 15:43:30,gold standard,StationStart,boltzmannstraße,16,31,-1.0
+1481,327,2019-01-24 15:43:30,gold standard,StationDest,kieferngarten,35,48,-1.0
+1482,327,2019-01-24 15:43:30,classification,StationStart,boltzmannstraße,16,31,0.9723045868831439
+1483,327,2019-01-24 15:43:30,classification,StationDest,kieferngarten,35,48,0.9789693010867191
+1484,328,2019-01-24 15:43:30,gold standard,StationStart,bonner platz,16,28,-1.0
+1485,328,2019-01-24 15:43:30,gold standard,StationDest,freimann,32,40,-1.0
+1486,328,2019-01-24 15:43:30,classification,StationStart,bonner platz,16,28,0.7622718888983577
+1487,328,2019-01-24 15:43:30,classification,StationDest,freimann,32,40,0.9407827421888825
+1488,329,2019-01-24 15:43:30,gold standard,Vehicle,s-bahn,17,23,-1.0
+1489,329,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1490,329,2019-01-24 15:43:30,gold standard,StationStart,garching,35,43,-1.0
+1491,329,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9606866267113758
+1492,329,2019-01-24 15:43:30,classification,Vehicle,s - bahn,17,23,0.8586978489107863
+1493,329,2019-01-24 15:43:30,classification,StationStart,garching,35,43,0.8448210540112465
+1494,330,2019-01-24 15:43:30,gold standard,StationStart,oez,18,21,-1.0
+1495,330,2019-01-24 15:43:30,gold standard,StationDest,hbf,25,28,-1.0
+1496,330,2019-01-24 15:43:30,classification,StationStart,oez,18,21,0.9360443384588844
+1497,330,2019-01-24 15:43:30,classification,StationDest,hbf,25,28,0.8828129583553795
+1498,331,2019-01-24 15:43:30,gold standard,StationStart,winterstrasse 12,16,32,-1.0
+1499,331,2019-01-24 15:43:30,gold standard,StationDest,fröttmaning,36,47,-1.0
+1500,331,2019-01-24 15:43:30,classification,StationStart,winterstrasse 12,16,32,0.821415661802019
+1501,331,2019-01-24 15:43:30,classification,StationDest,fröttmaning,36,47,0.9780973552765431
+1502,332,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,18,44,-1.0
+1503,332,2019-01-24 15:43:30,gold standard,StationDest,pasing,48,54,-1.0
+1504,332,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,18,44,0.9954956003786427
+1505,332,2019-01-24 15:43:30,classification,StationDest,pasing,48,54,0.9667026284843344
+1506,333,2019-01-24 15:43:30,gold standard,StationStart,theresienstraße,0,15,-1.0
+1507,333,2019-01-24 15:43:30,gold standard,StationDest,assling,19,26,-1.0
+1508,333,2019-01-24 15:43:30,classification,StationDest,assling,19,26,0.9627238807034575
+1509,334,2019-01-24 15:43:30,gold standard,StationStart,theresienstraße,19,34,-1.0
+1510,334,2019-01-24 15:43:30,gold standard,StationDest,munich east,38,49,-1.0
+1511,334,2019-01-24 15:43:30,classification,StationStart,theresienstraße,19,34,0.9658681593775875
+1512,334,2019-01-24 15:43:30,classification,StationDest,munich east,38,49,0.6663736310901754
+1513,335,2019-01-24 15:43:30,gold standard,Vehicle,bus,19,22,-1.0
+1514,335,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1515,335,2019-01-24 15:43:30,gold standard,StationStart,garching,35,43,-1.0
+1516,335,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9887801653010091
+1517,335,2019-01-24 15:43:30,classification,Vehicle,bus,19,22,0.9994651647384777
+1518,335,2019-01-24 15:43:30,classification,StationStart,garching,35,43,0.9858782014295392
+1519,336,2019-01-24 15:43:30,gold standard,StationStart,quiddestraße,5,17,-1.0
+1520,336,2019-01-24 15:43:30,gold standard,StationDest,garching,21,29,-1.0
+1521,336,2019-01-24 15:43:30,classification,StationStart,quiddestraße,5,17,0.9914423941193791
+1522,336,2019-01-24 15:43:30,classification,StationDest,garching,21,29,0.9571100129239295
+1523,337,2019-01-24 15:43:30,gold standard,StationStart,kurt-eisner-straße,31,49,-1.0
+1524,337,2019-01-24 15:43:30,gold standard,StationDest,garching forschungszentrum,53,79,-1.0
+1525,337,2019-01-24 15:43:30,classification,StationStart,kurt - eisner - straße,31,49,0.7943032322352356
+1526,337,2019-01-24 15:43:30,classification,StationDest,garching forschungszentrum,53,79,0.8052874968152988
+1527,338,2019-01-24 15:43:30,gold standard,StationStart,quiddestraße,31,43,-1.0
+1528,338,2019-01-24 15:43:30,gold standard,StationDest,garching forschungszentrum,47,73,-1.0
+1529,338,2019-01-24 15:43:30,classification,StationStart,quiddestraße,31,43,0.991380123249911
+1530,338,2019-01-24 15:43:30,classification,StationDest,garching forschungszentrum,47,73,0.8052026818552763
+1531,339,2019-01-24 15:43:30,gold standard,Vehicle,train,19,24,-1.0
+1532,339,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1533,339,2019-01-24 15:43:30,gold standard,StationStart,garching,35,43,-1.0
+1534,339,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9604619181525198
+1535,339,2019-01-24 15:43:30,classification,Vehicle,train,19,24,0.9913657171297964
+1536,339,2019-01-24 15:43:30,classification,StationStart,garching,35,43,0.8448455310657021
+1537,340,2019-01-24 15:43:30,gold standard,StationStart,hauptbahnhof,5,17,-1.0
+1538,340,2019-01-24 15:43:30,gold standard,StationDest,garching,21,29,-1.0
+1539,340,2019-01-24 15:43:30,classification,StationStart,hauptbahnhof,5,17,0.9759815523358173
+1540,340,2019-01-24 15:43:30,classification,StationDest,garching,21,29,0.9571065194582883
+1541,341,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,41,67,-1.0
+1542,341,2019-01-24 15:43:30,gold standard,StationDest,glockenbachviertel,17,35,-1.0
+1543,341,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,41,67,0.9538886085913497
+1544,342,2019-01-24 15:43:30,gold standard,StationStart,garching,19,27,-1.0
+1545,342,2019-01-24 15:43:30,gold standard,StationDest,nordfriedhof,31,43,-1.0
+1546,342,2019-01-24 15:43:30,classification,StationStart,garching,19,27,0.9938770005379935
+1547,342,2019-01-24 15:43:30,classification,StationDest,nordfriedhof,31,43,0.8672832141781892
+1548,343,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,41,67,-1.0
+1549,343,2019-01-24 15:43:30,gold standard,StationDest,glockenbachviertel,17,35,-1.0
+1550,343,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,41,67,0.9538886085913497
+1551,344,2019-01-24 15:43:30,gold standard,Vehicle,train,17,22,-1.0
+1552,344,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1553,344,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,34,60,-1.0
+1554,344,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9612334363127667
+1555,344,2019-01-24 15:43:30,classification,Vehicle,train,17,22,0.9948241397447855
+1556,344,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,34,60,0.9040984113967218
+1557,345,2019-01-24 15:43:30,gold standard,StationStart,moosach,19,26,-1.0
+1558,345,2019-01-24 15:43:30,gold standard,StationDest,quiddestraße,30,42,-1.0
+1559,345,2019-01-24 15:43:30,classification,StationStart,moosach,19,26,0.9608286806217313
+1560,345,2019-01-24 15:43:30,classification,StationDest,quiddestraße,30,42,0.9270928704373689
+1561,346,2019-01-24 15:43:30,gold standard,StationStart,moosach,19,26,-1.0
+1562,346,2019-01-24 15:43:30,gold standard,StationDest,poccistraße,30,41,-1.0
+1563,346,2019-01-24 15:43:30,classification,StationStart,moosach,19,26,0.9608246589195228
+1564,346,2019-01-24 15:43:30,classification,StationDest,poccistraße,30,41,0.948886487073521
+1565,347,2019-01-24 15:43:30,gold standard,StationStart,kurt-eisner-straße,19,37,-1.0
+1566,347,2019-01-24 15:43:30,gold standard,StationDest,garching forschungszentrum,41,67,-1.0
+1567,347,2019-01-24 15:43:30,classification,StationStart,kurt - eisner - straße,19,37,0.7943355632874324
+1568,347,2019-01-24 15:43:30,classification,StationDest,garching forschungszentrum,41,67,0.8052874905626218
+1569,348,2019-01-24 15:43:30,gold standard,StationStart,moosach,19,26,-1.0
+1570,348,2019-01-24 15:43:30,gold standard,StationDest,quiddestraße,30,42,-1.0
+1571,348,2019-01-24 15:43:30,classification,StationStart,moosach,19,26,0.9608286806217313
+1572,348,2019-01-24 15:43:30,classification,StationDest,quiddestraße,30,42,0.9270928704373689
+1573,349,2019-01-24 15:43:30,gold standard,StationStart,moosach,19,26,-1.0
+1574,349,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,30,41,-1.0
+1575,349,2019-01-24 15:43:30,classification,StationStart,moosach,19,26,0.9608322248749079
+1576,349,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,30,41,0.9894445095891898
+1577,350,2019-01-24 15:43:30,gold standard,Vehicle,bus,19,22,-1.0
+1578,350,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1579,350,2019-01-24 15:43:30,gold standard,StationStart,garching,33,41,-1.0
+1580,350,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9887789704324425
+1581,350,2019-01-24 15:43:30,classification,Vehicle,bus,19,22,0.9994492388942687
+1582,350,2019-01-24 15:43:30,classification,StationStart,garching,33,41,0.8448424778271832
+1583,351,2019-01-24 15:43:30,gold standard,Criterion,shortest,11,19,-1.0
+1584,351,2019-01-24 15:43:30,gold standard,StationStart,quiddestraße,29,41,-1.0
+1585,351,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,45,56,-1.0
+1586,351,2019-01-24 15:43:30,classification,Criterion,shortest,11,19,0.9450157441156145
+1587,351,2019-01-24 15:43:30,classification,StationStart,quiddestraße,29,41,0.991377811312371
+1588,351,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,45,56,0.9894737741208759
+1589,352,2019-01-24 15:43:30,gold standard,Vehicle,bus,17,20,-1.0
+1590,352,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1591,352,2019-01-24 15:43:30,gold standard,StationStart,ostbahnhof,26,36,-1.0
+1592,352,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9887871913179436
+1593,352,2019-01-24 15:43:30,classification,Vehicle,bus,17,20,0.9991756076076754
+1594,352,2019-01-24 15:43:30,classification,StationStart,ostbahnhof,26,36,0.9564571008064118
+1595,353,2019-01-24 15:43:30,gold standard,StationStart,garching,19,27,-1.0
+1596,353,2019-01-24 15:43:30,gold standard,StationDest,neuperlach sued,31,46,-1.0
+1597,353,2019-01-24 15:43:30,classification,StationStart,garching,19,27,0.9938566427772062
+1598,353,2019-01-24 15:43:30,classification,StationDest,neuperlach,31,41,0.38018732909601627
+1599,354,2019-01-24 15:43:30,gold standard,Vehicle,train,17,22,-1.0
+1600,354,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1601,354,2019-01-24 15:43:30,gold standard,StationStart,munchner freiheit,26,43,-1.0
+1602,354,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9597205693453947
+1603,354,2019-01-24 15:43:30,classification,Vehicle,train,17,22,0.9875329371910779
+1604,354,2019-01-24 15:43:30,classification,StationStart,munchner freiheit,26,43,0.6830276319426015
+1605,355,2019-01-24 15:43:30,gold standard,StationStart,marienplatz,19,30,-1.0
+1606,355,2019-01-24 15:43:30,gold standard,StationDest,garching,34,42,-1.0
+1607,355,2019-01-24 15:43:30,classification,StationStart,marienplatz,19,30,0.9908976759967468
+1608,355,2019-01-24 15:43:30,classification,StationDest,garching,34,42,0.9571094673645284
+1609,356,2019-01-24 15:43:30,gold standard,StationStart,poccistraße,18,29,-1.0
+1610,356,2019-01-24 15:43:30,gold standard,StationDest,laim,33,37,-1.0
+1611,356,2019-01-24 15:43:30,classification,StationStart,poccistraße,18,29,0.9719129630373814
+1612,356,2019-01-24 15:43:30,classification,StationDest,laim,33,37,0.9039024355998287
+1613,357,2019-01-24 15:43:30,gold standard,StationStart,marienplatz,27,38,-1.0
+1614,357,2019-01-24 15:43:30,gold standard,StationDest,garching,13,21,-1.0
+1615,357,2019-01-24 15:43:30,classification,StationDest,go,10,12,0.3733525506994563
+1616,357,2019-01-24 15:43:30,classification,StationStart,marienplatz,27,38,0.9728960741172492
+1617,358,2019-01-24 15:43:30,gold standard,StationStart,marienplatz,19,30,-1.0
+1618,358,2019-01-24 15:43:30,gold standard,StationDest,garching,34,42,-1.0
+1619,358,2019-01-24 15:43:30,classification,StationStart,marienplatz,19,30,0.9908976759967468
+1620,358,2019-01-24 15:43:30,classification,StationDest,garching,34,42,0.9571094673645284
+1621,359,2019-01-24 15:43:30,gold standard,StationStart,hauptbahnhof,19,31,-1.0
+1622,359,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,35,46,-1.0
+1623,359,2019-01-24 15:43:30,classification,StationStart,hauptbahnhof,19,31,0.9759033052160047
+1624,359,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,35,46,0.9935893985773945
+1625,360,2019-01-24 15:43:30,gold standard,StationStart,prinzregentenplatz,0,18,-1.0
+1626,360,2019-01-24 15:43:30,gold standard,StationDest,rotkreuzplatz,22,35,-1.0
+1627,360,2019-01-24 15:43:30,classification,StationDest,rotkreuzplatz,22,35,0.9593352643580287
+1628,361,2019-01-24 15:43:30,gold standard,StationStart,marienplatz,30,41,-1.0
+1629,361,2019-01-24 15:43:30,gold standard,StationDest,garching,16,24,-1.0
+1630,361,2019-01-24 15:43:30,classification,StationDest,go,10,12,0.5991945610667381
+1631,361,2019-01-24 15:43:30,classification,StationDest,garching,16,24,0.9154109468655185
+1632,361,2019-01-24 15:43:30,classification,StationStart,marienplatz,30,41,0.9726425901247358
+1633,362,2019-01-24 15:43:30,gold standard,Criterion,next,0,4,-1.0
+1634,362,2019-01-24 15:43:30,gold standard,Vehicle,train,5,10,-1.0
+1635,362,2019-01-24 15:43:30,gold standard,StationStart,garching,16,24,-1.0
+1636,362,2019-01-24 15:43:30,classification,Criterion,next,0,4,0.5168255152625783
+1637,362,2019-01-24 15:43:30,classification,Vehicle,train,5,10,0.9322793590007482
+1638,362,2019-01-24 15:43:30,classification,StationStart,garching,16,24,0.9691189162435997
+1639,363,2019-01-24 15:43:30,gold standard,StationStart,prinzregentenplatz,5,23,-1.0
+1640,363,2019-01-24 15:43:30,gold standard,StationDest,rotkreuzplatz,27,40,-1.0
+1641,363,2019-01-24 15:43:30,classification,StationStart,prinzregentenplatz,5,23,0.9878555439196847
+1642,363,2019-01-24 15:43:30,classification,StationDest,rotkreuzplatz,27,40,0.9593699510588016
+1643,364,2019-01-24 15:43:30,gold standard,Vehicle,subway,17,23,-1.0
+1644,364,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1645,364,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,29,55,-1.0
+1646,364,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9711526021487972
+1647,364,2019-01-24 15:43:30,classification,Vehicle,subway,17,23,0.8715851062313507
+1648,364,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,29,55,0.9184237289906636
+1649,365,2019-01-24 15:43:30,gold standard,StationStart,garching,5,13,-1.0
+1650,365,2019-01-24 15:43:30,gold standard,StationDest,klinikum,17,25,-1.0
+1651,365,2019-01-24 15:43:30,classification,StationStart,garching,5,13,0.9938903485278032
+1652,365,2019-01-24 15:43:30,classification,StationDest,klinikum,17,25,0.9016723235228836
+1653,366,2019-01-24 15:43:30,gold standard,StationStart,garching foschungszentrum,5,30,-1.0
+1654,366,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,34,45,-1.0
+1655,366,2019-01-24 15:43:30,classification,StationStart,garching foschungszentrum,5,30,0.9503339056099672
+1656,366,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,34,45,0.9935886801775045
+1657,367,2019-01-24 15:43:30,gold standard,Vehicle,bus,5,8,-1.0
+1658,367,2019-01-24 15:43:30,gold standard,Criterion,next,0,4,-1.0
+1659,367,2019-01-24 15:43:30,gold standard,StationStart,garching,12,20,-1.0
+1660,367,2019-01-24 15:43:30,classification,Criterion,next,0,4,0.8232044369352406
+1661,367,2019-01-24 15:43:30,classification,Vehicle,bus,5,8,0.9989477940060243
+1662,367,2019-01-24 15:43:30,classification,StationStart,garching,12,20,0.7811034333809987
+1663,368,2019-01-24 15:43:30,gold standard,Vehicle,train,14,19,-1.0
+1664,368,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,31,57,-1.0
+1665,368,2019-01-24 15:43:30,classification,Vehicle,train,14,19,0.8819428081899313
+1666,368,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,31,57,0.9040956084483371
+1667,369,2019-01-24 15:43:30,gold standard,Criterion,next,0,4,-1.0
+1668,369,2019-01-24 15:43:30,gold standard,Vehicle,subway,5,11,-1.0
+1669,369,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,17,43,-1.0
+1670,369,2019-01-24 15:43:30,classification,Criterion,next,0,4,0.6362224571199936
+1671,369,2019-01-24 15:43:30,classification,Vehicle,subway,5,11,0.7374280383750025
+1672,369,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,17,43,0.9184197913470254
+1673,370,2019-01-24 15:43:30,gold standard,Vehicle,bus,17,20,-1.0
+1674,370,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1675,370,2019-01-24 15:43:30,gold standard,StationStart,garching,26,34,-1.0
+1676,370,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9887613167534971
+1677,370,2019-01-24 15:43:30,classification,Vehicle,bus,17,20,0.9991760574318075
+1678,370,2019-01-24 15:43:30,classification,StationStart,garching,26,34,0.9691076864581789
+1679,371,2019-01-24 15:43:30,gold standard,Vehicle,bus,5,8,-1.0
+1680,371,2019-01-24 15:43:30,gold standard,Criterion,next,0,4,-1.0
+1681,371,2019-01-24 15:43:30,gold standard,StationStart,garching,14,22,-1.0
+1682,371,2019-01-24 15:43:30,classification,Criterion,next,0,4,0.8228856716572039
+1683,371,2019-01-24 15:43:30,classification,Vehicle,bus,5,8,0.9982715626193892
+1684,371,2019-01-24 15:43:30,classification,StationStart,garching,14,22,0.9837418290691228
+1685,372,2019-01-24 15:43:30,gold standard,Vehicle,bus,5,8,-1.0
+1686,372,2019-01-24 15:43:30,gold standard,Criterion,next,0,4,-1.0
+1687,372,2019-01-24 15:43:30,gold standard,StationStart,garching,14,22,-1.0
+1688,372,2019-01-24 15:43:30,classification,Criterion,next,0,4,0.82288580403449
+1689,372,2019-01-24 15:43:30,classification,Vehicle,bus,5,8,0.9982718325630859
+1690,372,2019-01-24 15:43:30,classification,StationStart,garching,14,22,0.9691075857373027
+1691,373,2019-01-24 15:43:30,gold standard,Vehicle,bus,5,8,-1.0
+1692,373,2019-01-24 15:43:30,gold standard,Criterion,next,0,4,-1.0
+1693,373,2019-01-24 15:43:30,gold standard,StationStart,central station,14,29,-1.0
+1694,373,2019-01-24 15:43:30,classification,Criterion,next,0,4,0.8228833134032666
+1695,373,2019-01-24 15:43:30,classification,Vehicle,bus,5,8,0.9982666597142508
+1696,373,2019-01-24 15:43:30,classification,StationStart,central,14,21,0.8041023480238557
+1697,374,2019-01-24 15:43:30,gold standard,StationStart,garching,5,13,-1.0
+1698,374,2019-01-24 15:43:30,gold standard,StationDest,marienplatz,17,28,-1.0
+1699,374,2019-01-24 15:43:30,classification,StationStart,garching,5,13,0.9938980224950698
+1700,374,2019-01-24 15:43:30,classification,StationDest,marienplatz,17,28,0.9563805723113892
+1701,375,2019-01-24 15:43:30,gold standard,Vehicle,bus,5,8,-1.0
+1702,375,2019-01-24 15:43:30,gold standard,Criterion,next,0,4,-1.0
+1703,375,2019-01-24 15:43:30,gold standard,StationStart,garching,14,22,-1.0
+1704,375,2019-01-24 15:43:30,classification,Criterion,next,0,4,0.8228857632521815
+1705,375,2019-01-24 15:43:30,classification,Vehicle,bus,5,8,0.9982717546156726
+1706,375,2019-01-24 15:43:30,classification,StationStart,garching,14,22,0.9807406191581098
+1707,376,2019-01-24 15:43:30,gold standard,StationStart,garching,16,24,-1.0
+1708,376,2019-01-24 15:43:30,gold standard,StationDest,hauptbahnhof,28,40,-1.0
+1709,376,2019-01-24 15:43:30,classification,StationStart,garching,16,24,0.9938727739290107
+1710,376,2019-01-24 15:43:30,classification,StationDest,hauptbahnhof,28,40,0.987892133000559
+1711,377,2019-01-24 15:43:30,gold standard,Vehicle,bus,19,22,-1.0
+1712,377,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1713,377,2019-01-24 15:43:30,gold standard,StationStart,garching,36,44,-1.0
+1714,377,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9887835037091804
+1715,377,2019-01-24 15:43:30,classification,Vehicle,bus,19,22,0.9994795906827338
+1716,377,2019-01-24 15:43:30,classification,StationStart,garching,36,44,0.9858774826526521
+1717,378,2019-01-24 15:43:30,gold standard,StationStart,hauptbahnhof,21,33,-1.0
+1718,378,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,37,48,-1.0
+1719,378,2019-01-24 15:43:30,classification,StationStart,hauptbahnhof,21,33,0.9758840977123702
+1720,378,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,37,48,0.9935893979804968
+1721,379,2019-01-24 15:43:30,gold standard,Vehicle,u-bahn,19,25,-1.0
+1722,379,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1723,379,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,37,63,-1.0
+1724,379,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9603947669417224
+1725,379,2019-01-24 15:43:30,classification,Vehicle,u - bahn,19,25,0.8516800329766493
+1726,379,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,37,63,0.9171592860796035
+1727,380,2019-01-24 15:43:30,gold standard,Vehicle,u-bahn,19,25,-1.0
+1728,380,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1729,380,2019-01-24 15:43:30,gold standard,StationStart,garching,37,45,-1.0
+1730,380,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9603947606864325
+1731,380,2019-01-24 15:43:30,classification,Vehicle,u - bahn,19,25,0.8516794062733891
+1732,380,2019-01-24 15:43:30,classification,StationStart,garching,37,45,0.8447746061551952
+1733,381,2019-01-24 15:43:30,gold standard,Vehicle,subway,19,25,-1.0
+1734,381,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1735,381,2019-01-24 15:43:30,gold standard,StationStart,garching,37,45,-1.0
+1736,381,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9746266766397901
+1737,381,2019-01-24 15:43:30,classification,Vehicle,subway,19,25,0.9088077590031849
+1738,381,2019-01-24 15:43:30,classification,StationStart,garching,37,45,0.7248555255389318
+1739,382,2019-01-24 15:43:30,gold standard,Vehicle,train,17,22,-1.0
+1740,382,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1741,382,2019-01-24 15:43:30,gold standard,StationStart,garching,26,34,-1.0
+1742,382,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9597805749390103
+1743,382,2019-01-24 15:43:30,classification,Vehicle,train,17,22,0.987801486123229
+1744,382,2019-01-24 15:43:30,classification,StationStart,garching,26,34,0.886474107203732
+1745,383,2019-01-24 15:43:30,gold standard,StationStart,münchner freiheit,16,33,-1.0
+1746,383,2019-01-24 15:43:30,gold standard,StationDest,garching,37,45,-1.0
+1747,383,2019-01-24 15:43:30,classification,StationStart,münchner freiheit,16,33,0.981747609113339
+1748,383,2019-01-24 15:43:30,classification,StationDest,garching,37,45,0.9571086500766259
+1749,384,2019-01-24 15:43:30,gold standard,StationStart,implerstraße,0,12,-1.0
+1750,384,2019-01-24 15:43:30,gold standard,StationDest,ostbahnhof,16,26,-1.0
+1751,384,2019-01-24 15:43:30,classification,StationDest,ostbahnhof,16,26,0.9607887449416315
+1752,385,2019-01-24 15:43:30,gold standard,StationStart,hauptbahnhof,19,31,-1.0
+1753,385,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,35,46,-1.0
+1754,385,2019-01-24 15:43:30,classification,StationStart,hauptbahnhof,19,31,0.9759021693276582
+1755,385,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,35,46,0.9894719485007284
+1756,386,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,18,44,-1.0
+1757,386,2019-01-24 15:43:30,gold standard,StationDest,prinzregentenplatz,48,66,-1.0
+1758,386,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,18,44,0.9954954304904895
+1759,386,2019-01-24 15:43:30,classification,StationDest,prinzregentenplatz,48,66,0.9623941387683622
+1760,387,2019-01-24 15:43:30,gold standard,StationStart,mangfallplatz,19,32,-1.0
+1761,387,2019-01-24 15:43:30,gold standard,StationDest,garching,36,44,-1.0
+1762,387,2019-01-24 15:43:30,classification,StationStart,mangfallplatz,19,32,0.9908978158705776
+1763,387,2019-01-24 15:43:30,classification,StationDest,garching,36,44,0.9766787364006482
+1764,388,2019-01-24 15:43:30,gold standard,StationDest,hohenlindenerstraße,17,36,-1.0
+1765,388,2019-01-24 15:43:30,classification,StationDest,hohenlindenerstraße,17,36,0.9634796594769103
+1766,389,2019-01-24 15:43:30,gold standard,StationStart,harthaus,0,8,-1.0
+1767,389,2019-01-24 15:43:30,gold standard,StationDest,hackerbrücke,12,24,-1.0
+1768,389,2019-01-24 15:43:30,classification,StationDest,hackerbrücke,12,24,0.939428424502947
+1769,390,2019-01-24 15:43:30,gold standard,StationStart,feldmoching,19,30,-1.0
+1770,390,2019-01-24 15:43:30,gold standard,StationDest,garching forschungszentrum,34,60,-1.0
+1771,390,2019-01-24 15:43:30,classification,StationStart,feldmoching,19,30,0.970532942571305
+1772,390,2019-01-24 15:43:30,classification,StationDest,garching forschungszentrum,34,60,0.8054473391788171
+1773,391,2019-01-24 15:43:30,gold standard,StationStart,marienplatz,5,16,-1.0
+1774,391,2019-01-24 15:43:30,gold standard,StationDest,petershausen,20,32,-1.0
+1775,391,2019-01-24 15:43:30,classification,StationStart,marienplatz,5,16,0.9909427602417207
+1776,391,2019-01-24 15:43:30,classification,StationDest,petershausen,20,32,0.9594557486978703
+1777,392,2019-01-24 15:43:30,gold standard,Vehicle,train,12,17,-1.0
+1778,392,2019-01-24 15:43:30,gold standard,StationStart,garching,23,31,-1.0
+1779,392,2019-01-24 15:43:30,gold standard,StationDest,marienplatz,35,46,-1.0
+1780,392,2019-01-24 15:43:30,classification,Vehicle,train,12,17,0.6030598881267312
+1781,392,2019-01-24 15:43:30,classification,StationStart,garching,23,31,0.9938911385307428
+1782,392,2019-01-24 15:43:30,classification,StationDest,marienplatz,35,46,0.956380570379569
+1783,393,2019-01-24 15:43:30,gold standard,StationStart,neufahrn,0,8,-1.0
+1784,393,2019-01-24 15:43:30,gold standard,StationDest,garching,12,20,-1.0
+1785,393,2019-01-24 15:43:30,classification,StationDest,garching,12,20,0.9766755415557431
+1786,394,2019-01-24 15:43:30,gold standard,StationStart,mangfallplatz,19,32,-1.0
+1787,394,2019-01-24 15:43:30,gold standard,StationDest,garching,36,44,-1.0
+1788,394,2019-01-24 15:43:30,classification,StationStart,mangfallplatz,19,32,0.9908978158705776
+1789,394,2019-01-24 15:43:30,classification,StationDest,garching,36,44,0.9766787364006482
+1790,395,2019-01-24 15:43:30,gold standard,StationDest,hohenlindenerstr,17,33,-1.0
+1791,395,2019-01-24 15:43:30,classification,StationDest,hohenlindenerstr,17,33,0.8855094136795248
+1792,396,2019-01-24 15:43:30,gold standard,Vehicle,bus,17,20,-1.0
+1793,396,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1794,396,2019-01-24 15:43:30,gold standard,StationStart,garching forschungzentrum,26,51,-1.0
+1795,396,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9887872097511073
+1796,396,2019-01-24 15:43:30,classification,Vehicle,bus,17,20,0.9991758513193802
+1797,396,2019-01-24 15:43:30,classification,StationStart,garching forschungzentrum,26,51,0.6478196297723646
+1798,397,2019-01-24 15:43:30,gold standard,StationStart,spitzingplatz,18,31,-1.0
+1799,397,2019-01-24 15:43:30,gold standard,StationDest,poccistraße,35,46,-1.0
+1800,397,2019-01-24 15:43:30,classification,StationStart,spitzingplatz,18,31,0.9877870329840084
+1801,397,2019-01-24 15:43:30,classification,StationDest,poccistraße,35,46,0.9491433309260149
+1802,398,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,19,45,-1.0
+1803,398,2019-01-24 15:43:30,gold standard,StationDest,marienplatz,49,60,-1.0
+1804,398,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,19,45,0.9954960060319021
+1805,398,2019-01-24 15:43:30,classification,StationDest,marienplatz,49,60,0.9563945683894847
+1806,399,2019-01-24 15:43:30,gold standard,StationStart,klinkum,19,26,-1.0
+1807,399,2019-01-24 15:43:30,gold standard,StationDest,marienplatz,30,41,-1.0
+1808,399,2019-01-24 15:43:30,classification,StationStart,klinkum,19,26,0.9445119970436847
+1809,399,2019-01-24 15:43:30,classification,StationDest,marienplatz,30,41,0.9249568856262905
+1810,400,2019-01-24 15:43:30,gold standard,StationStart,alte heide,16,26,-1.0
+1811,400,2019-01-24 15:43:30,gold standard,StationDest,marienplatz,30,41,-1.0
+1812,400,2019-01-24 15:43:30,classification,StationStart,alte heide,16,26,0.5561211388292466
+1813,400,2019-01-24 15:43:30,classification,StationDest,marienplatz,30,41,0.9563660938153375
+1814,401,2019-01-24 15:43:30,gold standard,Vehicle,train,5,10,-1.0
+1815,401,2019-01-24 15:43:30,gold standard,Criterion,next,0,4,-1.0
+1816,401,2019-01-24 15:43:30,gold standard,StationStart,muenchen freicheit,16,34,-1.0
+1817,401,2019-01-24 15:43:30,classification,Criterion,next,0,4,0.5167686242923728
+1818,401,2019-01-24 15:43:30,classification,Vehicle,train,5,10,0.9321472152290992
+1819,401,2019-01-24 15:43:30,classification,StationStart,muenchen,16,24,0.7299266920983085
+1820,402,2019-01-24 15:43:30,gold standard,StationStart,garching,10,18,-1.0
+1821,402,2019-01-24 15:43:30,classification,StationStart,garching,10,18,0.8283003535832878
+1822,403,2019-01-24 15:43:30,gold standard,Vehicle,u-bahn,19,25,-1.0
+1823,403,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1824,403,2019-01-24 15:43:30,gold standard,StationStart,garching,36,44,-1.0
+1825,403,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.9605516479135467
+1826,403,2019-01-24 15:43:30,classification,Vehicle,u - bahn,19,25,0.8565209016343439
+1827,403,2019-01-24 15:43:30,classification,StationStart,garching,36,44,0.8446688508012418
+1828,404,2019-01-24 15:43:30,gold standard,Vehicle,bus,9,12,-1.0
+1829,404,2019-01-24 15:43:30,gold standard,Criterion,next,4,8,-1.0
+1830,404,2019-01-24 15:43:30,gold standard,StationStart,garching forschungzentrum,18,43,-1.0
+1831,404,2019-01-24 15:43:30,classification,Criterion,next,4,8,0.9887912784929447
+1832,404,2019-01-24 15:43:30,classification,Vehicle,bus,9,12,0.9991758733199263
+1833,404,2019-01-24 15:43:30,classification,StationStart,garching forschungzentrum,18,43,0.647819629771494
+1834,405,2019-01-24 15:43:30,gold standard,Vehicle,train,17,22,-1.0
+1835,405,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1836,405,2019-01-24 15:43:30,gold standard,StationStart,alte heide,26,36,-1.0
+1837,405,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9597319354631219
+1838,405,2019-01-24 15:43:30,classification,Vehicle,train,17,22,0.9875769760309183
+1839,405,2019-01-24 15:43:30,classification,StationDest,alte heide,26,36,0.8118908990940288
+1840,406,2019-01-24 15:43:30,gold standard,StationStart,garching,15,23,-1.0
+1841,406,2019-01-24 15:43:30,classification,StationStart,garching,15,23,0.969025251053268
+1842,407,2019-01-24 15:43:30,gold standard,StationStart,münchner freiheit,41,58,-1.0
+1843,407,2019-01-24 15:43:30,gold standard,StationDest,scheidplatz,62,73,-1.0
+1844,407,2019-01-24 15:43:30,classification,StationStart,münchner freiheit,41,58,0.981734985721344
+1845,407,2019-01-24 15:43:30,classification,StationDest,scheidplatz,62,73,0.9386793556735391
+1846,408,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,19,45,-1.0
+1847,408,2019-01-24 15:43:30,gold standard,StationDest,prinzregentenplatz,49,67,-1.0
+1848,408,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,19,45,0.9954959655293233
+1849,408,2019-01-24 15:43:30,classification,StationDest,prinzregentenplatz,49,67,0.9623941387651059
+1850,409,2019-01-24 15:43:30,gold standard,StationStart,neufahrn,19,27,-1.0
+1851,409,2019-01-24 15:43:30,gold standard,StationDest,garching,31,39,-1.0
+1852,409,2019-01-24 15:43:30,classification,StationStart,neufahrn,19,27,0.9165988418777656
+1853,409,2019-01-24 15:43:30,classification,StationDest,garching,31,39,0.9766658060765249
+1854,410,2019-01-24 15:43:30,gold standard,StationDest,airport,15,22,-1.0
+1855,411,2019-01-24 15:43:30,gold standard,Line,u6,19,21,-1.0
+1856,411,2019-01-24 15:43:30,gold standard,Criterion,next,14,18,-1.0
+1857,411,2019-01-24 15:43:30,gold standard,StationStart,garching forschungszentrum,33,59,-1.0
+1858,411,2019-01-24 15:43:30,classification,Criterion,next,14,18,0.6195748578000942
+1859,411,2019-01-24 15:43:30,classification,Line,u6,19,21,0.8576792644617381
+1860,411,2019-01-24 15:43:30,classification,StationStart,garching forschungszentrum,33,59,0.9184131495630048
+1861,412,2019-01-24 15:43:30,gold standard,StationStart,munchner freiheit,19,36,-1.0
+1862,412,2019-01-24 15:43:30,gold standard,StationDest,nordfriedhof,40,52,-1.0
+1863,412,2019-01-24 15:43:30,classification,StationStart,munchner freiheit,19,36,0.9646670899875207
+1864,412,2019-01-24 15:43:30,classification,StationDest,nordfriedhof,40,52,0.7620004875518475
+1865,413,2019-01-24 15:43:30,gold standard,StationStart,harthaus,5,13,-1.0
+1866,413,2019-01-24 15:43:30,gold standard,StationDest,hackerbrücke,17,29,-1.0
+1867,413,2019-01-24 15:43:30,classification,StationStart,harthaus,5,13,0.9459134154447713
+1868,413,2019-01-24 15:43:30,classification,StationDest,hackerbrücke,17,29,0.9394622706641068
+1869,414,2019-01-24 15:43:30,gold standard,Vehicle,train,12,17,-1.0
+1870,414,2019-01-24 15:43:30,gold standard,StationStart,garching,23,31,-1.0
+1871,414,2019-01-24 15:43:30,classification,Vehicle,train,12,17,0.6030780916617929
+1872,414,2019-01-24 15:43:30,classification,StationStart,garching,23,31,0.9691021416817456
+1873,415,2019-01-24 15:43:30,gold standard,Vehicle,train,17,22,-1.0
+1874,415,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1875,415,2019-01-24 15:43:30,gold standard,StationStart,münchner freiheit,28,45,-1.0
+1876,415,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9579976725699451
+1877,415,2019-01-24 15:43:30,classification,Vehicle,train,17,22,0.9792642931292518
+1878,415,2019-01-24 15:43:30,classification,StationStart,münchner freiheit,28,45,0.7412309169970016
+1879,416,2019-01-24 15:43:30,gold standard,StationStart,theresienstrasse,19,35,-1.0
+1880,416,2019-01-24 15:43:30,gold standard,StationDest,garching forschungszentrum,39,65,-1.0
+1881,416,2019-01-24 15:43:30,classification,StationStart,theresienstrasse,19,35,0.8952514220253877
+1882,416,2019-01-24 15:43:30,classification,StationDest,garching forschungszentrum,39,65,0.7081809304838287
+1883,417,2019-01-24 15:43:30,gold standard,StationStart,münchner freiheit,19,36,-1.0
+1884,417,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,40,51,-1.0
+1885,417,2019-01-24 15:43:30,classification,StationStart,münchner freiheit,19,36,0.9817423494721712
+1886,417,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,40,51,0.9935881667399313
+1887,418,2019-01-24 15:43:30,gold standard,StationStart,garching,5,13,-1.0
+1888,418,2019-01-24 15:43:30,gold standard,StationDest,hauptbahnhof,17,29,-1.0
+1889,418,2019-01-24 15:43:30,classification,StationStart,garching,5,13,0.9938994118523344
+1890,418,2019-01-24 15:43:30,classification,StationDest,hauptbahnhof,17,29,0.992608722998808
+1891,419,2019-01-24 15:43:30,gold standard,StationStart,garching,19,27,-1.0
+1892,419,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,31,42,-1.0
+1893,419,2019-01-24 15:43:30,classification,StationStart,garching,19,27,0.9938785953868581
+1894,419,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,31,42,0.9935865125871148
+1895,420,2019-01-24 15:43:30,gold standard,StationStart,neufahrn,7,15,-1.0
+1896,420,2019-01-24 15:43:30,gold standard,StationDest,garching,20,28,-1.0
+1897,420,2019-01-24 15:43:30,classification,StationDest,garching,20,28,0.4367164044551536
+1898,421,2019-01-24 15:43:30,gold standard,StationStart,studentenstadt,19,33,-1.0
+1899,421,2019-01-24 15:43:30,gold standard,StationDest,garching,37,45,-1.0
+1900,421,2019-01-24 15:43:30,classification,StationStart,studentenstadt,19,33,0.9384399230558346
+1901,421,2019-01-24 15:43:30,classification,StationDest,garching,37,45,0.9766652521313626
+1902,422,2019-01-24 15:43:30,gold standard,Vehicle,bus,17,20,-1.0
+1903,422,2019-01-24 15:43:30,gold standard,Criterion,next,12,16,-1.0
+1904,422,2019-01-24 15:43:30,gold standard,StationStart,garching,26,34,-1.0
+1905,422,2019-01-24 15:43:30,classification,Criterion,next,12,16,0.9887872357874975
+1906,422,2019-01-24 15:43:30,classification,Vehicle,bus,17,20,0.9991761779189063
+1907,422,2019-01-24 15:43:30,classification,StationStart,garching,26,34,0.9691076864695458
+1908,423,2019-01-24 15:43:30,gold standard,StationStart,hauptbahnhof,13,25,-1.0
+1909,423,2019-01-24 15:43:30,gold standard,StationDest,odeonsplatz,29,40,-1.0
+1910,423,2019-01-24 15:43:30,classification,StationStart,hauptbahnhof,13,25,0.9758732588580352
+1911,423,2019-01-24 15:43:30,classification,StationDest,odeonsplatz,29,40,0.9935893976947033
+1912,424,2019-01-24 15:44:50,gold standard,StationDest,marienplatz,13,24,-1.0
+1913,424,2019-01-24 15:44:50,classification,StationDest,go marienplatz,10,24,0.5210575469665233
+1914,425,2019-01-24 15:44:50,gold standard,Vehicle,train,17,22,-1.0
+1915,425,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+1916,425,2019-01-24 15:44:50,gold standard,StationStart,muncher freiheit,26,42,-1.0
+1917,425,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.959720094721714
+1918,425,2019-01-24 15:44:50,classification,Vehicle,train,17,22,0.9875305609047647
+1919,425,2019-01-24 15:44:50,classification,StationStart,muncher freiheit,26,42,0.6547871470367175
+1920,426,2019-01-24 15:44:50,gold standard,Vehicle,u-bahn,19,25,-1.0
+1921,426,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+1922,426,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,38,64,-1.0
+1923,426,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9605458006834856
+1924,426,2019-01-24 15:44:50,classification,Vehicle,u - bahn,19,25,0.8567268763546099
+1925,426,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,38,64,0.9539902708601662
+1926,427,2019-01-24 15:44:50,gold standard,StationStart,olympia einkaufszentrum,5,28,-1.0
+1927,427,2019-01-24 15:44:50,gold standard,StationDest,hauptbahnhof,32,44,-1.0
+1928,427,2019-01-24 15:44:50,classification,StationStart,olympia einkaufszentrum,5,28,0.946951280079937
+1929,427,2019-01-24 15:44:50,classification,StationDest,hauptbahnhof,32,44,0.9926103702253104
+1930,428,2019-01-24 15:44:50,gold standard,Vehicle,train,17,22,-1.0
+1931,428,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+1932,428,2019-01-24 15:44:50,gold standard,StationStart,winterstraße 12,28,43,-1.0
+1933,428,2019-01-24 15:44:50,gold standard,StationDest,kieferngarten,47,60,-1.0
+1934,428,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9579956147685452
+1935,428,2019-01-24 15:44:50,classification,Vehicle,train,17,22,0.9792544068371737
+1936,428,2019-01-24 15:44:50,classification,StationStart,winterstraße 12,28,43,0.6357189412643514
+1937,428,2019-01-24 15:44:50,classification,StationDest,kieferngarten,47,60,0.9789127192976171
+1938,429,2019-01-24 15:44:50,gold standard,Vehicle,rocket,17,23,-1.0
+1939,429,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+1940,429,2019-01-24 15:44:50,gold standard,StationStart,winterstraße 12,29,44,-1.0
+1941,429,2019-01-24 15:44:50,gold standard,StationDest,kieferngarte,48,60,-1.0
+1942,429,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9474876447970579
+1943,429,2019-01-24 15:44:50,classification,Vehicle,rocket,17,23,0.7263654494601883
+1944,429,2019-01-24 15:44:50,classification,StationStart,winterstraße 12,29,44,0.6357903126301927
+1945,429,2019-01-24 15:44:50,classification,StationDest,kieferngarte,48,60,0.9325871695924847
+1946,430,2019-01-24 15:44:50,gold standard,StationStart,garching,31,39,-1.0
+1947,430,2019-01-24 15:44:50,gold standard,StationDest,hauptbahnhof,43,55,-1.0
+1948,430,2019-01-24 15:44:50,classification,StationStart,garching,31,39,0.9938725319897453
+1949,430,2019-01-24 15:44:50,classification,StationDest,hauptbahnhof,43,55,0.9878921329816701
+1950,431,2019-01-24 15:44:50,gold standard,StationStart,untere strassäcker 21,16,37,-1.0
+1951,431,2019-01-24 15:44:50,gold standard,StationDest,fröttmaning,41,52,-1.0
+1952,431,2019-01-24 15:44:50,classification,StationStart,untere strassäcker 21,16,37,0.9615283770780976
+1953,431,2019-01-24 15:44:50,classification,StationDest,fröttmaning,41,52,0.9781298638782969
+1954,432,2019-01-24 15:44:50,gold standard,StationStart,marienplatz,19,30,-1.0
+1955,432,2019-01-24 15:44:50,gold standard,StationDest,garching,34,42,-1.0
+1956,432,2019-01-24 15:44:50,classification,StationStart,marienplatz,19,30,0.990897819957451
+1957,432,2019-01-24 15:44:50,classification,StationDest,garching,34,42,0.976678736400685
+1958,433,2019-01-24 15:44:50,gold standard,StationStart,boltzmannstraße,16,31,-1.0
+1959,433,2019-01-24 15:44:50,gold standard,StationDest,kieferngarten,35,48,-1.0
+1960,433,2019-01-24 15:44:50,classification,StationStart,boltzmannstraße,16,31,0.9723045868831439
+1961,433,2019-01-24 15:44:50,classification,StationDest,kieferngarten,35,48,0.9789693010867191
+1962,434,2019-01-24 15:44:50,gold standard,StationStart,bonner platz,16,28,-1.0
+1963,434,2019-01-24 15:44:50,gold standard,StationDest,freimann,32,40,-1.0
+1964,434,2019-01-24 15:44:50,classification,StationStart,bonner platz,16,28,0.7622718888983577
+1965,434,2019-01-24 15:44:50,classification,StationDest,freimann,32,40,0.9407827421888825
+1966,435,2019-01-24 15:44:50,gold standard,Vehicle,s-bahn,17,23,-1.0
+1967,435,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+1968,435,2019-01-24 15:44:50,gold standard,StationStart,garching,35,43,-1.0
+1969,435,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9606866267113758
+1970,435,2019-01-24 15:44:50,classification,Vehicle,s - bahn,17,23,0.8586978489107863
+1971,435,2019-01-24 15:44:50,classification,StationStart,garching,35,43,0.8448210540112465
+1972,436,2019-01-24 15:44:50,gold standard,StationStart,oez,18,21,-1.0
+1973,436,2019-01-24 15:44:50,gold standard,StationDest,hbf,25,28,-1.0
+1974,436,2019-01-24 15:44:50,classification,StationStart,oez,18,21,0.9360443384588844
+1975,436,2019-01-24 15:44:50,classification,StationDest,hbf,25,28,0.8828129583553795
+1976,437,2019-01-24 15:44:50,gold standard,StationStart,winterstrasse 12,16,32,-1.0
+1977,437,2019-01-24 15:44:50,gold standard,StationDest,fröttmaning,36,47,-1.0
+1978,437,2019-01-24 15:44:50,classification,StationStart,winterstrasse 12,16,32,0.821415661802019
+1979,437,2019-01-24 15:44:50,classification,StationDest,fröttmaning,36,47,0.9780973552765431
+1980,438,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,18,44,-1.0
+1981,438,2019-01-24 15:44:50,gold standard,StationDest,pasing,48,54,-1.0
+1982,438,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,18,44,0.9954956003786427
+1983,438,2019-01-24 15:44:50,classification,StationDest,pasing,48,54,0.9667026284843344
+1984,439,2019-01-24 15:44:50,gold standard,StationStart,theresienstraße,0,15,-1.0
+1985,439,2019-01-24 15:44:50,gold standard,StationDest,assling,19,26,-1.0
+1986,439,2019-01-24 15:44:50,classification,StationDest,assling,19,26,0.9627238807034575
+1987,440,2019-01-24 15:44:50,gold standard,StationStart,theresienstraße,19,34,-1.0
+1988,440,2019-01-24 15:44:50,gold standard,StationDest,munich east,38,49,-1.0
+1989,440,2019-01-24 15:44:50,classification,StationStart,theresienstraße,19,34,0.9658681593775875
+1990,440,2019-01-24 15:44:50,classification,StationDest,munich east,38,49,0.6663736310901754
+1991,441,2019-01-24 15:44:50,gold standard,Vehicle,bus,19,22,-1.0
+1992,441,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+1993,441,2019-01-24 15:44:50,gold standard,StationStart,garching,35,43,-1.0
+1994,441,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9887801653010091
+1995,441,2019-01-24 15:44:50,classification,Vehicle,bus,19,22,0.9994651647384777
+1996,441,2019-01-24 15:44:50,classification,StationStart,garching,35,43,0.9858782014295392
+1997,442,2019-01-24 15:44:50,gold standard,StationStart,quiddestraße,5,17,-1.0
+1998,442,2019-01-24 15:44:50,gold standard,StationDest,garching,21,29,-1.0
+1999,442,2019-01-24 15:44:50,classification,StationStart,quiddestraße,5,17,0.9914423941193791
+2000,442,2019-01-24 15:44:50,classification,StationDest,garching,21,29,0.9571100129239295
+2001,443,2019-01-24 15:44:50,gold standard,StationStart,kurt-eisner-straße,31,49,-1.0
+2002,443,2019-01-24 15:44:50,gold standard,StationDest,garching forschungszentrum,53,79,-1.0
+2003,443,2019-01-24 15:44:50,classification,StationStart,kurt - eisner - straße,31,49,0.7943032322352356
+2004,443,2019-01-24 15:44:50,classification,StationDest,garching forschungszentrum,53,79,0.8052874968152988
+2005,444,2019-01-24 15:44:50,gold standard,StationStart,quiddestraße,31,43,-1.0
+2006,444,2019-01-24 15:44:50,gold standard,StationDest,garching forschungszentrum,47,73,-1.0
+2007,444,2019-01-24 15:44:50,classification,StationStart,quiddestraße,31,43,0.991380123249911
+2008,444,2019-01-24 15:44:50,classification,StationDest,garching forschungszentrum,47,73,0.8052026818552763
+2009,445,2019-01-24 15:44:50,gold standard,Vehicle,train,19,24,-1.0
+2010,445,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+2011,445,2019-01-24 15:44:50,gold standard,StationStart,garching,35,43,-1.0
+2012,445,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9604619181525198
+2013,445,2019-01-24 15:44:50,classification,Vehicle,train,19,24,0.9913657171297964
+2014,445,2019-01-24 15:44:50,classification,StationStart,garching,35,43,0.8448455310657021
+2015,446,2019-01-24 15:44:50,gold standard,StationStart,hauptbahnhof,5,17,-1.0
+2016,446,2019-01-24 15:44:50,gold standard,StationDest,garching,21,29,-1.0
+2017,446,2019-01-24 15:44:50,classification,StationStart,hauptbahnhof,5,17,0.9759815523358173
+2018,446,2019-01-24 15:44:50,classification,StationDest,garching,21,29,0.9571065194582883
+2019,447,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,41,67,-1.0
+2020,447,2019-01-24 15:44:50,gold standard,StationDest,glockenbachviertel,17,35,-1.0
+2021,447,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,41,67,0.9538886085913497
+2022,448,2019-01-24 15:44:50,gold standard,StationStart,garching,19,27,-1.0
+2023,448,2019-01-24 15:44:50,gold standard,StationDest,nordfriedhof,31,43,-1.0
+2024,448,2019-01-24 15:44:50,classification,StationStart,garching,19,27,0.9938770005379935
+2025,448,2019-01-24 15:44:50,classification,StationDest,nordfriedhof,31,43,0.8672832141781892
+2026,449,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,41,67,-1.0
+2027,449,2019-01-24 15:44:50,gold standard,StationDest,glockenbachviertel,17,35,-1.0
+2028,449,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,41,67,0.9538886085913497
+2029,450,2019-01-24 15:44:50,gold standard,Vehicle,train,17,22,-1.0
+2030,450,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2031,450,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,34,60,-1.0
+2032,450,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9612334363127667
+2033,450,2019-01-24 15:44:50,classification,Vehicle,train,17,22,0.9948241397447855
+2034,450,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,34,60,0.9040984113967218
+2035,451,2019-01-24 15:44:50,gold standard,StationStart,moosach,19,26,-1.0
+2036,451,2019-01-24 15:44:50,gold standard,StationDest,quiddestraße,30,42,-1.0
+2037,451,2019-01-24 15:44:50,classification,StationStart,moosach,19,26,0.9608286806217313
+2038,451,2019-01-24 15:44:50,classification,StationDest,quiddestraße,30,42,0.9270928704373689
+2039,452,2019-01-24 15:44:50,gold standard,StationStart,moosach,19,26,-1.0
+2040,452,2019-01-24 15:44:50,gold standard,StationDest,poccistraße,30,41,-1.0
+2041,452,2019-01-24 15:44:50,classification,StationStart,moosach,19,26,0.9608246589195228
+2042,452,2019-01-24 15:44:50,classification,StationDest,poccistraße,30,41,0.948886487073521
+2043,453,2019-01-24 15:44:50,gold standard,StationStart,kurt-eisner-straße,19,37,-1.0
+2044,453,2019-01-24 15:44:50,gold standard,StationDest,garching forschungszentrum,41,67,-1.0
+2045,453,2019-01-24 15:44:50,classification,StationStart,kurt - eisner - straße,19,37,0.7943355632874324
+2046,453,2019-01-24 15:44:50,classification,StationDest,garching forschungszentrum,41,67,0.8052874905626218
+2047,454,2019-01-24 15:44:50,gold standard,StationStart,moosach,19,26,-1.0
+2048,454,2019-01-24 15:44:50,gold standard,StationDest,quiddestraße,30,42,-1.0
+2049,454,2019-01-24 15:44:50,classification,StationStart,moosach,19,26,0.9608286806217313
+2050,454,2019-01-24 15:44:50,classification,StationDest,quiddestraße,30,42,0.9270928704373689
+2051,455,2019-01-24 15:44:50,gold standard,StationStart,moosach,19,26,-1.0
+2052,455,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,30,41,-1.0
+2053,455,2019-01-24 15:44:50,classification,StationStart,moosach,19,26,0.9608322248749079
+2054,455,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,30,41,0.9894445095891898
+2055,456,2019-01-24 15:44:50,gold standard,Vehicle,bus,19,22,-1.0
+2056,456,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+2057,456,2019-01-24 15:44:50,gold standard,StationStart,garching,33,41,-1.0
+2058,456,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9887789704324425
+2059,456,2019-01-24 15:44:50,classification,Vehicle,bus,19,22,0.9994492388942687
+2060,456,2019-01-24 15:44:50,classification,StationStart,garching,33,41,0.8448424778271832
+2061,457,2019-01-24 15:44:50,gold standard,Criterion,shortest,11,19,-1.0
+2062,457,2019-01-24 15:44:50,gold standard,StationStart,quiddestraße,29,41,-1.0
+2063,457,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,45,56,-1.0
+2064,457,2019-01-24 15:44:50,classification,Criterion,shortest,11,19,0.9450157441156145
+2065,457,2019-01-24 15:44:50,classification,StationStart,quiddestraße,29,41,0.991377811312371
+2066,457,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,45,56,0.9894737741208759
+2067,458,2019-01-24 15:44:50,gold standard,Vehicle,bus,17,20,-1.0
+2068,458,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2069,458,2019-01-24 15:44:50,gold standard,StationStart,ostbahnhof,26,36,-1.0
+2070,458,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9887871913179436
+2071,458,2019-01-24 15:44:50,classification,Vehicle,bus,17,20,0.9991756076076754
+2072,458,2019-01-24 15:44:50,classification,StationStart,ostbahnhof,26,36,0.9564571008064118
+2073,459,2019-01-24 15:44:50,gold standard,StationStart,garching,19,27,-1.0
+2074,459,2019-01-24 15:44:50,gold standard,StationDest,neuperlach sued,31,46,-1.0
+2075,459,2019-01-24 15:44:50,classification,StationStart,garching,19,27,0.9938566427772062
+2076,459,2019-01-24 15:44:50,classification,StationDest,neuperlach,31,41,0.38018732909601627
+2077,460,2019-01-24 15:44:50,gold standard,Vehicle,train,17,22,-1.0
+2078,460,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2079,460,2019-01-24 15:44:50,gold standard,StationStart,munchner freiheit,26,43,-1.0
+2080,460,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9597205693453947
+2081,460,2019-01-24 15:44:50,classification,Vehicle,train,17,22,0.9875329371910779
+2082,460,2019-01-24 15:44:50,classification,StationStart,munchner freiheit,26,43,0.6830276319426015
+2083,461,2019-01-24 15:44:50,gold standard,StationStart,marienplatz,19,30,-1.0
+2084,461,2019-01-24 15:44:50,gold standard,StationDest,garching,34,42,-1.0
+2085,461,2019-01-24 15:44:50,classification,StationStart,marienplatz,19,30,0.9908976759967468
+2086,461,2019-01-24 15:44:50,classification,StationDest,garching,34,42,0.9571094673645284
+2087,462,2019-01-24 15:44:50,gold standard,StationStart,poccistraße,18,29,-1.0
+2088,462,2019-01-24 15:44:50,gold standard,StationDest,laim,33,37,-1.0
+2089,462,2019-01-24 15:44:50,classification,StationStart,poccistraße,18,29,0.9719129630373814
+2090,462,2019-01-24 15:44:50,classification,StationDest,laim,33,37,0.9039024355998287
+2091,463,2019-01-24 15:44:50,gold standard,StationStart,marienplatz,27,38,-1.0
+2092,463,2019-01-24 15:44:50,gold standard,StationDest,garching,13,21,-1.0
+2093,463,2019-01-24 15:44:50,classification,StationDest,go,10,12,0.3733525506994563
+2094,463,2019-01-24 15:44:50,classification,StationStart,marienplatz,27,38,0.9728960741172492
+2095,464,2019-01-24 15:44:50,gold standard,StationStart,marienplatz,19,30,-1.0
+2096,464,2019-01-24 15:44:50,gold standard,StationDest,garching,34,42,-1.0
+2097,464,2019-01-24 15:44:50,classification,StationStart,marienplatz,19,30,0.9908976759967468
+2098,464,2019-01-24 15:44:50,classification,StationDest,garching,34,42,0.9571094673645284
+2099,465,2019-01-24 15:44:50,gold standard,StationStart,hauptbahnhof,19,31,-1.0
+2100,465,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,35,46,-1.0
+2101,465,2019-01-24 15:44:50,classification,StationStart,hauptbahnhof,19,31,0.9759033052160047
+2102,465,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,35,46,0.9935893985773945
+2103,466,2019-01-24 15:44:50,gold standard,StationStart,prinzregentenplatz,0,18,-1.0
+2104,466,2019-01-24 15:44:50,gold standard,StationDest,rotkreuzplatz,22,35,-1.0
+2105,466,2019-01-24 15:44:50,classification,StationDest,rotkreuzplatz,22,35,0.9593352643580287
+2106,467,2019-01-24 15:44:50,gold standard,StationStart,marienplatz,30,41,-1.0
+2107,467,2019-01-24 15:44:50,gold standard,StationDest,garching,16,24,-1.0
+2108,467,2019-01-24 15:44:50,classification,StationDest,go,10,12,0.5991945610667381
+2109,467,2019-01-24 15:44:50,classification,StationDest,garching,16,24,0.9154109468655185
+2110,467,2019-01-24 15:44:50,classification,StationStart,marienplatz,30,41,0.9726425901247358
+2111,468,2019-01-24 15:44:50,gold standard,Criterion,next,0,4,-1.0
+2112,468,2019-01-24 15:44:50,gold standard,Vehicle,train,5,10,-1.0
+2113,468,2019-01-24 15:44:50,gold standard,StationStart,garching,16,24,-1.0
+2114,468,2019-01-24 15:44:50,classification,Criterion,next,0,4,0.5168255152625783
+2115,468,2019-01-24 15:44:50,classification,Vehicle,train,5,10,0.9322793590007482
+2116,468,2019-01-24 15:44:50,classification,StationStart,garching,16,24,0.9691189162435997
+2117,469,2019-01-24 15:44:50,gold standard,StationStart,prinzregentenplatz,5,23,-1.0
+2118,469,2019-01-24 15:44:50,gold standard,StationDest,rotkreuzplatz,27,40,-1.0
+2119,469,2019-01-24 15:44:50,classification,StationStart,prinzregentenplatz,5,23,0.9878555439196847
+2120,469,2019-01-24 15:44:50,classification,StationDest,rotkreuzplatz,27,40,0.9593699510588016
+2121,470,2019-01-24 15:44:50,gold standard,Vehicle,subway,17,23,-1.0
+2122,470,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2123,470,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,29,55,-1.0
+2124,470,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9711526021487972
+2125,470,2019-01-24 15:44:50,classification,Vehicle,subway,17,23,0.8715851062313507
+2126,470,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,29,55,0.9184237289906636
+2127,471,2019-01-24 15:44:50,gold standard,StationStart,garching,5,13,-1.0
+2128,471,2019-01-24 15:44:50,gold standard,StationDest,klinikum,17,25,-1.0
+2129,471,2019-01-24 15:44:50,classification,StationStart,garching,5,13,0.9938903485278032
+2130,471,2019-01-24 15:44:50,classification,StationDest,klinikum,17,25,0.9016723235228836
+2131,472,2019-01-24 15:44:50,gold standard,StationStart,garching foschungszentrum,5,30,-1.0
+2132,472,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,34,45,-1.0
+2133,472,2019-01-24 15:44:50,classification,StationStart,garching foschungszentrum,5,30,0.9503339056099672
+2134,472,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,34,45,0.9935886801775045
+2135,473,2019-01-24 15:44:50,gold standard,Vehicle,bus,5,8,-1.0
+2136,473,2019-01-24 15:44:50,gold standard,Criterion,next,0,4,-1.0
+2137,473,2019-01-24 15:44:50,gold standard,StationStart,garching,12,20,-1.0
+2138,473,2019-01-24 15:44:50,classification,Criterion,next,0,4,0.8232044369352406
+2139,473,2019-01-24 15:44:50,classification,Vehicle,bus,5,8,0.9989477940060243
+2140,473,2019-01-24 15:44:50,classification,StationStart,garching,12,20,0.7811034333809987
+2141,474,2019-01-24 15:44:50,gold standard,Vehicle,train,14,19,-1.0
+2142,474,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,31,57,-1.0
+2143,474,2019-01-24 15:44:50,classification,Vehicle,train,14,19,0.8819428081899313
+2144,474,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,31,57,0.9040956084483371
+2145,475,2019-01-24 15:44:50,gold standard,Criterion,next,0,4,-1.0
+2146,475,2019-01-24 15:44:50,gold standard,Vehicle,subway,5,11,-1.0
+2147,475,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,17,43,-1.0
+2148,475,2019-01-24 15:44:50,classification,Criterion,next,0,4,0.6362224571199936
+2149,475,2019-01-24 15:44:50,classification,Vehicle,subway,5,11,0.7374280383750025
+2150,475,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,17,43,0.9184197913470254
+2151,476,2019-01-24 15:44:50,gold standard,Vehicle,bus,17,20,-1.0
+2152,476,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2153,476,2019-01-24 15:44:50,gold standard,StationStart,garching,26,34,-1.0
+2154,476,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9887613167534971
+2155,476,2019-01-24 15:44:50,classification,Vehicle,bus,17,20,0.9991760574318075
+2156,476,2019-01-24 15:44:50,classification,StationStart,garching,26,34,0.9691076864581789
+2157,477,2019-01-24 15:44:50,gold standard,Vehicle,bus,5,8,-1.0
+2158,477,2019-01-24 15:44:50,gold standard,Criterion,next,0,4,-1.0
+2159,477,2019-01-24 15:44:50,gold standard,StationStart,garching,14,22,-1.0
+2160,477,2019-01-24 15:44:50,classification,Criterion,next,0,4,0.8228856716572039
+2161,477,2019-01-24 15:44:50,classification,Vehicle,bus,5,8,0.9982715626193892
+2162,477,2019-01-24 15:44:50,classification,StationStart,garching,14,22,0.9837418290691228
+2163,478,2019-01-24 15:44:50,gold standard,Vehicle,bus,5,8,-1.0
+2164,478,2019-01-24 15:44:50,gold standard,Criterion,next,0,4,-1.0
+2165,478,2019-01-24 15:44:50,gold standard,StationStart,garching,14,22,-1.0
+2166,478,2019-01-24 15:44:50,classification,Criterion,next,0,4,0.82288580403449
+2167,478,2019-01-24 15:44:50,classification,Vehicle,bus,5,8,0.9982718325630859
+2168,478,2019-01-24 15:44:50,classification,StationStart,garching,14,22,0.9691075857373027
+2169,479,2019-01-24 15:44:50,gold standard,Vehicle,bus,5,8,-1.0
+2170,479,2019-01-24 15:44:50,gold standard,Criterion,next,0,4,-1.0
+2171,479,2019-01-24 15:44:50,gold standard,StationStart,central station,14,29,-1.0
+2172,479,2019-01-24 15:44:50,classification,Criterion,next,0,4,0.8228833134032666
+2173,479,2019-01-24 15:44:50,classification,Vehicle,bus,5,8,0.9982666597142508
+2174,479,2019-01-24 15:44:50,classification,StationStart,central,14,21,0.8041023480238557
+2175,480,2019-01-24 15:44:50,gold standard,StationStart,garching,5,13,-1.0
+2176,480,2019-01-24 15:44:50,gold standard,StationDest,marienplatz,17,28,-1.0
+2177,480,2019-01-24 15:44:50,classification,StationStart,garching,5,13,0.9938980224950698
+2178,480,2019-01-24 15:44:50,classification,StationDest,marienplatz,17,28,0.9563805723113892
+2179,481,2019-01-24 15:44:50,gold standard,Vehicle,bus,5,8,-1.0
+2180,481,2019-01-24 15:44:50,gold standard,Criterion,next,0,4,-1.0
+2181,481,2019-01-24 15:44:50,gold standard,StationStart,garching,14,22,-1.0
+2182,481,2019-01-24 15:44:50,classification,Criterion,next,0,4,0.8228857632521815
+2183,481,2019-01-24 15:44:50,classification,Vehicle,bus,5,8,0.9982717546156726
+2184,481,2019-01-24 15:44:50,classification,StationStart,garching,14,22,0.9807406191581098
+2185,482,2019-01-24 15:44:50,gold standard,StationStart,garching,16,24,-1.0
+2186,482,2019-01-24 15:44:50,gold standard,StationDest,hauptbahnhof,28,40,-1.0
+2187,482,2019-01-24 15:44:50,classification,StationStart,garching,16,24,0.9938727739290107
+2188,482,2019-01-24 15:44:50,classification,StationDest,hauptbahnhof,28,40,0.987892133000559
+2189,483,2019-01-24 15:44:50,gold standard,Vehicle,bus,19,22,-1.0
+2190,483,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+2191,483,2019-01-24 15:44:50,gold standard,StationStart,garching,36,44,-1.0
+2192,483,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9887835037091804
+2193,483,2019-01-24 15:44:50,classification,Vehicle,bus,19,22,0.9994795906827338
+2194,483,2019-01-24 15:44:50,classification,StationStart,garching,36,44,0.9858774826526521
+2195,484,2019-01-24 15:44:50,gold standard,StationStart,hauptbahnhof,21,33,-1.0
+2196,484,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,37,48,-1.0
+2197,484,2019-01-24 15:44:50,classification,StationStart,hauptbahnhof,21,33,0.9758840977123702
+2198,484,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,37,48,0.9935893979804968
+2199,485,2019-01-24 15:44:50,gold standard,Vehicle,u-bahn,19,25,-1.0
+2200,485,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+2201,485,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,37,63,-1.0
+2202,485,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9603947669417224
+2203,485,2019-01-24 15:44:50,classification,Vehicle,u - bahn,19,25,0.8516800329766493
+2204,485,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,37,63,0.9171592860796035
+2205,486,2019-01-24 15:44:50,gold standard,Vehicle,u-bahn,19,25,-1.0
+2206,486,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+2207,486,2019-01-24 15:44:50,gold standard,StationStart,garching,37,45,-1.0
+2208,486,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9603947606864325
+2209,486,2019-01-24 15:44:50,classification,Vehicle,u - bahn,19,25,0.8516794062733891
+2210,486,2019-01-24 15:44:50,classification,StationStart,garching,37,45,0.8447746061551952
+2211,487,2019-01-24 15:44:50,gold standard,Vehicle,subway,19,25,-1.0
+2212,487,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+2213,487,2019-01-24 15:44:50,gold standard,StationStart,garching,37,45,-1.0
+2214,487,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9746266766397901
+2215,487,2019-01-24 15:44:50,classification,Vehicle,subway,19,25,0.9088077590031849
+2216,487,2019-01-24 15:44:50,classification,StationStart,garching,37,45,0.7248555255389318
+2217,488,2019-01-24 15:44:50,gold standard,Vehicle,train,17,22,-1.0
+2218,488,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2219,488,2019-01-24 15:44:50,gold standard,StationStart,garching,26,34,-1.0
+2220,488,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9597805749390103
+2221,488,2019-01-24 15:44:50,classification,Vehicle,train,17,22,0.987801486123229
+2222,488,2019-01-24 15:44:50,classification,StationStart,garching,26,34,0.886474107203732
+2223,489,2019-01-24 15:44:50,gold standard,StationStart,münchner freiheit,16,33,-1.0
+2224,489,2019-01-24 15:44:50,gold standard,StationDest,garching,37,45,-1.0
+2225,489,2019-01-24 15:44:50,classification,StationStart,münchner freiheit,16,33,0.981747609113339
+2226,489,2019-01-24 15:44:50,classification,StationDest,garching,37,45,0.9571086500766259
+2227,490,2019-01-24 15:44:50,gold standard,StationStart,implerstraße,0,12,-1.0
+2228,490,2019-01-24 15:44:50,gold standard,StationDest,ostbahnhof,16,26,-1.0
+2229,490,2019-01-24 15:44:50,classification,StationDest,ostbahnhof,16,26,0.9607887449416315
+2230,491,2019-01-24 15:44:50,gold standard,StationStart,hauptbahnhof,19,31,-1.0
+2231,491,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,35,46,-1.0
+2232,491,2019-01-24 15:44:50,classification,StationStart,hauptbahnhof,19,31,0.9759021693276582
+2233,491,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,35,46,0.9894719485007284
+2234,492,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,18,44,-1.0
+2235,492,2019-01-24 15:44:50,gold standard,StationDest,prinzregentenplatz,48,66,-1.0
+2236,492,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,18,44,0.9954954304904895
+2237,492,2019-01-24 15:44:50,classification,StationDest,prinzregentenplatz,48,66,0.9623941387683622
+2238,493,2019-01-24 15:44:50,gold standard,StationStart,mangfallplatz,19,32,-1.0
+2239,493,2019-01-24 15:44:50,gold standard,StationDest,garching,36,44,-1.0
+2240,493,2019-01-24 15:44:50,classification,StationStart,mangfallplatz,19,32,0.9908978158705776
+2241,493,2019-01-24 15:44:50,classification,StationDest,garching,36,44,0.9766787364006482
+2242,494,2019-01-24 15:44:50,gold standard,StationDest,hohenlindenerstraße,17,36,-1.0
+2243,494,2019-01-24 15:44:50,classification,StationDest,hohenlindenerstraße,17,36,0.9634796594769103
+2244,495,2019-01-24 15:44:50,gold standard,StationStart,harthaus,0,8,-1.0
+2245,495,2019-01-24 15:44:50,gold standard,StationDest,hackerbrücke,12,24,-1.0
+2246,495,2019-01-24 15:44:50,classification,StationDest,hackerbrücke,12,24,0.939428424502947
+2247,496,2019-01-24 15:44:50,gold standard,StationStart,feldmoching,19,30,-1.0
+2248,496,2019-01-24 15:44:50,gold standard,StationDest,garching forschungszentrum,34,60,-1.0
+2249,496,2019-01-24 15:44:50,classification,StationStart,feldmoching,19,30,0.970532942571305
+2250,496,2019-01-24 15:44:50,classification,StationDest,garching forschungszentrum,34,60,0.8054473391788171
+2251,497,2019-01-24 15:44:50,gold standard,StationStart,marienplatz,5,16,-1.0
+2252,497,2019-01-24 15:44:50,gold standard,StationDest,petershausen,20,32,-1.0
+2253,497,2019-01-24 15:44:50,classification,StationStart,marienplatz,5,16,0.9909427602417207
+2254,497,2019-01-24 15:44:50,classification,StationDest,petershausen,20,32,0.9594557486978703
+2255,498,2019-01-24 15:44:50,gold standard,Vehicle,train,12,17,-1.0
+2256,498,2019-01-24 15:44:50,gold standard,StationStart,garching,23,31,-1.0
+2257,498,2019-01-24 15:44:50,gold standard,StationDest,marienplatz,35,46,-1.0
+2258,498,2019-01-24 15:44:50,classification,Vehicle,train,12,17,0.6030598881267312
+2259,498,2019-01-24 15:44:50,classification,StationStart,garching,23,31,0.9938911385307428
+2260,498,2019-01-24 15:44:50,classification,StationDest,marienplatz,35,46,0.956380570379569
+2261,499,2019-01-24 15:44:50,gold standard,StationStart,neufahrn,0,8,-1.0
+2262,499,2019-01-24 15:44:50,gold standard,StationDest,garching,12,20,-1.0
+2263,499,2019-01-24 15:44:50,classification,StationDest,garching,12,20,0.9766755415557431
+2264,500,2019-01-24 15:44:50,gold standard,StationStart,mangfallplatz,19,32,-1.0
+2265,500,2019-01-24 15:44:50,gold standard,StationDest,garching,36,44,-1.0
+2266,500,2019-01-24 15:44:50,classification,StationStart,mangfallplatz,19,32,0.9908978158705776
+2267,500,2019-01-24 15:44:50,classification,StationDest,garching,36,44,0.9766787364006482
+2268,501,2019-01-24 15:44:50,gold standard,StationDest,hohenlindenerstr,17,33,-1.0
+2269,501,2019-01-24 15:44:50,classification,StationDest,hohenlindenerstr,17,33,0.8855094136795248
+2270,502,2019-01-24 15:44:50,gold standard,Vehicle,bus,17,20,-1.0
+2271,502,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2272,502,2019-01-24 15:44:50,gold standard,StationStart,garching forschungzentrum,26,51,-1.0
+2273,502,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9887872097511073
+2274,502,2019-01-24 15:44:50,classification,Vehicle,bus,17,20,0.9991758513193802
+2275,502,2019-01-24 15:44:50,classification,StationStart,garching forschungzentrum,26,51,0.6478196297723646
+2276,503,2019-01-24 15:44:50,gold standard,StationStart,spitzingplatz,18,31,-1.0
+2277,503,2019-01-24 15:44:50,gold standard,StationDest,poccistraße,35,46,-1.0
+2278,503,2019-01-24 15:44:50,classification,StationStart,spitzingplatz,18,31,0.9877870329840084
+2279,503,2019-01-24 15:44:50,classification,StationDest,poccistraße,35,46,0.9491433309260149
+2280,504,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,19,45,-1.0
+2281,504,2019-01-24 15:44:50,gold standard,StationDest,marienplatz,49,60,-1.0
+2282,504,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,19,45,0.9954960060319021
+2283,504,2019-01-24 15:44:50,classification,StationDest,marienplatz,49,60,0.9563945683894847
+2284,505,2019-01-24 15:44:50,gold standard,StationStart,klinkum,19,26,-1.0
+2285,505,2019-01-24 15:44:50,gold standard,StationDest,marienplatz,30,41,-1.0
+2286,505,2019-01-24 15:44:50,classification,StationStart,klinkum,19,26,0.9445119970436847
+2287,505,2019-01-24 15:44:50,classification,StationDest,marienplatz,30,41,0.9249568856262905
+2288,506,2019-01-24 15:44:50,gold standard,StationStart,alte heide,16,26,-1.0
+2289,506,2019-01-24 15:44:50,gold standard,StationDest,marienplatz,30,41,-1.0
+2290,506,2019-01-24 15:44:50,classification,StationStart,alte heide,16,26,0.5561211388292466
+2291,506,2019-01-24 15:44:50,classification,StationDest,marienplatz,30,41,0.9563660938153375
+2292,507,2019-01-24 15:44:50,gold standard,Vehicle,train,5,10,-1.0
+2293,507,2019-01-24 15:44:50,gold standard,Criterion,next,0,4,-1.0
+2294,507,2019-01-24 15:44:50,gold standard,StationStart,muenchen freicheit,16,34,-1.0
+2295,507,2019-01-24 15:44:50,classification,Criterion,next,0,4,0.5167686242923728
+2296,507,2019-01-24 15:44:50,classification,Vehicle,train,5,10,0.9321472152290992
+2297,507,2019-01-24 15:44:50,classification,StationStart,muenchen,16,24,0.7299266920983085
+2298,508,2019-01-24 15:44:50,gold standard,StationStart,garching,10,18,-1.0
+2299,508,2019-01-24 15:44:50,classification,StationStart,garching,10,18,0.8283003535832878
+2300,509,2019-01-24 15:44:50,gold standard,Vehicle,u-bahn,19,25,-1.0
+2301,509,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+2302,509,2019-01-24 15:44:50,gold standard,StationStart,garching,36,44,-1.0
+2303,509,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.9605516479135467
+2304,509,2019-01-24 15:44:50,classification,Vehicle,u - bahn,19,25,0.8565209016343439
+2305,509,2019-01-24 15:44:50,classification,StationStart,garching,36,44,0.8446688508012418
+2306,510,2019-01-24 15:44:50,gold standard,Vehicle,bus,9,12,-1.0
+2307,510,2019-01-24 15:44:50,gold standard,Criterion,next,4,8,-1.0
+2308,510,2019-01-24 15:44:50,gold standard,StationStart,garching forschungzentrum,18,43,-1.0
+2309,510,2019-01-24 15:44:50,classification,Criterion,next,4,8,0.9887912784929447
+2310,510,2019-01-24 15:44:50,classification,Vehicle,bus,9,12,0.9991758733199263
+2311,510,2019-01-24 15:44:50,classification,StationStart,garching forschungzentrum,18,43,0.647819629771494
+2312,511,2019-01-24 15:44:50,gold standard,Vehicle,train,17,22,-1.0
+2313,511,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2314,511,2019-01-24 15:44:50,gold standard,StationStart,alte heide,26,36,-1.0
+2315,511,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9597319354631219
+2316,511,2019-01-24 15:44:50,classification,Vehicle,train,17,22,0.9875769760309183
+2317,511,2019-01-24 15:44:50,classification,StationDest,alte heide,26,36,0.8118908990940288
+2318,512,2019-01-24 15:44:50,gold standard,StationStart,garching,15,23,-1.0
+2319,512,2019-01-24 15:44:50,classification,StationStart,garching,15,23,0.969025251053268
+2320,513,2019-01-24 15:44:50,gold standard,StationStart,münchner freiheit,41,58,-1.0
+2321,513,2019-01-24 15:44:50,gold standard,StationDest,scheidplatz,62,73,-1.0
+2322,513,2019-01-24 15:44:50,classification,StationStart,münchner freiheit,41,58,0.981734985721344
+2323,513,2019-01-24 15:44:50,classification,StationDest,scheidplatz,62,73,0.9386793556735391
+2324,514,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,19,45,-1.0
+2325,514,2019-01-24 15:44:50,gold standard,StationDest,prinzregentenplatz,49,67,-1.0
+2326,514,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,19,45,0.9954959655293233
+2327,514,2019-01-24 15:44:50,classification,StationDest,prinzregentenplatz,49,67,0.9623941387651059
+2328,515,2019-01-24 15:44:50,gold standard,StationStart,neufahrn,19,27,-1.0
+2329,515,2019-01-24 15:44:50,gold standard,StationDest,garching,31,39,-1.0
+2330,515,2019-01-24 15:44:50,classification,StationStart,neufahrn,19,27,0.9165988418777656
+2331,515,2019-01-24 15:44:50,classification,StationDest,garching,31,39,0.9766658060765249
+2332,516,2019-01-24 15:44:50,gold standard,StationDest,airport,15,22,-1.0
+2333,517,2019-01-24 15:44:50,gold standard,Line,u6,19,21,-1.0
+2334,517,2019-01-24 15:44:50,gold standard,Criterion,next,14,18,-1.0
+2335,517,2019-01-24 15:44:50,gold standard,StationStart,garching forschungszentrum,33,59,-1.0
+2336,517,2019-01-24 15:44:50,classification,Criterion,next,14,18,0.6195748578000942
+2337,517,2019-01-24 15:44:50,classification,Line,u6,19,21,0.8576792644617381
+2338,517,2019-01-24 15:44:50,classification,StationStart,garching forschungszentrum,33,59,0.9184131495630048
+2339,518,2019-01-24 15:44:50,gold standard,StationStart,munchner freiheit,19,36,-1.0
+2340,518,2019-01-24 15:44:50,gold standard,StationDest,nordfriedhof,40,52,-1.0
+2341,518,2019-01-24 15:44:50,classification,StationStart,munchner freiheit,19,36,0.9646670899875207
+2342,518,2019-01-24 15:44:50,classification,StationDest,nordfriedhof,40,52,0.7620004875518475
+2343,519,2019-01-24 15:44:50,gold standard,StationStart,harthaus,5,13,-1.0
+2344,519,2019-01-24 15:44:50,gold standard,StationDest,hackerbrücke,17,29,-1.0
+2345,519,2019-01-24 15:44:50,classification,StationStart,harthaus,5,13,0.9459134154447713
+2346,519,2019-01-24 15:44:50,classification,StationDest,hackerbrücke,17,29,0.9394622706641068
+2347,520,2019-01-24 15:44:50,gold standard,Vehicle,train,12,17,-1.0
+2348,520,2019-01-24 15:44:50,gold standard,StationStart,garching,23,31,-1.0
+2349,520,2019-01-24 15:44:50,classification,Vehicle,train,12,17,0.6030780916617929
+2350,520,2019-01-24 15:44:50,classification,StationStart,garching,23,31,0.9691021416817456
+2351,521,2019-01-24 15:44:50,gold standard,Vehicle,train,17,22,-1.0
+2352,521,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2353,521,2019-01-24 15:44:50,gold standard,StationStart,münchner freiheit,28,45,-1.0
+2354,521,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9579976725699451
+2355,521,2019-01-24 15:44:50,classification,Vehicle,train,17,22,0.9792642931292518
+2356,521,2019-01-24 15:44:50,classification,StationStart,münchner freiheit,28,45,0.7412309169970016
+2357,522,2019-01-24 15:44:50,gold standard,StationStart,theresienstrasse,19,35,-1.0
+2358,522,2019-01-24 15:44:50,gold standard,StationDest,garching forschungszentrum,39,65,-1.0
+2359,522,2019-01-24 15:44:50,classification,StationStart,theresienstrasse,19,35,0.8952514220253877
+2360,522,2019-01-24 15:44:50,classification,StationDest,garching forschungszentrum,39,65,0.7081809304838287
+2361,523,2019-01-24 15:44:50,gold standard,StationStart,münchner freiheit,19,36,-1.0
+2362,523,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,40,51,-1.0
+2363,523,2019-01-24 15:44:50,classification,StationStart,münchner freiheit,19,36,0.9817423494721712
+2364,523,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,40,51,0.9935881667399313
+2365,524,2019-01-24 15:44:50,gold standard,StationStart,garching,5,13,-1.0
+2366,524,2019-01-24 15:44:50,gold standard,StationDest,hauptbahnhof,17,29,-1.0
+2367,524,2019-01-24 15:44:50,classification,StationStart,garching,5,13,0.9938994118523344
+2368,524,2019-01-24 15:44:50,classification,StationDest,hauptbahnhof,17,29,0.992608722998808
+2369,525,2019-01-24 15:44:50,gold standard,StationStart,garching,19,27,-1.0
+2370,525,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,31,42,-1.0
+2371,525,2019-01-24 15:44:50,classification,StationStart,garching,19,27,0.9938785953868581
+2372,525,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,31,42,0.9935865125871148
+2373,526,2019-01-24 15:44:50,gold standard,StationStart,neufahrn,7,15,-1.0
+2374,526,2019-01-24 15:44:50,gold standard,StationDest,garching,20,28,-1.0
+2375,526,2019-01-24 15:44:50,classification,StationDest,garching,20,28,0.4367164044551536
+2376,527,2019-01-24 15:44:50,gold standard,StationStart,studentenstadt,19,33,-1.0
+2377,527,2019-01-24 15:44:50,gold standard,StationDest,garching,37,45,-1.0
+2378,527,2019-01-24 15:44:50,classification,StationStart,studentenstadt,19,33,0.9384399230558346
+2379,527,2019-01-24 15:44:50,classification,StationDest,garching,37,45,0.9766652521313626
+2380,528,2019-01-24 15:44:50,gold standard,Vehicle,bus,17,20,-1.0
+2381,528,2019-01-24 15:44:50,gold standard,Criterion,next,12,16,-1.0
+2382,528,2019-01-24 15:44:50,gold standard,StationStart,garching,26,34,-1.0
+2383,528,2019-01-24 15:44:50,classification,Criterion,next,12,16,0.9887872357874975
+2384,528,2019-01-24 15:44:50,classification,Vehicle,bus,17,20,0.9991761779189063
+2385,528,2019-01-24 15:44:50,classification,StationStart,garching,26,34,0.9691076864695458
+2386,529,2019-01-24 15:44:50,gold standard,StationStart,hauptbahnhof,13,25,-1.0
+2387,529,2019-01-24 15:44:50,gold standard,StationDest,odeonsplatz,29,40,-1.0
+2388,529,2019-01-24 15:44:50,classification,StationStart,hauptbahnhof,13,25,0.9758732588580352
+2389,529,2019-01-24 15:44:50,classification,StationDest,odeonsplatz,29,40,0.9935893976947033

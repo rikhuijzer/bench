@@ -1,0 +1,6 @@
+system name: dialogflow
+corpus: Corpus.SNIPS2017
+f1 intent scores:
+  micro: '0.99'
+  macro: '0.869'
+  weighted: '0.993'

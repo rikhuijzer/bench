@@ -1,0 +1,1795 @@
+id,intent_id,timestamp,source,entity,value,start,end,confidence
+0,0,2019-02-11 11:54:32,gold standard,party_size_description,my babies and I,23,38,-1.0
+1,1,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,25,35,-1.0
+2,1,2019-02-11 11:54:32,gold standard,spatial_relation,not far,36,43,-1.0
+3,1,2019-02-11 11:54:32,gold standard,state,MA,49,51,-1.0
+4,2,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,23,33,-1.0
+5,2,2019-02-11 11:54:32,gold standard,country,Tanzania,37,45,-1.0
+6,2,2019-02-11 11:54:32,gold standard,spatial_relation,within walking distance,54,77,-1.0
+7,2,2019-02-11 11:54:32,gold standard,party_size_description,my mom and I,82,94,-1.0
+8,3,2019-02-11 11:54:32,gold standard,restaurant_type,oyster bar,26,36,-1.0
+9,4,2019-02-11 11:54:32,gold standard,party_size_number,6,23,24,-1.0
+10,4,2019-02-11 11:54:32,gold standard,cuisine,creole,38,44,-1.0
+11,4,2019-02-11 11:54:32,gold standard,restaurant_type,tavern,45,51,-1.0
+12,4,2019-02-11 11:54:32,gold standard,country,Montenegro,55,65,-1.0
+13,5,2019-02-11 11:54:32,gold standard,city,Sacaton,18,25,-1.0
+14,5,2019-02-11 11:54:32,gold standard,cuisine,gluten free,31,42,-1.0
+15,5,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,43,53,-1.0
+16,6,2019-02-11 11:54:32,gold standard,party_size_description,me and my grandfather,13,34,-1.0
+17,6,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,35,41,-1.0
+18,6,2019-02-11 11:54:32,gold standard,poi,West Reading,42,54,-1.0
+19,7,2019-02-11 11:54:32,gold standard,party_size_description,me and my nieces,5,21,-1.0
+20,7,2019-02-11 11:54:32,gold standard,served_dish,seafood,42,49,-1.0
+21,7,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,50,60,-1.0
+22,7,2019-02-11 11:54:32,gold standard,city,Cle Elum,64,72,-1.0
+23,7,2019-02-11 11:54:32,gold standard,state,NE,74,76,-1.0
+24,7,2019-02-11 11:54:32,gold standard,timeRange,ascension day,80,93,-1.0
+25,8,2019-02-11 11:54:32,gold standard,party_size_number,two,14,17,-1.0
+26,8,2019-02-11 11:54:32,gold standard,restaurant_name,City Tavern,21,32,-1.0
+27,9,2019-02-11 11:54:32,gold standard,restaurant_type,brasserie,17,26,-1.0
+28,9,2019-02-11 11:54:32,gold standard,party_size_number,3,31,32,-1.0
+29,9,2019-02-11 11:54:32,gold standard,country,Netherlands Antilles,43,63,-1.0
+30,10,2019-02-11 11:54:32,gold standard,sort,best,30,34,-1.0
+31,10,2019-02-11 11:54:32,gold standard,restaurant_type,bistro,35,41,-1.0
+32,11,2019-02-11 11:54:32,gold standard,sort,best,9,13,-1.0
+33,11,2019-02-11 11:54:32,gold standard,country,Tanzania,23,31,-1.0
+34,11,2019-02-11 11:54:32,gold standard,party_size_number,5,36,37,-1.0
+35,11,2019-02-11 11:54:32,gold standard,restaurant_type,diner,50,55,-1.0
+36,12,2019-02-11 11:54:32,gold standard,restaurant_type,joint,17,22,-1.0
+37,12,2019-02-11 11:54:32,gold standard,facility,spa,29,32,-1.0
+38,13,2019-02-11 11:54:32,gold standard,restaurant_type,gastropub,7,16,-1.0
+39,13,2019-02-11 11:54:32,gold standard,cuisine,turkish,29,36,-1.0
+40,13,2019-02-11 11:54:32,gold standard,party_size_number,4,46,47,-1.0
+41,14,2019-02-11 11:54:32,gold standard,party_size_number,7,14,15,-1.0
+42,14,2019-02-11 11:54:32,gold standard,facility,indoor,22,28,-1.0
+43,14,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,29,39,-1.0
+44,14,2019-02-11 11:54:32,gold standard,state,MP,43,45,-1.0
+45,14,2019-02-11 11:54:32,gold standard,timeRange,now,46,49,-1.0
+46,15,2019-02-11 11:54:32,gold standard,country,Fiji,16,20,-1.0
+47,15,2019-02-11 11:54:32,gold standard,timeRange,zero a.m,25,33,-1.0
+48,16,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+49,16,2019-02-11 11:54:32,gold standard,party_size_number,five,32,36,-1.0
+50,16,2019-02-11 11:54:32,gold standard,country,Sri Lanka,47,56,-1.0
+51,17,2019-02-11 11:54:32,gold standard,party_size_number,5,19,20,-1.0
+52,17,2019-02-11 11:54:32,gold standard,sort,highly rated,26,38,-1.0
+53,17,2019-02-11 11:54:32,gold standard,restaurant_type,gastropub,39,48,-1.0
+54,17,2019-02-11 11:54:32,gold standard,city,Concord,52,59,-1.0
+55,17,2019-02-11 11:54:32,gold standard,state,MN,60,62,-1.0
+56,18,2019-02-11 11:54:32,gold standard,restaurant_name,Oregon Electric Station,15,38,-1.0
+57,18,2019-02-11 11:54:32,gold standard,city,North City,42,52,-1.0
+58,19,2019-02-11 11:54:32,gold standard,party_size_number,4,19,20,-1.0
+59,20,2019-02-11 11:54:32,gold standard,sort,popular,7,14,-1.0
+60,20,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,15,25,-1.0
+61,20,2019-02-11 11:54:32,gold standard,party_size_number,5,30,31,-1.0
+62,21,2019-02-11 11:54:32,gold standard,restaurant_type,joint,17,22,-1.0
+63,21,2019-02-11 11:54:32,gold standard,spatial_relation,close by,23,31,-1.0
+64,21,2019-02-11 11:54:32,gold standard,poi,naomi's hostel,36,50,-1.0
+65,21,2019-02-11 11:54:32,gold standard,timeRange,meal,57,61,-1.0
+66,21,2019-02-11 11:54:32,gold standard,party_size_number,8,66,67,-1.0
+67,22,2019-02-11 11:54:32,gold standard,restaurant_type,delicatessen,16,28,-1.0
+68,22,2019-02-11 11:54:32,gold standard,timeRange,in thirteen hours,29,46,-1.0
+69,22,2019-02-11 11:54:32,gold standard,cuisine,eastern european,59,75,-1.0
+70,23,2019-02-11 11:54:32,gold standard,party_size_number,nine,23,27,-1.0
+71,23,2019-02-11 11:54:32,gold standard,restaurant_type,bakery,40,46,-1.0
+72,23,2019-02-11 11:54:32,gold standard,city,Nunez,50,55,-1.0
+73,24,2019-02-11 11:54:32,gold standard,restaurant_type,tavern,22,28,-1.0
+74,24,2019-02-11 11:54:32,gold standard,served_dish,noodle,33,39,-1.0
+75,25,2019-02-11 11:54:32,gold standard,party_size_number,4,14,15,-1.0
+76,25,2019-02-11 11:54:32,gold standard,country,Somalia,19,26,-1.0
+77,26,2019-02-11 11:54:32,gold standard,restaurant_name,Albany Pump Station,15,34,-1.0
+78,26,2019-02-11 11:54:32,gold standard,city,Buckholts,38,47,-1.0
+79,26,2019-02-11 11:54:32,gold standard,state,Washington,48,58,-1.0
+80,26,2019-02-11 11:54:32,gold standard,timeRange,now,59,62,-1.0
+81,26,2019-02-11 11:54:32,gold standard,party_size_number,9,78,79,-1.0
+82,27,2019-02-11 11:54:32,gold standard,restaurant_type,taverna,17,24,-1.0
+83,27,2019-02-11 11:54:32,gold standard,city,Archer City,28,39,-1.0
+84,27,2019-02-11 11:54:32,gold standard,timeRange,this spring,44,55,-1.0
+85,27,2019-02-11 11:54:32,gold standard,party_size_number,nine,60,64,-1.0
+86,28,2019-02-11 11:54:32,gold standard,sort,top-rated,17,26,-1.0
+87,28,2019-02-11 11:54:32,gold standard,restaurant_type,brasserie,27,36,-1.0
+88,28,2019-02-11 11:54:32,gold standard,party_size_number,7,41,42,-1.0
+89,29,2019-02-11 11:54:32,gold standard,party_size_number,8,23,24,-1.0
+90,29,2019-02-11 11:54:32,gold standard,city,Wardville,35,44,-1.0
+91,29,2019-02-11 11:54:32,gold standard,state,Kansas,46,52,-1.0
+92,30,2019-02-11 11:54:32,gold standard,restaurant_name,Breadline Cafe,10,24,-1.0
+93,30,2019-02-11 11:54:32,gold standard,state,Minnesota,28,37,-1.0
+94,30,2019-02-11 11:54:32,gold standard,timeRange,next friday,38,49,-1.0
+95,31,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+96,31,2019-02-11 11:54:32,gold standard,country,Niger,31,36,-1.0
+97,31,2019-02-11 11:54:32,gold standard,party_size_number,seven,41,46,-1.0
+98,32,2019-02-11 11:54:32,gold standard,party_size_number,9,14,15,-1.0
+99,33,2019-02-11 11:54:32,gold standard,restaurant_type,pub,28,31,-1.0
+100,33,2019-02-11 11:54:32,gold standard,city,Cormorant,35,44,-1.0
+101,33,2019-02-11 11:54:32,gold standard,party_size_number,nine,60,64,-1.0
+102,34,2019-02-11 11:54:32,gold standard,party_size_description,my nieces and I,14,29,-1.0
+103,34,2019-02-11 11:54:32,gold standard,restaurant_type,tea house,35,44,-1.0
+104,35,2019-02-11 11:54:32,gold standard,cuisine,jewish,17,23,-1.0
+105,35,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,24,34,-1.0
+106,35,2019-02-11 11:54:32,gold standard,country,Gambia,38,44,-1.0
+107,36,2019-02-11 11:54:32,gold standard,restaurant_name,The Dome Edinburgh,23,42,-1.0
+108,36,2019-02-11 11:54:32,gold standard,spatial_relation,close,43,48,-1.0
+109,36,2019-02-11 11:54:32,gold standard,poi,Brooklawn,52,61,-1.0
+110,37,2019-02-11 11:54:32,gold standard,party_size_number,1,14,15,-1.0
+111,37,2019-02-11 11:54:32,gold standard,restaurant_name,Town of Ramsgate,19,35,-1.0
+112,37,2019-02-11 11:54:32,gold standard,city,Merit,39,44,-1.0
+113,38,2019-02-11 11:54:32,gold standard,party_size_description,me and kathrine,16,31,-1.0
+114,38,2019-02-11 11:54:32,gold standard,city,Smithville,36,46,-1.0
+115,39,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+116,39,2019-02-11 11:54:32,gold standard,party_size_description,my father in law and I,32,54,-1.0
+117,39,2019-02-11 11:54:32,gold standard,city,Buckner,58,65,-1.0
+118,39,2019-02-11 11:54:32,gold standard,timeRange,a year from now,66,81,-1.0
+119,40,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,7,17,-1.0
+120,40,2019-02-11 11:54:32,gold standard,timeRange,in 6 weeks,30,40,-1.0
+121,41,2019-02-11 11:54:32,gold standard,restaurant_type,bar,25,28,-1.0
+122,41,2019-02-11 11:54:32,gold standard,facility,spa,36,39,-1.0
+123,41,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,40,46,-1.0
+124,41,2019-02-11 11:54:32,gold standard,state,ID,47,49,-1.0
+125,42,2019-02-11 11:54:32,gold standard,party_size_number,four,14,18,-1.0
+126,42,2019-02-11 11:54:32,gold standard,restaurant_name,Cliff House San Francisco,22,48,-1.0
+127,42,2019-02-11 11:54:32,gold standard,country,Martinique,52,62,-1.0
+128,43,2019-02-11 11:54:32,gold standard,party_size_number,4,19,20,-1.0
+129,43,2019-02-11 11:54:32,gold standard,country,Saint Helena,24,36,-1.0
+130,43,2019-02-11 11:54:32,gold standard,restaurant_name,Settha Palace Hotel,40,59,-1.0
+131,44,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+132,44,2019-02-11 11:54:32,gold standard,city,Frenier,31,38,-1.0
+133,44,2019-02-11 11:54:32,gold standard,timeRange,12 years from now,39,56,-1.0
+134,44,2019-02-11 11:54:32,gold standard,party_size_number,4,61,62,-1.0
+135,45,2019-02-11 11:54:32,gold standard,party_size_number,seven,5,10,-1.0
+136,45,2019-02-11 11:54:32,gold standard,spatial_relation,neighboring,14,25,-1.0
+137,45,2019-02-11 11:54:32,gold standard,city,Moorpark,26,34,-1.0
+138,46,2019-02-11 11:54:32,gold standard,timeRange,five pm,17,24,-1.0
+139,46,2019-02-11 11:54:32,gold standard,state,NE,28,30,-1.0
+140,46,2019-02-11 11:54:32,gold standard,party_size_number,six,37,40,-1.0
+141,47,2019-02-11 11:54:32,gold standard,restaurant_name,Tupelo Honey Cafe,15,32,-1.0
+142,47,2019-02-11 11:54:32,gold standard,state,New Jersey,36,46,-1.0
+143,47,2019-02-11 11:54:32,gold standard,party_size_number,five,51,55,-1.0
+144,48,2019-02-11 11:54:32,gold standard,party_size_number,two,23,26,-1.0
+145,48,2019-02-11 11:54:32,gold standard,restaurant_name,Mickies Dairy Bar,30,47,-1.0
+146,48,2019-02-11 11:54:32,gold standard,city,Weedsport,51,60,-1.0
+147,49,2019-02-11 11:54:32,gold standard,restaurant_name,Fried chicken restaurant,18,42,-1.0
+148,50,2019-02-11 11:54:32,gold standard,party_size_description,mavis sheila and I,14,33,-1.0
+149,50,2019-02-11 11:54:32,gold standard,country,Syria,37,42,-1.0
+150,50,2019-02-11 11:54:32,gold standard,timeRange,elevenses,46,55,-1.0
+151,51,2019-02-11 11:54:32,gold standard,restaurant_name,Windows on the World,27,47,-1.0
+152,51,2019-02-11 11:54:32,gold standard,city,Cokeville,51,60,-1.0
+153,51,2019-02-11 11:54:32,gold standard,state,MI,63,65,-1.0
+154,52,2019-02-11 11:54:32,gold standard,party_size_number,5,20,21,-1.0
+155,52,2019-02-11 11:54:32,gold standard,timeRange,this year,22,31,-1.0
+156,52,2019-02-11 11:54:32,gold standard,restaurant_name,Cherwell Boathouse,35,53,-1.0
+157,53,2019-02-11 11:54:32,gold standard,party_size_number,six,14,17,-1.0
+158,53,2019-02-11 11:54:32,gold standard,timeRange,8 pm,22,26,-1.0
+159,53,2019-02-11 11:54:32,gold standard,restaurant_type,coffeehouse,32,43,-1.0
+160,53,2019-02-11 11:54:32,gold standard,state,NE,47,49,-1.0
+161,53,2019-02-11 11:54:32,gold standard,served_dish,hog fry,62,69,-1.0
+162,54,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+163,54,2019-02-11 11:54:32,gold standard,spatial_relation,close-by,28,36,-1.0
+164,54,2019-02-11 11:54:32,gold standard,city,Inman,40,45,-1.0
+165,54,2019-02-11 11:54:32,gold standard,party_size_number,five,50,54,-1.0
+166,55,2019-02-11 11:54:32,gold standard,restaurant_name,Eddie's Attic,18,31,-1.0
+167,55,2019-02-11 11:54:32,gold standard,state,Nevada,35,41,-1.0
+168,55,2019-02-11 11:54:32,gold standard,party_size_number,one,46,49,-1.0
+169,56,2019-02-11 11:54:32,gold standard,restaurant_type,osteria,26,33,-1.0
+170,56,2019-02-11 11:54:32,gold standard,party_size_number,4,49,50,-1.0
+171,56,2019-02-11 11:54:32,gold standard,timeRange,november 4,61,71,-1.0
+172,57,2019-02-11 11:54:32,gold standard,sort,top-rated,17,26,-1.0
+173,57,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,27,37,-1.0
+174,57,2019-02-11 11:54:32,gold standard,spatial_relation,close,38,43,-1.0
+175,57,2019-02-11 11:54:32,gold standard,state,LA,50,52,-1.0
+176,57,2019-02-11 11:54:32,gold standard,party_size_description,me rebecca and loraine,57,80,-1.0
+177,57,2019-02-11 11:54:32,gold standard,timeRange,2/6/2020,84,92,-1.0
+178,58,2019-02-11 11:54:32,gold standard,party_size_number,1,23,24,-1.0
+179,58,2019-02-11 11:54:32,gold standard,restaurant_type,diner,30,35,-1.0
+180,58,2019-02-11 11:54:32,gold standard,state,WI,39,41,-1.0
+181,59,2019-02-11 11:54:32,gold standard,party_size_number,5,23,24,-1.0
+182,59,2019-02-11 11:54:32,gold standard,sort,top-rated,39,48,-1.0
+183,59,2019-02-11 11:54:32,gold standard,restaurant_type,brasserie,49,58,-1.0
+184,60,2019-02-11 11:54:32,gold standard,timeRange,1/20/2023,16,25,-1.0
+185,60,2019-02-11 11:54:32,gold standard,party_size_number,5,30,31,-1.0
+186,60,2019-02-11 11:54:32,gold standard,state,MH,42,44,-1.0
+187,61,2019-02-11 11:54:32,gold standard,spatial_relation,near,13,17,-1.0
+188,61,2019-02-11 11:54:32,gold standard,poi,pat's college,18,31,-1.0
+189,62,2019-02-11 11:54:32,gold standard,restaurant_type,steakhouse,17,27,-1.0
+190,62,2019-02-11 11:54:32,gold standard,city,Vimy Ridge,31,41,-1.0
+191,63,2019-02-11 11:54:32,gold standard,restaurant_name,James D. Conrey House,18,39,-1.0
+192,63,2019-02-11 11:54:32,gold standard,city,Urbank,43,49,-1.0
+193,63,2019-02-11 11:54:32,gold standard,state,California,50,60,-1.0
+194,64,2019-02-11 11:54:32,gold standard,country,Monaco,23,29,-1.0
+195,64,2019-02-11 11:54:32,gold standard,restaurant_name,Yankee Doodle Coffee Shop,38,63,-1.0
+196,65,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,28,38,-1.0
+197,65,2019-02-11 11:54:32,gold standard,country,Bouvet Island,42,55,-1.0
+198,66,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,23,33,-1.0
+199,66,2019-02-11 11:54:32,gold standard,cuisine,souvlaki,38,46,-1.0
+200,66,2019-02-11 11:54:32,gold standard,state,NE,71,73,-1.0
+201,67,2019-02-11 11:54:32,gold standard,party_size_number,10,23,25,-1.0
+202,67,2019-02-11 11:54:32,gold standard,restaurant_type,oyster bar,39,49,-1.0
+203,67,2019-02-11 11:54:32,gold standard,facility,pool,57,61,-1.0
+204,67,2019-02-11 11:54:32,gold standard,spatial_relation,within the same area,62,82,-1.0
+205,67,2019-02-11 11:54:32,gold standard,city,Cowansburg,86,96,-1.0
+206,67,2019-02-11 11:54:32,gold standard,timeRange,10 Pm,101,106,-1.0
+207,68,2019-02-11 11:54:32,gold standard,party_size_description,velma ana and rebecca,23,45,-1.0
+208,68,2019-02-11 11:54:32,gold standard,cuisine,american,53,61,-1.0
+209,68,2019-02-11 11:54:32,gold standard,restaurant_type,pizzeria,62,70,-1.0
+210,68,2019-02-11 11:54:32,gold standard,timeRange,5 Am,74,78,-1.0
+211,68,2019-02-11 11:54:32,gold standard,state,MA,82,84,-1.0
+212,69,2019-02-11 11:54:32,gold standard,party_size_number,4,16,17,-1.0
+213,69,2019-02-11 11:54:32,gold standard,state,Oklahoma,21,29,-1.0
+214,69,2019-02-11 11:54:32,gold standard,restaurant_name,South Street Diner,33,51,-1.0
+215,70,2019-02-11 11:54:32,gold standard,party_size_description,my mommy and I,23,37,-1.0
+216,70,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,43,53,-1.0
+217,70,2019-02-11 11:54:32,gold standard,country,Central African Republic,57,81,-1.0
+218,71,2019-02-11 11:54:32,gold standard,party_size_number,five,23,27,-1.0
+219,71,2019-02-11 11:54:32,gold standard,cuisine,tatar,41,46,-1.0
+220,71,2019-02-11 11:54:32,gold standard,restaurant_type,taverna,47,54,-1.0
+221,71,2019-02-11 11:54:32,gold standard,city,Sargents,58,66,-1.0
+222,72,2019-02-11 11:54:32,gold standard,party_size_description,phyllis ward and veronica,0,25,-1.0
+223,72,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,44,54,-1.0
+224,72,2019-02-11 11:54:32,gold standard,timeRange,in 152 days,55,66,-1.0
+225,73,2019-02-11 11:54:32,gold standard,party_size_number,ten,23,26,-1.0
+226,73,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,32,42,-1.0
+227,73,2019-02-11 11:54:32,gold standard,state,Ohio,46,50,-1.0
+228,74,2019-02-11 11:54:32,gold standard,restaurant_type,tea house,17,26,-1.0
+229,74,2019-02-11 11:54:32,gold standard,served_dish,salade,39,45,-1.0
+230,74,2019-02-11 11:54:32,gold standard,spatial_relation,far,46,49,-1.0
+231,74,2019-02-11 11:54:32,gold standard,timeRange,Midnight,63,71,-1.0
+232,74,2019-02-11 11:54:32,gold standard,country,Panama,75,81,-1.0
+233,74,2019-02-11 11:54:32,gold standard,party_size_number,two,86,89,-1.0
+234,75,2019-02-11 11:54:32,gold standard,restaurant_type,food truck,17,27,-1.0
+235,75,2019-02-11 11:54:32,gold standard,party_size_number,seven,32,37,-1.0
+236,75,2019-02-11 11:54:32,gold standard,country,Republic of the Congo,52,73,-1.0
+237,76,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+238,76,2019-02-11 11:54:32,gold standard,party_size_number,ten,32,35,-1.0
+239,77,2019-02-11 11:54:32,gold standard,spatial_relation,near,9,13,-1.0
+240,77,2019-02-11 11:54:32,gold standard,city,Oakfield,14,22,-1.0
+241,77,2019-02-11 11:54:32,gold standard,timeRange,17 seconds from now,23,42,-1.0
+242,77,2019-02-11 11:54:32,gold standard,restaurant_name,Ted Peters Famous Smoked Fish,46,75,-1.0
+243,78,2019-02-11 11:54:32,gold standard,party_size_number,7,13,14,-1.0
+244,78,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,20,30,-1.0
+245,78,2019-02-11 11:54:32,gold standard,cuisine,european,43,51,-1.0
+246,78,2019-02-11 11:54:32,gold standard,city,Stringtown,55,65,-1.0
+247,78,2019-02-11 11:54:32,gold standard,timeRange,Feb. the 28th 2034,69,88,-1.0
+248,79,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,7,17,-1.0
+249,79,2019-02-11 11:54:32,gold standard,party_size_number,six,22,25,-1.0
+250,79,2019-02-11 11:54:32,gold standard,facility,outdoor,32,39,-1.0
+251,79,2019-02-11 11:54:32,gold standard,country,Åland,48,53,-1.0
+252,80,2019-02-11 11:54:32,gold standard,timeRange,12 am,17,22,-1.0
+253,80,2019-02-11 11:54:32,gold standard,poi,our step mother's secondary residence,27,64,-1.0
+254,80,2019-02-11 11:54:32,gold standard,spatial_relation,within walking distance,65,88,-1.0
+255,80,2019-02-11 11:54:32,gold standard,party_size_number,one,93,96,-1.0
+256,81,2019-02-11 11:54:32,gold standard,restaurant_type,pizzeria,28,36,-1.0
+257,81,2019-02-11 11:54:32,gold standard,facility,parking,44,51,-1.0
+258,81,2019-02-11 11:54:32,gold standard,country,Ghana,64,69,-1.0
+259,82,2019-02-11 11:54:32,gold standard,party_size_number,four,14,18,-1.0
+260,82,2019-02-11 11:54:32,gold standard,facility,indoor,24,30,-1.0
+261,82,2019-02-11 11:54:32,gold standard,restaurant_type,pub,31,34,-1.0
+262,82,2019-02-11 11:54:32,gold standard,spatial_relation,within the same area,35,55,-1.0
+263,82,2019-02-11 11:54:32,gold standard,state,Louisiana,59,68,-1.0
+264,82,2019-02-11 11:54:32,gold standard,timeRange,in one minute,69,82,-1.0
+265,83,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+266,84,2019-02-11 11:54:32,gold standard,party_size_description,me and my step brother,23,45,-1.0
+267,84,2019-02-11 11:54:32,gold standard,restaurant_name,AMT Coffee,49,59,-1.0
+268,84,2019-02-11 11:54:32,gold standard,city,Lakemoor,63,71,-1.0
+269,85,2019-02-11 11:54:32,gold standard,restaurant_type,churrascaria,17,29,-1.0
+270,85,2019-02-11 11:54:32,gold standard,city,Romeoville,33,43,-1.0
+271,85,2019-02-11 11:54:32,gold standard,timeRange,ten a.m,47,54,-1.0
+272,85,2019-02-11 11:54:32,gold standard,party_size_number,four,59,63,-1.0
+273,86,2019-02-11 11:54:32,gold standard,timeRange,5 A.m,10,15,-1.0
+274,86,2019-02-11 11:54:32,gold standard,restaurant_name,Baker's Keyboard Lounge,20,43,-1.0
+275,87,2019-02-11 11:54:32,gold standard,restaurant_type,bistro,28,34,-1.0
+276,87,2019-02-11 11:54:32,gold standard,served_dish,lorna doone,48,59,-1.0
+277,88,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+278,88,2019-02-11 11:54:32,gold standard,party_size_number,six,32,35,-1.0
+279,88,2019-02-11 11:54:32,gold standard,city,Wagstaff,46,54,-1.0
+280,88,2019-02-11 11:54:32,gold standard,state,AK,55,57,-1.0
+281,89,2019-02-11 11:54:32,gold standard,sort,highly rated,23,35,-1.0
+282,89,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,36,46,-1.0
+283,89,2019-02-11 11:54:32,gold standard,party_size_number,ten,62,65,-1.0
+284,90,2019-02-11 11:54:32,gold standard,cuisine,sundanese,17,26,-1.0
+285,90,2019-02-11 11:54:32,gold standard,restaurant_type,gastropub,27,36,-1.0
+286,90,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,37,43,-1.0
+287,90,2019-02-11 11:54:32,gold standard,state,Texas,47,52,-1.0
+288,90,2019-02-11 11:54:32,gold standard,party_size_number,3,57,58,-1.0
+289,90,2019-02-11 11:54:32,gold standard,timeRange,5/20/2025,69,78,-1.0
+290,91,2019-02-11 11:54:32,gold standard,party_size_number,five,16,20,-1.0
+291,91,2019-02-11 11:54:32,gold standard,city,Seagoville,24,34,-1.0
+292,91,2019-02-11 11:54:32,gold standard,timeRange,06:42,39,44,-1.0
+293,92,2019-02-11 11:54:32,gold standard,party_size_number,9,14,15,-1.0
+294,92,2019-02-11 11:54:32,gold standard,city,Thurmont,19,27,-1.0
+295,93,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,17,27,-1.0
+296,93,2019-02-11 11:54:32,gold standard,timeRange,in sixteen seconds,28,46,-1.0
+297,93,2019-02-11 11:54:32,gold standard,party_size_number,5,51,52,-1.0
+298,93,2019-02-11 11:54:32,gold standard,city,Gold Point,63,73,-1.0
+299,93,2019-02-11 11:54:32,gold standard,state,Montana,74,81,-1.0
+300,94,2019-02-11 11:54:32,gold standard,city,Ramona,17,23,-1.0
+301,95,2019-02-11 11:54:32,gold standard,poi,their campus,16,28,-1.0
+302,95,2019-02-11 11:54:32,gold standard,spatial_relation,within the same area,29,49,-1.0
+303,95,2019-02-11 11:54:32,gold standard,restaurant_type,churrascaria,54,66,-1.0
+304,96,2019-02-11 11:54:32,gold standard,party_size_number,3,37,38,-1.0
+305,96,2019-02-11 11:54:32,gold standard,restaurant_type,pub,44,47,-1.0
+306,96,2019-02-11 11:54:32,gold standard,country,Northern Mariana Islands,51,75,-1.0
+307,97,2019-02-11 11:54:32,gold standard,cuisine,bougatsa,17,25,-1.0
+308,97,2019-02-11 11:54:32,gold standard,restaurant_type,restaurant,26,36,-1.0
+309,97,2019-02-11 11:54:32,gold standard,timeRange,next year,40,49,-1.0
+310,97,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,50,56,-1.0
+311,97,2019-02-11 11:54:32,gold standard,city,Penn,57,61,-1.0
+312,97,2019-02-11 11:54:32,gold standard,party_size_number,three,66,71,-1.0
+313,98,2019-02-11 11:54:32,gold standard,party_size_number,nine,23,27,-1.0
+314,98,2019-02-11 11:54:32,gold standard,sort,best,42,46,-1.0
+315,98,2019-02-11 11:54:32,gold standard,restaurant_type,pub,47,50,-1.0
+316,98,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,51,57,-1.0
+317,98,2019-02-11 11:54:32,gold standard,city,Tangier,58,65,-1.0
+318,98,2019-02-11 11:54:32,gold standard,timeRange,in six months,66,79,-1.0
+319,99,2019-02-11 11:54:32,gold standard,city,Quarryville,26,37,-1.0
+320,99,2019-02-11 11:54:32,gold standard,timeRange,14 hours from now,38,55,-1.0
+321,100,2019-02-11 11:54:32,gold standard,object_type,movie,17,22,-1.0
+322,100,2019-02-11 11:54:32,gold standard,object_name,Heart Beat,27,37,-1.0
+323,101,2019-02-11 11:54:32,gold standard,object_type,TV show,19,26,-1.0
+324,101,2019-02-11 11:54:32,gold standard,object_name,Vanity,28,34,-1.0
+325,102,2019-02-11 11:54:32,gold standard,object_name,Elvis' Christmas Album,11,33,-1.0
+326,102,2019-02-11 11:54:32,gold standard,object_type,TV show,34,41,-1.0
+327,103,2019-02-11 11:54:32,gold standard,object_type,saga,19,23,-1.0
+328,103,2019-02-11 11:54:32,gold standard,object_name,The Deep Six,25,37,-1.0
+329,104,2019-02-11 11:54:32,gold standard,object_type,photograph,16,26,-1.0
+330,104,2019-02-11 11:54:32,gold standard,object_name,Live: Right Here,41,57,-1.0
+331,105,2019-02-11 11:54:32,gold standard,object_type,novel,14,19,-1.0
+332,105,2019-02-11 11:54:32,gold standard,object_name,Death March,27,38,-1.0
+333,106,2019-02-11 11:54:32,gold standard,object_name,The Curse of Oak Island,26,49,-1.0
+334,107,2019-02-11 11:54:32,gold standard,object_name,The Sacred and Profane Love Machine,14,49,-1.0
+335,107,2019-02-11 11:54:32,gold standard,object_type,game,50,54,-1.0
+336,108,2019-02-11 11:54:32,gold standard,object_name,Hit by Love,28,39,-1.0
+337,109,2019-02-11 11:54:32,gold standard,object_type,trailer,15,22,-1.0
+338,109,2019-02-11 11:54:32,gold standard,object_name,The Office,27,37,-1.0
+339,110,2019-02-11 11:54:32,gold standard,object_name,Plant Ecology,35,48,-1.0
+340,111,2019-02-11 11:54:32,gold standard,object_type,television show,9,24,-1.0
+341,111,2019-02-11 11:54:32,gold standard,object_name,To Me,25,30,-1.0
+342,112,2019-02-11 11:54:32,gold standard,object_type,saga,27,31,-1.0
+343,112,2019-02-11 11:54:32,gold standard,object_name,Chump Change,32,44,-1.0
+344,113,2019-02-11 11:54:32,gold standard,object_name,The Ridiculous 6,16,32,-1.0
+345,113,2019-02-11 11:54:32,gold standard,object_type,book,33,37,-1.0
+346,114,2019-02-11 11:54:32,gold standard,object_type,TV series,19,28,-1.0
+347,114,2019-02-11 11:54:32,gold standard,object_name,Now We Are Married,30,48,-1.0
+348,115,2019-02-11 11:54:32,gold standard,object_name,Bachelor Pad,25,37,-1.0
+349,116,2019-02-11 11:54:32,gold standard,object_name,Late Night Heartbroken Blues,24,52,-1.0
+350,116,2019-02-11 11:54:32,gold standard,object_type,television show,53,68,-1.0
+351,117,2019-02-11 11:54:32,gold standard,object_name,Bend It Like Beckham the Musical,21,53,-1.0
+352,118,2019-02-11 11:54:32,gold standard,object_type,TV series,19,28,-1.0
+353,118,2019-02-11 11:54:32,gold standard,object_name,Parables for Wooden Ears,29,53,-1.0
+354,119,2019-02-11 11:54:32,gold standard,object_name,Hey Man,17,24,-1.0
+355,120,2019-02-11 11:54:32,gold standard,object_name,Switched,18,26,-1.0
+356,121,2019-02-11 11:54:32,gold standard,object_name,Controlled Conversations,19,43,-1.0
+357,121,2019-02-11 11:54:32,gold standard,object_type,TV series,44,53,-1.0
+358,122,2019-02-11 11:54:32,gold standard,object_type,song,19,23,-1.0
+359,122,2019-02-11 11:54:32,gold standard,object_name,The Mad Magician,24,40,-1.0
+360,123,2019-02-11 11:54:32,gold standard,object_type,TV show,22,29,-1.0
+361,123,2019-02-11 11:54:32,gold standard,object_name,The Best of White Lion,31,53,-1.0
+362,124,2019-02-11 11:54:32,gold standard,object_name,Phineas Redux,15,28,-1.0
+363,125,2019-02-11 11:54:32,gold standard,object_name,Procession of Ants,11,29,-1.0
+364,125,2019-02-11 11:54:32,gold standard,object_type,TV show,30,37,-1.0
+365,126,2019-02-11 11:54:32,gold standard,object_type,game,14,18,-1.0
+366,126,2019-02-11 11:54:32,gold standard,object_name,Phinally Phamous,26,42,-1.0
+367,127,2019-02-11 11:54:32,gold standard,object_name,Daring Youth,19,31,-1.0
+368,127,2019-02-11 11:54:32,gold standard,object_type,saga,32,36,-1.0
+369,128,2019-02-11 11:54:32,gold standard,object_type,book,13,17,-1.0
+370,128,2019-02-11 11:54:32,gold standard,object_name,The Girl Who Was Plugged In,18,45,-1.0
+371,129,2019-02-11 11:54:32,gold standard,object_type,TV show,10,17,-1.0
+372,129,2019-02-11 11:54:32,gold standard,object_name,Baby Blue,25,34,-1.0
+373,130,2019-02-11 11:54:32,gold standard,object_name,Appalachian Journey,11,30,-1.0
+374,131,2019-02-11 11:54:32,gold standard,object_type,television show,13,28,-1.0
+375,131,2019-02-11 11:54:32,gold standard,object_name,Meet the Prince,29,44,-1.0
+376,132,2019-02-11 11:54:32,gold standard,object_name,Cracks the Safe,16,31,-1.0
+377,133,2019-02-11 11:54:32,gold standard,object_name,Hell Money,26,36,-1.0
+378,133,2019-02-11 11:54:32,gold standard,object_type,saga,37,41,-1.0
+379,134,2019-02-11 11:54:32,gold standard,object_name,Secret South,11,23,-1.0
+380,134,2019-02-11 11:54:32,gold standard,object_type,song,24,28,-1.0
+381,135,2019-02-11 11:54:32,gold standard,object_name,Music for Millions,32,50,-1.0
+382,136,2019-02-11 11:54:32,gold standard,object_type,painting,22,30,-1.0
+383,136,2019-02-11 11:54:32,gold standard,object_name,This Is the Night,38,55,-1.0
+384,137,2019-02-11 11:54:32,gold standard,object_name,Epic Conditions,21,36,-1.0
+385,137,2019-02-11 11:54:32,gold standard,object_type,picture,37,44,-1.0
+386,138,2019-02-11 11:54:32,gold standard,object_type,trailer,11,18,-1.0
+387,138,2019-02-11 11:54:32,gold standard,object_name,Good Morning Sunshine,22,43,-1.0
+388,139,2019-02-11 11:54:32,gold standard,object_name,An Introduction to Karl Marx,18,46,-1.0
+389,139,2019-02-11 11:54:32,gold standard,object_type,painting,47,55,-1.0
+390,140,2019-02-11 11:54:32,gold standard,object_name,Blue Spring,20,31,-1.0
+391,140,2019-02-11 11:54:32,gold standard,object_type,trailer,32,39,-1.0
+392,141,2019-02-11 11:54:32,gold standard,object_type,TV series,19,28,-1.0
+393,141,2019-02-11 11:54:32,gold standard,object_name,The Approach,29,41,-1.0
+394,142,2019-02-11 11:54:32,gold standard,object_type,TV show,15,22,-1.0
+395,142,2019-02-11 11:54:32,gold standard,object_name,A Lawless Street,24,40,-1.0
+396,143,2019-02-11 11:54:32,gold standard,object_name,Three Essays on the Theory of Sexuality,15,54,-1.0
+397,143,2019-02-11 11:54:32,gold standard,object_type,show,55,59,-1.0
+398,144,2019-02-11 11:54:32,gold standard,object_name,Compulsive Disclosure,18,39,-1.0
+399,144,2019-02-11 11:54:32,gold standard,object_type,song,40,44,-1.0
+400,145,2019-02-11 11:54:32,gold standard,object_name,Molecular Oncology,20,38,-1.0
+401,145,2019-02-11 11:54:32,gold standard,object_type,saga,39,43,-1.0
+402,146,2019-02-11 11:54:32,gold standard,object_name,The Sound of One Hand Clapping,11,41,-1.0
+403,147,2019-02-11 11:54:32,gold standard,object_name,Deadly Weapons,23,37,-1.0
+404,148,2019-02-11 11:54:32,gold standard,object_name,The Logic of Scientific Discovery,30,63,-1.0
+405,149,2019-02-11 11:54:32,gold standard,object_name,National Anthem of the Ancient Britons,20,58,-1.0
+406,149,2019-02-11 11:54:32,gold standard,object_type,television show,59,74,-1.0
+407,150,2019-02-11 11:54:32,gold standard,object_name,Harry Hood,27,37,-1.0
+408,150,2019-02-11 11:54:32,gold standard,object_type,saga,38,42,-1.0
+409,151,2019-02-11 11:54:32,gold standard,object_name,Bible translations into Hawaii Pidgin,26,63,-1.0
+410,152,2019-02-11 11:54:32,gold standard,object_name,Monty Python Live at the Hollywood Bowl,27,66,-1.0
+411,153,2019-02-11 11:54:32,gold standard,object_name,Mary,18,22,-1.0
+412,154,2019-02-11 11:54:32,gold standard,object_type,game,18,22,-1.0
+413,154,2019-02-11 11:54:32,gold standard,object_name,ATLA: All This Life Allows,23,49,-1.0
+414,155,2019-02-11 11:54:32,gold standard,object_type,novel,12,17,-1.0
+415,155,2019-02-11 11:54:32,gold standard,object_name,To Lose My Life,32,47,-1.0
+416,156,2019-02-11 11:54:32,gold standard,object_type,song,14,18,-1.0
+417,156,2019-02-11 11:54:32,gold standard,object_name,Live at the Kings Center,37,61,-1.0
+418,157,2019-02-11 11:54:32,gold standard,object_name,American Bison,17,31,-1.0
+419,157,2019-02-11 11:54:32,gold standard,object_type,photograph,32,42,-1.0
+420,158,2019-02-11 11:54:32,gold standard,object_name,Free for All,20,32,-1.0
+421,158,2019-02-11 11:54:32,gold standard,object_type,show,33,37,-1.0
+422,159,2019-02-11 11:54:32,gold standard,object_name,Olympia 74,19,29,-1.0
+423,159,2019-02-11 11:54:32,gold standard,object_type,soundtrack,30,40,-1.0
+424,160,2019-02-11 11:54:32,gold standard,object_type,album,13,18,-1.0
+425,160,2019-02-11 11:54:32,gold standard,object_name,Slave to the Grind,19,37,-1.0
+426,161,2019-02-11 11:54:32,gold standard,object_name,Projekt: The New Face of Goth,19,48,-1.0
+427,162,2019-02-11 11:54:32,gold standard,object_name,Message from God,19,35,-1.0
+428,162,2019-02-11 11:54:32,gold standard,object_type,saga,36,40,-1.0
+429,163,2019-02-11 11:54:32,gold standard,object_type,soundtrack,12,22,-1.0
+430,163,2019-02-11 11:54:32,gold standard,object_name,A Honeymoon Adventure,23,44,-1.0
+431,164,2019-02-11 11:54:32,gold standard,object_name,The Henderson Kids,14,32,-1.0
+432,164,2019-02-11 11:54:32,gold standard,object_type,saga,33,37,-1.0
+433,165,2019-02-11 11:54:32,gold standard,object_type,movie,9,14,-1.0
+434,165,2019-02-11 11:54:32,gold standard,object_name,Splendor in the Grass,15,36,-1.0
+435,166,2019-02-11 11:54:32,gold standard,object_type,book,17,21,-1.0
+436,166,2019-02-11 11:54:32,gold standard,object_name,Free to Play,37,49,-1.0
+437,167,2019-02-11 11:54:32,gold standard,object_type,TV series,13,22,-1.0
+438,167,2019-02-11 11:54:32,gold standard,object_name,Jersey Boys,23,34,-1.0
+439,168,2019-02-11 11:54:32,gold standard,object_type,book,19,23,-1.0
+440,168,2019-02-11 11:54:32,gold standard,object_name,Paris - When It Sizzles,25,48,-1.0
+441,169,2019-02-11 11:54:32,gold standard,object_type,painting,14,22,-1.0
+442,169,2019-02-11 11:54:32,gold standard,object_name,With You,38,46,-1.0
+443,170,2019-02-11 11:54:32,gold standard,object_name,Classified,19,29,-1.0
+444,170,2019-02-11 11:54:32,gold standard,object_type,book,30,34,-1.0
+445,171,2019-02-11 11:54:32,gold standard,object_type,show,13,17,-1.0
+446,171,2019-02-11 11:54:32,gold standard,object_name,V-The New Mythology Suite,18,43,-1.0
+447,172,2019-02-11 11:54:32,gold standard,object_name,Face Down,23,32,-1.0
+448,173,2019-02-11 11:54:32,gold standard,object_name,Four Songs,5,15,-1.0
+449,174,2019-02-11 11:54:32,gold standard,object_type,soundtrack,12,22,-1.0
+450,174,2019-02-11 11:54:32,gold standard,object_name,Live at the Greek Theatre,23,48,-1.0
+451,175,2019-02-11 11:54:32,gold standard,object_type,television show,22,37,-1.0
+452,175,2019-02-11 11:54:32,gold standard,object_name,Episodi di The Blacklist,39,63,-1.0
+453,176,2019-02-11 11:54:32,gold standard,object_name,Fire in the Hole,28,44,-1.0
+454,177,2019-02-11 11:54:32,gold standard,object_type,picture,16,23,-1.0
+455,177,2019-02-11 11:54:32,gold standard,object_name,Who Made Stevie Crye,41,61,-1.0
+456,178,2019-02-11 11:54:32,gold standard,object_type,album,13,18,-1.0
+457,178,2019-02-11 11:54:32,gold standard,object_name,Wolves Within,19,32,-1.0
+458,179,2019-02-11 11:54:32,gold standard,object_type,album,9,14,-1.0
+459,179,2019-02-11 11:54:32,gold standard,object_name,Orphan Girl at the Cemetery,15,42,-1.0
+460,180,2019-02-11 11:54:32,gold standard,object_name,Journal of the British Astronomical Association,19,66,-1.0
+461,180,2019-02-11 11:54:32,gold standard,object_type,movie,67,72,-1.0
+462,181,2019-02-11 11:54:32,gold standard,object_type,TV show,9,16,-1.0
+463,181,2019-02-11 11:54:32,gold standard,object_name,The Daydreamer,17,31,-1.0
+464,182,2019-02-11 11:54:32,gold standard,object_type,book,26,30,-1.0
+465,182,2019-02-11 11:54:32,gold standard,object_name,Dracula 5: The Blood Legacy,31,58,-1.0
+466,183,2019-02-11 11:54:32,gold standard,object_type,novel,19,24,-1.0
+467,183,2019-02-11 11:54:32,gold standard,object_name,Live to Dance,26,39,-1.0
+468,184,2019-02-11 11:54:32,gold standard,object_type,video game,19,29,-1.0
+469,184,2019-02-11 11:54:32,gold standard,object_name,20 Hours in America,37,56,-1.0
+470,185,2019-02-11 11:54:32,gold standard,object_name,The Devil in Stitches,23,44,-1.0
+471,186,2019-02-11 11:54:32,gold standard,object_name,Prophets,25,33,-1.0
+472,187,2019-02-11 11:54:32,gold standard,object_name,Welcome to the Canteen,16,38,-1.0
+473,188,2019-02-11 11:54:32,gold standard,object_name,Journal of Official Statistics,22,52,-1.0
+474,188,2019-02-11 11:54:32,gold standard,object_type,show,53,57,-1.0
+475,189,2019-02-11 11:54:32,gold standard,object_name,Show-Biz Blues,15,29,-1.0
+476,189,2019-02-11 11:54:32,gold standard,object_type,photograph,30,40,-1.0
+477,190,2019-02-11 11:54:32,gold standard,object_name,Woodsmen of the West,18,38,-1.0
+478,191,2019-02-11 11:54:32,gold standard,object_name,Caryl & Marilyn: Real Friends,48,77,-1.0
+479,192,2019-02-11 11:54:32,gold standard,object_name,Dead Soul,18,27,-1.0
+480,192,2019-02-11 11:54:32,gold standard,object_type,saga,28,32,-1.0
+481,193,2019-02-11 11:54:32,gold standard,object_name,Live from Leeds,18,33,-1.0
+482,193,2019-02-11 11:54:32,gold standard,object_type,album,34,39,-1.0
+483,194,2019-02-11 11:54:32,gold standard,object_name,Johnny English - La rinascita,19,48,-1.0
+484,194,2019-02-11 11:54:32,gold standard,object_type,painting,49,57,-1.0
+485,195,2019-02-11 11:54:32,gold standard,object_name,The Sword with No Name,16,38,-1.0
+486,195,2019-02-11 11:54:32,gold standard,object_type,trailer,39,46,-1.0
+487,196,2019-02-11 11:54:32,gold standard,object_name,The Fold,16,24,-1.0
+488,196,2019-02-11 11:54:32,gold standard,object_type,trailer,25,32,-1.0
+489,197,2019-02-11 11:54:32,gold standard,object_name,ALMOST HUMAN,20,32,-1.0
+490,197,2019-02-11 11:54:32,gold standard,object_type,painting,33,41,-1.0
+491,198,2019-02-11 11:54:32,gold standard,object_name,Serious Awesomeness,25,44,-1.0
+492,199,2019-02-11 11:54:32,gold standard,object_type,game,15,19,-1.0
+493,199,2019-02-11 11:54:32,gold standard,object_name,Difficult Loves,20,35,-1.0
+494,200,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+495,200,2019-02-11 11:54:32,gold standard,object_type,album,10,15,-1.0
+496,200,2019-02-11 11:54:32,gold standard,rating_value,four,16,20,-1.0
+497,200,2019-02-11 11:54:32,gold standard,best_rating,6,28,29,-1.0
+498,200,2019-02-11 11:54:32,gold standard,rating_unit,stars,30,35,-1.0
+499,201,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+500,201,2019-02-11 11:54:32,gold standard,object_type,textbook,10,18,-1.0
+501,201,2019-02-11 11:54:32,gold standard,rating_value,four,19,23,-1.0
+502,201,2019-02-11 11:54:32,gold standard,rating_unit,stars,24,29,-1.0
+503,202,2019-02-11 11:54:32,gold standard,object_name,A Twist in the Tale,5,24,-1.0
+504,202,2019-02-11 11:54:32,gold standard,rating_value,zero,25,29,-1.0
+505,202,2019-02-11 11:54:32,gold standard,best_rating,6,37,38,-1.0
+506,202,2019-02-11 11:54:32,gold standard,rating_unit,points,39,45,-1.0
+507,203,2019-02-11 11:54:32,gold standard,object_name,The children of Niobe,5,26,-1.0
+508,203,2019-02-11 11:54:32,gold standard,rating_value,1,27,28,-1.0
+509,203,2019-02-11 11:54:32,gold standard,best_rating,6,36,37,-1.0
+510,203,2019-02-11 11:54:32,gold standard,rating_unit,points,38,44,-1.0
+511,204,2019-02-11 11:54:32,gold standard,rating_value,zero,5,9,-1.0
+512,204,2019-02-11 11:54:32,gold standard,rating_unit,stars,10,15,-1.0
+513,204,2019-02-11 11:54:32,gold standard,object_name,Halo: Ghosts of Onyx,19,39,-1.0
+514,205,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+515,205,2019-02-11 11:54:32,gold standard,object_type,novel,10,15,-1.0
+516,205,2019-02-11 11:54:32,gold standard,rating_value,5,27,28,-1.0
+517,206,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+518,206,2019-02-11 11:54:32,gold standard,object_part_of_series_type,series,17,23,-1.0
+519,206,2019-02-11 11:54:32,gold standard,rating_value,four,24,28,-1.0
+520,206,2019-02-11 11:54:32,gold standard,best_rating,6,32,33,-1.0
+521,206,2019-02-11 11:54:32,gold standard,rating_unit,points,34,40,-1.0
+522,207,2019-02-11 11:54:32,gold standard,rating_value,4,5,6,-1.0
+523,207,2019-02-11 11:54:32,gold standard,best_rating,6,14,15,-1.0
+524,207,2019-02-11 11:54:32,gold standard,rating_unit,points,16,22,-1.0
+525,207,2019-02-11 11:54:32,gold standard,object_name,The Spirit Ring,26,41,-1.0
+526,207,2019-02-11 11:54:32,gold standard,object_part_of_series_type,chronicle,42,51,-1.0
+527,208,2019-02-11 11:54:32,gold standard,rating_value,two,5,8,-1.0
+528,208,2019-02-11 11:54:32,gold standard,rating_unit,stars,9,14,-1.0
+529,208,2019-02-11 11:54:32,gold standard,best_rating,6,22,23,-1.0
+530,208,2019-02-11 11:54:32,gold standard,object_name,36 Children,27,38,-1.0
+531,209,2019-02-11 11:54:32,gold standard,object_name,The Sneetches and Other Stories,5,36,-1.0
+532,209,2019-02-11 11:54:32,gold standard,rating_value,three,39,44,-1.0
+533,210,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+534,210,2019-02-11 11:54:32,gold standard,object_part_of_series_type,series,17,23,-1.0
+535,210,2019-02-11 11:54:32,gold standard,rating_value,four,24,28,-1.0
+536,210,2019-02-11 11:54:32,gold standard,rating_unit,stars,29,34,-1.0
+537,211,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+538,211,2019-02-11 11:54:32,gold standard,object_type,book,10,14,-1.0
+539,211,2019-02-11 11:54:32,gold standard,rating_value,4,17,18,-1.0
+540,211,2019-02-11 11:54:32,gold standard,best_rating,6,26,27,-1.0
+541,212,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+542,212,2019-02-11 11:54:32,gold standard,object_type,novel,17,22,-1.0
+543,212,2019-02-11 11:54:32,gold standard,rating_value,5,23,24,-1.0
+544,212,2019-02-11 11:54:32,gold standard,best_rating,6,28,29,-1.0
+545,212,2019-02-11 11:54:32,gold standard,rating_unit,stars,30,35,-1.0
+546,213,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+547,213,2019-02-11 11:54:32,gold standard,object_type,book,10,14,-1.0
+548,213,2019-02-11 11:54:32,gold standard,rating_value,1,17,18,-1.0
+549,214,2019-02-11 11:54:32,gold standard,rating_value,zero,5,9,-1.0
+550,214,2019-02-11 11:54:32,gold standard,best_rating,6,17,18,-1.0
+551,214,2019-02-11 11:54:32,gold standard,object_select,current,26,33,-1.0
+552,214,2019-02-11 11:54:32,gold standard,object_type,album,34,39,-1.0
+553,215,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+554,215,2019-02-11 11:54:32,gold standard,object_type,album,10,15,-1.0
+555,215,2019-02-11 11:54:32,gold standard,rating_value,5,16,17,-1.0
+556,215,2019-02-11 11:54:32,gold standard,rating_unit,points,18,24,-1.0
+557,216,2019-02-11 11:54:32,gold standard,object_name,The Mystery of the Tolling Bell,5,36,-1.0
+558,216,2019-02-11 11:54:32,gold standard,object_part_of_series_type,series,37,43,-1.0
+559,216,2019-02-11 11:54:32,gold standard,rating_value,4,44,45,-1.0
+560,216,2019-02-11 11:54:32,gold standard,rating_unit,stars,46,51,-1.0
+561,217,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+562,217,2019-02-11 11:54:32,gold standard,object_type,novel,17,22,-1.0
+563,217,2019-02-11 11:54:32,gold standard,rating_value,two,23,26,-1.0
+564,217,2019-02-11 11:54:32,gold standard,rating_unit,stars,27,32,-1.0
+565,218,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+566,218,2019-02-11 11:54:32,gold standard,object_type,book,17,21,-1.0
+567,218,2019-02-11 11:54:32,gold standard,rating_value,4,22,23,-1.0
+568,218,2019-02-11 11:54:32,gold standard,rating_unit,stars,24,29,-1.0
+569,219,2019-02-11 11:54:32,gold standard,object_name,Joe Magarac and His USA Citizen Papers,5,43,-1.0
+570,219,2019-02-11 11:54:32,gold standard,rating_value,5,44,45,-1.0
+571,219,2019-02-11 11:54:32,gold standard,rating_unit,points,46,52,-1.0
+572,220,2019-02-11 11:54:32,gold standard,object_name,The Guilty,5,15,-1.0
+573,220,2019-02-11 11:54:32,gold standard,rating_value,0,16,17,-1.0
+574,220,2019-02-11 11:54:32,gold standard,best_rating,6,21,22,-1.0
+575,220,2019-02-11 11:54:32,gold standard,rating_unit,points,23,29,-1.0
+576,221,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+577,221,2019-02-11 11:54:32,gold standard,object_type,textbook,10,18,-1.0
+578,221,2019-02-11 11:54:32,gold standard,rating_value,four,19,23,-1.0
+579,221,2019-02-11 11:54:32,gold standard,best_rating,6,31,32,-1.0
+580,222,2019-02-11 11:54:32,gold standard,object_name,Catedral,9,17,-1.0
+581,222,2019-02-11 11:54:32,gold standard,object_part_of_series_type,series,18,24,-1.0
+582,222,2019-02-11 11:54:32,gold standard,rating_value,four,25,29,-1.0
+583,222,2019-02-11 11:54:32,gold standard,rating_unit,stars,30,35,-1.0
+584,223,2019-02-11 11:54:32,gold standard,object_name,Reminiscences of the Anti-Japanese Guerillas,0,44,-1.0
+585,223,2019-02-11 11:54:32,gold standard,object_part_of_series_type,chronicle,45,54,-1.0
+586,223,2019-02-11 11:54:32,gold standard,rating_value,zero,64,68,-1.0
+587,223,2019-02-11 11:54:32,gold standard,rating_unit,points,69,75,-1.0
+588,223,2019-02-11 11:54:32,gold standard,best_rating,6,83,84,-1.0
+589,224,2019-02-11 11:54:32,gold standard,object_name,Small Screen Big Picture,5,30,-1.0
+590,224,2019-02-11 11:54:32,gold standard,rating_value,0,33,34,-1.0
+591,224,2019-02-11 11:54:32,gold standard,best_rating,6,42,43,-1.0
+592,225,2019-02-11 11:54:32,gold standard,object_name,Gods and Pawns,0,14,-1.0
+593,225,2019-02-11 11:54:32,gold standard,rating_value,three,28,33,-1.0
+594,226,2019-02-11 11:54:32,gold standard,rating_value,zero,5,9,-1.0
+595,226,2019-02-11 11:54:32,gold standard,rating_unit,stars,10,15,-1.0
+596,226,2019-02-11 11:54:32,gold standard,object_select,this,19,23,-1.0
+597,226,2019-02-11 11:54:32,gold standard,object_type,textbook,24,32,-1.0
+598,227,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+599,227,2019-02-11 11:54:32,gold standard,object_type,novel,17,22,-1.0
+600,227,2019-02-11 11:54:32,gold standard,rating_value,4,25,26,-1.0
+601,227,2019-02-11 11:54:32,gold standard,best_rating,6,34,35,-1.0
+602,227,2019-02-11 11:54:32,gold standard,rating_unit,stars,36,41,-1.0
+603,228,2019-02-11 11:54:32,gold standard,object_type,book,9,13,-1.0
+604,228,2019-02-11 11:54:32,gold standard,object_name,The Atmospheric Railway,14,37,-1.0
+605,228,2019-02-11 11:54:32,gold standard,rating_value,5,38,39,-1.0
+606,228,2019-02-11 11:54:32,gold standard,best_rating,6,47,48,-1.0
+607,229,2019-02-11 11:54:32,gold standard,object_name,Black Boy,5,14,-1.0
+608,229,2019-02-11 11:54:32,gold standard,rating_value,4,15,16,-1.0
+609,229,2019-02-11 11:54:32,gold standard,best_rating,6,24,25,-1.0
+610,230,2019-02-11 11:54:32,gold standard,object_part_of_series_type,chronicle,9,18,-1.0
+611,230,2019-02-11 11:54:32,gold standard,object_select,current,19,26,-1.0
+612,230,2019-02-11 11:54:32,gold standard,rating_value,1,27,28,-1.0
+613,231,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+614,231,2019-02-11 11:54:32,gold standard,object_type,album,10,15,-1.0
+615,231,2019-02-11 11:54:32,gold standard,rating_value,5,27,28,-1.0
+616,232,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+617,232,2019-02-11 11:54:32,gold standard,object_type,novel,17,22,-1.0
+618,232,2019-02-11 11:54:32,gold standard,rating_value,zero,23,27,-1.0
+619,232,2019-02-11 11:54:32,gold standard,best_rating,6,35,36,-1.0
+620,233,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+621,233,2019-02-11 11:54:32,gold standard,object_type,novel,17,22,-1.0
+622,233,2019-02-11 11:54:32,gold standard,rating_value,2,25,26,-1.0
+623,234,2019-02-11 11:54:32,gold standard,object_name,The Giant Devil Dingo,5,26,-1.0
+624,234,2019-02-11 11:54:32,gold standard,rating_value,4,27,28,-1.0
+625,234,2019-02-11 11:54:32,gold standard,rating_unit,points,29,35,-1.0
+626,235,2019-02-11 11:54:32,gold standard,object_select,this current,5,17,-1.0
+627,235,2019-02-11 11:54:32,gold standard,object_type,novel,18,23,-1.0
+628,235,2019-02-11 11:54:32,gold standard,rating_value,two,24,27,-1.0
+629,235,2019-02-11 11:54:32,gold standard,best_rating,6,35,36,-1.0
+630,236,2019-02-11 11:54:32,gold standard,object_name,Monthly Index of Medical Specialities,5,42,-1.0
+631,236,2019-02-11 11:54:32,gold standard,rating_value,two,45,48,-1.0
+632,236,2019-02-11 11:54:32,gold standard,best_rating,6,56,57,-1.0
+633,237,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+634,237,2019-02-11 11:54:32,gold standard,object_type,novel,10,15,-1.0
+635,237,2019-02-11 11:54:32,gold standard,rating_value,2,16,17,-1.0
+636,237,2019-02-11 11:54:32,gold standard,best_rating,6,25,26,-1.0
+637,237,2019-02-11 11:54:32,gold standard,rating_unit,points,27,33,-1.0
+638,238,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+639,238,2019-02-11 11:54:32,gold standard,object_type,novel,17,22,-1.0
+640,238,2019-02-11 11:54:32,gold standard,rating_value,3,23,24,-1.0
+641,238,2019-02-11 11:54:32,gold standard,rating_unit,stars,25,30,-1.0
+642,239,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+643,239,2019-02-11 11:54:32,gold standard,object_type,essay,17,22,-1.0
+644,239,2019-02-11 11:54:32,gold standard,rating_value,zero,23,27,-1.0
+645,239,2019-02-11 11:54:32,gold standard,best_rating,6,35,36,-1.0
+646,239,2019-02-11 11:54:32,gold standard,rating_unit,stars,37,42,-1.0
+647,240,2019-02-11 11:54:32,gold standard,object_select,this current,5,17,-1.0
+648,240,2019-02-11 11:54:32,gold standard,object_type,album,18,23,-1.0
+649,240,2019-02-11 11:54:32,gold standard,rating_value,0,24,25,-1.0
+650,240,2019-02-11 11:54:32,gold standard,rating_unit,stars,26,31,-1.0
+651,241,2019-02-11 11:54:32,gold standard,object_name,A Brief Stop on the Road from Auschwitz,5,44,-1.0
+652,241,2019-02-11 11:54:32,gold standard,rating_value,1,45,46,-1.0
+653,241,2019-02-11 11:54:32,gold standard,best_rating,6,54,55,-1.0
+654,241,2019-02-11 11:54:32,gold standard,rating_unit,stars,56,61,-1.0
+655,242,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+656,242,2019-02-11 11:54:32,gold standard,object_type,album,10,15,-1.0
+657,242,2019-02-11 11:54:32,gold standard,rating_value,4,16,17,-1.0
+658,242,2019-02-11 11:54:32,gold standard,best_rating,6,25,26,-1.0
+659,242,2019-02-11 11:54:32,gold standard,rating_unit,stars,27,32,-1.0
+660,243,2019-02-11 11:54:32,gold standard,object_name,Hate That Cat,5,18,-1.0
+661,243,2019-02-11 11:54:32,gold standard,rating_value,1,19,20,-1.0
+662,243,2019-02-11 11:54:32,gold standard,best_rating,6,28,29,-1.0
+663,243,2019-02-11 11:54:32,gold standard,rating_unit,stars,30,35,-1.0
+664,244,2019-02-11 11:54:32,gold standard,object_select,current,8,15,-1.0
+665,244,2019-02-11 11:54:32,gold standard,object_type,book,16,20,-1.0
+666,244,2019-02-11 11:54:32,gold standard,rating_value,one,21,24,-1.0
+667,244,2019-02-11 11:54:32,gold standard,best_rating,6,28,29,-1.0
+668,244,2019-02-11 11:54:32,gold standard,rating_unit,stars,30,35,-1.0
+669,245,2019-02-11 11:54:32,gold standard,object_select,current,5,12,-1.0
+670,245,2019-02-11 11:54:32,gold standard,object_type,novel,13,18,-1.0
+671,245,2019-02-11 11:54:32,gold standard,rating_value,one,19,22,-1.0
+672,245,2019-02-11 11:54:32,gold standard,rating_unit,stars,23,28,-1.0
+673,246,2019-02-11 11:54:32,gold standard,rating_value,five,5,9,-1.0
+674,246,2019-02-11 11:54:32,gold standard,best_rating,6,17,18,-1.0
+675,246,2019-02-11 11:54:32,gold standard,rating_unit,points,19,25,-1.0
+676,246,2019-02-11 11:54:32,gold standard,object_select,this,29,33,-1.0
+677,246,2019-02-11 11:54:32,gold standard,object_type,album,34,39,-1.0
+678,247,2019-02-11 11:54:32,gold standard,rating_value,2,17,18,-1.0
+679,247,2019-02-11 11:54:32,gold standard,object_name,Juneteenth,22,32,-1.0
+680,248,2019-02-11 11:54:32,gold standard,object_name,Ruth,5,9,-1.0
+681,248,2019-02-11 11:54:32,gold standard,rating_value,five,10,14,-1.0
+682,248,2019-02-11 11:54:32,gold standard,best_rating,6,22,23,-1.0
+683,248,2019-02-11 11:54:32,gold standard,rating_unit,points,24,30,-1.0
+684,249,2019-02-11 11:54:32,gold standard,object_name,The Sea of Trolls,5,22,-1.0
+685,249,2019-02-11 11:54:32,gold standard,rating_value,1,23,24,-1.0
+686,249,2019-02-11 11:54:32,gold standard,rating_unit,stars,25,30,-1.0
+687,249,2019-02-11 11:54:32,gold standard,best_rating,6,38,39,-1.0
+688,250,2019-02-11 11:54:32,gold standard,object_name,The Zenith Angle,5,21,-1.0
+689,250,2019-02-11 11:54:32,gold standard,rating_value,one,22,25,-1.0
+690,250,2019-02-11 11:54:32,gold standard,best_rating,6,33,34,-1.0
+691,250,2019-02-11 11:54:32,gold standard,rating_unit,points,35,41,-1.0
+692,251,2019-02-11 11:54:32,gold standard,rating_value,zero,5,9,-1.0
+693,251,2019-02-11 11:54:32,gold standard,rating_unit,stars,10,15,-1.0
+694,251,2019-02-11 11:54:32,gold standard,object_name,Rhialto the Marvellous,19,41,-1.0
+695,252,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+696,252,2019-02-11 11:54:32,gold standard,object_type,book,17,21,-1.0
+697,252,2019-02-11 11:54:32,gold standard,rating_value,zero,24,28,-1.0
+698,252,2019-02-11 11:54:32,gold standard,best_rating,6,32,33,-1.0
+699,253,2019-02-11 11:54:32,gold standard,object_name,Personal Demons,5,20,-1.0
+700,253,2019-02-11 11:54:32,gold standard,rating_value,0,21,22,-1.0
+701,253,2019-02-11 11:54:32,gold standard,best_rating,6,30,31,-1.0
+702,253,2019-02-11 11:54:32,gold standard,rating_unit,points,32,38,-1.0
+703,254,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+704,254,2019-02-11 11:54:32,gold standard,object_part_of_series_type,series,17,23,-1.0
+705,254,2019-02-11 11:54:32,gold standard,rating_value,4,26,27,-1.0
+706,255,2019-02-11 11:54:32,gold standard,rating_value,one,5,8,-1.0
+707,255,2019-02-11 11:54:32,gold standard,best_rating,6,12,13,-1.0
+708,255,2019-02-11 11:54:32,gold standard,rating_unit,points,14,20,-1.0
+709,255,2019-02-11 11:54:32,gold standard,object_name,Who Will Cry When You Die,24,49,-1.0
+710,256,2019-02-11 11:54:32,gold standard,rating_value,zero,5,9,-1.0
+711,256,2019-02-11 11:54:32,gold standard,best_rating,6,17,18,-1.0
+712,256,2019-02-11 11:54:32,gold standard,rating_unit,stars,19,24,-1.0
+713,256,2019-02-11 11:54:32,gold standard,object_select,this,28,32,-1.0
+714,256,2019-02-11 11:54:32,gold standard,object_type,album,33,38,-1.0
+715,257,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+716,257,2019-02-11 11:54:32,gold standard,object_type,novel,10,15,-1.0
+717,257,2019-02-11 11:54:32,gold standard,rating_value,2,16,17,-1.0
+718,257,2019-02-11 11:54:32,gold standard,rating_unit,stars,18,23,-1.0
+719,258,2019-02-11 11:54:32,gold standard,object_name,The 8-Week Cholesterol Cure,5,32,-1.0
+720,258,2019-02-11 11:54:32,gold standard,rating_value,three,33,38,-1.0
+721,258,2019-02-11 11:54:32,gold standard,best_rating,6,46,47,-1.0
+722,259,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+723,259,2019-02-11 11:54:32,gold standard,object_type,novel,10,15,-1.0
+724,259,2019-02-11 11:54:32,gold standard,rating_value,3,16,17,-1.0
+725,259,2019-02-11 11:54:32,gold standard,best_rating,6,25,26,-1.0
+726,259,2019-02-11 11:54:32,gold standard,rating_unit,points,27,33,-1.0
+727,260,2019-02-11 11:54:32,gold standard,object_name,The Lives of John Lennon,5,29,-1.0
+728,260,2019-02-11 11:54:32,gold standard,rating_value,five,30,34,-1.0
+729,260,2019-02-11 11:54:32,gold standard,rating_unit,points,35,41,-1.0
+730,261,2019-02-11 11:54:32,gold standard,object_name,The American Scene,5,23,-1.0
+731,261,2019-02-11 11:54:32,gold standard,rating_value,2,24,25,-1.0
+732,261,2019-02-11 11:54:32,gold standard,best_rating,6,29,30,-1.0
+733,261,2019-02-11 11:54:32,gold standard,rating_unit,stars,31,36,-1.0
+734,262,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+735,262,2019-02-11 11:54:32,gold standard,object_type,textbook,10,18,-1.0
+736,262,2019-02-11 11:54:32,gold standard,rating_value,one,21,24,-1.0
+737,263,2019-02-11 11:54:32,gold standard,object_name,Summer of the Swans,5,24,-1.0
+738,263,2019-02-11 11:54:32,gold standard,rating_value,1,25,26,-1.0
+739,263,2019-02-11 11:54:32,gold standard,rating_unit,points,27,33,-1.0
+740,264,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+741,264,2019-02-11 11:54:32,gold standard,object_type,textbook,17,25,-1.0
+742,264,2019-02-11 11:54:32,gold standard,rating_value,five,38,42,-1.0
+743,265,2019-02-11 11:54:32,gold standard,rating_value,4,5,6,-1.0
+744,265,2019-02-11 11:54:32,gold standard,rating_unit,points,7,13,-1.0
+745,265,2019-02-11 11:54:32,gold standard,object_name,The Person and the Common Good,17,47,-1.0
+746,266,2019-02-11 11:54:32,gold standard,rating_value,four,7,11,-1.0
+747,266,2019-02-11 11:54:32,gold standard,object_name,A World Apart,22,35,-1.0
+748,267,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+749,267,2019-02-11 11:54:32,gold standard,object_part_of_series_type,chronicle,10,19,-1.0
+750,267,2019-02-11 11:54:32,gold standard,rating_value,0,20,21,-1.0
+751,267,2019-02-11 11:54:32,gold standard,rating_unit,points,22,28,-1.0
+752,268,2019-02-11 11:54:32,gold standard,object_name,Wilco: Learning How to Die,5,31,-1.0
+753,268,2019-02-11 11:54:32,gold standard,rating_value,four,44,48,-1.0
+754,268,2019-02-11 11:54:32,gold standard,rating_unit,points,49,55,-1.0
+755,269,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+756,269,2019-02-11 11:54:32,gold standard,object_part_of_series_type,saga,10,14,-1.0
+757,269,2019-02-11 11:54:32,gold standard,rating_value,two,15,18,-1.0
+758,269,2019-02-11 11:54:32,gold standard,best_rating,6,26,27,-1.0
+759,270,2019-02-11 11:54:32,gold standard,object_name,The Gift: Imagination and the Erotic Life of Property,5,58,-1.0
+760,270,2019-02-11 11:54:32,gold standard,rating_value,five,59,63,-1.0
+761,270,2019-02-11 11:54:32,gold standard,rating_unit,stars,64,69,-1.0
+762,271,2019-02-11 11:54:32,gold standard,object_name,Neverwhere,5,15,-1.0
+763,271,2019-02-11 11:54:32,gold standard,rating_value,four,16,20,-1.0
+764,271,2019-02-11 11:54:32,gold standard,best_rating,6,28,29,-1.0
+765,272,2019-02-11 11:54:32,gold standard,object_name,In the Company of Cheerful Ladies,5,38,-1.0
+766,272,2019-02-11 11:54:32,gold standard,rating_value,zero,41,45,-1.0
+767,272,2019-02-11 11:54:32,gold standard,best_rating,6,53,54,-1.0
+768,273,2019-02-11 11:54:32,gold standard,rating_value,one,5,8,-1.0
+769,273,2019-02-11 11:54:32,gold standard,object_select,current,22,29,-1.0
+770,273,2019-02-11 11:54:32,gold standard,object_type,book,30,34,-1.0
+771,274,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+772,274,2019-02-11 11:54:32,gold standard,object_part_of_series_type,chronicle,10,19,-1.0
+773,274,2019-02-11 11:54:32,gold standard,rating_value,2,22,23,-1.0
+774,275,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+775,275,2019-02-11 11:54:32,gold standard,object_type,essay,10,15,-1.0
+776,275,2019-02-11 11:54:32,gold standard,rating_value,1,18,19,-1.0
+777,276,2019-02-11 11:54:32,gold standard,best_rating,6,7,8,-1.0
+778,276,2019-02-11 11:54:32,gold standard,object_name,Rivers of Babylon,15,32,-1.0
+779,276,2019-02-11 11:54:32,gold standard,rating_value,1,35,36,-1.0
+780,277,2019-02-11 11:54:32,gold standard,rating_value,5,5,6,-1.0
+781,277,2019-02-11 11:54:32,gold standard,best_rating,6,10,11,-1.0
+782,277,2019-02-11 11:54:32,gold standard,rating_unit,stars,12,17,-1.0
+783,277,2019-02-11 11:54:32,gold standard,object_name,Expressive Processing,21,42,-1.0
+784,278,2019-02-11 11:54:32,gold standard,object_name,The Ghost House,5,20,-1.0
+785,278,2019-02-11 11:54:32,gold standard,object_part_of_series_type,series,21,27,-1.0
+786,278,2019-02-11 11:54:32,gold standard,rating_value,one,30,33,-1.0
+787,279,2019-02-11 11:54:32,gold standard,object_name,Know Ye Not Agincourt,5,26,-1.0
+788,279,2019-02-11 11:54:32,gold standard,rating_value,2,28,29,-1.0
+789,279,2019-02-11 11:54:32,gold standard,best_rating,6,37,38,-1.0
+790,279,2019-02-11 11:54:32,gold standard,rating_unit,stars,39,44,-1.0
+791,280,2019-02-11 11:54:32,gold standard,object_name,Theft: A Love Story,13,32,-1.0
+792,280,2019-02-11 11:54:32,gold standard,rating_value,four,33,37,-1.0
+793,280,2019-02-11 11:54:32,gold standard,best_rating,6,45,46,-1.0
+794,280,2019-02-11 11:54:32,gold standard,rating_unit,stars,47,52,-1.0
+795,281,2019-02-11 11:54:32,gold standard,object_name,The Further Adventures of The Joker,5,40,-1.0
+796,281,2019-02-11 11:54:32,gold standard,rating_value,four,41,45,-1.0
+797,281,2019-02-11 11:54:32,gold standard,rating_unit,stars,46,51,-1.0
+798,282,2019-02-11 11:54:32,gold standard,rating_value,0,5,6,-1.0
+799,282,2019-02-11 11:54:32,gold standard,object_name,In the Heart of the Country,17,44,-1.0
+800,283,2019-02-11 11:54:32,gold standard,rating_value,1,5,6,-1.0
+801,283,2019-02-11 11:54:32,gold standard,best_rating,6,14,15,-1.0
+802,283,2019-02-11 11:54:32,gold standard,object_select,current,30,37,-1.0
+803,283,2019-02-11 11:54:32,gold standard,object_type,textbook,38,46,-1.0
+804,284,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+805,284,2019-02-11 11:54:32,gold standard,object_part_of_series_type,chronicle,17,26,-1.0
+806,284,2019-02-11 11:54:32,gold standard,rating_value,five,27,31,-1.0
+807,284,2019-02-11 11:54:32,gold standard,best_rating,6,35,36,-1.0
+808,284,2019-02-11 11:54:32,gold standard,rating_unit,points,37,43,-1.0
+809,285,2019-02-11 11:54:32,gold standard,object_name,Cotton Comes to Harlem,5,27,-1.0
+810,285,2019-02-11 11:54:32,gold standard,rating_value,2,30,31,-1.0
+811,286,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+812,286,2019-02-11 11:54:32,gold standard,object_type,album,10,15,-1.0
+813,286,2019-02-11 11:54:32,gold standard,rating_value,one,16,19,-1.0
+814,286,2019-02-11 11:54:32,gold standard,rating_unit,stars,20,25,-1.0
+815,287,2019-02-11 11:54:32,gold standard,object_name,The Adventures of Augie March,5,34,-1.0
+816,287,2019-02-11 11:54:32,gold standard,rating_value,one,35,38,-1.0
+817,287,2019-02-11 11:54:32,gold standard,rating_unit,points,39,45,-1.0
+818,288,2019-02-11 11:54:32,gold standard,object_name,Soul Music,5,15,-1.0
+819,288,2019-02-11 11:54:32,gold standard,rating_value,0,18,19,-1.0
+820,289,2019-02-11 11:54:32,gold standard,object_name,Hindu Temples: What Happened to Them,5,41,-1.0
+821,289,2019-02-11 11:54:32,gold standard,rating_value,5,44,45,-1.0
+822,289,2019-02-11 11:54:32,gold standard,best_rating,6,53,54,-1.0
+823,289,2019-02-11 11:54:32,gold standard,rating_unit,stars,55,60,-1.0
+824,290,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+825,290,2019-02-11 11:54:32,gold standard,object_type,novel,10,15,-1.0
+826,290,2019-02-11 11:54:32,gold standard,rating_value,1,18,19,-1.0
+827,291,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+828,291,2019-02-11 11:54:32,gold standard,object_type,textbook,17,25,-1.0
+829,291,2019-02-11 11:54:32,gold standard,rating_value,1,26,27,-1.0
+830,291,2019-02-11 11:54:32,gold standard,best_rating,6,35,36,-1.0
+831,292,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+832,292,2019-02-11 11:54:32,gold standard,object_type,textbook,10,18,-1.0
+833,292,2019-02-11 11:54:32,gold standard,rating_value,0,19,20,-1.0
+834,292,2019-02-11 11:54:32,gold standard,best_rating,6,28,29,-1.0
+835,292,2019-02-11 11:54:32,gold standard,rating_unit,stars,30,35,-1.0
+836,293,2019-02-11 11:54:32,gold standard,object_name,The Crystal Snare,5,22,-1.0
+837,293,2019-02-11 11:54:32,gold standard,rating_value,5,23,24,-1.0
+838,293,2019-02-11 11:54:32,gold standard,rating_unit,stars,25,30,-1.0
+839,294,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+840,294,2019-02-11 11:54:32,gold standard,object_part_of_series_type,saga,10,14,-1.0
+841,294,2019-02-11 11:54:32,gold standard,rating_value,two,15,18,-1.0
+842,294,2019-02-11 11:54:32,gold standard,best_rating,6,26,27,-1.0
+843,295,2019-02-11 11:54:32,gold standard,object_name,Wilco: Learning How to Die,5,31,-1.0
+844,295,2019-02-11 11:54:32,gold standard,rating_value,four,44,48,-1.0
+845,295,2019-02-11 11:54:32,gold standard,rating_unit,points,49,55,-1.0
+846,296,2019-02-11 11:54:32,gold standard,object_select,this,5,9,-1.0
+847,296,2019-02-11 11:54:32,gold standard,object_type,book,10,14,-1.0
+848,296,2019-02-11 11:54:32,gold standard,rating_value,3,15,16,-1.0
+849,296,2019-02-11 11:54:32,gold standard,rating_unit,stars,17,22,-1.0
+850,296,2019-02-11 11:54:32,gold standard,best_rating,6,30,31,-1.0
+851,297,2019-02-11 11:54:32,gold standard,object_name,Three Junes,9,20,-1.0
+852,297,2019-02-11 11:54:32,gold standard,rating_value,one,21,24,-1.0
+853,297,2019-02-11 11:54:32,gold standard,best_rating,6,32,33,-1.0
+854,298,2019-02-11 11:54:32,gold standard,rating_value,four,5,9,-1.0
+855,298,2019-02-11 11:54:32,gold standard,rating_unit,stars,10,15,-1.0
+856,298,2019-02-11 11:54:32,gold standard,object_name,The Broken Window,19,36,-1.0
+857,299,2019-02-11 11:54:32,gold standard,object_select,current,9,16,-1.0
+858,299,2019-02-11 11:54:32,gold standard,object_part_of_series_type,series,17,23,-1.0
+859,299,2019-02-11 11:54:32,gold standard,rating_value,4,24,25,-1.0
+860,299,2019-02-11 11:54:32,gold standard,rating_unit,points,26,32,-1.0
+861,300,2019-02-11 11:54:32,gold standard,spatial_relation,faraway,25,32,-1.0
+862,300,2019-02-11 11:54:32,gold standard,current_location,here,38,42,-1.0
+863,301,2019-02-11 11:54:32,gold standard,condition_description,fog,14,17,-1.0
+864,301,2019-02-11 11:54:32,gold standard,geographic_poi,Tahquamenon Falls State Park,21,49,-1.0
+865,302,2019-02-11 11:54:32,gold standard,city,Gibsland,33,41,-1.0
+866,303,2019-02-11 11:54:32,gold standard,condition_description,storm,11,16,-1.0
+867,303,2019-02-11 11:54:32,gold standard,timeRange,now,17,20,-1.0
+868,303,2019-02-11 11:54:32,gold standard,state,NC,24,26,-1.0
+869,304,2019-02-11 11:54:32,gold standard,geographic_poi,Monument of Lihula,28,46,-1.0
+870,304,2019-02-11 11:54:32,gold standard,timeRange,december the 5th,50,66,-1.0
+871,305,2019-02-11 11:54:32,gold standard,timeRange,next year,8,17,-1.0
+872,305,2019-02-11 11:54:32,gold standard,country,Dominica,21,29,-1.0
+873,306,2019-02-11 11:54:32,gold standard,condition_temperature,hot,16,19,-1.0
+874,306,2019-02-11 11:54:32,gold standard,current_location,here,20,24,-1.0
+875,307,2019-02-11 11:54:32,gold standard,timeRange,in 1 day,25,33,-1.0
+876,307,2019-02-11 11:54:32,gold standard,country,Kuwait,37,43,-1.0
+877,308,2019-02-11 11:54:32,gold standard,country,Ukraine,32,39,-1.0
+878,308,2019-02-11 11:54:32,gold standard,timeRange,one minute from now,40,59,-1.0
+879,309,2019-02-11 11:54:32,gold standard,condition_description,humidity,0,8,-1.0
+880,309,2019-02-11 11:54:32,gold standard,city,Olvey,12,17,-1.0
+881,309,2019-02-11 11:54:32,gold standard,state,New Hampshire,18,31,-1.0
+882,310,2019-02-11 11:54:32,gold standard,state,UT,34,36,-1.0
+883,311,2019-02-11 11:54:32,gold standard,condition_description,humidity,0,8,-1.0
+884,311,2019-02-11 11:54:32,gold standard,spatial_relation,not far,9,16,-1.0
+885,311,2019-02-11 11:54:32,gold standard,city,Colorado City,22,35,-1.0
+886,311,2019-02-11 11:54:32,gold standard,timeRange,November the 7th 2024,39,61,-1.0
+887,312,2019-02-11 11:54:32,gold standard,state,Wyoming,25,32,-1.0
+888,312,2019-02-11 11:54:32,gold standard,city,Stanardsville,36,49,-1.0
+889,312,2019-02-11 11:54:32,gold standard,condition_description,storm,61,66,-1.0
+890,313,2019-02-11 11:54:32,gold standard,state,North Carolina,28,42,-1.0
+891,314,2019-02-11 11:54:32,gold standard,timeRange,11 weeks from now,30,47,-1.0
+892,314,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,48,54,-1.0
+893,314,2019-02-11 11:54:32,gold standard,state,Wisconsin,68,77,-1.0
+894,315,2019-02-11 11:54:32,gold standard,condition_description,rainy,11,16,-1.0
+895,315,2019-02-11 11:54:32,gold standard,timeRange,Sunrise,20,27,-1.0
+896,315,2019-02-11 11:54:32,gold standard,city,Ramey,31,36,-1.0
+897,315,2019-02-11 11:54:32,gold standard,country,Saudi Arabia,37,49,-1.0
+898,316,2019-02-11 11:54:32,gold standard,state,Nebraska,23,31,-1.0
+899,317,2019-02-11 11:54:32,gold standard,condition_temperature,warmer,11,17,-1.0
+900,317,2019-02-11 11:54:32,gold standard,country,North Korea,21,32,-1.0
+901,317,2019-02-11 11:54:32,gold standard,timeRange,nineteen o'clock,36,52,-1.0
+902,318,2019-02-11 11:54:32,gold standard,timeRange,ten Pm,40,46,-1.0
+903,318,2019-02-11 11:54:32,gold standard,spatial_relation,faraway,47,54,-1.0
+904,318,2019-02-11 11:54:32,gold standard,current_location,here,60,64,-1.0
+905,318,2019-02-11 11:54:32,gold standard,geographic_poi,Park Narodowy Brimstone Hill Fortress,68,105,-1.0
+906,319,2019-02-11 11:54:32,gold standard,condition_description,stormy,11,17,-1.0
+907,319,2019-02-11 11:54:32,gold standard,geographic_poi,Ouachita National Forest,25,49,-1.0
+908,320,2019-02-11 11:54:32,gold standard,condition_description,snowy,22,27,-1.0
+909,320,2019-02-11 11:54:32,gold standard,timeRange,8 hours from now,28,44,-1.0
+910,320,2019-02-11 11:54:32,gold standard,city,Mount Airy,48,58,-1.0
+911,320,2019-02-11 11:54:32,gold standard,state,VI,60,62,-1.0
+912,321,2019-02-11 11:54:32,gold standard,timeRange,nineteen hours from now,25,48,-1.0
+913,321,2019-02-11 11:54:32,gold standard,spatial_relation,neighboring,49,60,-1.0
+914,321,2019-02-11 11:54:32,gold standard,country,Saint Kitts and Nevis,61,82,-1.0
+915,322,2019-02-11 11:54:32,gold standard,condition_description,hail,14,18,-1.0
+916,322,2019-02-11 11:54:32,gold standard,timeRange,11/12/2036,22,32,-1.0
+917,322,2019-02-11 11:54:32,gold standard,country,Singapore,36,45,-1.0
+918,323,2019-02-11 11:54:32,gold standard,condition_temperature,colder,11,17,-1.0
+919,323,2019-02-11 11:54:32,gold standard,current_location,here,18,22,-1.0
+920,323,2019-02-11 11:54:32,gold standard,timeRange,in 48 and a half weeks,23,45,-1.0
+921,324,2019-02-11 11:54:32,gold standard,city,Knobel,34,40,-1.0
+922,325,2019-02-11 11:54:32,gold standard,city,Dane,28,32,-1.0
+923,325,2019-02-11 11:54:32,gold standard,timeRange,sep. the fifth 2030,36,56,-1.0
+924,326,2019-02-11 11:54:32,gold standard,state,Ohio,28,32,-1.0
+925,327,2019-02-11 11:54:32,gold standard,timeRange,Jan. the 3rd,31,43,-1.0
+926,327,2019-02-11 11:54:32,gold standard,country,Mexico,47,53,-1.0
+927,327,2019-02-11 11:54:32,gold standard,city,Port Vue,67,75,-1.0
+928,328,2019-02-11 11:54:32,gold standard,geographic_poi,Ōtone Prefectural Natural Park,25,55,-1.0
+929,328,2019-02-11 11:54:32,gold standard,timeRange,in 1 hour,56,65,-1.0
+930,328,2019-02-11 11:54:32,gold standard,spatial_relation,within the same area,70,90,-1.0
+931,329,2019-02-11 11:54:32,gold standard,timeRange,one pm,40,46,-1.0
+932,329,2019-02-11 11:54:32,gold standard,spatial_relation,near,46,50,-1.0
+933,329,2019-02-11 11:54:32,gold standard,country,Vatican,51,58,-1.0
+934,330,2019-02-11 11:54:32,gold standard,condition_temperature,chilly,11,17,-1.0
+935,330,2019-02-11 11:54:32,gold standard,city,Weldona,21,28,-1.0
+936,331,2019-02-11 11:54:32,gold standard,condition_temperature,colder,11,17,-1.0
+937,331,2019-02-11 11:54:32,gold standard,geographic_poi,Virgin Islands National Park,21,49,-1.0
+938,332,2019-02-11 11:54:32,gold standard,condition_temperature,hot,11,14,-1.0
+939,332,2019-02-11 11:54:32,gold standard,timeRange,13:19,18,23,-1.0
+940,332,2019-02-11 11:54:32,gold standard,city,De Funiak Springs,27,44,-1.0
+941,332,2019-02-11 11:54:32,gold standard,country,Serbia and Montenegro,45,66,-1.0
+942,333,2019-02-11 11:54:32,gold standard,state,Virginia,40,48,-1.0
+943,333,2019-02-11 11:54:32,gold standard,timeRange,st. patrick's day,52,69,-1.0
+944,334,2019-02-11 11:54:32,gold standard,city,Kaneville,11,20,-1.0
+945,334,2019-02-11 11:54:32,gold standard,state,Maryland,21,29,-1.0
+946,335,2019-02-11 11:54:32,gold standard,timeRange,sunrise,8,15,-1.0
+947,335,2019-02-11 11:54:32,gold standard,state,AR,20,22,-1.0
+948,336,2019-02-11 11:54:32,gold standard,spatial_relation,not far,25,32,-1.0
+949,336,2019-02-11 11:54:32,gold standard,current_location,here,38,42,-1.0
+950,336,2019-02-11 11:54:32,gold standard,timeRange,October the nineteenth 2026,46,74,-1.0
+951,337,2019-02-11 11:54:32,gold standard,city,Waurika,25,32,-1.0
+952,337,2019-02-11 11:54:32,gold standard,country,Samoa,36,41,-1.0
+953,338,2019-02-11 11:54:32,gold standard,current_location,here,29,33,-1.0
+954,339,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,29,35,-1.0
+955,339,2019-02-11 11:54:32,gold standard,city,Nicodemus,36,45,-1.0
+956,340,2019-02-11 11:54:32,gold standard,timeRange,nov.,28,32,-1.0
+957,340,2019-02-11 11:54:32,gold standard,city,Brookneal,36,45,-1.0
+958,341,2019-02-11 11:54:32,gold standard,condition_temperature,colder,11,17,-1.0
+959,341,2019-02-11 11:54:32,gold standard,timeRange,four months from now,18,38,-1.0
+960,341,2019-02-11 11:54:32,gold standard,city,Suwanee,42,49,-1.0
+961,341,2019-02-11 11:54:32,gold standard,state,AK,50,52,-1.0
+962,342,2019-02-11 11:54:32,gold standard,country,Burundi,33,40,-1.0
+963,343,2019-02-11 11:54:32,gold standard,city,Benton City,22,33,-1.0
+964,344,2019-02-11 11:54:32,gold standard,state,KY,28,30,-1.0
+965,344,2019-02-11 11:54:32,gold standard,timeRange,Oct. 16 2036,34,47,-1.0
+966,345,2019-02-11 11:54:32,gold standard,condition_description,sun,9,12,-1.0
+967,345,2019-02-11 11:54:32,gold standard,timeRange,in 1 minute,20,31,-1.0
+968,345,2019-02-11 11:54:32,gold standard,city,Searcy,35,41,-1.0
+969,345,2019-02-11 11:54:32,gold standard,country,Uganda,43,49,-1.0
+970,346,2019-02-11 11:54:32,gold standard,current_location,here,20,24,-1.0
+971,347,2019-02-11 11:54:32,gold standard,timeRange,one second from now,25,44,-1.0
+972,347,2019-02-11 11:54:32,gold standard,country,Chad,48,52,-1.0
+973,348,2019-02-11 11:54:32,gold standard,state,MS,36,38,-1.0
+974,348,2019-02-11 11:54:32,gold standard,timeRange,now,39,42,-1.0
+975,349,2019-02-11 11:54:32,gold standard,state,LA,25,27,-1.0
+976,349,2019-02-11 11:54:32,gold standard,condition_temperature,freezing,32,40,-1.0
+977,350,2019-02-11 11:54:32,gold standard,condition_temperature,cold,4,8,-1.0
+978,350,2019-02-11 11:54:32,gold standard,current_location,here,20,24,-1.0
+979,350,2019-02-11 11:54:32,gold standard,timeRange,in 1 second,25,36,-1.0
+980,351,2019-02-11 11:54:32,gold standard,condition_temperature,hotter,25,31,-1.0
+981,351,2019-02-11 11:54:32,gold standard,geographic_poi,Southford Falls State Park,43,69,-1.0
+982,352,2019-02-11 11:54:32,gold standard,condition_description,overcast,12,20,-1.0
+983,352,2019-02-11 11:54:32,gold standard,current_location,current position,38,54,-1.0
+984,352,2019-02-11 11:54:32,gold standard,timeRange,jul. 19 2030,67,80,-1.0
+985,353,2019-02-11 11:54:32,gold standard,country,Morocco,25,32,-1.0
+986,353,2019-02-11 11:54:32,gold standard,city,Lake Ozark,37,47,-1.0
+987,353,2019-02-11 11:54:32,gold standard,timeRange,December seventeenth 2022,51,77,-1.0
+988,354,2019-02-11 11:54:32,gold standard,condition_description,humidity,14,22,-1.0
+989,354,2019-02-11 11:54:32,gold standard,current_location,current spot,33,45,-1.0
+990,354,2019-02-11 11:54:32,gold standard,timeRange,15:19:29,49,57,-1.0
+991,355,2019-02-11 11:54:32,gold standard,city,Nicodemus,24,33,-1.0
+992,355,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,38,44,-1.0
+993,356,2019-02-11 11:54:32,gold standard,city,Benton,40,46,-1.0
+994,356,2019-02-11 11:54:32,gold standard,state,Colorado,47,55,-1.0
+995,356,2019-02-11 11:54:32,gold standard,timeRange,in 2 and a half months,56,78,-1.0
+996,357,2019-02-11 11:54:32,gold standard,geographic_poi,Bothe-Napa Valley State Park,32,60,-1.0
+997,357,2019-02-11 11:54:32,gold standard,spatial_relation,close by,61,69,-1.0
+998,357,2019-02-11 11:54:32,gold standard,timeRange,february 20,70,81,-1.0
+999,358,2019-02-11 11:54:32,gold standard,timeRange,nov. 17,38,45,-1.0
+1000,358,2019-02-11 11:54:32,gold standard,city,Franklinville,50,63,-1.0
+1001,359,2019-02-11 11:54:32,gold standard,timeRange,sep. 26,24,31,-1.0
+1002,359,2019-02-11 11:54:32,gold standard,city,Emerado,35,42,-1.0
+1003,359,2019-02-11 11:54:32,gold standard,country,Saint Pierre and Miquelon,43,68,-1.0
+1004,360,2019-02-11 11:54:32,gold standard,condition_description,blizzard,16,24,-1.0
+1005,360,2019-02-11 11:54:32,gold standard,timeRange,next winter,25,36,-1.0
+1006,360,2019-02-11 11:54:32,gold standard,city,Visalia,40,47,-1.0
+1007,360,2019-02-11 11:54:32,gold standard,state,Idaho,49,54,-1.0
+1008,361,2019-02-11 11:54:32,gold standard,condition_temperature,warmer,11,17,-1.0
+1009,361,2019-02-11 11:54:32,gold standard,state,District Of Columbia,25,45,-1.0
+1010,361,2019-02-11 11:54:32,gold standard,timeRange,may 25 2033,49,61,-1.0
+1011,362,2019-02-11 11:54:32,gold standard,current_location,here,25,29,-1.0
+1012,362,2019-02-11 11:54:32,gold standard,timeRange,dec. 7th,33,41,-1.0
+1013,363,2019-02-11 11:54:32,gold standard,condition_temperature,colder,25,31,-1.0
+1014,363,2019-02-11 11:54:32,gold standard,timeRange,Law Day,51,58,-1.0
+1015,363,2019-02-11 11:54:32,gold standard,current_location,here,59,63,-1.0
+1016,364,2019-02-11 11:54:32,gold standard,city,Tyonek,27,33,-1.0
+1017,364,2019-02-11 11:54:32,gold standard,state,New Jersey,35,45,-1.0
+1018,365,2019-02-11 11:54:32,gold standard,current_location,here,25,29,-1.0
+1019,365,2019-02-11 11:54:32,gold standard,condition_description,blizzard,34,42,-1.0
+1020,365,2019-02-11 11:54:32,gold standard,timeRange,five pm,57,64,-1.0
+1021,366,2019-02-11 11:54:32,gold standard,condition_description,storm,16,21,-1.0
+1022,366,2019-02-11 11:54:32,gold standard,city,Gibsonia,25,33,-1.0
+1023,366,2019-02-11 11:54:32,gold standard,timeRange,8 p.m,37,42,-1.0
+1024,367,2019-02-11 11:54:32,gold standard,condition_temperature,cold,12,16,-1.0
+1025,367,2019-02-11 11:54:32,gold standard,current_location,current position,34,50,-1.0
+1026,367,2019-02-11 11:54:32,gold standard,timeRange,tomorrow,55,63,-1.0
+1027,368,2019-02-11 11:54:32,gold standard,city,Hialeah Gardens,28,43,-1.0
+1028,368,2019-02-11 11:54:32,gold standard,timeRange,October the 24th,47,63,-1.0
+1029,369,2019-02-11 11:54:32,gold standard,condition_temperature,freezing,11,19,-1.0
+1030,369,2019-02-11 11:54:32,gold standard,timeRange,today,20,25,-1.0
+1031,369,2019-02-11 11:54:32,gold standard,geographic_poi,Delaware and Lehigh National Heritage Corridor,29,75,-1.0
+1032,370,2019-02-11 11:54:32,gold standard,city,Admire,24,30,-1.0
+1033,370,2019-02-11 11:54:32,gold standard,state,TX,34,36,-1.0
+1034,370,2019-02-11 11:54:32,gold standard,timeRange,seventeen,49,58,-1.0
+1035,371,2019-02-11 11:54:32,gold standard,state,North Carolina,24,38,-1.0
+1036,371,2019-02-11 11:54:32,gold standard,city,Edgemoor,43,51,-1.0
+1037,372,2019-02-11 11:54:32,gold standard,country,Costa Rica,25,35,-1.0
+1038,373,2019-02-11 11:54:32,gold standard,geographic_poi,Parc national Tolhuaca,17,39,-1.0
+1039,373,2019-02-11 11:54:32,gold standard,condition_description,fog,61,64,-1.0
+1040,374,2019-02-11 11:54:32,gold standard,city,Walden,11,17,-1.0
+1041,374,2019-02-11 11:54:32,gold standard,country,Russia,18,24,-1.0
+1042,374,2019-02-11 11:54:32,gold standard,timeRange,12/26/2018,28,38,-1.0
+1043,375,2019-02-11 11:54:32,gold standard,condition_description,humidity,11,19,-1.0
+1044,375,2019-02-11 11:54:32,gold standard,current_location,here,20,24,-1.0
+1045,375,2019-02-11 11:54:32,gold standard,timeRange,now,31,34,-1.0
+1046,376,2019-02-11 11:54:32,gold standard,geographic_poi,Petit Manan National Wildlife Refuge,21,57,-1.0
+1047,376,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,62,68,-1.0
+1048,376,2019-02-11 11:54:32,gold standard,timeRange,now,75,78,-1.0
+1049,377,2019-02-11 11:54:32,gold standard,city,Lansford,25,33,-1.0
+1050,377,2019-02-11 11:54:32,gold standard,condition_temperature,temperate,38,47,-1.0
+1051,378,2019-02-11 11:54:32,gold standard,condition_description,overcast,0,8,-1.0
+1052,378,2019-02-11 11:54:32,gold standard,timeRange,State Holiday,12,25,-1.0
+1053,378,2019-02-11 11:54:32,gold standard,geographic_poi,Pawling Nature Reserve,29,51,-1.0
+1054,378,2019-02-11 11:54:32,gold standard,spatial_relation,neighboring,57,68,-1.0
+1055,379,2019-02-11 11:54:32,gold standard,city,Wakarusa,22,30,-1.0
+1056,380,2019-02-11 11:54:32,gold standard,timeRange,6 am,25,29,-1.0
+1057,380,2019-02-11 11:54:32,gold standard,geographic_poi,Tatra-Nationalpark,33,51,-1.0
+1058,381,2019-02-11 11:54:32,gold standard,state,UT,33,35,-1.0
+1059,381,2019-02-11 11:54:32,gold standard,timeRange,thursday,39,47,-1.0
+1060,382,2019-02-11 11:54:32,gold standard,geographic_poi,Turtle Islands National Park,25,53,-1.0
+1061,383,2019-02-11 11:54:32,gold standard,condition_temperature,hotter,11,17,-1.0
+1062,383,2019-02-11 11:54:32,gold standard,state,PR,21,23,-1.0
+1063,383,2019-02-11 11:54:32,gold standard,timeRange,23 o'clock,27,37,-1.0
+1064,384,2019-02-11 11:54:32,gold standard,timeRange,in two hours,8,20,-1.0
+1065,384,2019-02-11 11:54:32,gold standard,country,Uzbekistan,25,35,-1.0
+1066,385,2019-02-11 11:54:32,gold standard,timeRange,afternoon,30,39,-1.0
+1067,385,2019-02-11 11:54:32,gold standard,condition_description,blizzard,44,52,-1.0
+1068,385,2019-02-11 11:54:32,gold standard,city,Dieterich,67,76,-1.0
+1069,385,2019-02-11 11:54:32,gold standard,country,Chad,77,81,-1.0
+1070,386,2019-02-11 11:54:32,gold standard,current_location,here,18,22,-1.0
+1071,386,2019-02-11 11:54:32,gold standard,timeRange,two Am,26,32,-1.0
+1072,387,2019-02-11 11:54:32,gold standard,geographic_poi,Custer National Forest,5,27,-1.0
+1073,387,2019-02-11 11:54:32,gold standard,condition_temperature,chillier,31,39,-1.0
+1074,387,2019-02-11 11:54:32,gold standard,timeRange,seven Pm,43,51,-1.0
+1075,388,2019-02-11 11:54:32,gold standard,timeRange,three a.m,37,46,-1.0
+1076,388,2019-02-11 11:54:32,gold standard,city,Two Buttes,50,60,-1.0
+1077,388,2019-02-11 11:54:32,gold standard,condition_temperature,warm,65,69,-1.0
+1078,389,2019-02-11 11:54:32,gold standard,city,Fox Chapel,22,32,-1.0
+1079,390,2019-02-11 11:54:32,gold standard,condition_description,rain,12,16,-1.0
+1080,390,2019-02-11 11:54:32,gold standard,timeRange,one hour from now,30,47,-1.0
+1081,390,2019-02-11 11:54:32,gold standard,country,South Korea,51,62,-1.0
+1082,391,2019-02-11 11:54:32,gold standard,current_location,here,29,33,-1.0
+1083,392,2019-02-11 11:54:32,gold standard,condition_description,cloud,16,21,-1.0
+1084,392,2019-02-11 11:54:32,gold standard,state,VI,25,27,-1.0
+1085,392,2019-02-11 11:54:32,gold standard,timeRange,in 14 minutes,28,41,-1.0
+1086,393,2019-02-11 11:54:32,gold standard,condition_temperature,colder,9,15,-1.0
+1087,393,2019-02-11 11:54:32,gold standard,spatial_relation,not far,27,34,-1.0
+1088,393,2019-02-11 11:54:32,gold standard,state,Utah,40,44,-1.0
+1089,393,2019-02-11 11:54:32,gold standard,timeRange,3 Am,52,56,-1.0
+1090,394,2019-02-11 11:54:32,gold standard,condition_temperature,chilly,11,17,-1.0
+1091,394,2019-02-11 11:54:32,gold standard,timeRange,midday,18,24,-1.0
+1092,394,2019-02-11 11:54:32,gold standard,city,Cresbard,28,36,-1.0
+1093,394,2019-02-11 11:54:32,gold standard,country,Afghanistan,37,48,-1.0
+1094,395,2019-02-11 11:54:32,gold standard,geographic_poi,Sarygamyş Sanctuary,28,47,-1.0
+1095,395,2019-02-11 11:54:32,gold standard,timeRange,august 21 2035,51,66,-1.0
+1096,396,2019-02-11 11:54:32,gold standard,condition_description,rainy,11,16,-1.0
+1097,396,2019-02-11 11:54:32,gold standard,city,Tenino,20,26,-1.0
+1098,397,2019-02-11 11:54:32,gold standard,condition_temperature,hot,11,14,-1.0
+1099,397,2019-02-11 11:54:32,gold standard,country,Netherlands,22,33,-1.0
+1100,397,2019-02-11 11:54:32,gold standard,timeRange,February 16th,37,50,-1.0
+1101,398,2019-02-11 11:54:32,gold standard,country,Belgium,9,16,-1.0
+1102,399,2019-02-11 11:54:32,gold standard,city,Milleville Beach,28,44,-1.0
+1103,400,2019-02-11 11:54:32,gold standard,album,Like A Hurricane,15,31,-1.0
+1104,400,2019-02-11 11:54:32,gold standard,artist,Paul Landers,35,47,-1.0
+1105,401,2019-02-11 11:54:32,gold standard,album,The Happy Blues,5,20,-1.0
+1106,401,2019-02-11 11:54:32,gold standard,artist,Ronnie Wood,24,35,-1.0
+1107,402,2019-02-11 11:54:32,gold standard,sort,newest,9,15,-1.0
+1108,402,2019-02-11 11:54:32,gold standard,music_item,melody,16,22,-1.0
+1109,402,2019-02-11 11:54:32,gold standard,service,Last Fm,26,33,-1.0
+1110,402,2019-02-11 11:54:32,gold standard,artist,Eddie Vinson,37,49,-1.0
+1111,403,2019-02-11 11:54:32,gold standard,service,Groove Shark,4,16,-1.0
+1112,404,2019-02-11 11:54:32,gold standard,sort,good,22,26,-1.0
+1113,404,2019-02-11 11:54:32,gold standard,artist,U-roy,32,37,-1.0
+1114,404,2019-02-11 11:54:32,gold standard,music_item,song,44,48,-1.0
+1115,404,2019-02-11 11:54:32,gold standard,year,1975,54,58,-1.0
+1116,404,2019-02-11 11:54:32,gold standard,service,Zvooq,62,67,-1.0
+1117,405,2019-02-11 11:54:32,gold standard,music_item,symphony,7,15,-1.0
+1118,405,2019-02-11 11:54:32,gold standard,year,2013,21,25,-1.0
+1119,406,2019-02-11 11:54:32,gold standard,sort,good,16,20,-1.0
+1120,406,2019-02-11 11:54:32,gold standard,artist,James Iha,32,41,-1.0
+1121,407,2019-02-11 11:54:32,gold standard,playlist,inventive,8,17,-1.0
+1122,408,2019-02-11 11:54:32,gold standard,service,iheart,26,32,-1.0
+1123,409,2019-02-11 11:54:32,gold standard,album,Subconscious Lobotomy,5,26,-1.0
+1124,409,2019-02-11 11:54:32,gold standard,artist,Jennifer Paull,32,46,-1.0
+1125,410,2019-02-11 11:54:32,gold standard,year,seventies,17,26,-1.0
+1126,410,2019-02-11 11:54:32,gold standard,music_item,sound track,27,38,-1.0
+1127,411,2019-02-11 11:54:32,gold standard,artist,john maher,7,17,-1.0
+1128,411,2019-02-11 11:54:32,gold standard,music_item,track,18,23,-1.0
+1129,412,2019-02-11 11:54:32,gold standard,artist,Dihan Slabbert,27,41,-1.0
+1130,412,2019-02-11 11:54:32,gold standard,sort,top fifty,56,65,-1.0
+1131,413,2019-02-11 11:54:32,gold standard,playlist,catchy,22,28,-1.0
+1132,413,2019-02-11 11:54:32,gold standard,service,Youtube,32,39,-1.0
+1133,414,2019-02-11 11:54:32,gold standard,year,2004,20,24,-1.0
+1134,414,2019-02-11 11:54:32,gold standard,artist,Imogen Heap,28,39,-1.0
+1135,414,2019-02-11 11:54:32,gold standard,service,spotify,43,50,-1.0
+1136,415,2019-02-11 11:54:32,gold standard,year,seventies,5,14,-1.0
+1137,416,2019-02-11 11:54:32,gold standard,artist,sean yseult,27,38,-1.0
+1138,416,2019-02-11 11:54:32,gold standard,sort,top-50,59,65,-1.0
+1139,417,2019-02-11 11:54:32,gold standard,artist,Jd Natasha,14,24,-1.0
+1140,417,2019-02-11 11:54:32,gold standard,year,thirties,36,44,-1.0
+1141,418,2019-02-11 11:54:32,gold standard,service,Netflix,15,22,-1.0
+1142,419,2019-02-11 11:54:32,gold standard,year,nineties,0,8,-1.0
+1143,419,2019-02-11 11:54:32,gold standard,service,Zvooq,18,23,-1.0
+1144,420,2019-02-11 11:54:32,gold standard,service,itunes,5,11,-1.0
+1145,420,2019-02-11 11:54:32,gold standard,artist,Ben Burnley,21,32,-1.0
+1146,420,2019-02-11 11:54:32,gold standard,album,Ready To Die,33,45,-1.0
+1147,421,2019-02-11 11:54:32,gold standard,music_item,ep,8,10,-1.0
+1148,421,2019-02-11 11:54:32,gold standard,artist,Zak Starkey,14,25,-1.0
+1149,422,2019-02-11 11:54:32,gold standard,music_item,album,8,13,-1.0
+1150,422,2019-02-11 11:54:32,gold standard,artist,Nithyasree Mahadevan,19,39,-1.0
+1151,423,2019-02-11 11:54:32,gold standard,service,Youtube,33,40,-1.0
+1152,424,2019-02-11 11:54:32,gold standard,service,Iheart,29,35,-1.0
+1153,425,2019-02-11 11:54:32,gold standard,playlist,Trance Life,5,16,-1.0
+1154,425,2019-02-11 11:54:32,gold standard,service,Zvooq,20,25,-1.0
+1155,426,2019-02-11 11:54:32,gold standard,music_item,concerto,16,24,-1.0
+1156,426,2019-02-11 11:54:32,gold standard,service,Zvooq,28,33,-1.0
+1157,426,2019-02-11 11:54:32,gold standard,year,1978,39,43,-1.0
+1158,426,2019-02-11 11:54:32,gold standard,artist,Ginger Pooley,47,60,-1.0
+1159,427,2019-02-11 11:54:32,gold standard,track,All Things Must Pass,5,25,-1.0
+1160,428,2019-02-11 11:54:32,gold standard,artist,Allen Toussaint,26,41,-1.0
+1161,428,2019-02-11 11:54:32,gold standard,year,fifties,51,58,-1.0
+1162,429,2019-02-11 11:54:32,gold standard,service,Last Fm,8,15,-1.0
+1163,430,2019-02-11 11:54:32,gold standard,music_item,song,7,11,-1.0
+1164,430,2019-02-11 11:54:32,gold standard,artist,Rahsaan Patterson,15,32,-1.0
+1165,431,2019-02-11 11:54:32,gold standard,track,Femme Fatale,5,17,-1.0
+1166,431,2019-02-11 11:54:32,gold standard,artist,Bonobo,21,27,-1.0
+1167,432,2019-02-11 11:54:32,gold standard,artist,anneliese van der pol,10,31,-1.0
+1168,432,2019-02-11 11:54:32,gold standard,year,thirties,41,49,-1.0
+1169,432,2019-02-11 11:54:32,gold standard,service,Groove Shark,53,65,-1.0
+1170,433,2019-02-11 11:54:32,gold standard,music_item,ep,23,25,-1.0
+1171,433,2019-02-11 11:54:32,gold standard,year,1998,31,35,-1.0
+1172,434,2019-02-11 11:54:32,gold standard,artist,Paul Mccartney,5,19,-1.0
+1173,435,2019-02-11 11:54:32,gold standard,album,Jill Sobule,5,16,-1.0
+1174,435,2019-02-11 11:54:32,gold standard,music_item,album,17,22,-1.0
+1175,436,2019-02-11 11:54:32,gold standard,music_item,chant,5,10,-1.0
+1176,436,2019-02-11 11:54:32,gold standard,year,1973,18,22,-1.0
+1177,437,2019-02-11 11:54:32,gold standard,playlist,90s Pop Rock Essentials,20,43,-1.0
+1178,438,2019-02-11 11:54:32,gold standard,track,Have You Met Miss Jones,5,28,-1.0
+1179,438,2019-02-11 11:54:32,gold standard,artist,Nicole,32,38,-1.0
+1180,438,2019-02-11 11:54:32,gold standard,service,Google Music,44,56,-1.0
+1181,439,2019-02-11 11:54:32,gold standard,music_item,chant,5,10,-1.0
+1182,439,2019-02-11 11:54:32,gold standard,artist,Nigger Kojak,14,26,-1.0
+1183,439,2019-02-11 11:54:32,gold standard,service,Itunes,30,36,-1.0
+1184,440,2019-02-11 11:54:32,gold standard,year,sixties,10,17,-1.0
+1185,440,2019-02-11 11:54:32,gold standard,service,Google Music,27,39,-1.0
+1186,441,2019-02-11 11:54:32,gold standard,year,fifties,7,14,-1.0
+1187,441,2019-02-11 11:54:32,gold standard,music_item,album,15,20,-1.0
+1188,441,2019-02-11 11:54:32,gold standard,artist,Dj Yoda,26,33,-1.0
+1189,441,2019-02-11 11:54:32,gold standard,service,Last Fm,37,44,-1.0
+1190,442,2019-02-11 11:54:32,gold standard,playlist,ecstatic,15,23,-1.0
+1191,443,2019-02-11 11:54:32,gold standard,service,deezer,5,11,-1.0
+1192,443,2019-02-11 11:54:32,gold standard,album,Curtain Call: The Hits,21,43,-1.0
+1193,443,2019-02-11 11:54:32,gold standard,artist,Junichi Okada,47,60,-1.0
+1194,444,2019-02-11 11:54:32,gold standard,artist,Jamie Robertson,11,26,-1.0
+1195,444,2019-02-11 11:54:32,gold standard,album,Handover,29,37,-1.0
+1196,444,2019-02-11 11:54:32,gold standard,service,vimeo ,41,47,-1.0
+1197,445,2019-02-11 11:54:32,gold standard,year,sixties,7,14,-1.0
+1198,445,2019-02-11 11:54:32,gold standard,music_item,soundtrack,15,25,-1.0
+1199,446,2019-02-11 11:54:32,gold standard,playlist,This Is: Miles Davis,5,25,-1.0
+1200,446,2019-02-11 11:54:32,gold standard,service,Lastfm,29,35,-1.0
+1201,447,2019-02-11 11:54:32,gold standard,album,Live In L.a,0,11,-1.0
+1202,447,2019-02-11 11:54:32,gold standard,artist,Joseph Meyer,11,23,-1.0
+1203,448,2019-02-11 11:54:32,gold standard,sort,top twenty,9,19,-1.0
+1204,448,2019-02-11 11:54:32,gold standard,artist,Hisham Abbas,20,32,-1.0
+1205,448,2019-02-11 11:54:32,gold standard,service,Youtube,36,43,-1.0
+1206,449,2019-02-11 11:54:32,gold standard,year,seventies,10,19,-1.0
+1207,449,2019-02-11 11:54:32,gold standard,artist,Filipp Kirkorow,20,35,-1.0
+1208,450,2019-02-11 11:54:32,gold standard,sort,most popular,9,21,-1.0
+1209,450,2019-02-11 11:54:32,gold standard,artist,Puretone,22,30,-1.0
+1210,451,2019-02-11 11:54:32,gold standard,artist,E-type,16,22,-1.0
+1211,452,2019-02-11 11:54:32,gold standard,artist,A.j. Pero,13,22,-1.0
+1212,452,2019-02-11 11:54:32,gold standard,service,Groove Shark,26,38,-1.0
+1213,453,2019-02-11 11:54:32,gold standard,artist,Bob Burns,7,16,-1.0
+1214,453,2019-02-11 11:54:32,gold standard,music_item,song,17,21,-1.0
+1215,454,2019-02-11 11:54:32,gold standard,artist,Leroi Moore,15,26,-1.0
+1216,454,2019-02-11 11:54:32,gold standard,service,vimeo,30,35,-1.0
+1217,454,2019-02-11 11:54:32,gold standard,music_item,song,47,51,-1.0
+1218,454,2019-02-11 11:54:32,gold standard,track,Chance Of A Lifetime,52,72,-1.0
+1219,455,2019-02-11 11:54:32,gold standard,music_item,symphony,10,18,-1.0
+1220,455,2019-02-11 11:54:32,gold standard,artist,David Lindley,30,43,-1.0
+1221,456,2019-02-11 11:54:32,gold standard,service,Iheart,25,31,-1.0
+1222,456,2019-02-11 11:54:32,gold standard,artist,Ari Gold,44,52,-1.0
+1223,456,2019-02-11 11:54:32,gold standard,sort,last,53,57,-1.0
+1224,456,2019-02-11 11:54:32,gold standard,music_item,album,58,63,-1.0
+1225,457,2019-02-11 11:54:32,gold standard,music_item,them,15,19,-1.0
+1226,457,2019-02-11 11:54:32,gold standard,artist,Murcof,36,42,-1.0
+1227,458,2019-02-11 11:54:32,gold standard,music_item,sound track,5,16,-1.0
+1228,458,2019-02-11 11:54:32,gold standard,year,twenties,32,40,-1.0
+1229,459,2019-02-11 11:54:32,gold standard,track,Dance With The Devil,5,25,-1.0
+1230,459,2019-02-11 11:54:32,gold standard,artist,Mr. Lordi,29,38,-1.0
+1231,460,2019-02-11 11:54:32,gold standard,year,1996,16,20,-1.0
+1232,461,2019-02-11 11:54:32,gold standard,service,Itunes,6,12,-1.0
+1233,461,2019-02-11 11:54:32,gold standard,album,Dr. Lecter,22,32,-1.0
+1234,461,2019-02-11 11:54:32,gold standard,artist,David Hodges,36,48,-1.0
+1235,462,2019-02-11 11:54:32,gold standard,album,S.t.r.e.e.t. D.a.d,5,23,-1.0
+1236,462,2019-02-11 11:54:32,gold standard,artist,Hiromitsu Agatsuma,30,48,-1.0
+1237,462,2019-02-11 11:54:32,gold standard,service,Pandora,57,64,-1.0
+1238,463,2019-02-11 11:54:32,gold standard,music_item,movement,10,18,-1.0
+1239,463,2019-02-11 11:54:32,gold standard,year,fourties,28,36,-1.0
+1240,464,2019-02-11 11:54:32,gold standard,music_item,tune,7,11,-1.0
+1241,464,2019-02-11 11:54:32,gold standard,artist,Chieko Ochi,17,28,-1.0
+1242,464,2019-02-11 11:54:32,gold standard,sort,good,31,35,-1.0
+1243,465,2019-02-11 11:54:32,gold standard,sort,greatest,9,17,-1.0
+1244,465,2019-02-11 11:54:32,gold standard,artist,Bryan Maclean,29,42,-1.0
+1245,466,2019-02-11 11:54:32,gold standard,service,Last Fm,18,25,-1.0
+1246,467,2019-02-11 11:54:32,gold standard,artist,Joy Nilo,14,22,-1.0
+1247,468,2019-02-11 11:54:32,gold standard,artist,Gary Lee Conner,10,25,-1.0
+1248,469,2019-02-11 11:54:32,gold standard,artist,Brian Chase,14,25,-1.0
+1249,470,2019-02-11 11:54:32,gold standard,sort,top,13,16,-1.0
+1250,470,2019-02-11 11:54:32,gold standard,service,Zvooq,17,22,-1.0
+1251,470,2019-02-11 11:54:32,gold standard,artist,Fink,26,30,-1.0
+1252,471,2019-02-11 11:54:32,gold standard,sort,top-20,9,15,-1.0
+1253,471,2019-02-11 11:54:32,gold standard,artist,Nawang Khechog,16,30,-1.0
+1254,471,2019-02-11 11:54:32,gold standard,music_item,soundtrack,31,41,-1.0
+1255,472,2019-02-11 11:54:32,gold standard,artist,Andrew Hewitt,22,35,-1.0
+1256,473,2019-02-11 11:54:32,gold standard,sort,good,7,11,-1.0
+1257,473,2019-02-11 11:54:32,gold standard,music_item,ep,12,14,-1.0
+1258,473,2019-02-11 11:54:32,gold standard,year,eighties,24,32,-1.0
+1259,473,2019-02-11 11:54:32,gold standard,artist,Peter Murphy,36,48,-1.0
+1260,474,2019-02-11 11:54:32,gold standard,album,Another Passenger,5,22,-1.0
+1261,474,2019-02-11 11:54:32,gold standard,artist,Louis Nelson Delisle,28,48,-1.0
+1262,475,2019-02-11 11:54:32,gold standard,sort,top,9,12,-1.0
+1263,475,2019-02-11 11:54:32,gold standard,artist,The Railway Children,24,44,-1.0
+1264,475,2019-02-11 11:54:32,gold standard,service,Last Fm,49,56,-1.0
+1265,476,2019-02-11 11:54:32,gold standard,sort,best,9,13,-1.0
+1266,476,2019-02-11 11:54:32,gold standard,artist,Becca,14,19,-1.0
+1267,477,2019-02-11 11:54:32,gold standard,artist,Duke Ellington,18,32,-1.0
+1268,477,2019-02-11 11:54:32,gold standard,year,seventies,42,51,-1.0
+1269,478,2019-02-11 11:54:32,gold standard,service,last fm,8,15,-1.0
+1270,478,2019-02-11 11:54:32,gold standard,playlist,A Mis Niños de 30,32,49,-1.0
+1271,479,2019-02-11 11:54:32,gold standard,playlist,Black Sabbath: The Dio Years,8,36,-1.0
+1272,480,2019-02-11 11:54:32,gold standard,music_item,ep,8,10,-1.0
+1273,480,2019-02-11 11:54:32,gold standard,artist,Mike Harding,16,28,-1.0
+1274,481,2019-02-11 11:54:32,gold standard,genre,Rock Symphonique,33,49,-1.0
+1275,482,2019-02-11 11:54:32,gold standard,year,1997,14,18,-1.0
+1276,482,2019-02-11 11:54:32,gold standard,music_item,record,19,25,-1.0
+1277,483,2019-02-11 11:54:32,gold standard,album,What Color Is Your Sky,4,26,-1.0
+1278,483,2019-02-11 11:54:32,gold standard,artist,Alana Davis,30,41,-1.0
+1279,484,2019-02-11 11:54:32,gold standard,music_item,movement,14,22,-1.0
+1280,484,2019-02-11 11:54:32,gold standard,artist,george formby jr,28,44,-1.0
+1281,485,2019-02-11 11:54:32,gold standard,sort,new,10,13,-1.0
+1282,485,2019-02-11 11:54:32,gold standard,artist,Les Vandyke,14,25,-1.0
+1283,485,2019-02-11 11:54:32,gold standard,service,Slacker,29,36,-1.0
+1284,486,2019-02-11 11:54:32,gold standard,service,Zvooq,12,17,-1.0
+1285,487,2019-02-11 11:54:32,gold standard,genre,Progressive Metal,5,22,-1.0
+1286,488,2019-02-11 11:54:32,gold standard,music_item,soundtrack,15,25,-1.0
+1287,488,2019-02-11 11:54:32,gold standard,service,Youtube,35,42,-1.0
+1288,488,2019-02-11 11:54:32,gold standard,artist,Helena Iren Michaelsen,48,70,-1.0
+1289,489,2019-02-11 11:54:32,gold standard,music_item,song,7,11,-1.0
+1290,489,2019-02-11 11:54:32,gold standard,artist,Ramesh Narayan,15,29,-1.0
+1291,489,2019-02-11 11:54:32,gold standard,year,1960,35,39,-1.0
+1292,490,2019-02-11 11:54:32,gold standard,genre,blues britânico,10,25,-1.0
+1293,491,2019-02-11 11:54:32,gold standard,artist,Hitomi Nabatame,13,28,-1.0
+1294,491,2019-02-11 11:54:32,gold standard,year,2003,40,44,-1.0
+1295,492,2019-02-11 11:54:32,gold standard,service,Zvooq,18,23,-1.0
+1296,493,2019-02-11 11:54:32,gold standard,artist,Lynn & Wade Llp,16,31,-1.0
+1297,494,2019-02-11 11:54:32,gold standard,artist,Chris Knight,12,24,-1.0
+1298,495,2019-02-11 11:54:32,gold standard,sort,good,11,15,-1.0
+1299,495,2019-02-11 11:54:32,gold standard,artist,Mohammad Mamle,16,30,-1.0
+1300,495,2019-02-11 11:54:32,gold standard,service,Vimeo,34,39,-1.0
+1301,496,2019-02-11 11:54:32,gold standard,music_item,sound track,14,25,-1.0
+1302,496,2019-02-11 11:54:32,gold standard,year,fifties,35,42,-1.0
+1303,496,2019-02-11 11:54:32,gold standard,service,Iheart,53,59,-1.0
+1304,497,2019-02-11 11:54:32,gold standard,album,Music From Van-pires,5,25,-1.0
+1305,497,2019-02-11 11:54:32,gold standard,artist,Dmitry Malikov,29,43,-1.0
+1306,498,2019-02-11 11:54:32,gold standard,track,rich sex,5,13,-1.0
+1307,498,2019-02-11 11:54:32,gold standard,service,Iheart,17,23,-1.0
+1308,499,2019-02-11 11:54:32,gold standard,playlist,Modern Psychedelia,5,23,-1.0
+1309,500,2019-02-11 11:54:32,gold standard,music_item,track,22,27,-1.0
+1310,500,2019-02-11 11:54:32,gold standard,playlist_owner,my,33,35,-1.0
+1311,500,2019-02-11 11:54:32,gold standard,playlist,Classical Relaxations,36,57,-1.0
+1312,501,2019-02-11 11:54:32,gold standard,music_item,album,8,13,-1.0
+1313,501,2019-02-11 11:54:32,gold standard,playlist_owner,my,17,19,-1.0
+1314,501,2019-02-11 11:54:32,gold standard,playlist,Flow Español,20,32,-1.0
+1315,502,2019-02-11 11:54:32,gold standard,playlist,digging now,4,15,-1.0
+1316,502,2019-02-11 11:54:32,gold standard,playlist_owner,my,19,21,-1.0
+1317,502,2019-02-11 11:54:32,gold standard,entity_name,Young at Heart,22,36,-1.0
+1318,503,2019-02-11 11:54:32,gold standard,music_item,song,9,13,-1.0
+1319,503,2019-02-11 11:54:32,gold standard,artist,Too Poetic,17,27,-1.0
+1320,503,2019-02-11 11:54:32,gold standard,playlist_owner,my,31,33,-1.0
+1321,503,2019-02-11 11:54:32,gold standard,playlist,Piano Ballads,34,47,-1.0
+1322,504,2019-02-11 11:54:32,gold standard,music_item,album,9,14,-1.0
+1323,504,2019-02-11 11:54:32,gold standard,playlist,Old School Death Metal,18,40,-1.0
+1324,505,2019-02-11 11:54:32,gold standard,artist,baro ferret,14,25,-1.0
+1325,505,2019-02-11 11:54:32,gold standard,playlist,Urban Hits,33,43,-1.0
+1326,505,2019-02-11 11:54:32,gold standard,playlist_owner,my,50,52,-1.0
+1327,506,2019-02-11 11:54:32,gold standard,music_item,album,8,13,-1.0
+1328,506,2019-02-11 11:54:32,gold standard,playlist,Might and Myth Power Metal,21,47,-1.0
+1329,507,2019-02-11 11:54:32,gold standard,playlist,travelling,7,17,-1.0
+1330,507,2019-02-11 11:54:32,gold standard,artist,David Gahan,44,55,-1.0
+1331,507,2019-02-11 11:54:32,gold standard,music_item,song,56,60,-1.0
+1332,508,2019-02-11 11:54:32,gold standard,artist,Pete Townshend,16,30,-1.0
+1333,508,2019-02-11 11:54:32,gold standard,playlist_owner,my,34,36,-1.0
+1334,508,2019-02-11 11:54:32,gold standard,playlist,Fiesta Hits con Lali,46,66,-1.0
+1335,509,2019-02-11 11:54:32,gold standard,artist,Kasey Chambers,13,27,-1.0
+1336,509,2019-02-11 11:54:32,gold standard,music_item,tune,30,34,-1.0
+1337,509,2019-02-11 11:54:32,gold standard,playlist_owner,my,56,58,-1.0
+1338,509,2019-02-11 11:54:32,gold standard,playlist,Chips and Salsa,59,74,-1.0
+1339,510,2019-02-11 11:54:32,gold standard,entity_name,Recalled to Life,4,20,-1.0
+1340,510,2019-02-11 11:54:32,gold standard,playlist,This Is Alejandro Fernández,24,51,-1.0
+1341,511,2019-02-11 11:54:32,gold standard,entity_name,nuba,4,8,-1.0
+1342,511,2019-02-11 11:54:32,gold standard,playlist_owner,my,12,14,-1.0
+1343,511,2019-02-11 11:54:32,gold standard,playlist,Metal Party,15,26,-1.0
+1344,512,2019-02-11 11:54:32,gold standard,artist,jo stafford,4,15,-1.0
+1345,512,2019-02-11 11:54:32,gold standard,playlist,workout twerkout,29,45,-1.0
+1346,513,2019-02-11 11:54:32,gold standard,artist,Jean Philippe Goncalves,4,27,-1.0
+1347,513,2019-02-11 11:54:32,gold standard,playlist_owner,my,33,35,-1.0
+1348,513,2019-02-11 11:54:32,gold standard,playlist,running to rock 170 to 190 bpm,36,66,-1.0
+1349,514,2019-02-11 11:54:32,gold standard,music_item,song,8,12,-1.0
+1350,514,2019-02-11 11:54:32,gold standard,playlist,virales de siempre,13,31,-1.0
+1351,514,2019-02-11 11:54:32,gold standard,artist,cary brothers,39,52,-1.0
+1352,514,2019-02-11 11:54:32,gold standard,playlist_owner,my,56,58,-1.0
+1353,515,2019-02-11 11:54:32,gold standard,playlist_owner,jerry's,5,12,-1.0
+1354,515,2019-02-11 11:54:32,gold standard,playlist,Classical Moments in Movies,13,40,-1.0
+1355,515,2019-02-11 11:54:32,gold standard,music_item,album,57,62,-1.0
+1356,516,2019-02-11 11:54:32,gold standard,entity_name,Beyond the Valley of 1984,4,29,-1.0
+1357,516,2019-02-11 11:54:32,gold standard,playlist,Folk Music At The Gaslight Café,42,73,-1.0
+1358,517,2019-02-11 11:54:32,gold standard,artist,Jerry Calliste Jr,4,22,-1.0
+1359,517,2019-02-11 11:54:32,gold standard,playlist_owner,my,26,28,-1.0
+1360,517,2019-02-11 11:54:32,gold standard,playlist,Te quiero,29,38,-1.0
+1361,518,2019-02-11 11:54:32,gold standard,artist,porter wagoner,4,18,-1.0
+1362,518,2019-02-11 11:54:32,gold standard,playlist,The Sleep Machine Waterscapes,26,55,-1.0
+1363,519,2019-02-11 11:54:32,gold standard,music_item,artist,8,14,-1.0
+1364,519,2019-02-11 11:54:32,gold standard,artist,mike,15,19,-1.0
+1365,519,2019-02-11 11:54:32,gold standard,playlist,Sexy as Folk,27,39,-1.0
+1366,520,2019-02-11 11:54:32,gold standard,entity_name,Brazilian Flag Anthem,4,25,-1.0
+1367,520,2019-02-11 11:54:32,gold standard,playlist,Top 100 Alternative Tracks on Spotify,29,66,-1.0
+1368,521,2019-02-11 11:54:32,gold standard,artist,Andy Hunter,4,15,-1.0
+1369,521,2019-02-11 11:54:32,gold standard,playlist_owner,my,19,21,-1.0
+1370,521,2019-02-11 11:54:32,gold standard,playlist,Evening Commute,22,37,-1.0
+1371,522,2019-02-11 11:54:32,gold standard,artist,petar georgiev kalica,4,25,-1.0
+1372,522,2019-02-11 11:54:32,gold standard,playlist,Old School Hip Hop,35,53,-1.0
+1373,523,2019-02-11 11:54:32,gold standard,artist,Larry Heard,12,23,-1.0
+1374,523,2019-02-11 11:54:32,gold standard,playlist_owner,my,27,29,-1.0
+1375,523,2019-02-11 11:54:32,gold standard,playlist,laundry,30,37,-1.0
+1376,524,2019-02-11 11:54:32,gold standard,artist,Vandemataram Srinivas,4,25,-1.0
+1377,524,2019-02-11 11:54:32,gold standard,music_item,track,28,33,-1.0
+1378,524,2019-02-11 11:54:32,gold standard,playlist,HipHop Hot 50,39,52,-1.0
+1379,525,2019-02-11 11:54:32,gold standard,artist,millie corretjer,4,20,-1.0
+1380,525,2019-02-11 11:54:32,gold standard,playlist,the rhythm,24,34,-1.0
+1381,526,2019-02-11 11:54:32,gold standard,entity_name,give us rest,4,16,-1.0
+1382,526,2019-02-11 11:54:32,gold standard,playlist_owner,my,20,22,-1.0
+1383,526,2019-02-11 11:54:32,gold standard,playlist,70s Smash Hits,23,37,-1.0
+1384,527,2019-02-11 11:54:32,gold standard,music_item,track,9,14,-1.0
+1385,527,2019-02-11 11:54:32,gold standard,playlist_owner,my,18,20,-1.0
+1386,527,2019-02-11 11:54:32,gold standard,playlist,Hands Up,21,29,-1.0
+1387,528,2019-02-11 11:54:32,gold standard,artist,bobby brown,24,35,-1.0
+1388,528,2019-02-11 11:54:32,gold standard,playlist_owner,my,39,41,-1.0
+1389,528,2019-02-11 11:54:32,gold standard,playlist,enamorándose,42,54,-1.0
+1390,529,2019-02-11 11:54:32,gold standard,artist,Jonathan Sprout,4,19,-1.0
+1391,529,2019-02-11 11:54:32,gold standard,music_item,album,20,25,-1.0
+1392,529,2019-02-11 11:54:32,gold standard,playlist_owner,my,29,31,-1.0
+1393,529,2019-02-11 11:54:32,gold standard,playlist,this is miranda lambert,32,55,-1.0
+1394,530,2019-02-11 11:54:32,gold standard,entity_name,ireland in the junior eurovision song contest 2015,4,54,-1.0
+1395,530,2019-02-11 11:54:32,gold standard,playlist_owner,my,58,60,-1.0
+1396,530,2019-02-11 11:54:32,gold standard,playlist,Jazzy Dinner,61,73,-1.0
+1397,531,2019-02-11 11:54:32,gold standard,music_item,album,8,13,-1.0
+1398,531,2019-02-11 11:54:32,gold standard,playlist,The Sweet Suite,21,36,-1.0
+1399,532,2019-02-11 11:54:32,gold standard,artist,sarah slean,4,15,-1.0
+1400,532,2019-02-11 11:54:32,gold standard,playlist_owner,my,19,21,-1.0
+1401,532,2019-02-11 11:54:32,gold standard,playlist,Mellowed Out Gaming,31,50,-1.0
+1402,533,2019-02-11 11:54:32,gold standard,music_item,album,9,14,-1.0
+1403,533,2019-02-11 11:54:32,gold standard,playlist,Spanish Beat,22,34,-1.0
+1404,534,2019-02-11 11:54:32,gold standard,entity_name,lofty fake anagram,4,22,-1.0
+1405,534,2019-02-11 11:54:32,gold standard,playlist,la mejor música de bso,30,52,-1.0
+1406,535,2019-02-11 11:54:32,gold standard,music_item,track,8,13,-1.0
+1407,535,2019-02-11 11:54:32,gold standard,playlist,work,21,25,-1.0
+1408,536,2019-02-11 11:54:32,gold standard,music_item,song,6,10,-1.0
+1409,536,2019-02-11 11:54:32,gold standard,playlist,this is racionais mc's,14,36,-1.0
+1410,537,2019-02-11 11:54:32,gold standard,music_item,track,4,9,-1.0
+1411,537,2019-02-11 11:54:32,gold standard,playlist_owner,my,13,15,-1.0
+1412,537,2019-02-11 11:54:32,gold standard,playlist,Hands Up,33,41,-1.0
+1413,538,2019-02-11 11:54:32,gold standard,music_item,song,17,21,-1.0
+1414,538,2019-02-11 11:54:32,gold standard,artist,Yutaka Ozaki,27,39,-1.0
+1415,538,2019-02-11 11:54:32,gold standard,playlist_owner,my,45,47,-1.0
+1416,538,2019-02-11 11:54:32,gold standard,playlist,this is miles davis,48,67,-1.0
+1417,539,2019-02-11 11:54:32,gold standard,music_item,track,6,11,-1.0
+1418,539,2019-02-11 11:54:32,gold standard,playlist,Cena con Amigos,24,39,-1.0
+1419,540,2019-02-11 11:54:32,gold standard,entity_name,The Famous Flower of Serving-Men,4,36,-1.0
+1420,540,2019-02-11 11:54:32,gold standard,playlist_owner,my,40,42,-1.0
+1421,540,2019-02-11 11:54:32,gold standard,playlist,evening acoustic,43,59,-1.0
+1422,541,2019-02-11 11:54:32,gold standard,music_item,song,6,10,-1.0
+1423,541,2019-02-11 11:54:32,gold standard,playlist,Indie Hipster,14,27,-1.0
+1424,542,2019-02-11 11:54:32,gold standard,artist,40 cal,8,14,-1.0
+1425,542,2019-02-11 11:54:32,gold standard,music_item,tune,15,19,-1.0
+1426,542,2019-02-11 11:54:32,gold standard,playlist,laundry,27,34,-1.0
+1427,543,2019-02-11 11:54:32,gold standard,music_item,album,8,13,-1.0
+1428,543,2019-02-11 11:54:32,gold standard,playlist_owner,my,17,19,-1.0
+1429,543,2019-02-11 11:54:32,gold standard,playlist,Perfect Concentration,20,41,-1.0
+1430,544,2019-02-11 11:54:32,gold standard,artist,Matt Murphy,8,19,-1.0
+1431,544,2019-02-11 11:54:32,gold standard,music_item,tune,20,24,-1.0
+1432,544,2019-02-11 11:54:32,gold standard,playlist,Flow Español,32,44,-1.0
+1433,545,2019-02-11 11:54:32,gold standard,entity_name,A Very Cellular Song,4,24,-1.0
+1434,545,2019-02-11 11:54:32,gold standard,playlist,masters of metal,28,44,-1.0
+1435,546,2019-02-11 11:54:32,gold standard,music_item,tune,15,19,-1.0
+1436,546,2019-02-11 11:54:32,gold standard,playlist_owner,my,25,27,-1.0
+1437,546,2019-02-11 11:54:32,gold standard,playlist,sin estrés,28,38,-1.0
+1438,547,2019-02-11 11:54:32,gold standard,artist,jordan rudess,16,29,-1.0
+1439,547,2019-02-11 11:54:32,gold standard,playlist,Divertido para niños,39,59,-1.0
+1440,548,2019-02-11 11:54:32,gold standard,artist,kent james,4,14,-1.0
+1441,548,2019-02-11 11:54:32,gold standard,playlist,disney,22,28,-1.0
+1442,549,2019-02-11 11:54:32,gold standard,music_item,artist,8,14,-1.0
+1443,549,2019-02-11 11:54:32,gold standard,artist,Adam Deibert,15,27,-1.0
+1444,549,2019-02-11 11:54:32,gold standard,playlist_owner,my,31,33,-1.0
+1445,549,2019-02-11 11:54:32,gold standard,playlist,Perfect Concentration,34,55,-1.0
+1446,550,2019-02-11 11:54:32,gold standard,music_item,artist,16,22,-1.0
+1447,550,2019-02-11 11:54:32,gold standard,artist,Giovanni Giacomo Gastoldi,23,48,-1.0
+1448,550,2019-02-11 11:54:32,gold standard,playlist,Chill Out Music,58,73,-1.0
+1449,551,2019-02-11 11:54:32,gold standard,music_item,album,8,13,-1.0
+1450,551,2019-02-11 11:54:32,gold standard,playlist,hot 50,21,27,-1.0
+1451,552,2019-02-11 11:54:32,gold standard,music_item,artist,8,14,-1.0
+1452,552,2019-02-11 11:54:32,gold standard,artist,Pete Murray,15,26,-1.0
+1453,552,2019-02-11 11:54:32,gold standard,playlist_owner,my,30,32,-1.0
+1454,552,2019-02-11 11:54:32,gold standard,playlist,relaxing,33,41,-1.0
+1455,553,2019-02-11 11:54:32,gold standard,music_item,track,8,13,-1.0
+1456,553,2019-02-11 11:54:32,gold standard,playlist,drum & breaks,21,34,-1.0
+1457,554,2019-02-11 11:54:32,gold standard,playlist_owner,my,4,6,-1.0
+1458,554,2019-02-11 11:54:32,gold standard,playlist,fantastic workout,7,24,-1.0
+1459,554,2019-02-11 11:54:32,gold standard,artist,sara bareilles,37,51,-1.0
+1460,555,2019-02-11 11:54:32,gold standard,artist,boy george,8,18,-1.0
+1461,555,2019-02-11 11:54:32,gold standard,music_item,track,19,24,-1.0
+1462,555,2019-02-11 11:54:32,gold standard,playlist,Emo Forever,32,43,-1.0
+1463,556,2019-02-11 11:54:32,gold standard,artist,Ted Heath,4,13,-1.0
+1464,556,2019-02-11 11:54:32,gold standard,playlist,road trip,21,30,-1.0
+1465,557,2019-02-11 11:54:32,gold standard,entity_name,last of the ghetto astronauts,12,41,-1.0
+1466,557,2019-02-11 11:54:32,gold standard,playlist,black sabbath the dio years,65,92,-1.0
+1467,558,2019-02-11 11:54:32,gold standard,music_item,artist,9,15,-1.0
+1468,558,2019-02-11 11:54:32,gold standard,playlist,Showstopper Being Mary Jane,19,46,-1.0
+1469,559,2019-02-11 11:54:32,gold standard,music_item,artist,8,14,-1.0
+1470,559,2019-02-11 11:54:32,gold standard,playlist,Top Latin Alternative,20,41,-1.0
+1471,560,2019-02-11 11:54:32,gold standard,artist,Michael Wittig,4,18,-1.0
+1472,560,2019-02-11 11:54:32,gold standard,playlist,Country Icon,28,40,-1.0
+1473,561,2019-02-11 11:54:32,gold standard,entity_name,Highway Patrolman,4,21,-1.0
+1474,561,2019-02-11 11:54:32,gold standard,playlist_owner,my,25,27,-1.0
+1475,561,2019-02-11 11:54:32,gold standard,playlist,this is al green,37,53,-1.0
+1476,562,2019-02-11 11:54:32,gold standard,artist,Richard McNamara,4,20,-1.0
+1477,562,2019-02-11 11:54:32,gold standard,music_item,song,28,32,-1.0
+1478,562,2019-02-11 11:54:32,gold standard,playlist,Just Smile,40,50,-1.0
+1479,563,2019-02-11 11:54:32,gold standard,artist,Annesley Malewana,4,21,-1.0
+1480,563,2019-02-11 11:54:32,gold standard,music_item,album,22,27,-1.0
+1481,563,2019-02-11 11:54:32,gold standard,playlist,indietronic,40,51,-1.0
+1482,564,2019-02-11 11:54:32,gold standard,music_item,artist,8,14,-1.0
+1483,564,2019-02-11 11:54:32,gold standard,playlist_owner,my,18,20,-1.0
+1484,564,2019-02-11 11:54:32,gold standard,playlist,dishwashing,21,32,-1.0
+1485,565,2019-02-11 11:54:32,gold standard,music_item,artist,9,15,-1.0
+1486,565,2019-02-11 11:54:32,gold standard,playlist,fairy tales,19,30,-1.0
+1487,566,2019-02-11 11:54:32,gold standard,entity_name,Muzika za decu,4,18,-1.0
+1488,566,2019-02-11 11:54:32,gold standard,playlist_owner,my,22,24,-1.0
+1489,566,2019-02-11 11:54:32,gold standard,playlist,Crash Course,25,37,-1.0
+1490,567,2019-02-11 11:54:32,gold standard,artist,derek watkins,6,19,-1.0
+1491,567,2019-02-11 11:54:32,gold standard,music_item,tune,20,24,-1.0
+1492,567,2019-02-11 11:54:32,gold standard,playlist,This Is Johnny Cash,28,47,-1.0
+1493,568,2019-02-11 11:54:32,gold standard,entity_name,our little corner of the world music from gilmore girls,4,59,-1.0
+1494,568,2019-02-11 11:54:32,gold standard,playlist_owner,my,63,65,-1.0
+1495,568,2019-02-11 11:54:32,gold standard,playlist,The Funny Thing About Football Is,66,99,-1.0
+1496,569,2019-02-11 11:54:32,gold standard,music_item,track,16,21,-1.0
+1497,569,2019-02-11 11:54:32,gold standard,playlist_owner,my,25,27,-1.0
+1498,569,2019-02-11 11:54:32,gold standard,playlist,This Is Tchaikovsky,28,47,-1.0
+1499,570,2019-02-11 11:54:32,gold standard,artist,abe laboriel,4,16,-1.0
+1500,570,2019-02-11 11:54:32,gold standard,playlist,Escapada,26,34,-1.0
+1501,571,2019-02-11 11:54:32,gold standard,entity_name,abacab,4,10,-1.0
+1502,571,2019-02-11 11:54:32,gold standard,playlist_owner,beryl's,14,21,-1.0
+1503,571,2019-02-11 11:54:32,gold standard,playlist,party on fridays,22,38,-1.0
+1504,572,2019-02-11 11:54:32,gold standard,music_item,track,16,21,-1.0
+1505,572,2019-02-11 11:54:32,gold standard,artist,Paul McGuigan,25,38,-1.0
+1506,572,2019-02-11 11:54:32,gold standard,playlist,Deep House,46,56,-1.0
+1507,573,2019-02-11 11:54:32,gold standard,music_item,tune,24,28,-1.0
+1508,573,2019-02-11 11:54:32,gold standard,playlist_owner,my,32,34,-1.0
+1509,573,2019-02-11 11:54:32,gold standard,playlist,Calm before the storm,35,56,-1.0
+1510,574,2019-02-11 11:54:32,gold standard,entity_name,The image of you,11,27,-1.0
+1511,574,2019-02-11 11:54:32,gold standard,playlist_owner,my,31,33,-1.0
+1512,574,2019-02-11 11:54:32,gold standard,playlist,Crate Diggers Anonymous,43,66,-1.0
+1513,575,2019-02-11 11:54:32,gold standard,music_item,track,6,11,-1.0
+1514,575,2019-02-11 11:54:32,gold standard,playlist,Jazzy Dinner,15,27,-1.0
+1515,576,2019-02-11 11:54:32,gold standard,music_item,album,8,13,-1.0
+1516,576,2019-02-11 11:54:32,gold standard,playlist,Hipster Soul,21,33,-1.0
+1517,577,2019-02-11 11:54:32,gold standard,music_item,tune,9,13,-1.0
+1518,577,2019-02-11 11:54:32,gold standard,playlist_owner,my,17,19,-1.0
+1519,577,2019-02-11 11:54:32,gold standard,playlist,Sleepify,20,28,-1.0
+1520,578,2019-02-11 11:54:32,gold standard,artist,jack white,4,14,-1.0
+1521,578,2019-02-11 11:54:32,gold standard,playlist_owner,my,18,20,-1.0
+1522,578,2019-02-11 11:54:32,gold standard,playlist,This Is Shakira,30,45,-1.0
+1523,579,2019-02-11 11:54:32,gold standard,artist,tommy johnson,4,17,-1.0
+1524,579,2019-02-11 11:54:32,gold standard,playlist,The MetalSucks Playlist,21,44,-1.0
+1525,580,2019-02-11 11:54:32,gold standard,artist,chris clark,8,19,-1.0
+1526,580,2019-02-11 11:54:32,gold standard,music_item,tune,20,24,-1.0
+1527,580,2019-02-11 11:54:32,gold standard,playlist_owner,my,28,30,-1.0
+1528,580,2019-02-11 11:54:32,gold standard,playlist,women of the blues,31,49,-1.0
+1529,581,2019-02-11 11:54:32,gold standard,music_item,artist,7,13,-1.0
+1530,581,2019-02-11 11:54:32,gold standard,playlist,Jukebox Boogie Rhythm & Blues,17,46,-1.0
+1531,582,2019-02-11 11:54:32,gold standard,music_item,artist,9,15,-1.0
+1532,582,2019-02-11 11:54:32,gold standard,playlist_owner,my,19,21,-1.0
+1533,582,2019-02-11 11:54:32,gold standard,playlist,Electronic Bliss,22,38,-1.0
+1534,583,2019-02-11 11:54:32,gold standard,playlist_owner,my,17,19,-1.0
+1535,583,2019-02-11 11:54:32,gold standard,playlist,Infinite Indie Folk,20,39,-1.0
+1536,583,2019-02-11 11:54:32,gold standard,artist,Rahim Shah,58,68,-1.0
+1537,584,2019-02-11 11:54:32,gold standard,artist,martin barre,4,16,-1.0
+1538,584,2019-02-11 11:54:32,gold standard,playlist_owner,my,20,22,-1.0
+1539,584,2019-02-11 11:54:32,gold standard,playlist,punk unplugged,23,37,-1.0
+1540,585,2019-02-11 11:54:32,gold standard,artist,tierney sutton,4,18,-1.0
+1541,585,2019-02-11 11:54:32,gold standard,playlist_owner,my,22,24,-1.0
+1542,585,2019-02-11 11:54:32,gold standard,playlist,Novedades Viernes Sudamérica,25,53,-1.0
+1543,586,2019-02-11 11:54:32,gold standard,music_item,tune,9,13,-1.0
+1544,586,2019-02-11 11:54:32,gold standard,playlist_owner,dorthy's,17,25,-1.0
+1545,586,2019-02-11 11:54:32,gold standard,playlist,80's party,26,36,-1.0
+1546,587,2019-02-11 11:54:32,gold standard,entity_name,A Very Cellular Song,0,20,-1.0
+1547,587,2019-02-11 11:54:32,gold standard,playlist_owner,my,42,44,-1.0
+1548,587,2019-02-11 11:54:32,gold standard,playlist,masters of metal,45,61,-1.0
+1549,588,2019-02-11 11:54:32,gold standard,artist,Toyan,4,9,-1.0
+1550,588,2019-02-11 11:54:32,gold standard,playlist_owner,my,13,15,-1.0
+1551,588,2019-02-11 11:54:32,gold standard,playlist,Epic Gaming,16,27,-1.0
+1552,589,2019-02-11 11:54:32,gold standard,music_item,song,8,12,-1.0
+1553,589,2019-02-11 11:54:32,gold standard,playlist,Mac 'N Cheese,20,33,-1.0
+1554,590,2019-02-11 11:54:32,gold standard,music_item,artist,9,15,-1.0
+1555,590,2019-02-11 11:54:32,gold standard,playlist_owner,my,19,21,-1.0
+1556,590,2019-02-11 11:54:32,gold standard,playlist,spotlight on country 2016,22,47,-1.0
+1557,591,2019-02-11 11:54:32,gold standard,music_item,song,6,10,-1.0
+1558,591,2019-02-11 11:54:32,gold standard,playlist_owner,my,14,16,-1.0
+1559,591,2019-02-11 11:54:32,gold standard,playlist,madden nfl 16,26,39,-1.0
+1560,592,2019-02-11 11:54:32,gold standard,artist,emilie autumn,4,17,-1.0
+1561,592,2019-02-11 11:54:32,gold standard,playlist_owner,my,21,23,-1.0
+1562,592,2019-02-11 11:54:32,gold standard,playlist,Nação Reggae,24,36,-1.0
+1563,593,2019-02-11 11:54:32,gold standard,artist,Farhad Darya,4,16,-1.0
+1564,593,2019-02-11 11:54:32,gold standard,playlist,virales de siempre,26,44,-1.0
+1565,594,2019-02-11 11:54:32,gold standard,music_item,song,6,10,-1.0
+1566,594,2019-02-11 11:54:32,gold standard,playlist_owner,my,14,16,-1.0
+1567,594,2019-02-11 11:54:32,gold standard,playlist,All Out 60s,17,28,-1.0
+1568,595,2019-02-11 11:54:32,gold standard,entity_name,we have a theme song,4,24,-1.0
+1569,595,2019-02-11 11:54:32,gold standard,playlist_owner,my,28,30,-1.0
+1570,595,2019-02-11 11:54:32,gold standard,playlist,House Afterwork,31,46,-1.0
+1571,596,2019-02-11 11:54:32,gold standard,music_item,song,8,12,-1.0
+1572,596,2019-02-11 11:54:32,gold standard,playlist_owner,my,16,18,-1.0
+1573,596,2019-02-11 11:54:32,gold standard,playlist,We Everywhere,19,32,-1.0
+1574,597,2019-02-11 11:54:32,gold standard,artist,Roel van Velzen,4,19,-1.0
+1575,597,2019-02-11 11:54:32,gold standard,playlist_owner,my,23,25,-1.0
+1576,597,2019-02-11 11:54:32,gold standard,playlist,party of the century,26,46,-1.0
+1577,598,2019-02-11 11:54:32,gold standard,music_item,artist,8,14,-1.0
+1578,598,2019-02-11 11:54:32,gold standard,playlist,political punks,22,37,-1.0
+1579,599,2019-02-11 11:54:32,gold standard,music_item,album,8,13,-1.0
+1580,599,2019-02-11 11:54:32,gold standard,playlist_owner,my,17,19,-1.0
+1581,599,2019-02-11 11:54:32,gold standard,playlist,Club Hits,20,29,-1.0
+1582,600,2019-02-11 11:54:32,gold standard,movie_name,Babar: King of the Elephants,3,31,-1.0
+1583,601,2019-02-11 11:54:32,gold standard,movie_name,The Ghost,3,12,-1.0
+1584,602,2019-02-11 11:54:32,gold standard,movie_name,Bartok the Magnificent,3,25,-1.0
+1585,602,2019-02-11 11:54:32,gold standard,timeRange,seven AM,37,45,-1.0
+1586,603,2019-02-11 11:54:32,gold standard,object_type,movie schedule,11,25,-1.0
+1587,604,2019-02-11 11:54:32,gold standard,movie_name,JLA Adventures: Trapped In Time,14,45,-1.0
+1588,605,2019-02-11 11:54:32,gold standard,movie_name,The Fox and the Child,8,29,-1.0
+1589,605,2019-02-11 11:54:32,gold standard,object_location_type,cinema,46,52,-1.0
+1590,606,2019-02-11 11:54:32,gold standard,object_type,schedule,12,20,-1.0
+1591,606,2019-02-11 11:54:32,gold standard,movie_name,Rat Rod Rockers,25,40,-1.0
+1592,607,2019-02-11 11:54:32,gold standard,movie_name,Any Which Way You Can,3,24,-1.0
+1593,607,2019-02-11 11:54:32,gold standard,timeRange,in 15 seconds,33,46,-1.0
+1594,608,2019-02-11 11:54:32,gold standard,movie_name,The Portrait of a Lady,14,36,-1.0
+1595,608,2019-02-11 11:54:32,gold standard,spatial_relation,nearest,44,51,-1.0
+1596,608,2019-02-11 11:54:32,gold standard,object_location_type,cinema,52,58,-1.0
+1597,609,2019-02-11 11:54:32,gold standard,movie_name,The Prime Ministers: The Pioneers,16,49,-1.0
+1598,610,2019-02-11 11:54:32,gold standard,object_location_type,movie theatre,19,32,-1.0
+1599,610,2019-02-11 11:54:32,gold standard,movie_name,The Crooked Web,41,56,-1.0
+1600,610,2019-02-11 11:54:32,gold standard,spatial_relation,closest,57,64,-1.0
+1601,611,2019-02-11 11:54:32,gold standard,movie_name,While the Sun Shines,14,34,-1.0
+1602,611,2019-02-11 11:54:32,gold standard,spatial_relation,closest,42,49,-1.0
+1603,611,2019-02-11 11:54:32,gold standard,object_location_type,movie house,50,61,-1.0
+1604,612,2019-02-11 11:54:32,gold standard,movie_name,Those Kids from Town,14,34,-1.0
+1605,613,2019-02-11 11:54:32,gold standard,object_type,schedule,9,17,-1.0
+1606,613,2019-02-11 11:54:32,gold standard,movie_name,The Comedian,22,34,-1.0
+1607,613,2019-02-11 11:54:32,gold standard,location_name,Santikos Theatres,38,55,-1.0
+1608,614,2019-02-11 11:54:32,gold standard,object_type,movie schedules,13,28,-1.0
+1609,614,2019-02-11 11:54:32,gold standard,location_name,theaters,45,53,-1.0
+1610,615,2019-02-11 11:54:32,gold standard,movie_type,movies,13,19,-1.0
+1611,615,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighbourhood,28,48,-1.0
+1612,616,2019-02-11 11:54:32,gold standard,movie_name,Without Witness,3,18,-1.0
+1613,616,2019-02-11 11:54:32,gold standard,timeRange,twenty two hours from now,27,52,-1.0
+1614,617,2019-02-11 11:54:32,gold standard,movie_type,animated movies,7,22,-1.0
+1615,617,2019-02-11 11:54:32,gold standard,spatial_relation,in the area,23,34,-1.0
+1616,617,2019-02-11 11:54:32,gold standard,timeRange,dinner,39,45,-1.0
+1617,618,2019-02-11 11:54:32,gold standard,movie_name,I Dream of Jeanie,14,31,-1.0
+1618,618,2019-02-11 11:54:32,gold standard,object_location_type,movie theatre,37,50,-1.0
+1619,619,2019-02-11 11:54:32,gold standard,movie_name,Ellis Island Revisited,10,32,-1.0
+1620,619,2019-02-11 11:54:32,gold standard,timeRange,in 1 minute,33,44,-1.0
+1621,620,2019-02-11 11:54:32,gold standard,movie_type,animated movies,7,22,-1.0
+1622,620,2019-02-11 11:54:32,gold standard,location_name,MJR Theatres,26,38,-1.0
+1623,621,2019-02-11 11:54:32,gold standard,object_type,schedule,12,20,-1.0
+1624,621,2019-02-11 11:54:32,gold standard,movie_name,The Oblong Box,25,39,-1.0
+1625,622,2019-02-11 11:54:32,gold standard,movie_type,movies,32,38,-1.0
+1626,622,2019-02-11 11:54:32,gold standard,spatial_relation,in the area,47,58,-1.0
+1627,623,2019-02-11 11:54:32,gold standard,movie_name,What a Wonderful Place,3,25,-1.0
+1628,623,2019-02-11 11:54:32,gold standard,location_name,Cinemark Theatres,37,54,-1.0
+1629,624,2019-02-11 11:54:32,gold standard,spatial_relation,closest,9,16,-1.0
+1630,624,2019-02-11 11:54:32,gold standard,object_location_type,movie theatre,17,30,-1.0
+1631,624,2019-02-11 11:54:32,gold standard,movie_name,Boycott,42,49,-1.0
+1632,625,2019-02-11 11:54:32,gold standard,movie_name,DOA: Dead or Alive,14,32,-1.0
+1633,625,2019-02-11 11:54:32,gold standard,location_name,Loews Cineplex Entertainment,36,64,-1.0
+1634,626,2019-02-11 11:54:32,gold standard,movie_name,The Nightmare,3,16,-1.0
+1635,626,2019-02-11 11:54:32,gold standard,timeRange,six hours from now,25,43,-1.0
+1636,626,2019-02-11 11:54:32,gold standard,spatial_relation,nearest,51,58,-1.0
+1637,626,2019-02-11 11:54:32,gold standard,object_location_type,cinema,59,65,-1.0
+1638,627,2019-02-11 11:54:32,gold standard,spatial_relation,nearest,12,19,-1.0
+1639,627,2019-02-11 11:54:32,gold standard,object_location_type,movie house,20,31,-1.0
+1640,627,2019-02-11 11:54:32,gold standard,movie_name,Window Connection,37,54,-1.0
+1641,627,2019-02-11 11:54:32,gold standard,timeRange,lunch,66,71,-1.0
+1642,628,2019-02-11 11:54:32,gold standard,movie_name,Patrick Still Lives,3,22,-1.0
+1643,628,2019-02-11 11:54:32,gold standard,location_name,AMC Theaters,34,46,-1.0
+1644,629,2019-02-11 11:54:32,gold standard,object_type,movie schedules,9,24,-1.0
+1645,629,2019-02-11 11:54:32,gold standard,location_name,Wanda Group,33,44,-1.0
+1646,630,2019-02-11 11:54:32,gold standard,object_type,movie schedule,12,26,-1.0
+1647,630,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,27,33,-1.0
+1648,631,2019-02-11 11:54:32,gold standard,object_type,schedule,9,17,-1.0
+1649,631,2019-02-11 11:54:32,gold standard,location_name,Douglas Theatre Company,25,48,-1.0
+1650,632,2019-02-11 11:54:32,gold standard,movie_type,movies,12,18,-1.0
+1651,632,2019-02-11 11:54:32,gold standard,location_name,Harkins Theatres,22,38,-1.0
+1652,633,2019-02-11 11:54:32,gold standard,movie_type,movies,5,11,-1.0
+1653,633,2019-02-11 11:54:32,gold standard,location_name,Star Theatres,15,28,-1.0
+1654,634,2019-02-11 11:54:32,gold standard,object_type,movie schedule,9,23,-1.0
+1655,635,2019-02-11 11:54:32,gold standard,object_type,movie times,14,25,-1.0
+1656,636,2019-02-11 11:54:32,gold standard,movie_name,Medal for the General,14,35,-1.0
+1657,637,2019-02-11 11:54:32,gold standard,object_type,times,14,19,-1.0
+1658,637,2019-02-11 11:54:32,gold standard,movie_type,movies,24,30,-1.0
+1659,637,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighbourhood,31,51,-1.0
+1660,638,2019-02-11 11:54:32,gold standard,object_type,movie schedules,15,30,-1.0
+1661,638,2019-02-11 11:54:32,gold standard,location_name,Speakeasy Theaters,35,53,-1.0
+1662,639,2019-02-11 11:54:32,gold standard,movie_type,animated movies,5,20,-1.0
+1663,639,2019-02-11 11:54:32,gold standard,spatial_relation,close by,21,29,-1.0
+1664,640,2019-02-11 11:54:32,gold standard,movie_name,American Primitive,3,21,-1.0
+1665,640,2019-02-11 11:54:32,gold standard,location_name,Santikos Theatres,33,50,-1.0
+1666,641,2019-02-11 11:54:32,gold standard,object_type,movie schedules,13,28,-1.0
+1667,641,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighborhood,29,48,-1.0
+1668,642,2019-02-11 11:54:32,gold standard,object_type,schedule,10,18,-1.0
+1669,642,2019-02-11 11:54:32,gold standard,location_name,Bow Tie Cinemas,23,38,-1.0
+1670,643,2019-02-11 11:54:32,gold standard,movie_name,Snowbound,22,31,-1.0
+1671,643,2019-02-11 11:54:32,gold standard,spatial_relation,closest,39,46,-1.0
+1672,643,2019-02-11 11:54:32,gold standard,object_location_type,movie theatre,47,60,-1.0
+1673,644,2019-02-11 11:54:32,gold standard,object_type,movie times,13,24,-1.0
+1674,644,2019-02-11 11:54:32,gold standard,location_name,Caribbean Cinemas,28,45,-1.0
+1675,645,2019-02-11 11:54:32,gold standard,movie_type,films,7,12,-1.0
+1676,645,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighborhood,13,32,-1.0
+1677,646,2019-02-11 11:54:32,gold standard,object_type,movie schedules,9,24,-1.0
+1678,646,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighborhood,25,44,-1.0
+1679,647,2019-02-11 11:54:32,gold standard,spatial_relation,nearest,12,19,-1.0
+1680,647,2019-02-11 11:54:32,gold standard,object_location_type,movie house,20,31,-1.0
+1681,647,2019-02-11 11:54:32,gold standard,movie_type,films,48,53,-1.0
+1682,648,2019-02-11 11:54:32,gold standard,movie_type,movies,5,11,-1.0
+1683,648,2019-02-11 11:54:32,gold standard,timeRange,now,24,27,-1.0
+1684,648,2019-02-11 11:54:32,gold standard,spatial_relation,closest,35,42,-1.0
+1685,648,2019-02-11 11:54:32,gold standard,object_location_type,cinema,43,49,-1.0
+1686,649,2019-02-11 11:54:32,gold standard,movie_name,Rumor Has It,3,15,-1.0
+1687,650,2019-02-11 11:54:32,gold standard,location_name,Speakeasy Theaters,17,35,-1.0
+1688,650,2019-02-11 11:54:32,gold standard,object_type,movie times,36,47,-1.0
+1689,651,2019-02-11 11:54:32,gold standard,movie_name,The Outer Space Connection,8,34,-1.0
+1690,651,2019-02-11 11:54:32,gold standard,spatial_relation,nearest,50,57,-1.0
+1691,651,2019-02-11 11:54:32,gold standard,object_location_type,cinema,58,64,-1.0
+1692,652,2019-02-11 11:54:32,gold standard,object_type,movie times,9,20,-1.0
+1693,652,2019-02-11 11:54:32,gold standard,location_name,Harkins Theatres,24,40,-1.0
+1694,653,2019-02-11 11:54:32,gold standard,movie_type,films,9,14,-1.0
+1695,653,2019-02-11 11:54:32,gold standard,location_name,Century Theatres,18,34,-1.0
+1696,654,2019-02-11 11:54:32,gold standard,movie_type,animated movies,9,24,-1.0
+1697,654,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighbourhood,33,53,-1.0
+1698,655,2019-02-11 11:54:32,gold standard,movie_name,Fear Chamber,14,26,-1.0
+1699,656,2019-02-11 11:54:32,gold standard,location_name,Southern Theatres,8,25,-1.0
+1700,656,2019-02-11 11:54:32,gold standard,object_type,movie times,26,37,-1.0
+1701,657,2019-02-11 11:54:32,gold standard,movie_name,The Unnaturals,3,17,-1.0
+1702,657,2019-02-11 11:54:32,gold standard,timeRange,13,29,31,-1.0
+1703,658,2019-02-11 11:54:32,gold standard,movie_name,No Time to Be Young,3,22,-1.0
+1704,658,2019-02-11 11:54:32,gold standard,location_name,AMC Theaters,34,46,-1.0
+1705,659,2019-02-11 11:54:32,gold standard,object_type,movie schedules,9,24,-1.0
+1706,659,2019-02-11 11:54:32,gold standard,location_name,Regal Entertainment Group,29,54,-1.0
+1707,660,2019-02-11 11:54:32,gold standard,movie_name,Shattered Image,14,29,-1.0
+1708,661,2019-02-11 11:54:32,gold standard,object_type,schedule,9,17,-1.0
+1709,661,2019-02-11 11:54:32,gold standard,location_name,Star Theatres,21,34,-1.0
+1710,662,2019-02-11 11:54:32,gold standard,movie_name,I Think I Do,5,17,-1.0
+1711,662,2019-02-11 11:54:32,gold standard,timeRange,7 PM,32,36,-1.0
+1712,663,2019-02-11 11:54:32,gold standard,object_type,schedule,12,20,-1.0
+1713,663,2019-02-11 11:54:32,gold standard,location_name,ArcLight Hollywood,25,43,-1.0
+1714,663,2019-02-11 11:54:32,gold standard,movie_type,animated movies,53,68,-1.0
+1715,664,2019-02-11 11:54:32,gold standard,object_type,schedule,9,17,-1.0
+1716,664,2019-02-11 11:54:32,gold standard,movie_name,Great Mail Robbery,22,40,-1.0
+1717,665,2019-02-11 11:54:32,gold standard,movie_type,movies,12,18,-1.0
+1718,665,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighborhood,19,38,-1.0
+1719,666,2019-02-11 11:54:32,gold standard,movie_type,movies,5,11,-1.0
+1720,666,2019-02-11 11:54:32,gold standard,spatial_relation,close by,24,32,-1.0
+1721,667,2019-02-11 11:54:32,gold standard,movie_name,The Two Gladiators,3,21,-1.0
+1722,668,2019-02-11 11:54:32,gold standard,object_type,movie schedule,11,25,-1.0
+1723,668,2019-02-11 11:54:32,gold standard,location_name,Great Escape Theatres,30,51,-1.0
+1724,669,2019-02-11 11:54:32,gold standard,object_type,movie schedule,9,23,-1.0
+1725,669,2019-02-11 11:54:32,gold standard,spatial_relation,close by,24,32,-1.0
+1726,670,2019-02-11 11:54:32,gold standard,movie_name,Outcast,14,21,-1.0
+1727,671,2019-02-11 11:54:32,gold standard,object_type,schedule,12,20,-1.0
+1728,671,2019-02-11 11:54:32,gold standard,movie_name,The Great Gildersleeve,30,52,-1.0
+1729,671,2019-02-11 11:54:32,gold standard,object_location_type,movie house,58,69,-1.0
+1730,672,2019-02-11 11:54:32,gold standard,object_type,times,7,12,-1.0
+1731,672,2019-02-11 11:54:32,gold standard,movie_name,A Yiddish World Remembered,17,43,-1.0
+1732,672,2019-02-11 11:54:32,gold standard,location_name,Dipson Theatres,47,62,-1.0
+1733,673,2019-02-11 11:54:32,gold standard,object_type,movie schedules,9,24,-1.0
+1734,673,2019-02-11 11:54:32,gold standard,location_name,Goodrich Quality Theaters,28,53,-1.0
+1735,674,2019-02-11 11:54:32,gold standard,object_type,movie schedule,12,26,-1.0
+1736,674,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighbourhood,27,47,-1.0
+1737,675,2019-02-11 11:54:32,gold standard,object_type,movie times,12,23,-1.0
+1738,675,2019-02-11 11:54:32,gold standard,movie_type,films,28,33,-1.0
+1739,675,2019-02-11 11:54:32,gold standard,spatial_relation,nearby,35,41,-1.0
+1740,676,2019-02-11 11:54:32,gold standard,object_type,movie times,9,20,-1.0
+1741,676,2019-02-11 11:54:32,gold standard,movie_type,animated movies,25,40,-1.0
+1742,676,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighbourhood,41,61,-1.0
+1743,677,2019-02-11 11:54:32,gold standard,movie_name,The Eye – Infinity,3,21,-1.0
+1744,677,2019-02-11 11:54:32,gold standard,location_name,General Cinema Corporation,33,59,-1.0
+1745,678,2019-02-11 11:54:32,gold standard,movie_name,Super Sweet 16: The Movie,30,55,-1.0
+1746,679,2019-02-11 11:54:32,gold standard,movie_name,We Are Northern Lights,3,25,-1.0
+1747,679,2019-02-11 11:54:32,gold standard,object_location_type,movie theatre,41,54,-1.0
+1748,680,2019-02-11 11:54:32,gold standard,object_type,times,5,10,-1.0
+1749,680,2019-02-11 11:54:32,gold standard,movie_name,The Young Swordsman,16,35,-1.0
+1750,680,2019-02-11 11:54:32,gold standard,object_location_type,cinema,53,59,-1.0
+1751,681,2019-02-11 11:54:32,gold standard,movie_name,Sexy Dance 2,9,21,-1.0
+1752,681,2019-02-11 11:54:32,gold standard,object_type,times,21,26,-1.0
+1753,681,2019-02-11 11:54:32,gold standard,spatial_relation,closest,35,42,-1.0
+1754,681,2019-02-11 11:54:32,gold standard,object_location_type,movie house,43,54,-1.0
+1755,682,2019-02-11 11:54:32,gold standard,spatial_relation,close by,14,22,-1.0
+1756,682,2019-02-11 11:54:32,gold standard,movie_type,animated movies,23,38,-1.0
+1757,683,2019-02-11 11:54:32,gold standard,object_type,movie schedules,0,15,-1.0
+1758,683,2019-02-11 11:54:32,gold standard,spatial_relation,close by,16,24,-1.0
+1759,683,2019-02-11 11:54:32,gold standard,movie_type,animated movies,29,44,-1.0
+1760,684,2019-02-11 11:54:32,gold standard,movie_type,films,5,10,-1.0
+1761,684,2019-02-11 11:54:32,gold standard,spatial_relation,close by,23,31,-1.0
+1762,685,2019-02-11 11:54:32,gold standard,object_type,movie schedule,9,23,-1.0
+1763,685,2019-02-11 11:54:32,gold standard,spatial_relation,in the area,24,35,-1.0
+1764,686,2019-02-11 11:54:32,gold standard,movie_name,Cowboy Canteen,3,17,-1.0
+1765,687,2019-02-11 11:54:32,gold standard,movie_name,Rare Birds,3,13,-1.0
+1766,687,2019-02-11 11:54:32,gold standard,spatial_relation,nearest,29,36,-1.0
+1767,687,2019-02-11 11:54:32,gold standard,object_location_type,movie theatre,37,50,-1.0
+1768,687,2019-02-11 11:54:32,gold standard,timeRange,noon,54,58,-1.0
+1769,688,2019-02-11 11:54:32,gold standard,object_type,movie times,13,24,-1.0
+1770,689,2019-02-11 11:54:32,gold standard,object_type,movie schedules,21,36,-1.0
+1771,690,2019-02-11 11:54:32,gold standard,object_type,movie schedule,9,23,-1.0
+1772,690,2019-02-11 11:54:32,gold standard,location_name,North American Cinemas,28,50,-1.0
+1773,690,2019-02-11 11:54:32,gold standard,timeRange,in eleven seconds,51,68,-1.0
+1774,691,2019-02-11 11:54:32,gold standard,spatial_relation,nearest,9,16,-1.0
+1775,691,2019-02-11 11:54:32,gold standard,object_location_type,cinema,17,23,-1.0
+1776,691,2019-02-11 11:54:32,gold standard,movie_type,movies,29,35,-1.0
+1777,692,2019-02-11 11:54:32,gold standard,object_type,movie times,13,24,-1.0
+1778,693,2019-02-11 11:54:32,gold standard,object_type,times,13,18,-1.0
+1779,693,2019-02-11 11:54:32,gold standard,movie_name,The Gingerbread Man,23,42,-1.0
+1780,694,2019-02-11 11:54:32,gold standard,movie_type,films,5,10,-1.0
+1781,694,2019-02-11 11:54:32,gold standard,spatial_relation,close by,23,31,-1.0
+1782,695,2019-02-11 11:54:32,gold standard,object_location_type,cinema,7,13,-1.0
+1783,695,2019-02-11 11:54:32,gold standard,movie_name,The Spirit of Youth,22,41,-1.0
+1784,696,2019-02-11 11:54:32,gold standard,object_type,movie times,13,24,-1.0
+1785,696,2019-02-11 11:54:32,gold standard,movie_type,animated movies,29,44,-1.0
+1786,696,2019-02-11 11:54:32,gold standard,spatial_relation,in the neighbourhood,45,65,-1.0
+1787,697,2019-02-11 11:54:32,gold standard,object_type,movie schedule,11,25,-1.0
+1788,697,2019-02-11 11:54:32,gold standard,location_name,Great Escape Theatres,29,50,-1.0
+1789,698,2019-02-11 11:54:32,gold standard,object_type,times,9,14,-1.0
+1790,698,2019-02-11 11:54:32,gold standard,movie_name,Cheers for Miss Bishop,19,41,-1.0
+1791,698,2019-02-11 11:54:32,gold standard,location_name,Dipson Theatres,45,60,-1.0
+1792,699,2019-02-11 11:54:32,gold standard,movie_name,Married to the Enemy 2,14,36,-1.0
+1793,699,2019-02-11 11:54:32,gold standard,object_location_type,cinema,42,48,-1.0

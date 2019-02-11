@@ -65,7 +65,8 @@ def train(system_corpus: src.typ.SystemCorpus) -> src.typ.System:
         except exceptions.FailedPrecondition:
             print('Failed to create intent {}. Skipping'.format(intent))
 
-    sleep(10)  # giving DialogFlow time to train
+    print('Sleeping for 30 seconds to give DialogFlow time to train.')
+    sleep(30)
     return src.typ.System(system_corpus.system.name, system_corpus.corpus, system_corpus.system.timestamp, ())
 
 

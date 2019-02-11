@@ -2,11 +2,12 @@ import logging
 import os
 import typing
 from pathlib import Path
-from typing import Iterable, Optional
+from typing import Iterable, Optional, List
 
 import oyaml as yaml
 import rasa_nlu.training_data
 from sklearn.metrics import f1_score
+from src.tokenization import FullTokenizer
 
 import src.dataset
 import src.results
@@ -142,8 +143,19 @@ def update_summary():
     write_summary(summary)
 
 
+def convert_entities_bert_tokens(entities: dict) -> List[str]:
+    tokenizer = FullTokenizer()
+
+
 def evaluate(system_corpus: tp.SystemCorpus):
     """The main function of this module. This does a new run and updates the corresponding files."""
-    iterate(write_classifications(system_corpus))
+    do_eval_entities = True
+    if not do_eval_entities:
+        iterate(write_classifications(system_corpus))
+    else:
+        for classification in write_classifications(system_corpus):
+            entities = classification.response.entities
+            print(entities)
+            # goal: create list like done in BERT eval
     write_statistics(system_corpus)
     update_summary()

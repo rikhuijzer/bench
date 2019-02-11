@@ -44,4 +44,5 @@ def get_response(query: src.typ.Query) -> src.typ.Response:
     js = r.json()
     confidence = round(float(js['intent']['confidence']), 3)
     entities = js['entities'] if 'entities' in js else []
+    # entities example: [{'start': 38, 'end': 43, 'value': '12.04', 'entity': 'UbuntuVersion', 'confidence': 0.8833244466625951, 'extractor': 'ner_crf'}]
     return src.typ.Response(js['intent']['name'], confidence, entities)

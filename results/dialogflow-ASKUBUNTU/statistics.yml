@@ -1,0 +1,6 @@
+system name: dialogflow
+corpus: Corpus.ASKUBUNTU
+f1 intent scores:
+  micro: '0.862'
+  macro: '0.828'
+  weighted: '0.879'

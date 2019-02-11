@@ -1,0 +1,6 @@
+system name: dialogflow
+corpus: Corpus.CHATBOT
+f1 intent scores:
+  micro: '0.981'
+  macro: '0.657'
+  weighted: '0.986'

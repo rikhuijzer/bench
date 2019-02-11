@@ -1,0 +1,98 @@
+id,intent_id,timestamp,source,entity,value,start,end,confidence
+0,254,2019-02-11 11:35:45,gold standard,SoftwareName,Word,34,38,-1.0
+1,257,2019-02-11 11:35:45,gold standard,SoftwareName,iTunes,24,30,-1.0
+2,261,2019-02-11 11:35:45,gold standard,SoftwareName,Project,65,72,-1.0
+3,320,2019-02-11 11:39:25,gold standard,SoftwareName,Word,34,38,-1.0
+4,323,2019-02-11 11:39:25,gold standard,SoftwareName,iTunes,24,30,-1.0
+5,327,2019-02-11 11:39:25,gold standard,SoftwareName,Project,65,72,-1.0
+6,349,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.10,15,20,-1.0
+7,349,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,24,29,-1.0
+8,350,2019-02-11 11:39:25,gold standard,UbuntuVersion,16.04,43,48,-1.0
+9,351,2019-02-11 11:39:25,gold standard,UbuntuVersion,15.04,21,26,-1.0
+10,352,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.10,28,33,-1.0
+11,352,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04,37,42,-1.0
+12,353,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,22,27,-1.0
+13,353,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.10,31,36,-1.0
+14,355,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,15,20,-1.0
+15,355,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.10,24,29,-1.0
+16,356,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.10,20,25,-1.0
+17,356,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.04,38,43,-1.0
+18,357,2019-02-11 11:39:25,gold standard,UbuntuVersion,Lubuntu 15.04,32,45,-1.0
+19,358,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.10,14,19,-1.0
+20,358,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.04,23,28,-1.0
+21,359,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.10,32,37,-1.0
+22,359,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.04,50,55,-1.0
+23,360,2019-02-11 11:39:25,gold standard,UbuntuVersion,Ubuntu 9.10,25,29,-1.0
+24,361,2019-02-11 11:39:25,gold standard,UbuntuVersion,15.10,30,35,-1.0
+25,361,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04,41,46,-1.0
+26,362,2019-02-11 11:39:25,gold standard,UbuntuVersion,Xubuntu 11.10,16,29,-1.0
+27,362,2019-02-11 11:39:25,gold standard,UbuntuVersion,Xubuntu 12.04 LTS?,33,50,-1.0
+28,363,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.10,25,30,-1.0
+29,363,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,34,39,-1.0
+30,364,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,24,29,-1.0
+31,364,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04,33,38,-1.0
+32,365,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.10,26,31,-1.0
+33,365,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.04,35,40,-1.0
+34,366,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,13,18,-1.0
+35,366,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.10,22,27,-1.0
+36,367,2019-02-11 11:39:25,gold standard,UbuntuVersion,6.06,21,25,-1.0
+37,368,2019-02-11 11:39:25,gold standard,UbuntuVersion,10.04,23,28,-1.0
+38,368,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,43,48,-1.0
+39,369,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.10,50,55,-1.0
+40,369,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.10,59,64,-1.0
+41,370,2019-02-11 11:39:25,gold standard,UbuntuVersion,15.04,27,32,-1.0
+42,370,2019-02-11 11:39:25,gold standard,UbuntuVersion,16.04,45,50,-1.0
+43,371,2019-02-11 11:39:25,gold standard,UbuntuVersion,16.04,10,15,-1.0
+44,371,2019-02-11 11:39:25,gold standard,UbuntuVersion,16.04.1,19,26,-1.0
+45,372,2019-02-11 11:39:25,gold standard,UbuntuVersion,9.10,24,28,-1.0
+46,372,2019-02-11 11:39:25,gold standard,UbuntuVersion,10.04,32,37,-1.0
+47,373,2019-02-11 11:39:25,gold standard,UbuntuVersion,13.04,18,23,-1.0
+48,374,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.10,20,25,-1.0
+49,374,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04,31,34,-1.0
+50,375,2019-02-11 11:39:25,gold standard,UbuntuVersion,10.10,15,20,-1.0
+51,375,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.04,24,29,-1.0
+52,376,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,23,28,-1.0
+53,376,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04.1,50,57,-1.0
+54,377,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04LTS,20,28,-1.0
+55,377,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04,32,37,-1.0
+56,378,2019-02-11 11:39:25,gold standard,UbuntuVersion,10.10,8,13,-1.0
+57,378,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.04,17,22,-1.0
+58,379,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04 LTS,20,29,-1.0
+59,379,2019-02-11 11:39:25,gold standard,UbuntuVersion,15.10,33,38,-1.0
+60,379,2019-02-11 11:39:25,gold standard,UbuntuVersion,16.04,42,47,-1.0
+61,380,2019-02-11 11:39:25,gold standard,UbuntuVersion,16.04 LTS,20,29,-1.0
+62,380,2019-02-11 11:39:25,gold standard,UbuntuVersion,16.04.1 LTS,33,44,-1.0
+63,381,2019-02-11 11:39:25,gold standard,UbuntuVersion,10.04,15,20,-1.0
+64,381,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.10,24,29,-1.0
+65,382,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04,28,33,-1.0
+66,382,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04 Beta,45,55,-1.0
+67,383,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04 LTS,35,44,-1.0
+68,383,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04 LTS,48,57,-1.0
+69,384,2019-02-11 11:39:25,gold standard,UbuntuVersion,9.10,13,17,-1.0
+70,384,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.04,21,26,-1.0
+71,385,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,22,27,-1.0
+72,385,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04,31,36,-1.0
+73,387,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,6,11,-1.0
+74,387,2019-02-11 11:39:25,gold standard,UbuntuVersion,10.04,48,53,-1.0
+75,388,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,34,37,-1.0
+76,389,2019-02-11 11:39:25,gold standard,UbuntuVersion,11.04 (32bit),15,28,-1.0
+77,389,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04 (64bit),32,45,-1.0
+78,391,2019-02-11 11:39:25,gold standard,SoftwareName,Unity,3,8,-1.0
+79,395,2019-02-11 11:39:25,gold standard,Printer,Lexmark z600,17,29,-1.0
+80,396,2019-02-11 11:39:25,gold standard,Printer,HP All in one DJ3630,13,33,-1.0
+81,397,2019-02-11 11:39:25,gold standard,UbuntuVersion,15.10,39,44,-1.0
+82,398,2019-02-11 11:39:25,gold standard,Printer,epson l210,30,40,-1.0
+83,399,2019-02-11 11:39:25,gold standard,Printer,Dell 2150cdn,17,29,-1.0
+84,400,2019-02-11 11:39:25,gold standard,Printer,Epson XP-424,11,23,-1.0
+85,401,2019-02-11 11:39:25,gold standard,Printer,EPSON L355,11,21,-1.0
+86,401,2019-02-11 11:39:25,gold standard,UbuntuVersion,14.04,32,37,-1.0
+87,402,2019-02-11 11:39:25,gold standard,Printer,HP F4280,21,29,-1.0
+88,403,2019-02-11 11:39:25,gold standard,Printer,Brother DCP-8110DN,15,33,-1.0
+89,404,2019-02-11 11:39:25,gold standard,Printer,Canon MF8040Cn,17,31,-1.0
+90,404,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,50,55,-1.0
+91,405,2019-02-11 11:39:25,gold standard,Printer,Canon MF8000C,17,30,-1.0
+92,405,2019-02-11 11:39:25,gold standard,UbuntuVersion,15.10,49,54,-1.0
+93,406,2019-02-11 11:39:25,gold standard,Printer,Canon LBP330,15,27,-1.0
+94,406,2019-02-11 11:39:25,gold standard,UbuntuVersion,Lts 16.04,31,40,-1.0
+95,407,2019-02-11 11:39:25,gold standard,Printer,Lexmark X4690,16,29,-1.0
+96,407,2019-02-11 11:39:25,gold standard,UbuntuVersion,12.04,38,43,-1.0

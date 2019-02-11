@@ -319,3 +319,643 @@ id,intent_id,timestamp,source,entity,value,start,end,confidence
 317,435,2018-12-24 14:38:33,gold standard,Printer,Lexmark X4690,16,29,-1.0
 318,435,2018-12-24 14:38:33,gold standard,UbuntuVersion,12.04,38,43,-1.0
 319,435,2018-12-24 14:38:33,classification,UbuntuVersion,12.04,38,43,0.8833244466625951
+320,457,2019-01-24 15:32:10,gold standard,SoftwareName,Word,34,38,-1.0
+321,460,2019-01-24 15:32:10,gold standard,SoftwareName,iTunes,24,30,-1.0
+322,464,2019-01-24 15:32:10,gold standard,SoftwareName,Project,65,72,-1.0
+323,486,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.10,15,20,-1.0
+324,486,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,24,29,-1.0
+325,486,2019-01-24 15:32:10,classification,UbuntuVersion,11.10,15,20,0.8833093090902475
+326,486,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,24,29,0.9393545931131472
+327,487,2019-01-24 15:32:10,gold standard,UbuntuVersion,16.04,43,48,-1.0
+328,488,2019-01-24 15:32:10,gold standard,UbuntuVersion,15.04,21,26,-1.0
+329,488,2019-01-24 15:32:10,classification,UbuntuVersion,15.04,21,26,0.6330931828369298
+330,489,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.10,28,33,-1.0
+331,489,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04,37,42,-1.0
+332,489,2019-01-24 15:32:10,classification,UbuntuVersion,13.10,28,33,0.7635475332603893
+333,489,2019-01-24 15:32:10,classification,UbuntuVersion,14.04,37,42,0.8678418199662774
+334,490,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,22,27,-1.0
+335,490,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.10,31,36,-1.0
+336,490,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,22,27,0.9811389261149793
+337,490,2019-01-24 15:32:10,classification,UbuntuVersion,13.10,31,36,0.8183297354917703
+338,492,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,15,20,-1.0
+339,492,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.10,24,29,-1.0
+340,492,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,15,20,0.8902237877945234
+341,492,2019-01-24 15:32:10,classification,UbuntuVersion,13.10,24,29,0.7051773448980975
+342,493,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.10,20,25,-1.0
+343,493,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.04,38,43,-1.0
+344,493,2019-01-24 15:32:10,classification,UbuntuVersion,13.10,20,25,0.6856559976987374
+345,493,2019-01-24 15:32:10,classification,UbuntuVersion,13.04,38,43,0.8567903151990192
+346,494,2019-01-24 15:32:10,gold standard,UbuntuVersion,Lubuntu 15.04,32,45,-1.0
+347,494,2019-01-24 15:32:10,classification,UbuntuVersion,15.04,40,45,0.7889642203747447
+348,495,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.10,14,19,-1.0
+349,495,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.04,23,28,-1.0
+350,495,2019-01-24 15:32:10,classification,UbuntuVersion,12.10,14,19,0.9728423633547238
+351,495,2019-01-24 15:32:10,classification,UbuntuVersion,13.04,23,28,0.8673731545181138
+352,496,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.10,32,37,-1.0
+353,496,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.04,50,55,-1.0
+354,496,2019-01-24 15:32:10,classification,UbuntuVersion,11.10,32,37,0.8335514275444292
+355,496,2019-01-24 15:32:10,classification,UbuntuVersion,11.04,50,55,0.9272716168935939
+356,497,2019-01-24 15:32:10,gold standard,UbuntuVersion,Ubuntu 9.10,25,29,-1.0
+357,497,2019-01-24 15:32:10,classification,UbuntuVersion,9.10,25,29,0.7466501185039969
+358,498,2019-01-24 15:32:10,gold standard,UbuntuVersion,15.10,30,35,-1.0
+359,498,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04,41,46,-1.0
+360,498,2019-01-24 15:32:10,classification,UbuntuVersion,15.10,30,35,0.8225136515886624
+361,498,2019-01-24 15:32:10,classification,UbuntuVersion,14.04,41,46,0.6590601350385122
+362,499,2019-01-24 15:32:10,gold standard,UbuntuVersion,Xubuntu 11.10,16,29,-1.0
+363,499,2019-01-24 15:32:10,gold standard,UbuntuVersion,Xubuntu 12.04 LTS?,33,50,-1.0
+364,499,2019-01-24 15:32:10,classification,UbuntuVersion,11.10,24,29,0.883408997784774
+365,499,2019-01-24 15:32:10,classification,UbuntuVersion,12.04 lts,41,50,0.8479960488577309
+366,500,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.10,25,30,-1.0
+367,500,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,34,39,-1.0
+368,500,2019-01-24 15:32:10,classification,UbuntuVersion,11.10,25,30,0.8831160481161974
+369,500,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,34,39,0.8604156945344048
+370,501,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,24,29,-1.0
+371,501,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04,33,38,-1.0
+372,501,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,24,29,0.8904673667122083
+373,501,2019-01-24 15:32:10,classification,UbuntuVersion,14.04,33,38,0.9280629506688145
+374,502,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.10,26,31,-1.0
+375,502,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.04,35,40,-1.0
+376,502,2019-01-24 15:32:10,classification,UbuntuVersion,12.10,26,31,0.9953112933529992
+377,502,2019-01-24 15:32:10,classification,UbuntuVersion,13.04,35,40,0.8673799314493397
+378,503,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,13,18,-1.0
+379,503,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.10,22,27,-1.0
+380,503,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,13,18,0.8903716216757226
+381,503,2019-01-24 15:32:10,classification,UbuntuVersion,12.10,22,27,0.9597897234139975
+382,504,2019-01-24 15:32:10,gold standard,UbuntuVersion,6.06,21,25,-1.0
+383,505,2019-01-24 15:32:10,gold standard,UbuntuVersion,10.04,23,28,-1.0
+384,505,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,43,48,-1.0
+385,505,2019-01-24 15:32:10,classification,UbuntuVersion,10.04,23,28,0.5640836402134487
+386,505,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,43,48,0.9265859724516758
+387,506,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.10,50,55,-1.0
+388,506,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.10,59,64,-1.0
+389,506,2019-01-24 15:32:10,classification,UbuntuVersion,13.10,50,55,0.7636279683085064
+390,506,2019-01-24 15:32:10,classification,UbuntuVersion,14.10,59,64,0.9065484212214311
+391,507,2019-01-24 15:32:10,gold standard,UbuntuVersion,15.04,27,32,-1.0
+392,507,2019-01-24 15:32:10,gold standard,UbuntuVersion,16.04,45,50,-1.0
+393,507,2019-01-24 15:32:10,classification,UbuntuVersion,15.04,27,32,0.9267910205939
+394,508,2019-01-24 15:32:10,gold standard,UbuntuVersion,16.04,10,15,-1.0
+395,508,2019-01-24 15:32:10,gold standard,UbuntuVersion,16.04.1,19,26,-1.0
+396,508,2019-01-24 15:32:10,classification,UbuntuVersion,16.04,10,15,0.5736771892943019
+397,509,2019-01-24 15:32:10,gold standard,UbuntuVersion,9.10,24,28,-1.0
+398,509,2019-01-24 15:32:10,gold standard,UbuntuVersion,10.04,32,37,-1.0
+399,509,2019-01-24 15:32:10,classification,UbuntuVersion,9.10,24,28,0.7282040308808309
+400,509,2019-01-24 15:32:10,classification,UbuntuVersion,10.04,32,37,0.6662000395675596
+401,510,2019-01-24 15:32:10,gold standard,UbuntuVersion,13.04,18,23,-1.0
+402,510,2019-01-24 15:32:10,classification,UbuntuVersion,13.04,18,23,0.7699894189974669
+403,511,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.10,20,25,-1.0
+404,511,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04,31,34,-1.0
+405,511,2019-01-24 15:32:10,classification,UbuntuVersion,12.10,20,25,0.9699683574322333
+406,511,2019-01-24 15:32:10,classification,UbuntuVersion,14.04,29,34,0.9278343947956799
+407,512,2019-01-24 15:32:10,gold standard,UbuntuVersion,10.10,15,20,-1.0
+408,512,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.04,24,29,-1.0
+409,512,2019-01-24 15:32:10,classification,UbuntuVersion,10.10,15,20,0.7006719766227123
+410,512,2019-01-24 15:32:10,classification,UbuntuVersion,11.04,24,29,0.8665306723768228
+411,513,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,23,28,-1.0
+412,513,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04.1,50,57,-1.0
+413,514,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04LTS,20,28,-1.0
+414,514,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04,32,37,-1.0
+415,514,2019-01-24 15:32:10,classification,UbuntuVersion,14.04,32,37,0.9277301514819927
+416,515,2019-01-24 15:32:10,gold standard,UbuntuVersion,10.10,8,13,-1.0
+417,515,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.04,17,22,-1.0
+418,515,2019-01-24 15:32:10,classification,UbuntuVersion,10.10,8,13,0.7225421541403821
+419,515,2019-01-24 15:32:10,classification,UbuntuVersion,11.04,17,22,0.9265270020784773
+420,516,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04 LTS,20,29,-1.0
+421,516,2019-01-24 15:32:10,gold standard,UbuntuVersion,15.10,33,38,-1.0
+422,516,2019-01-24 15:32:10,gold standard,UbuntuVersion,16.04,42,47,-1.0
+423,516,2019-01-24 15:32:10,classification,UbuntuVersion,14.04 lts,20,29,0.5827035662506108
+424,516,2019-01-24 15:32:10,classification,UbuntuVersion,15.10,33,38,0.8659704109491764
+425,517,2019-01-24 15:32:10,gold standard,UbuntuVersion,16.04 LTS,20,29,-1.0
+426,517,2019-01-24 15:32:10,gold standard,UbuntuVersion,16.04.1 LTS,33,44,-1.0
+427,518,2019-01-24 15:32:10,gold standard,UbuntuVersion,10.04,15,20,-1.0
+428,518,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.10,24,29,-1.0
+429,518,2019-01-24 15:32:10,classification,UbuntuVersion,10.04,15,20,0.5615731597518225
+430,518,2019-01-24 15:32:10,classification,UbuntuVersion,11.10,24,29,0.9127923498663192
+431,519,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04,28,33,-1.0
+432,519,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04 Beta,45,55,-1.0
+433,519,2019-01-24 15:32:10,classification,UbuntuVersion,14.04,28,33,0.8580984578394123
+434,520,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04 LTS,35,44,-1.0
+435,520,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04 LTS,48,57,-1.0
+436,520,2019-01-24 15:32:10,classification,UbuntuVersion,12.04 lts,35,44,0.9017935299445141
+437,520,2019-01-24 15:32:10,classification,UbuntuVersion,14.04 lts,48,57,0.9188044088155363
+438,521,2019-01-24 15:32:10,gold standard,UbuntuVersion,9.10,13,17,-1.0
+439,521,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.04,21,26,-1.0
+440,521,2019-01-24 15:32:10,classification,UbuntuVersion,9.10,13,17,0.7011427598200021
+441,521,2019-01-24 15:32:10,classification,UbuntuVersion,11.04,21,26,0.9265237409958083
+442,522,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,22,27,-1.0
+443,522,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04,31,36,-1.0
+444,522,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,22,27,0.9811396701217685
+445,522,2019-01-24 15:32:10,classification,UbuntuVersion,14.04,31,36,0.8674644820888373
+446,524,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,6,11,-1.0
+447,524,2019-01-24 15:32:10,gold standard,UbuntuVersion,10.04,48,53,-1.0
+448,525,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,34,37,-1.0
+449,525,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,32,37,0.0
+450,526,2019-01-24 15:32:10,gold standard,UbuntuVersion,11.04 (32bit),15,28,-1.0
+451,526,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04 (64bit),32,45,-1.0
+452,526,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,32,37,0.8612384057634979
+453,528,2019-01-24 15:32:10,gold standard,SoftwareName,Unity,3,8,-1.0
+454,532,2019-01-24 15:32:10,gold standard,Printer,Lexmark z600,17,29,-1.0
+455,533,2019-01-24 15:32:10,gold standard,Printer,HP All in one DJ3630,13,33,-1.0
+456,534,2019-01-24 15:32:10,gold standard,UbuntuVersion,15.10,39,44,-1.0
+457,534,2019-01-24 15:32:10,classification,UbuntuVersion,15.10,39,44,0.8990144070619922
+458,535,2019-01-24 15:32:10,gold standard,Printer,epson l210,30,40,-1.0
+459,536,2019-01-24 15:32:10,gold standard,Printer,Dell 2150cdn,17,29,-1.0
+460,537,2019-01-24 15:32:10,gold standard,Printer,Epson XP-424,11,23,-1.0
+461,538,2019-01-24 15:32:10,gold standard,Printer,EPSON L355,11,21,-1.0
+462,538,2019-01-24 15:32:10,gold standard,UbuntuVersion,14.04,32,37,-1.0
+463,538,2019-01-24 15:32:10,classification,UbuntuVersion,14.04,32,37,0.9217372078928173
+464,539,2019-01-24 15:32:10,gold standard,Printer,HP F4280,21,29,-1.0
+465,540,2019-01-24 15:32:10,gold standard,Printer,Brother DCP-8110DN,15,33,-1.0
+466,541,2019-01-24 15:32:10,gold standard,Printer,Canon MF8040Cn,17,31,-1.0
+467,541,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,50,55,-1.0
+468,541,2019-01-24 15:32:10,classification,Printer,canon mf8040cn,17,31,0.8903347641191766
+469,541,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,50,55,0.9397796249285583
+470,542,2019-01-24 15:32:10,gold standard,Printer,Canon MF8000C,17,30,-1.0
+471,542,2019-01-24 15:32:10,gold standard,UbuntuVersion,15.10,49,54,-1.0
+472,542,2019-01-24 15:32:10,classification,Printer,canon mf8000c,17,30,0.6860521974756107
+473,542,2019-01-24 15:32:10,classification,UbuntuVersion,15.10,49,54,0.9035834655352799
+474,543,2019-01-24 15:32:10,gold standard,Printer,Canon LBP330,15,27,-1.0
+475,543,2019-01-24 15:32:10,gold standard,UbuntuVersion,Lts 16.04,31,40,-1.0
+476,543,2019-01-24 15:32:10,classification,Printer,canon,15,20,0.49756264486090895
+477,544,2019-01-24 15:32:10,gold standard,Printer,Lexmark X4690,16,29,-1.0
+478,544,2019-01-24 15:32:10,gold standard,UbuntuVersion,12.04,38,43,-1.0
+479,544,2019-01-24 15:32:10,classification,UbuntuVersion,12.04,38,43,0.8833244466625951
+480,566,2019-01-24 15:33:20,gold standard,SoftwareName,Word,34,38,-1.0
+481,569,2019-01-24 15:33:20,gold standard,SoftwareName,iTunes,24,30,-1.0
+482,573,2019-01-24 15:33:20,gold standard,SoftwareName,Project,65,72,-1.0
+483,595,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.10,15,20,-1.0
+484,595,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,24,29,-1.0
+485,595,2019-01-24 15:33:20,classification,UbuntuVersion,11.10,15,20,0.8833093090902475
+486,595,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,24,29,0.9393545931131472
+487,596,2019-01-24 15:33:20,gold standard,UbuntuVersion,16.04,43,48,-1.0
+488,597,2019-01-24 15:33:20,gold standard,UbuntuVersion,15.04,21,26,-1.0
+489,597,2019-01-24 15:33:20,classification,UbuntuVersion,15.04,21,26,0.6330931828369298
+490,598,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.10,28,33,-1.0
+491,598,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04,37,42,-1.0
+492,598,2019-01-24 15:33:20,classification,UbuntuVersion,13.10,28,33,0.7635475332603893
+493,598,2019-01-24 15:33:20,classification,UbuntuVersion,14.04,37,42,0.8678418199662774
+494,599,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,22,27,-1.0
+495,599,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.10,31,36,-1.0
+496,599,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,22,27,0.9811389261149793
+497,599,2019-01-24 15:33:20,classification,UbuntuVersion,13.10,31,36,0.8183297354917703
+498,601,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,15,20,-1.0
+499,601,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.10,24,29,-1.0
+500,601,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,15,20,0.8902237877945234
+501,601,2019-01-24 15:33:20,classification,UbuntuVersion,13.10,24,29,0.7051773448980975
+502,602,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.10,20,25,-1.0
+503,602,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.04,38,43,-1.0
+504,602,2019-01-24 15:33:20,classification,UbuntuVersion,13.10,20,25,0.6856559976987374
+505,602,2019-01-24 15:33:20,classification,UbuntuVersion,13.04,38,43,0.8567903151990192
+506,603,2019-01-24 15:33:20,gold standard,UbuntuVersion,Lubuntu 15.04,32,45,-1.0
+507,603,2019-01-24 15:33:20,classification,UbuntuVersion,15.04,40,45,0.7889642203747447
+508,604,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.10,14,19,-1.0
+509,604,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.04,23,28,-1.0
+510,604,2019-01-24 15:33:20,classification,UbuntuVersion,12.10,14,19,0.9728423633547238
+511,604,2019-01-24 15:33:20,classification,UbuntuVersion,13.04,23,28,0.8673731545181138
+512,605,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.10,32,37,-1.0
+513,605,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.04,50,55,-1.0
+514,605,2019-01-24 15:33:20,classification,UbuntuVersion,11.10,32,37,0.8335514275444292
+515,605,2019-01-24 15:33:20,classification,UbuntuVersion,11.04,50,55,0.9272716168935939
+516,606,2019-01-24 15:33:20,gold standard,UbuntuVersion,Ubuntu 9.10,25,29,-1.0
+517,606,2019-01-24 15:33:20,classification,UbuntuVersion,9.10,25,29,0.7466501185039969
+518,607,2019-01-24 15:33:20,gold standard,UbuntuVersion,15.10,30,35,-1.0
+519,607,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04,41,46,-1.0
+520,607,2019-01-24 15:33:20,classification,UbuntuVersion,15.10,30,35,0.8225136515886624
+521,607,2019-01-24 15:33:20,classification,UbuntuVersion,14.04,41,46,0.6590601350385122
+522,608,2019-01-24 15:33:20,gold standard,UbuntuVersion,Xubuntu 11.10,16,29,-1.0
+523,608,2019-01-24 15:33:20,gold standard,UbuntuVersion,Xubuntu 12.04 LTS?,33,50,-1.0
+524,608,2019-01-24 15:33:20,classification,UbuntuVersion,11.10,24,29,0.883408997784774
+525,608,2019-01-24 15:33:20,classification,UbuntuVersion,12.04 lts,41,50,0.8479960488577309
+526,609,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.10,25,30,-1.0
+527,609,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,34,39,-1.0
+528,609,2019-01-24 15:33:20,classification,UbuntuVersion,11.10,25,30,0.8831160481161974
+529,609,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,34,39,0.8604156945344048
+530,610,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,24,29,-1.0
+531,610,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04,33,38,-1.0
+532,610,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,24,29,0.8904673667122083
+533,610,2019-01-24 15:33:20,classification,UbuntuVersion,14.04,33,38,0.9280629506688145
+534,611,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.10,26,31,-1.0
+535,611,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.04,35,40,-1.0
+536,611,2019-01-24 15:33:20,classification,UbuntuVersion,12.10,26,31,0.9953112933529992
+537,611,2019-01-24 15:33:20,classification,UbuntuVersion,13.04,35,40,0.8673799314493397
+538,612,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,13,18,-1.0
+539,612,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.10,22,27,-1.0
+540,612,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,13,18,0.8903716216757226
+541,612,2019-01-24 15:33:20,classification,UbuntuVersion,12.10,22,27,0.9597897234139975
+542,613,2019-01-24 15:33:20,gold standard,UbuntuVersion,6.06,21,25,-1.0
+543,614,2019-01-24 15:33:20,gold standard,UbuntuVersion,10.04,23,28,-1.0
+544,614,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,43,48,-1.0
+545,614,2019-01-24 15:33:20,classification,UbuntuVersion,10.04,23,28,0.5640836402134487
+546,614,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,43,48,0.9265859724516758
+547,615,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.10,50,55,-1.0
+548,615,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.10,59,64,-1.0
+549,615,2019-01-24 15:33:20,classification,UbuntuVersion,13.10,50,55,0.7636279683085064
+550,615,2019-01-24 15:33:20,classification,UbuntuVersion,14.10,59,64,0.9065484212214311
+551,616,2019-01-24 15:33:20,gold standard,UbuntuVersion,15.04,27,32,-1.0
+552,616,2019-01-24 15:33:20,gold standard,UbuntuVersion,16.04,45,50,-1.0
+553,616,2019-01-24 15:33:20,classification,UbuntuVersion,15.04,27,32,0.9267910205939
+554,617,2019-01-24 15:33:20,gold standard,UbuntuVersion,16.04,10,15,-1.0
+555,617,2019-01-24 15:33:20,gold standard,UbuntuVersion,16.04.1,19,26,-1.0
+556,617,2019-01-24 15:33:20,classification,UbuntuVersion,16.04,10,15,0.5736771892943019
+557,618,2019-01-24 15:33:20,gold standard,UbuntuVersion,9.10,24,28,-1.0
+558,618,2019-01-24 15:33:20,gold standard,UbuntuVersion,10.04,32,37,-1.0
+559,618,2019-01-24 15:33:20,classification,UbuntuVersion,9.10,24,28,0.7282040308808309
+560,618,2019-01-24 15:33:20,classification,UbuntuVersion,10.04,32,37,0.6662000395675596
+561,619,2019-01-24 15:33:20,gold standard,UbuntuVersion,13.04,18,23,-1.0
+562,619,2019-01-24 15:33:20,classification,UbuntuVersion,13.04,18,23,0.7699894189974669
+563,620,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.10,20,25,-1.0
+564,620,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04,31,34,-1.0
+565,620,2019-01-24 15:33:20,classification,UbuntuVersion,12.10,20,25,0.9699683574322333
+566,620,2019-01-24 15:33:20,classification,UbuntuVersion,14.04,29,34,0.9278343947956799
+567,621,2019-01-24 15:33:20,gold standard,UbuntuVersion,10.10,15,20,-1.0
+568,621,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.04,24,29,-1.0
+569,621,2019-01-24 15:33:20,classification,UbuntuVersion,10.10,15,20,0.7006719766227123
+570,621,2019-01-24 15:33:20,classification,UbuntuVersion,11.04,24,29,0.8665306723768228
+571,622,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,23,28,-1.0
+572,622,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04.1,50,57,-1.0
+573,623,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04LTS,20,28,-1.0
+574,623,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04,32,37,-1.0
+575,623,2019-01-24 15:33:20,classification,UbuntuVersion,14.04,32,37,0.9277301514819927
+576,624,2019-01-24 15:33:20,gold standard,UbuntuVersion,10.10,8,13,-1.0
+577,624,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.04,17,22,-1.0
+578,624,2019-01-24 15:33:20,classification,UbuntuVersion,10.10,8,13,0.7225421541403821
+579,624,2019-01-24 15:33:20,classification,UbuntuVersion,11.04,17,22,0.9265270020784773
+580,625,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04 LTS,20,29,-1.0
+581,625,2019-01-24 15:33:20,gold standard,UbuntuVersion,15.10,33,38,-1.0
+582,625,2019-01-24 15:33:20,gold standard,UbuntuVersion,16.04,42,47,-1.0
+583,625,2019-01-24 15:33:20,classification,UbuntuVersion,14.04 lts,20,29,0.5827035662506108
+584,625,2019-01-24 15:33:20,classification,UbuntuVersion,15.10,33,38,0.8659704109491764
+585,626,2019-01-24 15:33:20,gold standard,UbuntuVersion,16.04 LTS,20,29,-1.0
+586,626,2019-01-24 15:33:20,gold standard,UbuntuVersion,16.04.1 LTS,33,44,-1.0
+587,627,2019-01-24 15:33:20,gold standard,UbuntuVersion,10.04,15,20,-1.0
+588,627,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.10,24,29,-1.0
+589,627,2019-01-24 15:33:20,classification,UbuntuVersion,10.04,15,20,0.5615731597518225
+590,627,2019-01-24 15:33:20,classification,UbuntuVersion,11.10,24,29,0.9127923498663192
+591,628,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04,28,33,-1.0
+592,628,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04 Beta,45,55,-1.0
+593,628,2019-01-24 15:33:20,classification,UbuntuVersion,14.04,28,33,0.8580984578394123
+594,629,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04 LTS,35,44,-1.0
+595,629,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04 LTS,48,57,-1.0
+596,629,2019-01-24 15:33:20,classification,UbuntuVersion,12.04 lts,35,44,0.9017935299445141
+597,629,2019-01-24 15:33:20,classification,UbuntuVersion,14.04 lts,48,57,0.9188044088155363
+598,630,2019-01-24 15:33:20,gold standard,UbuntuVersion,9.10,13,17,-1.0
+599,630,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.04,21,26,-1.0
+600,630,2019-01-24 15:33:20,classification,UbuntuVersion,9.10,13,17,0.7011427598200021
+601,630,2019-01-24 15:33:20,classification,UbuntuVersion,11.04,21,26,0.9265237409958083
+602,631,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,22,27,-1.0
+603,631,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04,31,36,-1.0
+604,631,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,22,27,0.9811396701217685
+605,631,2019-01-24 15:33:20,classification,UbuntuVersion,14.04,31,36,0.8674644820888373
+606,633,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,6,11,-1.0
+607,633,2019-01-24 15:33:20,gold standard,UbuntuVersion,10.04,48,53,-1.0
+608,634,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,34,37,-1.0
+609,634,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,32,37,0.0
+610,635,2019-01-24 15:33:20,gold standard,UbuntuVersion,11.04 (32bit),15,28,-1.0
+611,635,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04 (64bit),32,45,-1.0
+612,635,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,32,37,0.8612384057634979
+613,637,2019-01-24 15:33:20,gold standard,SoftwareName,Unity,3,8,-1.0
+614,641,2019-01-24 15:33:20,gold standard,Printer,Lexmark z600,17,29,-1.0
+615,642,2019-01-24 15:33:20,gold standard,Printer,HP All in one DJ3630,13,33,-1.0
+616,643,2019-01-24 15:33:20,gold standard,UbuntuVersion,15.10,39,44,-1.0
+617,643,2019-01-24 15:33:20,classification,UbuntuVersion,15.10,39,44,0.8990144070619922
+618,644,2019-01-24 15:33:20,gold standard,Printer,epson l210,30,40,-1.0
+619,645,2019-01-24 15:33:20,gold standard,Printer,Dell 2150cdn,17,29,-1.0
+620,646,2019-01-24 15:33:20,gold standard,Printer,Epson XP-424,11,23,-1.0
+621,647,2019-01-24 15:33:20,gold standard,Printer,EPSON L355,11,21,-1.0
+622,647,2019-01-24 15:33:20,gold standard,UbuntuVersion,14.04,32,37,-1.0
+623,647,2019-01-24 15:33:20,classification,UbuntuVersion,14.04,32,37,0.9217372078928173
+624,648,2019-01-24 15:33:20,gold standard,Printer,HP F4280,21,29,-1.0
+625,649,2019-01-24 15:33:20,gold standard,Printer,Brother DCP-8110DN,15,33,-1.0
+626,650,2019-01-24 15:33:20,gold standard,Printer,Canon MF8040Cn,17,31,-1.0
+627,650,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,50,55,-1.0
+628,650,2019-01-24 15:33:20,classification,Printer,canon mf8040cn,17,31,0.8903347641191766
+629,650,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,50,55,0.9397796249285583
+630,651,2019-01-24 15:33:20,gold standard,Printer,Canon MF8000C,17,30,-1.0
+631,651,2019-01-24 15:33:20,gold standard,UbuntuVersion,15.10,49,54,-1.0
+632,651,2019-01-24 15:33:20,classification,Printer,canon mf8000c,17,30,0.6860521974756107
+633,651,2019-01-24 15:33:20,classification,UbuntuVersion,15.10,49,54,0.9035834655352799
+634,652,2019-01-24 15:33:20,gold standard,Printer,Canon LBP330,15,27,-1.0
+635,652,2019-01-24 15:33:20,gold standard,UbuntuVersion,Lts 16.04,31,40,-1.0
+636,652,2019-01-24 15:33:20,classification,Printer,canon,15,20,0.49756264486090895
+637,653,2019-01-24 15:33:20,gold standard,Printer,Lexmark X4690,16,29,-1.0
+638,653,2019-01-24 15:33:20,gold standard,UbuntuVersion,12.04,38,43,-1.0
+639,653,2019-01-24 15:33:20,classification,UbuntuVersion,12.04,38,43,0.8833244466625951
+640,675,2019-01-29 14:14:43,gold standard,SoftwareName,Word,34,38,-1.0
+641,678,2019-01-29 14:14:43,gold standard,SoftwareName,iTunes,24,30,-1.0
+642,682,2019-01-29 14:14:43,gold standard,SoftwareName,Project,65,72,-1.0
+643,704,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.10,15,20,-1.0
+644,704,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,24,29,-1.0
+645,704,2019-01-29 14:14:43,classification,UbuntuVersion,11.10,15,20,0.8833093090902475
+646,704,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,24,29,0.9393545931131472
+647,705,2019-01-29 14:14:43,gold standard,UbuntuVersion,16.04,43,48,-1.0
+648,706,2019-01-29 14:14:43,gold standard,UbuntuVersion,15.04,21,26,-1.0
+649,706,2019-01-29 14:14:43,classification,UbuntuVersion,15.04,21,26,0.6330931828369298
+650,707,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.10,28,33,-1.0
+651,707,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04,37,42,-1.0
+652,707,2019-01-29 14:14:43,classification,UbuntuVersion,13.10,28,33,0.7635475332603893
+653,707,2019-01-29 14:14:43,classification,UbuntuVersion,14.04,37,42,0.8678418199662774
+654,708,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,22,27,-1.0
+655,708,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.10,31,36,-1.0
+656,708,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,22,27,0.9811389261149793
+657,708,2019-01-29 14:14:43,classification,UbuntuVersion,13.10,31,36,0.8183297354917703
+658,710,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,15,20,-1.0
+659,710,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.10,24,29,-1.0
+660,710,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,15,20,0.8902237877945234
+661,710,2019-01-29 14:14:43,classification,UbuntuVersion,13.10,24,29,0.7051773448980975
+662,711,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.10,20,25,-1.0
+663,711,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.04,38,43,-1.0
+664,711,2019-01-29 14:14:43,classification,UbuntuVersion,13.10,20,25,0.6856559976987374
+665,711,2019-01-29 14:14:43,classification,UbuntuVersion,13.04,38,43,0.8567903151990192
+666,712,2019-01-29 14:14:43,gold standard,UbuntuVersion,Lubuntu 15.04,32,45,-1.0
+667,712,2019-01-29 14:14:43,classification,UbuntuVersion,15.04,40,45,0.7889642203747447
+668,713,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.10,14,19,-1.0
+669,713,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.04,23,28,-1.0
+670,713,2019-01-29 14:14:43,classification,UbuntuVersion,12.10,14,19,0.9728423633547238
+671,713,2019-01-29 14:14:43,classification,UbuntuVersion,13.04,23,28,0.8673731545181138
+672,714,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.10,32,37,-1.0
+673,714,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.04,50,55,-1.0
+674,714,2019-01-29 14:14:43,classification,UbuntuVersion,11.10,32,37,0.8335514275444292
+675,714,2019-01-29 14:14:43,classification,UbuntuVersion,11.04,50,55,0.9272716168935939
+676,715,2019-01-29 14:14:43,gold standard,UbuntuVersion,Ubuntu 9.10,25,29,-1.0
+677,715,2019-01-29 14:14:43,classification,UbuntuVersion,9.10,25,29,0.7466501185039969
+678,716,2019-01-29 14:14:43,gold standard,UbuntuVersion,15.10,30,35,-1.0
+679,716,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04,41,46,-1.0
+680,716,2019-01-29 14:14:43,classification,UbuntuVersion,15.10,30,35,0.8225136515886624
+681,716,2019-01-29 14:14:43,classification,UbuntuVersion,14.04,41,46,0.6590601350385122
+682,717,2019-01-29 14:14:43,gold standard,UbuntuVersion,Xubuntu 11.10,16,29,-1.0
+683,717,2019-01-29 14:14:43,gold standard,UbuntuVersion,Xubuntu 12.04 LTS?,33,50,-1.0
+684,717,2019-01-29 14:14:43,classification,UbuntuVersion,11.10,24,29,0.883408997784774
+685,717,2019-01-29 14:14:43,classification,UbuntuVersion,12.04 lts,41,50,0.8479960488577309
+686,718,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.10,25,30,-1.0
+687,718,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,34,39,-1.0
+688,718,2019-01-29 14:14:43,classification,UbuntuVersion,11.10,25,30,0.8831160481161974
+689,718,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,34,39,0.8604156945344048
+690,719,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,24,29,-1.0
+691,719,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04,33,38,-1.0
+692,719,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,24,29,0.8904673667122083
+693,719,2019-01-29 14:14:43,classification,UbuntuVersion,14.04,33,38,0.9280629506688145
+694,720,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.10,26,31,-1.0
+695,720,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.04,35,40,-1.0
+696,720,2019-01-29 14:14:43,classification,UbuntuVersion,12.10,26,31,0.9953112933529992
+697,720,2019-01-29 14:14:43,classification,UbuntuVersion,13.04,35,40,0.8673799314493397
+698,721,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,13,18,-1.0
+699,721,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.10,22,27,-1.0
+700,721,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,13,18,0.8903716216757226
+701,721,2019-01-29 14:14:43,classification,UbuntuVersion,12.10,22,27,0.9597897234139975
+702,722,2019-01-29 14:14:43,gold standard,UbuntuVersion,6.06,21,25,-1.0
+703,723,2019-01-29 14:14:43,gold standard,UbuntuVersion,10.04,23,28,-1.0
+704,723,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,43,48,-1.0
+705,723,2019-01-29 14:14:43,classification,UbuntuVersion,10.04,23,28,0.5640836402134487
+706,723,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,43,48,0.9265859724516758
+707,724,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.10,50,55,-1.0
+708,724,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.10,59,64,-1.0
+709,724,2019-01-29 14:14:43,classification,UbuntuVersion,13.10,50,55,0.7636279683085064
+710,724,2019-01-29 14:14:43,classification,UbuntuVersion,14.10,59,64,0.9065484212214311
+711,725,2019-01-29 14:14:43,gold standard,UbuntuVersion,15.04,27,32,-1.0
+712,725,2019-01-29 14:14:43,gold standard,UbuntuVersion,16.04,45,50,-1.0
+713,725,2019-01-29 14:14:43,classification,UbuntuVersion,15.04,27,32,0.9267910205939
+714,726,2019-01-29 14:14:43,gold standard,UbuntuVersion,16.04,10,15,-1.0
+715,726,2019-01-29 14:14:43,gold standard,UbuntuVersion,16.04.1,19,26,-1.0
+716,726,2019-01-29 14:14:43,classification,UbuntuVersion,16.04,10,15,0.5736771892943019
+717,727,2019-01-29 14:14:43,gold standard,UbuntuVersion,9.10,24,28,-1.0
+718,727,2019-01-29 14:14:43,gold standard,UbuntuVersion,10.04,32,37,-1.0
+719,727,2019-01-29 14:14:43,classification,UbuntuVersion,9.10,24,28,0.7282040308808309
+720,727,2019-01-29 14:14:43,classification,UbuntuVersion,10.04,32,37,0.6662000395675596
+721,728,2019-01-29 14:14:43,gold standard,UbuntuVersion,13.04,18,23,-1.0
+722,728,2019-01-29 14:14:43,classification,UbuntuVersion,13.04,18,23,0.7699894189974669
+723,729,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.10,20,25,-1.0
+724,729,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04,31,34,-1.0
+725,729,2019-01-29 14:14:43,classification,UbuntuVersion,12.10,20,25,0.9699683574322333
+726,729,2019-01-29 14:14:43,classification,UbuntuVersion,14.04,29,34,0.9278343947956799
+727,730,2019-01-29 14:14:43,gold standard,UbuntuVersion,10.10,15,20,-1.0
+728,730,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.04,24,29,-1.0
+729,730,2019-01-29 14:14:43,classification,UbuntuVersion,10.10,15,20,0.7006719766227123
+730,730,2019-01-29 14:14:43,classification,UbuntuVersion,11.04,24,29,0.8665306723768228
+731,731,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,23,28,-1.0
+732,731,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04.1,50,57,-1.0
+733,732,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04LTS,20,28,-1.0
+734,732,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04,32,37,-1.0
+735,732,2019-01-29 14:14:43,classification,UbuntuVersion,14.04,32,37,0.9277301514819927
+736,733,2019-01-29 14:14:43,gold standard,UbuntuVersion,10.10,8,13,-1.0
+737,733,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.04,17,22,-1.0
+738,733,2019-01-29 14:14:43,classification,UbuntuVersion,10.10,8,13,0.7225421541403821
+739,733,2019-01-29 14:14:43,classification,UbuntuVersion,11.04,17,22,0.9265270020784773
+740,734,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04 LTS,20,29,-1.0
+741,734,2019-01-29 14:14:43,gold standard,UbuntuVersion,15.10,33,38,-1.0
+742,734,2019-01-29 14:14:43,gold standard,UbuntuVersion,16.04,42,47,-1.0
+743,734,2019-01-29 14:14:43,classification,UbuntuVersion,14.04 lts,20,29,0.5827035662506108
+744,734,2019-01-29 14:14:43,classification,UbuntuVersion,15.10,33,38,0.8659704109491764
+745,735,2019-01-29 14:14:43,gold standard,UbuntuVersion,16.04 LTS,20,29,-1.0
+746,735,2019-01-29 14:14:43,gold standard,UbuntuVersion,16.04.1 LTS,33,44,-1.0
+747,736,2019-01-29 14:14:43,gold standard,UbuntuVersion,10.04,15,20,-1.0
+748,736,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.10,24,29,-1.0
+749,736,2019-01-29 14:14:43,classification,UbuntuVersion,10.04,15,20,0.5615731597518225
+750,736,2019-01-29 14:14:43,classification,UbuntuVersion,11.10,24,29,0.9127923498663192
+751,737,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04,28,33,-1.0
+752,737,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04 Beta,45,55,-1.0
+753,737,2019-01-29 14:14:43,classification,UbuntuVersion,14.04,28,33,0.8580984578394123
+754,738,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04 LTS,35,44,-1.0
+755,738,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04 LTS,48,57,-1.0
+756,738,2019-01-29 14:14:43,classification,UbuntuVersion,12.04 lts,35,44,0.9017935299445141
+757,738,2019-01-29 14:14:43,classification,UbuntuVersion,14.04 lts,48,57,0.9188044088155363
+758,739,2019-01-29 14:14:43,gold standard,UbuntuVersion,9.10,13,17,-1.0
+759,739,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.04,21,26,-1.0
+760,739,2019-01-29 14:14:43,classification,UbuntuVersion,9.10,13,17,0.7011427598200021
+761,739,2019-01-29 14:14:43,classification,UbuntuVersion,11.04,21,26,0.9265237409958083
+762,740,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,22,27,-1.0
+763,740,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04,31,36,-1.0
+764,740,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,22,27,0.9811396701217685
+765,740,2019-01-29 14:14:43,classification,UbuntuVersion,14.04,31,36,0.8674644820888373
+766,742,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,6,11,-1.0
+767,742,2019-01-29 14:14:43,gold standard,UbuntuVersion,10.04,48,53,-1.0
+768,743,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,34,37,-1.0
+769,743,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,32,37,0.0
+770,744,2019-01-29 14:14:43,gold standard,UbuntuVersion,11.04 (32bit),15,28,-1.0
+771,744,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04 (64bit),32,45,-1.0
+772,744,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,32,37,0.8612384057634979
+773,746,2019-01-29 14:14:43,gold standard,SoftwareName,Unity,3,8,-1.0
+774,750,2019-01-29 14:14:43,gold standard,Printer,Lexmark z600,17,29,-1.0
+775,751,2019-01-29 14:14:43,gold standard,Printer,HP All in one DJ3630,13,33,-1.0
+776,752,2019-01-29 14:14:43,gold standard,UbuntuVersion,15.10,39,44,-1.0
+777,752,2019-01-29 14:14:43,classification,UbuntuVersion,15.10,39,44,0.8990144070619922
+778,753,2019-01-29 14:14:43,gold standard,Printer,epson l210,30,40,-1.0
+779,754,2019-01-29 14:14:43,gold standard,Printer,Dell 2150cdn,17,29,-1.0
+780,755,2019-01-29 14:14:43,gold standard,Printer,Epson XP-424,11,23,-1.0
+781,756,2019-01-29 14:14:43,gold standard,Printer,EPSON L355,11,21,-1.0
+782,756,2019-01-29 14:14:43,gold standard,UbuntuVersion,14.04,32,37,-1.0
+783,756,2019-01-29 14:14:43,classification,UbuntuVersion,14.04,32,37,0.9217372078928173
+784,757,2019-01-29 14:14:43,gold standard,Printer,HP F4280,21,29,-1.0
+785,758,2019-01-29 14:14:43,gold standard,Printer,Brother DCP-8110DN,15,33,-1.0
+786,759,2019-01-29 14:14:43,gold standard,Printer,Canon MF8040Cn,17,31,-1.0
+787,759,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,50,55,-1.0
+788,759,2019-01-29 14:14:43,classification,Printer,canon mf8040cn,17,31,0.8903347641191766
+789,759,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,50,55,0.9397796249285583
+790,760,2019-01-29 14:14:43,gold standard,Printer,Canon MF8000C,17,30,-1.0
+791,760,2019-01-29 14:14:43,gold standard,UbuntuVersion,15.10,49,54,-1.0
+792,760,2019-01-29 14:14:43,classification,Printer,canon mf8000c,17,30,0.6860521974756107
+793,760,2019-01-29 14:14:43,classification,UbuntuVersion,15.10,49,54,0.9035834655352799
+794,761,2019-01-29 14:14:43,gold standard,Printer,Canon LBP330,15,27,-1.0
+795,761,2019-01-29 14:14:43,gold standard,UbuntuVersion,Lts 16.04,31,40,-1.0
+796,761,2019-01-29 14:14:43,classification,Printer,canon,15,20,0.49756264486090895
+797,762,2019-01-29 14:14:43,gold standard,Printer,Lexmark X4690,16,29,-1.0
+798,762,2019-01-29 14:14:43,gold standard,UbuntuVersion,12.04,38,43,-1.0
+799,762,2019-01-29 14:14:43,classification,UbuntuVersion,12.04,38,43,0.8833244466625951
+800,784,2019-01-29 14:24:00,gold standard,SoftwareName,Word,34,38,-1.0
+801,787,2019-01-29 14:24:00,gold standard,SoftwareName,iTunes,24,30,-1.0
+802,791,2019-01-29 14:24:00,gold standard,SoftwareName,Project,65,72,-1.0
+803,813,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.10,15,20,-1.0
+804,813,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,24,29,-1.0
+805,813,2019-01-29 14:24:00,classification,UbuntuVersion,11.10,15,20,0.8833093090902475
+806,813,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,24,29,0.9393545931131472
+807,814,2019-01-29 14:24:00,gold standard,UbuntuVersion,16.04,43,48,-1.0
+808,815,2019-01-29 14:24:00,gold standard,UbuntuVersion,15.04,21,26,-1.0
+809,815,2019-01-29 14:24:00,classification,UbuntuVersion,15.04,21,26,0.6330931828369298
+810,816,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.10,28,33,-1.0
+811,816,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04,37,42,-1.0
+812,816,2019-01-29 14:24:00,classification,UbuntuVersion,13.10,28,33,0.7635475332603893
+813,816,2019-01-29 14:24:00,classification,UbuntuVersion,14.04,37,42,0.8678418199662774
+814,817,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,22,27,-1.0
+815,817,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.10,31,36,-1.0
+816,817,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,22,27,0.9811389261149793
+817,817,2019-01-29 14:24:00,classification,UbuntuVersion,13.10,31,36,0.8183297354917703
+818,819,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,15,20,-1.0
+819,819,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.10,24,29,-1.0
+820,819,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,15,20,0.8902237877945234
+821,819,2019-01-29 14:24:00,classification,UbuntuVersion,13.10,24,29,0.7051773448980975
+822,820,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.10,20,25,-1.0
+823,820,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.04,38,43,-1.0
+824,820,2019-01-29 14:24:00,classification,UbuntuVersion,13.10,20,25,0.6856559976987374
+825,820,2019-01-29 14:24:00,classification,UbuntuVersion,13.04,38,43,0.8567903151990192
+826,821,2019-01-29 14:24:00,gold standard,UbuntuVersion,Lubuntu 15.04,32,45,-1.0
+827,821,2019-01-29 14:24:00,classification,UbuntuVersion,15.04,40,45,0.7889642203747447
+828,822,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.10,14,19,-1.0
+829,822,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.04,23,28,-1.0
+830,822,2019-01-29 14:24:00,classification,UbuntuVersion,12.10,14,19,0.9728423633547238
+831,822,2019-01-29 14:24:00,classification,UbuntuVersion,13.04,23,28,0.8673731545181138
+832,823,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.10,32,37,-1.0
+833,823,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.04,50,55,-1.0
+834,823,2019-01-29 14:24:00,classification,UbuntuVersion,11.10,32,37,0.8335514275444292
+835,823,2019-01-29 14:24:00,classification,UbuntuVersion,11.04,50,55,0.9272716168935939
+836,824,2019-01-29 14:24:00,gold standard,UbuntuVersion,Ubuntu 9.10,25,29,-1.0
+837,824,2019-01-29 14:24:00,classification,UbuntuVersion,9.10,25,29,0.7466501185039969
+838,825,2019-01-29 14:24:00,gold standard,UbuntuVersion,15.10,30,35,-1.0
+839,825,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04,41,46,-1.0
+840,825,2019-01-29 14:24:00,classification,UbuntuVersion,15.10,30,35,0.8225136515886624
+841,825,2019-01-29 14:24:00,classification,UbuntuVersion,14.04,41,46,0.6590601350385122
+842,826,2019-01-29 14:24:00,gold standard,UbuntuVersion,Xubuntu 11.10,16,29,-1.0
+843,826,2019-01-29 14:24:00,gold standard,UbuntuVersion,Xubuntu 12.04 LTS?,33,50,-1.0
+844,826,2019-01-29 14:24:00,classification,UbuntuVersion,11.10,24,29,0.883408997784774
+845,826,2019-01-29 14:24:00,classification,UbuntuVersion,12.04 lts,41,50,0.8479960488577309
+846,827,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.10,25,30,-1.0
+847,827,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,34,39,-1.0
+848,827,2019-01-29 14:24:00,classification,UbuntuVersion,11.10,25,30,0.8831160481161974
+849,827,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,34,39,0.8604156945344048
+850,828,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,24,29,-1.0
+851,828,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04,33,38,-1.0
+852,828,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,24,29,0.8904673667122083
+853,828,2019-01-29 14:24:00,classification,UbuntuVersion,14.04,33,38,0.9280629506688145
+854,829,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.10,26,31,-1.0
+855,829,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.04,35,40,-1.0
+856,829,2019-01-29 14:24:00,classification,UbuntuVersion,12.10,26,31,0.9953112933529992
+857,829,2019-01-29 14:24:00,classification,UbuntuVersion,13.04,35,40,0.8673799314493397
+858,830,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,13,18,-1.0
+859,830,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.10,22,27,-1.0
+860,830,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,13,18,0.8903716216757226
+861,830,2019-01-29 14:24:00,classification,UbuntuVersion,12.10,22,27,0.9597897234139975
+862,831,2019-01-29 14:24:00,gold standard,UbuntuVersion,6.06,21,25,-1.0
+863,832,2019-01-29 14:24:00,gold standard,UbuntuVersion,10.04,23,28,-1.0
+864,832,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,43,48,-1.0
+865,832,2019-01-29 14:24:00,classification,UbuntuVersion,10.04,23,28,0.5640836402134487
+866,832,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,43,48,0.9265859724516758
+867,833,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.10,50,55,-1.0
+868,833,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.10,59,64,-1.0
+869,833,2019-01-29 14:24:00,classification,UbuntuVersion,13.10,50,55,0.7636279683085064
+870,833,2019-01-29 14:24:00,classification,UbuntuVersion,14.10,59,64,0.9065484212214311
+871,834,2019-01-29 14:24:00,gold standard,UbuntuVersion,15.04,27,32,-1.0
+872,834,2019-01-29 14:24:00,gold standard,UbuntuVersion,16.04,45,50,-1.0
+873,834,2019-01-29 14:24:00,classification,UbuntuVersion,15.04,27,32,0.9267910205939
+874,835,2019-01-29 14:24:00,gold standard,UbuntuVersion,16.04,10,15,-1.0
+875,835,2019-01-29 14:24:00,gold standard,UbuntuVersion,16.04.1,19,26,-1.0
+876,835,2019-01-29 14:24:00,classification,UbuntuVersion,16.04,10,15,0.5736771892943019
+877,836,2019-01-29 14:24:00,gold standard,UbuntuVersion,9.10,24,28,-1.0
+878,836,2019-01-29 14:24:00,gold standard,UbuntuVersion,10.04,32,37,-1.0
+879,836,2019-01-29 14:24:00,classification,UbuntuVersion,9.10,24,28,0.7282040308808309
+880,836,2019-01-29 14:24:00,classification,UbuntuVersion,10.04,32,37,0.6662000395675596
+881,837,2019-01-29 14:24:00,gold standard,UbuntuVersion,13.04,18,23,-1.0
+882,837,2019-01-29 14:24:00,classification,UbuntuVersion,13.04,18,23,0.7699894189974669
+883,838,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.10,20,25,-1.0
+884,838,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04,31,34,-1.0
+885,838,2019-01-29 14:24:00,classification,UbuntuVersion,12.10,20,25,0.9699683574322333
+886,838,2019-01-29 14:24:00,classification,UbuntuVersion,14.04,29,34,0.9278343947956799
+887,839,2019-01-29 14:24:00,gold standard,UbuntuVersion,10.10,15,20,-1.0
+888,839,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.04,24,29,-1.0
+889,839,2019-01-29 14:24:00,classification,UbuntuVersion,10.10,15,20,0.7006719766227123
+890,839,2019-01-29 14:24:00,classification,UbuntuVersion,11.04,24,29,0.8665306723768228
+891,840,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,23,28,-1.0
+892,840,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04.1,50,57,-1.0
+893,841,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04LTS,20,28,-1.0
+894,841,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04,32,37,-1.0
+895,841,2019-01-29 14:24:00,classification,UbuntuVersion,14.04,32,37,0.9277301514819927
+896,842,2019-01-29 14:24:00,gold standard,UbuntuVersion,10.10,8,13,-1.0
+897,842,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.04,17,22,-1.0
+898,842,2019-01-29 14:24:00,classification,UbuntuVersion,10.10,8,13,0.7225421541403821
+899,842,2019-01-29 14:24:00,classification,UbuntuVersion,11.04,17,22,0.9265270020784773
+900,843,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04 LTS,20,29,-1.0
+901,843,2019-01-29 14:24:00,gold standard,UbuntuVersion,15.10,33,38,-1.0
+902,843,2019-01-29 14:24:00,gold standard,UbuntuVersion,16.04,42,47,-1.0
+903,843,2019-01-29 14:24:00,classification,UbuntuVersion,14.04 lts,20,29,0.5827035662506108
+904,843,2019-01-29 14:24:00,classification,UbuntuVersion,15.10,33,38,0.8659704109491764
+905,844,2019-01-29 14:24:00,gold standard,UbuntuVersion,16.04 LTS,20,29,-1.0
+906,844,2019-01-29 14:24:00,gold standard,UbuntuVersion,16.04.1 LTS,33,44,-1.0
+907,845,2019-01-29 14:24:00,gold standard,UbuntuVersion,10.04,15,20,-1.0
+908,845,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.10,24,29,-1.0
+909,845,2019-01-29 14:24:00,classification,UbuntuVersion,10.04,15,20,0.5615731597518225
+910,845,2019-01-29 14:24:00,classification,UbuntuVersion,11.10,24,29,0.9127923498663192
+911,846,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04,28,33,-1.0
+912,846,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04 Beta,45,55,-1.0
+913,846,2019-01-29 14:24:00,classification,UbuntuVersion,14.04,28,33,0.8580984578394123
+914,847,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04 LTS,35,44,-1.0
+915,847,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04 LTS,48,57,-1.0
+916,847,2019-01-29 14:24:00,classification,UbuntuVersion,12.04 lts,35,44,0.9017935299445141
+917,847,2019-01-29 14:24:00,classification,UbuntuVersion,14.04 lts,48,57,0.9188044088155363
+918,848,2019-01-29 14:24:00,gold standard,UbuntuVersion,9.10,13,17,-1.0
+919,848,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.04,21,26,-1.0
+920,848,2019-01-29 14:24:00,classification,UbuntuVersion,9.10,13,17,0.7011427598200021
+921,848,2019-01-29 14:24:00,classification,UbuntuVersion,11.04,21,26,0.9265237409958083
+922,849,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,22,27,-1.0
+923,849,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04,31,36,-1.0
+924,849,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,22,27,0.9811396701217685
+925,849,2019-01-29 14:24:00,classification,UbuntuVersion,14.04,31,36,0.8674644820888373
+926,851,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,6,11,-1.0
+927,851,2019-01-29 14:24:00,gold standard,UbuntuVersion,10.04,48,53,-1.0
+928,852,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,34,37,-1.0
+929,852,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,32,37,0.0
+930,853,2019-01-29 14:24:00,gold standard,UbuntuVersion,11.04 (32bit),15,28,-1.0
+931,853,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04 (64bit),32,45,-1.0
+932,853,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,32,37,0.8612384057634979
+933,855,2019-01-29 14:24:00,gold standard,SoftwareName,Unity,3,8,-1.0
+934,859,2019-01-29 14:24:00,gold standard,Printer,Lexmark z600,17,29,-1.0
+935,860,2019-01-29 14:24:00,gold standard,Printer,HP All in one DJ3630,13,33,-1.0
+936,861,2019-01-29 14:24:00,gold standard,UbuntuVersion,15.10,39,44,-1.0
+937,861,2019-01-29 14:24:00,classification,UbuntuVersion,15.10,39,44,0.8990144070619922
+938,862,2019-01-29 14:24:00,gold standard,Printer,epson l210,30,40,-1.0
+939,863,2019-01-29 14:24:00,gold standard,Printer,Dell 2150cdn,17,29,-1.0
+940,864,2019-01-29 14:24:00,gold standard,Printer,Epson XP-424,11,23,-1.0
+941,865,2019-01-29 14:24:00,gold standard,Printer,EPSON L355,11,21,-1.0
+942,865,2019-01-29 14:24:00,gold standard,UbuntuVersion,14.04,32,37,-1.0
+943,865,2019-01-29 14:24:00,classification,UbuntuVersion,14.04,32,37,0.9217372078928173
+944,866,2019-01-29 14:24:00,gold standard,Printer,HP F4280,21,29,-1.0
+945,867,2019-01-29 14:24:00,gold standard,Printer,Brother DCP-8110DN,15,33,-1.0
+946,868,2019-01-29 14:24:00,gold standard,Printer,Canon MF8040Cn,17,31,-1.0
+947,868,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,50,55,-1.0
+948,868,2019-01-29 14:24:00,classification,Printer,canon mf8040cn,17,31,0.8903347641191766
+949,868,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,50,55,0.9397796249285583
+950,869,2019-01-29 14:24:00,gold standard,Printer,Canon MF8000C,17,30,-1.0
+951,869,2019-01-29 14:24:00,gold standard,UbuntuVersion,15.10,49,54,-1.0
+952,869,2019-01-29 14:24:00,classification,Printer,canon mf8000c,17,30,0.6860521974756107
+953,869,2019-01-29 14:24:00,classification,UbuntuVersion,15.10,49,54,0.9035834655352799
+954,870,2019-01-29 14:24:00,gold standard,Printer,Canon LBP330,15,27,-1.0
+955,870,2019-01-29 14:24:00,gold standard,UbuntuVersion,Lts 16.04,31,40,-1.0
+956,870,2019-01-29 14:24:00,classification,Printer,canon,15,20,0.49756264486090895
+957,871,2019-01-29 14:24:00,gold standard,Printer,Lexmark X4690,16,29,-1.0
+958,871,2019-01-29 14:24:00,gold standard,UbuntuVersion,12.04,38,43,-1.0
+959,871,2019-01-29 14:24:00,classification,UbuntuVersion,12.04,38,43,0.8833244466625951

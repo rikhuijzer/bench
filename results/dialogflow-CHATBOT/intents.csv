@@ -105,3 +105,109 @@ id,timestamp,sentence,intent,classification,confidence,time
 103,2018-11-13 16:21:05,how can i get from studentenstadt to garching,FindConnection,FindConnection,1.0,0
 104,2018-11-13 16:21:05,when is the next bus from garching,DepartureTime,DepartureTime,1.0,0
 105,2018-11-13 16:21:05,take me from hauptbahnhof to odeonsplatz,FindConnection,FindConnection,0.81,0
+106,2019-02-11 11:45:09,i want to go marienplatz,FindConnection,None,0.0,0
+107,2019-02-11 11:45:09,when is the next train in muncher freiheit?,DepartureTime,DepartureTime,0.85,0
+108,2019-02-11 11:45:09,when does the next u-bahn leaves from garching forschungszentrum?,DepartureTime,DepartureTime,0.96,0
+109,2019-02-11 11:45:09,from olympia einkaufszentrum to hauptbahnhof,FindConnection,FindConnection,0.66,0
+110,2019-02-11 11:45:09,when is the next train from winterstraße 12 to kieferngarten,FindConnection,FindConnection,0.52,0
+111,2019-02-11 11:45:09,when is the next rocket from winterstraße 12 to kieferngarte,FindConnection,FindConnection,0.39,0
+112,2019-02-11 11:45:09,can you find a connection from garching to hauptbahnhof?,FindConnection,FindConnection,1.0,0
+113,2019-02-11 11:45:09,how to get from untere strassäcker 21 to fröttmaning,FindConnection,FindConnection,0.91,0
+114,2019-02-11 11:45:09,how i can get from marienplatz to garching,FindConnection,FindConnection,1.0,0
+115,2019-02-11 11:45:09,connection from boltzmannstraße to kieferngarten,FindConnection,FindConnection,0.92,0
+116,2019-02-11 11:45:09,how to get from bonner platz to freimann?,FindConnection,FindConnection,0.82,0
+117,2019-02-11 11:45:09,when is the next s-bahn leaving at garching?,DepartureTime,DepartureTime,0.81,0
+118,2019-02-11 11:45:09,how do i get from oez to hbf?,FindConnection,FindConnection,0.89,0
+119,2019-02-11 11:45:09,how to get from winterstrasse 12 to fröttmaning,FindConnection,FindConnection,0.89,0
+120,2019-02-11 11:45:09,how do i get from garching forschungszentrum to pasing,FindConnection,FindConnection,0.98,0
+121,2019-02-11 11:45:09,theresienstraße to assling,FindConnection,FindConnection,0.33,0
+122,2019-02-11 11:45:09,how can i get from theresienstraße to munich east?,FindConnection,FindConnection,0.91,0
+123,2019-02-11 11:45:09,when does the next bus starts from garching?,DepartureTime,DepartureTime,1.0,0
+124,2019-02-11 11:45:09,from quiddestraße to garching?,FindConnection,FindConnection,1.0,0
+125,2019-02-11 11:45:09,can you find a connection from kurt-eisner-straße to garching forschungszentrum?,FindConnection,FindConnection,1.0,0
+126,2019-02-11 11:45:09,can you find a connection from quiddestraße to garching forschungszentrum?,FindConnection,FindConnection,1.0,0
+127,2019-02-11 11:45:09,when does the next train leaves at garching?,DepartureTime,DepartureTime,0.96,0
+128,2019-02-11 11:45:09,from hauptbahnhof to garching?,FindConnection,FindConnection,1.0,0
+129,2019-02-11 11:45:09,how can i get to glockenbachviertel from garching forschungszentrum?,FindConnection,FindConnection,0.99,0
+130,2019-02-11 11:45:09,how i can get from garching to nordfriedhof,FindConnection,FindConnection,1.0,0
+131,2019-02-11 11:45:09,how can i get to glockenbachviertel from garching forschungszentrum?,FindConnection,FindConnection,0.99,0
+132,2019-02-11 11:45:09,when is the next train leaving in garching forschungszentrum,DepartureTime,DepartureTime,0.93,0
+133,2019-02-11 11:45:09,how can i get from moosach to quiddestraße?,FindConnection,FindConnection,0.9,0
+134,2019-02-11 11:45:09,how can i get from moosach to poccistraße?,FindConnection,FindConnection,0.84,0
+135,2019-02-11 11:45:09,how can i get from kurt-eisner-straße to garching forschungszentrum?,FindConnection,FindConnection,1.0,0
+136,2019-02-11 11:45:09,how can i get from moosach to quiddestraße?,FindConnection,FindConnection,0.9,0
+137,2019-02-11 11:45:09,how can i get from moosach to odeonsplatz?,FindConnection,FindConnection,0.9,0
+138,2019-02-11 11:45:09,when does the next bus starts at garching?,DepartureTime,DepartureTime,1.0,0
+139,2019-02-11 11:45:09,what's the shortest way from quiddestraße to odeonsplatz?,FindConnection,FindConnection,1.0,0
+140,2019-02-11 11:45:09,when is the next bus from ostbahnhof,DepartureTime,DepartureTime,1.0,0
+141,2019-02-11 11:45:09,how i can get from garching to neuperlach sued,FindConnection,FindConnection,0.97,0
+142,2019-02-11 11:45:09,when is the next train in munchner freiheit?,DepartureTime,DepartureTime,0.85,0
+143,2019-02-11 11:45:09,how i can get from marienplatz to garching?,FindConnection,FindConnection,1.0,0
+144,2019-02-11 11:45:09,how do i get from poccistraße to laim,FindConnection,FindConnection,0.89,0
+145,2019-02-11 11:45:09,i want to go garching from marienplatz,FindConnection,FindConnection,0.59,0
+146,2019-02-11 11:45:09,how i can get from marienplatz to garching?,FindConnection,FindConnection,1.0,0
+147,2019-02-11 11:45:09,how can i get from hauptbahnhof to odeonsplatz,FindConnection,FindConnection,1.0,0
+148,2019-02-11 11:45:09,prinzregentenplatz to rotkreuzplatz,FindConnection,FindConnection,0.33,0
+149,2019-02-11 11:45:09,i want to go to garching from marienplatz,FindConnection,FindConnection,0.59,0
+150,2019-02-11 11:45:09,next train from garching,DepartureTime,DepartureTime,0.65,0
+151,2019-02-11 11:45:09,from prinzregentenplatz to rotkreuzplatz,FindConnection,FindConnection,0.7,0
+152,2019-02-11 11:45:09,when is the next subway from garching forschungszentrum,DepartureTime,DepartureTime,0.86,0
+153,2019-02-11 11:45:09,from garching to klinikum,FindConnection,FindConnection,0.89,0
+154,2019-02-11 11:45:09,from garching foschungszentrum to odeonsplatz,FindConnection,FindConnection,0.94,0
+155,2019-02-11 11:45:09,next bus in garching,DepartureTime,DepartureTime,0.68,0
+156,2019-02-11 11:45:09,when does the train leaving in garching forschungszentrum,DepartureTime,DepartureTime,0.87,0
+157,2019-02-11 11:45:09,next subway from garching forschungszentrum,DepartureTime,DepartureTime,0.54,0
+158,2019-02-11 11:45:09,tell me the next bus from garching,DepartureTime,DepartureTime,0.95,0
+159,2019-02-11 11:45:09,next bus from garching please.,DepartureTime,DepartureTime,0.92,0
+160,2019-02-11 11:45:09,next bus from garching,DepartureTime,DepartureTime,0.92,0
+161,2019-02-11 11:45:09,next bus from central station,DepartureTime,DepartureTime,0.81,0
+162,2019-02-11 11:45:09,from garching to marienplatz,FindConnection,FindConnection,0.82,0
+163,2019-02-11 11:45:09,next bus from garching.,DepartureTime,DepartureTime,0.92,0
+164,2019-02-11 11:45:09,connection from garching to hauptbahnhof?,FindConnection,FindConnection,1.0,0
+165,2019-02-11 11:45:09,when does the next bus departs from garching?,DepartureTime,DepartureTime,1.0,0
+166,2019-02-11 11:45:09,find connection from hauptbahnhof to odeonsplatz,FindConnection,FindConnection,1.0,0
+167,2019-02-11 11:45:09,when does the next u-bahn departs at garching forschungszentrum?,DepartureTime,DepartureTime,0.82,0
+168,2019-02-11 11:45:09,when does the next u-bahn departs at garching?,DepartureTime,DepartureTime,0.83,0
+169,2019-02-11 11:45:09,when does the next subway departs at garching,DepartureTime,DepartureTime,0.82,0
+170,2019-02-11 11:45:09,when is the next train in garching?,DepartureTime,DepartureTime,0.89,0
+171,2019-02-11 11:45:09,how to get from münchner freiheit to garching ?,FindConnection,FindConnection,1.0,0
+172,2019-02-11 11:45:09,implerstraße to ostbahnhof,FindConnection,FindConnection,0.33,0
+173,2019-02-11 11:45:09,how can i get from hauptbahnhof to odeonsplatz?,FindConnection,FindConnection,1.0,0
+174,2019-02-11 11:45:09,how can i go from garching forschungszentrum to prinzregentenplatz,FindConnection,FindConnection,0.75,0
+175,2019-02-11 11:45:09,how can i get from mangfallplatz to garching,FindConnection,FindConnection,1.0,0
+176,2019-02-11 11:45:09,how can i get to hohenlindenerstraße,FindConnection,FindConnection,0.78,0
+177,2019-02-11 11:45:09,harthaus to hackerbrücke,FindConnection,FindConnection,0.33,0
+178,2019-02-11 11:45:09,how can i get from feldmoching to garching forschungszentrum?,FindConnection,FindConnection,1.0,0
+179,2019-02-11 11:45:09,from marienplatz to petershausen,FindConnection,FindConnection,0.64,0
+180,2019-02-11 11:45:09,when is the train from garching to marienplatz,FindConnection,FindConnection,0.63,0
+181,2019-02-11 11:45:09,neufahrn to garching,FindConnection,FindConnection,0.99,0
+182,2019-02-11 11:45:09,how can i get from mangfallplatz to garching,FindConnection,FindConnection,1.0,0
+183,2019-02-11 11:45:09,how can i get to hohenlindenerstr,FindConnection,FindConnection,0.78,0
+184,2019-02-11 11:45:09,when is the next bus from garching forschungzentrum,DepartureTime,DepartureTime,1.0,0
+185,2019-02-11 11:45:09,how do i get from spitzingplatz to poccistraße?,FindConnection,FindConnection,0.89,0
+186,2019-02-11 11:45:09,how can i get from garching forschungszentrum to marienplatz,FindConnection,FindConnection,0.97,0
+187,2019-02-11 11:45:09,how can i get from klinkum to marienplatz?,FindConnection,FindConnection,0.87,0
+188,2019-02-11 11:45:09,how to get from alte heide to marienplatz,FindConnection,FindConnection,0.84,0
+189,2019-02-11 11:45:09,next train from muenchen freicheit,DepartureTime,DepartureTime,0.48,0
+190,2019-02-11 11:45:09,depart in garching i assume,DepartureTime,FindConnection,0.39,0
+191,2019-02-11 11:45:09,when does the next u-bahn depart at garching?,DepartureTime,DepartureTime,0.85,0
+192,2019-02-11 11:45:09,the next bus from garching forschungzentrum,DepartureTime,DepartureTime,0.92,0
+193,2019-02-11 11:45:09,when is the next train in alte heide?,DepartureTime,DepartureTime,0.7,0
+194,2019-02-11 11:45:09,or depart from garching,DepartureTime,DepartureTime,0.53,0
+195,2019-02-11 11:45:09,hello munich city bot! how do i get from münchner freiheit to scheidplatz?,FindConnection,FindConnection,0.74,0
+196,2019-02-11 11:45:09,how can i get from garching forschungszentrum to prinzregentenplatz,FindConnection,FindConnection,1.0,0
+197,2019-02-11 11:45:09,how can i get from neufahrn to garching,FindConnection,FindConnection,1.0,0
+198,2019-02-11 11:45:09,take me to the airport,FindConnection,FindConnection,0.54,0
+199,2019-02-11 11:45:09,when does the next u6 leave from garching forschungszentrum,DepartureTime,DepartureTime,1.0,0
+200,2019-02-11 11:45:09,how i can get from munchner freiheit to nordfriedhof?,FindConnection,FindConnection,0.81,0
+201,2019-02-11 11:45:09,from harthaus to hackerbrücke,FindConnection,FindConnection,0.7,0
+202,2019-02-11 11:45:09,when is the train from garching,DepartureTime,DepartureTime,0.8,0
+203,2019-02-11 11:45:09,what is the next train from münchner freiheit,DepartureTime,DepartureTime,0.42,0
+204,2019-02-11 11:45:09,how can i get from theresienstrasse to garching forschungszentrum,FindConnection,FindConnection,1.0,0
+205,2019-02-11 11:45:09,how can i get from münchner freiheit to odeonsplatz,FindConnection,FindConnection,0.87,0
+206,2019-02-11 11:45:09,from garching to hauptbahnhof,FindConnection,FindConnection,1.0,0
+207,2019-02-11 11:45:09,how can i get from garching to odeonsplatz,FindConnection,FindConnection,1.0,0
+208,2019-02-11 11:45:09,start: neufahrn end:garching,FindConnection,FindConnection,0.59,0
+209,2019-02-11 11:45:09,how can i get from studentenstadt to garching,FindConnection,FindConnection,1.0,0
+210,2019-02-11 11:45:09,when is the next bus from garching,DepartureTime,DepartureTime,1.0,0
+211,2019-02-11 11:45:09,take me from hauptbahnhof to odeonsplatz,FindConnection,FindConnection,0.81,0

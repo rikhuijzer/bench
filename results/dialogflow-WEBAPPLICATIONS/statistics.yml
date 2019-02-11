@@ -1,0 +1,6 @@
+system name: dialogflow
+corpus: Corpus.WEBAPPLICATIONS
+f1 intent scores:
+  micro: '0.814'
+  macro: '0.646'
+  weighted: '0.83'

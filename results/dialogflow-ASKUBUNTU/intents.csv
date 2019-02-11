@@ -232,3 +232,178 @@ id,timestamp,sentence,intent,classification,confidence,time
 230,2018-11-13 10:33:54,How Do I Install Canon MF8000C Printer in Ubuntu 15.10?,Setup Printer,Setup Printer,0.88,0
 231,2018-11-13 10:33:54,How to install Canon LBP330 in Lts 16.04,Setup Printer,Setup Printer,0.7,0
 232,2018-11-13 10:33:54,Install printer Lexmark X4690 (ubuntu 12.04),Setup Printer,Setup Printer,1.0,0
+233,2019-02-11 11:35:45,What software can I use to view epub documents?,Software Recommendation,Software Recommendation,0.59,0
+234,2019-02-11 11:35:45,Which PDF Viewer would you recommend?,Software Recommendation,Software Recommendation,0.37,0
+235,2019-02-11 11:35:45,What IDEs are available for Ubuntu?,Software Recommendation,Software Recommendation,0.96,0
+236,2019-02-11 11:35:45,What's the best Mind Mapping Software?,Software Recommendation,None,0.0,0
+237,2019-02-11 11:35:45,Software to read a QR code?,Software Recommendation,FindConnection,0.41,0
+238,2019-02-11 11:35:45,PDF to word conversion software?,Software Recommendation,Software Recommendation,0.52,0
+239,2019-02-11 11:35:45,Is there software that can view .dwg files?,Software Recommendation,Software Recommendation,0.53,0
+240,2019-02-11 11:35:45,What are some good PHP editors?,Software Recommendation,None,0.0,0
+241,2019-02-11 11:35:45,Is there a software utility to adjust screen gamma/brightness/contrast?,Software Recommendation,FindConnection,0.35,0
+242,2019-02-11 11:35:45,Please recommend a hex editor for shell,Software Recommendation,Software Recommendation,0.44,0
+243,2019-02-11 11:35:45,Is there LAN topology mapping software available in Ubuntu?,Software Recommendation,Software Recommendation,0.68,0
+244,2019-02-11 11:35:45,Is there a tool like wifi analyzer for ubuntu?,Software Recommendation,Software Recommendation,0.62,0
+245,2019-02-11 11:35:45,Tool for recovering deleted data from a flash drive,Software Recommendation,Software Recommendation,0.37,0
+246,2019-02-11 11:35:45,What's a simple "colour picker" app for GNOME?,Software Recommendation,Software Recommendation,0.47,0
+247,2019-02-11 11:35:45,Any app that tells me to take regular breaks from working?,Software Recommendation,FindConnection,0.34,0
+248,2019-02-11 11:35:45,What are some good ASCII art generators?,Software Recommendation,None,0.0,0
+249,2019-02-11 11:35:45,What are some good GUI binary viewers/editors?,Software Recommendation,Software Recommendation,0.31,0
+250,2019-02-11 11:35:45,Which is the best PDF metadata viewer for Ubuntu?,Software Recommendation,Software Recommendation,0.44,0
+251,2019-02-11 11:35:45,Is there a Linux file manager with a proper drop-down tree view? (like finder in OS X),Software Recommendation,None,0.0,0
+252,2019-02-11 11:35:45,Which application do you recommend for watching TV (DVB)?,Software Recommendation,Software Recommendation,0.49,0
+253,2019-02-11 11:35:45,What Is The Best HDR Software?,Software Recommendation,None,0.0,0
+254,2019-02-11 11:35:45,What do you use to edit Microsoft Word documents (docx)?,Software Recommendation,Software Recommendation,0.54,0
+255,2019-02-11 11:35:45,What's the best Wireframing tool?,Software Recommendation,Software Recommendation,0.42,0
+256,2019-02-11 11:35:45,Is there any software that will do face recognition in photos?,Software Recommendation,Software Recommendation,0.35,0
+257,2019-02-11 11:35:45,Applications to replace iTunes for iPod synchronization?,Software Recommendation,Software Recommendation,0.55,0
+258,2019-02-11 11:35:45,Is there an SSH connection manager?,Software Recommendation,FindConnection,0.47,0
+259,2019-02-11 11:35:45,A light alternative to gnome-system-monitor?,Software Recommendation,None,0.0,0
+260,2019-02-11 11:35:45,Software to create a video slideshow?,Software Recommendation,FindConnection,0.4,0
+261,2019-02-11 11:35:45,Is there a project management software for Ubuntu like Microsoft Project?,Software Recommendation,Software Recommendation,0.62,0
+262,2019-02-11 11:35:45,Is there any recovery software available for ext4?,Software Recommendation,Software Recommendation,0.78,0
+263,2019-02-11 11:35:45,What blog editor software are available?,Software Recommendation,Software Recommendation,0.83,0
+264,2019-02-11 11:35:45,Can you recommend a good modern GUI download manager (wget wrapper?),Software Recommendation,Software Recommendation,0.74,0
+265,2019-02-11 11:35:45,Is there any program for fuzzy string matching which provides a match score?,Software Recommendation,Software Recommendation,0.38,0
+266,2019-02-11 11:35:45,Are there any hardware diagnostic tools?,Software Recommendation,Software Recommendation,0.49,0
+267,2019-02-11 11:35:45,Recommendation for Regex editor?,Software Recommendation,Software Recommendation,0.44,0
+268,2019-02-11 11:35:45,Is there a Document scanning and archiving software?,None,Software Recommendation,0.3,0
+269,2019-02-11 11:35:45,Keyboard shortcut to shutdown?,Shutdown Computer,Shutdown Computer,1.0,0
+270,2019-02-11 11:35:45,My system doesn't go shutdown,Shutdown Computer,Shutdown Computer,0.76,0
+271,2019-02-11 11:35:45,How to troubleshoot slow shutdown?,Shutdown Computer,Shutdown Computer,0.98,0
+272,2019-02-11 11:35:45,How can I shutdown the computer when a certain process ends?,Shutdown Computer,Shutdown Computer,0.8,0
+273,2019-02-11 11:35:45,Ubuntu Shut down app,Shutdown Computer,Shutdown Computer,0.53,0
+274,2019-02-11 11:35:45,What does my computer do when I click 'Shut Down'?,Shutdown Computer,Shutdown Computer,0.51,0
+275,2019-02-11 11:35:45,How do I shut down without the confirmation prompt?,Shutdown Computer,Shutdown Computer,0.61,0
+276,2019-02-11 11:35:45,No action when shutdown pressed,Shutdown Computer,Shutdown Computer,0.84,0
+277,2019-02-11 11:35:45,what is the right way to shutdown ubuntu using the command line?,Shutdown Computer,Shutdown Computer,0.68,0
+278,2019-02-11 11:35:45,How can I make shutdown not require admin password?,Shutdown Computer,Shutdown Computer,0.71,0
+279,2019-02-11 11:35:45,shutdown in specific way if no-one uses computer,Shutdown Computer,Shutdown Computer,0.87,0
+280,2019-02-11 11:37:49,What software can I use to view epub documents?,Software Recommendation,None,0.0,0
+281,2019-02-11 11:37:49,Which PDF Viewer would you recommend?,Software Recommendation,None,0.0,0
+282,2019-02-11 11:37:49,What IDEs are available for Ubuntu?,Software Recommendation,None,0.0,0
+283,2019-02-11 11:37:49,What's the best Mind Mapping Software?,Software Recommendation,None,0.0,0
+284,2019-02-11 11:37:49,Software to read a QR code?,Software Recommendation,None,0.0,0
+285,2019-02-11 11:37:49,PDF to word conversion software?,Software Recommendation,None,0.0,0
+286,2019-02-11 11:37:49,Is there software that can view .dwg files?,Software Recommendation,Software Recommendation,0.52,0
+287,2019-02-11 11:37:49,What are some good PHP editors?,Software Recommendation,None,0.0,0
+288,2019-02-11 11:37:49,Is there a software utility to adjust screen gamma/brightness/contrast?,Software Recommendation,None,0.0,0
+289,2019-02-11 11:37:49,Please recommend a hex editor for shell,Software Recommendation,Software Recommendation,0.45,0
+290,2019-02-11 11:37:49,Is there LAN topology mapping software available in Ubuntu?,Software Recommendation,Software Recommendation,0.69,0
+291,2019-02-11 11:37:49,Is there a tool like wifi analyzer for ubuntu?,Software Recommendation,Software Recommendation,0.62,0
+292,2019-02-11 11:37:49,Tool for recovering deleted data from a flash drive,Software Recommendation,Software Recommendation,0.46,0
+293,2019-02-11 11:37:49,What's a simple "colour picker" app for GNOME?,Software Recommendation,Software Recommendation,0.46,0
+294,2019-02-11 11:37:49,Any app that tells me to take regular breaks from working?,Software Recommendation,Software Recommendation,0.36,0
+295,2019-02-11 11:37:49,What are some good ASCII art generators?,Software Recommendation,None,0.0,0
+296,2019-02-11 11:37:49,What are some good GUI binary viewers/editors?,Software Recommendation,Software Recommendation,0.32,0
+297,2019-02-11 11:37:49,Which is the best PDF metadata viewer for Ubuntu?,Software Recommendation,Software Recommendation,0.44,0
+298,2019-02-11 11:37:49,Is there a Linux file manager with a proper drop-down tree view? (like finder in OS X),Software Recommendation,None,0.0,0
+299,2019-02-11 11:39:25,What software can I use to view epub documents?,Software Recommendation,Software Recommendation,0.57,0
+300,2019-02-11 11:39:25,Which PDF Viewer would you recommend?,Software Recommendation,Software Recommendation,0.4,0
+301,2019-02-11 11:39:25,What IDEs are available for Ubuntu?,Software Recommendation,Software Recommendation,0.95,0
+302,2019-02-11 11:39:25,What's the best Mind Mapping Software?,Software Recommendation,None,0.0,0
+303,2019-02-11 11:39:25,Software to read a QR code?,Software Recommendation,Software Recommendation,0.35,0
+304,2019-02-11 11:39:25,PDF to word conversion software?,Software Recommendation,Software Recommendation,0.51,0
+305,2019-02-11 11:39:25,Is there software that can view .dwg files?,Software Recommendation,Software Recommendation,0.52,0
+306,2019-02-11 11:39:25,What are some good PHP editors?,Software Recommendation,None,0.0,0
+307,2019-02-11 11:39:25,Is there a software utility to adjust screen gamma/brightness/contrast?,Software Recommendation,None,0.0,0
+308,2019-02-11 11:39:25,Please recommend a hex editor for shell,Software Recommendation,Software Recommendation,0.45,0
+309,2019-02-11 11:39:25,Is there LAN topology mapping software available in Ubuntu?,Software Recommendation,Software Recommendation,0.69,0
+310,2019-02-11 11:39:25,Is there a tool like wifi analyzer for ubuntu?,Software Recommendation,Software Recommendation,0.62,0
+311,2019-02-11 11:39:25,Tool for recovering deleted data from a flash drive,Software Recommendation,Software Recommendation,0.46,0
+312,2019-02-11 11:39:25,What's a simple "colour picker" app for GNOME?,Software Recommendation,Software Recommendation,0.46,0
+313,2019-02-11 11:39:25,Any app that tells me to take regular breaks from working?,Software Recommendation,Software Recommendation,0.36,0
+314,2019-02-11 11:39:25,What are some good ASCII art generators?,Software Recommendation,None,0.0,0
+315,2019-02-11 11:39:25,What are some good GUI binary viewers/editors?,Software Recommendation,Software Recommendation,0.32,0
+316,2019-02-11 11:39:25,Which is the best PDF metadata viewer for Ubuntu?,Software Recommendation,Software Recommendation,0.44,0
+317,2019-02-11 11:39:25,Is there a Linux file manager with a proper drop-down tree view? (like finder in OS X),Software Recommendation,None,0.0,0
+318,2019-02-11 11:39:25,Which application do you recommend for watching TV (DVB)?,Software Recommendation,Software Recommendation,0.49,0
+319,2019-02-11 11:39:25,What Is The Best HDR Software?,Software Recommendation,None,0.0,0
+320,2019-02-11 11:39:25,What do you use to edit Microsoft Word documents (docx)?,Software Recommendation,Software Recommendation,0.52,0
+321,2019-02-11 11:39:25,What's the best Wireframing tool?,Software Recommendation,Software Recommendation,0.4,0
+322,2019-02-11 11:39:25,Is there any software that will do face recognition in photos?,Software Recommendation,Software Recommendation,0.35,0
+323,2019-02-11 11:39:25,Applications to replace iTunes for iPod synchronization?,Software Recommendation,Software Recommendation,0.54,0
+324,2019-02-11 11:39:25,Is there an SSH connection manager?,Software Recommendation,None,0.0,0
+325,2019-02-11 11:39:25,A light alternative to gnome-system-monitor?,Software Recommendation,None,0.0,0
+326,2019-02-11 11:39:25,Software to create a video slideshow?,Software Recommendation,Software Recommendation,0.38,0
+327,2019-02-11 11:39:25,Is there a project management software for Ubuntu like Microsoft Project?,Software Recommendation,Software Recommendation,0.63,0
+328,2019-02-11 11:39:25,Is there any recovery software available for ext4?,Software Recommendation,Software Recommendation,0.79,0
+329,2019-02-11 11:39:25,What blog editor software are available?,Software Recommendation,Software Recommendation,0.82,0
+330,2019-02-11 11:39:25,Can you recommend a good modern GUI download manager (wget wrapper?),Software Recommendation,Software Recommendation,0.75,0
+331,2019-02-11 11:39:25,Is there any program for fuzzy string matching which provides a match score?,Software Recommendation,Software Recommendation,0.37,0
+332,2019-02-11 11:39:25,Are there any hardware diagnostic tools?,Software Recommendation,Software Recommendation,0.48,0
+333,2019-02-11 11:39:25,Recommendation for Regex editor?,Software Recommendation,Software Recommendation,0.45,0
+334,2019-02-11 11:39:25,Is there a Document scanning and archiving software?,None,Software Recommendation,0.31,0
+335,2019-02-11 11:39:25,Keyboard shortcut to shutdown?,Shutdown Computer,Shutdown Computer,1.0,0
+336,2019-02-11 11:39:25,My system doesn't go shutdown,Shutdown Computer,Shutdown Computer,0.77,0
+337,2019-02-11 11:39:25,How to troubleshoot slow shutdown?,Shutdown Computer,Shutdown Computer,1.0,0
+338,2019-02-11 11:39:25,How can I shutdown the computer when a certain process ends?,Shutdown Computer,Shutdown Computer,0.8,0
+339,2019-02-11 11:39:25,Ubuntu Shut down app,Shutdown Computer,Shutdown Computer,0.51,0
+340,2019-02-11 11:39:25,What does my computer do when I click 'Shut Down'?,Shutdown Computer,Shutdown Computer,0.49,0
+341,2019-02-11 11:39:25,How do I shut down without the confirmation prompt?,Shutdown Computer,Shutdown Computer,0.61,0
+342,2019-02-11 11:39:25,No action when shutdown pressed,Shutdown Computer,Shutdown Computer,0.84,0
+343,2019-02-11 11:39:25,what is the right way to shutdown ubuntu using the command line?,Shutdown Computer,Shutdown Computer,0.66,0
+344,2019-02-11 11:39:25,How can I make shutdown not require admin password?,Shutdown Computer,Shutdown Computer,0.7,0
+345,2019-02-11 11:39:25,shutdown in specific way if no-one uses computer,Shutdown Computer,Shutdown Computer,0.88,0
+346,2019-02-11 11:39:25,What is the command to open the shutdown dialog?,Shutdown Computer,Shutdown Computer,0.8,0
+347,2019-02-11 11:39:25,How to Shut down Ubuntu by using keyboard?,Shutdown Computer,Shutdown Computer,0.7,0
+348,2019-02-11 11:39:25,shutdown 5:30pm every day,Shutdown Computer,Shutdown Computer,1.0,0
+349,2019-02-11 11:39:25,Upgrading from 11.10 to 12.04,Make Update,Make Update,0.99,0
+350,2019-02-11 11:39:25,How do I upgrade to the release version of 16.04 if I am running Beta?,Make Update,Make Update,0.44,0
+351,2019-02-11 11:39:25,Doubts regarding the 15.04 upgrade (is it inevitable and unavoidable?),Make Update,Make Update,0.62,0
+352,2019-02-11 11:39:25,Is any offline upgrade from 13.10 to 14.04 possible?,Make Update,Make Update,0.72,0
+353,2019-02-11 11:39:25,Upgrading from ubuntu 12.04 to 13.10,Make Update,Make Update,1.0,0
+354,2019-02-11 11:39:25,Ubuntu upgrade failed,Make Update,Make Update,0.89,0
+355,2019-02-11 11:39:25,Upgrading from 12.04 to 13.10 ( Unanswered questions ),Make Update,Make Update,0.89,0
+356,2019-02-11 11:39:25,upgrading to Ubuntu 13.10 from Ubuntu 13.04,Make Update,Make Update,0.79,0
+357,2019-02-11 11:39:25,Is it recommended to upgrade to Lubuntu 15.04?,Software Recommendation,Make Update,0.63,0
+358,2019-02-11 11:39:25,Force upgrade 12.10 to 13.04,Make Update,Make Update,0.89,0
+359,2019-02-11 11:39:25,How to partially upgrade Ubuntu 11.10 from Ubuntu 11.04?,Make Update,Make Update,0.89,0
+360,2019-02-11 11:39:25,Problem upgrading Ubuntu 9.10,Make Update,Make Update,0.66,0
+361,2019-02-11 11:39:25,Is it necessary to upgrade to 15.10 from 14.04?,Make Update,Make Update,0.69,0
+362,2019-02-11 11:39:25,How do I update Xubuntu 11.10 to Xubuntu 12.04 LTS?,Make Update,Make Update,0.5,0
+363,2019-02-11 11:39:25,Why did the upgrade from 11.10 to 12.04 ruin my system?,Make Update,Make Update,0.98,0
+364,2019-02-11 11:39:25,Problems upgrading from 12.04 to 14.04,Make Update,Make Update,0.94,0
+365,2019-02-11 11:39:25,Problems upgrading Ubuntu 12.10 to 13.04,Make Update,Make Update,0.77,0
+366,2019-02-11 11:39:25,Upgrade from 12.04 to 12.10 without losing files?,Make Update,Make Update,0.96,0
+367,2019-02-11 11:39:25,On really old Ubuntu 6.06 - How to upgrade,Software Recommendation,Make Update,0.63,0
+368,2019-02-11 11:39:25,Do I need to uninstall 10.04 to upgrade to 12.04?,Make Update,Make Update,0.77,0
+369,2019-02-11 11:39:25,Do I need to reinstall everything to upgrade from 13.10 to 14.10?,Make Update,Make Update,0.69,0
+370,2019-02-11 11:39:25,update-manager: upgrade to 15.04 rather than 16.04,Make Update,Make Update,0.7,0
+371,2019-02-11 11:39:25,Upgrading 16.04 to 16.04.1,Make Update,Make Update,0.68,0
+372,2019-02-11 11:39:25,Upgrading Ubuntu Server 9.10 to 10.04,Make Update,Make Update,0.69,0
+373,2019-02-11 11:39:25,Ho do I update to 13.04 from the beta?,Make Update,Make Update,0.33,0
+374,2019-02-11 11:39:25,How to upgrade from 12.10 to 14.04,Make Update,Make Update,0.97,0
+375,2019-02-11 11:39:25,Upgrading from 10.10 to 11.04 how much space is needed?,Make Update,Make Update,0.66,0
+376,2019-02-11 11:39:25,Do I need to backup my 12.04 system to upgrade to 12.04.1?,Make Update,Make Update,0.69,0
+377,2019-02-11 11:39:25,Cannot upgrade from 12.04LTS to 14.04,Make Update,Make Update,1.0,0
+378,2019-02-11 11:39:25,Upgrade 10.10 to 11.04,Make Update,Make Update,0.78,0
+379,2019-02-11 11:39:25,How to upgrade from 14.04 LTS or 15.10 to 16.04 from terminal,Make Update,Make Update,0.83,0
+380,2019-02-11 11:39:25,How to upgrade from 16.04 LTS to 16.04.1 LTS,Make Update,Make Update,0.9,0
+381,2019-02-11 11:39:25,Upgrading from 10.04 to 11.10,Make Update,Make Update,0.85,0
+382,2019-02-11 11:39:25,How can i upgrade to Ubuntu 14.04 final from 14.04 Beta correctly?,Make Update,Make Update,0.6,0
+383,2019-02-11 11:39:25,Is there an upgrade procedure from 12.04 LTS to 14.04 LTS,Make Update,Make Update,0.87,0
+384,2019-02-11 11:39:25,Upgrade from 9.10 to 11.04,Make Update,Make Update,0.93,0
+385,2019-02-11 11:39:25,How to upgrade Ubuntu 12.04 to 14.04 if I have dual boot with windows 7?,Make Update,Make Update,0.93,0
+386,2019-02-11 11:39:25,Wubi Device /dev/loop0 full. How to get more space?,Software Recommendation,None,0.0,0
+387,2019-02-11 11:39:25,Using 12.04 can I compile packages with gcc for 10.04?,Make Update,None,0.0,0
+388,2019-02-11 11:39:25,Removing Recently used items in 12.04,Software Recommendation,Make Update,0.32,0
+389,2019-02-11 11:39:25,Upgrading From 11.04 (32bit) to 12.04 (64bit),Make Update,Make Update,0.96,0
+390,2019-02-11 11:39:25,How is rm command different from the delete button?,None,None,0.0,0
+391,2019-02-11 11:39:25,In Unity how do I see the details of a given launcher?,Software Recommendation,None,0.0,0
+392,2019-02-11 11:39:25,How to provide user permission to read and write on /dev/sdax? What is the syntax?,None,None,0.0,0
+393,2019-02-11 11:39:25,Security enhancements prevent mounting /dev/sdb1,None,None,0.0,0
+394,2019-02-11 11:39:25,How do I show grub when resuming from suspend?,None,None,0.0,0
+395,2019-02-11 11:39:25,How to install a Lexmark z600 series printer?,Setup Printer,Setup Printer,1.0,0
+396,2019-02-11 11:39:25,Cannot setup HP All in one DJ3630,Setup Printer,Setup Printer,0.48,0
+397,2019-02-11 11:39:25,How to add a network printer on Ubuntu 15.10?,Setup Printer,Setup Printer,0.64,0
+398,2019-02-11 11:39:25,Cannot install printer driver epson l210,Setup Printer,Setup Printer,1.0,0
+399,2019-02-11 11:39:25,How do I install Dell 2150cdn printer,Setup Printer,Setup Printer,0.9,0
+400,2019-02-11 11:39:25,Installing Epson XP-424 wireless printer,Setup Printer,Setup Printer,0.85,0
+401,2019-02-11 11:39:25,Installing EPSON L355 on Ubuntu 14.04,Setup Printer,Setup Printer,0.68,0
+402,2019-02-11 11:39:25,How do I install the HP F4280 printer?,Setup Printer,Setup Printer,0.98,0
+403,2019-02-11 11:39:25,How to Install Brother DCP-8110DN Laser Printer on Ubuntu?,Setup Printer,Setup Printer,0.99,0
+404,2019-02-11 11:39:25,How to Install a Canon MF8040Cn Printer on Ubuntu 12.04,Setup Printer,Setup Printer,1.0,0
+405,2019-02-11 11:39:25,How Do I Install Canon MF8000C Printer in Ubuntu 15.10?,Setup Printer,Setup Printer,0.88,0
+406,2019-02-11 11:39:25,How to install Canon LBP330 in Lts 16.04,Setup Printer,Setup Printer,0.7,0
+407,2019-02-11 11:39:25,Install printer Lexmark X4690 (ubuntu 12.04),Setup Printer,Setup Printer,1.0,0

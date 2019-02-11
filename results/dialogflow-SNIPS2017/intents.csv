@@ -1,0 +1,701 @@
+id,timestamp,sentence,gold_standard,classification,confidence,time
+0,2019-02-11 11:54:32,Book a reservation for my babies and I,BookRestaurant,BookRestaurant,1.0,0
+1,2019-02-11 11:54:32,Book a reservation for a restaurant not far from MA,BookRestaurant,BookRestaurant,1.0,0
+2,2019-02-11 11:54:32,I would like to book a restaurant in Tanzania that is within walking distance for my mom and I,BookRestaurant,BookRestaurant,0.81,0
+3,2019-02-11 11:54:32,Book a reservation for an oyster bar,BookRestaurant,BookRestaurant,1.0,0
+4,2019-02-11 11:54:32,Book a reservation for 6 people for a creole tavern in Montenegro,BookRestaurant,BookRestaurant,1.0,0
+5,2019-02-11 11:54:32,I need a table in Sacaton at a gluten free restaurant,BookRestaurant,BookRestaurant,1.0,0
+6,2019-02-11 11:54:32,book sot for me and my grandfather nearby West Reading,BookRestaurant,BookRestaurant,0.55,0
+7,2019-02-11 11:54:32,Book me and my nieces a reservation for a seafood restaurant in Cle Elum NE on ascension day,BookRestaurant,BookRestaurant,0.91,0
+8,2019-02-11 11:54:32,book spot for two at City Tavern,BookRestaurant,BookRestaurant,1.0,0
+9,2019-02-11 11:54:32,I want to book a brasserie for 3 people in Netherlands Antilles.,BookRestaurant,BookRestaurant,0.87,0
+10,2019-02-11 11:54:32,Book me a reservation for the best bistro,BookRestaurant,BookRestaurant,1.0,0
+11,2019-02-11 11:54:32,book the best table in Tanzania for 5 people at a diner,BookRestaurant,BookRestaurant,1.0,0
+12,2019-02-11 11:54:32,I want to book a joint in a  spa.,BookRestaurant,BookRestaurant,0.94,0
+13,2019-02-11 11:54:32,book a gastropub that serves turkish food for 4 people,BookRestaurant,BookRestaurant,0.99,0
+14,2019-02-11 11:54:32,book spot for 7 at an indoor restaurant in MP now,BookRestaurant,BookRestaurant,1.0,0
+15,2019-02-11 11:54:32,book a table in Fiji for zero a.m,BookRestaurant,BookRestaurant,1.0,0
+16,2019-02-11 11:54:32,I want to book a restaurant for five people in Sri Lanka.,BookRestaurant,BookRestaurant,1.0,0
+17,2019-02-11 11:54:32,I need a table for 5 at a highly rated gastropub in Concord MN,BookRestaurant,BookRestaurant,0.97,0
+18,2019-02-11 11:54:32,I want to book Oregon Electric Station in North City.,BookRestaurant,BookRestaurant,0.78,0
+19,2019-02-11 11:54:32,I need a table for 4; please confirm the reservation.,BookRestaurant,BookRestaurant,1.0,0
+20,2019-02-11 11:54:32,Book a popular restaurant for 5 people,BookRestaurant,BookRestaurant,1.0,0
+21,2019-02-11 11:54:32,I want to book a joint close by the naomi's hostel for a meal for 8 people.,BookRestaurant,BookRestaurant,0.93,0
+22,2019-02-11 11:54:32,I want to eat a delicatessen in thirteen hours that serves eastern european food,BookRestaurant,BookRestaurant,0.55,0
+23,2019-02-11 11:54:32,Book a reservation for nine people at a bakery in Nunez,BookRestaurant,BookRestaurant,1.0,0
+24,2019-02-11 11:54:32,Book a reservation at tavern for noodle,BookRestaurant,BookRestaurant,1.0,0
+25,2019-02-11 11:54:32,book spot for 4 in Somalia,BookRestaurant,BookRestaurant,1.0,0
+26,2019-02-11 11:54:32,I want to book Albany Pump Station in Buckholts Washington now for a party of 9.,BookRestaurant,BookRestaurant,1.0,0
+27,2019-02-11 11:54:32,I want to book a taverna in Archer City for this spring for nine people.,BookRestaurant,BookRestaurant,0.89,0
+28,2019-02-11 11:54:32,I want to book a top-rated brasserie for 7 people.,BookRestaurant,BookRestaurant,0.97,0
+29,2019-02-11 11:54:32,Book a reservation for 8 people in Wardville Kansas,BookRestaurant,BookRestaurant,1.0,0
+30,2019-02-11 11:54:32,table for Breadline Cafe in Minnesota next friday,BookRestaurant,BookRestaurant,0.93,0
+31,2019-02-11 11:54:32,I want to book a restaurant in Niger for seven people.,BookRestaurant,BookRestaurant,1.0,0
+32,2019-02-11 11:54:32,Book spot for 9,BookRestaurant,BookRestaurant,1.0,0
+33,2019-02-11 11:54:32,Book me a reservation for a pub in Cormorant for a party of nine,BookRestaurant,BookRestaurant,1.0,0
+34,2019-02-11 11:54:32,book spot for my nieces and I at a tea house,BookRestaurant,BookRestaurant,1.0,0
+35,2019-02-11 11:54:32,I want to book a jewish restaurant in Gambia.,BookRestaurant,BookRestaurant,1.0,0
+36,2019-02-11 11:54:32,Book a reservation for The Dome Edinburgh close to Brooklawn,BookRestaurant,BookRestaurant,1.0,0
+37,2019-02-11 11:54:32,book spot for 1 at Town of Ramsgate in Merit,BookRestaurant,BookRestaurant,1.0,0
+38,2019-02-11 11:54:32,Book a spot for me and kathrine  at Smithville,BookRestaurant,BookRestaurant,1.0,0
+39,2019-02-11 11:54:32,I want to book a restaurant for my father in law and I in Buckner a year from now.,BookRestaurant,BookRestaurant,1.0,0
+40,2019-02-11 11:54:32,Book a restaurant reservation in 6 weeks,BookRestaurant,BookRestaurant,1.0,0
+41,2019-02-11 11:54:32,Book a reservation for a bar with a spa nearby ID,BookRestaurant,BookRestaurant,0.91,0
+42,2019-02-11 11:54:32,book spot for four at Cliff House San Francisco in Martinique,BookRestaurant,BookRestaurant,1.0,0
+43,2019-02-11 11:54:32,I need a table for 4 in Saint Helena at Settha Palace Hotel,BookRestaurant,BookRestaurant,1.0,0
+44,2019-02-11 11:54:32,I want to book a restaurant in Frenier 12 years from now for 4 people.,BookRestaurant,BookRestaurant,1.0,0
+45,2019-02-11 11:54:32,Book seven in neighboring Moorpark,BookRestaurant,BookRestaurant,0.76,0
+46,2019-02-11 11:54:32,I want to eat by five pm in NE for a six people,BookRestaurant,BookRestaurant,0.59,0
+47,2019-02-11 11:54:32,I want to book Tupelo Honey Cafe in New Jersey for five people.,BookRestaurant,BookRestaurant,0.98,0
+48,2019-02-11 11:54:32,Book a reservation for two at Mickies Dairy Bar in Weedsport,BookRestaurant,BookRestaurant,1.0,0
+49,2019-02-11 11:54:32,book a table at a Fried chicken restaurant,BookRestaurant,BookRestaurant,1.0,0
+50,2019-02-11 11:54:32,book spot for mavis sheila and I in Syria at elevenses,BookRestaurant,BookRestaurant,1.0,0
+51,2019-02-11 11:54:32,Can you book me a table at Windows on the World in Cokeville  MI?,BookRestaurant,BookRestaurant,0.8,0
+52,2019-02-11 11:54:32,Book me a table for 5 this year at Cherwell Boathouse,BookRestaurant,BookRestaurant,1.0,0
+53,2019-02-11 11:54:32,book spot for six  at 8 pm at a coffeehouse in NE that serves hog fry,BookRestaurant,BookRestaurant,0.99,0
+54,2019-02-11 11:54:32,I want to book a restaurant close-by in Inman for five people.,BookRestaurant,BookRestaurant,1.0,0
+55,2019-02-11 11:54:32,I need a table at Eddie's Attic in Nevada for one,BookRestaurant,BookRestaurant,0.95,0
+56,2019-02-11 11:54:32,Book a reservation for an osteria restaurant for 4 people on november 4,BookRestaurant,BookRestaurant,1.0,0
+57,2019-02-11 11:54:32,I want to book a top-rated restaurant close by in LA for me rebecca and loraine on 2/6/2020.,BookRestaurant,BookRestaurant,0.89,0
+58,2019-02-11 11:54:32,Book a reservation for 1 at a diner in WI,BookRestaurant,BookRestaurant,1.0,0
+59,2019-02-11 11:54:32,Book a reservation for 5 people at the top-rated brasserie restaurant,BookRestaurant,BookRestaurant,1.0,0
+60,2019-02-11 11:54:32,book a table on 1/20/2023 for 5 people in MH,BookRestaurant,BookRestaurant,1.0,0
+61,2019-02-11 11:54:32,book a table near pat's college,BookRestaurant,BookRestaurant,1.0,0
+62,2019-02-11 11:54:32,I want to book a steakhouse in Vimy Ridge.,BookRestaurant,BookRestaurant,0.88,0
+63,2019-02-11 11:54:32,I want a table at James D. Conrey House in Urbank California,BookRestaurant,BookRestaurant,0.85,0
+64,2019-02-11 11:54:32,Like to book a seat in Monaco for the Yankee Doodle Coffee Shop,BookRestaurant,BookRestaurant,0.51,0
+65,2019-02-11 11:54:32,I want to book a table in a restaurant in Bouvet Island.,BookRestaurant,BookRestaurant,1.0,0
+66,2019-02-11 11:54:32,I would like to book a restaurant for souvlaki cuisine in the state of NE,BookRestaurant,BookRestaurant,0.72,0
+67,2019-02-11 11:54:32,Book a reservation for 10 people at an oyster bar with a pool within the same area of Cowansburg for 10 Pm,BookRestaurant,BookRestaurant,0.93,0
+68,2019-02-11 11:54:32,Book a reservation for velma ana and rebecca for an american pizzeria at 5 Am in MA,BookRestaurant,BookRestaurant,1.0,0
+69,2019-02-11 11:54:32,Book a spot for 4 in Oklahoma at South Street Diner,BookRestaurant,BookRestaurant,1.0,0
+70,2019-02-11 11:54:32,Book a reservation for my mommy and I at a restaurant in Central African Republic,BookRestaurant,BookRestaurant,1.0,0
+71,2019-02-11 11:54:32,Book a reservation for five people for a tatar taverna in Sargents,BookRestaurant,BookRestaurant,1.0,0
+72,2019-02-11 11:54:32,phyllis ward and veronica need a table at a restaurant in 152 days,BookRestaurant,BookRestaurant,0.89,0
+73,2019-02-11 11:54:32,Book a reservation for ten at a restaurant in Ohio,BookRestaurant,BookRestaurant,1.0,0
+74,2019-02-11 11:54:32,I want to book a tea house that serves salade far from here at Midnight in Panama for two people.,BookRestaurant,BookRestaurant,1.0,0
+75,2019-02-11 11:54:32,I want to book a food truck for seven people in the Republic of the Congo.,BookRestaurant,BookRestaurant,0.96,0
+76,2019-02-11 11:54:32,I want to book a restaurant for ten people.,BookRestaurant,BookRestaurant,1.0,0
+77,2019-02-11 11:54:32,Lets eat near Oakfield 17 seconds from now at Ted Peters Famous Smoked Fish,BookRestaurant,BookRestaurant,0.42,0
+78,2019-02-11 11:54:32,Book sot for 7 at a restaurant that serves european in Stringtown on Feb. the 28th 2034,BookRestaurant,BookRestaurant,1.0,0
+79,2019-02-11 11:54:32,book a restaurant for six at an outdoor cafe in Åland,BookRestaurant,BookRestaurant,1.0,0
+80,2019-02-11 11:54:32,Book a table for 12 am. at our step mother's secondary residence within walking distance for one,BookRestaurant,BookRestaurant,1.0,0
+81,2019-02-11 11:54:32,Please book me a table at a pizzeria with a parking facility in Ghana.,BookRestaurant,BookRestaurant,0.96,0
+82,2019-02-11 11:54:32,book spot for four at a indoor pub within the same area of Louisiana in one minute ,BookRestaurant,BookRestaurant,0.88,0
+83,2019-02-11 11:54:32,Please book me a restaurant,BookRestaurant,BookRestaurant,0.87,0
+84,2019-02-11 11:54:32,Book a reservation for me and my step brother at AMT Coffee in Lakemoor,BookRestaurant,BookRestaurant,1.0,0
+85,2019-02-11 11:54:32,I want to book a churrascaria in Romeoville at ten a.m for four people.,BookRestaurant,BookRestaurant,1.0,0
+86,2019-02-11 11:54:32,table for 5 A.m. at Baker's Keyboard Lounge,BookRestaurant,BookRestaurant,0.73,0
+87,2019-02-11 11:54:32,Please book me a table at a bistro which serves lorna doone.,BookRestaurant,BookRestaurant,1.0,0
+88,2019-02-11 11:54:32,I want to book a restaurant for six people in Wagstaff AK.,BookRestaurant,BookRestaurant,1.0,0
+89,2019-02-11 11:54:32,I would like to book a highly rated restaurant for a party of ten.,BookRestaurant,BookRestaurant,0.96,0
+90,2019-02-11 11:54:32,I want to book a sundanese gastropub nearby in Texas for 3 people on 5/20/2025.,BookRestaurant,BookRestaurant,0.78,0
+91,2019-02-11 11:54:32,book a party of five at Seagoville for 06:42,BookRestaurant,BookRestaurant,1.0,0
+92,2019-02-11 11:54:32,Book spot for 9 at Thurmont,BookRestaurant,BookRestaurant,1.0,0
+93,2019-02-11 11:54:32,I want to book a restaurant in sixteen seconds for 5 people in Gold Point Montana.,BookRestaurant,BookRestaurant,1.0,0
+94,2019-02-11 11:54:32,I want to eat in Ramona,BookRestaurant,GetWeather,0.52,0
+95,2019-02-11 11:54:32,book a party at their campus within the same area for churrascaria,BookRestaurant,BookRestaurant,0.95,0
+96,2019-02-11 11:54:32,Book me a reservation for a party of 3 at a pub in Northern Mariana Islands,BookRestaurant,BookRestaurant,1.0,0
+97,2019-02-11 11:54:32,I want to book a bougatsa restaurant in next year nearby Penn for three people.,BookRestaurant,BookRestaurant,0.99,0
+98,2019-02-11 11:54:32,Book a reservation for nine people at the best pub nearby Tangier in six months,BookRestaurant,BookRestaurant,1.0,0
+99,2019-02-11 11:54:32,need a table somewhere in Quarryville 14 hours from now,BookRestaurant,BookRestaurant,0.74,0
+100,2019-02-11 11:54:32,Wish to find the movie the Heart Beat,SearchCreativeWork,SearchCreativeWork,0.81,0
+101,2019-02-11 11:54:32,Please look up the TV show Vanity.,SearchCreativeWork,SearchCreativeWork,1.0,0
+102,2019-02-11 11:54:32,Get me the Elvis' Christmas Album TV show.,SearchCreativeWork,SearchCreativeWork,1.0,0
+103,2019-02-11 11:54:32,Please find me the saga The Deep Six.,SearchCreativeWork,SearchCreativeWork,1.0,0
+104,2019-02-11 11:54:32,Wish to see the photograph with the name Live: Right Here,SearchCreativeWork,SearchCreativeWork,0.56,0
+105,2019-02-11 11:54:32,Looking for a novel called Death March,SearchCreativeWork,SearchCreativeWork,1.0,0
+106,2019-02-11 11:54:32,Can you find me the work The Curse of Oak Island?,SearchCreativeWork,SearchCreativeWork,1.0,0
+107,2019-02-11 11:54:32,Please get me The Sacred and Profane Love Machine game.,SearchCreativeWork,SearchCreativeWork,0.87,0
+108,2019-02-11 11:54:32,Need a creative work called Hit by Love,SearchCreativeWork,SearchCreativeWork,0.79,0
+109,2019-02-11 11:54:32,search for the trailer for The Office,SearchCreativeWork,SearchCreativeWork,1.0,0
+110,2019-02-11 11:54:32,Looking for a creative work called Plant Ecology,SearchCreativeWork,SearchCreativeWork,1.0,0
+111,2019-02-11 11:54:32,Find the television show To Me,SearchCreativeWork,SearchCreativeWork,1.0,0
+112,2019-02-11 11:54:32,Can you please find me the saga Chump Change?,SearchCreativeWork,SearchCreativeWork,1.0,0
+113,2019-02-11 11:54:32,Can you find me The Ridiculous 6 book?,SearchCreativeWork,SearchCreativeWork,1.0,0
+114,2019-02-11 11:54:32,Please fine me the TV series Now We Are Married.,SearchCreativeWork,SearchCreativeWork,0.94,0
+115,2019-02-11 11:54:32,Please look up the work Bachelor Pad.,SearchCreativeWork,SearchCreativeWork,1.0,0
+116,2019-02-11 11:54:32,Please help me find the Late Night Heartbroken Blues television show.,SearchCreativeWork,SearchCreativeWork,1.0,0
+117,2019-02-11 11:54:32,Please help me find Bend It Like Beckham the Musical.,SearchCreativeWork,SearchCreativeWork,0.82,0
+118,2019-02-11 11:54:32,Please look up the TV series Parables for Wooden Ears.,SearchCreativeWork,SearchCreativeWork,1.0,0
+119,2019-02-11 11:54:32,Can you find me Hey Man?,SearchCreativeWork,SearchCreativeWork,1.0,0
+120,2019-02-11 11:54:32,Please search for Switched.,SearchCreativeWork,SearchCreativeWork,1.0,0
+121,2019-02-11 11:54:32,Can you get me the Controlled Conversations TV series?,SearchCreativeWork,SearchCreativeWork,1.0,0
+122,2019-02-11 11:54:32,Please look up the song The Mad Magician.,SearchCreativeWork,SearchCreativeWork,0.95,0
+123,2019-02-11 11:54:32,Please search for the TV show The Best of White Lion.,SearchCreativeWork,SearchCreativeWork,1.0,0
+124,2019-02-11 11:54:32,Please find me Phineas Redux.,SearchCreativeWork,SearchCreativeWork,1.0,0
+125,2019-02-11 11:54:32,Get me the Procession of Ants TV show.,SearchCreativeWork,SearchCreativeWork,1.0,0
+126,2019-02-11 11:54:32,Looking for a game called Phinally Phamous,SearchCreativeWork,SearchCreativeWork,1.0,0
+127,2019-02-11 11:54:32,Can you search the Daring Youth saga?,SearchCreativeWork,SearchCreativeWork,1.0,0
+128,2019-02-11 11:54:32,look for the book The Girl Who Was Plugged In ,SearchCreativeWork,SearchCreativeWork,0.73,0
+129,2019-02-11 11:54:32,Find me a TV show called Baby Blue,SearchCreativeWork,SearchCreativeWork,1.0,0
+130,2019-02-11 11:54:32,Search for Appalachian Journey,SearchCreativeWork,SearchCreativeWork,1.0,0
+131,2019-02-11 11:54:32,Look for the television show Meet the Prince,SearchCreativeWork,SearchCreativeWork,0.93,0
+132,2019-02-11 11:54:32,Can you find me Cracks the Safe?,SearchCreativeWork,SearchCreativeWork,1.0,0
+133,2019-02-11 11:54:32,Please help me search the Hell Money saga.,SearchCreativeWork,SearchCreativeWork,0.97,0
+134,2019-02-11 11:54:32,Get me the Secret South song.,SearchCreativeWork,SearchCreativeWork,0.73,0
+135,2019-02-11 11:54:32,Can you find me the work titled Music for Millions?,SearchCreativeWork,SearchCreativeWork,1.0,0
+136,2019-02-11 11:54:32,Please search for the painting titled This Is the Night.,SearchCreativeWork,SearchCreativeWork,0.98,0
+137,2019-02-11 11:54:32,Could you locate the Epic Conditions picture?,SearchCreativeWork,SearchCreativeWork,0.61,0
+138,2019-02-11 11:54:32,get me the trailer of Good Morning Sunshine,SearchCreativeWork,SearchCreativeWork,0.87,0
+139,2019-02-11 11:54:32,Please search the An Introduction to Karl Marx painting.,SearchCreativeWork,SearchCreativeWork,1.0,0
+140,2019-02-11 11:54:32,Can you find me the Blue Spring trailer?,SearchCreativeWork,SearchCreativeWork,1.0,0
+141,2019-02-11 11:54:32,Could you find the TV series The Approach,SearchCreativeWork,SearchCreativeWork,1.0,0
+142,2019-02-11 11:54:32,Search for the TV show A Lawless Street.,SearchCreativeWork,SearchCreativeWork,1.0,0
+143,2019-02-11 11:54:32,Please look up Three Essays on the Theory of Sexuality show.,SearchCreativeWork,SearchCreativeWork,1.0,0
+144,2019-02-11 11:54:32,Please get me the Compulsive Disclosure song.,SearchCreativeWork,SearchCreativeWork,1.0,0
+145,2019-02-11 11:54:32,Can you look up the Molecular Oncology saga?,SearchCreativeWork,SearchCreativeWork,1.0,0
+146,2019-02-11 11:54:32,Search for The Sound of One Hand Clapping,SearchCreativeWork,SearchCreativeWork,0.95,0
+147,2019-02-11 11:54:32,Find the creative work Deadly Weapons,SearchCreativeWork,SearchCreativeWork,0.98,0
+148,2019-02-11 11:54:32,Need the creative work called The Logic of Scientific Discovery,SearchCreativeWork,SearchCreativeWork,1.0,0
+149,2019-02-11 11:54:32,Can you find me the National Anthem of the Ancient Britons television show?,SearchCreativeWork,SearchCreativeWork,1.0,0
+150,2019-02-11 11:54:32,Can you please find me the Harry Hood saga?,SearchCreativeWork,SearchCreativeWork,1.0,0
+151,2019-02-11 11:54:32,Can you find me the work Bible translations into Hawaii Pidgin?,SearchCreativeWork,SearchCreativeWork,1.0,0
+152,2019-02-11 11:54:32,Please look up and find me Monty Python Live at the Hollywood Bowl.,SearchCreativeWork,SearchCreativeWork,1.0,0
+153,2019-02-11 11:54:32,Please search for Mary.,SearchCreativeWork,SearchCreativeWork,1.0,0
+154,2019-02-11 11:54:32,Please search the game ATLA: All This Life Allows.,SearchCreativeWork,SearchCreativeWork,1.0,0
+155,2019-02-11 11:54:32,Find me the novel with the name To Lose My Life…,SearchCreativeWork,SearchCreativeWork,0.91,0
+156,2019-02-11 11:54:32,Looking for a song with the title of Live at the Kings Center,SearchCreativeWork,SearchCreativeWork,0.86,0
+157,2019-02-11 11:54:32,Can you find the American Bison photograph?,SearchCreativeWork,SearchCreativeWork,1.0,0
+158,2019-02-11 11:54:32,Can you find me the Free for All show?,SearchCreativeWork,SearchCreativeWork,1.0,0
+159,2019-02-11 11:54:32,Please find me the Olympia 74 soundtrack.,SearchCreativeWork,SearchCreativeWork,1.0,0
+160,2019-02-11 11:54:32,Look for the album Slave to the Grind,SearchCreativeWork,SearchCreativeWork,0.88,0
+161,2019-02-11 11:54:32,Please find me the Projekt: The New Face of Goth.,SearchCreativeWork,SearchCreativeWork,1.0,0
+162,2019-02-11 11:54:32,Can you get me the Message from God saga?,SearchCreativeWork,SearchCreativeWork,0.97,0
+163,2019-02-11 11:54:32,Find me the soundtrack A Honeymoon Adventure,SearchCreativeWork,SearchCreativeWork,0.94,0
+164,2019-02-11 11:54:32,Please get me The Henderson Kids saga.,SearchCreativeWork,SearchCreativeWork,0.95,0
+165,2019-02-11 11:54:32,Find the movie Splendor in the Grass,SearchCreativeWork,SearchScreeningEvent,0.76,0
+166,2019-02-11 11:54:32,Am looking for a book with the title Free to Play,SearchCreativeWork,SearchCreativeWork,0.84,0
+167,2019-02-11 11:54:32,Look for the TV series Jersey Boys,SearchCreativeWork,SearchCreativeWork,0.87,0
+168,2019-02-11 11:54:32,Can you search the book Paris - When It Sizzles?,SearchCreativeWork,SearchCreativeWork,0.9,0
+169,2019-02-11 11:54:32,Looking for a painting with the title With You,SearchCreativeWork,SearchCreativeWork,1.0,0
+170,2019-02-11 11:54:32,Please find me the Classified book.,SearchCreativeWork,SearchCreativeWork,1.0,0
+171,2019-02-11 11:54:32,Look for the show V-The New Mythology Suite,SearchCreativeWork,SearchCreativeWork,0.92,0
+172,2019-02-11 11:54:32,Find the creative work Face Down,SearchCreativeWork,SearchCreativeWork,1.0,0
+173,2019-02-11 11:54:32,Find Four Songs,SearchCreativeWork,SearchCreativeWork,0.99,0
+174,2019-02-11 11:54:32,Find me the soundtrack Live at the Greek Theatre,SearchCreativeWork,SearchCreativeWork,0.59,0
+175,2019-02-11 11:54:32,Please search for the television show Episodi di The Blacklist.,SearchCreativeWork,SearchCreativeWork,1.0,0
+176,2019-02-11 11:54:32,Find a creative work called Fire in the Hole,SearchCreativeWork,SearchCreativeWork,1.0,0
+177,2019-02-11 11:54:32,Looking for the picture with the name of Who Made Stevie Crye?,SearchCreativeWork,SearchCreativeWork,0.96,0
+178,2019-02-11 11:54:32,Look for the album Wolves Within,SearchCreativeWork,SearchCreativeWork,0.75,0
+179,2019-02-11 11:54:32,Find the album Orphan Girl at the Cemetery,SearchCreativeWork,SearchCreativeWork,0.84,0
+180,2019-02-11 11:54:32,Please find me the Journal of the British Astronomical Association movie.,SearchCreativeWork,SearchCreativeWork,1.0,0
+181,2019-02-11 11:54:32,Find the TV show The Daydreamer,SearchCreativeWork,SearchCreativeWork,1.0,0
+182,2019-02-11 11:54:32,Can you please get me the book Dracula 5: The Blood Legacy?,SearchCreativeWork,SearchCreativeWork,1.0,0
+183,2019-02-11 11:54:32,Please look up the novel Live to Dance.,SearchCreativeWork,SearchCreativeWork,1.0,0
+184,2019-02-11 11:54:32,Please find me the video game titled 20 Hours in America.,SearchCreativeWork,SearchCreativeWork,0.98,0
+185,2019-02-11 11:54:32,Find the creative work The Devil in Stitches,SearchCreativeWork,SearchCreativeWork,0.96,0
+186,2019-02-11 11:54:32,Please look up the work Prophets.,SearchCreativeWork,SearchCreativeWork,1.0,0
+187,2019-02-11 11:54:32,I'm looking for Welcome to the Canteen,SearchCreativeWork,SearchCreativeWork,0.62,0
+188,2019-02-11 11:54:32,Please search for the Journal of Official Statistics show.,SearchCreativeWork,SearchCreativeWork,1.0,0
+189,2019-02-11 11:54:32,Please look up Show-Biz Blues photograph.,SearchCreativeWork,SearchCreativeWork,1.0,0
+190,2019-02-11 11:54:32,Please search the Woodsmen of the West.,SearchCreativeWork,SearchCreativeWork,1.0,0
+191,2019-02-11 11:54:32,Can you find the creative works associated with Caryl & Marilyn: Real Friends,SearchCreativeWork,SearchCreativeWork,0.98,0
+192,2019-02-11 11:54:32,Please get me the Dead Soul saga.,SearchCreativeWork,SearchCreativeWork,0.94,0
+193,2019-02-11 11:54:32,Please search the Live from Leeds album.,SearchCreativeWork,SearchCreativeWork,1.0,0
+194,2019-02-11 11:54:32,Please look up the Johnny English - La rinascita painting.,SearchCreativeWork,SearchCreativeWork,0.93,0
+195,2019-02-11 11:54:32,Can you find me The Sword with No Name trailer?,SearchCreativeWork,SearchCreativeWork,1.0,0
+196,2019-02-11 11:54:32,I wish to watch The Fold trailer please search.,SearchCreativeWork,SearchCreativeWork,0.82,0
+197,2019-02-11 11:54:32,Can you find me the ALMOST HUMAN painting?,SearchCreativeWork,SearchCreativeWork,1.0,0
+198,2019-02-11 11:54:32,Please find me the work Serious Awesomeness!.,SearchCreativeWork,SearchCreativeWork,1.0,0
+199,2019-02-11 11:54:32,Search for the game Difficult Loves,SearchCreativeWork,SearchCreativeWork,1.0,0
+200,2019-02-11 11:54:32,rate this album four out of 6 stars,RateBook,RateBook,1.0,0
+201,2019-02-11 11:54:32,Give this textbook four stars.,RateBook,RateBook,0.92,0
+202,2019-02-11 11:54:32,rate A Twist in the Tale zero out of 6 points,RateBook,RateBook,1.0,0
+203,2019-02-11 11:54:32,Rate The children of Niobe 1 out of 6 points.,RateBook,RateBook,1.0,0
+204,2019-02-11 11:54:32,Give zero stars to Halo: Ghosts of Onyx,RateBook,RateBook,0.97,0
+205,2019-02-11 11:54:32,give this novel a score of 5,RateBook,RateBook,0.62,0
+206,2019-02-11 11:54:32,Give the current series four of 6 points.,RateBook,RateBook,1.0,0
+207,2019-02-11 11:54:32,Give 4 out of 6 points to The Spirit Ring chronicle,RateBook,RateBook,1.0,0
+208,2019-02-11 11:54:32,Give two stars out of 6 to 36 Children,RateBook,RateBook,1.0,0
+209,2019-02-11 11:54:32,Rate The Sneetches and Other Stories a three,RateBook,RateBook,0.71,0
+210,2019-02-11 11:54:32,Rate the current series four stars.,RateBook,RateBook,0.98,0
+211,2019-02-11 11:54:32,rate this book a 4 out of 6,RateBook,RateBook,1.0,0
+212,2019-02-11 11:54:32,rate the current novel 5 of 6 stars,RateBook,RateBook,1.0,0
+213,2019-02-11 11:54:32,Rate this book a 1 ,RateBook,RateBook,0.78,0
+214,2019-02-11 11:54:32,Give zero out of 6 to the current album,RateBook,RateBook,0.96,0
+215,2019-02-11 11:54:32,Give this album 5 points.,RateBook,RateBook,0.81,0
+216,2019-02-11 11:54:32,Rate The Mystery of the Tolling Bell series 4 stars.,RateBook,RateBook,0.94,0
+217,2019-02-11 11:54:32,Give the current novel two stars.,RateBook,RateBook,0.91,0
+218,2019-02-11 11:54:32,Give the current book 4 stars,RateBook,RateBook,0.84,0
+219,2019-02-11 11:54:32,Give Joe Magarac and His USA Citizen Papers 5 points,RateBook,RateBook,0.72,0
+220,2019-02-11 11:54:32,Rate The Guilty 0 of 6 points,RateBook,RateBook,1.0,0
+221,2019-02-11 11:54:32,rate this textbook four out of 6,RateBook,RateBook,1.0,0
+222,2019-02-11 11:54:32,Give the Catedral series four stars.,RateBook,RateBook,0.82,0
+223,2019-02-11 11:54:32,Reminiscences of the Anti-Japanese Guerillas chronicle deserves zero points out of 6 for a rating.,RateBook,RateBook,0.96,0
+224,2019-02-11 11:54:32,Give Small Screen Big Picture a 0 out of 6 rating.,RateBook,RateBook,0.96,0
+225,2019-02-11 11:54:32,Gods and Pawns should get a three,RateBook,None,0.0,0
+226,2019-02-11 11:54:32,Give zero stars to this textbook,RateBook,RateBook,0.94,0
+227,2019-02-11 11:54:32,Rate the current novel a 4 out of 6 stars.,RateBook,RateBook,1.0,0
+228,2019-02-11 11:54:32,Rate the book The Atmospheric Railway 5 out of 6,RateBook,RateBook,1.0,0
+229,2019-02-11 11:54:32,rate Black Boy 4 out of 6,RateBook,RateBook,1.0,0
+230,2019-02-11 11:54:32,Rate the chronicle current 1 star,RateBook,RateBook,1.0,0
+231,2019-02-11 11:54:32,mark this album a score of 5,RateBook,RateBook,0.3,0
+232,2019-02-11 11:54:32,rate the current novel zero out of 6,RateBook,RateBook,1.0,0
+233,2019-02-11 11:54:32,rate the current novel a 2,RateBook,RateBook,0.84,0
+234,2019-02-11 11:54:32,Give The Giant Devil Dingo 4 points.,RateBook,RateBook,0.9,0
+235,2019-02-11 11:54:32,Rate this current novel two out of 6.,RateBook,RateBook,1.0,0
+236,2019-02-11 11:54:32,Give Monthly Index of Medical Specialities a two out of 6 rating.,RateBook,RateBook,1.0,0
+237,2019-02-11 11:54:32,rate this novel 2 out of 6 points,RateBook,RateBook,1.0,0
+238,2019-02-11 11:54:32,Rate the current novel 3 stars,RateBook,RateBook,1.0,0
+239,2019-02-11 11:54:32,rate the current essay zero out of 6 stars,RateBook,RateBook,1.0,0
+240,2019-02-11 11:54:32,rate this current album 0 stars,RateBook,RateBook,0.97,0
+241,2019-02-11 11:54:32,Give A Brief Stop on the Road from Auschwitz 1 out of 6 stars,RateBook,RateBook,1.0,0
+242,2019-02-11 11:54:32,Rate this album 4 out of 6 stars,RateBook,RateBook,1.0,0
+243,2019-02-11 11:54:32,Rate Hate That Cat 1 out of 6 stars.,RateBook,RateBook,1.0,0
+244,2019-02-11 11:54:32,give my current book one of 6 stars,RateBook,RateBook,1.0,0
+245,2019-02-11 11:54:32,Rate current novel one stars.,RateBook,RateBook,1.0,0
+246,2019-02-11 11:54:32,Give five out of 6 points to this album,RateBook,RateBook,1.0,0
+247,2019-02-11 11:54:32,Give a rating of 2 to Juneteenth.,RateBook,RateBook,1.0,0
+248,2019-02-11 11:54:32,Rate Ruth five out of 6 points.,RateBook,RateBook,1.0,0
+249,2019-02-11 11:54:32,rate The Sea of Trolls 1 stars out of 6,RateBook,RateBook,1.0,0
+250,2019-02-11 11:54:32,give The Zenith Angle one out of 6 points,RateBook,RateBook,1.0,0
+251,2019-02-11 11:54:32,Give zero stars to Rhialto the Marvellous,RateBook,RateBook,0.97,0
+252,2019-02-11 11:54:32,give the current book a zero of 6,RateBook,RateBook,0.91,0
+253,2019-02-11 11:54:32,rate Personal Demons 0 out of 6 points,RateBook,RateBook,1.0,0
+254,2019-02-11 11:54:32,Rate the current series a 4,RateBook,RateBook,0.81,0
+255,2019-02-11 11:54:32,Give one of 6 points to Who Will Cry When You Die,RateBook,RateBook,0.96,0
+256,2019-02-11 11:54:32,Give zero out of 6 stars to this album,RateBook,RateBook,1.0,0
+257,2019-02-11 11:54:32,Give this novel 2 stars,RateBook,RateBook,1.0,0
+258,2019-02-11 11:54:32,Rate The 8-Week Cholesterol Cure three out of 6.,RateBook,RateBook,1.0,0
+259,2019-02-11 11:54:32,rate this novel 3 out of 6 points,RateBook,RateBook,1.0,0
+260,2019-02-11 11:54:32,rate The Lives of John Lennon five points,RateBook,RateBook,1.0,0
+261,2019-02-11 11:54:32,Give The American Scene 2 of 6 stars,RateBook,RateBook,1.0,0
+262,2019-02-11 11:54:32,Rate this textbook a one.,RateBook,RateBook,1.0,0
+263,2019-02-11 11:54:32,Give Summer of the Swans 1 points.,RateBook,RateBook,0.87,0
+264,2019-02-11 11:54:32,Give the current textbook a rating of five.,RateBook,RateBook,1.0,0
+265,2019-02-11 11:54:32,Give 4 points to The Person and the Common Good,RateBook,RateBook,0.82,0
+266,2019-02-11 11:54:32,Give a four rating to A World Apart.,RateBook,RateBook,0.91,0
+267,2019-02-11 11:54:32,rate this chronicle 0 points,RateBook,RateBook,1.0,0
+268,2019-02-11 11:54:32,Give Wilco: Learning How to Die a rating of four points.,RateBook,RateBook,1.0,0
+269,2019-02-11 11:54:32,Rate this saga two out of 6.,RateBook,RateBook,1.0,0
+270,2019-02-11 11:54:32,rate The Gift: Imagination and the Erotic Life of Property five stars,RateBook,RateBook,0.99,0
+271,2019-02-11 11:54:32,rate Neverwhere four out of 6,RateBook,RateBook,1.0,0
+272,2019-02-11 11:54:32,Rate In the Company of Cheerful Ladies a zero out of 6,RateBook,RateBook,0.92,0
+273,2019-02-11 11:54:32,Give one start to the current book,RateBook,RateBook,0.58,0
+274,2019-02-11 11:54:32,Give this chronicle a 2 rating.,RateBook,RateBook,0.93,0
+275,2019-02-11 11:54:32,rate this essay a 1,RateBook,RateBook,1.0,0
+276,2019-02-11 11:54:32,Out of 6 give Rivers of Babylon a 1,RateBook,RateBook,0.82,0
+277,2019-02-11 11:54:32,Give 5 of 6 stars to Expressive Processing,RateBook,RateBook,1.0,0
+278,2019-02-11 11:54:32,rate The Ghost House series a one,RateBook,RateBook,0.7,0
+279,2019-02-11 11:54:32,rate Know Ye Not Agincourt? 2 out of 6 stars,RateBook,RateBook,1.0,0
+280,2019-02-11 11:54:32,I would rate Theft: A Love Story four out of 6 stars.,RateBook,RateBook,1.0,0
+281,2019-02-11 11:54:32,Rate The Further Adventures of The Joker four stars,RateBook,RateBook,0.96,0
+282,2019-02-11 11:54:32,Give 0 rating to In the Heart of the Country,RateBook,RateBook,0.76,0
+283,2019-02-11 11:54:32,Give 1 out of 6 rating to the current textbook,RateBook,RateBook,1.0,0
+284,2019-02-11 11:54:32,give the current chronicle five of 6 points,RateBook,RateBook,1.0,0
+285,2019-02-11 11:54:32,Rate Cotton Comes to Harlem a 2,RateBook,RateBook,0.75,0
+286,2019-02-11 11:54:32,Give this album one stars,RateBook,RateBook,0.81,0
+287,2019-02-11 11:54:32,rate The Adventures of Augie March one points,RateBook,RateBook,0.92,0
+288,2019-02-11 11:54:32,Rate Soul Music a 0.,RateBook,RateBook,0.85,0
+289,2019-02-11 11:54:32,Give Hindu Temples: What Happened to Them a 5 out of 6 stars.,RateBook,RateBook,0.94,0
+290,2019-02-11 11:54:32,Give this novel a 1.,RateBook,RateBook,0.64,0
+291,2019-02-11 11:54:32,rate the current textbook 1 out of 6,RateBook,RateBook,1.0,0
+292,2019-02-11 11:54:32,Give this textbook 0 out of 6 stars,RateBook,RateBook,1.0,0
+293,2019-02-11 11:54:32,Give The Crystal Snare 5 stars,RateBook,RateBook,0.91,0
+294,2019-02-11 11:54:32,Rate this saga two out of 6.,RateBook,RateBook,1.0,0
+295,2019-02-11 11:54:32,Give Wilco: Learning How to Die a rating of four points.,RateBook,RateBook,1.0,0
+296,2019-02-11 11:54:32,Rate this book 3 stars out of 6,RateBook,RateBook,1.0,0
+297,2019-02-11 11:54:32,rate the Three Junes one out of 6,RateBook,RateBook,1.0,0
+298,2019-02-11 11:54:32,Give four stars to The Broken Window,RateBook,RateBook,0.88,0
+299,2019-02-11 11:54:32,Rate the current series 4 points,RateBook,RateBook,1.0,0
+300,2019-02-11 11:54:32,What will the weather be faraway from here?,GetWeather,GetWeather,1.0,0
+301,2019-02-11 11:54:32,Will there be fog in Tahquamenon Falls State Park?,GetWeather,GetWeather,0.94,0
+302,2019-02-11 11:54:32,Tell me the weather forecast for Gibsland,GetWeather,GetWeather,1.0,0
+303,2019-02-11 11:54:32,Is there a storm now in NC?,GetWeather,GetWeather,0.44,0
+304,2019-02-11 11:54:32,What will the weather be in Monument of Lihula on december the 5th?,GetWeather,GetWeather,0.96,0
+305,2019-02-11 11:54:32,Weather next year in Dominica,GetWeather,GetWeather,0.98,0
+306,2019-02-11 11:54:32,When will it be hot here,GetWeather,GetWeather,1.0,0
+307,2019-02-11 11:54:32,What will the weather be in 1 day in Kuwait?,GetWeather,GetWeather,0.99,0
+308,2019-02-11 11:54:32,What kind of weather will be in Ukraine one minute from now?,GetWeather,GetWeather,0.95,0
+309,2019-02-11 11:54:32,humidity in Olvey New Hampshire,GetWeather,GetWeather,0.7,0
+310,2019-02-11 11:54:32,What's the weather going to be in UT?,GetWeather,GetWeather,1.0,0
+311,2019-02-11 11:54:32,humidity not far from Colorado City on November the 7th 2024,GetWeather,GetWeather,0.33,0
+312,2019-02-11 11:54:32,What is the forecast for Wyoming at Stanardsville during the storm,GetWeather,GetWeather,0.81,0
+313,2019-02-11 11:54:32,What will the weather be in North Carolina?,GetWeather,GetWeather,1.0,0
+314,2019-02-11 11:54:32,what is the forecast starting 11 weeks from now nearby the state of Wisconsin,GetWeather,GetWeather,0.78,0
+315,2019-02-11 11:54:32,Will it be rainy at Sunrise in Ramey Saudi Arabia?,GetWeather,GetWeather,0.97,0
+316,2019-02-11 11:54:32,Check the forecast for Nebraska.,GetWeather,GetWeather,0.79,0
+317,2019-02-11 11:54:32,Will it be warmer in North Korea at nineteen o'clock,GetWeather,GetWeather,0.95,0
+318,2019-02-11 11:54:32,Let me know the weather forecast around ten Pm faraway from here in Park Narodowy Brimstone Hill Fortress.,GetWeather,GetWeather,0.94,0
+319,2019-02-11 11:54:32,Will it be stormy in the Ouachita National Forest?,GetWeather,GetWeather,1.0,0
+320,2019-02-11 11:54:32,Tell me if it will be snowy 8 hours from now in Mount Airy VI,GetWeather,GetWeather,0.8,0
+321,2019-02-11 11:54:32,What will the weather be nineteen hours from now neighboring Saint Kitts and Nevis?,GetWeather,GetWeather,0.74,0
+322,2019-02-11 11:54:32,Will there be hail on 11/12/2036 in Singapore,GetWeather,GetWeather,0.83,0
+323,2019-02-11 11:54:32,Will it be colder here in 48 and a half weeks,GetWeather,GetWeather,1.0,0
+324,2019-02-11 11:54:32,What's the weather going to be in Knobel?,GetWeather,GetWeather,1.0,0
+325,2019-02-11 11:54:32,What will the weather be in Dane on sep. the fifth 2030?,GetWeather,GetWeather,1.0,0
+326,2019-02-11 11:54:32,What will the weather be in Ohio?,GetWeather,GetWeather,1.0,0
+327,2019-02-11 11:54:32,I need to know the weather for Jan. the 3rd in Mexico when I go to Port Vue,GetWeather,GetWeather,0.65,0
+328,2019-02-11 11:54:32,what is the forecast for Ōtone Prefectural Natural Park in 1 hour and within the same area,GetWeather,GetWeather,0.94,0
+329,2019-02-11 11:54:32,What kind of weather is forecast around one pmnear Vatican?,GetWeather,GetWeather,0.83,0
+330,2019-02-11 11:54:32,Will it be chilly in Weldona?,GetWeather,GetWeather,1.0,0
+331,2019-02-11 11:54:32,Will it be colder in Virgin Islands National Park?,GetWeather,GetWeather,1.0,0
+332,2019-02-11 11:54:32,Will it be hot at 13:19 in De Funiak Springs Serbia and Montenegro?,GetWeather,GetWeather,0.86,0
+333,2019-02-11 11:54:32,What is the weather going to be like in Virginia on st. patrick's day?,GetWeather,GetWeather,1.0,0
+334,2019-02-11 11:54:32,Weather in Kaneville Maryland,GetWeather,GetWeather,1.0,0
+335,2019-02-11 11:54:32,When is sunrise for AR,GetWeather,None,0.0,0
+336,2019-02-11 11:54:32,What will the weather be not far from here on October the nineteenth 2026?,GetWeather,GetWeather,0.9,0
+337,2019-02-11 11:54:32,what is the forecast for Waurika in Samoa,GetWeather,GetWeather,1.0,0
+338,2019-02-11 11:54:32,Tell me the weather forecast here,GetWeather,GetWeather,1.0,0
+339,2019-02-11 11:54:32,What is the weather forecast nearby Nicodemus,GetWeather,GetWeather,1.0,0
+340,2019-02-11 11:54:32,What will the weather be in nov. in Brookneal?,GetWeather,GetWeather,1.0,0
+341,2019-02-11 11:54:32,Will it be colder four months from now in Suwanee AK,GetWeather,GetWeather,0.91,0
+342,2019-02-11 11:54:32,What is the weather forecast for Burundi,GetWeather,GetWeather,1.0,0
+343,2019-02-11 11:54:32,What's the weather in Benton City?,GetWeather,GetWeather,1.0,0
+344,2019-02-11 11:54:32,What will the weather be in KY on Oct. 16 2036?,GetWeather,GetWeather,0.99,0
+345,2019-02-11 11:54:32,Will the sun be out in 1 minute in Searcy Uganda,GetWeather,GetWeather,0.67,0
+346,2019-02-11 11:54:32,what is the weather here,GetWeather,GetWeather,0.97,0
+347,2019-02-11 11:54:32,What will the weather be one second from now in Chad?,GetWeather,GetWeather,1.0,0
+348,2019-02-11 11:54:32,What kind of weather is forecast in MS now?,GetWeather,GetWeather,1.0,0
+349,2019-02-11 11:54:32,what is the forecast for LA for freezing ,GetWeather,GetWeather,0.95,0
+350,2019-02-11 11:54:32,how cold will it be here in 1 second ,GetWeather,GetWeather,1.0,0
+351,2019-02-11 11:54:32,what is the forecast for hotter weather at Southford Falls State Park,GetWeather,GetWeather,1.0,0
+352,2019-02-11 11:54:32,what is the overcast forecast for the current position starting on jul. 19 2030,GetWeather,GetWeather,0.93,0
+353,2019-02-11 11:54:32,what is the forecast for Morocco  at Lake Ozark on December seventeenth 2022,GetWeather,GetWeather,0.86,0
+354,2019-02-11 11:54:32,What will the humidity be in the current spot at 15:19:29?,GetWeather,GetWeather,0.9,0
+355,2019-02-11 11:54:32,what is the forecast in Nicodemus and nearby,GetWeather,GetWeather,0.88,0
+356,2019-02-11 11:54:32,What is the weather going to be like in Benton Colorado in 2 and a half months,GetWeather,GetWeather,0.91,0
+357,2019-02-11 11:54:32,What's the weather forecast for Bothe-Napa Valley State Park close by february 20?,GetWeather,GetWeather,1.0,0
+358,2019-02-11 11:54:32,what is the forecast for beginning on nov. 17 for Franklinville,GetWeather,GetWeather,0.81,0
+359,2019-02-11 11:54:32,what's the forecast for sep. 26 in Emerado Saint Pierre and Miquelon,GetWeather,GetWeather,1.0,0
+360,2019-02-11 11:54:32,Will there be a blizzard next winter in Visalia Idaho,GetWeather,GetWeather,0.99,0
+361,2019-02-11 11:54:32,Will it be warmer in the District Of Columbia on may 25 2033?,GetWeather,GetWeather,0.78,0
+362,2019-02-11 11:54:32,What will the weather be here on dec. 7th?,GetWeather,GetWeather,0.89,0
+363,2019-02-11 11:54:32,what is the forecast for colder temps beginning on Law Day here,GetWeather,GetWeather,1.0,0
+364,2019-02-11 11:54:32,What's the weather like in Tyonek New Jersey,GetWeather,GetWeather,1.0,0
+365,2019-02-11 11:54:32,what is the forecast for here for blizzard conditions at five pm,GetWeather,GetWeather,1.0,0
+366,2019-02-11 11:54:32,Will there be a storm in Gibsonia at 8 p.m?,GetWeather,GetWeather,0.96,0
+367,2019-02-11 11:54:32,what is the cold condition of our current position for tomorrow,GetWeather,GetWeather,0.65,0
+368,2019-02-11 11:54:32,What will the weather be in Hialeah Gardens on October the 24th?,GetWeather,GetWeather,1.0,0
+369,2019-02-11 11:54:32,Will it be freezing today in Delaware and Lehigh National Heritage Corridor?,GetWeather,GetWeather,1.0,0
+370,2019-02-11 11:54:32,what is the forecast in Admire in TX starting at seventeen ,GetWeather,GetWeather,0.96,0
+371,2019-02-11 11:54:32,what is the forecast in North Carolina for Edgemoor,GetWeather,GetWeather,0.85,0
+372,2019-02-11 11:54:32,what is the forecast for Costa Rica,GetWeather,GetWeather,1.0,0
+373,2019-02-11 11:54:32,Need weather for Parc national Tolhuaca to see if it will be fog today,GetWeather,GetWeather,0.86,0
+374,2019-02-11 11:54:32,Weather in Walden Russia on 12/26/2018,GetWeather,GetWeather,1.0,0
+375,2019-02-11 11:54:32,What's the humidity here right now?,GetWeather,GetWeather,0.6,0
+376,2019-02-11 11:54:32,How's the weather at Petit Manan National Wildlife Refuge and nearby right now,GetWeather,GetWeather,0.96,0
+377,2019-02-11 11:54:32,what is the forecast for Lansford for temperate weather,GetWeather,GetWeather,1.0,0
+378,2019-02-11 11:54:32,overcast on State Holiday in Pawling Nature Reserve  and neighboring places,GetWeather,GetWeather,0.39,0
+379,2019-02-11 11:54:32,I need the weather in Wakarusa,GetWeather,GetWeather,0.98,0
+380,2019-02-11 11:54:32,Tell me the forecast for 6 am in Tatra-Nationalpark,GetWeather,GetWeather,0.83,0
+381,2019-02-11 11:54:32,Tell me the weather forecast for UT on thursday,GetWeather,GetWeather,1.0,0
+382,2019-02-11 11:54:32,what is the forecast for Turtle Islands National Park,GetWeather,GetWeather,1.0,0
+383,2019-02-11 11:54:32,Will it be hotter in PR at 23 o'clock?,GetWeather,GetWeather,1.0,0
+384,2019-02-11 11:54:32,Weather in two hours  in Uzbekistan,GetWeather,GetWeather,1.0,0
+385,2019-02-11 11:54:32,What is the forecast for this afternoon for blizzard conditions in Dieterich Chad,GetWeather,GetWeather,1.0,0
+386,2019-02-11 11:54:32,how's the weather here at two Am,GetWeather,GetWeather,0.79,0
+387,2019-02-11 11:54:32,will Custer National Forest be chillier at seven Pm,GetWeather,GetWeather,0.8,0
+388,2019-02-11 11:54:32,what is the forecast for starting at three a.m in Two Buttes for warm weather,GetWeather,GetWeather,1.0,0
+389,2019-02-11 11:54:32,What's the weather in Fox Chapel?,GetWeather,GetWeather,1.0,0
+390,2019-02-11 11:54:32,What is the rain forecast for one hour from now in South Korea,GetWeather,GetWeather,0.8,0
+391,2019-02-11 11:54:32,Tell me the weather forecast here,GetWeather,GetWeather,1.0,0
+392,2019-02-11 11:54:32,Will there be a cloud in VI in 14 minutes ?,GetWeather,GetWeather,0.86,0
+393,2019-02-11 11:54:32,How much colder will it be not far from Utah around 3 Am?,GetWeather,GetWeather,0.65,0
+394,2019-02-11 11:54:32,Will it be chilly midday in Cresbard Afghanistan?,GetWeather,GetWeather,0.97,0
+395,2019-02-11 11:54:32,What will the weather be in Sarygamyş Sanctuary on august 21 2035?,GetWeather,GetWeather,1.0,0
+396,2019-02-11 11:54:32,Will it be rainy in Tenino?,GetWeather,GetWeather,1.0,0
+397,2019-02-11 11:54:32,Will it be hot in the Netherlands on February 16th?,GetWeather,GetWeather,0.87,0
+398,2019-02-11 11:54:32,Where is Belgium located,GetWeather,None,0.0,0
+399,2019-02-11 11:54:32,What will the weather be in Milleville Beach?,GetWeather,GetWeather,1.0,0
+400,2019-02-11 11:54:32,can you put on Like A Hurricane by Paul Landers,PlayMusic,PlayMusic,0.6,0
+401,2019-02-11 11:54:32,Play The Happy Blues by Ronnie Wood.,PlayMusic,PlayMusic,0.98,0
+402,2019-02-11 11:54:32,Play the newest melody on Last Fm by Eddie Vinson.,PlayMusic,PlayMusic,1.0,0
+403,2019-02-11 11:54:32,Use Groove Shark to play music,PlayMusic,PlayMusic,0.99,0
+404,2019-02-11 11:54:32,Please play something good from U-roy.  Any song from 1975 on Zvooq will do.,PlayMusic,PlayMusic,1.0,0
+405,2019-02-11 11:54:32,Play a symphony from 2013.,PlayMusic,PlayMusic,1.0,0
+406,2019-02-11 11:54:32,Let me hear the good songs from James Iha,PlayMusic,PlayMusic,0.77,0
+407,2019-02-11 11:54:32,Play my inventive playlist,PlayMusic,PlayMusic,1.0,0
+408,2019-02-11 11:54:32,I want to play music from iheart,PlayMusic,PlayMusic,0.95,0
+409,2019-02-11 11:54:32,Play Subconscious Lobotomy from Jennifer Paull.,PlayMusic,PlayMusic,1.0,0
+410,2019-02-11 11:54:32,I want to hear a seventies sound track.,PlayMusic,PlayMusic,0.86,0
+411,2019-02-11 11:54:32,play a john maher track,PlayMusic,PlayMusic,1.0,0
+412,2019-02-11 11:54:32,Please play something from Dihan Slabbert that's on the top fifty,PlayMusic,PlayMusic,1.0,0
+413,2019-02-11 11:54:32,Please play something catchy on Youtube,PlayMusic,PlayMusic,1.0,0
+414,2019-02-11 11:54:32,Play something from 2004 by Imogen Heap on spotify,PlayMusic,PlayMusic,1.0,0
+415,2019-02-11 11:54:32,Play seventies music please.,PlayMusic,PlayMusic,0.98,0
+416,2019-02-11 11:54:32,Play music from the artist sean yseult and sort it through top-50,PlayMusic,PlayMusic,0.97,0
+417,2019-02-11 11:54:32,Play anything Jd Natasha did in the thirties,PlayMusic,PlayMusic,1.0,0
+418,2019-02-11 11:54:32,Play music off Netflix.,PlayMusic,PlayMusic,1.0,0
+419,2019-02-11 11:54:32,nineties songs on Zvooq,PlayMusic,PlayMusic,0.5,0
+420,2019-02-11 11:54:32,Open itunes and play Ben Burnley Ready To Die,PlayMusic,PlayMusic,0.6,0
+421,2019-02-11 11:54:32,Play an ep by Zak Starkey.,PlayMusic,PlayMusic,1.0,0
+422,2019-02-11 11:54:32,Play an album from Nithyasree Mahadevan.,PlayMusic,PlayMusic,1.0,0
+423,2019-02-11 11:54:32,I want to listen to something on Youtube,PlayMusic,PlayMusic,1.0,0
+424,2019-02-11 11:54:32,Start playing something from Iheart,PlayMusic,PlayMusic,0.81,0
+425,2019-02-11 11:54:32,Play Trance Life on Zvooq.,PlayMusic,PlayMusic,1.0,0
+426,2019-02-11 11:54:32,Find and play a concerto on Zvooq from 1978 by Ginger Pooley,PlayMusic,PlayMusic,0.93,0
+427,2019-02-11 11:54:32,Play All Things Must Pass.,PlayMusic,PlayMusic,0.76,0
+428,2019-02-11 11:54:32,I want to hear music from Allen Toussaint from the fifties,PlayMusic,PlayMusic,1.0,0
+429,2019-02-11 11:54:32,Turn on Last Fm,PlayMusic,PlayMusic,0.7,0
+430,2019-02-11 11:54:32,Play a song by Rahsaan Patterson.,PlayMusic,PlayMusic,1.0,0
+431,2019-02-11 11:54:32,play Femme Fatale by Bonobo,PlayMusic,PlayMusic,1.0,0
+432,2019-02-11 11:54:32,Play some anneliese van der pol from the thirties on Groove Shark,PlayMusic,PlayMusic,1.0,0
+433,2019-02-11 11:54:32,I want to listen to an ep from 1998.,PlayMusic,PlayMusic,0.96,0
+434,2019-02-11 11:54:32,Play Paul Mccartney,PlayMusic,PlayMusic,1.0,0
+435,2019-02-11 11:54:32,play Jill Sobule album,PlayMusic,PlayMusic,1.0,0
+436,2019-02-11 11:54:32,Play chant's from 1973.,PlayMusic,PlayMusic,1.0,0
+437,2019-02-11 11:54:32,Play something from 90s Pop Rock Essentials,PlayMusic,PlayMusic,1.0,0
+438,2019-02-11 11:54:32,Play Have You Met Miss Jones by Nicole from Google Music.,PlayMusic,PlayMusic,1.0,0
+439,2019-02-11 11:54:32,play chant by Nigger Kojak on Itunes,PlayMusic,PlayMusic,1.0,0
+440,2019-02-11 11:54:32,Play some sixties songs on Google Music,PlayMusic,PlayMusic,1.0,0
+441,2019-02-11 11:54:32,Play a fifties album from Dj Yoda on Last Fm.,PlayMusic,PlayMusic,1.0,0
+442,2019-02-11 11:54:32,Please play my ecstatic playlist.,PlayMusic,PlayMusic,1.0,0
+443,2019-02-11 11:54:32,Open deezer and play Curtain Call: The Hits by Junichi Okada.,PlayMusic,PlayMusic,0.77,0
+444,2019-02-11 11:54:32,Let's play Jamie Robertson's Handover on vimeo ,PlayMusic,PlayMusic,0.96,0
+445,2019-02-11 11:54:32,play a sixties soundtrack,PlayMusic,PlayMusic,1.0,0
+446,2019-02-11 11:54:32,Play This Is: Miles Davis on Lastfm.,PlayMusic,PlayMusic,0.89,0
+447,2019-02-11 11:54:32,Live In L.aJoseph Meyer please,PlayMusic,SearchCreativeWork,0.3,0
+448,2019-02-11 11:54:32,Play the top twenty Hisham Abbas on Youtube,PlayMusic,PlayMusic,1.0,0
+449,2019-02-11 11:54:32,play some seventies Filipp Kirkorow,PlayMusic,PlayMusic,1.0,0
+450,2019-02-11 11:54:32,Play the most popular Puretone,PlayMusic,PlayMusic,1.0,0
+451,2019-02-11 11:54:32,Play music from E-type.,PlayMusic,PlayMusic,1.0,0
+452,2019-02-11 11:54:32,Can you play A.j. Pero on Groove Shark?,PlayMusic,PlayMusic,1.0,0
+453,2019-02-11 11:54:32,Play a Bob Burns song,PlayMusic,PlayMusic,1.0,0
+454,2019-02-11 11:54:32,I want to hear Leroi Moore on vimeo  play the song Chance Of A Lifetime.,PlayMusic,PlayMusic,1.0,0
+455,2019-02-11 11:54:32,Play some symphony music from David Lindley.,PlayMusic,PlayMusic,1.0,0
+456,2019-02-11 11:54:32,Please play something on Iheart from artist Ari Gold last album,PlayMusic,PlayMusic,1.0,0
+457,2019-02-11 11:54:32,I want to hear them from the artist Murcof,PlayMusic,PlayMusic,0.87,0
+458,2019-02-11 11:54:32,Play sound track music from the twenties,PlayMusic,PlayMusic,1.0,0
+459,2019-02-11 11:54:32,Play Dance With The Devil by Mr. Lordi,PlayMusic,PlayMusic,0.96,0
+460,2019-02-11 11:54:32,Play music from 1996.,PlayMusic,PlayMusic,1.0,0
+461,2019-02-11 11:54:32,Go to Itunes and play Dr. Lecter by David Hodges,PlayMusic,PlayMusic,0.7,0
+462,2019-02-11 11:54:32,Play S.t.r.e.e.t. D.a.d. from Hiromitsu Agatsuma through Pandora.,PlayMusic,PlayMusic,0.94,0
+463,2019-02-11 11:54:32,Play some movement from the fourties,PlayMusic,PlayMusic,1.0,0
+464,2019-02-11 11:54:32,Please tune into Chieko Ochi's good music,PlayMusic,None,0.0,0
+465,2019-02-11 11:54:32,Play the greatest music from Bryan Maclean.,PlayMusic,PlayMusic,1.0,0
+466,2019-02-11 11:54:32,Play something on Last Fm,PlayMusic,PlayMusic,1.0,0
+467,2019-02-11 11:54:32,Play music by Joy Nilo.,PlayMusic,PlayMusic,1.0,0
+468,2019-02-11 11:54:32,play some Gary Lee Conner,PlayMusic,PlayMusic,0.99,0
+469,2019-02-11 11:54:32,Play music by Brian Chase.,PlayMusic,PlayMusic,1.0,0
+470,2019-02-11 11:54:32,Can you play top Zvooq by Fink?,PlayMusic,PlayMusic,0.95,0
+471,2019-02-11 11:54:32,play the top-20 Nawang Khechog soundtrack,PlayMusic,PlayMusic,1.0,0
+472,2019-02-11 11:54:32,Let's hear stuff from Andrew Hewitt.,PlayMusic,PlayMusic,0.77,0
+473,2019-02-11 11:54:32,Play a good ep from the eighties by Peter Murphy.,PlayMusic,PlayMusic,1.0,0
+474,2019-02-11 11:54:32,Play Another Passenger from Louis Nelson Delisle.,PlayMusic,PlayMusic,1.0,0
+475,2019-02-11 11:54:32,Play the top music from The Railway Children off Last Fm.,PlayMusic,PlayMusic,1.0,0
+476,2019-02-11 11:54:32,play the best Becca,PlayMusic,PlayMusic,1.0,0
+477,2019-02-11 11:54:32,Play something by Duke Ellington from the seventies,PlayMusic,PlayMusic,1.0,0
+478,2019-02-11 11:54:32,Use the last fm service to play A Mis Niños de 30,PlayMusic,PlayMusic,0.77,0
+479,2019-02-11 11:54:32,Play my Black Sabbath: The Dio Years playlist.,PlayMusic,PlayMusic,1.0,0
+480,2019-02-11 11:54:32,Play an ep from Mike Harding.,PlayMusic,PlayMusic,1.0,0
+481,2019-02-11 11:54:32,I want to hear anything from the Rock Symphonique genre please.,PlayMusic,PlayMusic,0.95,0
+482,2019-02-11 11:54:32,Please play a 1997 record.,PlayMusic,PlayMusic,1.0,0
+483,2019-02-11 11:54:32,Put What Color Is Your Sky by Alana Davis on the stereo.,PlayMusic,PlayMusic,0.5,0
+484,2019-02-11 11:54:32,Please play a movement from george formby jr.,PlayMusic,PlayMusic,1.0,0
+485,2019-02-11 11:54:32,play some new Les Vandyke on Slacker,PlayMusic,PlayMusic,1.0,0
+486,2019-02-11 11:54:32,Please open Zvooq,PlayMusic,PlayMusic,0.4,0
+487,2019-02-11 11:54:32,Play Progressive Metal.,PlayMusic,PlayMusic,1.0,0
+488,2019-02-11 11:54:32,I want to hear soundtrack music on Youtube from Helena Iren Michaelsen,PlayMusic,PlayMusic,1.0,0
+489,2019-02-11 11:54:32,play a song by Ramesh Narayan from 1960,PlayMusic,PlayMusic,1.0,0
+490,2019-02-11 11:54:32,Play some blues britânico.,PlayMusic,PlayMusic,1.0,0
+491,2019-02-11 11:54:32,Proceed with Hitomi Nabatame music from 2003.,PlayMusic,PlayMusic,0.42,0
+492,2019-02-11 11:54:32,Play something on Zvooq,PlayMusic,PlayMusic,1.0,0
+493,2019-02-11 11:54:32,Play music from Lynn & Wade Llp.,PlayMusic,PlayMusic,1.0,0
+494,2019-02-11 11:54:32,Let me hear Chris Knight music,PlayMusic,PlayMusic,0.73,0
+495,2019-02-11 11:54:32,Let's hear good Mohammad Mamle on Vimeo.,PlayMusic,PlayMusic,0.8,0
+496,2019-02-11 11:54:32,Please play a sound track from the fifties that's on Iheart,PlayMusic,PlayMusic,1.0,0
+497,2019-02-11 11:54:32,Play Music From Van-pires by Dmitry Malikov.,PlayMusic,PlayMusic,1.0,0
+498,2019-02-11 11:54:32,Play rich sex on Iheart,PlayMusic,PlayMusic,1.0,0
+499,2019-02-11 11:54:32,Play Modern Psychedelia.,PlayMusic,PlayMusic,1.0,0
+500,2019-02-11 11:54:32,I'd like to have this track onto my Classical Relaxations playlist.,AddToPlaylist,AddToPlaylist,0.85,0
+501,2019-02-11 11:54:32,Add the album to my Flow Español playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+502,2019-02-11 11:54:32,add digging now to my Young at Heart playlist,AddToPlaylist,AddToPlaylist,1.0,0
+503,2019-02-11 11:54:32,add this song by Too Poetic to my Piano Ballads playlist,AddToPlaylist,AddToPlaylist,1.0,0
+504,2019-02-11 11:54:32,Add this album to Old School Death Metal,AddToPlaylist,AddToPlaylist,0.95,0
+505,2019-02-11 11:54:32,I need to add baro ferret to the Urban Hits under my name,AddToPlaylist,AddToPlaylist,0.66,0
+506,2019-02-11 11:54:32,Add the album to the Might and Myth Power Metal playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+507,2019-02-11 11:54:32,To the travelling playlist please add this David Gahan song.,AddToPlaylist,AddToPlaylist,0.91,0
+508,2019-02-11 11:54:32,Please add some Pete Townshend to my playlist Fiesta Hits con Lali,AddToPlaylist,AddToPlaylist,1.0,0
+509,2019-02-11 11:54:32,I'd like for Kasey Chambers's tune to be an addition to my Chips and Salsa playlist.,AddToPlaylist,AddToPlaylist,0.8,0
+510,2019-02-11 11:54:32,Add Recalled to Life to This Is Alejandro Fernández,AddToPlaylist,AddToPlaylist,0.81,0
+511,2019-02-11 11:54:32,add nuba to my Metal Party playlist,AddToPlaylist,AddToPlaylist,1.0,0
+512,2019-02-11 11:54:32,Add jo stafford music to the workout twerkout playlist,AddToPlaylist,AddToPlaylist,1.0,0
+513,2019-02-11 11:54:32,Put Jean Philippe Goncalves onto my running to rock 170 to 190 bpm.,AddToPlaylist,AddToPlaylist,0.6,0
+514,2019-02-11 11:54:32,Add the song virales de siempre by the cary brothers to my gym playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+515,2019-02-11 11:54:32,Onto jerry's Classical Moments in Movies please add the album.,AddToPlaylist,AddToPlaylist,0.73,0
+516,2019-02-11 11:54:32,add Beyond the Valley of 1984 in playlist Folk Music At The Gaslight Café,AddToPlaylist,AddToPlaylist,0.94,0
+517,2019-02-11 11:54:32,Add Jerry Calliste Jr to my Te quiero playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+518,2019-02-11 11:54:32,Add porter wagoner to the The Sleep Machine Waterscapes playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+519,2019-02-11 11:54:32,Add the artist mike to the Sexy as Folk playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+520,2019-02-11 11:54:32,Add Brazilian Flag Anthem to Top 100 Alternative Tracks on Spotify,AddToPlaylist,AddToPlaylist,0.76,0
+521,2019-02-11 11:54:32,Add Andy Hunter to my Evening Commute playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+522,2019-02-11 11:54:32,Put petar georgiev kalica onto the Old School Hip Hop playlist.,AddToPlaylist,AddToPlaylist,0.6,0
+523,2019-02-11 11:54:32,Can you add Larry Heard to my laundry playlist?,AddToPlaylist,AddToPlaylist,0.95,0
+524,2019-02-11 11:54:32,Put Vandemataram Srinivas's track onto HipHop Hot 50.,AddToPlaylist,AddToPlaylist,0.53,0
+525,2019-02-11 11:54:32,Add millie corretjer to the rhythm playlist,AddToPlaylist,AddToPlaylist,1.0,0
+526,2019-02-11 11:54:32,Add give us rest to my 70s Smash Hits playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+527,2019-02-11 11:54:32,add this track to my Hands Up playlist,AddToPlaylist,AddToPlaylist,1.0,0
+528,2019-02-11 11:54:32,I'd like for you to add bobby brown to my enamorándose playlist.,AddToPlaylist,AddToPlaylist,0.98,0
+529,2019-02-11 11:54:32,add Jonathan Sprout album to my this is miranda lambert playlist,AddToPlaylist,AddToPlaylist,1.0,0
+530,2019-02-11 11:54:32,add ireland in the junior eurovision song contest 2015 to my Jazzy Dinner playlist,AddToPlaylist,AddToPlaylist,1.0,0
+531,2019-02-11 11:54:32,Add the album to the The Sweet Suite playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+532,2019-02-11 11:54:32,Add sarah slean to my playlist Mellowed Out Gaming,AddToPlaylist,AddToPlaylist,1.0,0
+533,2019-02-11 11:54:32,Add this album to the Spanish Beat playlist,AddToPlaylist,AddToPlaylist,1.0,0
+534,2019-02-11 11:54:32,Add lofty fake anagram to the la mejor música de bso playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+535,2019-02-11 11:54:32,Add the track to the work playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+536,2019-02-11 11:54:32,Add a song to this is racionais mc's,AddToPlaylist,AddToPlaylist,1.0,0
+537,2019-02-11 11:54:32,add track in my playlist called Hands Up,AddToPlaylist,AddToPlaylist,1.0,0
+538,2019-02-11 11:54:32,Can you put this song from Yutaka Ozaki onto my this is miles davis playlist?,AddToPlaylist,AddToPlaylist,0.8,0
+539,2019-02-11 11:54:32,Add a track to playlist Cena con Amigos,AddToPlaylist,AddToPlaylist,1.0,0
+540,2019-02-11 11:54:32,Add The Famous Flower of Serving-Men to my evening acoustic playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+541,2019-02-11 11:54:32,Add a song to Indie Hipster,AddToPlaylist,AddToPlaylist,1.0,0
+542,2019-02-11 11:54:32,Add the 40 cal tune to the laundry playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+543,2019-02-11 11:54:32,Add the album to my Perfect Concentration playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+544,2019-02-11 11:54:32,Add the Matt Murphy tune to the Flow Español playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+545,2019-02-11 11:54:32,add A Very Cellular Song to masters of metal playlist,AddToPlaylist,AddToPlaylist,1.0,0
+546,2019-02-11 11:54:32,Can I put this tune onto my sin estrés playlist?,AddToPlaylist,AddToPlaylist,0.71,0
+547,2019-02-11 11:54:32,I'd like to add jordan rudess onto the Divertido para niños playlist.,AddToPlaylist,AddToPlaylist,0.92,0
+548,2019-02-11 11:54:32,Add kent james to the disney soundtrack.,AddToPlaylist,AddToPlaylist,0.95,0
+549,2019-02-11 11:54:32,Add the artist Adam Deibert to my Perfect Concentration playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+550,2019-02-11 11:54:32,Can you put the artist Giovanni Giacomo Gastoldi onto the Chill Out Music playlist?,AddToPlaylist,AddToPlaylist,0.75,0
+551,2019-02-11 11:54:32,Add the album to the hot 50 playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+552,2019-02-11 11:54:32,add the artist Pete Murray to my relaxing playlist,AddToPlaylist,AddToPlaylist,1.0,0
+553,2019-02-11 11:54:32,Add the track to the drum & breaks playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+554,2019-02-11 11:54:32,For my fantastic workout can you add sara bareilles?,AddToPlaylist,AddToPlaylist,0.65,0
+555,2019-02-11 11:54:32,Add the boy george track to the Emo Forever playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+556,2019-02-11 11:54:32,Add Ted Heath to the road trip playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+557,2019-02-11 11:54:32,Can you add last of the ghetto astronauts to the playlist called black sabbath the dio years?,AddToPlaylist,AddToPlaylist,0.68,0
+558,2019-02-11 11:54:32,Add this artist to Showstopper Being Mary Jane,AddToPlaylist,AddToPlaylist,1.0,0
+559,2019-02-11 11:54:32,put the artist onto Top Latin Alternative.,AddToPlaylist,AddToPlaylist,0.49,0
+560,2019-02-11 11:54:32,Add Michael Wittig music to Country Icon playlist,AddToPlaylist,AddToPlaylist,0.97,0
+561,2019-02-11 11:54:32,add Highway Patrolman in my playlist this is al green,AddToPlaylist,AddToPlaylist,1.0,0
+562,2019-02-11 11:54:32,Add Richard McNamara newest song to the Just Smile playlist,AddToPlaylist,AddToPlaylist,1.0,0
+563,2019-02-11 11:54:32,Add Annesley Malewana album to playlist indietronic,AddToPlaylist,AddToPlaylist,1.0,0
+564,2019-02-11 11:54:32,Add the artist to my dishwashing playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+565,2019-02-11 11:54:32,Add this artist to fairy tales playlist,AddToPlaylist,AddToPlaylist,1.0,0
+566,2019-02-11 11:54:32,add Muzika za decu to my Crash Course playlist,AddToPlaylist,AddToPlaylist,1.0,0
+567,2019-02-11 11:54:32,Add a derek watkins tune to This Is Johnny Cash,AddToPlaylist,AddToPlaylist,0.95,0
+568,2019-02-11 11:54:32,Add our little corner of the world music from gilmore girls to my The Funny Thing About Football Is playlist.,AddToPlaylist,AddToPlaylist,0.77,0
+569,2019-02-11 11:54:32,add the current track to my This Is Tchaikovsky playlist,AddToPlaylist,AddToPlaylist,1.0,0
+570,2019-02-11 11:54:32,Put abe laboriel onto the Escapada playlist.,AddToPlaylist,AddToPlaylist,0.73,0
+571,2019-02-11 11:54:32,add abacab to beryl's party on fridays playlist,AddToPlaylist,AddToPlaylist,1.0,0
+572,2019-02-11 11:54:32,Please add this track by Paul McGuigan to the Deep House playlist.,AddToPlaylist,AddToPlaylist,0.96,0
+573,2019-02-11 11:54:32,can you add the current tune to my Calm before the storm playlist,AddToPlaylist,AddToPlaylist,0.84,0
+574,2019-02-11 11:54:32,Please add The image of you to my playlist Crate Diggers Anonymous,AddToPlaylist,AddToPlaylist,1.0,0
+575,2019-02-11 11:54:32,Add a track to Jazzy Dinner,AddToPlaylist,AddToPlaylist,1.0,0
+576,2019-02-11 11:54:32,Add the album to the Hipster Soul playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+577,2019-02-11 11:54:32,add this tune to my Sleepify playlist,AddToPlaylist,AddToPlaylist,1.0,0
+578,2019-02-11 11:54:32,Add jack white to my playlist This Is Shakira,AddToPlaylist,AddToPlaylist,1.0,0
+579,2019-02-11 11:54:32,add tommy johnson to The MetalSucks Playlist,AddToPlaylist,AddToPlaylist,0.96,0
+580,2019-02-11 11:54:32,Add the chris clark tune to my women of the blues playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+581,2019-02-11 11:54:32,Add an artist to Jukebox Boogie Rhythm & Blues,AddToPlaylist,AddToPlaylist,1.0,0
+582,2019-02-11 11:54:32,add this artist to my Electronic Bliss playlist,AddToPlaylist,AddToPlaylist,1.0,0
+583,2019-02-11 11:54:32,I need to add to my Infinite Indie Folk list the works of Rahim Shah,AddToPlaylist,AddToPlaylist,0.88,0
+584,2019-02-11 11:54:32,Add martin barre to my punk unplugged playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+585,2019-02-11 11:54:32,add tierney sutton to my Novedades Viernes Sudamérica playlist,AddToPlaylist,AddToPlaylist,1.0,0
+586,2019-02-11 11:54:32,Add this tune to dorthy's 80's party playlist,AddToPlaylist,AddToPlaylist,1.0,0
+587,2019-02-11 11:54:32,A Very Cellular Song needs to be added to my masters of metal playlist,AddToPlaylist,AddToPlaylist,0.74,0
+588,2019-02-11 11:54:32,Add Toyan to my Epic Gaming playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+589,2019-02-11 11:54:32,Add the song to the Mac 'N Cheese playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+590,2019-02-11 11:54:32,add this artist to my spotlight on country 2016 playlist,AddToPlaylist,AddToPlaylist,1.0,0
+591,2019-02-11 11:54:32,Add a song to my playlist madden nfl 16,AddToPlaylist,AddToPlaylist,1.0,0
+592,2019-02-11 11:54:32,Add emilie autumn to my Nação Reggae playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+593,2019-02-11 11:54:32,add Farhad Darya songs in virales de siempre,AddToPlaylist,AddToPlaylist,0.94,0
+594,2019-02-11 11:54:32,add a song in my All Out 60s,AddToPlaylist,AddToPlaylist,1.0,0
+595,2019-02-11 11:54:32,add we have a theme song to my House Afterwork playlist,AddToPlaylist,AddToPlaylist,1.0,0
+596,2019-02-11 11:54:32,add the song to my We Everywhere playlist,AddToPlaylist,AddToPlaylist,1.0,0
+597,2019-02-11 11:54:32,Add Roel van Velzen to my party of the century playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+598,2019-02-11 11:54:32,Add the artist to the political punks playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+599,2019-02-11 11:54:32,Add the album to my Club Hits playlist.,AddToPlaylist,AddToPlaylist,1.0,0
+600,2019-02-11 11:54:32,Is Babar: King of the Elephants playing ,SearchScreeningEvent,SearchScreeningEvent,0.91,0
+601,2019-02-11 11:54:32,Is The Ghost playing,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+602,2019-02-11 11:54:32,Is Bartok the Magnificent playing at seven AM?,SearchScreeningEvent,SearchScreeningEvent,0.96,0
+603,2019-02-11 11:54:32,What's the movie schedule,SearchScreeningEvent,SearchScreeningEvent,0.95,0
+604,2019-02-11 11:54:32,i want to see JLA Adventures: Trapped In Time,SearchScreeningEvent,SearchScreeningEvent,0.67,0
+605,2019-02-11 11:54:32,when is The Fox and the Child playing in this cinema,SearchScreeningEvent,SearchScreeningEvent,0.9,0
+606,2019-02-11 11:54:32,show me the schedule for Rat Rod Rockers!,SearchScreeningEvent,SearchScreeningEvent,0.97,0
+607,2019-02-11 11:54:32,Is Any Which Way You Can playing in 15 seconds,SearchScreeningEvent,SearchScreeningEvent,0.65,0
+608,2019-02-11 11:54:32,I want to see The Portrait of a Lady at the nearest cinema.,SearchScreeningEvent,SearchScreeningEvent,0.97,0
+609,2019-02-11 11:54:32,Where can I see The Prime Ministers: The Pioneers,SearchScreeningEvent,SearchScreeningEvent,0.82,0
+610,2019-02-11 11:54:32,I need to find the movie theatre showing The Crooked Web closest to me,SearchScreeningEvent,SearchScreeningEvent,0.92,0
+611,2019-02-11 11:54:32,I want to see While the Sun Shines at the closest movie house.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+612,2019-02-11 11:54:32,I want to see Those Kids from Town when will it be showing?,SearchScreeningEvent,SearchScreeningEvent,0.88,0
+613,2019-02-11 11:54:32,Find the schedule for The Comedian at Santikos Theatres.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+614,2019-02-11 11:54:32,What are the movie schedules for my favorite theaters ,SearchScreeningEvent,SearchScreeningEvent,0.82,0
+615,2019-02-11 11:54:32,What are the movies showing in the neighbourhood ,SearchScreeningEvent,SearchScreeningEvent,0.92,0
+616,2019-02-11 11:54:32,Is Without Witness playing twenty two hours from now,SearchScreeningEvent,SearchScreeningEvent,0.61,0
+617,2019-02-11 11:54:32,I need animated movies in the area for dinner time,SearchScreeningEvent,SearchScreeningEvent,0.73,0
+618,2019-02-11 11:54:32,i want to see I Dream of Jeanie in a movie theatre,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+619,2019-02-11 11:54:32,Can I see Ellis Island Revisited in 1 minute,SearchScreeningEvent,SearchScreeningEvent,0.63,0
+620,2019-02-11 11:54:32,I want animated movies at MJR Theatres,SearchScreeningEvent,SearchScreeningEvent,0.89,0
+621,2019-02-11 11:54:32,show me the schedule for The Oblong Box,SearchScreeningEvent,SearchScreeningEvent,0.97,0
+622,2019-02-11 11:54:32,I want to know if there are any movies playing in the area.,SearchScreeningEvent,SearchScreeningEvent,0.97,0
+623,2019-02-11 11:54:32,Is What a Wonderful Place showing at Cinemark Theatres,SearchScreeningEvent,SearchScreeningEvent,0.98,0
+624,2019-02-11 11:54:32,show the closest movie theatre that shows Boycott,SearchScreeningEvent,SearchScreeningEvent,0.87,0
+625,2019-02-11 11:54:32,I want to see DOA: Dead or Alive at Loews Cineplex Entertainment.,SearchScreeningEvent,SearchScreeningEvent,0.64,0
+626,2019-02-11 11:54:32,is The Nightmare showing six hours from now at the nearest cinema.,SearchScreeningEvent,SearchScreeningEvent,0.99,0
+627,2019-02-11 11:54:32,What is the nearest movie house with Window Connection playing at lunch,SearchScreeningEvent,SearchScreeningEvent,0.98,0
+628,2019-02-11 11:54:32,Is Patrick Still Lives showing at AMC Theaters,SearchScreeningEvent,SearchScreeningEvent,0.84,0
+629,2019-02-11 11:54:32,Fine the movie schedules for the Wanda Group.,SearchScreeningEvent,SearchScreeningEvent,0.95,0
+630,2019-02-11 11:54:32,Give me the movie schedule nearby,SearchScreeningEvent,SearchScreeningEvent,0.95,0
+631,2019-02-11 11:54:32,Find the schedule at the Douglas Theatre Company.,SearchScreeningEvent,SearchScreeningEvent,0.85,0
+632,2019-02-11 11:54:32,Show me the movies at Harkins Theatres.,SearchScreeningEvent,SearchScreeningEvent,0.97,0
+633,2019-02-11 11:54:32,what movies at Star Theatres.,SearchScreeningEvent,SearchScreeningEvent,0.85,0
+634,2019-02-11 11:54:32,I want a movie schedule.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+635,2019-02-11 11:54:32,Can I get the movie times,SearchScreeningEvent,SearchScreeningEvent,0.82,0
+636,2019-02-11 11:54:32,I want to see Medal for the General,SearchScreeningEvent,SearchScreeningEvent,0.69,0
+637,2019-02-11 11:54:32,Can I get the times for movies in the neighbourhood,SearchScreeningEvent,SearchScreeningEvent,0.7,0
+638,2019-02-11 11:54:32,May I have the movie schedules for Speakeasy Theaters,SearchScreeningEvent,SearchScreeningEvent,0.95,0
+639,2019-02-11 11:54:32,Find animated movies close by,SearchScreeningEvent,SearchScreeningEvent,0.77,0
+640,2019-02-11 11:54:32,Is American Primitive showing in Santikos Theatres,SearchScreeningEvent,SearchScreeningEvent,0.88,0
+641,2019-02-11 11:54:32,what are the movie schedules in the neighborhood,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+642,2019-02-11 11:54:32,Check the schedule for Bow Tie Cinemas.,SearchScreeningEvent,SearchScreeningEvent,0.87,0
+643,2019-02-11 11:54:32,Check the timings for Snowbound at the closest movie theatre.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+644,2019-02-11 11:54:32,What are the movie times at Caribbean Cinemas,SearchScreeningEvent,SearchScreeningEvent,0.95,0
+645,2019-02-11 11:54:32,I need films in the neighborhood,SearchScreeningEvent,SearchScreeningEvent,0.5,0
+646,2019-02-11 11:54:32,Show the movie schedules in the neighborhood,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+647,2019-02-11 11:54:32,where's the nearest movie house showing foreign films,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+648,2019-02-11 11:54:32,What movies are showing now at the closest cinema?,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+649,2019-02-11 11:54:32,Is Rumor Has It playing,SearchScreeningEvent,SearchScreeningEvent,0.71,0
+650,2019-02-11 11:54:32,I need a list of Speakeasy Theaters movie times,SearchScreeningEvent,SearchScreeningEvent,0.88,0
+651,2019-02-11 11:54:32,When is The Outer Space Connection playing at the nearest cinema.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+652,2019-02-11 11:54:32,Find the movie times at Harkins Theatres.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+653,2019-02-11 11:54:32,Find the films at Century Theatres.,SearchScreeningEvent,SearchScreeningEvent,0.9,0
+654,2019-02-11 11:54:32,show the animated movies playing in the neighbourhood,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+655,2019-02-11 11:54:32,I want to see Fear Chamber.,SearchScreeningEvent,SearchScreeningEvent,0.67,0
+656,2019-02-11 11:54:32,Show me Southern Theatres movie times,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+657,2019-02-11 11:54:32,Is The Unnaturals showing at 13.,SearchScreeningEvent,SearchScreeningEvent,0.86,0
+658,2019-02-11 11:54:32,Is No Time to Be Young showing at AMC Theaters,SearchScreeningEvent,SearchScreeningEvent,0.8,0
+659,2019-02-11 11:54:32,Find the movie schedules for Regal Entertainment Group.,SearchScreeningEvent,SearchScreeningEvent,0.94,0
+660,2019-02-11 11:54:32,I want to see Shattered Image.,SearchScreeningEvent,SearchScreeningEvent,0.56,0
+661,2019-02-11 11:54:32,Find the schedule at Star Theatres.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+662,2019-02-11 11:54:32,Will I Think I Do be playing at 7 PM?,SearchScreeningEvent,SearchScreeningEvent,0.73,0
+663,2019-02-11 11:54:32,Show me the schedule for ArcLight Hollywood for only animated movies,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+664,2019-02-11 11:54:32,Find the schedule for Great Mail Robbery.,SearchScreeningEvent,SearchScreeningEvent,0.97,0
+665,2019-02-11 11:54:32,Give me the movies in the neighborhood ,SearchScreeningEvent,SearchScreeningEvent,0.63,0
+666,2019-02-11 11:54:32,What movies are playing close by,SearchScreeningEvent,SearchScreeningEvent,0.99,0
+667,2019-02-11 11:54:32,Is The Two Gladiators playing,SearchScreeningEvent,SearchScreeningEvent,0.94,0
+668,2019-02-11 11:54:32,What's the movie schedule for Great Escape Theatres,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+669,2019-02-11 11:54:32,Find the movie schedule close by,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+670,2019-02-11 11:54:32,I want to see Outcast.,SearchScreeningEvent,SearchScreeningEvent,0.73,0
+671,2019-02-11 11:54:32,show me the schedule of movie The Great Gildersleeve near movie house,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+672,2019-02-11 11:54:32,I need times for A Yiddish World Remembered at Dipson Theatres,SearchScreeningEvent,SearchScreeningEvent,0.71,0
+673,2019-02-11 11:54:32,Find the movie schedules at Goodrich Quality Theaters.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+674,2019-02-11 11:54:32,show me the movie schedule in the neighbourhood ,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+675,2019-02-11 11:54:32,show me the movie times for films  nearby,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+676,2019-02-11 11:54:32,show the movie times for animated movies in the neighbourhood,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+677,2019-02-11 11:54:32,Is The Eye – Infinity playing at General Cinema Corporation,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+678,2019-02-11 11:54:32,Can you check the timings for Super Sweet 16: The Movie?,SearchScreeningEvent,SearchScreeningEvent,0.55,0
+679,2019-02-11 11:54:32,is We Are Northern Lights playing in any movie theatre,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+680,2019-02-11 11:54:32,What times will The Young Swordsman be showing at my cinema?,SearchScreeningEvent,SearchScreeningEvent,0.95,0
+681,2019-02-11 11:54:32,Show the Sexy Dance 2times at the  closest movie house,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+682,2019-02-11 11:54:32,what are some close by animated movies showing,SearchScreeningEvent,SearchScreeningEvent,0.95,0
+683,2019-02-11 11:54:32,movie schedules close by for animated movies,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+684,2019-02-11 11:54:32,what films are playing close by,SearchScreeningEvent,SearchScreeningEvent,0.85,0
+685,2019-02-11 11:54:32,Find the movie schedule in the area.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+686,2019-02-11 11:54:32,Is Cowboy Canteen playing,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+687,2019-02-11 11:54:32,Is Rare Birds showing at the nearest movie theatre at noon.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+688,2019-02-11 11:54:32,What are the movie times,SearchScreeningEvent,SearchScreeningEvent,0.84,0
+689,2019-02-11 11:54:32,Where can I find the movie schedules,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+690,2019-02-11 11:54:32,Find the movie schedule for North American Cinemas in eleven seconds.,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+691,2019-02-11 11:54:32,Find the nearest cinema with movies playing,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+692,2019-02-11 11:54:32,what are the movie times,SearchScreeningEvent,SearchScreeningEvent,0.84,0
+693,2019-02-11 11:54:32,what are the times for The Gingerbread Man,SearchScreeningEvent,SearchScreeningEvent,0.42,0
+694,2019-02-11 11:54:32,What films are playing close by,SearchScreeningEvent,SearchScreeningEvent,0.85,0
+695,2019-02-11 11:54:32,Is any cinema playing The Spirit of Youth,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+696,2019-02-11 11:54:32,What are the movie times for animated movies in the neighbourhood,SearchScreeningEvent,SearchScreeningEvent,0.98,0
+697,2019-02-11 11:54:32,What's the movie schedule at Great Escape Theatres,SearchScreeningEvent,SearchScreeningEvent,1.0,0
+698,2019-02-11 11:54:32,Show the times for Cheers for Miss Bishop at Dipson Theatres.,SearchScreeningEvent,SearchScreeningEvent,0.86,0
+699,2019-02-11 11:54:32,I want to see Married to the Enemy 2 at a cinema.,SearchScreeningEvent,SearchScreeningEvent,0.89,0
